@@ -1,0 +1,352 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+# STEP 1: INSTALL AND LOAD REQUIRED PACKAGES
+# ============================================================================
+# Run these lines once to install packages (remove # to run):
+# install.packages("stringr")
+# install.packages("dplyr")
+
+# Load the libraries
+library(stringr)      # For text manipulation
+library(dplyr)        # For data manipulation
+
+# STEP 2: HELPER FUNCTION - REFLOW TEXT INTO PARAGRAPHS
+# ============================================================================
+
+reflow_text <- function(text) {
+  # Split text into lines
+  lines <- strsplit(text, "\n")[[1]]
+  
+  # Remove leading/trailing whitespace from each line
+  lines <- trimws(lines)
+  
+  # Identify paragraph breaks (empty lines)
+  is_empty <- nchar(lines) == 0
+  
+  # Build paragraphs
+  paragraphs <- c()
+  current_paragraph <- c()
+  
+  for (i in 1:length(lines)) {
+    if (is_empty[i]) {
+      # Empty line = end of paragraph
+      if (length(current_paragraph) > 0) {
+        # Join lines in current paragraph with spaces
+        paragraphs <- c(paragraphs, paste(current_paragraph, collapse = " "))
+        current_paragraph <- c()
+      }
+      # Keep the empty line as paragraph separator
+      paragraphs <- c(paragraphs, "")
+    } else {
+      # Add line to current paragraph
+      current_paragraph <- c(current_paragraph, lines[i])
+    }
+  }
+  
+  # Don't forget last paragraph
+  if (length(current_paragraph) > 0) {
+    paragraphs <- c(paragraphs, paste(current_paragraph, collapse = " "))
+  }
+  
+  # Join paragraphs with newlines
+  reflowed <- paste(paragraphs, collapse = "\n")
+  
+  return(reflowed)
+}
+
+# STEP 3: DEFINE THE MAIN SORTING FUNCTION
+# ============================================================================
+
+sort_articles_by_volume <- function(input_file, 
+                                   output_file = "sorted_by_volume.txt",
+                                   separator = "---",
+                                   reflow_paragraphs = TRUE) {
+  
+  cat("\n========================================\n")
+  cat("VOLUME & PAGE ARTICLE SORTER\n")
+  cat("========================================\n\n")
+  
+  # Read the text file
+  cat("Step 1: Reading file...\n")
+  text_lines <- readLines(input_file, warn = FALSE)
+  full_text <- paste(text_lines, collapse = "\n")
+  cat("✓ File read successfully\n\n")
+  
+  # Split into individual articles
+  cat("Step 2: Splitting articles...\n")
+  articles <- str_split(full_text, separator)[[1]]
+  articles <- articles[nchar(trimws(articles)) > 0]  # Remove empty ones
+  cat("✓ Found", length(articles), "articles\n\n")
+  
+  # Reflow text into paragraphs if requested
+  if (reflow_paragraphs) {
+    cat("Step 2b: Reflowing text into paragraphs...\n")
+    articles <- sapply(articles, reflow_text, USE.NAMES = FALSE)
+    cat("✓ Text reflowed into paragraph format\n\n")
+  }
+  
+  # Extract volume and page numbers from each article
+  cat("Step 3: Extracting volume and page numbers...\n")
+  
+  # Function to extract volume and page from text
+  extract_volume_page <- function(text) {
+    # Look for pattern like: v06-5 or v06_5 or v6-5
+    # Pattern explanation: v followed by digits, then - or _, then digits
+    pattern <- "v(\\d+)[-_](\\d+)"
+    
+    matches <- str_match(text, pattern)
+    
+    if (!is.na(matches[1])) {
+      volume <- as.integer(matches[2])
+      page <- as.integer(matches[3])
+      return(c(volume, page))
+    }
+    
+    return(c(NA, NA))
+  }
+  
+  # Extract volume and page for each article
+  volume_page_data <- t(sapply(articles, extract_volume_page))
+  
+  volumes <- volume_page_data[, 1]
+  pages <- volume_page_data[, 2]
+  
+  found_count <- sum(!is.na(volumes))
+  cat("✓ Found volume/page info in", found_count, "articles\n\n")
+  
+  # Create dataframe with articles and volume/page info
+  cat("Step 4: Organizing data...\n")
+  article_df <- data.frame(
+    article_num = 1:length(articles),
+    article_text = articles,
+    volume = volumes,
+    page = pages,
+    stringsAsFactors = FALSE
+  )
+  
+  # Sort by volume first, then by page
+  article_df <- article_df %>%
+    arrange(volume, page, article_num)
+  
+  cat("✓ Articles sorted by volume and page\n\n")
+  
+  # Show volume range
+  if (found_count > 0) {
+    min_vol <- min(article_df$volume, na.rm = TRUE)
+    max_vol <- max(article_df$volume, na.rm = TRUE)
+    cat("Volume range: v", sprintf("%02d", min_vol), " to v", 
+        sprintf("%02d", max_vol), "\n")
+    cat("Total volumes:", length(unique(article_df$volume[!is.na(article_df$volume)])), "\n\n")
+  }
+  
+  # Write sorted articles to file
+  cat("Step 5: Writing output file...\n")
+  
+  # Build complete output text
+  output_text <- paste0(
+    "========================================\n",
+    "ARTICLES SORTED BY VOLUME AND PAGE\n",
+    "Generated: ", Sys.time(), "\n",
+    "Total articles: ", nrow(article_df), "\n",
+    "Articles with volume/page info: ", found_count, "\n",
+    "========================================\n\n"
+  )
+  
+  for (i in 1:nrow(article_df)) {
+    # Add article header
+    if (!is.na(article_df$volume[i])) {
+      header <- paste0("\n\n", separator, "\n",
+                      "ARTICLE #", i, " | Volume ", sprintf("%02d", article_df$volume[i]),
+                      ", Page ", article_df$page[i],
+                      "\n", separator, "\n\n")
+    } else {
+      header <- paste0("\n\n", separator, "\n",
+                      "ARTICLE #", i, " | Volume/Page: NOT FOUND",
+                      "\n", separator, "\n\n")
+    }
+    
+    # Add header and article text as continuous text
+    output_text <- paste0(output_text, header, article_df$article_text[i])
+  }
+  
+  # Save to file - use cat() to preserve paragraph formatting
+  cat(output_text, file = output_file)
+  cat("✓ Output saved to:", output_file, "\n\n")
+  
+  cat("========================================\n")
+  cat("SORTING COMPLETE!\n")
+  cat("========================================\n\n")
+  
+  # Return the dataframe for further analysis
+  return(invisible(article_df))
+}
+
+# STEP 4: HELPER FUNCTION - PREVIEW RESULTS
+# ============================================================================
+
+preview_sorted_articles <- function(article_df, n = 5) {
+  cat("\n========================================\n")
+  cat("PREVIEW OF SORTED ARTICLES\n")
+  cat("========================================\n\n")
+  
+  num_to_show <- min(n, nrow(article_df))
+  
+  for (i in 1:num_to_show) {
+    cat("--- Article", i, "---\n")
+    
+    if (!is.na(article_df$volume[i])) {
+      cat("Volume:", sprintf("%02d", article_df$volume[i]), 
+          "| Page:", article_df$page[i], "\n")
+    } else {
+      cat("Volume/Page: NOT FOUND\n")
+    }
+    
+    # Show first 200 characters with proper text flow
+    preview_text <- substr(article_df$article_text[i], 1, 200)
+    cat("Preview:", preview_text, "...\n\n")
+  }
+}
+
+# STEP 4: HELPER FUNCTION - ANALYZE RESULTS
+# ============================================================================
+
+analyze_results <- function(article_df) {
+  cat("\n========================================\n")
+  cat("ANALYSIS REPORT\n")
+  cat("========================================\n\n")
+  
+  cat("Total articles:", nrow(article_df), "\n")
+  cat("Articles with volume/page info:", sum(!is.na(article_df$volume)), "\n")
+  cat("Articles without volume/page info:", sum(is.na(article_df$volume)), "\n\n")
+  
+  if (sum(!is.na(article_df$volume)) > 0) {
+    cat("Volume Statistics:\n")
+    cat("  First volume:", sprintf("v%02d", min(article_df$volume, na.rm = TRUE)), "\n")
+    cat("  Last volume:", sprintf("v%02d", max(article_df$volume, na.rm = TRUE)), "\n")
+    cat("  Total unique volumes:", length(unique(article_df$volume[!is.na(article_df$volume)])), "\n\n")
+    
+    # Show articles per volume
+    cat("Articles per volume:\n")
+    volume_counts <- article_df %>%
+      filter(!is.na(volume)) %>%
+      group_by(volume) %>%
+      summarize(count = n(), .groups = 'drop') %>%
+      arrange(volume)
+    
+    for (i in 1:nrow(volume_counts)) {
+      cat("  v", sprintf("%02d", volume_counts$volume[i]), 
+          ": ", volume_counts$count[i], " articles\n", sep = "")
+    }
+    cat("\n")
+    
+    # Show page range per volume
+    cat("Page range by volume:\n")
+    page_ranges <- article_df %>%
+      filter(!is.na(volume)) %>%
+      group_by(volume) %>%
+      summarize(
+        min_page = min(page, na.rm = TRUE),
+        max_page = max(page, na.rm = TRUE),
+        .groups = 'drop'
+      ) %>%
+      arrange(volume)
+    
+    for (i in 1:min(10, nrow(page_ranges))) {  # Show first 10 volumes
+      cat("  v", sprintf("%02d", page_ranges$volume[i]), 
+          ": pages ", page_ranges$min_page[i], "-", page_ranges$max_page[i], "\n", sep = "")
+    }
+    if (nrow(page_ranges) > 10) {
+      cat("  ... and", nrow(page_ranges) - 10, "more volumes\n")
+    }
+  }
+  
+  # Show articles without volume/page info
+  no_info <- article_df %>% filter(is.na(volume))
+  if (nrow(no_info) > 0) {
+    cat("\n⚠ Articles without volume/page info:\n")
+    for (i in 1:min(3, nrow(no_info))) {
+      preview <- substr(no_info$article_text[i], 1, 100)
+      preview <- gsub("\n", " ", preview)
+      cat("  Article", no_info$article_num[i], ":", preview, "...\n")
+    }
+  }
+  
+  cat("\n========================================\n\n")
+}
+
+# STEP 5: HELPER FUNCTION - EXTRACT SPECIFIC VOLUME
+# ============================================================================
+
+extract_volume <- function(article_df, volume_num) {
+  cat("\nExtracting Volume", sprintf("%02d", volume_num), "...\n")
+  
+  vol_articles <- article_df %>%
+    filter(volume == volume_num) %>%
+    arrange(page)
+  
+  cat("Found", nrow(vol_articles), "articles in this volume\n")
+  
+  if (nrow(vol_articles) > 0) {
+    cat("Pages:", min(vol_articles$page), "to", max(vol_articles$page), "\n\n")
+  }
+  
+  return(vol_articles)
+}
+
+# STEP 6: HELPER FUNCTION - SAVE BY VOLUME
+# ============================================================================
+
+save_volumes_separately <- function(article_df, output_prefix = "volume") {
+  cat("\nSaving each volume to separate files...\n\n")
+  
+  volumes <- unique(article_df$volume[!is.na(article_df$volume)])
+  volumes <- sort(volumes)
+  
+  for (vol in volumes) {
+    vol_data <- article_df %>%
+      filter(volume == vol) %>%
+      arrange(page)
+    
+    filename <- paste0(output_prefix, "_v", sprintf("%02d", vol), ".txt")
+    
+    # Build output as continuous text
+    output_text <- paste0(
+      "Volume ", sprintf("%02d", vol), "\n",
+      "Total articles: ", nrow(vol_data), "\n",
+      "========================================\n\n"
+    )
+    
+    for (i in 1:nrow(vol_data)) {
+      header <- paste0("\n--- Page ", vol_data$page[i], " ---\n\n")
+      output_text <- paste0(output_text, header, vol_data$article_text[i], "\n")
+    }
+    
+    # Save using cat() to preserve paragraph formatting
+    cat(output_text, file = filename)
+    cat("✓", filename, "saved (", nrow(vol_data), "articles )\n")
+  }
+  
+  cat("\nAll volumes saved!\n")
+}
+```
+```{r}
+result <- sort_articles_by_volume("EMP52_WomansExponenta.txt")
+```
