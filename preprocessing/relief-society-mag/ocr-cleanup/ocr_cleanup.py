@@ -40,10 +40,12 @@ PROGRESS_FILE = Path(__file__).resolve().parent / "progress.json"
 # LLM settings
 # ---------------------------------------------------------------------------
 MODEL = "gpt-4o"
-CHUNK_TARGET_WORDS = 2000  # approximate words per chunk (kept under TPM_LIMIT with margin)
+CHUNK_TARGET_WORDS = 600  # approximate words per chunk (kept under TPM_LIMIT with margin)
+MAX_CHUNK_WORDS = 800  # hard limit - split paragraphs if needed
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 2  # seconds
 TPM_LIMIT = 30_000  # tokens per minute budget
+MAX_TOKENS_PER_REQUEST = 12_000  # max tokens for a single request (input + output)
 
 SYSTEM_PROMPT = """\
 You are an OCR post-processing assistant. You will receive a passage of text \
@@ -137,7 +139,8 @@ def chunk_text(text: str, target_words: int = CHUNK_TARGET_WORDS) -> list[str]:
     Split text into chunks at paragraph boundaries (~target_words each).
 
     Splits on double-newlines (paragraph breaks). If a single paragraph
-    exceeds the target, it gets its own chunk.
+    exceeds MAX_CHUNK_WORDS, splits it further at sentence boundaries or
+    by word count to ensure no chunk is too large.
     """
     paragraphs = re.split(r"(\n\s*\n)", text)
 
@@ -148,7 +151,18 @@ def chunk_text(text: str, target_words: int = CHUNK_TARGET_WORDS) -> list[str]:
     for part in paragraphs:
         part_words = len(part.split())
 
-        if current_words + part_words > target_words and current_chunk.strip():
+        # If this paragraph alone exceeds the max, split it
+        if part_words > MAX_CHUNK_WORDS:
+            # Save current chunk if any
+            if current_chunk.strip():
+                chunks.append(current_chunk)
+                current_chunk = ""
+                current_words = 0
+
+            # Split the large paragraph into smaller pieces
+            sub_chunks = split_large_paragraph(part, MAX_CHUNK_WORDS)
+            chunks.extend(sub_chunks)
+        elif current_words + part_words > target_words and current_chunk.strip():
             chunks.append(current_chunk)
             current_chunk = part
             current_words = part_words
@@ -160,6 +174,51 @@ def chunk_text(text: str, target_words: int = CHUNK_TARGET_WORDS) -> list[str]:
         chunks.append(current_chunk)
 
     return chunks if chunks else [text]
+
+
+def split_large_paragraph(paragraph: str, max_words: int) -> list[str]:
+    """
+    Split a large paragraph into smaller chunks at sentence boundaries.
+
+    If sentences themselves are too large, split by word count.
+    """
+    # Try to split by sentences first
+    sentences = re.split(r'([.!?]+\s+)', paragraph)
+
+    chunks = []
+    current_chunk = ""
+    current_words = 0
+
+    for i in range(0, len(sentences), 2):
+        sentence = sentences[i]
+        punctuation = sentences[i + 1] if i + 1 < len(sentences) else ""
+        full_sentence = sentence + punctuation
+        sentence_words = len(full_sentence.split())
+
+        # If a single sentence exceeds max_words, split it by word count
+        if sentence_words > max_words:
+            if current_chunk.strip():
+                chunks.append(current_chunk)
+                current_chunk = ""
+                current_words = 0
+
+            # Split by word count
+            words = full_sentence.split()
+            for j in range(0, len(words), max_words):
+                chunk_words = words[j:j + max_words]
+                chunks.append(" ".join(chunk_words))
+        elif current_words + sentence_words > max_words and current_chunk.strip():
+            chunks.append(current_chunk)
+            current_chunk = full_sentence
+            current_words = sentence_words
+        else:
+            current_chunk += full_sentence
+            current_words += sentence_words
+
+    if current_chunk.strip():
+        chunks.append(current_chunk)
+
+    return chunks if chunks else [paragraph]
 
 
 class TokenRateLimiter:
@@ -181,16 +240,25 @@ class TokenRateLimiter:
 
     def wait_if_needed(self, estimated_tokens: int):
         """Block until there is room in the budget for *estimated_tokens*."""
+        # First check if this single request would exceed the per-request limit
+        if estimated_tokens > MAX_TOKENS_PER_REQUEST:
+            raise ValueError(
+                f"Single request ({estimated_tokens} tokens) exceeds max tokens per request "
+                f"({MAX_TOKENS_PER_REQUEST})"
+            )
+
         while True:
             self._expire()
             used = self._tokens_used()
             if used + estimated_tokens <= self.tpm_limit:
                 return
-            # If the window is empty, this single request exceeds the budget
-            # on its own — let it through and let the API enforce its limit.
+            # If the window is empty, this single request exceeds the per-minute budget
+            # Wait for the window to reset
             if not self._window:
                 print(f"    Warning: single request (~{estimated_tokens} tokens) exceeds TPM budget of {self.tpm_limit}")
-                return
+                print(f"    Waiting 60s for rate limit window to reset...")
+                time.sleep(60)
+                continue
             # Wait until the oldest entry expires out of the window
             oldest_ts = self._window[0][0]
             wait = (oldest_ts + 60) - time.monotonic() + 0.1
@@ -204,8 +272,13 @@ class TokenRateLimiter:
 
 
 def estimate_tokens(text: str) -> int:
-    """Rough token estimate: ~1 token per 4 characters."""
-    return len(text) // 4
+    """
+    Rough token estimate: ~1.3 tokens per word for English text.
+
+    This is conservative to ensure we don't underestimate.
+    """
+    words = len(text.split())
+    return int(words * 1.5)  # Conservative estimate with buffer
 
 
 def call_gpt(client: OpenAI, text_chunk: str, limiter: TokenRateLimiter) -> str:
@@ -213,9 +286,20 @@ def call_gpt(client: OpenAI, text_chunk: str, limiter: TokenRateLimiter) -> str:
     Send a text chunk to GPT-4o for OCR cleanup with proactive rate
     limiting and exponential backoff.
     """
+    # Estimate tokens for this request (input + expected output)
+    input_tokens = estimate_tokens(SYSTEM_PROMPT) + estimate_tokens(text_chunk)
+    # Assume output will be similar length to input
+    estimated_total = input_tokens * 2
+
+    # Safety check: reject requests that would exceed the per-request limit
+    if estimated_total > MAX_TOKENS_PER_REQUEST:
+        raise ValueError(
+            f"Chunk too large: estimated {estimated_total} tokens, "
+            f"max is {MAX_TOKENS_PER_REQUEST}. Chunk has {len(text_chunk.split())} words."
+        )
+
     # Wait until the TPM budget has room for this request
-    est = estimate_tokens(SYSTEM_PROMPT + text_chunk) * 2  # estimate in + out
-    limiter.wait_if_needed(est)
+    limiter.wait_if_needed(estimated_total)
 
     backoff = INITIAL_BACKOFF
 
@@ -233,7 +317,16 @@ def call_gpt(client: OpenAI, text_chunk: str, limiter: TokenRateLimiter) -> str:
             if response.usage:
                 limiter.record(response.usage.total_tokens)
             return response.choices[0].message.content
-        except RateLimitError:
+        except RateLimitError as e:
+            # Check if this is a "request too large" error
+            error_str = str(e)
+            if "Request too large" in error_str or "Requested" in error_str:
+                # This is a per-request size limit, not a rate limit - don't retry
+                raise ValueError(
+                    f"Request exceeds OpenAI size limit. Chunk has {len(text_chunk.split())} words. "
+                    f"Error: {error_str}"
+                ) from e
+            # Regular rate limit - retry with backoff
             if attempt < MAX_RETRIES - 1:
                 print(f"    Rate limited, waiting {backoff}s...")
                 time.sleep(backoff)
