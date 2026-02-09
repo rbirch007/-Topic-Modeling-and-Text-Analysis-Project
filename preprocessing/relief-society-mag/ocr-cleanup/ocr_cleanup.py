@@ -14,6 +14,7 @@ Usage:
 """
 
 import argparse
+import collections
 import json
 import os
 import re
@@ -42,6 +43,7 @@ MODEL = "gpt-4o"
 CHUNK_TARGET_WORDS = 3000  # approximate words per chunk
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 2  # seconds
+TPM_LIMIT = 30_000  # tokens per minute budget
 
 SYSTEM_PROMPT = """\
 You are an OCR post-processing assistant. You will receive a passage of text \
@@ -160,10 +162,56 @@ def chunk_text(text: str, target_words: int = CHUNK_TARGET_WORDS) -> list[str]:
     return chunks if chunks else [text]
 
 
-def call_gpt(client: OpenAI, text_chunk: str) -> str:
+class TokenRateLimiter:
+    """Sliding-window rate limiter that enforces a tokens-per-minute budget."""
+
+    def __init__(self, tpm_limit: int = TPM_LIMIT):
+        self.tpm_limit = tpm_limit
+        self._window: collections.deque[tuple[float, int]] = collections.deque()
+
+    def _expire(self):
+        """Remove entries older than 60 seconds."""
+        cutoff = time.monotonic() - 60
+        while self._window and self._window[0][0] < cutoff:
+            self._window.popleft()
+
+    def _tokens_used(self) -> int:
+        self._expire()
+        return sum(t for _, t in self._window)
+
+    def wait_if_needed(self, estimated_tokens: int):
+        """Block until there is room in the budget for *estimated_tokens*."""
+        while True:
+            self._expire()
+            used = self._tokens_used()
+            if used + estimated_tokens <= self.tpm_limit:
+                return
+            # Wait until the oldest entry expires out of the window
+            oldest_ts = self._window[0][0]
+            wait = (oldest_ts + 60) - time.monotonic() + 0.1
+            if wait > 0:
+                print(f"    Throttling: {used} tokens used in last 60s, waiting {wait:.1f}s...")
+                time.sleep(wait)
+
+    def record(self, total_tokens: int):
+        """Record actual token usage returned by the API."""
+        self._window.append((time.monotonic(), total_tokens))
+
+
+def estimate_tokens(text: str) -> int:
+    """Rough token estimate: ~1 token per 4 characters."""
+    return len(text) // 4
+
+
+def call_gpt(client: OpenAI, text_chunk: str, limiter: TokenRateLimiter) -> str:
     """
-    Send a text chunk to GPT-4o for OCR cleanup with exponential backoff.
+    Send a text chunk to GPT-4o for OCR cleanup with proactive rate
+    limiting and exponential backoff.
     """
+    # Wait until the TPM budget has room for this request
+    est = estimate_tokens(SYSTEM_PROMPT + text_chunk) * 2  # estimate in + out
+    limiter.wait_if_needed(est)
+
     backoff = INITIAL_BACKOFF
 
     for attempt in range(MAX_RETRIES):
@@ -176,6 +224,9 @@ def call_gpt(client: OpenAI, text_chunk: str) -> str:
                 ],
                 temperature=0.0,
             )
+            # Record actual token usage
+            if response.usage:
+                limiter.record(response.usage.total_tokens)
             return response.choices[0].message.content
         except RateLimitError:
             if attempt < MAX_RETRIES - 1:
@@ -193,7 +244,7 @@ def call_gpt(client: OpenAI, text_chunk: str) -> str:
                 raise
 
 
-def process_file(client: OpenAI, raw_path: Path, clean_path: Path, file_num: int, total: int) -> bool:
+def process_file(client: OpenAI, limiter: TokenRateLimiter, raw_path: Path, clean_path: Path, file_num: int, total: int) -> bool:
     """
     Process a single file: strip garbled line 0, chunk, send to GPT-4o, reassemble.
     Returns True on success, False on failure.
@@ -217,7 +268,7 @@ def process_file(client: OpenAI, raw_path: Path, clean_path: Path, file_num: int
     for i, chunk in enumerate(chunks):
         if len(chunks) > 1:
             print(f"    Chunk {i+1}/{len(chunks)}...")
-        cleaned = call_gpt(client, chunk)
+        cleaned = call_gpt(client, chunk, limiter)
         cleaned_chunks.append(cleaned)
 
     # Step 4: Reassemble and write
@@ -303,8 +354,9 @@ def main():
             print(f"  {raw_path.relative_to(RAW_DIR)} → {clean_path.relative_to(PROJECT_ROOT)}")
         return
 
-    # Initialize OpenAI client
+    # Initialize OpenAI client and rate limiter
     client = OpenAI()
+    limiter = TokenRateLimiter(TPM_LIMIT)
 
     succeeded = 0
     failed = 0
@@ -312,7 +364,7 @@ def main():
     for i, (raw_path, clean_path) in enumerate(pairs, 1):
         rel_key = str(raw_path.relative_to(RAW_DIR))
         try:
-            ok = process_file(client, raw_path, clean_path, i, len(pairs))
+            ok = process_file(client, limiter, raw_path, clean_path, i, len(pairs))
             if ok:
                 progress["completed"].append(rel_key)
                 # Remove from failed if it was there
