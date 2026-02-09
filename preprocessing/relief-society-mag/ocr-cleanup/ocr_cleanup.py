@@ -40,7 +40,7 @@ PROGRESS_FILE = Path(__file__).resolve().parent / "progress.json"
 # LLM settings
 # ---------------------------------------------------------------------------
 MODEL = "gpt-4o"
-CHUNK_TARGET_WORDS = 3000  # approximate words per chunk
+CHUNK_TARGET_WORDS = 2000  # approximate words per chunk (kept under TPM_LIMIT with margin)
 MAX_RETRIES = 5
 INITIAL_BACKOFF = 2  # seconds
 TPM_LIMIT = 30_000  # tokens per minute budget
@@ -185,6 +185,11 @@ class TokenRateLimiter:
             self._expire()
             used = self._tokens_used()
             if used + estimated_tokens <= self.tpm_limit:
+                return
+            # If the window is empty, this single request exceeds the budget
+            # on its own — let it through and let the API enforce its limit.
+            if not self._window:
+                print(f"    Warning: single request (~{estimated_tokens} tokens) exceeds TPM budget of {self.tpm_limit}")
                 return
             # Wait until the oldest entry expires out of the window
             oldest_ts = self._window[0][0]
