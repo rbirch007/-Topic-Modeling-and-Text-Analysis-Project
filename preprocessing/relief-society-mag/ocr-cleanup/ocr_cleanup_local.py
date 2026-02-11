@@ -424,17 +424,48 @@ def process_file(model: str, raw_path: Path, clean_path: Path, file_num: int, to
     return True, file_stats
 
 
-def gather_files(volume_filter: str | None = None) -> list[tuple[Path, Path]]:
+def gather_files(volume_filter: str | None = None, volume_range: str | None = None) -> list[tuple[Path, Path]]:
     """
-    Gather all (raw_path, clean_path) pairs, optionally filtered by volume.
+    Gather all (raw_path, clean_path) pairs, optionally filtered by volume or volume range.
+
+    Args:
+        volume_filter: Single volume name (e.g., "Vol06")
+        volume_range: Volume range in format "start-end" (e.g., "6-10" for Vol06 through Vol10)
     """
     pairs = []
+
+    # Parse volume range if provided
+    volume_nums = None
+    if volume_range:
+        try:
+            start, end = volume_range.split('-')
+            start_num = int(start.strip())
+            end_num = int(end.strip())
+            if start_num > end_num:
+                raise ValueError(f"Invalid range: start ({start_num}) > end ({end_num})")
+            volume_nums = set(range(start_num, end_num + 1))
+        except ValueError as e:
+            print(f"Error parsing volume range '{volume_range}': {e}")
+            print("Format should be: start-end (e.g., '6-10' for Vol06 through Vol10)")
+            sys.exit(1)
 
     for vol_dir in sorted(RAW_DIR.iterdir()):
         if not vol_dir.is_dir():
             continue
+
+        # Filter by single volume
         if volume_filter and vol_dir.name != volume_filter:
             continue
+
+        # Filter by volume range
+        if volume_range:
+            # Extract volume number from directory name (e.g., "Vol06" -> 6)
+            vol_match = re.match(r'Vol(\d+)', vol_dir.name)
+            if not vol_match:
+                continue
+            vol_num = int(vol_match.group(1))
+            if vol_num not in volume_nums:
+                continue
 
         for txt_file in sorted(vol_dir.glob("*.txt")):
             clean_path = CLEAN_DIR / vol_dir.name / txt_file.name
@@ -488,6 +519,7 @@ Alternative - Use LiteLLM:
     )
     parser.add_argument("--limit", type=int, default=None, help="Process only N files (for testing)")
     parser.add_argument("--volume", type=str, default=None, help="Process only a specific volume folder (e.g. Vol45)")
+    parser.add_argument("--volume-range", type=str, default=None, help="Process a range of volumes (e.g. 6-10 for Vol06 through Vol10)")
     parser.add_argument("--dry-run", action="store_true", help="Show files that would be processed without making API calls")
     parser.add_argument("--reset-progress", action="store_true", help="Clear the progress file and start fresh")
     parser.add_argument("--model", type=str, default=DEFAULT_MODEL, help=f"Model to use (default: {DEFAULT_MODEL})")
@@ -523,12 +555,14 @@ Alternative - Use LiteLLM:
     completed_set = set(progress["completed"])
 
     # Gather files
-    all_pairs = gather_files(volume_filter=args.volume)
+    all_pairs = gather_files(volume_filter=args.volume, volume_range=args.volume_range)
 
     if not all_pairs:
         print(f"No files found in {RAW_DIR}")
         if args.volume:
             print(f"  (filtered to volume: {args.volume})")
+        if args.volume_range:
+            print(f"  (filtered to volume range: {args.volume_range})")
         sys.exit(1)
 
     # Filter out already-completed files
@@ -541,6 +575,10 @@ Alternative - Use LiteLLM:
 
     print(f"Model: {args.model}")
     print(f"Backend: {'LiteLLM' if USE_LITELLM else 'Ollama'}")
+    if args.volume:
+        print(f"Volume filter: {args.volume}")
+    if args.volume_range:
+        print(f"Volume range: {args.volume_range}")
     print(f"Total files found: {len(all_pairs)}")
     print(f"Already completed: {already_done}")
     print(f"To process: {len(pairs)}")
