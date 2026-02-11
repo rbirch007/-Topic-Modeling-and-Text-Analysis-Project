@@ -1,0 +1,210 @@
+{
+  "batch_num": 4,
+  "evaluation_timestamp": "2026-02-11",
+  "sample_evaluations": [
+    {
+      "sample_id": 19,
+      "volume": "Vol30",
+      "filename": "Vol30_No5_May_1943.txt",
+      "total_errors": 2,
+      "character_substitutions": 1,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 1,
+      "severity_minor": 1,
+      "quality_score": 88,
+      "notes": "Minor errors: 'ofthe' should be 'of the' (missing space), 'wil]' should be 'will' (bracket character substitution). Overall well-cleaned with good preservation of original content.",
+      "error_details": [
+        {
+          "error": "ofthe",
+          "expected": "of the",
+          "type": "word_level_errors",
+          "severity": "critical",
+          "context": "...at the very mention ofthe Relief Society!",
+          "impact": "Affects readability"
+        },
+        {
+          "error": "wil]",
+          "expected": "will",
+          "type": "character_substitutions",
+          "severity": "minor",
+          "context": "...American women wil] have to pay...",
+          "impact": "Obvious typo but context clear"
+        }
+      ]
+    },
+    {
+      "sample_id": 20,
+      "volume": "Vol33",
+      "filename": "vol33_No10_October_1946.txt",
+      "total_errors": 3,
+      "character_substitutions": 2,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 2,
+      "severity_minor": 1,
+      "quality_score": 85,
+      "notes": "Persisting OCR errors with unicode replacement characters and garbled text. 'it\ufffd's' should be 'it's' (appears twice), 'I?I ?' should be proper contraction/text. These indicate challenging OCR source material.",
+      "error_details": [
+        {
+          "error": "it\ufffds",
+          "expected": "it's",
+          "type": "character_substitutions",
+          "severity": "critical",
+          "context": "...but it\ufffds a fact, isn\ufffdt it?",
+          "impact": "Multiple character corruption in contractions",
+          "occurrences": 2
+        },
+        {
+          "error": "I?I ?",
+          "expected": "[unclear - likely \"I\" or \"I said\"]",
+          "type": "word_level_errors",
+          "severity": "critical",
+          "context": "\"Yes'm,\" answered Sallie, \"I?I ?well, when I found out...",
+          "impact": "Text incomprehensible in this phrase"
+        }
+      ]
+    },
+    {
+      "sample_id": 21,
+      "volume": "Vol34",
+      "filename": "vol34_No7_July_1947.txt",
+      "total_errors": 4,
+      "character_substitutions": 0,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 3,
+      "punctuation_errors": 0,
+      "context_ambiguities": 1,
+      "severity_critical": 4,
+      "severity_minor": 0,
+      "quality_score": 76,
+      "notes": "Multiple unicode replacement characters (U+FFFD) indicate serious OCR corruption in source material. Incomplete sentence at end ('Do the minds of the leaders, it'). These are complex garbles that may require manual review or re-OCR.",
+      "error_details": [
+        {
+          "error": "\ufffd (unicode replacement)",
+          "expected": "[uncertain - may be dash or period]",
+          "type": "complex_garbles",
+          "severity": "critical",
+          "context": "The incidents of this story are true, and the characters authentic. The information has been carefully gleaned from diaries, journals, and personal interviews.\ufffdEd.",
+          "occurrences": 2
+        },
+        {
+          "error": "\ufffd (unicode replacement)",
+          "expected": "[uncertain - likely dash]",
+          "type": "complex_garbles",
+          "severity": "critical",
+          "context": "...young men and two families\ufffdJames L. Davis...",
+          "occurrences": 1
+        },
+        {
+          "error": "Incomplete sentence",
+          "expected": "[full sentence expected]",
+          "type": "context_ambiguities",
+          "severity": "critical",
+          "context": "Do the minds of the leaders, it",
+          "impact": "Text ends abruptly mid-sentence"
+        }
+      ]
+    },
+    {
+      "sample_id": 22,
+      "volume": "Vol28",
+      "filename": "Vol28_No2_February_1941.txt",
+      "total_errors": 0,
+      "character_substitutions": 0,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 0,
+      "severity_minor": 0,
+      "quality_score": 95,
+      "notes": "Excellent cleanup quality. No errors detected in the cleaned sample. Proper em-dash usage preserved throughout. Text is highly readable and well-cleaned.",
+      "error_details": []
+    },
+    {
+      "sample_id": 23,
+      "volume": "Vol34",
+      "filename": "vol34_No2_February_1947.txt",
+      "total_errors": 4,
+      "character_substitutions": 0,
+      "word_level_errors": 1,
+      "proper_noun_errors": 1,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 2,
+      "severity_critical": 2,
+      "severity_minor": 2,
+      "quality_score": 82,
+      "notes": "Good overall cleanup with a few persistent issues. 'ani-versary' should be 'anniversary', uncertain whether 'Comelia' is correct or should be 'Cornelia'. Unicode replacement characters (U+FFFD) appear 4 times, indicating source material corruption. Incomplete text at end.",
+      "error_details": [
+        {
+          "error": "ani-versary",
+          "expected": "anniversary",
+          "type": "word_level_errors",
+          "severity": "minor",
+          "context": "...to celebrate the birthday ani-versary of Mrs. Zina D. H. Young.",
+          "impact": "Spelling error but context clear"
+        },
+        {
+          "error": "Comelia",
+          "expected": "possibly Cornelia",
+          "type": "proper_noun_errors",
+          "severity": "critical",
+          "context": "...where the national president, Basil O'Connor, and Comelia Otis Skinner were speakers.",
+          "impact": "Proper name potentially misspelled"
+        },
+        {
+          "error": "\ufffd (unicode replacement)",
+          "expected": "[uncertain - likely special character]",
+          "type": "context_ambiguities",
+          "severity": "minor",
+          "context": "Multiple locations throughout text",
+          "occurrences": 4
+        },
+        {
+          "error": "Incomplete text",
+          "expected": "[continuation expected]",
+          "type": "context_ambiguities",
+          "severity": "minor",
+          "context": "...South America, and Leban",
+          "impact": "Text ends abruptly"
+        }
+      ]
+    },
+    {
+      "sample_id": 24,
+      "volume": "Vol30",
+      "filename": "Vol30_No6and7_JuneJuly_1943.txt",
+      "total_errors": 0,
+      "character_substitutions": 0,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 0,
+      "severity_minor": 0,
+      "quality_score": 100,
+      "notes": "Perfect OCR cleanup. No errors detected in the cleaned sample. Excellent preservation of original content with proper formatting and punctuation.",
+      "error_details": []
+    }
+  ],
+  "batch_summary": {
+    "total_samples": 6,
+    "average_quality_score": 87.67,
+    "samples_with_errors": 5,
+    "samples_perfect": 1,
+    "total_errors_found": 14,
+    "most_common_error_type": "complex_garbles",
+    "overall_assessment": "Good overall OCR cleanup quality with average score of 87.67/100. Most issues are in samples with challenging source material (unicode corruption, incomplete text). Samples 22 and 24 show excellent cleanup quality (95-100). Samples 20, 21, and 23 have persistent OCR issues that should be reviewed, particularly unicode replacement characters which indicate serious source material corruption."
+  }
+}
