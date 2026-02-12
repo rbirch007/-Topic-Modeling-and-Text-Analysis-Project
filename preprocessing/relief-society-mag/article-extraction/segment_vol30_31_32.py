@@ -16,6 +16,7 @@ Usage:
 """
 
 import argparse
+import csv
 import os
 import re
 import sys
@@ -1071,6 +1072,95 @@ def build_regex_for_title(title: str) -> re.Pattern:
     return re.compile(escaped, re.IGNORECASE)
 
 
+def strip_running_noise(text: str) -> tuple[str, list[str]]:
+    """
+    Remove running headers and mailing statements from article body text.
+    Returns (cleaned_text, list_of_stripped_fragments).
+    """
+    noise = []
+
+    # Running headers: "RELIEF SOCIETY MAGAZINE" optionally followed by
+    # month/year with optional punctuation (OCR often merges them)
+    header_pat = re.compile(
+        r'\d*\s*RELIEF SOCIETY MAGAZINE\s*[\W]*\s*'
+        r'(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|'
+        r'SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)?\s*\d{0,4}',
+        re.IGNORECASE,
+    )
+    for m in header_pat.finditer(text):
+        noise.append(m.group().strip())
+    text = header_pat.sub('', text)
+
+    # "LESSON DEPARTMENT" running section headers (appear mid-page)
+    lesson_dept_pat = re.compile(r'\n\s*LESSON DEPARTMENT\s*\n')
+    for m in lesson_dept_pat.finditer(text):
+        noise.append(m.group().strip())
+    text = lesson_dept_pat.sub('\n', text)
+
+    # Mailing statement block
+    mailing_pat = re.compile(
+        r'Entered as second-class matter.*?authorized\s+June\s+29,\s+1918\.',
+        re.DOTALL | re.IGNORECASE,
+    )
+    for m in mailing_pat.finditer(text):
+        noise.append(m.group().strip())
+    text = mailing_pat.sub('', text)
+
+    # "Stamps should accompany manuscripts for their return."
+    stamps_pat = re.compile(r'Stamps should accompany manuscripts for their return\.?')
+    for m in stamps_pat.finditer(text):
+        noise.append(m.group().strip())
+    text = stamps_pat.sub('', text)
+
+    # Collapse runs of blank lines left behind
+    text = re.sub(r'\n{3,}', '\n\n', text)
+
+    return text, noise
+
+
+def find_ads_section(body: str, body_offset: int) -> tuple[str, str, int]:
+    """
+    Look for advertising content at the tail of the body text.
+    Returns (body_without_ads, ads_text, ads_start_in_full_text).
+    If no ads found, ads_text is empty and body is unchanged.
+    """
+    # Search in the last 30% of the body for ad markers
+    search_start = int(len(body) * 0.7)
+    search_region = body[search_start:]
+
+    ad_markers = [
+        r"When Buying Mention Relief Society Magazine",
+        r"DESERET NEWS PRESS",
+        r"DESERET BOOK COMPANY",
+        r"DAYNES\S?\s*MUSIC\s*CO",
+        r"L\.\s*D\.\s*S\.\s*BUSINESS COLLEGE",
+        r"MORMON HANDICRAFT",
+        r"Brigham Young University",
+    ]
+
+    earliest_pos = None
+    for marker in ad_markers:
+        m = re.search(marker, search_region, re.IGNORECASE)
+        if m:
+            pos = search_start + m.start()
+            if earliest_pos is None or pos < earliest_pos:
+                earliest_pos = pos
+
+    if earliest_pos is None:
+        return body, "", body_offset + len(body)
+
+    # Walk backwards from earliest_pos to find a paragraph break
+    # that likely starts the ads section
+    newline_pos = body.rfind('\n\n', 0, earliest_pos)
+    if newline_pos != -1 and earliest_pos - newline_pos < 500:
+        earliest_pos = newline_pos
+
+    ads_text = body[earliest_pos:].strip()
+    body_trimmed = body[:earliest_pos]
+
+    return body_trimmed, ads_text, body_offset + earliest_pos
+
+
 def split_front_matter(text: str) -> tuple[str, str]:
     """
     Split the issue text into front matter (TOC, board listing, ads, subscription
@@ -1130,20 +1220,36 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
     front_matter, body = split_front_matter(text)
     body_offset = len(front_matter)
 
+    # Separate ads from the tail of the body
+    body, ads_text, ads_start = find_ads_section(body, body_offset)
+
+    # Find entry boundaries in the body (excluding ads)
     boundaries = find_entry_boundaries(body, entries, body_offset)
 
-    stats = {"matched": 0, "misc_bytes": 0, "total_bytes": len(text.encode("utf-8"))}
+    stats = {"matched": 0, "misc_bytes": 0, "total_bytes": len(text.encode("utf-8")),
+             "manifest_rows": []}
 
     vol_num = vol.replace("Vol", "")
     issue_dir = output_dir / vol / month
     if not dry_run:
         issue_dir.mkdir(parents=True, exist_ok=True)
 
+    # Collect all noise stripped from articles for MISC
+    all_noise = []
+
     # Track covered character ranges using intervals (not a set of every index)
     covered_intervals = []
 
     for idx, (start, end, entry) in enumerate(boundaries, 1):
         segment_text = text[start:end].strip()
+        if not segment_text:
+            continue
+
+        # Strip running headers and mailing statements from article text
+        segment_text, noise_frags = strip_running_noise(segment_text)
+        segment_text = segment_text.strip()
+        all_noise.extend(noise_frags)
+
         if not segment_text:
             continue
 
@@ -1165,6 +1271,33 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
         else:
             filepath.write_text(segment_text, encoding="utf-8")
 
+        rel_path = f"{vol}/{month}/{filename}"
+        stats["manifest_rows"].append({
+            "file": rel_path,
+            "volume": vol,
+            "month": month,
+            "etype": entry["etype"],
+            "title": entry["title"],
+            "author": entry["author"],
+        })
+
+    # Write ads file if ads were found
+    if ads_text:
+        ads_filename = f"{month}_{vol}_ADS.txt"
+        ads_path = issue_dir / ads_filename
+        if dry_run:
+            print(f"  [{'ads':12s}] {ads_filename} ({len(ads_text)} chars)")
+        else:
+            ads_path.write_text(ads_text, encoding="utf-8")
+        stats["manifest_rows"].append({
+            "file": f"{vol}/{month}/{ads_filename}",
+            "volume": vol,
+            "month": month,
+            "etype": "ads",
+            "title": "ADS",
+            "author": "",
+        })
+
     # Collect uncovered text into MISC.txt
     # Front matter is always uncovered; then any gaps between matched entries
     misc_parts = []
@@ -1175,7 +1308,6 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
         misc_parts.append(fm_text)
 
     # Find gaps in body not covered by any entry
-    # Sort intervals (should already be sorted)
     covered_intervals.sort()
     cursor = body_offset  # start of body
     for iv_start, iv_end in covered_intervals:
@@ -1185,11 +1317,17 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
                 misc_parts.append(gap_text)
         cursor = max(cursor, iv_end)
 
-    # Trailing gap after last entry
-    if cursor < len(text):
-        gap_text = text[cursor:].strip()
+    # Trailing gap between last entry and ads (or end of body)
+    body_end = body_offset + len(body)
+    if cursor < body_end:
+        gap_text = text[cursor:body_end].strip()
         if gap_text:
             misc_parts.append(gap_text)
+
+    # Stripped noise goes into MISC
+    if all_noise:
+        misc_parts.append("--- STRIPPED NOISE ---")
+        misc_parts.extend(all_noise)
 
     if misc_parts:
         misc_text = "\n\n---\n\n".join(misc_parts)
@@ -1200,6 +1338,15 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
             print(f"  [{'misc':12s}] {misc_path.name} ({len(misc_text)} chars)")
         else:
             misc_path.write_text(misc_text, encoding="utf-8")
+
+        stats["manifest_rows"].append({
+            "file": f"{vol}/{month}/{misc_path.name}",
+            "volume": vol,
+            "month": month,
+            "etype": "misc",
+            "title": "MISC",
+            "author": "",
+        })
 
     return stats
 
@@ -1221,6 +1368,7 @@ def main():
     total_misc = 0
     total_bytes = 0
     issues_processed = 0
+    all_manifest_rows = []
 
     for (vol, issue_key), entries in TOC.items():
         vol_num = int(vol.replace("Vol", ""))
@@ -1258,12 +1406,22 @@ def main():
         total_matched += stats["matched"]
         total_misc += stats["misc_bytes"]
         total_bytes += stats["total_bytes"]
+        all_manifest_rows.extend(stats["manifest_rows"])
 
         coverage = ((stats["total_bytes"] - stats["misc_bytes"]) / stats["total_bytes"] * 100
                      if stats["total_bytes"] > 0 else 0)
         print(f"  Entries matched: {stats['matched']}")
         print(f"  Coverage: {coverage:.1f}%")
         print(f"  Misc bytes: {stats['misc_bytes']}")
+
+    # Write manifest CSV
+    if all_manifest_rows and not args.dry_run:
+        manifest_path = OUTPUT_DIR / "manifest.csv"
+        with open(manifest_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=["file", "volume", "month", "etype", "title", "author"])
+            writer.writeheader()
+            writer.writerows(all_manifest_rows)
+        print(f"\nManifest written: {manifest_path} ({len(all_manifest_rows)} entries)")
 
     print(f"\n{'='*60}")
     print(f"SUMMARY")
