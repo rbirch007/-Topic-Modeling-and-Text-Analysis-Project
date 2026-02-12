@@ -1071,18 +1071,39 @@ def build_regex_for_title(title: str) -> re.Pattern:
     return re.compile(escaped, re.IGNORECASE)
 
 
-def find_entry_boundaries(text: str, entries: list[dict]) -> list[tuple[int, int, dict]]:
+def split_front_matter(text: str) -> tuple[str, str]:
     """
-    Find the start position of each TOC entry in the text.
+    Split the issue text into front matter (TOC, board listing, ads, subscription
+    info) and body content.  The marker is 'MAGAZINE CIRCULATION' which appears
+    in every issue of Vol 30-32 at the end of the front matter section.
+
+    Returns (front_matter, body).  If the marker is not found, front_matter is
+    empty and body is the full text.
+    """
+    marker = re.search(r'MAGAZINE CIRCULATION[^\n]*', text)
+    if marker:
+        split_pos = marker.end()
+        return text[:split_pos], text[split_pos:]
+    else:
+        print("  WARNING: MAGAZINE CIRCULATION marker not found, searching full text")
+        return "", text
+
+
+def find_entry_boundaries(body: str, entries: list[dict], body_offset: int = 0) -> list[tuple[int, int, dict]]:
+    """
+    Find the start position of each TOC entry in the body text.
+    Positions are returned relative to the full original text using body_offset.
     Returns list of (start, end, entry_dict) sorted by position.
     """
     found = []
 
     for entry in entries:
         pattern = build_regex_for_title(entry["title"])
-        match = pattern.search(text)
+        match = pattern.search(body)
         if match:
-            found.append((match.start(), entry))
+            found.append((match.start() + body_offset, entry))
+        else:
+            print(f"  WARNING: No match for '{entry['title']}' in body text")
 
     # Sort by position in text
     found.sort(key=lambda x: x[0])
@@ -1093,7 +1114,7 @@ def find_entry_boundaries(text: str, entries: list[dict]) -> list[tuple[int, int
         if i + 1 < len(found):
             end = found[i + 1][0]
         else:
-            end = len(text)
+            end = body_offset + len(body)
         boundaries.append((start, end, entry))
 
     return boundaries
@@ -1105,7 +1126,11 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
     Segment a single issue's text into individual entry files.
     Returns stats dict.
     """
-    boundaries = find_entry_boundaries(text, entries)
+    # Split off front matter so title matches happen in body only
+    front_matter, body = split_front_matter(text)
+    body_offset = len(front_matter)
+
+    boundaries = find_entry_boundaries(body, entries, body_offset)
 
     stats = {"matched": 0, "misc_bytes": 0, "total_bytes": len(text.encode("utf-8"))}
 
@@ -1114,15 +1139,15 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
     if not dry_run:
         issue_dir.mkdir(parents=True, exist_ok=True)
 
-    # Track which bytes are covered
-    covered = set()
+    # Track covered character ranges using intervals (not a set of every index)
+    covered_intervals = []
 
     for idx, (start, end, entry) in enumerate(boundaries, 1):
         segment_text = text[start:end].strip()
         if not segment_text:
             continue
 
-        covered.update(range(start, end))
+        covered_intervals.append((start, end))
         stats["matched"] += 1
 
         title_safe = sanitize_filename(entry["title"])
@@ -1141,25 +1166,28 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
             filepath.write_text(segment_text, encoding="utf-8")
 
     # Collect uncovered text into MISC.txt
+    # Front matter is always uncovered; then any gaps between matched entries
     misc_parts = []
-    in_gap = False
-    gap_start = 0
 
-    for i in range(len(text)):
-        if i not in covered:
-            if not in_gap:
-                gap_start = i
-                in_gap = True
-        else:
-            if in_gap:
-                gap_text = text[gap_start:i].strip()
-                if gap_text:
-                    misc_parts.append(gap_text)
-                in_gap = False
+    # Front matter goes into MISC
+    fm_text = front_matter.strip()
+    if fm_text:
+        misc_parts.append(fm_text)
 
-    # Handle trailing gap
-    if in_gap:
-        gap_text = text[gap_start:].strip()
+    # Find gaps in body not covered by any entry
+    # Sort intervals (should already be sorted)
+    covered_intervals.sort()
+    cursor = body_offset  # start of body
+    for iv_start, iv_end in covered_intervals:
+        if cursor < iv_start:
+            gap_text = text[cursor:iv_start].strip()
+            if gap_text:
+                misc_parts.append(gap_text)
+        cursor = max(cursor, iv_end)
+
+    # Trailing gap after last entry
+    if cursor < len(text):
+        gap_text = text[cursor:].strip()
         if gap_text:
             misc_parts.append(gap_text)
 
