@@ -1,0 +1,35 @@
+{
+  "evaluation_summary": {
+    "total_samples_evaluated": 36,
+    "average_quality_score": 90.5,
+    "average_errors_per_sample": 2.61,
+    "total_errors_found": 94
+  },
+  "quality_distribution": {
+    "perfect_100": 10,
+    "excellent_90_99": 13,
+    "good_70_89": 12,
+    "fair_50_69": 0,
+    "poor_below_50": 1
+  },
+  "error_breakdown": {
+    "character_substitutions": 29,
+    "word_level_errors": 30,
+    "proper_noun_errors": 5,
+    "complex_garbles": 12,
+    "punctuation_errors": 13,
+    "context_ambiguities": 7,
+    "severity_critical": 53,
+    "severity_minor": 41
+  },
+  "error_breakdown_averages": {
+    "character_substitutions": 0.81,
+    "word_level_errors": 0.83,
+    "proper_noun_errors": 0.14,
+    "complex_garbles": 0.33,
+    "punctuation_errors": 0.36,
+    "context_ambiguities": 0.19,
+    "severity_critical": 1.47,
+    "severity_minor": 1.14
+  }
+}

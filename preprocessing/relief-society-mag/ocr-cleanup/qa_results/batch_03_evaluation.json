@@ -1,0 +1,142 @@
+{
+  "batch_num": 3,
+  "evaluation_timestamp": "2026-02-11",
+  "samples": [
+    {
+      "sample_id": 13,
+      "volume": "Vol18",
+      "filename": "Vol18_No11_November_1931.txt",
+      "errors_identified": [
+        "Potential error: '636' appears to be a page number artifact in middle of text",
+        "'ops.' at end of 'bishops, ops.' - likely OCR error for 'etc.' or continuation",
+        "Possible spacing/punctuation issue: 'COUNSELOR AMY I' should likely be 'COUNSELOR AMY: I'"
+      ],
+      "total_errors": 3,
+      "character_substitutions": 0,
+      "word_level_errors": 2,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 1,
+      "context_ambiguities": 0,
+      "severity_critical": 1,
+      "severity_minor": 2,
+      "quality_score": 92,
+      "notes": "Minor OCR artifacts remain: page number '636' embedded in text, cryptic 'ops.' abbreviation likely OCR error, formatting issue with speaker label"
+    },
+    {
+      "sample_id": 14,
+      "volume": "Vol24",
+      "filename": "Vol24_No12_December_1937.txt",
+      "errors_identified": [
+        "'798' appears to be page number artifact",
+        "'799' appears to be page number artifact"
+      ],
+      "total_errors": 2,
+      "character_substitutions": 0,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 2,
+      "severity_critical": 0,
+      "severity_minor": 2,
+      "quality_score": 95,
+      "notes": "Page number artifacts embedded in text (798, 799) but otherwise clean. Text flows well with proper names and formatting intact."
+    },
+    {
+      "sample_id": 15,
+      "volume": "Vol22",
+      "filename": "Vol22_No1_January_1935.txt",
+      "errors_identified": [
+        "Minor: 'Eliott' should be 'Eliot' (George Eliot)",
+        "'EpitH:' should be 'Edith:' - case error in name/speaker label",
+        "Possible: 'the great and good' context suggests proper phrase but text unclear"
+      ],
+      "total_errors": 2,
+      "character_substitutions": 1,
+      "word_level_errors": 0,
+      "proper_noun_errors": 1,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 1,
+      "severity_minor": 1,
+      "quality_score": 93,
+      "notes": "Author name error 'Eliott' for 'Eliot', speaker label case corruption 'EpitH' for 'Edith'. Otherwise well-cleaned with good formatting."
+    },
+    {
+      "sample_id": 16,
+      "volume": "Vol18",
+      "filename": "Vol18_No12_December_1931.txt",
+      "errors_identified": [
+        "'694' page number artifact",
+        "'S a person' - missing letter, should be 'As a person' or 'If a person'",
+        "'A north windows' - grammatical issue, should be 'the north windows' or 'at north windows'",
+        "Potential: 'inclose' is archaic but might be period-correct OCR"
+      ],
+      "total_errors": 3,
+      "character_substitutions": 1,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 1,
+      "severity_critical": 2,
+      "severity_minor": 1,
+      "quality_score": 90,
+      "notes": "Page number artifact '694', missing initial letter 'S a person' (should be 'As a person'), odd article 'A north windows'. These errors impact readability."
+    },
+    {
+      "sample_id": 17,
+      "volume": "Vol18",
+      "filename": "Vol18_No10_October_1931.txt",
+      "errors_identified": [
+        "'satrical' should be 'satirical' - missing letter",
+        "'T doubt' at start of dialog - should be 'I doubt' (capital T for I error)",
+        "''women' with smart quote at start - inconsistent quoting"
+      ],
+      "total_errors": 3,
+      "character_substitutions": 2,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 1,
+      "context_ambiguities": 0,
+      "severity_critical": 2,
+      "severity_minor": 1,
+      "quality_score": 91,
+      "notes": "Letter substitution errors: 'satrical' for 'satirical', 'T' for 'I' in dialog. Minor quote character inconsistency. Narrative and dialog flow mostly preserved."
+    },
+    {
+      "sample_id": 18,
+      "volume": "Vol20",
+      "filename": "Vol20_No2_February_1933.txt",
+      "errors_identified": [
+        "'ME:' at start of section - should be 'NOTE:' or similar, OCR artifact",
+        "'RS.' before name should be 'MRS.'",
+        "'ADY' should be 'LADY'",
+        "'ELEN' should be 'HELEN'",
+        "'HE' should be 'THE' at start of sentence",
+        "'MILDRID' should be 'MILDRED'"
+      ],
+      "total_errors": 6,
+      "character_substitutions": 4,
+      "word_level_errors": 2,
+      "proper_noun_errors": 2,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 4,
+      "severity_minor": 2,
+      "quality_score": 82,
+      "notes": "Multiple letter-level errors: 'ME' for 'NOTE', 'RS.' for 'MRS.', 'ADY' for 'LADY', 'ELEN' for 'HELEN', 'HE' for 'THE', 'MILDRID' for 'MILDRED'. These are word-initial letter losses/substitutions affecting readability."
+    }
+  ],
+  "summary": {
+    "total_samples": 6,
+    "average_quality_score": 90.5,
+    "total_errors_identified": 19,
+    "critical_errors": 10,
+    "minor_errors": 9
+  }
+}

@@ -1,0 +1,880 @@
+---
+title: "Relief Society Magazine Volume Splitter - Complete Edition"
+author: "Captures full mastheads, board listings, and Contents sections"
+date: "`r Sys.Date()`"
+output: html_notebook
+---
+
+# Relief Society Magazine Volume Splitter - Complete Edition
+
+This R Notebook ensures NO content is excluded by:
+- Capturing complete mastheads with all board members and editors
+- Including full Contents sections with article names and page numbers
+- Ending each month with advertisements (Beneficial Life, Sugar, book ads)
+
+## Setup
+
+```{r setup, message=FALSE, warning=FALSE}
+library(stringr)
+library(readr)
+library(dplyr)
+
+# Set your working directory
+setwd("/home/rbirch/rbirch/Bymonth/")
+
+if (!dir.exists("input")) dir.create("input", recursive = TRUE)
+if (!dir.exists("output")) dir.create("output", recursive = TRUE)
+
+cat("\n📁 Working directory:", getwd(), "\n")
+```
+
+---
+
+## Complete Splitting Function
+
+```{r split-function}
+split_volume_by_month <- function(input_file, 
+                                  output_dir = "output",
+                                  volume_name = NULL,
+                                  volume_number = NULL) {
+  
+  cat("\n", rep("=", 80), "\n", sep = "")
+  cat("📖 Processing:", basename(input_file), "\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  # Read file
+  content <- readLines(input_file, warn = FALSE, encoding = "UTF-8")
+  full_text <- paste(content, collapse = "\n")
+  
+  cat("File size:", format(nchar(full_text), big.mark = ","), "characters\n\n")
+  
+  # Extract volume number
+  if (is.null(volume_number)) {
+    vol_match <- str_extract(basename(input_file), "(?i)vol\\s*(\\d+)")
+    if (!is.na(vol_match)) {
+      volume_number <- as.integer(str_extract(vol_match, "\\d+"))
+    } else {
+      stop("Could not extract volume number from filename")
+    }
+  }
+  
+  if (is.null(volume_name)) {
+    volume_name <- paste0("Vol", volume_number)
+  }
+  
+  year <- 1913 + volume_number
+  cat("📚 Volume:", volume_name, "(", year, ")\n\n")
+  
+  # Create output directory
+  vol_output_dir <- file.path(output_dir, paste0(volume_name, "split"))
+  if (!dir.exists(vol_output_dir)) {
+    dir.create(vol_output_dir, recursive = TRUE)
+  }
+  
+  months <- c("JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+              "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER")
+  
+  # =====================================================================
+  # STEP 1: Find the EARLIEST marker for each month (to capture full masthead)
+  # =====================================================================
+  
+  cat("🔍 STEP 1: Locating complete month boundaries...\n")
+  
+  month_starts <- list()
+  
+  # Strategy: Look for "THE RELIEF SOCIETY MAGAZINE" which is the FIRST line
+  # of the complete masthead. This ensures we get everything.
+  
+  # Pattern to find the start of mastheads
+  masthead_start_pattern <- "THE RELIEF SOCIETY MAGAZINE"
+  
+  masthead_locs <- str_locate_all(full_text, 
+                                  regex(masthead_start_pattern, ignore_case = TRUE))[[1]]
+  
+  cat("  ✓ Found", nrow(masthead_locs), "occurrences of masthead start\n")
+  
+  # For each masthead occurrence, determine which month it belongs to
+  if (nrow(masthead_locs) > 0) {
+    for (i in 1:nrow(masthead_locs)) {
+      pos <- masthead_locs[i, 1]
+      
+      # Look ahead to find the month and year
+      # Search up to 8000 characters to ensure we capture the full masthead + Contents
+      search_end <- min(nchar(full_text), pos + 8000)
+      forward_region <- substring(full_text, pos, search_end)
+      
+      # Look for "Vol. XX MONTHNAME, YEAR No. X" pattern
+      vol_pattern <- paste0("Vol\\.?\\s*", volume_number, "\\s+(", 
+                           paste(months, collapse = "|"), 
+                           ")[,\\s]+", year, "\\s+No\\.?\\s*(\\d+)")
+      
+      vol_match <- str_match(forward_region, regex(vol_pattern, ignore_case = TRUE))
+      
+      if (!is.na(vol_match[1])) {
+        month <- toupper(vol_match[2])
+        issue_num <- as.integer(vol_match[3])
+        
+        # Store this position as the start of this month
+        month_starts[[month]] <- list(
+          position = pos,
+          issue_num = issue_num,
+          method = "masthead_detected",
+          confidence = "high"
+        )
+        
+        cat(sprintf("    ✓ %s (Issue #%d) at position %s\n", 
+                    month, issue_num, format(pos, big.mark = ",")))
+      }
+    }
+  }
+  
+  # Also look for months that might not have full mastheads
+  # Search for month names with year
+  for (i in 1:12) {
+    month <- months[i]
+    
+    if (month %in% names(month_starts)) next  # Already found
+    
+    # Look for "MONTHNAME, YEAR" or "MONTHNAME YEAR"
+    month_year_pattern <- paste0(month, "[,\\s]+", year)
+    month_locs <- str_locate_all(full_text, 
+                                 regex(month_year_pattern, ignore_case = FALSE))[[1]]
+    
+    if (nrow(month_locs) > 0) {
+      # Take the first occurrence (most likely to be the issue header)
+      pos <- month_locs[1, 1]
+      
+      # Look backward to find the start of the section
+      back_start <- max(1, pos - 6000)
+      back_region <- substring(full_text, back_start, pos)
+      
+      # Look for structural markers that indicate the start
+      start_markers <- c(
+        "THE RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY GENERAL BOARD",
+        "Monthly publication of the Relief Society"
+      )
+      
+      best_start <- pos  # Default to the month name position
+      
+      for (marker in start_markers) {
+        marker_locs <- str_locate_all(back_region, 
+                                     regex(marker, ignore_case = TRUE))[[1]]
+        if (nrow(marker_locs) > 0) {
+          # Take the LAST occurrence (closest to our month name, but before it)
+          best_start <- back_start + marker_locs[nrow(marker_locs), 1] - 1
+          break
+        }
+      }
+      
+      month_starts[[month]] <- list(
+        position = best_start,
+        issue_num = i,
+        method = "month_year_detected",
+        confidence = "medium"
+      )
+      
+      cat(sprintf("    + %s (Issue #%d) estimated at position %s\n", 
+                  month, i, format(best_start, big.mark = ",")))
+    }
+  }
+  
+  # Always ensure January starts at position 1 if not found
+  if (!("JANUARY" %in% names(month_starts))) {
+    month_starts[["JANUARY"]] <- list(
+      position = 1,
+      issue_num = 1,
+      method = "file_start",
+      confidence = "high"
+    )
+    cat("    + JANUARY (Issue #1) set to file start\n")
+  }
+  
+  cat("\n  ✅ Found", length(month_starts), "months with markers\n\n")
+  
+  # =====================================================================
+  # STEP 2: Interpolate any remaining missing months
+  # =====================================================================
+  
+  cat("🔍 STEP 2: Filling in any missing months...\n")
+  
+  found_months <- names(month_starts)
+  found_positions <- sapply(month_starts, function(x) x$position)
+  found_issues <- sapply(month_starts, function(x) x$issue_num)
+  
+  # Sort by issue number
+  sort_order <- order(found_issues)
+  found_months <- found_months[sort_order]
+  found_positions <- found_positions[sort_order]
+  found_issues <- found_issues[sort_order]
+  
+  missing_count <- 0
+  
+  for (i in 1:12) {
+    month <- months[i]
+    
+    if (month %in% names(month_starts)) next
+    
+    # Interpolate position based on surrounding months
+    before_idx <- which(found_issues < i)
+    after_idx <- which(found_issues > i)
+    
+    if (length(before_idx) > 0 && length(after_idx) > 0) {
+      before_idx <- max(before_idx)
+      after_idx <- min(after_idx)
+      
+      before_pos <- found_positions[before_idx]
+      after_pos <- found_positions[after_idx]
+      before_issue <- found_issues[before_idx]
+      after_issue <- found_issues[after_idx]
+      
+      fraction <- (i - before_issue) / (after_issue - before_issue)
+      estimated_pos <- as.integer(before_pos + fraction * (after_pos - before_pos))
+      
+    } else if (length(before_idx) > 0) {
+      avg_gap <- mean(diff(found_positions))
+      estimated_pos <- as.integer(max(found_positions) + avg_gap * (i - max(found_issues)))
+      
+    } else if (length(after_idx) > 0) {
+      avg_gap <- mean(diff(found_positions))
+      estimated_pos <- as.integer(min(found_positions) - avg_gap * (min(found_issues) - i))
+      
+    } else {
+      next
+    }
+    
+    # Refine estimate
+    search_start <- max(1, estimated_pos - 50000)
+    search_end <- min(nchar(full_text), estimated_pos + 50000)
+    search_region <- substring(full_text, search_start, search_end)
+    
+    # Look for the month name
+    month_pattern <- paste0(month, "\\s+", year)
+    month_locs <- str_locate_all(search_region, 
+                                 regex(month_pattern, ignore_case = FALSE))[[1]]
+    
+    if (nrow(month_locs) > 0) {
+      rel_estimate <- estimated_pos - search_start
+      distances <- abs(month_locs[, 1] - rel_estimate)
+      best_match <- which.min(distances)
+      
+      candidate_pos <- search_start + month_locs[best_match, 1] - 1
+      
+      # Look backward for structural marker
+      back_start <- max(1, candidate_pos - 6000)
+      back_region <- substring(full_text, back_start, candidate_pos)
+      
+      start_markers <- c(
+        "THE RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY GENERAL BOARD",
+        "Monthly publication of the Relief Society"
+      )
+      
+      best_boundary <- candidate_pos
+      for (marker in start_markers) {
+        marker_locs <- str_locate_all(back_region, regex(marker, ignore_case = TRUE))[[1]]
+        if (nrow(marker_locs) > 0) {
+          best_boundary <- back_start + marker_locs[nrow(marker_locs), 1] - 1
+          break
+        }
+      }
+      
+      month_starts[[month]] <- list(
+        position = best_boundary,
+        issue_num = i,
+        method = "interpolated",
+        confidence = "low"
+      )
+      
+      missing_count <- missing_count + 1
+      cat(sprintf("    + %s (Issue #%d) interpolated at position %s\n", 
+                  month, i, format(best_boundary, big.mark = ",")))
+    }
+  }
+  
+  if (missing_count == 0) {
+    cat("  ✅ No missing months - all detected!\n")
+  } else {
+    cat("\n  ✅ Interpolated", missing_count, "missing month(s)\n")
+  }
+  
+  cat("\n  📊 Total months mapped:", length(month_starts), "/ 12\n\n")
+  
+  # =====================================================================
+  # STEP 3: Find advertisement boundaries (month endings)
+  # =====================================================================
+  
+  cat("🔍 STEP 3: Locating advertisement boundaries...\n")
+  
+  # Comprehensive advertisement patterns
+  ad_patterns <- list(
+    beneficial = "BENEFICIAL\\s+LIFE\\s+INSURANCE\\s+COMPANY",
+    sugar_idaho = "UTAH-IDAHO\\s+SUGAR\\s+COMPANY",
+    sugar_house = "SUGAR\\s+HOUSE",
+    book_orders_1 = "Books.*may be ordered.*through.*Magazine",
+    book_orders_2 = "Order from.*Relief Society Magazine",
+    price_list = "PRICE LIST.*RELIEF SOCIETY MAGAZINE",
+    buy_music = "BUY YOUR RELIEF SOCIETY MUSIC",
+    glen_bros = "GLEN BROS\\.?\\s+MUSIC",
+    deseret_news = "DESERET NEWS PRESS",
+    deseret_book = "DESERET BOOK COMPANY",
+    commercial_printers = "COMMERCIAL AND EDITION PRINTERS",
+    mention_magazine = "Mention The Relief Society Magazine When Buying"
+  )
+  
+  all_ad_positions <- c()
+  ad_details <- list()
+  
+  for (ad_name in names(ad_patterns)) {
+    pattern <- ad_patterns[[ad_name]]
+    ad_locs <- str_locate_all(full_text, regex(pattern, ignore_case = TRUE))[[1]]
+    
+    if (nrow(ad_locs) > 0) {
+      positions <- ad_locs[, 1]
+      all_ad_positions <- c(all_ad_positions, positions)
+      
+      for (pos in positions) {
+        ad_details[[as.character(pos)]] <- ad_name
+      }
+      
+      cat(sprintf("  ✓ Found %2d '%s' ad(s)\n", nrow(ad_locs), ad_name))
+    }
+  }
+  
+  all_ad_positions <- sort(unique(all_ad_positions))
+  cat("\n  ✅ Total unique advertisement positions:", length(all_ad_positions), "\n\n")
+  
+  # =====================================================================
+  # STEP 4: Create final boundary list with adjusted endings
+  # =====================================================================
+  
+  cat("🔧 STEP 4: Creating final boundaries...\n")
+  
+  boundary_df <- data.frame(
+    month = names(month_starts),
+    start_pos = sapply(month_starts, function(x) x$position),
+    issue_num = sapply(month_starts, function(x) x$issue_num),
+    method = sapply(month_starts, function(x) x$method),
+    confidence = sapply(month_starts, function(x) x$confidence),
+    stringsAsFactors = FALSE
+  )
+  
+  # Sort by start position
+  boundary_df <- boundary_df[order(boundary_df$start_pos), ]
+  
+  # Calculate end positions based on advertisements
+  boundary_df$end_pos <- NA
+  boundary_df$ad_type <- NA
+  
+  for (i in 1:nrow(boundary_df)) {
+    current_start <- boundary_df$start_pos[i]
+    
+    if (i < nrow(boundary_df)) {
+      next_start <- boundary_df$start_pos[i + 1]
+      
+      # Find ALL advertisement sections between current and next month
+      ads_in_range <- all_ad_positions[all_ad_positions > current_start & 
+                                       all_ad_positions < next_start]
+      
+      if (length(ads_in_range) > 0) {
+        # Use the LAST advertisement position before next month
+        last_ad_start <- max(ads_in_range)
+        
+        # Identify which type of ad this is
+        ad_type <- ad_details[[as.character(last_ad_start)]]
+        boundary_df$ad_type[i] <- ad_type
+        
+        # Search forward from this ad position to find natural ending
+        # Look up to 4000 characters ahead to capture the full ad
+        search_end <- min(nchar(full_text), last_ad_start + 4000)
+        
+        # But don't go past the next month's start
+        search_end <- min(search_end, next_start - 1)
+        
+        forward_region <- substring(full_text, last_ad_start, search_end)
+        
+        # Look for ending markers that indicate the ad section is complete
+        ending_markers <- c(
+          "\n\n\n\n+",  # Multiple blank lines (4 or more)
+          "\\f",         # Form feed character
+          "\n\n\\s*\n\n" # Double blank with optional whitespace
+        )
+        
+        best_end <- search_end  # Default to end of search region
+        
+        for (marker in ending_markers) {
+          marker_locs <- str_locate_all(forward_region, regex(marker))[[1]]
+          if (nrow(marker_locs) > 0) {
+            # Take the LAST occurrence (most complete ad coverage)
+            marker_end <- marker_locs[nrow(marker_locs), 2]
+            best_end <- last_ad_start + marker_end
+            break
+          }
+        }
+        
+        # Make sure we don't overlap with next month
+        boundary_df$end_pos[i] <- min(best_end, next_start - 1)
+        
+      } else {
+        # No ads found - end just before next month
+        boundary_df$end_pos[i] <- next_start - 1
+        boundary_df$ad_type[i] <- "none_detected"
+      }
+      
+    } else {
+      # Last month - find the last advertisement and end there
+      ads_after_start <- all_ad_positions[all_ad_positions > current_start]
+      
+      if (length(ads_after_start) > 0) {
+        last_ad_start <- max(ads_after_start)
+        ad_type <- ad_details[[as.character(last_ad_start)]]
+        boundary_df$ad_type[i] <- ad_type
+        
+        # Extend to capture full ad (up to 4000 chars)
+        search_end <- min(nchar(full_text), last_ad_start + 4000)
+        forward_region <- substring(full_text, last_ad_start, search_end)
+        
+        ending_markers <- c("\n\n\n\n+", "\\f", "\n\n\\s*\n\n")
+        
+        best_end <- search_end
+        for (marker in ending_markers) {
+          marker_locs <- str_locate_all(forward_region, regex(marker))[[1]]
+          if (nrow(marker_locs) > 0) {
+            marker_end <- marker_locs[nrow(marker_locs), 2]
+            best_end <- last_ad_start + marker_end
+            break
+          }
+        }
+        
+        boundary_df$end_pos[i] <- min(best_end, nchar(full_text))
+        
+      } else {
+        # No ads found - end at file end
+        boundary_df$end_pos[i] <- nchar(full_text)
+        boundary_df$ad_type[i] <- "none_detected"
+      }
+    }
+  }
+  
+  cat("\n")
+  cat("📋 Final month boundaries:\n")
+  cat(rep("-", 100), "\n", sep = "")
+  cat(sprintf("%-4s %-10s %-12s %-12s %-10s %-18s %s\n", 
+              "No.", "Month", "Start", "End", "Size", "Ad Type", "Method"))
+  cat(rep("-", 100), "\n", sep = "")
+  
+  for (i in 1:nrow(boundary_df)) {
+    char_count <- boundary_df$end_pos[i] - boundary_df$start_pos[i] + 1
+    
+    cat(sprintf("%2d. %-10s %11s %11s %9s  %-18s %s\n",
+                boundary_df$issue_num[i],
+                boundary_df$month[i],
+                format(boundary_df$start_pos[i], big.mark = ","),
+                format(boundary_df$end_pos[i], big.mark = ","),
+                format(char_count, big.mark = ","),
+                boundary_df$ad_type[i],
+                boundary_df$method[i]))
+  }
+  
+  cat(rep("-", 100), "\n\n", sep = "")
+  
+  # =====================================================================
+  # STEP 5: Extract and save each month
+  # =====================================================================
+  
+  cat("💾 STEP 5: Extracting issues...\n\n")
+  
+  results <- list()
+  
+  for (i in 1:nrow(boundary_df)) {
+    month_name <- boundary_df$month[i]
+    month_title <- str_to_title(tolower(month_name))
+    issue_num <- boundary_df$issue_num[i]
+    
+    start_pos <- boundary_df$start_pos[i]
+    end_pos <- boundary_df$end_pos[i]
+    
+    issue_content <- substring(full_text, start_pos, end_pos)
+    
+    issue_filename <- sprintf("%s_No%02d_%s_%s.txt", 
+                             volume_name, 
+                             issue_num,
+                             month_title,
+                             year)
+    
+    output_path <- file.path(vol_output_dir, issue_filename)
+    writeLines(issue_content, output_path, useBytes = FALSE)
+    
+    char_count <- nchar(issue_content)
+    
+    # Show beginning (first 150 chars)
+    first_chars <- substring(issue_content, 1, min(150, char_count))
+    first_chars_clean <- str_replace_all(first_chars, "\\s+", " ")
+    
+    # Show ending (last 120 chars)
+    last_chars <- substring(issue_content, 
+                           max(1, char_count - 120), 
+                           char_count)
+    last_chars_clean <- str_replace_all(last_chars, "\\s+", " ")
+    
+    cat(sprintf("  ✓ %s\n", issue_filename))
+    cat(sprintf("      Size: %s characters\n", format(char_count, big.mark = ",")))
+    cat(sprintf("      Starts: %s...\n", substring(first_chars_clean, 1, 70)))
+    cat(sprintf("      Ends: ...%s\n\n", 
+                substring(last_chars_clean, 
+                         max(1, nchar(last_chars_clean) - 70))))
+    
+    results[[issue_filename]] <- list(
+      path = output_path,
+      month = month_title,
+      year = year,
+      issue_num = issue_num,
+      char_count = char_count,
+      start_pos = start_pos,
+      end_pos = end_pos,
+      ad_type = boundary_df$ad_type[i]
+    )
+  }
+  
+  cat(rep("=", 80), "\n", sep = "")
+  cat("✅ COMPLETE -", length(results), "issues created in", vol_output_dir, "\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  return(invisible(results))
+}
+```
+
+---
+
+## Batch Processing Functions
+
+```{r batch-functions}
+batch_process_volumes <- function(input_dir = "input", output_dir = "output") {
+  
+  volume_files <- list.files(input_dir, pattern = "\\.txt$", 
+                            full.names = TRUE, ignore.case = TRUE)
+  
+  if (length(volume_files) == 0) {
+    cat("❌ No .txt files found in", input_dir, "\n")
+    return(NULL)
+  }
+  
+  cat("\n📚 Found", length(volume_files), "volume file(s)\n\n")
+  
+  all_results <- list()
+  
+  for (volume_file in volume_files) {
+    vol_match <- str_extract(basename(volume_file), "(?i)vol\\s*(\\d+)")
+    
+    if (!is.na(vol_match)) {
+      vol_num <- as.integer(str_extract(vol_match, "\\d+"))
+      
+      tryCatch({
+        results <- split_volume_by_month(volume_file, 
+                                         output_dir = output_dir,
+                                         volume_number = vol_num)
+        if (!is.null(results)) {
+          all_results[[basename(volume_file)]] <- results
+        }
+      }, error = function(e) {
+        cat("❌ Error processing", basename(volume_file), ":", e$message, "\n\n")
+      })
+    }
+  }
+  
+  cat("\n✅ Batch complete:", length(all_results), "volume(s) processed\n\n")
+  return(invisible(all_results))
+}
+
+process_volume_range <- function(start_vol = 36, end_vol = 57,
+                                 input_dir = "input", output_dir = "output") {
+  
+  cat("\n📚 PROCESSING VOLUMES", start_vol, "TO", end_vol, "\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  all_results <- list()
+  volumes_processed <- c()
+  volumes_not_found <- c()
+  volumes_failed <- c()
+  
+  for (vol_num in start_vol:end_vol) {
+    vol_pattern <- paste0("vol\\s*", vol_num, ".*\\.txt$")
+    
+    volume_files <- list.files(input_dir, pattern = vol_pattern, 
+                              full.names = TRUE, ignore.case = TRUE)
+    
+    if (length(volume_files) == 0) {
+      volumes_not_found <- c(volumes_not_found, vol_num)
+      next
+    }
+    
+    tryCatch({
+      results <- split_volume_by_month(volume_files[1], 
+                                       output_dir = output_dir,
+                                       volume_number = vol_num)
+      
+      if (!is.null(results)) {
+        all_results[[paste0("Vol", vol_num)]] <- results
+        volumes_processed <- c(volumes_processed, vol_num)
+      }
+    }, error = function(e) {
+      cat("❌ Error processing Volume", vol_num, ":", e$message, "\n\n")
+      volumes_failed <- c(volumes_failed, vol_num)
+    })
+  }
+  
+  cat("\n", rep("=", 80), "\n", sep = "")
+  cat("📊 SUMMARY\n")
+  cat(rep("=", 80), "\n", sep = "")
+  cat("✅ Successfully processed:", length(volumes_processed), "volumes\n")
+  
+  if (length(volumes_not_found) > 0) {
+    cat("⚠  Not found:", paste(volumes_not_found, collapse = ", "), "\n")
+  }
+  
+  if (length(volumes_failed) > 0) {
+    cat("❌ Failed:", paste(volumes_failed, collapse = ", "), "\n")
+  }
+  
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  return(invisible(all_results))
+}
+```
+
+---
+
+## Verification Functions
+
+```{r verify-functions}
+verify_all_volumes <- function(output_dir = "output") {
+  
+  cat("\n📊 VERIFICATION REPORT\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  split_dirs <- list.dirs(output_dir, recursive = FALSE)
+  split_dirs <- split_dirs[str_detect(basename(split_dirs), "split$")]
+  
+  if (length(split_dirs) == 0) {
+    cat("❌ No split volumes found in", output_dir, "\n")
+    return(NULL)
+  }
+  
+  verification_results <- list()
+  
+  for (split_dir in split_dirs) {
+    vol_name <- str_remove(basename(split_dir), "split$")
+    issue_files <- list.files(split_dir, pattern = "\\.txt$", full.names = TRUE)
+    
+    status <- if (length(issue_files) == 12) "✓" else "⚠"
+    
+    cat(sprintf("%-15s: %2d files %s", vol_name, length(issue_files), status))
+    
+    if (length(issue_files) != 12) {
+      cat(sprintf(" (expected 12)"))
+    }
+    cat("\n")
+    
+    verification_results[[vol_name]] <- list(
+      path = split_dir,
+      file_count = length(issue_files),
+      complete = length(issue_files) == 12
+    )
+  }
+  
+  cat("\n")
+  complete_count <- sum(sapply(verification_results, function(x) x$complete))
+  cat("Complete volumes:", complete_count, "/", length(verification_results), "\n\n")
+  
+  return(invisible(verification_results))
+}
+
+inspect_month_contents <- function(volume_dir, show_lines = 40) {
+  
+  cat("\n🔍 INSPECTING MONTH BEGINNINGS & ENDINGS\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  issue_files <- list.files(volume_dir, pattern = "\\.txt$", 
+                            full.names = TRUE)
+  issue_files <- sort(issue_files)
+  
+  for (issue_file in issue_files) {
+    issue_name <- basename(issue_file)
+    content <- paste(readLines(issue_file, warn = FALSE, encoding = "UTF-8"), 
+                    collapse = "\n")
+    
+    char_count <- nchar(content)
+    
+    # Show first portion
+    first_portion <- substring(content, 1, min(500, char_count))
+    first_lines <- strsplit(first_portion, "\n")[[1]]
+    first_lines <- first_lines[1:min(show_lines, length(first_lines))]
+    
+    # Show last portion
+    last_portion <- substring(content, max(1, char_count - 500), char_count)
+    last_lines <- strsplit(last_portion, "\n")[[1]]
+    last_lines <- tail(last_lines, min(show_lines, length(last_lines)))
+    
+    cat(sprintf("📄 %s (%s chars)\n", issue_name, format(char_count, big.mark = ",")))
+    cat(rep("-", 80), "\n", sep = "")
+    cat("BEGINNING:\n")
+    cat(paste(first_lines, collapse = "\n"))
+    cat("\n\n")
+    cat(rep("-", 80), "\n", sep = "")
+    cat("ENDING:\n")
+    cat(paste(last_lines, collapse = "\n"))
+    cat("\n")
+    cat(rep("=", 80), "\n\n", sep = "")
+  }
+}
+
+check_contents_sections <- function(volume_dir) {
+  
+  cat("\n📋 CHECKING FOR 'Contents' SECTIONS\n")
+  cat(rep("=", 80), "\n\n", sep = "")
+  
+  issue_files <- list.files(volume_dir, pattern = "\\.txt$", 
+                            full.names = TRUE)
+  issue_files <- sort(issue_files)
+  
+  for (issue_file in issue_files) {
+    issue_name <- basename(issue_file)
+    content <- paste(readLines(issue_file, warn = FALSE, encoding = "UTF-8"), 
+                    collapse = "\n")
+    
+    # Check for "Contents" section
+    has_contents <- str_detect(content, regex("Contents\\s+SPECIAL FEATURES", ignore_case = TRUE))
+    
+    # Check for masthead components
+    has_magazine_title <- str_detect(content, "THE RELIEF SOCIETY MAGAZINE")
+    has_board <- str_detect(content, "RELIEF SOCIETY GENERAL BOARD")
+    has_monthly_pub <- str_detect(content, "Monthly publication")
+    
+    status <- if (has_contents && has_magazine_title) "✓" else "⚠"
+    
+    cat(sprintf("%s %s\n", status, issue_name))
+    cat(sprintf("  Magazine title: %s | Board: %s | Monthly pub: %s | Contents: %s\n\n",
+                if (has_magazine_title) "✓" else "✗",
+                if (has_board) "✓" else "✗",
+                if (has_monthly_pub) "✓" else "✗",
+                if (has_contents) "✓" else "✗"))
+  }
+}
+```
+
+---
+
+## Usage Examples
+
+### Process a Single Volume
+
+```{r example-single, eval=FALSE}
+# Process Volume 36
+results <- split_volume_by_month(
+  input_file = "input/reliefsocietymagvol36e.txt",
+  output_dir = "output",
+  volume_number = 36
+)
+
+# Verify the results
+verify_all_volumes("output")
+
+# Check that Contents sections are included
+check_contents_sections("output/Vol36split")
+
+# Inspect actual content
+inspect_month_contents("output/Vol36split", show_lines = 30)
+```
+
+### Process All Volumes in Input Directory
+
+```{r example-all, eval=FALSE}
+# Process all volume files in the input directory
+all_results <- batch_process_volumes(
+  input_dir = "input",
+  output_dir = "output"
+)
+
+# Verify all processed volumes
+verify_all_volumes("output")
+```
+
+### Process a Range of Volumes
+
+```{r example-range, eval=FALSE}
+# Process volumes 36 through 57
+range_results <- process_volume_range(
+  start_vol = 36,
+  end_vol = 57,
+  input_dir = "input",
+  output_dir = "output"
+)
+
+# Verify the results
+verify_all_volumes("output")
+```
+
+---
+
+## Key Features
+
+This complete edition ensures:
+
+✅ **Full Mastheads Captured**
+- "THE RELIEF SOCIETY MAGAZINE"
+- Complete board listing (Belle S. Spafford, all counselors, board members)
+- Editor information (Marianne C. Sharp, Vesta P. Crawford, etc.)
+- Volume and issue details (Vol. 36 FEBRUARY, 1949 No. 2)
+
+✅ **Complete Contents Sections**
+- "Contents SPECIAL FEATURES"
+- All article titles and authors
+- Page numbers for each article
+- Fiction, poetry, and lesson department listings
+
+✅ **Comprehensive Advertisement Detection**
+- Beneficial Life Insurance Company
+- Utah-Idaho Sugar Company / Sugar House
+- Book order sections
+- Glen Bros Music
+- Deseret News Press
+- Deseret Book Company
+- All commercial printer ads
+- "Mention The Relief Society Magazine" taglines
+
+✅ **Broadened Parameters**
+- Searches up to 8,000 characters ahead to find month markers
+- Looks back 6,000 characters to find true beginnings
+- Extends up to 4,000 characters past last ad to capture complete sections
+- Multiple blank line detection for natural boundaries
+- No text excluded from mastheads or Contents sections
+
+✅ **Verification Tools**
+- `check_contents_sections()` - verifies Contents are present
+- `inspect_month_contents()` - shows actual beginning/ending text
+- Detailed boundary reporting with ad types
+
+---
+
+## Output Structure
+
+```
+output/
+├── Vol36split/
+│   ├── Vol36_No01_January_1949.txt    [Full masthead → Ads]
+│   ├── Vol36_No02_February_1949.txt   [Full masthead → Ads]
+│   ├── Vol36_No03_March_1949.txt      [Full masthead → Ads]
+│   ⋮
+│   └── Vol36_No12_December_1949.txt   [Full masthead → Ads]
+```
+
+Each file contains:
+1. Complete masthead with board/editors
+2. Volume/issue designation  
+3. Full Contents section
+4. All articles and features
+5. Complete advertisement section
+
+---
+
+**No content excluded! 📚✨**

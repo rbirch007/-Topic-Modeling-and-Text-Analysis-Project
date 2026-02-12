@@ -1,0 +1,751 @@
+---
+title: "PDF TO TXT CONVERTER WITH IMPROVED COLUMN DETECTION"
+output: html_notebook
+---
+
+# PDF to Text Converter - Step by Step Guide
+
+This notebook converts PDF files to text with improved column detection that handles varying margin widths.
+
+## STEP 1: Install Required Packages
+
+Run this chunk only once to install necessary packages.
+
+```{r install-packages, eval=FALSE}
+# Install required packages (only run once)
+install_packages <- function() {
+  packages <- c("tesseract", "magick", "pdftools", "hunspell", "stringr", "dplyr")
+  
+  for(pkg in packages) {
+    if(!require(pkg, character.only = TRUE, quietly = TRUE)) {
+      install.packages(pkg)
+      cat("✓ Installed:", pkg, "\n")
+    }
+  }
+  cat("✓ All packages ready!\n")
+}
+
+install_packages()
+```
+
+## STEP 2: Load Libraries
+
+```{r load-libraries, message=FALSE, warning=FALSE}
+# Load required libraries
+cat("=== Loading Libraries ===\n")
+suppressMessages({
+  library(tesseract)
+  library(magick)
+  library(pdftools)
+  library(hunspell)
+  library(stringr)
+  library(dplyr)
+})
+cat("✓ Libraries loaded successfully\n")
+```
+
+## STEP 3: Create Project Folders
+
+```{r create-folders}
+# Create necessary project directories
+create_folders <- function() {
+  # Set base directory to the user's specified path
+  base_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt"
+  
+  # Define subdirectories
+  project_dirs <- c(
+    file.path(base_dir, "input_pdfs"),
+    file.path(base_dir, "output_txt"),
+    file.path(base_dir, "temp")
+  )
+  
+  for (dir in project_dirs) {
+    if (!dir.exists(dir)) {
+      dir.create(dir, recursive = TRUE)
+      cat("✓ Created folder:", dir, "\n")
+    } else {
+      cat("✓ Folder exists:", dir, "\n")
+    }
+  }
+  cat("✓ Project structure ready!\n")
+}
+
+create_folders()
+```
+
+## STEP 4: Define OCR Function
+
+```{r ocr-function}
+# Enhanced OCR function with better preprocessing
+cat("=== Setting Up OCR Function ===\n")
+
+ocr_pdf_page <- function(pdf_path, page_num = 1, dpi = 300) {
+  suppressWarnings({
+    # Convert PDF page to image
+    pdf_image <- pdf_render_page(pdf_path, page = page_num, dpi = dpi)
+    img <- image_read(pdf_image)
+    
+    # Enhanced preprocessing for better OCR accuracy
+    processed_img <- img %>% 
+      image_convert(type = 'Grayscale') %>%
+      image_trim() %>%
+      image_deskew() %>%
+      image_contrast(sharpen = 3) %>% 
+      image_normalize() %>%
+      image_enhance() %>%
+      image_despeckle()
+    
+    # Perform OCR with optimal settings
+    ocr_result <- tesseract::ocr(processed_img, 
+                                 engine = tesseract("eng", 
+                                                   options = list(tessedit_pageseg_mode = 1,
+                                                                 preserve_interword_spaces = 1)))
+  })
+  
+  return(ocr_result)
+}
+
+cat("✓ OCR function defined\n")
+```
+
+## STEP 5: Improved Column Detection Function
+
+This function dynamically detects column boundaries to handle varying margin widths. **Updated to include ALL text** - no content is skipped, including advertising sections, contents sections, and other short text blocks.
+
+**Special Features:**
+- **Multi-indicator Contents detection** - Uses 6 different signals to identify TOC pages:
+  1. "Contents" or "Table of Contents" header (case-insensitive)
+  2. Section headers like "SPECIAL FEATURES", "FICTION", "POETRY", etc.
+  3. High percentage of lines ending with page numbers (25%+)
+  4. Presence of dot leaders (.....)
+  5. Shorter average line length (< 70 characters)
+  6. High ratio of short lines (50%+ under 70 chars)
+- Requires only 2+ indicators to trigger Contents mode (robust across all volumes)
+- Handles mixed layouts (some pages with columns, some without)
+- Cleans up dot leaders (.....) commonly found in TOC pages
+- Includes diagnostic messages showing which layout was detected for each page
+
+```{r column-detection}
+# Improved column detection with dynamic margin handling
+cat("=== Setting Up Improved Column Detection ===\n")
+
+process_columns <- function(raw_text) {
+  
+  if(is.null(raw_text) || length(raw_text) == 0 || nchar(raw_text) == 0) {
+    return("")
+  }
+  
+  # Split into lines
+  lines <- strsplit(raw_text, "\n")[[1]]
+  lines <- lines[nzchar(trimws(lines))]
+  
+  if(length(lines) == 0) return("")
+  
+  # IMPROVED: Check if this looks like a Contents/TOC page or single column layout
+  is_contents_style <- function(lines) {
+    # Look for common TOC indicators (case insensitive, flexible)
+    has_contents_header <- any(grepl("^\\s*contents\\s*$|^\\s*table\\s+of\\s+contents\\s*$", 
+                                    lines, ignore.case = TRUE))
+    
+    # Check for section headers typical of TOC pages
+    has_toc_sections <- any(grepl("SPECIAL FEATURES|FICTION|GENERAL FEATURES|POETRY|LESSON|DEPARTMENT", 
+                                  lines, ignore.case = FALSE))
+    
+    # Check if many lines have page numbers at the end (typical of TOC)
+    lines_with_page_nums <- sum(grepl("\\d+\\s*$", lines))
+    page_num_ratio <- lines_with_page_nums / length(lines)
+    
+    # Check for dot leaders (common in TOC)
+    has_dot_leaders <- any(grepl("\\.{3,}", lines))
+    
+    # Check average line length (Contents pages tend to have shorter lines)
+    avg_length <- mean(nchar(lines))
+    
+    # Check if many lines are very short (typical of TOC entries)
+    short_lines <- sum(nchar(lines) < 70)
+    short_line_ratio <- short_lines / length(lines)
+    
+    # Multiple indicators increase confidence
+    indicators <- c(
+      has_contents_header,
+      has_toc_sections,
+      page_num_ratio > 0.25,  # At least 25% of lines end with numbers
+      has_dot_leaders,
+      avg_length < 70,
+      short_line_ratio > 0.5
+    )
+    
+    # If at least 2 indicators are TRUE, treat as Contents page
+    return(sum(indicators) >= 2)
+  }
+  
+  # If it's a contents-style page, just clean and return all lines
+  if(is_contents_style(lines)) {
+    cat("   [Detected Contents/TOC style page - preserving all content]\n")
+    # Clean up dot leaders and excessive spacing but keep all text
+    cleaned_lines <- sapply(lines, function(line) {
+      # Replace multiple dots/spaces with single space, but preserve structure
+      line <- gsub("\\.{3,}", " ", line)  # Replace dot leaders
+      line <- gsub("\\s{3,}", " ", line)  # Normalize excessive spacing (3+ spaces)
+      trimws(line)
+    })
+    return(paste(cleaned_lines[nzchar(cleaned_lines)], collapse = " "))
+  }
+  
+  # Analyze indentation patterns to find column boundaries
+  detect_column_split <- function(lines) {
+    # Find where text starts on each line (left margin)
+    start_positions <- sapply(lines, function(line) {
+      if(nchar(trimws(line)) == 0) return(NA)
+      regexpr("[^\\s]", line)[1]
+    })
+    
+    # Find the largest gap in each line (potential column separator)
+    gap_positions <- sapply(lines, function(line) {
+      # Find all sequences of 3+ spaces (more conservative for regular content)
+      gaps <- gregexpr("\\s{3,}", line)[[1]]
+      if(gaps[1] == -1) return(NA)
+      
+      # Get gap widths
+      gap_widths <- attr(gaps, "match.length")
+      
+      # Return position of largest gap
+      if(length(gaps) > 0) {
+        max_gap_idx <- which.max(gap_widths)
+        return(gaps[max_gap_idx])
+      }
+      return(NA)
+    })
+    
+    # Find the most common column split position (mode of gap positions)
+    valid_gaps <- gap_positions[!is.na(gap_positions)]
+    # Need at least 3 lines with consistent gaps for column detection
+    if(length(valid_gaps) < 3) return(NULL)
+    
+    # Cluster gap positions (allow ±5 char tolerance)
+    gap_clusters <- table(cut(valid_gaps, breaks = seq(0, max(valid_gaps) + 10, by = 5)))
+    if(length(gap_clusters) == 0) return(NULL)
+    
+    # Return the midpoint of the most common cluster
+    most_common_cluster <- as.numeric(names(which.max(gap_clusters)))
+    return(most_common_cluster + 2.5)  # Midpoint of 5-char cluster
+  }
+  
+  # Detect column split position
+  split_pos <- detect_column_split(lines)
+  
+  # Process lines based on detected column structure
+  processed_lines <- character()
+  
+  if(!is.null(split_pos)) {
+    # We detected a two-column layout
+    cat("   [Detected two-column layout at position", round(split_pos), "]\n")
+    for(line in lines) {
+      line_length <- nchar(line)
+      
+      # Process even short lines - don't skip any content
+      # Check if this line has significant gap around split position
+      if(line_length >= split_pos) {
+        substr_check <- substr(line, max(1, split_pos - 5), min(line_length, split_pos + 5))
+        has_gap <- grepl("\\s{3,}", substr_check)
+        
+        if(has_gap) {
+          # Split into two columns
+          left_part <- trimws(substr(line, 1, split_pos))
+          right_part <- trimws(substr(line, split_pos + 1, line_length))
+          
+          if(nchar(left_part) > 0) {
+            processed_lines <- c(processed_lines, paste("COL1:", left_part))
+          }
+          if(nchar(right_part) > 0) {
+            processed_lines <- c(processed_lines, paste("COL2:", right_part))
+          }
+        } else {
+          # Single column line
+          processed_lines <- c(processed_lines, trimws(line))
+        }
+      } else {
+        # Line is shorter than split position - keep as single column
+        # Include ALL short lines (like "CONTENTS", "ADVERTISING", section headers, etc.)
+        processed_lines <- c(processed_lines, trimws(line))
+      }
+    }
+  } else {
+    # No columns detected, process as single column - include everything
+    cat("   [Single column layout detected]\n")
+    processed_lines <- trimws(lines)
+  }
+  
+  # Reconstruct text with proper column ordering
+  left_col <- character()
+  right_col <- character()
+  single_lines <- character()
+  
+  for(line in processed_lines) {
+    if(startsWith(line, "COL1:")) {
+      left_col <- c(left_col, substring(line, 6))
+    } else if(startsWith(line, "COL2:")) {
+      right_col <- c(right_col, substring(line, 6))
+    } else {
+      single_lines <- c(single_lines, line)
+    }
+  }
+  
+  # Combine in proper order: single-column content first, then left column, then right column
+  all_text <- c(single_lines, left_col, right_col)
+  
+  return(paste(all_text, collapse = " "))
+}
+
+cat("✓ Column detection function defined\n")
+```
+
+## STEP 6: OCR Error Correction
+
+```{r error-correction}
+# Common OCR error corrections
+cat("=== Setting Up Error Correction ===\n")
+
+fix_common_ocr_errors <- function(text_input) {
+  
+  # Simple character substitutions without complex regex
+  corrections <- list(
+    # Character substitutions
+    " rn " = " m ",           # 'rn' misread as 'm'
+    " cl " = " d ",           # 'cl' misread as 'd'
+    
+    # Common word fixes
+    " tbe " = " the ",
+    " Tbe " = " The ",
+    " was was " = " was ",
+    " the the " = " the ",
+    " of of " = " of ",
+    " and and " = " and "
+  )
+  
+  corrected_text <- text_input
+  
+  # Apply simple replacements
+  for(pattern in names(corrections)) {
+    corrected_text <- gsub(pattern, corrections[[pattern]], corrected_text, fixed = TRUE)
+  }
+  
+  # Fix numbers in words using simple patterns
+  corrected_text <- gsub("\\b1([a-zA-Z])", "l\\1", corrected_text)  # 1 at start
+  corrected_text <- gsub("([a-zA-Z])1\\b", "\\1l", corrected_text)  # 1 at end
+  corrected_text <- gsub("([a-zA-Z])0([a-zA-Z])", "\\1o\\2", corrected_text)  # 0 in middle
+  
+  return(corrected_text)
+}
+
+cat("✓ Error correction function defined\n")
+```
+
+## STEP 7: Text Processing Function
+
+```{r text-processing}
+# Main text processing function
+cat("=== Setting Up Text Processing ===\n")
+
+process_text_clean <- function(raw_text, fix_errors = TRUE) {
+  
+  # Process columns first
+  text <- process_columns(raw_text)
+  
+  # Apply OCR error corrections if requested
+  if(fix_errors) {
+    text <- fix_common_ocr_errors(text)
+  }
+  
+  # Clean up hyphenated words at line breaks
+  text <- gsub("([a-z])- +([a-z])", "\\1\\2", text, ignore.case = TRUE)
+  
+  # Normalize whitespace to single spaces
+  text <- gsub("\\s+", " ", text)
+  
+  # Fix punctuation spacing - simplified
+  text <- gsub(" +([.,;:!?])", "\\1", text)      # Remove space before punctuation
+  text <- gsub("([.,;:!?])([A-Za-z])", "\\1 \\2", text)  # Add space after punctuation
+  text <- gsub("([.!?]) ([a-z])", "\\1 \\U\\2", text, perl = TRUE)  # Capitalize after sentence end
+  
+  # Clean quotes - using Unicode codes to avoid parsing errors
+  text <- gsub("[\u201C\u201D]", '"', text)  # Convert smart quotes to straight quotes
+  text <- gsub("[\u2018\u2019]", "'", text)  # Convert smart apostrophes to straight
+  
+  # Final trim
+  text <- trimws(text)
+  
+  return(text)
+}
+
+cat("✓ Text processing function defined\n")
+```
+
+## STEP 8: Custom Dictionary
+
+```{r custom-dictionary}
+# Create comprehensive custom dictionary
+cat("=== Setting Up Custom Dictionary ===\n")
+
+create_custom_dictionary <- function() {
+  
+  # Base terms from historical documents
+  historical_terms <- c(
+    "genealogy", "genealogical", "ordinances", "endowment", "tabernacle",
+    "priesthood", "apostolic", "brigham", "nauvoo", "kirtland", "elijah",
+    "malachi", "corinth", "jerusalem", "testament", "scripture", "prophet",
+    "saviour", "baptism", "mormon", "utah", "zion", "relief", "society",
+    "woodruff", "wilford", "lorenzo", "manti", "beehive", "deseret"
+  )
+  
+  # Additional terms for better coverage
+  proper_names <- c(
+    "smith", "young", "taylor", "woodruff", "snow", "grant", "mckay",
+    "kimball", "benson", "hunter", "hinckley", "monson", "nelson"
+  )
+  
+  # Old spelling variants
+  variants <- c(
+    "savior", "saviour", "honour", "honor", "labour", "labor",
+    "centre", "center", "theatre", "theater"
+  )
+  
+  return(unique(c(historical_terms, proper_names, variants)))
+}
+
+cat("✓ Custom dictionary created\n")
+```
+
+## STEP 9: Spell Check Function
+
+```{r spell-check}
+# Intelligent spell checking
+cat("=== Setting Up Spell Check ===\n")
+
+spell_check_enhanced <- function(text_input, custom_dict = TRUE) {
+  
+  words <- unlist(str_extract_all(text_input, "\\b[A-Za-z]+\\b"))
+  
+  if(length(words) == 0) return(list(accuracy = 1, misspelled = character()))
+  
+  # Standard spell check
+  dict <- hunspell::dictionary("en_US")
+  misspelled <- hunspell(words, dict = dict)
+  misspelled_words <- unique(words[lengths(misspelled) > 0])
+  
+  # Apply custom dictionary
+  if(custom_dict) {
+    custom_terms <- create_custom_dictionary()
+    misspelled_words <- setdiff(misspelled_words, custom_terms)
+    misspelled_words <- setdiff(misspelled_words, tolower(custom_terms))
+    misspelled_words <- setdiff(misspelled_words, toupper(custom_terms))
+  }
+  
+  # Calculate accuracy
+  accuracy <- 1 - (length(misspelled_words) / length(unique(words)))
+  
+  return(list(
+    accuracy = round(accuracy * 100, 2),
+    misspelled = misspelled_words,
+    total_words = length(words),
+    unique_words = length(unique(words))
+  ))
+}
+
+cat("✓ Spell check function defined\n")
+```
+
+## STEP 10: File Writing Function
+
+```{r file-writing}
+# Robust file writing with encoding handling
+cat("=== Setting Up File Writing ===\n")
+
+write_text_safe <- function(text_content, file_path, encoding = "UTF-8") {
+  
+  # Ensure directory exists
+  output_dir <- dirname(file_path)
+  if(!dir.exists(output_dir)) {
+    dir.create(output_dir, recursive = TRUE)
+  }
+  
+  # Clean text for safe writing
+  text_clean <- iconv(text_content, from = "", to = encoding, sub = "")
+  
+  # Write with explicit encoding
+  success <- FALSE
+  tryCatch({
+    con <- file(file_path, open = "w", encoding = encoding)
+    writeLines(text_clean, con, useBytes = FALSE)
+    close(con)
+    
+    # Verify write
+    if(file.exists(file_path) && file.size(file_path) > 0) {
+      success <- TRUE
+    }
+  }, error = function(e) {
+    cat("Write error:", e$message, "\n")
+  })
+  
+  return(success)
+}
+
+cat("✓ File writing function defined\n")
+```
+
+## STEP 11: Main Processing Function
+
+```{r main-processing}
+# Comprehensive PDF processing function
+cat("=== Setting Up Main Processing Function ===\n")
+
+process_pdf_complete <- function(pdf_path, output_path = NULL, 
+                                dpi = 300, show_progress = TRUE) {
+  
+  # Validate input
+  if(!file.exists(pdf_path)) {
+    stop("PDF file not found: ", pdf_path)
+  }
+  
+  # Get PDF info
+  pdf_info <- pdf_info(pdf_path)
+  num_pages <- pdf_info$pages
+  
+  cat("\n📄 Processing:", basename(pdf_path), "\n")
+  cat("   Pages:", num_pages, "\n")
+  
+  # Process all pages
+  all_text <- character()
+  errors <- character()
+  
+  # Silent progress bar
+  if(show_progress) {
+    pb <- txtProgressBar(min = 0, max = num_pages, style = 3, char = "=")
+  }
+  
+  for(page in 1:num_pages) {
+    
+    tryCatch({
+      # OCR the page
+      raw_text <- ocr_pdf_page(pdf_path, page, dpi = dpi)
+      
+      if(!is.null(raw_text) && nchar(raw_text) > 10) {
+        # Process the text
+        processed_text <- process_text_clean(raw_text, fix_errors = TRUE)
+        
+        if(nchar(processed_text) > 0) {
+          all_text <- c(all_text, processed_text)
+        }
+      }
+      
+    }, error = function(e) {
+      errors <- c(errors, paste("Page", page, ":", e$message))
+    }, warning = function(w) {
+      # Suppress warnings
+    })
+    
+    if(show_progress) setTxtProgressBar(pb, page)
+  }
+  
+  if(show_progress) {
+    close(pb)
+    cat("\n")
+  }
+  
+  # Combine all text into single paragraph
+  final_text <- paste(all_text, collapse = " ")
+  
+  # Final cleanup for perfect single spacing
+  final_text <- gsub("\\s+", " ", final_text)
+  final_text <- gsub("([.!?])\\s*([A-Z])", "\\1 \\2", final_text)
+  final_text <- trimws(final_text)
+  
+  # Generate output path if not provided
+  if(is.null(output_path)) {
+    base_name <- tools::file_path_sans_ext(basename(pdf_path))
+    output_path <- file.path("C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/output_txt", 
+                            paste0(base_name, "_processed.txt"))
+  }
+  
+  # Write to file
+  write_success <- write_text_safe(final_text, output_path)
+  
+  # Spell check
+  spell_results <- spell_check_enhanced(final_text)
+  
+  # Create summary
+  summary <- list(
+    input_file = basename(pdf_path),
+    output_file = output_path,
+    pages_processed = num_pages - length(errors),
+    total_pages = num_pages,
+    text_length = nchar(final_text),
+    word_count = length(str_split(final_text, "\\s+")[[1]]),
+    spell_accuracy = spell_results$accuracy,
+    write_success = write_success
+  )
+  
+  # Display summary
+  cat("\n📊 Summary:\n")
+  cat("   ✓ Pages processed:", summary$pages_processed, "/", summary$total_pages, "\n")
+  cat("   ✓ Total words:", summary$word_count, "\n")
+  cat("   ✓ Spell accuracy:", summary$spell_accuracy, "%\n")
+  cat("   ✓ Output saved:", ifelse(write_success, "Yes ✓", "No ✗"), "\n")
+  cat("   ✓ Location:", output_path, "\n")
+  if(length(errors) > 0) {
+    cat("   ⚠ Errors:", length(errors), "pages had issues\n")
+  }
+  
+  return(summary)
+}
+
+cat("✓ Main processing function defined\n")
+```
+
+## STEP 12: Batch Processing Function
+
+```{r batch-processing}
+# Enhanced batch processing
+cat("=== Setting Up Batch Processing ===\n")
+
+batch_process_all <- function(input_dir = "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/input_pdfs", 
+                             output_dir = "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/output_txt",
+                             dpi = 300,
+                             pattern = "\\.pdf$") {
+  
+  # Get PDF files
+  pdf_files <- list.files(input_dir, pattern = pattern, 
+                         full.names = TRUE, ignore.case = TRUE)
+  
+  if(length(pdf_files) == 0) {
+    cat("❌ No PDF files found in:", input_dir, "\n")
+    cat("   Please add PDF files to the 'input_pdfs' folder\n")
+    return(NULL)
+  }
+  
+  cat("\n📚 Found", length(pdf_files), "PDF file(s)\n")
+  
+  # Process each file
+  results <- list()
+  
+  suppressWarnings({
+    for(i in seq_along(pdf_files)) {
+      cat("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+      cat("Processing file", i, "of", length(pdf_files), "\n")
+      
+      results[[i]] <- process_pdf_complete(pdf_files[i], 
+                                          output_path = NULL,
+                                          dpi = dpi,
+                                          show_progress = TRUE)
+    }
+  })
+  
+  # Summary statistics
+  total_pages <- sum(sapply(results, function(x) x$total_pages))
+  total_words <- sum(sapply(results, function(x) x$word_count))
+  avg_accuracy <- mean(sapply(results, function(x) x$spell_accuracy))
+  successful <- sum(sapply(results, function(x) x$write_success))
+  
+  cat("\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+  cat("📈 BATCH PROCESSING COMPLETE!\n")
+  cat("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+  cat("   • Files processed:", length(pdf_files), "\n")
+  cat("   • Successful writes:", successful, "\n")
+  cat("   • Total pages:", total_pages, "\n")
+  cat("   • Total words:", format(total_words, big.mark = ","), "\n")
+  cat("   • Average accuracy:", round(avg_accuracy, 2), "%\n")
+  cat("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
+  
+  return(results)
+}
+
+cat("✓ Batch processing function defined\n")
+```
+
+## STEP 13: Check for PDF Files
+
+```{r check-pdfs}
+# Check for PDF files in the input directory
+input_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/input_pdfs"
+
+pdf_files <- list.files(input_dir, pattern = "\\.pdf$", ignore.case = TRUE)
+
+if (length(pdf_files) > 0) {
+  cat("✓ Found PDF files:\n")
+  for (i in seq_along(pdf_files)) {
+    file_size <- round(file.size(file.path(input_dir, pdf_files[i])) / 1024)
+    cat("  ", i, ".", pdf_files[i], "(", file_size, "KB)\n")
+  }
+} else {
+  cat("❌ No PDF files found in:", input_dir, "\n")
+  cat("   Please add PDF files to this folder\n")
+}
+```
+
+## STEP 14: Process Your PDFs
+
+Now you're ready to process! The functions are configured to use your specified directory path.
+
+```{r process-pdfs, eval=FALSE}
+# Option 1: Process all PDFs in the input_pdfs folder (uses your specified path)
+#results <- batch_process_all()
+
+# Option 2: Process a single specific PDF (use full path)
+# result <- process_pdf_complete('C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/input_pdfs/your_file.pdf')
+
+# Option 3: Process with custom DPI (higher = better quality but slower)
+  results <- batch_process_all(dpi = 400)
+```
+
+---
+
+## Usage Instructions
+
+**File Paths**: This notebook is configured to use:
+- Input: `C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/input_pdfs`
+- Output: `C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/pdftotxt/output_txt`
+
+**Steps**:
+1. **First time setup**: Run chunks 1-12 to set up all functions
+2. **Add PDF files**: Place your PDF files in the `input_pdfs` folder at the path above
+3. **Check files**: Run chunk 13 to verify your PDFs are detected
+4. **Process**: Run chunk 14 to convert your PDFs
+5. **Find output**: Converted text files will be in the `output_txt` folder at the path above
+
+## Key Features
+
+- **Dynamic column detection**: Handles varying margin widths automatically
+- **Smart layout detection**: Automatically identifies Contents/TOC pages vs. regular column layouts
+- **Complete text extraction**: Includes ALL content - advertising, contents sections, headers, footers, etc.
+- **Dot leader cleanup**: Removes excessive dots from table of contents while preserving text
+- **OCR error correction**: Fixes common OCR mistakes
+- **Custom dictionary**: Includes historical and specialized terms
+- **Spell checking**: Reports accuracy percentage
+- **Batch processing**: Convert multiple PDFs at once
+- **Progress tracking**: See real-time progress for each file with layout detection info
+
+---
+
+**Note**: The improved column detection algorithm analyzes gap positions across all lines to find the most common column separator location, then uses clustering to handle slight variations in margin alignment.
+
+**Update**: The algorithm has been modified to be more inclusive:
+- All text is included, regardless of length or position
+- Short sections like "CONTENTS", "ADVERTISING", headers, and footers are now preserved
+- No content is skipped or filtered out during processing
+
+**Robust Contents/TOC Detection Across All Volumes**:
+The algorithm uses a **multi-indicator system** to reliably detect Contents pages across different volume formats:
+- Looks for "Contents" headers (case-insensitive, handles variations)
+- Detects standard section headers ("SPECIAL FEATURES", "FICTION", "POETRY", etc.)
+- Analyzes page number patterns at end of lines
+- Identifies dot leader patterns (....)
+- Measures average line length and short line ratios
+- **Requires only 2 out of 6 indicators** to trigger Contents mode
+
+This ensures Contents pages are captured correctly whether they:
+- Say "Contents" or "CONTENTS"
+- Have dot leaders or not
+- Use different fonts/spacing (Vol 36 vs Vol 47 vs Vol 50)
+- Have different section organization
+
+Shows diagnostic message "[Detected Contents/TOC style page]" during processing when triggered.

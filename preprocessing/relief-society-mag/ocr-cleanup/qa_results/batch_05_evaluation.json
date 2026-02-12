@@ -1,0 +1,130 @@
+{
+  "batch_num": 5,
+  "evaluation_timestamp": "2026-02-11",
+  "total_samples": 6,
+  "samples": [
+    {
+      "id": 25,
+      "volume": "Vol45",
+      "filename": "Vol45_No02_February_1958.txt",
+      "total_errors": 5,
+      "character_substitutions": 1,
+      "word_level_errors": 2,
+      "proper_noun_errors": 0,
+      "complex_garbles": 1,
+      "punctuation_errors": 1,
+      "context_ambiguities": 0,
+      "severity_critical": 3,
+      "severity_minor": 2,
+      "quality_score": 78,
+      "notes": "Multiple errors persist: 'ay' should be 'as' (word-level), '~<a Joa' appears to be garbled markup (complex garble), 'Wo Are All Alike' should likely be 'We Are All Alike' (character substitution), missing space before title. Punctuation and structural issues around titles/sections."
+    },
+    {
+      "id": 26,
+      "volume": "Vol44",
+      "filename": "Vol44_No12_December_1957.txt",
+      "total_errors": 3,
+      "character_substitutions": 2,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 2,
+      "severity_minor": 1,
+      "quality_score": 82,
+      "notes": "Three remaining errors: 'Ees S' should be 'Jem S' or similar (character substitution), 'Ldie' should likely be 'Jamie' (word-level error), 'ninetyeight' should be 'ninety-eight' or 'ninety eight' (formatting issue). Most text is clean."
+    },
+    {
+      "id": 27,
+      "volume": "Vol45",
+      "filename": "Vol45_No04_April_1958.txt",
+      "total_errors": 4,
+      "character_substitutions": 2,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 1,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 3,
+      "severity_minor": 1,
+      "quality_score": 79,
+      "notes": "Errors found: 'Wunthrop' should be 'Winthrop' (character substitution/proper noun), 'Owifter Shan a Weavers' appears garbled (complex garble), 'EAREST' should be 'DEAREST' (character substitution), missing letter/word (word-level). Title section has significant OCR artifacts."
+    },
+    {
+      "id": 28,
+      "volume": "Vol43",
+      "filename": "Vol43_No12_December_1956.txt",
+      "total_errors": 2,
+      "character_substitutions": 1,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 1,
+      "severity_minor": 1,
+      "quality_score": 85,
+      "notes": "Minor errors: 'IT don't wany' contains 'IT' (should be 'I') and 'wany' (should be 'want'). One character encoding change between raw and clean (\u00e9 vs e). Generally clean narrative text."
+    },
+    {
+      "id": 29,
+      "volume": "Vol42",
+      "filename": "Vol42_No11_November_1955.txt",
+      "total_errors": 0,
+      "character_substitutions": 0,
+      "word_level_errors": 0,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 0,
+      "severity_minor": 0,
+      "quality_score": 95,
+      "notes": "Excellent clean sample with no detectable errors. Text flows naturally. Proper nouns (Esther Reed, Gypsophila) are correctly rendered. Demonstrates highest quality OCR output."
+    },
+    {
+      "id": 30,
+      "volume": "Vol40",
+      "filename": "Vol40_No08_August_1953.txt",
+      "total_errors": 2,
+      "character_substitutions": 1,
+      "word_level_errors": 1,
+      "proper_noun_errors": 0,
+      "complex_garbles": 0,
+      "punctuation_errors": 0,
+      "context_ambiguities": 0,
+      "severity_critical": 1,
+      "severity_minor": 1,
+      "quality_score": 87,
+      "notes": "Minor errors: 'yu' should be 'you' (character substitution), 'musn''t' has incorrect quote formatting (should be 'mustn't'). Otherwise clean narrative text with good character recognition."
+    }
+  ],
+  "batch_summary": {
+    "average_quality_score": 84.3,
+    "total_errors_across_batch": 16,
+    "best_sample": {
+      "id": 29,
+      "score": 95,
+      "notes": "Excellent quality, no errors detected"
+    },
+    "worst_sample": {
+      "id": 25,
+      "score": 78,
+      "notes": "Multiple errors including garbled markup and title corruption"
+    },
+    "error_distribution": {
+      "character_substitutions": 7,
+      "word_level_errors": 6,
+      "proper_noun_errors": 0,
+      "complex_garbles": 2,
+      "punctuation_errors": 1,
+      "context_ambiguities": 0
+    },
+    "severity_breakdown": {
+      "critical_errors": 10,
+      "minor_errors": 6
+    },
+    "overall_assessment": "This batch shows generally good OCR cleanup quality with an average score of 84.3/100, placing it in the 'good' range (70-89). Sample 29 is exceptional (95/100) with zero errors. The primary remaining errors are character substitutions (7 instances) and word-level garbles (6 instances), particularly affecting proper nouns and common words. Notable problematic words include: 'Ldie' (Jamie), 'Ees S' (Jem S), 'Wunthrop' (Winthrop), 'EAREST' (DEAREST), 'wany' (want), 'yu' (you), and 'Owifter Shan a' (appears to be title corruption). The cleanup process has been moderately effective but appears to have missed opportunities to correct clearly identifiable errors, particularly in section titles and proper nouns. No critical structural damage overall, but targeted improvements in proper noun correction and header OCR recovery would substantially improve batch quality."
+  }
+}

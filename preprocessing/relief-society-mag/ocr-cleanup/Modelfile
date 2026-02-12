@@ -1,0 +1,24 @@
+# Modelfile for OCR Cleanup
+# Optimized for Qwen 2.5 7B on 8GB GPU (Q5 quantization)
+#
+# Creates a model named "qwen-ocr" with fixed settings for deterministic OCR cleanup.
+# This eliminates the need to pass options on every API call.
+
+FROM qwen2.5:7b
+
+# Deterministic output (no randomness)
+PARAMETER temperature 0.0
+PARAMETER top_p 1.0
+
+# Context window - 8K tokens is safe for 8GB GPU with Q5 quantization
+# (Model: ~5GB, KV cache for 8K: ~1.5GB, leaves headroom)
+PARAMETER num_ctx 8192
+
+# No output length limit
+PARAMETER num_predict -1
+
+# Reduce repetition in output
+PARAMETER repeat_penalty 1.1
+
+# Use all available GPU layers (default, but explicit is good)
+PARAMETER num_gpu 99
