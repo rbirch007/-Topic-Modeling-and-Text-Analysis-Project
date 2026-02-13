@@ -1,22 +1,24 @@
 #!/usr/bin/env python3
 """
-Segmentation script for Relief Society Magazine Volumes 30, 31, and 32.
+Extraction script for Relief Society Magazine Volumes 30, 31, and 32.
 
-Reads cleaned monthly issue files from cleaned-data/ and segments them into
-individual entries (articles, poems, editorials, fiction, lessons, etc.),
-writing each entry to its own file in processed/ following the naming
-convention: Month_VolNN_##_Title_Author.txt
+Reads cleaned monthly issue files from cleaned-data/ and extracts them into
+individual entries (articles, poems, editorials, fiction, lessons, etc.).
 
-Any text not matched to a TOC entry goes into a MISC.txt file.
+Each entry is matched using two strategies (strict line-start and loose
+anywhere-match) and both results are written as separate text files plus
+a per-volume JSON containing full content.  See processed/README.md for
+schema documentation.
 
 Usage:
-    python segment_vol30_31_32.py
-    python segment_vol30_31_32.py --dry-run
-    python segment_vol30_31_32.py --volume 30
+    python extract_vol30_31_32.py
+    python extract_vol30_31_32.py --dry-run
+    python extract_vol30_31_32.py --volume 30
 """
 
 import argparse
 import csv
+import json
 import os
 import re
 import sys
@@ -1057,18 +1059,23 @@ for no, month, year in [
 
 
 # ---------------------------------------------------------------------------
-# Segmentation engine
+# Extraction engine
 # ---------------------------------------------------------------------------
 
-def build_regex_for_title(title: str) -> re.Pattern:
+def build_regex_for_title(title: str, require_line_start: bool = True) -> re.Pattern:
     """
     Build a regex pattern that finds the title in the text.
     Allows for minor OCR variation and flexible whitespace.
+    When require_line_start is True, the title must appear at the
+    beginning of a line (after a newline or at position 0) to avoid
+    matching common phrases buried mid-sentence in article body text.
     """
     # Escape regex special chars in the title
     escaped = re.escape(title)
     # Allow flexible whitespace (OCR may have inserted extra spaces)
     escaped = re.sub(r'\\ ', r'\\s+', escaped)
+    if require_line_start:
+        escaped = r'(?:^|\n)\s*' + escaped
     return re.compile(escaped, re.IGNORECASE)
 
 
@@ -1179,42 +1186,68 @@ def split_front_matter(text: str) -> tuple[str, str]:
         return "", text
 
 
-def find_entry_boundaries(body: str, entries: list[dict], body_offset: int = 0) -> list[tuple[int, int, dict]]:
+def _match_entries_with_strategy(body: str, entries: list[dict],
+                                 body_offset: int,
+                                 require_line_start: bool) -> list[tuple[int, dict]]:
     """
-    Find the start position of each TOC entry in the body text.
-    Positions are returned relative to the full original text using body_offset.
-    Returns list of (start, end, entry_dict) sorted by position.
+    Match TOC entries in body text using one strategy.
+    Returns list of (position_in_full_text, entry_dict) for found entries.
     """
     found = []
-
     for entry in entries:
-        pattern = build_regex_for_title(entry["title"])
+        pattern = build_regex_for_title(entry["title"],
+                                        require_line_start=require_line_start)
         match = pattern.search(body)
         if match:
-            found.append((match.start() + body_offset, entry))
-        else:
-            print(f"  WARNING: No match for '{entry['title']}' in body text")
+            pos = match.start()
+            if require_line_start:
+                # Adjust past the newline/whitespace prefix to point at the title
+                matched_text = match.group()
+                first_word = entry["title"].split()[0]
+                title_in_match = re.search(re.escape(first_word),
+                                           matched_text, re.IGNORECASE)
+                if title_in_match:
+                    pos += title_in_match.start()
+            found.append((pos + body_offset, entry))
+    return found
 
-    # Sort by position in text
-    found.sort(key=lambda x: x[0])
 
-    # Convert to (start, end, entry) triples
+def _boundaries_from_found(found: list[tuple[int, dict]],
+                           body_end: int) -> list[tuple[int, int, dict]]:
+    """Convert sorted (pos, entry) list into (start, end, entry) triples."""
+    found_sorted = sorted(found, key=lambda x: x[0])
     boundaries = []
-    for i, (start, entry) in enumerate(found):
-        if i + 1 < len(found):
-            end = found[i + 1][0]
-        else:
-            end = body_offset + len(body)
+    for i, (start, entry) in enumerate(found_sorted):
+        end = found_sorted[i + 1][0] if i + 1 < len(found_sorted) else body_end
         boundaries.append((start, end, entry))
-
     return boundaries
 
 
-def segment_issue(text: str, entries: list[dict], vol: str, month: str,
-                  output_dir: Path, dry_run: bool = False) -> dict:
+def extract_toc_from_front_matter(front_matter: str) -> tuple[str, str]:
     """
-    Segment a single issue's text into individual entry files.
-    Returns stats dict.
+    Extract the CONTENTS/TOC section from front matter.
+    Returns (toc_text, remaining_front_matter).
+    """
+    # Look for CONTENTS header through the next major section boundary
+    toc_match = re.search(
+        r'(CONTENTS.*?)(?=GENERAL\s+BOARD|PUBLISHED\s+MONTHLY|'
+        r'MAGAZINE\s+CIRCULATION|$)',
+        front_matter, re.DOTALL | re.IGNORECASE,
+    )
+    if toc_match:
+        toc_text = toc_match.group(1).strip()
+        remaining = (front_matter[:toc_match.start()] +
+                     front_matter[toc_match.end():]).strip()
+        return toc_text, remaining
+    return "", front_matter
+
+
+def extract_issue(text: str, entries: list[dict], vol: str, month: str,
+                  source_filename: str, output_dir: Path,
+                  dry_run: bool = False) -> dict:
+    """
+    Extract a single issue's text into individual entry files.
+    Returns a dict with stats, manifest_rows, and a month_json object.
     """
     # Split off front matter so title matches happen in body only
     front_matter, body = split_front_matter(text)
@@ -1222,103 +1255,217 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
 
     # Separate ads from the tail of the body
     body, ads_text, ads_start = find_ads_section(body, body_offset)
+    body_end = body_offset + len(body)
 
-    # Find entry boundaries in the body (excluding ads)
-    boundaries = find_entry_boundaries(body, entries, body_offset)
+    # Run both strategies independently
+    strict_found = _match_entries_with_strategy(body, entries, body_offset,
+                                                require_line_start=True)
+    loose_found = _match_entries_with_strategy(body, entries, body_offset,
+                                               require_line_start=False)
 
-    stats = {"matched": 0, "misc_bytes": 0, "total_bytes": len(text.encode("utf-8")),
+    strict_bounds = _boundaries_from_found(strict_found, body_end)
+    loose_bounds = _boundaries_from_found(loose_found, body_end)
+
+    # Build lookup dicts: title -> (start, end) for each strategy
+    strict_by_title = {e["title"]: (s, nd) for s, nd, e in strict_bounds}
+    loose_by_title = {e["title"]: (s, nd) for s, nd, e in loose_bounds}
+
+    stats = {"matched": 0, "misc_bytes": 0,
+             "total_bytes": len(text.encode("utf-8")),
              "manifest_rows": []}
 
-    vol_num = vol.replace("Vol", "")
     issue_dir = output_dir / vol / month
+    rel_dir = f"processed/{vol}/{month}"
     if not dry_run:
         issue_dir.mkdir(parents=True, exist_ok=True)
 
     # Collect all noise stripped from articles for MISC
     all_noise = []
-
-    # Track covered character ranges using intervals (not a set of every index)
+    # Track covered intervals (union of strict and loose)
     covered_intervals = []
+    # JSON entries for this month
+    json_entries = []
 
-    for idx, (start, end, entry) in enumerate(boundaries, 1):
-        segment_text = text[start:end].strip()
-        if not segment_text:
+    # Use strict ordering for index numbering (fall back to loose if strict empty)
+    ordering = strict_bounds if strict_bounds else loose_bounds
+    title_order = [e["title"] for _, _, e in ordering]
+    # Add any loose-only titles not in strict
+    for _, _, e in loose_bounds:
+        if e["title"] not in title_order:
+            title_order.append(e["title"])
+
+    # Build entry lookup by title for metadata
+    entry_by_title = {e["title"]: e for e in entries}
+
+    for idx, title in enumerate(title_order, 1):
+        entry = entry_by_title.get(title)
+        if not entry:
             continue
-
-        # Strip running headers and mailing statements from article text
-        segment_text, noise_frags = strip_running_noise(segment_text)
-        segment_text = segment_text.strip()
-        all_noise.extend(noise_frags)
-
-        if not segment_text:
-            continue
-
-        covered_intervals.append((start, end))
-        stats["matched"] += 1
 
         title_safe = sanitize_filename(entry["title"])
-        author_safe = sanitize_filename(entry["author"]) if entry["author"] else ""
 
-        if author_safe:
-            filename = f"{month}_{vol}_{idx:02d}_{title_safe}_{author_safe}.txt"
+        # Process strict match
+        strict_result = None
+        if title in strict_by_title:
+            s_start, s_end = strict_by_title[title]
+            raw_text = text[s_start:s_end].strip()
+            raw_len = len(raw_text)
+            cleaned, noise_frags = strip_running_noise(raw_text)
+            cleaned = cleaned.strip()
+            all_noise.extend(noise_frags)
+            covered_intervals.append((s_start, s_end))
+
+            s_filename = f"{idx:02d}_strict_{title_safe}.txt"
+            if not dry_run and cleaned:
+                (issue_dir / s_filename).write_text(cleaned, encoding="utf-8")
+
+            strict_result = {
+                "file": s_filename,
+                "path": rel_dir,
+                "position": s_start,
+                "length": raw_len,
+                "content": cleaned,
+            }
+
+        # Process loose match
+        loose_result = None
+        if title in loose_by_title:
+            l_start, l_end = loose_by_title[title]
+            raw_text = text[l_start:l_end].strip()
+            raw_len = len(raw_text)
+            cleaned, noise_frags = strip_running_noise(raw_text)
+            cleaned = cleaned.strip()
+            # Only add noise from loose if strict didn't already cover it
+            if title not in strict_by_title:
+                all_noise.extend(noise_frags)
+            covered_intervals.append((l_start, l_end))
+
+            l_filename = f"{idx:02d}_loose_{title_safe}.txt"
+            if not dry_run and cleaned:
+                (issue_dir / l_filename).write_text(cleaned, encoding="utf-8")
+
+            loose_result = {
+                "file": l_filename,
+                "path": rel_dir,
+                "position": l_start,
+                "length": raw_len,
+                "content": cleaned,
+            }
+
+        if strict_result or loose_result:
+            stats["matched"] += 1
+
+            # Determine if strict and loose are identical
+            identical = False
+            if strict_result and loose_result:
+                identical = strict_result["content"] == loose_result["content"]
+
+            json_entry = {
+                "index": idx,
+                "title": entry["title"],
+                "author": entry["author"],
+                "etype": entry["etype"],
+                "strict_loose_identical": identical,
+                "strict_match": strict_result,
+                "loose_match": loose_result,
+            }
+            json_entries.append(json_entry)
+
+            # Manifest rows — one per strategy that matched
+            if strict_result:
+                stats["manifest_rows"].append({
+                    "file": strict_result["file"],
+                    "path": rel_dir,
+                    "volume": vol,
+                    "month": month,
+                    "etype": entry["etype"],
+                    "title": entry["title"],
+                    "author": entry["author"],
+                    "strategy": "strict",
+                })
+            if loose_result:
+                stats["manifest_rows"].append({
+                    "file": loose_result["file"],
+                    "path": rel_dir,
+                    "volume": vol,
+                    "month": month,
+                    "etype": entry["etype"],
+                    "title": entry["title"],
+                    "author": entry["author"],
+                    "strategy": "loose",
+                })
+
+            if strict_result or loose_result:
+                matched_label = entry["etype"]
+                s_chars = len(strict_result["content"]) if strict_result else 0
+                l_chars = len(loose_result["content"]) if loose_result else 0
+                ident_flag = " [identical]" if identical else ""
+                if dry_run:
+                    print(f"  [{matched_label:12s}] #{idx:02d} "
+                          f"strict={s_chars} loose={l_chars}{ident_flag} "
+                          f"{entry['title'][:50]}")
         else:
-            filename = f"{month}_{vol}_{idx:02d}_{title_safe}.txt"
+            print(f"  WARNING: No match for '{entry['title']}' in body text")
 
-        filepath = issue_dir / filename
+    # Extract TOC from front matter
+    toc_text, remaining_fm = extract_toc_from_front_matter(front_matter)
 
-        if dry_run:
-            print(f"  [{entry['etype']:12s}] {filename} ({len(segment_text)} chars)")
-        else:
-            filepath.write_text(segment_text, encoding="utf-8")
-
-        rel_path = f"{vol}/{month}/{filename}"
+    toc_json = None
+    if toc_text:
+        toc_filename = "TOC.txt"
+        if not dry_run:
+            (issue_dir / toc_filename).write_text(toc_text, encoding="utf-8")
+        elif dry_run:
+            print(f"  [{'toc':12s}] {toc_filename} ({len(toc_text)} chars)")
+        toc_json = {
+            "file": toc_filename,
+            "path": rel_dir,
+            "content": toc_text,
+        }
         stats["manifest_rows"].append({
-            "file": rel_path,
-            "volume": vol,
-            "month": month,
-            "etype": entry["etype"],
-            "title": entry["title"],
-            "author": entry["author"],
+            "file": toc_filename, "path": rel_dir,
+            "volume": vol, "month": month,
+            "etype": "toc", "title": "TOC",
+            "author": "", "strategy": "",
         })
 
-    # Write ads file if ads were found
+    # Write ads file
+    ads_json = None
     if ads_text:
-        ads_filename = f"{month}_{vol}_ADS.txt"
-        ads_path = issue_dir / ads_filename
-        if dry_run:
+        ads_filename = "ADS.txt"
+        if not dry_run:
+            (issue_dir / ads_filename).write_text(ads_text, encoding="utf-8")
+        elif dry_run:
             print(f"  [{'ads':12s}] {ads_filename} ({len(ads_text)} chars)")
-        else:
-            ads_path.write_text(ads_text, encoding="utf-8")
+        ads_json = {
+            "file": ads_filename,
+            "path": rel_dir,
+            "content": ads_text,
+        }
         stats["manifest_rows"].append({
-            "file": f"{vol}/{month}/{ads_filename}",
-            "volume": vol,
-            "month": month,
-            "etype": "ads",
-            "title": "ADS",
-            "author": "",
+            "file": ads_filename, "path": rel_dir,
+            "volume": vol, "month": month,
+            "etype": "ads", "title": "ADS",
+            "author": "", "strategy": "",
         })
 
-    # Collect uncovered text into MISC.txt
-    # Front matter is always uncovered; then any gaps between matched entries
+    # Collect uncovered text into MISC
     misc_parts = []
 
-    # Front matter goes into MISC
-    fm_text = front_matter.strip()
-    if fm_text:
-        misc_parts.append(fm_text)
+    # Remaining front matter (after TOC extraction) goes into MISC
+    if remaining_fm.strip():
+        misc_parts.append(remaining_fm.strip())
 
-    # Find gaps in body not covered by any entry
-    covered_intervals.sort()
-    cursor = body_offset  # start of body
-    for iv_start, iv_end in covered_intervals:
+    # Find gaps in body not covered by any entry (using union of intervals)
+    all_intervals = sorted(set(covered_intervals))
+    cursor = body_offset
+    for iv_start, iv_end in all_intervals:
         if cursor < iv_start:
             gap_text = text[cursor:iv_start].strip()
             if gap_text:
                 misc_parts.append(gap_text)
         cursor = max(cursor, iv_end)
 
-    # Trailing gap between last entry and ads (or end of body)
-    body_end = body_offset + len(body)
     if cursor < body_end:
         gap_text = text[cursor:body_end].strip()
         if gap_text:
@@ -1327,26 +1474,46 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
     # Stripped noise goes into MISC
     if all_noise:
         misc_parts.append("--- STRIPPED NOISE ---")
-        misc_parts.extend(all_noise)
+        # Deduplicate noise fragments
+        seen = set()
+        for frag in all_noise:
+            if frag not in seen:
+                seen.add(frag)
+                misc_parts.append(frag)
 
+    misc_json = None
     if misc_parts:
         misc_text = "\n\n---\n\n".join(misc_parts)
         stats["misc_bytes"] = len(misc_text.encode("utf-8"))
-        misc_path = issue_dir / f"{month}_{vol}_MISC.txt"
+        misc_filename = "MISC.txt"
 
-        if dry_run:
-            print(f"  [{'misc':12s}] {misc_path.name} ({len(misc_text)} chars)")
-        else:
-            misc_path.write_text(misc_text, encoding="utf-8")
+        if not dry_run:
+            (issue_dir / misc_filename).write_text(misc_text, encoding="utf-8")
+        elif dry_run:
+            print(f"  [{'misc':12s}] {misc_filename} ({len(misc_text)} chars)")
 
+        misc_json = {
+            "file": misc_filename,
+            "path": rel_dir,
+            "content": misc_text,
+        }
         stats["manifest_rows"].append({
-            "file": f"{vol}/{month}/{misc_path.name}",
-            "volume": vol,
-            "month": month,
-            "etype": "misc",
-            "title": "MISC",
-            "author": "",
+            "file": misc_filename, "path": rel_dir,
+            "volume": vol, "month": month,
+            "etype": "misc", "title": "MISC",
+            "author": "", "strategy": "",
         })
+
+    # Build month JSON object
+    source_rel_path = f"cleaned-data/relief-society/txtvolumesbymonth/{vol}"
+    stats["month_json"] = {
+        "source_file": source_filename,
+        "source_path": source_rel_path,
+        "entries": json_entries,
+        "toc": toc_json,
+        "ads": ads_json,
+        "misc": misc_json,
+    }
 
     return stats
 
@@ -1356,7 +1523,7 @@ def segment_issue(text: str, entries: list[dict], vol: str, month: str,
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser(
-        description="Segment Relief Society Magazine Vol 30-32 into individual entries"
+        description="Extract Relief Society Magazine Vol 30-32 into individual entries"
     )
     parser.add_argument("--dry-run", action="store_true",
                         help="Show what would be written without creating files")
@@ -1369,6 +1536,9 @@ def main():
     total_bytes = 0
     issues_processed = 0
     all_manifest_rows = []
+
+    # Collect JSON data per volume: { "Vol30": {"volume": ..., "months": {...}} }
+    volume_json = {}
 
     for (vol, issue_key), entries in TOC.items():
         vol_num = int(vol.replace("Vol", ""))
@@ -1399,8 +1569,8 @@ def main():
 
         text = source_path.read_text(encoding="utf-8", errors="replace")
 
-        stats = segment_issue(text, entries, vol, month, OUTPUT_DIR,
-                              dry_run=args.dry_run)
+        stats = extract_issue(text, entries, vol, month, filename,
+                              OUTPUT_DIR, dry_run=args.dry_run)
 
         issues_processed += 1
         total_matched += stats["matched"]
@@ -1408,20 +1578,36 @@ def main():
         total_bytes += stats["total_bytes"]
         all_manifest_rows.extend(stats["manifest_rows"])
 
+        # Accumulate into volume JSON
+        if vol not in volume_json:
+            volume_json[vol] = {"volume": vol, "months": {}}
+        volume_json[vol]["months"][month] = stats["month_json"]
+
         coverage = ((stats["total_bytes"] - stats["misc_bytes"]) / stats["total_bytes"] * 100
                      if stats["total_bytes"] > 0 else 0)
         print(f"  Entries matched: {stats['matched']}")
         print(f"  Coverage: {coverage:.1f}%")
         print(f"  Misc bytes: {stats['misc_bytes']}")
 
+    # Write per-volume JSON files
+    if not args.dry_run:
+        for vol, data in volume_json.items():
+            json_path = OUTPUT_DIR / vol / f"{vol}_entries.json"
+            json_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(json_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False, default=str)
+            print(f"\nJSON written: {json_path}")
+
     # Write manifest CSV
     if all_manifest_rows and not args.dry_run:
         manifest_path = OUTPUT_DIR / "manifest.csv"
+        fieldnames = ["file", "path", "volume", "month", "etype",
+                      "title", "author", "strategy"]
         with open(manifest_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["file", "volume", "month", "etype", "title", "author"])
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(all_manifest_rows)
-        print(f"\nManifest written: {manifest_path} ({len(all_manifest_rows)} entries)")
+        print(f"Manifest written: {manifest_path} ({len(all_manifest_rows)} entries)")
 
     print(f"\n{'='*60}")
     print(f"SUMMARY")
