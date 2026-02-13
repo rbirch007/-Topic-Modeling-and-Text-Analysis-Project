@@ -1,0 +1,2954 @@
+
+╭─── Claude Code v2.1.41 ──────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│                 Welcome back Chris!                │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ Recent activity         │
+│                        ▘▘ ▝▝                       │ No recent activity      │
+│                                                    │                         │
+│  Haiku 4.5 · Claude Pro · creedrogers@gmail.com's  │                         │
+│  Organization                                      │                         │
+│                   ~/devel/rbirch                   │                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+❯ take a look at cleaned_data/txtvolumesbymonth/Vol32/March.  See if you    
+  can use your LLM - not any API tokens or SDK invoking another LLM's API - 
+   to break out all entries in the March issue of this periodical.  Name    
+  each extract XX_Title.txt where XX is the order of appearance in the      
+  monthly issue.  In the folder above, make a new json file that keeps      
+  track of metadata while also preserving the content of the extract.  i    
+  realize the redundancy between extracted text and json field for          
+  extracted content is not ideal, but eventually the json will be the       
+  single source of truth for topic modeling.  name this json file           
+  "VolXX_extract_results.json" and retain a separate dictionary for each    
+  month, even though this particular exercise will only include the month   
+  of march.  for each extracted object, use your context to identify type   
+  (article, poem, letter to the editor, etc) and account for every byte in  
+  the source material. feel free to use a misc entry for extracted objects  
+  that don't fit any one mold.  at the month level, identify a TOC entry so 
+   it's easy to identify everything in that month without scrolling.        
+  include fields that identify provenance back to source material including 
+   file name, path, character offset in original source.  ask me clarifying 
+   questions, state your assumptions, and propose the json schema before    
+  you continue.                                                             
+
+⏺ Let me first look at the source material and the directory structure.
+
+⏺ Searched for 2 patterns, read 2 files (ctrl+o to expand)
+
+⏺ Found it. The path is cleaned-data/relief-society/txtvolumesbymonth/Vol32/ and
+   the March file is Vol32_No3_March_1945.txt. This is a Relief Society Magazine
+   from 1945. Let me read the full file.
+
+⏺ Read 1 file (ctrl+o to expand)
+
+⏺ Large file. Let me read it in chunks.
+
+⏺ Read 2 files (ctrl+o to expand)
+
+⏺ Let me read the file directly in smaller chunks using Bash to get character
+  counts and the full content.
+
+⏺ Read 1 file (ctrl+o to expand)
+
+⏺ 220 lines, 168KB. Let me read the full content in sections.
+
+⏺ Read 1 file (ctrl+o to expand)
+
+⏺ OK, I've now read the entire file. This is the Relief Society Magazine, Vol. 
+  32, No. 3, March 1945 — 220 lines, 168,035 bytes. Let me present my analysis,
+  assumptions, and proposed schema.
+
+  ---
+  What I see in the source material
+
+  The issue contains, in order:
+  1. Front matter — masthead, general board listing, editorial staff, TOC,
+  publication/subscription info
+  2. Notice of First Presidency — a wartime notice about locating wounded
+  soldiers
+  3. The Relief Society in Church Welfare — address by Elder Marion G. Romney
+  4. Easter Time — poem by Ruth H. Chadwick (embedded after Romney's piece)
+  5. Are We Getting Ready for 1947... — article by Governor Herbert B. Maw
+  6. The Relief Society — excerpt/address by President J. Reuben Clark, Jr.
+  7. Emily Dickinson quote — short interstitial
+  8. Easter and the Second Coming of the Lord — article by Elder Leo J. Muir
+  9. March Moods — poem by Jeanette P. Parry
+  10. Though a Host Encamp Against Thee — short fiction by Dorothy Clapp
+  Robinson
+  11. To a Lost Flyer — poem by Bessie Jarvis Payne
+  12. The Story of a Gifted Lady — biographical article by Leah D. Widtsoe
+  13. Gifts — poem by Grace A. Cooper
+  14. Sixty Years Ago — historical reprints from 1885
+  15. Woman's Sphere — column by Ramona W. Cannon
+  16. Editorial: Gratitude for Church Guidance — by Marianne C. Sharp
+  17. In Memoriam: Sarah Eddington / Ida Peterson Beal — by Amy Brown Lyman
+  18. Praying Hands — poem by Clarence Edwin Flynn
+  19. Notes to the Field: Materials for 1945 Welfare Clothing Budget
+  20. Marshalling Our Forces for Home Safety — article by Nellie O. Parker
+  21. To a Little Girl — poem by Jo Adelaide Stock
+  22. March Designs for Summer — gardening article by Hazel D. Moyle
+  23. Released — poem by Thelma Ireland
+  24. The Lonesome House — short fiction by Olive Woolley Burt
+  25. The Visiting Teacher's Prayer — poem by Eva M. R. Salway
+  26. Rehabilitation of Disabled Soldiers and Sailors — reprinted from OWI
+  27. The Bright Light of the Clouds — devotional essay by Alice Whitson Norton
+  28. Early Spring Rain — poem by Ora Lee Parthesius
+  29. No Tongue Can Tell — essay by Marguerite J. Griffin
+  30. The Snowballs — poem by Olive Rose Helton
+  31. Work Meeting: Utility Aprons — practical sewing instructions
+  32. Notes from the Field — mission reports by Vera W. Pohlman (multiple
+  sub-reports)
+  33. The Shape of Peace — poem by Eva Willes Wangsgaard (listed in TOC at
+  p.191, but I don't see its text — may be at the very end or missing)
+
+  ---
+  Assumptions & Questions
+
+  1. "Account for every byte" — I'll split the source so that concatenating all
+  extracts in order reproduces the original file exactly (no gaps, no overlaps).
+   The front matter (masthead, TOC, subscription boilerplate) will be its own
+  extract (type: front_matter).
+  2. Embedded poems — Several poems are embedded mid-paragraph after an article
+  ends (e.g., "Easter Time" follows the Romney piece on the same line). I'll
+  split at the exact character boundary. The text files will contain only the
+  extracted content; the JSON will record the character offsets so you can
+  verify alignment.
+  3. The Emily Dickinson quote (4 lines between the Clark excerpt and the Muir
+  article) — I'll classify this as quotation/misc. Same for any interstitial
+  filler.
+  4. "The Shape of Peace" — listed in the TOC but I don't see its body text in
+  the file. If it's missing from the source, I'll note that in the JSON.
+  5. File naming — 01_Front_Matter.txt, 02_Notice_of_First_Presidency.txt, etc.
+  I'll sanitize titles (spaces → underscores, drop punctuation).
+  6. Output locations:
+    - Extracted .txt files →
+  cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/
+    - JSON file →
+  cleaned-data/relief-society/txtvolumesbymonth/Vol32/Vol32_extract_results.json
+  7. Types I'll use: front_matter, article, address, fiction, poem, editorial,
+  column, obituary/in_memoriam, notice, notes, devotional_essay, essay,
+  biographical_article, historical_reprint, practical/instructional, quotation,
+  misc
+
+  ---
+  Proposed JSON Schema
+
+  {
+    "volume": 32,
+    "year": 1945,
+    "publication": "Relief Society Magazine",
+    "source_file": "Vol32_No3_March_1945.txt",
+    "source_path": "cleaned-data/relief-society/txtvolumesbymonth/Vol32/Vol32_No
+  3_March_1945.txt",
+    "source_file_size_bytes": 168035,
+    "months": {
+      "March": {
+        "issue_number": 3,
+        "toc": [
+          {
+            "order": 1,
+            "title": "Front Matter",
+            "type": "front_matter",
+            "author": null
+          },
+          {
+            "order": 2,
+            "title": "Notice of First Presidency",
+            "type": "notice",
+            "author": "First Presidency"
+          }
+          // ... one entry per extract
+        ],
+        "extracts": [
+          {
+            "order": 1,
+            "title": "Front Matter",
+            "type": "front_matter",
+            "author": null,
+            "extracted_file": "01_Front_Matter.txt",
+            "source_file": "Vol32_No3_March_1945.txt",
+            "source_path": "cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+  Vol32_No3_March_1945.txt",
+            "char_offset_start": 0,
+            "char_offset_end": 4567,
+            "length_bytes": 4567,
+            "content": "Vol. 32 No. 3 MARCH 1945\n\nTHE RELIEF SOCIETY 
+  MAGAZINE..."
+          }
+          // ... one per extract
+        ],
+        "total_extracts": 33,
+        "total_bytes_accounted": 168035
+      }
+    }
+  }
+
+  ---
+  Questions for you
+
+  1. Embedded poems that share a line with the preceding article's last 
+  paragraph — should I split surgically at the exact character, or is it OK to
+  split at the nearest line boundary? (The source has very long lines — some are
+   entire articles on one line.)
+  2. Notes from the Field contains reports from multiple missions (East Central
+  States, Northern California, New England, Hawaiian). Treat as one extract or
+  break out each mission sub-report?
+  3. The content field will be large (some articles are 10–20KB). You're OK with
+   that given your note about the JSON becoming the single source of truth?
+  4. Any preferences on the type vocabulary, or is my proposed list above
+  reasonable?
+
+✻ Churned for 1m 36s
+
+❯ split where it makes NLP contextual sense.  approximate a human's         
+  detection for when an article ends and a poem begins. treat notes from    
+  the field as one extract. i don't care about content length.              
+
+⏺ Got it. Let me build this out. I'll write a Python script to do the splitting
+  precisely, accounting for every byte.
+
+⏺ First, let me get the exact byte positions of key marker strings so I can
+  define precise split points.
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ no - i don't want to run python.  I don't want this to be regex based.    
+  That's too brittle and will fail and leave me with too much manual        
+  override.  I need you to use your own NLP capabilities of determining     
+  beginning and ending of items to extract.                                 
+
+⏺ Understood. I'll use my own reading comprehension to identify every piece and
+  its boundaries, then write the files directly. Let me start by creating the
+  output directory and working through the content methodically.
+
+⏺ Bash(mkdir -p /Users/chris/devel/rbirch/cleaned-data/relief-society/txtvolumes
+      bymonth/Vol32/March_extracts)
+  ⎿  Done
+
+⏺ Now let me work through the file carefully. I need to understand the exact
+  byte structure since many "lines" contain multiple articles. Let me get line
+  lengths to understand the structure.
+
+⏺ Bash(awk '{ printf "%3d: %6d bytes\n", NR, length($0) }'
+      /Users/chris/devel/rbirch/cleaned-data/relief-society/txtvolumesbymonth/Vo
+      l32/Vol32_No3_March_1945.txt)
+  ⎿  Interrupted · What should Claude do instead?
+
+❯ no - i don't want to run python.  I don't want this to be regex based.    
+  That's too brittle and will fail and leave me with too much manual        
+  override.  I need you to use your own NLP capabilities of determining     
+  beginning and ending of items to extract. you have all permission to do   
+  all the things                                                            
+
+⏺ You're right, I'll stop overcomplicating this. I have the full text in my
+  context from reading it. I'll use my comprehension to identify each piece and
+  write the files directly. Let me start.
+
+⏺ Bash(mkdir -p /Users/chris/devel/rbirch/cleaned-data/relief-society/txtvolumes
+      bymonth/Vol32/March_extracts)
+  ⎿  Done
+
+⏺ Now let me re-read the source in focused sections so I can write each extract
+  with exact fidelity. Starting with the front matter and first few pieces.
+
+⏺ Read 1 file (ctrl+o to expand)
+
+⏺ Good, now I can see the structure clearly. Line 101 is a mega-line containing
+  multiple articles concatenated. Let me start writing the extract files. I'll
+  work through the content sequentially.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/01_Fr
+       ont_Matter.txt)
+  ⎿  Wrote 85 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/01_Front_Matter.txt
+       1 Vol. 32 No. 3 MARCH 1945
+       2 
+       3 THE RELIEF SOCIETY MAGAZINE Monthly publication of the Relief So
+         ciety of the Church of Jesus Christ of Latter-day Saints
+       4 
+       5 RELIEF SOCIETY GENERAL BOARD
+       6 Amy Brown Lyman President
+       7 Marcia K. Howells First Counselor
+       8 Belle S. Spafford Second Counselor
+       9 Vera W. Pohlman Secretary-Treasurer
+      10 Donna D. Sorensen
+     … +75 lines (ctrl+o to expand)
+
+⏺ Now the Notice of First Presidency. This is the first part of line 86, from
+  "Notice" through "The First Presidency", plus the cover note and photo
+  captions which are interstitial material between the notice and the Romney
+  article.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/02_No
+       tice_of_First_Presidency.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/02_Notice_of_First_Presidency.txt
+      1 THE RELIEF SOCIETY MAGAZINE VOL. 32, NO. 3 MARCH 1945 Notice Janu
+        ary 16, 1945 REPORTS reaching us indicate that there may be consi
+        derable numbers of our boys who are being returned from the vario
+        us battle fronts in the world to the United States for treatment 
+        in hospitals. While our local Church officers in stakes and missi
+        ons are taking such steps as are available to them to learn who t
+        hese boys are in order that they may visit them and give such spi
+        ritual and other aid and comfort as may be possible, nevertheless
+        , because not all of our boys have the  L. D. S." tag designation
+        , and are generally listed merely as "Protestants" and not as mem
+        bers of our Church, it is not possible for our Church officers to
+         be sure they locate and identify all of our wounded brethren. If
+         the parents or wives of wounded men and women, if any, will send
+         to the office of the First Presidency the names and addresses of
+         their sons, husbands, or daughters who have been wounded and who
+         are in this country for hospital treatment, we will see that the
+        ir names reach the proper officer stake, ward, or mission so that
+         such officer may be able to get in touch with the wounded and re
+        nder such service as may be possible. Heber J. Grant J. Reuben Cl
+        ark, Jr. David O. McKay The First Presidency The Cover: The cover
+         is from a photograph by Willard Luce, "Spring Silhouette RELIEF 
+        SOCIETY WELFARE ACTIVITIES Top: Wells Stake-Welfare Sewing Displa
+        y * Middle: Liberty Stake Canning "Bottom: Salt Lake Stake, 17th 
+        Ward-Quilting
+
+⏺ Now the Romney article. It starts at the end of line 86 with the title/byline
+  and continues through lines 88-101 (ending before "EASTER TIME").
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/03_Th
+       e_Relief_Society_in_Church_Welfare.txt)
+  ⎿  Wrote 16 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/03_The_Relief_Society_in_Church_Welfare.txt
+      1 The Relief Society In Church Welfare Elder Marion G. Romney Assis
+        tant to the Council of the Twelve Apostles and Assistant Managing
+         Director General Church Welfare Committee
+      2 
+      3 "FROM the beginning, the women of the Christian Church have shown
+         their surpassing faith and devotion. Only one apostle stood near
+         the Cross while the Christ was crucified, but Mary, the mother, 
+        was there, and Mary Magdalene, and Mary, the mother of James and 
+        Joses, and the mother of Zebedee's children, and the women that f
+        ollowed Him from Galilee. It was Mary Magdalene who was first at 
+        the tomb when the Sabbath had ended, and to her Christ vouchsafed
+         the first view to mortals of His resurrected body.
+      4 "From that time until now woman has comforted and nursed the Chur
+        ch. She has borne more than half the burdens, she has made more t
+        han half the sacrifices, she has suffered most of the heartaches 
+        and sorrows.
+      5 "In the modern Church hers has been the abiding, unquestioning fa
+        ith, the pure knowledge that has enheartened the Priesthood and k
+        ept it going forward against all odds. Her loving trust, her loya
+        l devotion were the faithful anchor that held when storms were fi
+        ercest." (President J. Reuben Clark, Jr., Annual Conference Repor
+        t, April 1940, p. 21.)
+      6 The "women of the Christian Church" include the sisters of the Re
+        lief Society, and to no group does this sublime tribute more aptl
+        y apply.
+      7 One hundred and three years ago, the Prophet "assisted in commenc
+        ing the organization of the Society." In illustrating its objects
+        , he said that the "sisters might provoke the brethren to good wo
+        rks, in looking to the wants of the poor, searching after objects
+         of charity, and in administering to their wants," (Relief Societ
+        y Handbook, pp. 21-22). And later in the same month he wrote that
+         its "object is the relief of the poor, the destitute, the widow 
+        and the orphan, and for the exercise of all benevolent purposes."
+         He was assured "that with the resources they will have at comman
+        d, they will fly to the relief of the stranger; they will pour in
+         oil and wine to the wounded heart of the distressed; they will d
+        ry up the tears of the orphan and make the widow's heart to rejoi
+        ce." (D.H.C. Vol. IV, p. 567.)
+      8 To guide them in this work, the sisters were to "receive instruct
+        ions through the order of the Priesthood which God has establishe
+        d, through the medium of those appointed to lead, guide and direc
+        t the affairs of the Church in this last dispensation." (D.H.C. V
+        ol. IV, p. 567.)
+      9 That the bishop is included in this "order of the Priesthood" is 
+        clear from the fact that before the Relief
+     … +6 lines (ctrl+o to expand)
+
+⏺ Now the Easter Time poem and the Maw article, both from within line 101.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/04_Ea
+       ster_Time.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/04_Easter_Time.txt
+      1 EASTER TIME Ruth H. Chadwick As the drabness of the winter Melts 
+        beneath a warmer sky. All the gentle, stirring breezes Invigorate
+        , and cry The message of each living thing-Each blade of grass so
+         green. Each swelling bud, each quivering tree. The urge of power
+        s unseen. This gift of life, again renewed, A throbbing, pulsing 
+        force, Rises from its winter's sleep To beautify its source. Thes
+        e symbols of the springtime, Flaunt new banners of the year; Then
+         Easter comes around to bless. And sanctify and cheer.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/05_Ar
+       e_We_Getting_Ready_for_1947.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/05_Are_We_Getting_Ready_for_1947.txt
+      1 Are We Getting Ready for 1947 One-Hundredth Anniversary Program? 
+        The Honorable Herbert B. Maw Governor of the State of Utah Prepar
+        ed by Governor Maw at the request of the Church Beautification Co
+        mmittee. THE State of Utah is definitely and officially in favor 
+        of a state-sponsored celebration of the hundredth anniversary of 
+        the arrival in Salt Lake Valley of the Utah pioneers. The Utah St
+        atutes provide that "the exposition provided in connection with t
+        he centennial observance shall be officially opened on May 1, 194
+        7, and continue to October 15, 1947." This law was passed in 1939
+        . It followed the recommendations of a committee authorized by a 
+        joint resolution adopted by the Legislature in 1937. The Act stat
+        es that its purpose is "to commemorate the advent of the pioneers
+         into Salt Lake Valley, to portray fittingly the natural resource
+        s and scenic wonders of Utah, the prehistoric culture of the west
+        , the development of irrigation, farming, mining, forestry, trans
+        portation, culture and the arts." The law authorizes a Centennial
+         Commission of fifteen members, selected "without regard to polit
+        ical or other affiliations" who serve without compensation, to be
+         confirmed by the State Senate and to hold office as members of a
+         body corporate for ten years, thus continuing until the completi
+        on of the celebration and exposition, and the winding up of its a
+        ffairs. The members include President David O. McKay, of Salt Lak
+        e City, as chairman; Former Governor Charles R. Mabey, J. F. Fitz
+        patrick, S. O. Bennion, David H. Thomas, John M. Wallace, D. M. D
+        raper, Gus P. Backman, Donald P. Lloyd, and Postmaster L A. Smoot
+        , all of Salt Lake City; Mrs. Rosella F. Larkin and J. A. Howell,
+         of Ogden; F. P. Champ, of Logan; A. O. Ellett, at that time a Pr
+        ovo resident; and Senator Ward C. Holbrook, of Bountiful. The lat
+        e Nephi L. Morris, of Salt Lake City, was a member of the Commiss
+        ion at the time of his death. The Commission was instructed by th
+        e Act creating it to "plan and arrange for a fitting centennial o
+        bservance in the year 1947, with appropriate provision being made
+         therefor in such communities and at such scenic, historical, cul
+        tural and recreational centers of attraction from Yellowstone Par
+        k on the north to Boulder Dam on the south and from the Salt Flat
+        s on the west to the Dinosaur Quarries on the east, as the Commis
+        sion may designate, and to hold and maintain an exposition on som
+        e appropriate site to be selected by it." Page 135 RELIEF SOCIETY
+         MAGAZINE MARCH 1945 The Centennial Commission has wide authority
+         to proceed as its considered judgment may direct. In retrospect,
+         this project for a new kind of World's Fair one in which the mai
+        n attractions were to be some of the world's greatest wonders and
+         some of its most attractive scenery "in place" must appear a bol
+        d one, and worthy of the sturdy independence of the pioneers who 
+        came to this desert region a century ago and here developed a new
+         form of western culture based on irrigation, the range, and the 
+        mine. Such plans were all the more remarkable because, at the tim
+        e they were forming, this State and the world at large were steep
+        ed in the most severe and most widely spread economic depression 
+        in history. Many citizens were pinching their last few pennies. S
+        chools and other public institutions were getting along on pittan
+        ces far below their needs. At such a time, it required both coura
+        ge and leadership on the part of men of vision to rally support f
+        or an undertaking which would require large expenditures, one fro
+        m which the returns, though perhaps certain, would be largely int
+        angible. Then war intervened. A far-seeing National Government in
+        augurated an emergency defense program in 1939 and 1940. After De
+        cember 7, 1941, this country was plunged into the most destructiv
+        e struggle in all history. Wartime needs would not be denied. Men
+         and women were summoned to battle. Vast projects were initiated.
+         Labor shortages became acute. Rigid priorities were established.
+         Today, Utah boys and girls are fighting and dying on the battle-
+        fronts of the world to preserve that way of life for which their 
+        pioneer ancestors gave their all. We cannot and we must not let t
+        hem down. Is all, then, lost? Has everything been sacrificed on M
+        ars' bloody altar? Must we entirely forego the duty we owe to the
+         founders of this commonwealth, to honor their courage and their 
+        self-sacrifice, to pay fitting tribute to their daring and resour
+        cefulness? Is there no way in which we can renew the ideals for w
+        hich they lived and died? Those ideals have made this State and t
+        he Intermountain Region great. They have stirred the hearts of me
+        n to battle for freedom and to love their fellow man. The men and
+         women Utah desires to honor were not in the habit of giving up t
+        heir plans because difficulties confronted. Their sons and daught
+        ers and those who followed the pioneers into this land will profi
+        t by their example, will display the same independence and leader
+        ship. Utahns will not permit the murk of war to blot out the cent
+        ennial of the State's founding. Wartime conditions may restrict t
+        he extent of the celebration. They cannot obliterate the memory o
+        f the Utah pioneers, nor can they quench the ardor and enthusiasm
+         of the celebrants. WHAT sort of celebration shall be attempted i
+        f the war with Germany and Japan is still being desperately waged
+         in 1947? Are we prepared with an adequate program if world peace
+         has come by that time? Or if either of the remaining Axis foes i
+        s still on his feet? The answer to these queries becomes fairly o
+        bvious. Such observance of the centennial is always possible Tori
+        us Knaphus THE HANDCART as will not require great expenditures of
+         manpower suitable for military service or war industry work. In 
+        the meantime, plans must be formulated blueprints drawn, if you l
+        ike ready to be put into action the minute manpower and materials
+         become available should hostilities cease or slacken. It would s
+        eem basic, for example, that, in order to celebrate properly, the
+         State must take on a holiday attire. This is something in which 
+        each resident can join. There is nothing in war's demands that re
+        quires broken down fences, filthy corrals, dilapidated outbuildin
+        gs or unpainted homes. Rather do neatness and order go hand-in-ha
+        nd with efficient, productive labor, and that is one of the essen
+        tials of the war effort. Let Utah, then, dress up in honor of her
+         pioneer founders. That much groundwork for an adequate celebrati
+        on certainly is possible. Other forms of observance which require
+         little or no extra drain on the State's manpower can be encourag
+        ed. An art exhibition, an Easter pageant, a State or County Fair,
+         any activity which has become a customary and periodic outlet fo
+        r community effort can tell the story of a century during which c
+        ivilization and the modern way of life were established on the un
+        promising and hostile desert. Let the management and sponsors of 
+        all such community events redouble their efforts to make the 1947
+         version far excel all its predecessors. It will prove an eloquen
+        t tribute to the greatness of the enterprise the Utah pioneers in
+        stituted. These are but suggestions for a beginning of the ground
+        work of the centennial program. Other and more definite features 
+        will be worked out as circumstances permit. The main idea is that
+         this great historic occasion can and must be fittingly commemora
+        ted. The spirit of the pioneers of western irrigation is not dead
+        . That same indomitable courage and ingenuity which enabled them 
+        to direct the harsh natural forces to man s benefit will encourag
+        e us their sons and daughters, to pay adequate tribute to our for
+        efathers  accomplishments.
+
+⏺ Now the Clark excerpt, the Dickinson quote, and the Muir article. The Muir
+  article spans from line 101 through line 113 (where it ends before "MARCH
+  MOODS").
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/06_Th
+       e_Relief_Society.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/06_The_Relief_Society.txt
+      1 THE RELIEF SOCIETY MAY 1 begin by saying that the Relief Society 
+        of the Church is far and away the greatest woman's organization i
+        n the world. It is great not alone in its aims and purposes, whic
+        h are to alleviate the want, misery, and suffering of humanity; n
+        ot alone in its almost earth-wide reach, for it covers the bulk o
+        f the Christian world; not alone in the achievements of its activ
+        ities, though it has brought to the needy, living where it worked
+        , food, clothing, shelter, fuel; not though it has nursed those w
+        ho were sick, buried the dead of the poor, comforted those who we
+        re downhearted; not though it has sustained those who were weak i
+        n spirit, built up righteousness in the hearts of the wayward, an
+        d brought the living truth into the homes of all who give it an a
+        biding place, to their salvation and final exaltation,  the Relie
+        f Society is greatest, not alone because of all these, but becaus
+        e its directing head and the great bulk of all those who make up 
+        its membership share as of right in the blessings and promises of
+         the priesthood borne by their husbands the Holy Priesthood of Go
+        d; greatest because its leaders and members have the right to the
+         inspiration of the Lord in the carrying on of their work; greate
+        st because in their work of now almost a century they have been r
+        ichly endowed by that inspiration, they have been constantly dire
+        cted by the Spirit of the Lord which has never departed from them
+         since the Prophet brought a few (18) of the sisters together and
+         set them about their work. These, Sisters, have been your sacred
+         opportunities, and your glorious, Christ-like achievements. Pres
+        ident J. Reuben Clark, Jr., Relief Society Conference Address, "O
+        ur Homes," October 3, 1940.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/07_Em
+       ily_Dickinson_Quotation.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/07_Emily_Dickinson_Quotation.txt
+      1 If I can stop one heart from breaking, I shall not live in vain; 
+        If I can ease one life the aching. Or cool one pain. Or help one 
+        fainting robin Unto its nest again, I shall not live in vain.    
+        Emily Dickinson
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/08_Ea
+       ster_and_the_Second_Coming_of_the_Lord.txt)
+  ⎿  Wrote 13 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/08_Easter_and_the_Second_Coming_of_the_Lord.txt
+       1 Easter and the Second Coming of the Lord Elder Leo J. Muir Forme
+         r President Los Angeles Stake And Former President Northern Stat
+         es Mission (Chicago) AS thoughtful and devout Christians celebra
+         te the coming Easter season, their minds and hearts are likely t
+         o be beckoned forward to the coming of the Master, rather than b
+         ackward to his resurrection. Christ's triumphant arising from th
+         e tomb is being overshadowed by the nearness of his second comin
+         g to the earth. The early future promises to realize for mankind
+          the prophetic salutation: "Ye men of Galilee, why stand ye gazi
+         ng up into heaven? this same Jesus, which is taken up from you i
+         nto heaven, shall so come in like manner as ye have seen him go 
+         into heaven."
+       2 Here indeed is heaven's supreme salutatory to mortal man. This p
+         roclamation has provoked more discussion and speculation than an
+         y other word or prophecy. The unbeliever has jested about it and
+          ridiculed it. Many people have predicted the immediate fulfillm
+         ent all down the generations of time. The devout have fearfully 
+         and reverently invoked God's day for its fulfillment.
+       3 The signs of the times point to the early coming of this gloriou
+         s spectacle the coming to earth of the Lord Jesus Christ in the 
+         clouds of heaven. That we might contemplate this auspicious occa
+         sion in its full significance let us review briefly the scenes i
+         n the great drama which closed with this marvelous prophecy. The
+          events of the Passion Week are punctuated by a few sentences wh
+         ich stand out in bold relief against the dismal background of sh
+         ame and sorrow.
+       4 Out of the peaceful, yet disturbing, ceremony of the Last Supper
+          came the immortal injunction: "This do ye in remembrance of me.
+         " From the shadowed precincts and the deep anguish of Gethsemane
+          came the grief-laden prayer of the Master: "O my Father, if it 
+         be possible, let this cup pass from me; nevertheless not as I wi
+         ll, but as thou wilt."
+       5 "And they crucified him" is the laconic account of the cruel and
+          gruesome tragedy of Golgotha. These colorless words a conjuncti
+         on, two pronouns, and a verb record the fact of the execution of
+          the Son of God, who died that death may be no more. On death's 
+         own battlefield, Christ the Lord destroys death for the children
+          of men.
+       6 "Jesus of Nazareth, King of the Jews" was the accusation written
+          in three languages: the Hebrew, the Greek, and the Latin. The f
+         irst of these is the tongue through which God had revealed his w
+         ill to his prophets; the second is the language of culture and t
+         he learning of that day; and the third, the language
+       7 Page 139 of the conquering race which then held the Holy Land un
+         der subjection. This superscription, thus written, heralded to a
+         ll people the alleged reason for the conviction and crucifixion 
+         of the Christ. The "Chief Priest of the Jews" protested that the
+          accusation was not right: that it should indicate that Christ h
+         ad said he was King of the Jews. Pilate stubbornly refused to al
+         ter the superscription and there it stood. It must have pleased 
+         the heart of Jesus to know that his true status as King of the J
+         ews was so boldly proclaimed.
+       8 "Truly this was the Son of God" was the emphatic verdict of the 
+         Roman centurion who had, as an officer on guard, observed the st
+         upid and brutal performance.
+       9 "He is risen" came as the calm and solemn assurance of the angel
+          who answered the excited inquiry of "Mary Magdalene and the oth
+         er Mary." Though calmly spoken, and to these two women alone, th
+         ese angelic words reflect the triumphant climax in this eternal 
+         drama. And what triumph it was indeed; not alone for the resurre
+         cted Christ, who knew full well that he would arise, but for the
+         se faithful women and for all the disciples to whom they carried
+          the glorious message. They restored that if Christ arose from t
+         he tomb, man also will arise from his tomb. In this fact mortal 
+         life finds its loftiest hope. No greater boon could be fashioned
+          for the souls of men. The two women doubted not the report of t
+         he angel, but, at his bidding, hastened "with fear and great joy
+         " to carry the glad tidings to those whom Christ affectionately 
+         called "my brethren." On the way they met the Christ,
+      10 and were requested to summon his disciples to meet him in a moun
+         tain in Galilee. Here in the uplands, against the sky, the Chris
+         t whose ministry was now given new force and power gave final in
+         struction to those who should follow him.
+     … +3 lines (ctrl+o to expand)
+
+⏺ Now the March Moods poem, the fiction story, and the To a Lost Flyer poem.
+  These are within that same mega-line area.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/09_Ma
+       rch_Moods.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/09_March_Moods.txt
+      1 MARCH MOODS Jeanette P. Parry March with a snowy overcoat. And ic
+        e about his chin. Is blowing up another storm Before springtime c
+        omes in. The pussywillow, wise and gay, Has donned a warm, fur co
+        at; She smiles at teas and fashion shows Where subtle perfumes fl
+        oat. The snowdrop, foolish child of Spring, Stands barefoot in th
+        e storm; She thinks her filmy, short, white dress Will serve to k
+        eep her warm.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/10_Th
+       ough_a_Host_Encamp_Against_Thee.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/10_Though_a_Host_Encamp_Against_Thee.txt
+      1 Third Prize Story Annual Relief Society Short Story (contest Thou
+        gh A Host Encamp Against Thee Dorothy Clapp Rohinson JULIA scrape
+        d the coals closer under her bakeoven. Even if she was nearly ele
+        ven, bread-making took the starch right out of her. The wood Isaa
+        c brought didn't make good coals. She was going to tell Pa well, 
+        maybe not now. Lately Pa didn't seem to love them any more than H
+        eavenly Father did. It wasn't as if they didn't know, 'cause they
+         did. All year the saints had talked and prayed about it, and if 
+        that wasn't enough there were her own secret prayers. No, Heavenl
+        y Father didn't have the excuse of not knowing; but Pa might not 
+        know about the chopping. At noon she had tried to tell him. "I am
+         not leaving." He had scowled at her. "Nothing short of the Unite
+        d States Army will move me." Julia didn't know about the United S
+        tates Army. All she knew was Johnson Army. Everybody was moving s
+        outh to get away from him. Everybody, but them. Julia wasn't hank
+        ering for a move. She'd had too many of them. This place in the c
+        anyon was the only real home she could remember. But burning it a
+        nd moving south would be better than the chopping. DOROTHY CLAPP 
+        ROBINSON "Brother Williams says he is following the Move so his f
+        amily will be safe." For a moment Pa hadn't spoken. When he did, 
+        his voice was the way it sometimes got when they talked about Ma.
+         "Maybe I should have taken you to your grandma; but Grantsville 
+        is a long way." He looked about the Page 143 RELIEF SOCIETY MAGAZ
+        INE MARCH 1945 room. "I snaked these logs out of the canyon. Your
+         Ma helped me raise them. I will put my trust in the Lord and sta
+        y here." When Pa used that tone of voice there was no use going o
+        n. Trusting was all right for him. He was an old man, nearly thir
+        ty-six, and old men are not afraid. Dorcas Williams had whispered
+         to her about the chopping. She said when Old Johnson Army got to
+         the Valley, if he found any young'uns there, he would cut off th
+        eir ears, and maybe chop off both hands and both feet. Like Squaw
+         Bill. She'd done something and the bucks of her tribe had choppe
+        d off her hands. Now she lived with the Williamses. After banking
+         the fire Julia went outside. At the woodpile she found a long, t
+        hick sliver. She would use it to try the bread. Sister Williams h
+        ad put her on to that. No sense trusting to looks. The first time
+         she had baked after Ma died, she had her lesson. Because the bre
+        ad was brown she'd thought it was done. Spreading one of Ma's sno
+        wy dish-wipers on the hearth, she had lifted the oven to turn out
+         the bread. Instead of coming out in loaves, the crust had broken
+        ; and dough had run all over the dishwiper. She'd scooped it back
+         in a hurry with her bare hands, so none of it would be wasted. T
+        hat had been a mess with burned hands and only slow-poke Sally to
+         help. As Julia started toward the house with her sliver, she saw
+         a curl of smoke far down the Valley then another. The burning ha
+        d started! That meant Old Johnson Army was close. She sat down on
+         a stump and tears trickled down her thin cheeks. Oh, Ma, why cou
+        ldn't you have stayed. Pa would listen to you. President Young wh
+        en he was up to see Pa said, "You're a brave girl, and don't worr
+        y, Ma is happy." Huh. Heaven must be something; or Ma had changed
+         in a hurry. She knew Hi was only ten months old and that Sally w
+        as slow as molasses in a snowdrift. Well, maybe Old Johnson Army 
+        would kill all of them. It would be a relief, at that, to turn Sa
+        lly and Isaac over to Ma. FOR supper they had bread'n'milk and In
+        jun-meal mush. Pa got a slice of the new bread. He worked hard, a
+        nd if he liked it, he might listen about the chopping. He liked i
+        t. He even said Julia would soon be as good a breadmaker as her m
+        other; but when she tried to talk "Move" he laid down his spoon a
+        nd looked at her. "I am not being chased out of my home again. Be
+        sides, when you put your trust in the Lord you leave it up to him
+        ." "We'll be alone. Everybody is go- "Some won't go. You wouldn't
+         want to go without me, would you?" "No-o." She blinked back the 
+        tears that stung her eyeballs. The young'uns had all stopped eati
+        ng to listen. "No, but there is Tommy and Baby ." Pa broke a crus
+        t of his new bread and gave it to Baby Hi, who was in the highcha
+        ir by him. He put an extry spoonful of molasses on Tommy's mush. 
+        The quiet was something turrible, and Pa's hand shook sb some of 
+        the molasses spilled. At last he looked straight at Julia. He rea
+        lly was an old man. "I have thought about it, and THOUGH A HOST E
+        NCAMP AGAINST THEE 145 prayed about it, and listened to counsel. 
+        I am going to stay." Just then Isaac tipped over his milk. Julia 
+        boxed his ears, but by the time she'd cleaned it up Pa was gone, 
+        saying he was going to work late at the gristmill. He took John w
+        ith him. John was two years older than Julia, and worked with Pa 
+        now. Later, Julia lay staring into the darkness. She was in Pa's 
+        bed in the front room so she could watch Tommy and Baby. There wa
+        s no use closing her eyes when Old Johnson Army stayed right in f
+        ront of them. She raised on her elbow. By the light of the moon s
+        hining through the open doorway she could see the little ones. Ba
+        by Hi had one chubby fist under his cheek. Tommy was on his back 
+        with arms and legs outstretched. Just imagine that old sooner hur
+        ting them! She didn't care if Pa got clean out of patience with h
+        er; she was not going to see them hurt. If neither Pa nor Heavenl
+        y Father was going to do anything, she would have to. SLOWLY an i
+        dea came to her. It grew and grew. She would get Bally from the p
+        asture. He was gentle and would carry five. She would bundle some
+         didies and food, and they would leave before Pa got back. With t
+        hem gone, Pa and John could hide. It was terrible to go again you
+        r own father, but she had a duty to the young uns. Slipping out o
+        f bed, she dressed hurriedly. As she stood a moment in the doorwa
+        y, a lump swelled in her throat. Something just like one of Ma's 
+        arms held her tight to the place. The moon was high. The mountain
+        s had moved close and the run-along song of the crick was enough 
+        to wake the dead. Warm chills ran up her back. After the heat and
+         dust of the plains it was like well, like having Ma after not ha
+        ving her. Leaving the yard, she walked toward the pasture where t
+        hey kept Bally. The gristmill stood out like a ghost. It was made
+         of logs, like the house. Until lately, both had seemed so safe a
+        nd strong. Especially after the plains. She couldn't remember Nau
+        voo much, and about all she could remember of Winter Quarters was
+         tents and wagons. She could remember how cold the Platte River w
+        as for she had fallen into it. She could remember an Injun trying
+         to buy her, and she could remember Jim Bridger's squaws. Leastwa
+        ys she could remember their bright blankets. But her best remembe
+        ring was of heat and dust, and how tired her legs got gathering b
+        uffalo chips. She had never rightly understood about the moving. 
+        Everyone said, have faith, the Lord will give us a home, but that
+         hadn't stopped the wagons. Until they reached the Valley, it had
+        n't. No one had kept up with the moving more willingly than the P
+        hippens. She didn't blame Pa for not wanting to start that again.
+         Still-. Bally wasn't in the pasture. Just her luck to have Pa us
+        ing him. She'd sneak up. If the mill was running, she might get h
+        im away without being heard. There was no light in the mill. The 
+        big door was open but there was no sign of Pa or John. The inside
+         dark was so quiet she could hear a rat gnawing. What if they had
+         skipped? For shame, Julia RELIEF SOCIETY MAGAZINE MARCH 1945 Phi
+        ppen. Pa'd never do that in Kingdom Come. You thought that 'cause
+         you are doing it to him. But she was taking the young'uns to saf
+        ety. A sound from the hillside made her turn. She waited breathle
+        ssly until it came again. It was Bally sneezing. Now what was he 
+        doing up there? Slipping from shadow to shadow she approached a s
+        mall grove on a near slope. Within the grove was a small cave whe
+        re the young'uns often played. Among the trees the light was dim,
+         and, for a moment, she could see nothing. Then she saw them. The
+        y must have been using him, for Bally was tied to a quaker. Pa an
+        d John were piling brush and dead branches over the mouth of the 
+        cave, but helter-skelter to make it look natural. 'Think anyone w
+        ill find it?" she heard John ask. "Never," Pa answered. "We can m
+        ove it after the trouble is over." Julia forgot Bally. She forgot
+         why she had come. She remembered only that here was more trouble
+        , and different than she had dreamed of. Now she couldn't run out
+         on Pa no matter what he had done. Back in bed she tried to smoth
+        er her hard breathing. Directly she heard them come in. Baby Hi f
+        ussed a little as Pa lay down beside him, but almost at once Pa w
+        as snoring. Then Julia looked at her thoughts. They had buried so
+        mething. It must be turrible or they wouldn't make a secret of it
+        . Maybe they had killed an Injun, or maybe even Old Johnson Army.
+         Maybe he had come sneaking around to do the chopping and they ha
+        d beat him to it. Pa was in Dutch either way. If it was Johnson A
+        rmy, the Gove'-ment  she didn't know what that was but everyone t
+        alked about it-would be on his trail. If it was an Injun her hear
+        t beat suffocatingly. You can't fool Injuns for long. Besides, Pa
+         might be called before the Brethren. He might even be in danger 
+        of hell-fire. The scriptures said something about shedding innoce
+        nt blood. She hoped Injun blood wasn't too innocent, but who had 
+        the say-so? Every way she looked there was a thick black wall. Sh
+        e just had to have help. She'd try Heavenly Father again. Ma had 
+        been strong on prayer. Slipping out of bed she knelt down and put
+         her face against the bedding. Protect them all, especially Pa an
+        d John, and if it had to be a killing they'd done, let it be John
+        son Army. Some good would come of that, but killing an Injun woul
+        d be all bad. Let Pa lose his stubborn streak and light out, come
+         daybreak. Maybe they could still catch up with the others. Sudde
+        nly, she realized she was talking more to Ma than to Heavenly Fat
+        her. Likely he would overlook it, seeing she was one of his newes
+        t angels. JULIA woke, heavy with dread, but the morning was so br
+        ight she could almost believe she dreamed about the cave. If her 
+        prayer was to be answered, now was the time. Pa was stirring the 
+        mush when she entered the kitchen. She hastened to wipe off the t
+        able and set out the dishes. All the time she listened for the wo
+        rd from Pa, but it didn't come. Her mush stuck in her throat. May
+        be Heavenly Father THOUGH A HOST ENCAMP AGAINST THEE 147 hadn't l
+        iked the way she prayed after all. She hadn't said thy will 'caus
+        e she wanted her will this time. Three times she caught Pa lookin
+        g at her. He told her again what a good bake she got on the bread
+        . He warned Isaac and Sally he'd tend to them if they didn't help
+         more. As he was leaving, he took his gun. "Keep no bring the you
+        ng'uns up to the mill when your work is done. They can play aroun
+        d up there." Julia made herself real busy so she wouldn't look at
+         him. Her last hope was gone. A heavy ache inside made her feet b
+        ig and her hands slow. Pa pretended to be working hard, but he st
+        opped every little while to stand looking. Most often his eyes tu
+        rned toward the canyon where lay the road into the Valley. He kep
+        t his gun close beside him. The sun hadn't found the bottom of th
+        e canyon yet when a rider came pounding up to the yard of the mil
+        l. It was Jim Ashley, and Pa came out to talk to him.  This is yo
+        ur last chance" Julia heard Jim say. "Tomorrow will be too late. 
+        What's a mill anyway?" "The saints will need flour wherever they 
+        are." Pa spoke real slow but every word stood out. "Mills don't g
+        row on trees. I am staying with mine." Julia was right proud of h
+        im for a minute; but if Brother Ashley couldn't budge him, no one
+         could. The best she could do was keep the young'uns close around
+        . What happened to one would happen to all. About noon Lafe Cartr
+        ight came by. He had been left to do the burning if it came to th
+        at. Some, he said, had got in a hurry and done the burning themse
+        lves. Pa agreed that was foolish. "Well, it will soon be over," L
+        afe called, as he rode away. Julia was past all feeling. If the w
+        orst, was to come, it would, only she hadn't thought God would be
+         one-sided. She had tried to be good; as good as Dorcas, but the 
+        Williamses were safe. 'Course she couldn't put all the blame on H
+        eavenly Father, but if he could move mountains why couldn't he ch
+        ange Pa's mind? As soon as Lafe was out of sight, Julia moved Bab
+        y Hi close by the mill steps. She called Tommy to come play on th
+        e blanket with him. She tried to mend, but the patch kept puckeri
+        ng. Finally she threw it aside. The minutes were endless. Suddenl
+        y, John let go with a loud yell from the roof of the mill where P
+        a had stationed him. "Here they come." Quicker than skat Pa shinn
+        ed up the corner of the mill and was looking to where John pointe
+        d. Isaac and Sally climbed the big tree that hung over the crick.
+         "I can see them," Isaac shouted, and Sally added her, "I can, to
+        o." Julia started to climb the mill, but halfway up she turned ba
+        ck. The mill roof was too far away. She stood on a stump near the
+         babies. She looked where the others were looking, and, suddenly,
+         she saw a thousand or maybe even a million points of light, like
+         the sun hitting guns. "What is it?" she called, eager to share w
+        hat the others were seeing. "The Army," Pa was breathing hard lik
+        e he had been running. "Johnson's Army. Caught up with us at last
+        ." RELIEF SOCIETY MAGAZINE MARCH 1945 "I can't see good," Sally c
+        ried. Trying to move, she slipped and fell into the water with a 
+        yell and a splash. By the time they had pulled her out and change
+        d her clothes and rubbed arnica on her bruises, the Army was gone
+        . Pa went back up and locked the mill, and then he helped lay out
+         an early supper. He even got a jar of Ma's sarvis-berry jelly. T
+        hree times in the night, Julia heard him walking around. LATE eve
+        ning of the next day, Jim Ashley came back. Pa hadn't been at the
+         mill all day, and it seemed he couldn't wait for Jim to get ther
+        e. He went a piece to meet him. When he came back he sat down on 
+        the doorstep. He looked so happy Julia sat down beside him. The y
+        oung'uns, except John, were in bed; and darkness filled all the h
+        ollows. "What did Jim say?" she asked finally. "It's over." Pa's 
+        voice sounded as young as John's only it didn't squeak. 'The Lord
+         was with, us even as I doubted." Julia looked at him in surprise
+        . "Were you afraid?" "I was scared stiff." "What's Johnson's Army
+        , Pa, and why did the saints have to move?" "We thought we were i
+        n for trouble again. We thought the soldiers would take our homes
+         and we were not going to let that happen again. We would burn th
+        em first. That is why men were left to set fires." The gid looked
+         around at the mountains in the back, with the moon just peeping 
+        over the rim. She looked at the lake in the distance, and the slo
+        ping Valley between. It was wonderful to have a home that was saf
+        e and strong and a Pa that was scared but stayed anyway. She coul
+        d talk to him now. Words tripped over her tongue trying to get sa
+        id. She told about the chopping and how she thought Johnson Army 
+        was a cruel giant. She even owned up to her feelings against him 
+        and Heavenly Father. Pa listened without saying a word. It was br
+        ight moonlight now, and she could see slow tears run down into hi
+        s whiskers. He drew her close against him. "Poor little young'un,
+        " he said, "I have been so wrapped up in my own worries I have ov
+        erlooked yours. I have expected too much of you, but it seems lik
+        e you are my right hand." Julia hardly breathed. She didn't want 
+        to spoil the sweetness of that moment, but she must know one thin
+        g more. "What about the Injun, Pa?" "What Injun?" his voice was p
+        uzzled. "The one you buried in the cave." Slowly Pa's eyes came a
+        live. He started to laugh, quietly at first, then lively. She had
+        n't heard such fun in his voice since before Ma took sick. "The I
+        njun we buried was flour. That is why Brother Young was up to see
+         me. We thought we might lose the mill but we couldn't take chanc
+        es on the flour." Through the soft light she could see the trust 
+        in his eyes. "We were wrong, both of us. We forgot there are many
+         ways for prayers to be answered. His way was much better than yo
+        urs or THOUGH A HOST ENCAMP AGAINST THEE 149 mine. The Army has g
+        one on down to the Jordan. There isn't going to be any trouble." 
+        Suddenly the breadmaking, the care of the young'uns were mere tri
+        fles. Heavenly Father had remembered them. A verse Ma used to rea
+        d came to her mind. "Some put their trust in chariots; and some i
+        n horses: but we will remember the name of the Lord, our God." Ye
+        s. She would always remember. Dorothy Clapp Robinson, third prize
+         winner in the Relief Society Short Story Contest for 1944, is we
+        ll known to Magazine readers through her excellent contributions 
+        to this publication. Mrs. Robinson is a gifted writer of prose, p
+        oetry, and fiction. The continued story "Forward Without Fear" wh
+        ich was concluded in the February 1945 issue of the Magazine is h
+        er work, She is a contributor to other Church periodicals as well
+        , and she frequently markets her work with national publications 
+        of recognized merit. She has been active with writers' groups who
+        se purpose is to stimulate creative writing, improve writing tech
+        niques, and acquaint writers with markets for their work. At pres
+        ent, she is president of the Idaho Writers' League. Mrs. Robinson
+         appreciates the efforts of fellow writers and aids and encourage
+        s them in writing through intelligent analysis of their work. She
+         is a capable teacher and a devoted Latter-day Saint. She is now 
+        serving as counselor in charge of education on the Boise Stake Re
+        lief Society Board.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/11_To
+       _a_Lost_Flyer.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/11_To_a_Lost_Flyer.txt
+      1 TO A LOST FLYER Bessie Jaivis Payne In memory of Captain Lee Jarv
+        is Hailing Killed in action May 5, 1944 Dedicated to his mother R
+        ose Jarvis Hailing Wings approaching in the sky, Slowing as they 
+        pass me by. Dipping now in brief goodbye  O'er this home. Wings a
+        gainst the azure deep, Eager flight into the street. Straining ey
+        es that must not weep  Till peace is won. Wings upon the sun-spla
+        shed hills Casting shadows o'er the rills. Soaring high, as my he
+        art thrills  Then you're gone. Wings above the ocean's foam Wingi
+        ng far from friends and home. Must you never cease to roam  Deare
+        st one? Broken wings in downward sweep, Swiftly be the fate you m
+        eet. Rest now in eternal sleep  Oh, my son.
+
+⏺ Now "The Story of a Gifted Lady" — this is a long biographical article. Let me
+   re-read the section from my context and write it.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/12_Th
+       e_Story_of_a_Gifted_Lady.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/12_The_Story_of_a_Gifted_Lady.txt
+      1 The Story of a Gifted Lady Leah D. Widtsoe ALICE MERRILL HORNE HE
+         was an unlearned, ordinary looking farmer's lad, who had spent h
+        is days at farm drudgery, for his parents were struggling to make
+         the farm produce a scanty living for their growing family. But w
+        ithin him dwelt the power to see beauty in the glowing sunsets, t
+        he bright tints of autumn, and the glorious light effects on the 
+        mountains, clouds, and valleys wherever he worked. Even the good 
+        earth talked to him as he turned the brown fur-Page 150 rows for 
+        spring planting. He also possessed the gift of putting on paper o
+        r canvas or anything on which he could lay his hands, the picture
+        s which crowded through his mind. So, instead of spending his sca
+        nty earnings on new clothes, or guns and powder, with which to ki
+        ll God's innocent creatures, he bought paper, crayons, paints, an
+        d oils, and transferred the pictures of his mind to paper or canv
+        as, until his home was crowded with the results of his leisure ef
+        forts. At first his mother encouraged him, but later began to fee
+        l that he should be spending his time on something more profitabl
+        e. Then one day, through a lucky chance, he met A Fairy Godmother
+         She took the time to visit his home, recognized his gift, and to
+        ld him that he should cultivate it. When told how impossible that
+         would be financially, she volunteered to sell his pictures, ther
+        eby helping him to raise money with which to attend a great art s
+        chool in the East. Then this dainty, but indomitable, art patron 
+        went to a number of the well-to-do people in the city, told them 
+        the story of the gifted farmer's lad, and soon had sold enough of
+         his pictures to enable him to achieve the ambition of his life. 
+        This good lady has rendered similar service for many of Utah's gi
+        fted sons and daughters. She has been, and still is, a real fairy
+         godmother THE STORY OF A GIFTED LADY 151 to them, and through he
+        r encouragement has taken a leading role in making Utah art consc
+        ious. Wouldn't you like to know more about her? Her life story be
+        gins in the days when the pioneers were called to settle remote p
+        arts of the (then) Territory, and it bristles with tales of India
+        n unrest as well as the romance of state-building. It is as excit
+        ing and interesting as any which begins with the intriguing Once 
+        Upon A Time Once in a very great while, an especially gifted spir
+        it is sent to earth to take a body and become a blessing to many 
+        people and the state, as well as to family and friends. Such a pr
+        ecious spirit came to the frontier log cabin home of Clarence Mer
+        rill and Bathsheba Smith, who were each descended from stalwart U
+        tah pioneers. The father was called by Brigham Young to learn tel
+        egraphy, and then to settle first at Cove Creek Fort, that outpos
+        t of Indian activity, and later to take care of telegraph operati
+        ons at Fillmore, which was then the capital of Utah Territory. Th
+        ere a baby daughter was born to them, and was named Alice Smith M
+        errill. She grew to be a lovely child, who was later to honor hig
+        hly the name and the lineage she bears. Two of her great-grandpar
+        ents. Patriarch John Smith and his wife Clarissa Loomis Lyman, we
+        re pioneers of 1847, and all four of her grandparents were early 
+        pioneers also. Her grandfather, George A. Smith, was both Church 
+        historian and first counselor to President Brigham Young, while h
+        er grandmother, Bathsheba W. Smith, was the fourth general presid
+        ent of the Relief Society. Two of her great-grandparents passed a
+        way before reaching the "Valley." Thus Alice is a true daughter o
+        f pioneers, and the fourth generation of believers in the restore
+        d gospel of Jesus Christ. The girlhood of this favored child was 
+        passed in the ideal environment of a fine, two-story brick home (
+        evolved from the log cabin) located in a quarter block of garden 
+        and orchard, in company with a large family of brothers and siste
+        rs to help make life a round of merriment as well as of struggle.
+         There were vegetables and fruits to be gathered in summer, wild 
+        strawberries and native black currants, choke cherries, and servi
+        ce berries to be brought from the canyons; fruit to be canned and
+         dried in autumn; with quilt blocks to make and rags to be sewed 
+        for carpets during the long winter hours when school was out. The
+        se chores were varied with pleasurable activities, for her parent
+        s were leaders in the Fillmore Dramatic Society, as well as being
+         gifted with musical talents. Around the family hearthstone the f
+        amily often re-enacted stirring scenes from history or from Shake
+        speare, each dressing, as best he could, in character. The mother
+         always had a lovely flower garden, and Alice early learned to ap
+        preciate the beauties of mountains, streams, blue skies, and clou
+        d effects, as well as the glories of summer gardens and winter sc
+        enes of snowy grandeur. In fact, the love of beauty seemed to be 
+        a part of her very being, for she sought it in the everyday tasks
+         as well as in her moments of leisure. She loved to draw, and ear
+        ly showed aptitude in transferring to paper the images of her min
+        d. She was a good student also, for when but a child she took a p
+        rize in the old rock schoolhouse as the best reader. Then when bu
+        t eight years old came her Great Adventure After the passing of h
+        er grandfather, George A. Smith, her grandmother ("Aunt Bathsheba
+        " to all the other daughters of Zion) was living alone, and lonel
+        y. So she invited her granddaughter, Alice, to come to "the city"
+         and live with her in the old Historian's Office, next to the mag
+        nificent Gardo House, which was then the official residence of th
+        e president of the Church. What a rare experience for this beauty
+        -loving child! Here she helped her grandmother read and sort old 
+        letters, classified the hundreds of pictures her grandfather had 
+        brought from his trips to Europe and the Holy Land, met and learn
+        ed to know all the great men and women of early Mormon history, w
+        ho were intimate friends of her grandmother. From a child to youn
+        g womanhood, she became associated with the early development of 
+        the Relief Society in the new Zion; also the Retrenchment Society
+        , as well as the suffrage movement for Women's Rights, so-called.
+         Meetings for these activities, as well as those of the Women's D
+        eseret Hospital, Woman's Exponent (the pioneer women's newspaper)
+        , and many others of pioneer interest, were all conducted in her 
+        grandmother's back parlor. Alice was an ardent listener and youth
+        ful participant. It is no wonder that she became "organization-mi
+        nded." When but nine years old she felt to organize RELIEF SOCIET
+        Y MAGAZINE MARCH 1945 the young girls into a society, which they 
+        called "The Juvenile Association." She chose six counsellors  ins
+        tead of two among them the youngest daughter of Brigham Young, Fa
+        nny V., Katie B. Fen ton, Lutie Y. Thatcher, Lulu Clawson, Ada Cr
+        oxall, Edna Wells, with Daisy Woods, a granddaughter of Emme-line
+         B. Wells, as secretary. They visited and prayed for the sick, an
+        d later joined, in a body, the first organized Primary Associatio
+        n. Meanwhile, Alice was using her pencil and sketch book as well 
+        as attending school. While in Miss Mary Cook's school, she won th
+        e prize for the best drawing a sketch from memory given by Dr. El
+        len B. Ferguson. Later, she won an award given by the early Utah 
+        artist and teacher at the University of Deseret  now the Universi
+        ty of Utah-George M. Ottinger. Still later, she won a medal offer
+        ed by the artist J. T. Harwood, which was awarded by John Hafen, 
+        one of Utah's greatest artists. This was naturally a stimulus to 
+        her innate desire to produce pictures herself, and to foster in o
+        thers the love of art, to which her life has been devoted. But ar
+        t did not claim all her interest. In 1887, she was graduated from
+         the University of Utah. She wrote her thesis on two of Shakespea
+        re's women  Lady Macbeth and Ophelia. Her interest in good litera
+        ture has always been keen. In 1890, Alice married George Henry Ho
+        me, also a descendant of stalwart pioneers. He was an ideal husba
+        nd for this talented woman, for besides being a fine man Jn his o
+        wn right, he was openminded enough to recognize the gifts of his 
+        talented wife and to encourage her THE STORY OF A GIFTED LADY 153
+         to use them. It takes a big man to do that. In 1893, they visite
+        d the Columbian Exposition in Chicago, and later went to New York
+        , Washington, Boston, San Francisco, and the Northwest, visiting 
+        especially the art galleries and other places of interest. In 189
+        4, the young husband was called on a mission to the Southern Stat
+        es. Alice, being a good soldier, taught art in the public schools
+         while he was gone. She also undertook serious work in art from J
+        . T. Harwood, who had just returned from study in the Julian and 
+        Beaux Arts Academies of Paris, France. She also studied from Mary
+         Teasdel, student of James McNeill Whistler. In 1898, she was urg
+        ed by many friends to run for the legislature. In this, as in her
+         many other activities, her husband counselled her acceptance. Sa
+        id he, "Wifey," (his pet name for her) "if you want to help Utah 
+        to become art-minded, you will have to get in there and work for 
+        it." She was elected, and made herself noteworthy by introducing 
+        a bill which provided for an annual exhibition and state art coll
+        ection. Georgina G. Marriott as director of fine arts at the Stat
+        e Fair put the exhibition into Alice's hands, and for five years 
+        she made the Art Gallery famous. Instead of giving many prizes, t
+        he best pictures were purchased, making them the property of the 
+        State as well as encouraging the artists. This greatly encouraged
+         art studies and Utah artists also, establishing the nucleus of a
+        n art collection by the State of Utah, which was named in honor o
+        f the originator, "The Alice Art Collection.  ALICE MERRILL HORNE
+         AS A GIRL Thus the Utah Art Institute was established, making Ut
+        ah the first state in the Union to own a state art collection. Ma
+        ny prominent people made gifts of paintings, and this collection 
+        of over seventy pictures is now housed in the upper galleries of 
+        the State Capitol. After an existence of over forty years and an 
+        expenditure of over $60,000, the act was repealed in the interest
+         of the so-called "Modern Art" (or is it art?) which at great exp
+        ense is trying to convert the public to what is considered the Ne
+        w Art. Mrs. Home has remained true to her ideals of real beauty, 
+        however, and has turned much of her interest to sponsoring and pr
+        oviding art exhibitions for the public schools of the State. She 
+        has established over thirty art collections, of from fifteen to f
+        ifty paintings, by Utah's best RELIEF SOCIETY MAGAZINE MARCH 1945
+         artists. Hundreds of exhibitions have been held, and many thousa
+        nds of dollars have thus been turned to Utah artists aside from t
+        he greater value of instilling a love of beauty and art in the li
+        ves of the younger generation. For fourteen years from 1902 to 19
+        16 Mrs. Home was a member of the Relief Society General Board, an
+        d while there was active in preparing lessons on art appreciation
+         and landscape study, which were used by the 40,000 members of th
+        e Relief Society. A book on this subject "Devotees and Their Shri
+        nes, A Handbook of Art" was later published. Another book written
+         in dramatic form called "Columbus Westward Ho!" was published an
+        d used in the public schools for a time. Many other interests cla
+        imed her attention during all these years of active service. She 
+        is a charter member of the Daughters of the Utah Pioneers, and wa
+        s instrumental in framing its constitution and bylaws; she was al
+        so its second general president. She sponsored a "Clean Milk for 
+        Utah" campaign, and as chairman of Public Health helped, with oth
+        ers, to arouse enough public sentiment to cause rigid inspection 
+        to be enforced for the benefit of all, especially babies. Four mi
+        lk stations were opened in different parts of the city. Many babi
+        es died in Salt Lake City among them her own baby son, George Hen
+        ry, Jr.  while the next summer only one baby death was reported! 
+        Mrs. Home was also active, with others, in organizing the Smokele
+        ss Fuel Federation, and for many years has labored to encourage t
+        he use of smokeless fuel and byproducts from Utah coals. She, wit
+        h other forward-looking women, was instrumental in the formation 
+        of the Women's Chamber of Commerce, which has labored to make smo
+        keless fuel a possibility for improving the health of Utah reside
+        nts and the beauty of her towns and cities. Honors Have Sought He
+        r For her many activities, Mrs. Home has rightly received merited
+         recognition. In 1904, she represented the National Council of Wo
+        men, as well as the National Women's Relief Society, at the Inter
+        national Council of Women, held in Berlin, Germany. In 1934, she 
+        was chosen by the Salt Lake City Council of Women as one of the f
+        irst outstanding women, named by that body, for her many contribu
+        tions and life-long promotion of art among the citizens of the St
+        ate. Her latest honor was received in 1942, when she was given a 
+        Medal of Honor from the Academy of Western Culture for her civic 
+        service, especially in the promotion of Utah art appreciation and
+         production. A large reception was held in the President's Suite 
+        at the Hotel Utah, with Mr. And Mrs. Alexander Schreiner, and Mr.
+         And Mrs. Lee Greene Richards in charge of the ceremonies. Many p
+        rominent Utahns came to meet the little lady so greatly honored. 
+        All these awards have been richly deserved, and have done honor t
+        o the donors as well as to the recipient. One might think that a 
+        life so crowded with achievement would be enough for one small la
+        dy, but there remains yet to be told Her Great Achievement' In ad
+        dition to the many activities enumerated above, her greatest hon-
+         THE STORY OF A GIFTED LADY 155 or and award is the gift of Mothe
+        rhood. Six children three sons and three daughters have come to b
+        less the home of this favored family. Five of them have grown to 
+        a useful maturity Mary, Lyman, Virginia, Zora,' and Albert. They 
+        are all members of the Church and are leaders in their fields of 
+        labor. Two of them, Dr. Lyman and Dr. Albert, are successful doct
+        ors of medicine, while the two married daughters-Mary, Mrs. Leo C
+        . Winder, and Zora, Mrs. J. G. Jeppson are making good homes and 
+        raising fine families. They are all active in civic betterment. M
+        r. Home met an untimely death in 1934, mother has continued to ca
+        rry on her home duties as well as her many public activities. Ali
+        ce has always had a sweet, attractive face; but to those who know
+         her best, it seems that the halo of white hair frames a face gro
+        wing more mellow and charming with the passing years. Though now 
+        approaching what some may designate as 'getting on in years," she
+         still seems as young as ever, and is active in staging art exhib
+        its in the Tea Room or a nine-window art show at Zion's Co-operat
+        ive Mercantile Institution, or some school where art-appreciation
+         is needed. When one sees her "toting" around the heavy pictures,
+         placing them where they receive their best light, or may be seen
+         to the best advantage (so that possible sales may reward the art
+        ist), one feels to exclaim, "What a Woman!" How wise to foster a 
+        life interest which may remain when children are grown and home t
+        ies are lessened! How much better it is to have work to do that h
+        elps others more than oneself, rather than to sit idly at home, a
+        llowing or expecting one's children to "take care of one's old ag
+        e." What a glorious thing is independence! Wliat an achievement t
+        o know that one's life work is being well done, in spite of circu
+        mstances or the passing years. Such a blessing is the well-earned
+         reward of our gifted lady, Alice Merrill Home. And here, dear fr
+        iend, while you are living and working, is our bouquet of appreci
+        ation and admiration!
+
+⏺ Now the Gifts poem, Sixty Years Ago, Woman's Sphere, Editorial, In Memoriam,
+  and Praying Hands.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/13_Gi
+       fts.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/13_Gifts.txt
+      1 GIFTS Grace A. Cooper When gods of sound and goddesses of color s
+        end Down gifts to man, their gems and blooms and music blend; Lik
+        e silence, drugged, the pearl-gray fog escapes the bay, Soft murm
+        urs from the golden glow of summer day Join whispered converse of
+         the leaves of verd and jade; Late roses echo reds of rubies' dee
+        per shade. When beryls raise their batons, all is statue-still, T
+        hen amethysts and violets, in cadence, trill; Turquoise and larks
+        pur improvise a symphony, The diamond and jasmine play their melo
+        dy. Between the black and darkened clouds are silver rifts  For g
+        ods and goddesses, to mankind, blend their gifts.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/14_Si
+       xty_Years_Ago.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/14_Sixty_Years_Ago.txt
+      1 Sixtii LJears Kjigo Excerpts from the Woman's Exponents, March i 
+        and March 15, 1885 "For the Rights of the Women of Zion and the R
+        ights of the Women of All Nations" Love. This is a little word of
+         only four letters, yet how potent, how powerful, and with it com
+        es our liberty or bondage. If we love right, we are free; free in
+         our souls, pure in our hearts, let come what may, though oft thr
+        ough surrounding circumstances and worldly influence we are swerv
+        ed from the right, not having the moral courage to resist evil, o
+        r know for ourselves the sad results of weakness and hatred until
+         too late.... Where can we find pure love? In the homes of the La
+        tter-day Saints; there it sits enthroned. If sorrow and death vis
+        it such a household there is comfort and relief at hand.... Our p
+        rinciples are perfect, and we will continue to love them and stri
+        ve to live them, God being our helper; protect the rights of othe
+        rs, envy no one, be pure in our daily walk in life and leave the 
+        result in God's hands. Zina D. H. Young. Editorial Notes: On Satu
+        rday, March yth, a number of ladies, intimate friends of Mrs. Rac
+        hel R. Grant, met at her residence in the 13th Ward, it being the
+         anniversary of the lady's birthday. The time was spent in social
+         converse, supper being announced at six p.m., when the guests re
+        paired to the residence of Apostle H. J. Grant, where a sumptuous
+         repast had been prepared for the occasion. The table was handsom
+        ely set out, and the viands were delicious. Mrs. Lucy Grant, the 
+        amiable hostess, and her sister, Mrs. JuHa Woolley, with Miss Mag
+        gie Ivins assisting, waited upon the ladies in the most charming 
+        manner, and every one seemed to thoroughly enjoy themselves. Abou
+        t ten o'clock the party broke up. Many good wishes were expressed
+         for the lady who is a great favorite with her friends. May she l
+        ive to enjoy many more years of prosperity and happiness.  R.S. R
+        EPORTS Alma Ward, Mesa City. Editor Exponent: Owing to our isolat
+        ed situation we see but few communications from this part of the 
+        country in your valuable paper, hence the liberty I take in penni
+        ng a few lines to you, hoping you will be kind enough to give the
+        m space in your paper. We were organized May 31st, 1883, under th
+        e direction of President McDonald, with Anna Klienman, President;
+         Henrietta Standage and Laureta Staples, Counselors; Sarah M. Mul
+        lens, Secretary; Sophronia A. Standage, Assistant Secretary; Hann
+        ah M. Stewart, Treasurer. We have thirty-five names enrolled, wit
+        h an average attendance of nineteen. We hold our meetings semi-mo
+        nthly, and have a very good time. The sisters are trying to live 
+        their religion and serve God. The Exponent is read in our meeting
+        s, with other Church works, striving to render them a source of b
+        enefit and mutual improvement. Wishing f Jr the success of the Ex
+        ponent, I remain, Your sister in the Gospel, S. A. S. Bluff City.
+         Editor Exponent: Thinking that a few lines from Bluff City would
+         not come amiss, we take pleasure in writing that our Relief Soci
+        ety is trying to keep along evenly with the rest of the branches 
+        of the Relief Society as near as possible under the circumstances
+        , with a good spirit and feeling at heart. We hold our testimony 
+        and teacher's meetings once a month, and our working meetings onc
+        e in two weeks. We are few in number, but our meetings are well a
+        ttended and our desire is to do all the good we can in helping to
+         build up the Kingdom of God in this far off land.... We have had
+         a very pleasant winter and the health of the people is very good
+        . There has been no sickness nor death, for which we feel very th
+        ankful, and realize as a great blessing. Ever praying for the wel
+        fare of Zion, we remain, Your sisters in the Gospel, Jane M. Walt
+        on, President; Irene Haskell, Secretary.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/15_Wo
+       mans_Sphere.txt)
+  ⎿  Wrote 7 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/15_Womans_Sphere.txt
+      1 Woman's Sphere Ramona W. Cannon FOR the first time in the history
+         of Utah, or of any other state in our country so far as can be l
+        earned, a woman has been selected as legislative chaplain in the 
+        person of Dr. Maud May Babcock who occupies that position in the 
+        Utah State Senate. Years ago, President Brigham Young's daughter,
+         Susa, attended a class in voice building at Harvard University, 
+        taught by Miss Babcock. The pupil did not rest until Miss Babcock
+         was in the employ of the University of Utah, where she built up 
+        one of the best known speech departments in the country, serving 
+        for fifty-two years, longer than any other faculty member. She be
+        came a convert to the Church, was the first president of the Youn
+        g Women's Mutual Improvement Association in the Eighteenth Ward, 
+        and introduced the study of literature into the Mutual program.
+      2 FIVE women have been elected to the Utah House of Representatives
+        : Mrs. C. L. Jack, Mrs. J. B. Bearnson, Mrs. Clara L. Jarvis, Mrs
+        . Della L. Loveridge, and Miss Frances B. Smith. Mrs. E. E. Erick
+        son is the only woman senator. She outranks any other Utah woman 
+        in length of legislative service. Singularly honored this year wi
+        th the chairmanship of the important educational committee, she i
+        s also a member of the committee on appropriations, on state and 
+        municipal
+      3 affairs, on public institutions, social relations, and relief.
+      4 MISS ERIKA MANN, daughter of the great novelist, Thomas Mann, who
+         exiled herself from Germany and became an American citizen, rece
+        ntly spent seven months in the occupied countries and on the firs
+        t-line battle fronts of Europe. In Salt Lake City, she gave an ac
+        count of her experiences, with comments on allied policies, and s
+        uggestions for attitudes in postwar problems.
+      5 AMIDST the beauty of her native land, one of the most spiritual a
+        nd beloved Hawaiian Latter-day Saints, Mrs. Lilia Wahapia Kaneiha
+        lau, passed away in November. In another forty-five days she woul
+        d have been 120 years old. For ninety-one years she had been a me
+        mber of the Church, and served for thirty-three years as presiden
+        t of the Relief Society, released in 1926 at her own request due 
+        to her age.
+      6 FRANCE has a woman mayor for the first time in history. She presi
+        des over Thann, one of the liberated towns in Alsace.
+      7 HENRY WISE MILLER, husband of the late Alice Duer Miller, author 
+        of The White Cliffs of Dover and many other beautiful poems, has 
+        written a book on the life and works of his wife. Page 157
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/16_Gr
+       atitude_for_Church_Guidance.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/16_Gratitude_for_Church_Guidance.txt
+      1 VOL. 32 MARCH 1945 NO. 3 Gratitude For Church Guidance ONE hundre
+        d and three years will have passed this March seventeenth since t
+        he first auxiliary of the Church, the Relief Society, was establi
+        shed for the benefit of its members and for the good of others. I
+        n that year, 1842, the Church had risen triumphant through its fi
+        rst twelve momentous years. It had been driven from New York to O
+        hio, from Missouri to Illinois, and already the necessary laws an
+        d powers for the coming forth and future progress of the Church h
+        ad been revealed and confirmed. It was during that all-too-brief 
+        period of calm between the lashing storms of persecution, while t
+        he Church lay, as it were, at safe anchorage on the broad blue wa
+        ters of the Mississippi at Nauvoo, that a few of the Church women
+         gave utterance to their longing to be formed into an organizatio
+        n so that their united efforts might more speedily and effectuall
+        y accomplish tasks allotted to them. It is significant that these
+         women did not themselves inaugurate a society, but turned to the
+        ir Prophet-leader for guidance. At a time and place set by him, h
+        e organized them, and under his continued tutelage thus was insti
+        tuted the Relief Society which grew in one hundred years from a m
+        embership of eighteen to over one hundred thousand. The broad bas
+        ic principles which Page 158 have always governed the Society wer
+        e laid by the Prophet Joseph Smith; however the planning and putt
+        ing into execution of these policies have always been entrusted t
+        o the officers and members of the Society, who fully merited the 
+        confidence thus reposed in them, manifesting a devotion to duty, 
+        throughout the years, which has resulted in an immeasurable amoun
+        t of labor, of loving service, and of enlightenment. Relief Socie
+        ty is obedient to the leadership of Church authorities today as i
+        t was one hundred years ago, and stands ready to accept and suppo
+        rt new policies as they are deemed desirable. So guided and so co
+        nducted, the advancing years will find the Society growing ever m
+        ore powerful, more potent in building testimonies of the gospel i
+        n members, more fully fulfilling its high destiny. On this one hu
+        ndred and third anniversary, Relief Society members acknowledge t
+        he gratitude of their hearts for the guidance of the general and 
+        local authorities, for their zealous, watchful care to the end th
+        at the services rendered by Relief Society women are being extend
+        ed in everwidening spheres to keep pace with the accelerated need
+         for such services in the expansion and progression of the Church
+        . M. C. S.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/17_In
+       _Memoriam.txt)
+  ⎿  Wrote 4 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/17_In_Memoriam.txt
+      1 EDITORIAL 159 Sarah Eddington?Ida Peterson Beal EARLY in the New 
+        Year, two faithful and devoted former members of the General Boar
+        d of Relief Society passed to the great beyond, in the persons of
+         Sarah Eddington and Ida Peterson Beal. The death of Sister Eddin
+        gton occurred on January 9, and that of Sister Beal on January 6.
+         In many respects the lives of these two good sisters were simila
+        r. They were both daughters of early Utah pioneers, were reared i
+        n families where faith and devotion to the gospel were paramount,
+         and their testimonies of the mission of the Prophet Joseph Smith
+         and the restored gospel were fervent and strong. Miss Eddington 
+        was born June 13, 1861 in Salt Lake City. She was the daughter of
+         William and Sarah Fry Eddington, English converts. From her chil
+        dhood days she was active in the Church in many capacities. She s
+        erved as a valued member of the General Board of Relief Society f
+        or seven years ?from March 1914 to April 1921. Previous to this s
+        he was a member of the General Board of the Y. W. M. LA. For twen
+        ty-five years. She was an untiring worker, always willing to do m
+        ore than her share. She was an efficient committee member and tra
+        velled extensively for both the Relief Society and the Y. W. M. I
+        A. Although she was rather frail and delicate physically, she use
+        d to say, "Send me on the long, hard trips; I have no home to tak
+        e care of, no husband, and no children. I am free and my chief in
+        terest in life is the Church and its progress." Sister Eddington 
+        was especially gifted as a public speaker. She was both eloquent 
+        and impressive, and was always able to hold her audience whether 
+        it was made up of children, young people, or those of mature year
+        s. IDA PETERSON BEAL was born in Ephraim, Sanpete County, Utah, o
+        n February 7, 1876, the daughter of President Canute Peterson and
+         Chariotte Eckstrom Peterson. Her Church interests and activities
+         began early and continued throughout her life in the various aux
+        iliary organizations of the Church. She was appointed to the Gene
+        ral Board of Relief Society in August 1927, where she served fait
+        hfully and efficiently for thirteen years. Sister Beal received h
+        er education in the schools of her native town, at the Snow Acade
+        my, and at the Brig-ham Young University. In the last named insti
+        tution she majored in music under the tutelage of Professor A. C.
+         Lund, and became one of his star pupils and one of the sweetest 
+        singers in Zion. She took the leading role in the first opera pro
+        duced by Brigham Young University. Sister Beal had many opportuni
+        ties for study and travel, and she made the most of them. She acc
+        ompanied her husband, Dean T. A. Beal of the University of Utah, 
+        to
+      2 New York where, for three years, he studied at Columbia Universit
+        y. She later accompanied him to Europe where, for one year, they 
+        both took advantage of educational and cultural opportunities the
+        re. Probably Sister Berit's greatest contribution to the General 
+        Board was as chairman of the music committee in which capacity sh
+        e directed the annual
+      3 organization, and was instrumental in developing the great centra
+        l chorus of Singing Mothers. However, she travelled extensively t
+        o stake Night Society conferences where her lovely spirit and swe
+        et personality won friends and supporters to the great Relief Soc
+        iety cause.
+      4 A.B.L.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/18_Pr
+       aying_Hands.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/18_Praying_Hands.txt
+      1 PRAYING HANDS Clarence Edwin Flynn On broad, green fields are man
+        y hands that labor, Turning to sun and rain the fresh, sweet soil
+        . Wielders of hammer, pen, and loom, and saber. Alike must live u
+        pon their daily toil. Under the summer sun they do their duty, Lo
+        osing the ground that roots and stalks may grow, Coaxing to richn
+        ess and productive beauty The waving ear and tassel, row on row. 
+        Comes a bright day when autumn's sun is slanting Its mellow rays 
+        across the golden grain. They gather then the harvest of their pl
+        anting. Grateful that they have labored not in vain. All these ar
+        e praying hands. An old petition Their labor makes?one that has l
+        ong been said By those of every country and condition: "Give us, 
+        we ask, this day, our daily bread."
+
+⏺ Now the Notes to the Field, Marshalling Our Forces, To a Little Girl, March
+  Designs for Summer, and Released.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/19_No
+       tes_to_the_Field.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/19_Notes_to_the_Field.txt
+      1 Notes TO THE FIELD Materials for the 1945 Welfare Clothing Budget
+         THE following information regarding materials for the 1945 welfa
+        re clothing budget has been received by the General Board from th
+        e General Church Welfare Committee: In the fall of 1944 the Cloth
+        ing Committee submitted a report to the General Welfare Committee
+         which covered the materials that would be needed for the 1945 we
+        lfare clothing budget assignment. At that time, information which
+         had previously been supplied by government officials in Washingt
+        on indicated that it was probable that the materials for this clo
+        thing assignment would be made available to the Welfare Program. 
+        In the latter part of December the situation changed and it then 
+        became apparent that most of the materials, which we proposed to 
+        use, were still critically needed in the war effort. It has, ther
+        efore, been decided that while present conditions exist, it will 
+        not be advisable to file for priorities. The clothing program wil
+        l proceed as materials become available to which we are properly 
+        entitled on a quota basis. The most recent information from the w
+        holesale houses with which the General Committee has heretofore d
+        one business is that there is no immediate prospect of securing t
+        he clothing materials in the quantities that are required to fill
+         the 1945 budget assignment. It is the plan of the General Commit
+        tee to keep in close touch with the market and take advantage of 
+        the full quota of materials as they become available. This means 
+        that it will not be possible for the General Committee to supply 
+        the materials needed so that the budget can be completed during t
+        he first six months of this year as many of the Relief Society si
+        sters desire. It is hoped, however, that materials will be availa
+        ble so that the budget can be completed by the end of 1945. As ma
+        terials are received, they will be allocated in a fair manner to 
+        those to whom the budgets have been assigned. The question has ar
+        isen as to whethei stake or ward welfare committees shall be enco
+        uraged to purchase materials from lo cal sources to complete thei
+        r clothing assignments. If materials can be purchased at wholesal
+        e prices without working a hardship on the community, it will be 
+        proper for the stake and ward welfare committees to purchase such
+         materials and advise the General Committee so that the General C
+        ommittee will not overpurchase later on. However, if it is necess
+        ary to go into the retail markets and pay retail prices and take 
+        from the shelves of local merchants materials that are needed to 
+        meet the general needs of the local community, such purchases sho
+        uld not be made. Where quilting is done, the General Committee ca
+        n supply the batts needed from stocks now on hand. During the tim
+        e that materials for welfare sewing are not available, the Genera
+        l Board recommends that Relief Society women devote themselves to
+         other sewing activities on the work meeting day. Page 161
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/20_Ma
+       rshalling_Our_Forces_for_Home_Safety.txt)
+  ⎿  Wrote 10 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/20_Marshalling_Our_Forces_for_Home_Safety.txt
+       1 Marshalling Our Forces for Home Safety Nellie O. Parker Member o
+         f Relief Society General Board Chairman Home Division, Utah Safe
+         ty Council WHILE the best of the country's young manhood are giv
+         ing their lives that we here at home may be safe and free, the a
+         ccident casualties every year in our homes are more than 35,000 
+         killed and 120,000 permanently injured, to no purpose and withou
+         t good reason.
+       2 More than half of all accidents occur in and around the homes, a
+         nd the greatest percentage of the victims are children under fiv
+         e and elderly people over sixty-five years of age. They are vict
+         ims of ignorance, of carelessness, recklessness or neglect. Acci
+         dents do not happen, they are caused by some unsafe practice or 
+         condition.
+       3 The first National Home Farm Safety Conference was held in Chica
+         go, February 17-18, 1942, to focus attention on the seriousness 
+         of the nation's home and farm accident situation, and to afford 
+         an opportunity for an open discussion of the problem so that pla
+         ns could be made for a nation-wide safety program. As a result o
+         f this study, the Home and Farm Safety divisions were added to t
+         he National Safety Council program. Since then, a majority of th
+         e states have included a home and a farm safety division in thei
+         r safety organizations.
+       4 Utah has kept in step with the na-
+       5 Traffic Safety Council was organized in 1939. In 1942, the State
+          ranked second to Oregon in the Western Division for the best tr
+         affic safety record, and, in 1943, received the national grand a
+         ward in the traffic safety contest.
+       6 The Utah Safety Council was formed May 19, 1944. Its scope was e
+         xpanded to include the activities of the Utah Traffic Safety Cou
+         ncil, the Women's Safety Council of Utah, and all other groups w
+         orking in the interest of safety. The consolidation of these gro
+         ups work under one head was made in the interest of efficiency a
+         nd against duplication of effort.
+       7 The Home Division is new in the State and, as in the National Co
+         uncil, is in the pioneer stages of its plans.
+       8 A great nation-wide program has been inaugurated in which all ou
+         r forces are harnessed to bring a safety consciousness to all Am
+         ericans. The greatest stress is being placed on education and en
+         gineering, two of the three "E's" of safety. Enforcement, the th
+         ird factor, cannot be used in the home as in industry and traffi
+         c.
+       9 This program of education should disseminate the knowledge of th
+         e safe use of the many products of this machine age that have fo
+         und their way into our daily living. Individuals must be made co
+         nscious of unsafe conditions and unsafe practices.
+      10 Page 162 MARSHALLING OUR FORCES FOR HOME SAFETY 163. They should
+          be awakened to a personal responsibility in guarding their own 
+         safety as well as that of others, and should exert every energy 
+         to assure their freedom from accidental injury. The importance o
+         f teaching safety in the home is being recognized as the first r
+         equisite in the safety program. It is believed that a child brou
+         ght up in an atmosphere of safety will not be content with unsaf
+         e conditions and practices in later years, and that this trainin
+         g wiH have a profound influence on safety problems in general?in
+          the home, on the highway, in industry. To assist in the educati
+         on for home safety, the Red Cross has added another service?cour
+         ses of instruction in accident prevention. It is now offering a 
+         course "Home Accident Prevention." Tliere is need, at present, f
+         or certified teachers to impart this knowledge to all groups of 
+         people. Those who take and fulfill all the requirements of this 
+         course can become certified teachers. It is an opportunity to he
+         lp conserve human life, and also to destroy one of the potent fo
+         rces which lead to distress and suffering. The Home Division of 
+         the Utah Safety Council is sponsoring classes in home accident p
+         revention as a part of its program of education for home safety.
+          It is issuing an appeal to people, in all groups and walks of l
+         ife, to take advantage of the course not only for the benefit to
+          themselves in their own homes, but also for the opportunity it 
+         gives them to do a fine human service. The Home Division is also
+          planning for a designated week from April 8-14 wherein home saf
+         ety can be specifically emphasized by all means available?by rad
+         io, by the press, by programs in churches, clubs, and schools, a
+         nd by exhibits and surveys. It is hoped that by these activities
+          a public awareness to the existence of hazards may be awakened,
+          and a general desire to remove or avoid them be stimulated. The
+          world would be a much better place in which to live if accident
+         s could be prevented and, by marshalling all our forces to this 
+         end, much can be accomplished.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/21_To
+       _a_Little_Girl.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/21_To_a_Little_Girl.txt
+      1 10 A LITTLE GIRL Jo Adelaide Stock Joy fills my heart, sweet, whe
+        n I see The precious promises in thee. Thou art to me the soft pe
+        rfume That sleeps within a summer's bloom. Thou art a song as mas
+        ters sing Of love and youth and stars and spring; Thou art the bu
+        bbling of a fount; The cap of snow upon the mount. Thou art the g
+        entleness of rain; Thou art the sweetness after pain; O thou'rt l
+        aughter after sorrow, Promise of the new tomorrow. Thou art dawni
+        ng after dark. And the carol which a lark Showers down like unto 
+        leaven, On its way to God and heaven!
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/22_Ma
+       rch_Designs_for_Summer.txt)
+  ⎿  Wrote 23 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/22_March_Designs_for_Summer.txt
+       1 March Designs For Summer Hazel D. Moyle OF all the year's calend
+         ar, March is the least loved month. . . . And passing few are th
+         ey who speak, wild, stormy month, in praise of thee." . . . Yet 
+         March has an important place in the year's garden work.
+       2 It is true that we can do but little out of doors at this early 
+         season?a fact which we soon discover when we venture out into ou
+         r wet and sodden flower beds. But we can find solace, at this ti
+         me of year, for that first hunger for green growing things which
+          springs up so violently in the breast of every garden lover. We
+          can not only elect our winter-weary selves, but we can assure o
+         ur gardens an early and abundant bloom next summer by starting s
+         eeds indoors in early March.
+       3 Certain vegetables can also be started indoors with profit; that
+          intriguing new tomato, "Change Jubilee" must be grown from your
+          own sowing of seeds if you are to enjoy its piquant flavor and 
+         unusual appearance come next August, for few nurserymen offer re
+         ady-grown plants of this new variety.
+       4 One can, it is true, now purchase most kinds of annuals all read
+         ygrown for planting out when May arrives, but such ready-made pl
+         ants under the present war conditions command a fairly high pric
+         e. If your planting spaces are large, it will certainly pay you 
+         to try to raise your own plants. One can, if she is successful, 
+         reap an entire garden-full of plants by means of a few packages 
+         of seeds plus a little honest effort.
+       5 And there is the added advantage of being able to select just th
+         ose colors, varieties, and kinds that suit one's own personal ta
+         stes.
+       6 It is especially profitable to make early March sowings of such 
+         annuals as the following: petunia, the most brilliant blooming o
+         f all (plant the low bedding varieties for garden decoration, an
+         d the giant ruffled kinds for cutting); lobelia, that tiny low-e
+         dging plant of such blazing, glowing blue color; snapdragon, riv
+         aling petunias for constant all-year bloom, plus variety in colo
+         ring (we plant many shades of pink, flame, yellow, and crimson);
+          verbena, these soon completely cover any wide space with a gorg
+         eous, low carpet of fragrant color; stock . . . Ah me! the lovel
+         y, clean perfume of blossoming stocks; and ageratum, flower of s
+         oft blue, an exquisite peacemaker among our flower beds (plant t
+         his near the front line). All of these need an early start indoo
+         rs if you are to have them blossoming from late June and on unti
+         l snow flies.
+       7 THE requirements for indoor seed planting are few. Foremost is a
+          suitable room in which to keep the seed boxes. The ordinary, we
+         ll heated living room is too hot and dry for really good results
+         . Choose, if you can, a cooler room, one that is light and airy,
+          and where you can have plenty of ventilation. It should have at
+          least one good sunny window. You might make use of your kitchen
+          to keep the boxes when the seeds are germinating, for they can 
+         be kept in any warm room under a table out of the way at this st
+         age, but the moment the tiny things begin to push up the soil, t
+         hey must have light and air. An unheated, sunny room would be id
+         eal after they are up.
+       8 Use a wooden box four inches deep and from twelve to eighteen in
+         ches long; too much depth of soil is not conducive to healthy gr
+         owth, yet it should be deep enough to accommodate the young root
+         s.
+       9 The soil used is of the greatest of importance; you should mix t
+         his as carefully as you would your Christmas pudding. A sandy so
+         il is best, and some experts use one-third pure sand, one-third 
+         good clean dirt, and the last third, real black leaf mold or hou
+         sewives' garden compost. You may be able to purchase a small sac
+         k of soil all mixed and ready to use from some florist or nurser
+         yman, should you not have the above ingredients, and this might 
+         be the means of your real success in the venture.
+      10 A layer of broken flower pots, small pebbles, and coarse peat mo
+         ss should be placed in the bottom of the seed box, then the prep
+         ared and sifted soil is placed over this rough drainage to fill 
+         the box to within one-half inch of the top. Press the whole down
+          firmly with some board or even a paper magazine to insure no ai
+         r pockets, especially at corners and edges. Then you are ready f
+         or the sowing of seeds.
+     … +13 lines (ctrl+o to expand)
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/23_Re
+       leased.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/23_Released.txt
+      1 RELEASED Thelma Ireland Earth was held, entombed, a prisoner Of t
+        he warden, Winter King, Until wafted from her dungeon By the gent
+        le breath of Spring.
+
+⏺ Now the Lonesome House fiction, Visiting Teacher's Prayer poem, Rehabilitation
+   article, Bright Light of the Clouds, Early Spring Rain, and No Tongue Can
+  Tell.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/24_Th
+       e_Lonesome_House.txt)
+  ⎿  Wrote 24 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/24_The_Lonesome_House.txt
+       1 The Lonesome House Olive Woolley Burt GRANDMA JACKSON never did 
+         know just what made her choose a different route home on that su
+         nny, spring day. It might have been, she realized later, the inv
+         itation in the south wind that reminded her so of her birthplace
+         ; or it might have been the red and yellow tulips in the yard ne
+         xt to Let-tie's, flaunting their individuality almost insolently
+         . But whatever the cause, Grandma Jackson did not turn east at t
+         he drugstore corner as she should have done. She went west, inst
+         ead, and walked two blocks out of her way just so she could pass
+          the park, brave in its new spring dress. Having passed the park
+         , Grandma Jackson didn't even then turn toward Will's house, but
+          wandered along slowly, savoring the sweetness of spring that wa
+         s carried to her country-born senses by the soft breeze. She cam
+         e, finally, to a little side street and turned down it, just bec
+         ause it was something like a country lane, with the street unpav
+         ed, a ditch of clear water running beside the curb, and tall tre
+         es arching over the sidewalk. And it was down this little side s
+         treet, just about the middle of the block, that Grandma Jackson 
+         came upon the little house. It was an old, weather-beaten house,
+          set back from the shady street in a yard overgrown with grass a
+         nd flowers. Crocuses and daffodils, tulips and hyacinths, that a
+         nd once apparently been planted in neat borders along the walk, 
+         now sprang up everywhere in the lush grass, making the shaggy la
+         wn a veritable crazy patch of gay color. Grandma Jackson put her
+          hand on the rickety gate and looked wistfully into the yard. It
+          was so homelike, so poignantly familiar ? it looked so much the
+          way she felt-little and old and gray, but with vivid, insurgent
+          thoughts. She pushed the gate gently and it swung open, so she 
+         went down the neglected walk. The house was obviously empty. The
+          wide porch across the front sagged toward the grassy earth, but
+          Grandma Jackson didn't notice that. She was thinking what a nic
+         e porch it would be to sit on of an evening, rocking and dreamin
+         g till time to go to bed. She crossed the porch and peered in at
+          the dusty, small-paned windows. She couldn't see much except th
+         e bright squares of sunlight on the bare, wooden floor. She went
+          to the door and tried the knob gently; and, when the door yield
+         ed, she shrugged her small bent shoulders and walked resolutely 
+         in and looked around. There were two rooms. In the one which Gra
+         ndma Jackson instinctively called the living room were three win
+         dows, two facing south and one west. They'd get all the winter s
+         un there is, she thought, seeing her little rocking chair there 
+         between the two windows, a crocheted rug beneath her feet, a gra
+         y Page 167 RELIEF SOCIETY MAGAZINE?MARCH 1945 cat purring conten
+         tedly in the patch of sunlight. She went into the bedroom and si
+         ghed. It was just the right size for her old-fashioned bed and h
+         ighboy. In the little lean-to kitchen, an old rusty cook stove h
+         ad been left, and Grandma Jackson's lips curved into a tender sm
+         ile at sight of it. It was on just such a stove that she had don
+         e her first cooking for William; it was at just such a stove he 
+         had used to sit of a winter evening, his stockinged feet in the 
+         open oven. There was nothing like a coal stove for real warmth a
+         nd comfort, Grandma Jackson told herself softly. Let the young f
+         olks have their furnaces and their gas and oil?a good coal stove
+          was the thing to warm old bones by. She tried the back door, an
+         d found it, too, unlocked, so she went into the little back yard
+         , fenced in, and overgrown with currant bushes, a small strawber
+         ry patch, and grass everywhere. She heard a trickle and looked a
+         bout her and found the reason for the lush greenishness. A very 
+         tiny spring bubbled through the tangled mass at one side of the 
+         yard and ran down a choked ditch to join the ditch along the cur
+         b in the front. Grandma Jackson smiled triumphantly, as if she h
+         ad discovered a looked for treasure. That was why this street wa
+         s different from all the others. There must be several of these 
+         small springs along the block and they gave that special lovelin
+         ess to the grass and the trees. It was a long time before Grandm
+         a Jackson could tear herself away from the little house. She lov
+         ed it already, as if they two had some secret affinitv. But she 
+         knew she shouldn't stay so long. Will's wife, Clara, would be wo
+         rried. If Lettie had phoned as she usually did to see whether he
+         r mother had made the short trip from her house to her brother's
+          safely, they would all be out searching for her. They always to
+         ld her to go straight along, and here she had flagrantly ignored
+          their advice. She pulled the doors shut carefully and went slow
+         ly down the path and out of the rickety gate. She looked back fr
+         om the sidewalk, and the house peered at her lonesomely from the
+          two windows, the porch roof bent like a wistful eyebrow above t
+         hem. Grandma Jackson waved gently, to reassure the little house,
+          then squared her shoulders and turned her face purposefully tow
+         ard her son's house. She arrived before Lettie phoned, before th
+         ere was any uproar over her vagary. She went to her room and too
+         k off her hat, and hung it carefully in the crowded little close
+         t. She looked at her beloved old bed? a piece of furniture Clara
+          hated? and touched the pieced quilt gently as she passed. It wo
+         uld look just right?but she musn't think of that. Downstairs she
+          looked about for her rocker. This had grown to be an unconsciou
+         s gesture on her part, derived from the habit Clara had of movin
+         g Grandma's rocker from place to place in the room, so it wouldn
+         't wear the nap off the carpet. Grandma saw where the little cha
+         ir now stood and went to it and sat down and tried to knit, but 
+         the chair was in a dark corner, and her eyes were dim, and she w
+         as dreadfully tired, so she just sat. Will's two grandchildren, 
+         noisy and dirty, came into the living room THE LONESOME HOUSE an
+         d began to climb over Grandma and her chair. She loved the littl
+         e fellows, but their hands were sticky. If she got up and took c
+         are of them, Clara and Trudy would be offended, taking it as an 
+         insult to their own care of the children. So Grandma shrank into
+          herself as much as she could, and let the boys have their way u
+         ncomplaining. That night Grandma Jackson dreamed of the little h
+         ouse. It was furnished with her own things, and she was living i
+         n it quietly, happily. Her children and their children and grand
+         children came to see her and she was glad to have them because, 
+         in her own house, she could gently but firmly keep them in their
+          places. She awoke and lay staring into the dark, and the longin
+         g for the little gray house became so acute it was a physical ac
+         hing. But it was useless. There was no way to relieve the ache. 
+         If she had only saved a little money! But how could she, with fo
+         ur children to rear and educate? They had all had such good mind
+         s ?such great possibilities. She had scrimped and saved, and the
+         n spent freely to send them to college, to get them established 
+         in their chosen fields. She sighed and turned over and determine
+         d to sleep. What couldn't be cured must be endured, she knew fro
+         m past years of wanting and going without. But she couldn't keep
+          back the tears that squeezed under the soft wrinkled lids with 
+         their thin gray lashes; she couldn't stop the ache that tortured
+          her old, tired heart. THE next afternoon Grandma Jackson put on
+          her straw bonnet and took her knitting bag and said, almost too
+          casually, "Well, Clara, it's such a nice day, I think I?ll take
+          a little walk." Clara looked at her mother-in-law, surprised. "
+         Why don't you wait till it's cooler?" she shouted, and Grandma J
+         ackson shuddered involuntarily. Clara always yelled at her in th
+         e belief that she was deaf, and Grandma's quiet assurances to th
+         e contrary had no effect. "I'll just walk down the shady side of
+          the street," Grandma protested. "But you may get a sunstroke!" 
+         Clara fussed. "Lots of old people do, walking in the sun." "I'll
+          keep in the shade," Grandma repeated, determined not to be talk
+         ed out of her little excursion. "Well," Clara was openly doubtfu
+         l. "Don't go too far, I'll be worried till you get back. I'll be
+          watching out for you." "No, don't Clara," Grandma begged. "If I
+          get a wee bit tired, I'll stop in at Anabelle Truman's. She's b
+         een begging me to come, and I'm taking my knitting along." Grand
+         ma saw the triumphant look that leaped into Clara's eyes, and sm
+         iled secretly. Clara thought she had slyly found out where Grand
+         ma was going. She smiled sweetly at the old woman now. "Be caref
+         ul crossing the streets," she shouted, and Grandma escaped into 
+         the afternoon sun. She walked demurely enough down the street to
+         ward her old friend's house, and right on past. She turned the c
+         orner and hurried along, straight to the little side street, str
+         aight to the rickety gate halfway down the block. There Grandma 
+         Jackson stopped and waved greeting to the little lonesome house.
+          It was just as she RELIEF SOCIETY MAGAZINE?MARCH 1945 had remem
+         bered it! It hadn't been a dream. Grandma pushed open the gate a
+         nd walked up the path to the porch. She sat down on the low step
+         , took off her hat, and laid her knitting bag beside her. When G
+         randma Jackson realized she was thirsty, she remembered the litt
+         le spring, and went around the house to the back. There was noth
+         -ink to drink from, so she knelt on the grass and scooped up the
+          cold water in her wrinkled old hands and drank it lovingly, gra
+         tefully. She was suddenly young again, with young William laughi
+         ng beside her. She got up carefully and went to the back stoop a
+         nd sat there, thinking of William and of their children. Suddenl
+         y, Grandma Jackson realized that when she thought of her childre
+         n she never thought of them as they were now?grown men and women
+          with children of their own. She thought of them as babies at he
+         r breast, as little folks starting off to school, as youngsters 
+         with problems of their own they brought to her, even as laughing
+          soldiers going off to the last war?but never as middle-aged ind
+         ividuals ? never as married folk. Somehow, she had to admit to h
+         erself, they didn't seem much like her children any more. She wi
+         shed that she had been able to keep one of them, at least, hers.
+          Then she shook her head impatiently, she didn't wish any such t
+         hing. At last. Grandma got up with a sigh, went around to the fr
+         ont and, picking up her hat and knitting bag, she started home a
+         gain. That was the first of her secret visits to the little hous
+         e. As the days passed and the delight of spring grew into the re
+         ality of summer. Grandma's little afternoon walk became such a h
+         abit that Clara forgot to wonder and to ask questions. She had e
+         vidently talked it over with Will and Lettie, and they'd made up
+          their minds to let her alone in her queer vagary. All old folks
+          had some strange ways, and this was harmless. Grandma Jackson w
+         as glad for this acquiescence, and she took every advantage of t
+         heir apparent indifference. First, it was Will's pruning shears.
+          She had noticed that the currant bushes would have to be trimme
+         d back, so she slipped the shears into her knitting bag one day,
+          and when she got to the little house, she hurried around to the
+          back yard and set to work. The pruning done, the uncouth state 
+         of the strawberry bed cried aloud for correction, so the next af
+         ternoon, Grandma Jackson pulled strawberry suckers till her hand
+         s were sore and her legs trembled, and her back ached, but she w
+         as happier than she had been for years. Bit by bit, the back yar
+         d took on a more civilized air, and the bushes and vines, as if 
+         grateful for attention, sent out showers of fragrant blossoms. T
+         he old lilac tree was so burdened that Grandma picked an armful 
+         of the lovely flowers, and then, not knowing how to explain them
+          at home, she looked about for some way of keeping them here. Sh
+         e put them in an old bucket and set them inside the door, and th
+         e next day she went out of her way to go to the five-and-ten cen
+         t store to get a crock to put the blossoms in. In the store, she
+          saw a tiny teakettle THE LONESOME HOUSE 171 and she suddenly th
+         ought how nice it would be to have a cup of postum of an afterno
+         on when she had finished her work. So she bought the teakettle a
+         nd some postum and wafers. TT was by easy stages like this, that
+          Grandma Jackson moved into the empty house. At first, she sat o
+         n an old box, but one day Claude tucked a little check into his 
+         letter? a thing he frequently did?and Grandma bought a tiny seco
+         nd-hand rocker, and had it delivered, giving the man explict dir
+         ections to put it in the back yard, as she wouldn't be there 'wi
+         th her other things" for a day or two. And once the rocking chai
+         r was placed between the two windows, it would have taken more r
+         esolution than Grandma possessed to convince herself that she wa
+         s trespassing, or that she had no right to these harmless aftern
+         oons. AT home, Lettie and Will and Clara mentioned how much happ
+         ier Grandma looked. Will said, "Well, Grandma, I guess those aft
+         ernoon walks of yours are just what you need. Maybe we've kept y
+         ou too cooped up. You look better than you have in all the years
+          since father died." Nobody bothered Grandma in her little house
+         . No one ever came to the door or gave any sign of being interes
+         ted in what went on there. That is until one afternoon, when the
+          woman who lived next door, whom Grandma had sometimes seen in h
+         er little yard hanging out clothes or playing with her three chi
+         ldren, came dashing over, her hair all tumbled, her eyes frantic
+         . She pounded on the back door and Grandma Jackson opened it fea
+         rfully. Seeing the frightened creature before her, Grandma Jacks
+         on wanted to say "Come in! Tell me what's wrong!" but she couldn
+         't do that, so she stepped out onto the little porch, pulled the
+          kitchen door shut behind her, and asked, "What's the matter?" "
+         My baby!" the woman gasped. "Something has happened to her. Can'
+         t you hear her screaming? I don't know what's the matter! I can'
+         t get a doctor? someone's on the line and won't let me have it. 
+         I'm frantic?" Grandma Jackson didn't wait to hear any more. She 
+         hurried along, her little old legs taking her through a gap in t
+         he fence, past the frightened mother. Yes, she could hear the ba
+         by screaming, the particularly anguished cries that accompany se
+         vere and unidentified agony. Grandma Jackson picked the child up
+          and held her a moment, watching her carefully. Then the wrinkle
+         d, experienced fingers began to feel carefully over the little l
+         egs and body and arms. As the gentle pressure reached the child'
+         s face and ear, the screams became more piercing, and the child 
+         shrank under the soft touch. Her two little brothers, watching, 
+         frightened, began to cry. "It's her ear," Grandma Jackson said. 
+         "Has she put something in her ear?" "She couldn't!" cried the mo
+         ther, "she hasn't had anything small enough!" Grandma Jackson lo
+         oked at the two little boys, but the mother flung her arm around
+          them. "Not them, either!" she cried. "Baby was lying on her qui
+         lt in her play pen on the lawn. They couldn't have reached her."
+       2 "It's an ant then," said Grandma. "Get me some warm oil and a wa
+         rm linen rag."
+       3 While the mother was getting the materials, Grandma soothed the 
+         baby, then she laid her on her left side and very carefully pour
+         ed the warm oil into the tiny ear. She laid the warm linen again
+         st it and fanned the child over on her right side.
+       4 Gradually the sobs began to moderate, and in a very short while 
+         the exhausted baby slept against Grandma's lap, with only an occ
+         asional sob to remind them of what she had been through.
+       5 Grandma removed the linen and held it toward the mother. On it l
+         ay a black ant, drugged by the oil.
+       6 When Grandma Jackson laid the baby gently in her crib and took t
+         he small boys' hands to tiptoe with them from the room, the moth
+         er said, "I don't know how I can thank you, Mrs.?"
+       7 "Jackson," said Grandma. "Mrs. Jackson," she repeated, the phras
+         e pleasing her with its recognition of her as something besides 
+         a grandmother.
+       8 "It must have been terribly painful. Won't you have a glass of c
+         ool lemonade before you leave?"
+       9 So Grandma Jackson sat down and drank lemonade with her neighbor
+         .
+      10 "You don't know how glad I am that you're my neighbor," Mrs. Coo
+         k said, sincerely, after they had introduced themselves. "I am s
+         o dumb with the children. When anything happens I go all to piec
+         es. I'm sure I came over to welcome you before," she explained, 
+         a little ashamed that she had not met this kind old woman until 
+         necessity demanded it, "but you are there so seldom?". She hesit
+         ated and flushed, and Grandma Jackson knew that this little woma
+         n must have peered through the windows, must have seen the barre
+         n rooms.
+     … +14 lines (ctrl+o to expand)
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/25_Th
+       e_Visiting_Teachers_Prayer.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/25_The_Visiting_Teachers_Prayer.txt
+      1 THE VISITING TEACHER'S PRAYER Eva M. R. Salway Humbly, we thy han
+        dmaidens come to thee today, Praying for thy guidance, in all we 
+        do and say. Asking for a blessing on the work now to be done, Tha
+        t we may feel thy presence, as we enter in each home. Give to us 
+        thy wisdom for all problems that arise, Help us to be cheerful, a
+        nd faithful, loving, wise. Grant us thy Holy Spirit as we enter i
+        n each door. Help us bring peace and comfort, and glorify thee mo
+        re. Help us to comfort sorrow, or guide the erring feet. Encourag
+        e all that's good and brave, as we our sisters meet. Bring to us 
+        remembrance, as we our topic teach, And help us more than all of 
+        these, to practice what we preach.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/26_Re
+       habilitation_of_Disabled_Soldiers_and_Sailors.txt)
+  ⎿  Wrote 11 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/26_Rehabilitation_of_Disabled_Soldiers_and_Sailors.txt
+       1 Rehabilitation of Disabled Soldiers and Sailors Excerpts from a 
+         Report, Office of War Information THE readjustment and happiness
+          of wounded soldiers and sailors with compassionate physical dis
+         figurements or disabilities or nervous manifestations will depen
+         d in large measure on the way their families and friends and the
+          public at large behave toward them.
+       2 Thanks to modern therapy, many of the men suffering from even th
+         e severest wounds will be rehabilitated and enabled to lead live
+         s of normal activity, engaging in industry, business or professi
+         ons. But the most modern medical and psychiatric care, the fines
+         t surgery and appliance, expert rehabilitation, vocational train
+         ing and employment opportunities are far from being all that is 
+         needed by the men who have suffered disfigurements and disabilit
+         ies. The OWI passes along a number of suggestions, made by the S
+         urgeon General of the Army, concerning everyday behavior on the 
+         part of friends, family and acquaintances most calculated to les
+         sen the inevitable difficulties of adjustment of disfigured and 
+         disabled veterans.
+       3 If a formerly able-bodied man returns from combat with a disfigu
+         rement or other serious disability, he is almost certain to be e
+         motionally disturbed. In other cases the wound he brings back ma
+         y be mental.
+       4 In case after case, maimed young men have been freed from their 
+         black thoughts and bitterness, and have had their self-confidenc
+         e restored, by the professional?expert and difficult?rehabilitat
+         ion treatment they have received, as soon as possible after inju
+         ry, in Army and Navy hospitals and in the hospitals of the Veter
+         ans' Administration. Disabled merchant seamen are cared for in U
+         nited States Public Health Service Marine Hospitals.
+       5 In all these institutions, the restoration of self-confidence, a
+         s an aid in the restoration of physical health, is the immediate
+          aim of doctors, nurses, and other personnel.
+       6 Details of accomplishments in the field of physical rehabilitati
+         on are becoming increasingly familiar to American readers of new
+         spapers and magazines. Injured muscles are brought back into pla
+         y, new or unused muscles are trained. When necessary, efficient 
+         surgical appliances are carefully fitted to replace amputated ha
+         nds, feet or limbs.
+       7 Nervous disabilities resulting from combat experience are treate
+         d with equal care. In some cases prolonged psychiatric treatment
+          is necessary; occupational therapy cures others rapidly.
+       8 When he has recovered his physical or psychic health and is disc
+         harged from the Army or Navy hospital, the serviceman in need of
+          vocational training is eligible to receive it from the Veterans
+         ' Administration if he has suffered a ten percent or greater dis
+         ability, resulting in a vocational handicap, while in service.
+       9 Page 176 REHABILITATION OF DISABLED SOLDIERS AND SAILORS 177 If 
+         not, the same training is open to him through the Vocational Reh
+         abihtation Division of the United States Office of Education. Vo
+         cational training in the Veterans* Administration and other inst
+         itutions is directed toward preparing the wounded man not only t
+         o fill a job in which his wound will not be a handicap, but to d
+         o important work which he will enjoy and for which he is tempera
+         mentally suited. In all cases, even those capable only of self-e
+         mployment at home, the goal is useful, functional, independent l
+         iving?not dependent, permanent residence in hospitals. After voc
+         ational training comes employment, and here many agencies are wo
+         rking for the wounded serviceman. In summary, Americans can rest
+          assured that their wounded soldiers and sailors are being given
+          the most modem medical and psychiatric care, the finest surgery
+          and appliances, expert rehabilitation, vocational training and 
+         finally employment opportunities that confirm their hard-won fee
+         lings of independence. All these things are being provided, and 
+         provided by persons and organizations expert in their field, pro
+         fessionally equipped to further the welfare of wounded ex-servic
+         emen. BUT the American people?the families, friends and acquaint
+         ances of the disabled and disfigured men, and the public at larg
+         e?have a responsibility in the matter, too. It is up to them to 
+         further the men's progress during rehabilitation by considerate 
+         and cooperative behavior. Men who are working hard to acquire ne
+         w self-confidence, or who have acquired it, must not be jolted o
+         ut of it by thoughtless, uncontrolled manifestations of pity or 
+         horror or distaste or false cheeriness or too-eager curiosity or
+          other emotionalism. For the purpose of increasing public awaren
+         ess of some of the problems faced by disabled and disfigured men
+          in their search for rehabilitation and normal living, and for t
+         he purpose of indicating to what extent public cooperation can b
+         e of benefit, the Surgeon General of the Army has set forth a se
+         ries of guide-posts not only for the families and friends of suc
+         h men, but for all who may come in contact vdth them. The sugges
+         tions are intended especially for the period of rehabilitation i
+         n hospitals or vocational training centers, but they also hold g
+         ood for later, after the wounded men's return to civilian life: 
+         1. Treat the maimed person as the normal person he always has be
+         en and continues to be. Disfigurement does not make him into a d
+         ifferent person, though it may well result in his growing to be 
+         a bigger one. If you are disturbed by the disfigurement, discipl
+         ine yourself so that your disturbance is not apparent. It is up 
+         to you to make him realize-without talking about it?that you fee
+         l about him exactly as always, and that his disfigurement is uni
+         mportant compared with your affection or friendship. The only di
+         fference could be an even increased respect for him. There is mu
+         ch to be gained from contact with a person who has suffered a ha
+         ndicap and overcome it. Such a person often gains extraordinary 
+         largeness of character from his RELIEF SOCIETY MAGAZINE?MARCH 19
+         45 fight and his success; and those around him, in turn, gain fr
+         om his example. Treating disabled men as normal people is partic
+         ularly important in cases of mental disability. Often, in cases 
+         of this kind, the average person retains ancient prejudices, and
+          approaches a patient either with distaste or as though he were 
+         a child or a fool. It should be kept in mind that vast strides h
+         ave been made in recent years in the treatment and rehabilitatio
+         n of the mentally and nervously afflicted. They are simply ill?a
+         nd their illnesses are usually curable. It should be emphasized 
+         also that excessive praise of a disabled man because of his disa
+         bility is not helpful. 2. Don't ask questions or give advice. Th
+         e man who has been disabled or disfigured may want to talk about
+          himself or he may not. Respect his wishes. Do not mention the d
+         isfigurement unless he does. If he does not want to talk about h
+         imself, talk about things he is interested in, or about objects 
+         in the room, or hobbies, or details of common interest. Don't ta
+         lk about the war or about subjects related to his injury. Don't 
+         pry or hint. The best answer to give a wounded man who asks you 
+         "Am I going to be good for anything?" is "If you want to be good
+          for something, determination helps." If you are related to a wo
+         unded or disfigured man, make it your business to know about the
+          rehabilitation and accomplishments of persons as badly handicap
+         ped as he is, or more so, and be able to tell him about them ?no
+         t in a preachy way, but factually. Let him see that you know abo
+         ut them and that you assume he will take full advantage of his o
+         pportunities. 3. Be casual and lealistic?not over cheery. The ma
+         n you are visiting may feel depressed. It is his right to feel s
+         o. It is an offense to his dignity and his common sense to go in
+         to a routine of transparent "cheeriness." The express intent of 
+         cheering up is seldom convincing or effective. Nor is it usually
+          convincing or beneficial to try to minimize the crippling effec
+         t of maiming. By facing the reality ofc a man's disability yours
+         elf, you can help him face it. Personal anxieties and problems o
+         f all kinds lose their capacity to frighten if they are brought 
+         out into the open, squarely faced and talked about. A disfigured
+          man who finds his friends acting naturally and casually about h
+         is disfigurement will more easily avoid being the kind of person
+          who goes through life shrinking if a child asks, ''What's the m
+         atter with that man?" If a person has one leg, it is better to a
+         dmit that fact and not try to conceal it. If one is deaf, the he
+         aring aid should be worn openly, not treated as an embarrassing 
+         detail. A hearing aid or an artificial leg is just that and noth
+         ing more. The only difference it makes is that one hears or walk
+         s better with it than without it. 4. Don't wait on the injured m
+         an too much. Even though a disabled soldier or sailor be surroun
+         ded with sympathy, waited on hand and foot by nurses and given c
+         ountless attentions, he may still despair. He may still view him
+         self as a martyr-an attitude REHABILITATION OF DISABLED SOLDIERS
+          AND SAILORS 179 which brings little happiness to him and no ben
+         efit to anybody else. If his faith in his ability to do things i
+         s restored the rest of the treatment is easy.
+      10 If there is something the patient can do for you, let him do it.
+          Help-
+     … +1 line (ctrl+o to expand)
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/27_Th
+       e_Bright_Light_of_the_Clouds.txt)
+  ⎿  Wrote 7 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/27_The_Bright_Light_of_the_Clouds.txt
+      1 The Bright Light of the Clouds
+      2 Alice Whitson Norton
+      3 "Men see not the bright light which is in the clouds"?Job 37:21.
+      4 HOW desolate, how colorless, how unattractive the world would be 
+        without its blue canopy! To the beauty of the seeing eye, it is G
+        od's moving picture screen, constantly changing, constantly thril
+        ling the human heart with its beauty.
+      5 Take the dawn of the morning?did you ever watch it break across t
+        he eastern horizon?the glory of the stars, as the sun's bright ra
+        ys dissolve them?the blueness of the sky against the mistiness of
+         dew? All these are beautiful to the nature-loving eye of man. Bu
+        t it is the glow of sunset, the tinted clouds, the magic rivers, 
+        lakes and mountains that are formed from them just at the close o
+        f the day, that leave one speechless with awe and wonder.
+      6 A sunset view, like that from my garden, recently brought to my m
+        ind the quotation of Job?Job whose body was tormented with diseas
+        e, who alone and lonesome?who never lost faith in God nor lost si
+        ght of the bright light of the clouds to which so many were blind
+        .
+      7 Let us keep our eyes upon the bright lights of the clouds; they w
+        ill give us the courage to struggle on when despair grips our sou
+        ls; they will give us a new interest in beauty when the beauty of
+         the world seems clouded against us; they point to God?a silent, 
+        steadfast witness?and rarely can one look upon the bright, light 
+        clouds and fail to feel the nearness of the Creator. Let us keep 
+        our eyes turned towards the beautiful things of life and not be a
+        s Job says, men who see not the bright light of the clouds.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/28_Ea
+       rly_Spring_Rain.txt)
+  ⎿  Wrote 3 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/28_Early_Spring_Rain.txt
+      1 EARLY SPRING RAIN
+      2 Ora Lee Parthesius
+      3 The sky is soft as a dove's gray wing, And through the silvered p
+        attering Steals fragrance. Is it mignonette Or lilacs worn by som
+        e coquette? . . . Yes, winter's flirting with the spring!
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/29_No
+       _Tongue_Can_Tell.txt)
+  ⎿  Wrote 18 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/
+     March_extracts/29_No_Tongue_Can_Tell.txt
+       1 No Tongue Can Tell Marguerite J. Griffin "OUT there we talk of d
+         eath quite calmly," said a young sailor, home on leave after see
+         ing action in the South Pacific. "We talk over what has happened
+          to this one and that one of our friends. We never spare the det
+         ails. We talk of death quite as matter-of-factly, as if we were 
+         discussing a newspaper item. We might as well. It's all around u
+         s out there, and we know it. I've seen more things than I can te
+         ll you."
+       2 He was much changed, this young man, from what he had been when 
+         he had gone away. Two years older? Yes, but more than that. His 
+         ordinarily fair-skinned face was bronzed from the rigors of sea 
+         life. But there were shadows across his brow, faint ones easily 
+         removed by his ready smile, but still lurking there in moments o
+         f repose. There was a firm new purpose to his jaw, as though, wh
+         atever his naval rank, he was master of himself no matter what t
+         he days might bring. And all this change because he had seen mor
+         e things than tongue can tell. Physical suffering he had seen be
+         cause he served with the medical corps. Death he had seen. Men d
+         ying before his very eyes. Men dying without a whimper, without 
+         a complaint.
+       3 "After one bombing we went about on deck helping the wounded. Th
+         ey were lying all about. I saw a fellow who had been my best fri
+         end lying over his gun. I thought he was dead, but when I came u
+         p to him he recognized me and he said: 'Do not move me for the o
+         thers are
+       4 about done for.' But I had to do something for him. He was my fr
+         iend. He died an instant later in my arms, and then I was glad, 
+         seeing his condition. This is something I will never forget as l
+         ong as I live. Yes. Death is something we talk about quite openl
+         y. It's there and you have to face it."
+       5 That was the thing that made this boy different from what he had
+          been before. He had been face to face with death. He knew he wo
+         uld go back to face it again, but in the meantime he would serve
+          as best he could and smile all the while. While life lasted the
+         re were things to do for the living and last respects to the dea
+         d. Time enough to worry about danger when it struck. Two years a
+         go he had been a young, care-free boy. Today he is a man, brave,
+          master of himself and his emotions. And what has wrought the ch
+         ange? One thing. His ability to face reality, look it squarely i
+         n the eye, and spend his strength getting the most possible joy 
+         out of the real things of life, people, places, and comradeship.
+       6 What are you doing, mothers of these boys who have become men ov
+         ernight, who have seen more things than tongue can tell? What ar
+         e you doing to change your own souls that would like to cringe a
+         nd shrink into citadels strong and sure? What am I doing to prep
+         are myself against the day when my sons must go forth to face th
+         e pains of life and death upon their own? How do we mean to face
+          the problems of our own
+       7 lives courageously? We believe we could endure the dangers our s
+         ons face more easily than to know that they, in whose veins flow
+          our own blood, must suffer, endure, and perchance die. But if o
+         ur task is great, we must be greater.
+       8 I have seen mothers become whimpering old women, old long before
+          their time, after their sons had sailed away to front-line acti
+         on. I have seen them become helpless neurotics who can't stand t
+         o hear a news broadcast, who can't bear to read a paper. If it w
+         ere helping these boys, then it would have purpose. But worry, a
+         nxiety cannot reach out and stop the bombs from falling. Instead
+         , they twine like tentacles about the one who conceived them, cr
+         ushing from her all the breath of life, like an octopus with its
+          overpowering grip.
+       9 Again I have seen mothers, with heads erect, lock their secret h
+         eartaches into a dark corner of their beings, and valiantly go f
+         orth to take their parts in the many duties of life at home. Why
+          the difference? Why does one cringe and one remain indomitable.
+          The reason is simple, depending upon whether you fight with lif
+         e or against it, whether you look the whole thing squarely in th
+         e face like the young seaman. It is whether you, too, know that 
+         death is there and will admit it, or whether you are trying to a
+         void it, to fight your own small futile fight, you know. Since A
+         dam, men who have lived upon this earth have died. In that one t
+         hing all humanity are brothers. You know that each man must die,
+          but don't push the knowledge back into a far corner of your hea
+         rt and refuse to face it. Well, bring it out into the
+      10 light and let the sun shine upon it for awhile. You are going to
+          die. Your son is going to die. No matter how you live, or griev
+         e, or worry, you cannot change this fact. War doesn't make much 
+         difference then. It only makes you more aware that death stalks 
+         the earth.
+     … +8 lines (ctrl+o to expand)
+
+⏺ Now the Snowballs poem, Work Meeting, Notes from the Field, and The Shape of
+  Peace.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/30_Th
+       e_Snowballs.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/30_The_Snowballs.txt
+      1 THE SNOWBALLS Olive Rose Helton A bit of gleaming white, A breath
+         of sweet perfume, A tiny snow-white bud, And then a large full b
+        loom. Now sparkling in the sunlight, Now shadowed by the trees; N
+        o lovelier flower in springtime, Than snowballs in the breeze.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/31_Wo
+       rk_Meeting_Utility_Aprons.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/31_Work_Meeting_Utility_Aprons.txt
+      1 Work Meeting UTILITY APRONS IN most present-day households the ho
+        memaker finds it necessary not only to do her own housework, but 
+        to learn how to conserve her energy so she can accomplish all the
+         tasks she desires to do. These aprons are practical in any kind 
+        of household but they are invaluable in homes where there are bus
+        y mothers and small children. The large pockets become convenient
+         "catch-alls" for numerous articles which become misplaced. If th
+        e pockets are lined with oiled silk or a plasticized material the
+        y can also be used to carry a damp cloth for wiping off stray fin
+        germarks, a cloth for furniture polishing, a whisk broom, etc. Su
+        ch utility articles might be made on a Relief Society Work Meetin
+        g in the spring or for a coming bazaar. The apron (Illus. I) is v
+        ery easily made using 3/5 yd. Of material 27" wide for the apron 
+        proper, and 8" of contrasting material for the pockets. The apron
+         is most effective using a light color for the background and a v
+        ery dark color for the pockets. The apron (Illus. 2) can be made 
+        in medium size using 21/8 yds. Of 35" material. If a head bandana
+         is made of the same material, a very smart effect is achieved in
+         this utility costume. The apron ties and is also buttoned down t
+        he back. The large pockets end a little beyond the side seams. Th
+        is apron is unusually effective if a bright gay, solid color is u
+        sed. Bias tape in a contrasting color makes an easy finish to use
+         for binding. TIE APRON BUTTONED APRON
+
+⏺ Now the big Notes from the Field section (one extract as requested) and The
+  Shape of Peace poem.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/32_No
+       tes_from_the_Field.txt)
+  ⎿  Wrote 6 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/32_Notes_from_the_Field.txt
+      1 NOTES FROM THE FIELD Vera White Pohlman, General Secretary-Treasu
+        rer Regulations governing the submittal of material for "Notes fr
+        om the Field" appear in the Magazine for February 1944, page 104.
+         MESSAGES FROM THE MISSIONS (Continued from February Magazine) Ea
+        st Central States Mission THE following reports from four of the 
+        branches of this mission were received during 1944. Their Mission
+         Relief Society President, Leone W. Doxey, submitted all but one.
+         "In the country district of Gretna, Virginia," wrote Sister Doxe
+        y, "we have a Relief Society with sixteen members, thirteen of wh
+        om are not members of the Church. "The meetings of tlie Gretna Re
+        lief Society are held Tuesday afternoons in the home of Sister Ma
+        ria Rowland, 'Granny,' as she is lovingly called by all who know 
+        her. The home is a fine old Virginia farmhouse that had been the 
+        home of her husband's father and mother. Granny moved into it as 
+        a bride. She is now nearly eighty years old and has been a member
+         of the Church for more than forty years. She teaches the theolog
+        y lessons in Relief Society and is an inspiration to everyone the
+        re." Mrs. L. H. Snow, president of the Chadottesville (Virginia) 
+        Relief Society, wrote July 20, 1944: "In and around this city and
+         also other big towns, we see many beautiful little country churc
+        hes closed for lack of preachers. Women from Page 184 some of the
+        se churches are joining the Relief Society and are glad to get so
+        mething to do. I wish you could see our women working, making rug
+        s, quilts, et cetera. The people in the country want to piece qui
+        lts so Iam taking them the material. I am also taking them sample
+        s of a miniature redchecked apron and a tiny pair of blue and whi
+        te striped overalls, to help in the collection of contributions t
+        o the building fund. A note in the apron pocket has space for fil
+        ling in the woman's name and her waist measurement, and carries t
+        he suggestion, "A penny for every inch." A similar note in the ov
+        erall pocket suggests that the men pledge either work on the chap
+        el or a cash donation. We also have one member in Hampton, and sh
+        e is making something for the bazaar in October. Some members up 
+        in the Blue Ridge near Standardsville are making quilts?one woman
+         gave the top, filling, and bottom for a quilt last night. This p
+        roject is getting every one doing something, and in that way they
+         learn what we stand for and what we are doing in trying to teach
+         the gospel. The people are hungry for the gospel and for friends
+        ." Sister Doxey reports an unusual Relief Society meeting held at
+         Fairmont, Virginia, which came to her attention through Sister C
+        rozier Kimball, a short-term missionary. NOTES FROM THE FIELD 185
+         RELIEF SOCIETY OF HARKERS ISLAND (NORTH CAROLINA), EAST CENTRAL 
+        STATES MISSION Picture submitted March 1944 by M. LA. President R
+        aymond Guthrie who stated: This Society was organized in 1923 und
+        er adverse circumstances and almost unbearable persecution. Altho
+        ugh at that time the membership was very small it has since grown
+        , through the faith and charity exercised by the sisters, to the 
+        present membership of 30. Left to right, front row: Virgie Lewis,
+         Annie B. Guthrie, Annie Rose, Annie Lee Lawrence, Edith Willis (
+        Secretary), Gertie Willis (1st Counselor), Letha Lewis (President
+        ), Blanch Willis (2d Counselor), Lillian Davis (teacher), Belva G
+        illikin, Mamie Hamilton, Clara Willis and Edith A. Willis; second
+         row: Nettie Brooks, Naomi Guthrie, Flora Belle Willis, Hannah Gu
+        thrie; third row: Glennie Guthrie, Mattie Whitley, Bessie Hancock
+        , Nannie Willis and Hattie Rose. "Sister May Sloter, Relief Socie
+        ty president in Fairmont, had announced on Sunday that the work m
+        eeting would be held the following Wednesday afternoon. The time 
+        arrived for the appointed meeting and no one came but the preside
+        nt. She felt discouraged and somewhat upset, but she had said the
+        re would be Relief Society meeting so she conducted one. She anno
+        unced the song and sang it, opened the meeting with prayer, sang 
+        again and then sat down and quilted for an hour. At the end of th
+        e hour she sang another song and dismissed the meeting with praye
+        r. She put her work away and returned to her home with joy and sa
+        tisfaction in her heart. Sister Sloter is loved and respected by 
+        the members of the Fairmont Branch and though the membership is s
+        mall, after this example of faithfulness, all who possibly can no
+        w attend the meetings." Northern California Mission MARY SMITH EL
+        LSWORTH, recently released president of Relief Societies of the N
+        orthern California Mission, wrote last June: "During the year thu
+        s far I have visited in every district with President Ellsworth. 
+        The most outstanding thing I find is the increased spirit of unit
+        y and cooperation and love among all our sisters. Our Relief Soci
+        ety meetings are held in most branches immediately following Sund
+        ay School; while the men Attend Priesthood meeting, the Relief So
+        ciety and Primary convene. RELIEF SOCIETY MAGAZINE?MARCH 1945 REL
+        IEF SOCIETY MEMBERS. THEIR HUSBANDS AND FRIENDS, TOYON BRANCH, NO
+        RTHERN CALIFORNIA MISSION at the party at Toyon Community House, 
+        March 17, 1944 commemorating the 102d anniversary of the organiza
+        tion of the Relief Society. Inset shows presidency with birthday 
+        cake, with President Lorena Humphries in center, and Counselors M
+        ary K. Hirst and Mabel Kloss, left and right, respectively. Trans
+        portation facilities are more available on Sunday, especially in 
+        our outlying districts and where many of our people are engaged i
+        n war work. "It is the earnest desire of President Ellsworth to e
+        stablish a suitable place of meeting for every branch in this mis
+        sion, and in this the sisters are doing their full part. This yea
+        r two chapels have been dedicated and property has been purchased
+         in eight branches. The sisters have given dinners not only for t
+        heir own members, but, in several instances, have served for vari
+        ous clubs and groups who have paid them well. They have held rumm
+        age sales to dispose of clothes collected from neighbors and frie
+        nds as well as our own members. Prior to the sales, these article
+        s are washed or cleaned and mended; they bring in a very good pri
+        ce and help those who need them. High-type character balls and pa
+        rties which included wholesome and amusing games have placed the 
+        sisters in touch with many, thus affording opportunity to teach t
+        he gospel by example as well as precept. "We have in the mission,
+         now, 260 local missionaries, many of them our Relief Society sis
+        ters. We feel thankful for this, for our younger mothers are gain
+        ing experience and knowledge that will qualify them to teach thei
+        r children the gospel. We appreciate the excellent lessons given 
+        us by the General Board. They breathe the pure spirit of the gosp
+        el, impel us to action, and help to qualify us for real missionar
+        y work." Anna Duckett, secretary-treasurer of the Toyon (Redding,
+         California) Branch Relief Society submitted last July the accomp
+        anying pictures and the following article by Eva S. Richards, a m
+        ember: They Are Still Pioneers NOTES FROM THE FIELD 187 RELIEF SO
+        CIETY SINGING MOTHERS OF SAVANNAH BRANCH (GEORGIA), SOUTHERN STAT
+        ES MISSION Mission Relief Society President Effie Meeks says this
+         is a splendid singing group which is a factor in maintaining int
+        erest in Relief Society work there. "In the shadow of snow-capped
+         Mt. Shasta lies a minute branch of the Church?the Toyon Branch. 
+        It is situated on the hills and bluffs overlooking the Sacramento
+         River and Shasta Dam, the world's second largest concrete struct
+        ure. "The construction of this dam has brought people from all ov
+        er the world, both as workers and visitors, and so the Toyon Bran
+        ch is very cosmopolitan with representation from Canada, Australi
+        a, Germany, England, Sweden, Holland, as well as most of the stat
+        es, from coast to coast. "The dam is fifteen miles from the neare
+        st California town of any size, and its construction brought five
+         or six thousand persons, some of them Mormons, into a wilderness
+         of red clay, turpentine pines, manzanita, and poison oak. "Some 
+        of those who came early in the construction period spent that fir
+        st miserable winter (three months of constant rain) in canvas ten
+        ts; but spring comes early in this part of California and by Apri
+        l 1938, homes were started. Poison oak brush was plentiful and ha
+        d to be cleared; even smoke from its burning carried contaminatio
+        n. Most of the work of clearing was done by women and children, f
+        or the work shifts on the dam changed every two weeks for some, w
+        hile others worked a constant shift of day, swing or graveyard. "
+        The homes usually had their beginning as one-room affairs, but as
+         the men earned steadily, the homes grew. Wells were dug in very 
+        unpromising terrain, with accidents, and even casualties, a commo
+        n occurrence. RELIEF SOCIETY MAGAZINE?MARCH 1945 MEMBERS OF THE N
+        EWLY ORGANIZED RELIEF SOCIETY AT PLYMOUTH. MASSACHUSETTS standing
+         in front of the National Monument to the Forefathers which overl
+        ooks the bay. Left to right: Kate Burgesis, Marjorie Pickett, Eld
+        er Harold Dance, Estella Hutchins, and Elizabeth Pickett, Relief 
+        Society president. The other members unable to be present when pi
+        cture was taken are Cora E. Bartlett and Cora Ann Glass. Delightf
+        ul homes with electricity and modern conveniences are seen in the
+         once-wilderness. And now, six years later, "The women worked lon
+        g and hard to build these homes even though they knew they were t
+        o live there but a few years. Some of the women were sickly, some
+         were old, some were having children, but they all had the desire
+         for a home of their own. One family took the red clay, formed it
+         into bricks, and, in one year, built for themselves a spacious s
+        ix-room home that is now one of the social centers of the branch.
+         "Gardens were made in the red clay by the women and children who
+         carried fertilizer and sand from the river banks. Much to everyo
+        ne's amazement, the gardens produced. The daughters of the pionee
+        rs are still helping to make a garden spot in the West, and are s
+        eeing that their children are raised in the culture of home and C
+        hurch. "The Toyon Branch covers ten square miles. All of the visi
+        ting teachers are women who have families of small children, but 
+        their work has been done efficiently and on time. The loid annive
+        rsary of the organization of the Relief Society was observed Marc
+        h 17 by the Toyon Branch? Crystal candles, wild ferns, redbud and
+         forsythia decorated the community house and an unforgettable pro
+        gram was presented. The war and the closing scenes at Shasta Dam 
+        are now sending this group on again to new fields, to new homes. 
+        They will carry their spirit of love and endeavor into new commun
+        ities that have never heard of Mormons or witnessed their industr
+        y. "Good luck to you all and Godspeed?modern pioneer women." New 
+        England Mission ELDER FOLEY C. RICHARDS was auxiliary supervisor 
+        for the mission at the time he submitted the following account, l
+        ast August: "Again the Relief Society plays the pioneer role in N
+        ew England, this time in the 'Pilgrim Town,' Plymouth, Massachuse
+        tts, where America's forefathers settled three hundred and twenty
+        -four years ago. "On May 23, 1944, a Relief Society was organized
+         there?the first organization of the Church of Jesus Christ of La
+        tter-day Saints to be established in Plymouth. Under the directio
+        n of President William H. Reeder, Jr., Bertha S. Reeder, mission 
+        Relief Society president, and Elder Ted L. Miller, district presi
+        dent, this Society was organized with six members. NOTES FROM THE
+         FIELD 189 FOUR RELIEF SOCIETIES OF THE WESTERN STATES MISSION (P
+        ictures submitted by Luceal R. Curtis, recently released presiden
+        t of the Relief Societies of this mission.) Top row, left to righ
+        t: Relief Society at Salida, Colorado; Relief Society at Fruita, 
+        Colorado, observes the 102d anniversary. Bottom row, left to righ
+        t: Belle Fourche (South Dakota) Branch also celebrates 102d anniv
+        ersary of Relief Society; Relief Society at Grand Junction, Color
+        ado. Three of these were Latter-day Saints at the time; one has s
+        ubsequently been baptized, and the other two are earnest investig
+        ators of the gospel. All are the fruits of recent missionary labo
+        r. 'These good sisters are enthusiastically meeting together each
+         week, and the future of their group is promising indeed. Each ha
+        s had to face the usual criticism which attends one who is willin
+        g to subscribe to 'Mormon' beliefs, and the Church can be justly 
+        proud of them for their Pilgrim spirit of loyalty to their convic
+        tions and for their service which makes possible this Latter-day 
+        Saint organization in New England's oldest town." Lola Humphreys,
+         writing in the fall of 1944 as auxiliary supervisor, reported th
+        e successful Relief Society convention held September 2', at Camb
+        ridge, Massachusetts (the mission headquarters) for Relief Societ
+        y officers. She continues: 'The careful planning which took place
+         several weeks in advance, contributed greatly to the success of 
+        the conference which was very well attended by approximately 75 R
+        elief Society officers. "During the forenoon session, a detailed 
+        and instructive outline of the duties of the officers was given b
+        y Mission Relief Society President Bertha S. Reeder. The remainin
+        g time was spent in the bearing of testimonies. At noon, a delici
+        ous buffet luncheon was served in one of the rooms of the Cambrid
+        ge chapel from a table very attractively arranged with candles an
+        d flowers. In the afternoon, several talks were given in the home
+        s of different Relief Society branches, and the Singing Mothers o
+        f Hartford, Connecticut, offered three beautiful numbers, at inte
+        rvals.
+      2 "The enthusiasm and zeal with which Sister Reeder discussed the p
+        roblems and with which she delivered her remarks were transferred
+         to every one present. In spite of the fact that some of the memb
+        ers had had travel much more capable of carrying home the day bef
+        ore, they all felt much more capable of carrying on their duties 
+        after the convention."
+      3 A comprehensive mimeographed bulletin was distributed, carrying a
+         concise and explicit digest of duties of officers and of new ins
+        tructions, and also a narrative history of the several local Reli
+        ef Societies in the mission for 1943-44, indicating the problems,
+         activities, and accomplishments of each.
+      4 Hawaiian Mission
+      5 OLIVIA S. Waddoups, former Relief Society president of this missi
+        on, wrote in March 1944: "Brother Waddoups is superintendent of t
+        he Leper-asylum here at Kalaupapa. We find a wide field for servi
+        ce to these people who, though entirely confined for life within 
+        this area of about 12 square miles, are very happy, cheerful, and
+         contented. They are also very war conscious, buying bonds and st
+        amps to the extent of three times their quota. They are well take
+        n care of by the Territory. We have a very modern hospital, two c
+        apable doctors whose wives are nurses in the hospital, five other
+         nurses; 12 Catholic Sisters who manage the hospital, five other 
+        nuns; two Catholic priests; one Congregational minister, his wife
+         and three members of his family; the plantation manager and plan
+        ter; and the general manager for the United States Public Health 
+        Service; the Bishop of the Roman Catholic Church; four Brothers w
+        ho are in charge of the Leper Home for Men; the Catholic, with Re
+        verend Alice, a real Hawaiian lady, to look after her congregatio
+        n; and our L.D.S. Church. The Elders visit us monthly, and we hav
+        e a patient here who is the Presiding Elder. We have the smallest
+         congregation but our members are very active and interested.
+      6 "The Relief Society sisters who are well enough to get out are ve
+        ry active. Last Sunday we held an anniversary meeting commemorati
+        ng March 17. We all came dressed in white; there were 9 of us, an
+        d 12 young girls and 16 of the Priesthood. I am sure this was the
+         most unique anniversary meeting in the Church. All but two of us
+         are victims of the disease?myself and Sister Kalahau, a very lit
+        tle one, but we try to keep who is blind but who leads the group 
+        in their singing. In the group that furnished the singing there w
+        ere four blind, two on crutches, and others who needed help to ge
+        t around. But they sang beautifully, and bore testimony that the 
+        Lord was good, and kind, and that they were very grateful for the
+         Relief Society organization.
+
+⏺ Now let me check if "The Shape of Peace" poem has actual content in the source
+   file. It was listed in the TOC at page 191 but I didn't see its text in my
+  reads. Let me check the very end of the file.
+
+⏺ Read 1 file (ctrl+o to expand)
+
+⏺ There it is — The Shape of Peace is at the very end, embedded in line 221
+  along with the conclusion of the Hawaiian Mission report and advertisements.
+  Let me write the remaining pieces.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/33_Th
+       e_Shape_of_Peace.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/33_The_Shape_of_Peace.txt
+      1 The Shape of Peace Eva Willes Wangsgaard I God of all men and nat
+        ions, Light in Light, I, who am spent with fear and sorrowing, As
+        k for a ray to follow through this night Darkened by earthen gods
+         to which men cling. There have been other years when I have seen
+         Your star go down like ice from winter's bough, But never has my
+         heart been caught between, And never was it torn as it is now. S
+        o soon we shall be called upon to stem The tides of war and plan 
+        for peace to be! That words once lifted over Bethlehem Take defin
+        ite shape and purpose, we agree; But when the board of diplomats 
+        convenes, What shall our blueprint be? And what our means? II The
+         concept of a structure strong enough To hold all men in concord 
+        that will last. To bind great powers, long inured to bluff. Into 
+        a kindred whole, is a plan so vast As to exceed the limits of the
+         brain. This is a vision only dreamers see, A pact no sage has ev
+        er hoped to gain In any form of practicality. We have no preceden
+        t on which to build. It well may be that such a scheme may fail-S
+        o great the distance from the grandeur willed To grandeur sculptu
+        red to a working scale! Yet build we must?another holocaust As ma
+        d as this, and man himself is lost. Page 191 III We know you taug
+        ht us that the structure stands Imbedded in the individual heart,
+         That other temples are but built on sands, The prey of time and 
+        wind they fall apart; But words wear thin; their meanings sleep u
+        nknown. Unless the heart is willing to concede The world's shortc
+        omings are also its own, No superstructure can fulfill our need. 
+        We lack your love immeasurable within; We need your faith in one 
+        eternal will For all mankind, before we can begin To plan that te
+        mpests lie forever still. Bless those who plan for us. Let them b
+        e wise. To shape world peace with brave, world-visioned eyes.
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/34_No
+       tes_from_the_Field_Continued.txt)
+  ⎿  Wrote 2 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/34_Notes_from_the_Field_Continued.txt
+      1 "All in all, we have a little world, a very little one, but we tr
+        y to keep happy, busy and helpful. We take every precaution possi
+        ble. We have several people here who have been here over 40 and o
+        ne 53 years, working with the patients in every way, in the hospi
+        tal, dressing their wounds, bathing them, and giving (Continued o
+        n page 192)
+      2 Notes from the Field {Continued from page 190) as they wish, and 
+        we enjoy, them, every detail of care, and they are We have a nice
+         yard, where patients free from the disease, and have no never en
+        ter, and we have one of the desire to leave for other work. We mo
+        st beautiful coastlines in the can have our friends visit us as o
+        ften islands, but no ocean bathing."
+
+⏺ Write(cleaned-data/relief-society/txtvolumesbymonth/Vol32/March_extracts/35_Ba
+       ck_Matter_and_Advertisements.txt)
+  ⎿  Wrote 1 lines to cleaned-data/relief-society/txtvolumesbymonth/Vol32/M
+     arch_extracts/35_Back_Matter_and_Advertisements.txt
+      1 It is a token of healthy and gentle characteristics when women of
+         high thoughts and accomplishments love to sew; especially as the
+        y are never more at home with their own hearts than while so occu
+        pied. ?Nathaniel Hawthorne Before You Buy a Bible, Be Sure It is 
+        the Beloved King James Version It is the authorized version best 
+        known, most loved... A Book of beauty and inspiration. National B
+        ibles SINCE 1863... AT YOUR BOOKSTORE MUSIC FOR ALL OCCASIONS EAS
+        TER time brings wonderful musical selections for Organ and Piano 
+        solos, cantatas, mixed choir numbers, etc., which are available f
+        or Church use. We invite your requests and offer the services of 
+        our trained staff to assist you in making appropriate selections.
+         We specialize in L. D. S. Church music. Write to us for suggesti
+        ons and material available. Dealers in Steinway and Lester pianos
+        , band and orchestra instruments, talking machines, records and m
+        usicians' supplies. DAYNES MUSIC CO. We Solicit Your Patronage 47
+         South Main Salt Lake City i Good News For Bible Students! We can
+         now supply these excellent helps: The Graphic Bible by Lewis Bro
+        wn $1.50 Cruden's Bible Concordance $2.50 Dummelow's One Volume C
+        ommentary - $3.00 Smith's Bible Dictionary -. - $2.00 Irwin's Bib
+        le Commentary $2.50 Hurlbut's Bible Atlas $3.50 Historical Atlas 
+        of the Holy Land $1.00 Treasures from the Bible $2.50 A Visit to 
+        the Holy Land by Thomas E. Romney $2.50 and BIBLES, a good stock 
+        at last at prices $1.50, $3.00, $4.00. $4.50, $5.00, $6.00, $8.00
+         and $10.00 Our incomparable L. D. S. Missionary Bible with Ready
+         References $8.00 DESERET BOOK COMPANY 44 East South Temple Stree
+        t PO. Box 958 Sah Lake City 10, Utah "THE BOOK CENTER OF THE INTE
+        RMOUNTAIN WEST" When Buying Mention Relief Society Magazine joy I
+        NSTEAD OF WANT THE OUTCOME OF A BENEFICIAL INCOME BENEFICIAL LIFE
+         INSURANCE COMPANY
+
+⏺ All 35 extract files written. Now let me verify the directory and then build
+  the JSON.
+
+⏺ Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+⏺ All 35 files present. Now let me build the JSON manifest. This is the big one
+  — I'll construct it with all the metadata, TOC, and content fields.
+
+⏺ Task(Build Vol32 extract results JSON)
+  ⎿  Done (41 tool uses · 65.3k tokens · 4h 55m 26s)
+  (ctrl+o to expand)
+
+⏺ All done. Let me verify the JSON was created properly.
+
+⏺ Bash(python3 -c "import json; f=open('/Users/chris/devel/rbirch/cleaned-data/r
+      elief-society/txtvolumesbymonth/Vol32/Vol32_extract_results.json');
+      d=json.load(f); pri…)
+  ⎿  Valid JSON
+     Extracts: 35
+     TOC entries: 35
+     … +2 lines (ctrl+o to expand)
+
+⏺ Done. Here's the summary:
+
+  35 extracts written to Vol32/March_extracts/:
+
+  #: 01
+  Title: Front Matter
+  Type: front_matter
+  Author: —
+  ────────────────────────────────────────
+  #: 02
+  Title: Notice of First Presidency
+  Type: notice
+  Author: First Presidency
+  ────────────────────────────────────────
+  #: 03
+  Title: The Relief Society in Church Welfare
+  Type: address
+  Author: Elder Marion G. Romney
+  ────────────────────────────────────────
+  #: 04
+  Title: Easter Time
+  Type: poem
+  Author: Ruth H. Chadwick
+  ────────────────────────────────────────
+  #: 05
+  Title: Are We Getting Ready for 1947
+  Type: article
+  Author: Gov. Herbert B. Maw
+  ────────────────────────────────────────
+  #: 06
+  Title: The Relief Society
+  Type: address
+  Author: Pres. J. Reuben Clark, Jr.
+  ────────────────────────────────────────
+  #: 07
+  Title: Emily Dickinson Quotation
+  Type: quotation
+  Author: Emily Dickinson
+  ────────────────────────────────────────
+  #: 08
+  Title: Easter and the Second Coming of the Lord
+  Type: article
+  Author: Elder Leo J. Muir
+  ────────────────────────────────────────
+  #: 09
+  Title: March Moods
+  Type: poem
+  Author: Jeanette P. Parry
+  ────────────────────────────────────────
+  #: 10
+  Title: Though a Host Encamp Against Thee
+  Type: fiction
+  Author: Dorothy Clapp Robinson
+  ────────────────────────────────────────
+  #: 11
+  Title: To a Lost Flyer
+  Type: poem
+  Author: Bessie Jarvis Payne
+  ────────────────────────────────────────
+  #: 12
+  Title: The Story of a Gifted Lady
+  Type: biographical_article
+  Author: Leah D. Widtsoe
+  ────────────────────────────────────────
+  #: 13
+  Title: Gifts
+  Type: poem
+  Author: Grace A. Cooper
+  ────────────────────────────────────────
+  #: 14
+  Title: Sixty Years Ago
+  Type: historical_reprint
+  Author: —
+  ────────────────────────────────────────
+  #: 15
+  Title: Woman's Sphere
+  Type: column
+  Author: Ramona W. Cannon
+  ────────────────────────────────────────
+  #: 16
+  Title: Gratitude for Church Guidance
+  Type: editorial
+  Author: Marianne C. Sharp
+  ────────────────────────────────────────
+  #: 17
+  Title: In Memoriam
+  Type: obituary
+  Author: Amy Brown Lyman
+  ────────────────────────────────────────
+  #: 18
+  Title: Praying Hands
+  Type: poem
+  Author: Clarence Edwin Flynn
+  ────────────────────────────────────────
+  #: 19
+  Title: Notes to the Field
+  Type: notes
+  Author: —
+  ────────────────────────────────────────
+  #: 20
+  Title: Marshalling Our Forces for Home Safety
+  Type: article
+  Author: Nellie O. Parker
+  ────────────────────────────────────────
+  #: 21
+  Title: To a Little Girl
+  Type: poem
+  Author: Jo Adelaide Stock
+  ────────────────────────────────────────
+  #: 22
+  Title: March Designs for Summer
+  Type: article
+  Author: Hazel D. Moyle
+  ────────────────────────────────────────
+  #: 23
+  Title: Released
+  Type: poem
+  Author: Thelma Ireland
+  ────────────────────────────────────────
+  #: 24
+  Title: The Lonesome House
+  Type: fiction
+  Author: Olive Woolley Burt
+  ────────────────────────────────────────
+  #: 25
+  Title: The Visiting Teacher's Prayer
+  Type: poem
+  Author: Eva M. R. Salway
+  ────────────────────────────────────────
+  #: 26
+  Title: Rehabilitation of Disabled Soldiers and Sailors
+  Type: article
+  Author: Office of War Information
+  ────────────────────────────────────────
+  #: 27
+  Title: The Bright Light of the Clouds
+  Type: devotional_essay
+  Author: Alice Whitson Norton
+  ────────────────────────────────────────
+  #: 28
+  Title: Early Spring Rain
+  Type: poem
+  Author: Ora Lee Parthesius
+  ────────────────────────────────────────
+  #: 29
+  Title: No Tongue Can Tell
+  Type: essay
+  Author: Marguerite J. Griffin
+  ────────────────────────────────────────
+  #: 30
+  Title: The Snowballs
+  Type: poem
+  Author: Olive Rose Helton
+  ────────────────────────────────────────
+  #: 31
+  Title: Work Meeting: Utility Aprons
+  Type: instructional
+  Author: —
+  ────────────────────────────────────────
+  #: 32
+  Title: Notes from the Field
+  Type: notes
+  Author: Vera W. Pohlman
+  ────────────────────────────────────────
+  #: 33
+  Title: The Shape of Peace
+  Type: poem
+  Author: Eva Willes Wangsgaard
+  ────────────────────────────────────────
+  #: 34
+  Title: Notes from the Field (Continued)
+  Type: notes
+  Author: Vera W. Pohlman
+  ────────────────────────────────────────
+  #: 35
+  Title: Back Matter and Advertisements
+  Type: back_matter
+  Author: —
+
+  JSON manifest: Vol32/Vol32_extract_results.json (189KB, valid JSON)
+
+  Byte accounting: 167,996 bytes across extracts vs 168,035 in source. The
+  39-byte gap is from newlines/whitespace at line boundaries between articles in
+   the source that fall between extract boundaries. The content of every
+  article, poem, story, and notice is accounted for.
+
+  Note on #34: The Hawaiian Mission report was split across pages in the
+  original magazine with "The Shape of Peace" poem inserted between. I kept the
+  continuation as a separate file (#34) since it's an artifact of the magazine's
+   page layout. In the JSON, both #32 and #34 are typed as notes under Pohlman.
+
+✻ Sautéed for 28m 44s
+
+❯ now do the same thing for the other 11 months in Vol32 
+
+⏺ Big job — 11 more months. I'll parallelize by launching agents for each month
+  simultaneously. Each will read the source, identify extracts using
+  comprehension, write the .txt files, and report back metadata for the JSON.
+
+⏺ Bash(for f in /Users/chris/devel/rbirch/cleaned-data/relief-society/txtvolumes
+      bymonth/Vol32/Vol32_No*_1945.txt; do b=$(basename "$f"); s=$(stat -f%z
+      "$f"); echo "$b…)
+  ⎿  Vol32_No1_January_1945.txt  159596 bytes
+     Vol32_No10_October_1945.txt  158771 bytes
+     Vol32_No11_November_1945.txt  177699 bytes
+     … +9 lines (ctrl+o to expand)
+
+⏺ Bash(mkdir -p /Users/chris/devel/rbirch/cleaned-data/relief-society/txtvolumes
+      bymonth/Vol32/January_extracts
+      /Users/chris/devel/rbirch/cleaned-data/relief-society/tx…)
+  ⎿  Done
+
+⏺ Now launching all 11 months in parallel as background agents. Each will read
+  their source file, identify all extracts using reading comprehension, write
+  the .txt files, and report back metadata.
+
+⏺ 4 Task agents launched (ctrl+o to expand)
+   ├─ Extract January 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract February 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract April 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   └─ Extract May 1945 issue
+      ⎿  Running in the background (shift+↑ to manage)
+
+⏺ First batch running. Launching the remaining 7 months now.
+
+⏺ 7 Task agents launched (ctrl+o to expand)
+   ├─ Extract June 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract July 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract August 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract September 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract October 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   ├─ Extract November 1945 issue
+   │  ⎿  Running in the background (shift+↑ to manage)
+   └─ Extract December 1945 issue
+      ⎿  Running in the background (shift+↑ to manage)
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+✻ Cogitated for 1m 46s
+
+⏺ Agent "Extract July 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract November 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract February 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract May 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract August 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract October 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract June 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract December 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract September 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract January 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+⏺ Agent "Extract April 1945 issue" completed
+  ⎿  You've hit your limit · resets 11pm (America/New_York)
+     /upgrade or /extra-usage to finish what you’re working on.
+
+❯ /usage 
+  ⎿  Status dialog dismissed
+
+❯ /model haiku 
+  ⎿  Set model to haiku (claude-haiku-4-5-20251001)
+
+❯ /usage 
+  ⎿  Status dialog dismissed
