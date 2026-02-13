@@ -2,7 +2,7 @@ Processed files are ready to be used as inputs to Topic Modeling.
 
 ## JSON Schema (VolNN_entries.json)
 
-One JSON file per volume lives at the root of `processed/`. Each file contains
+One JSON file per volume lives in its volume folder. Each file contains
 all months for that volume and is the authoritative record of every extracted
 entry. Text files on disk are redundant with the JSON and exist solely for
 human review; they will eventually be deleted.
@@ -184,6 +184,56 @@ Examples:
 
 Volume and month are encoded in the directory path, not repeated in filenames.
 
+### Flagged for review (flagged_for_review.json)
+
+One file per volume, located alongside the entries JSON at
+`processed/VolNN/flagged_for_review.json`. This file lists entries that are
+likely false splits caused by the split-content problem described above.
+
+**Detection method — title not at start:**
+
+For each extracted entry, the script checks whether the entry's own title
+appears in the first 200 characters of its content. If it does not, the entry
+is flagged. The reasoning: when an entry is correctly extracted, its content
+begins with its title (the heading). When a title matches mid-sentence inside
+a preceding article, the extracted "content" starts with a sentence fragment
+from the wrong article — the title appears somewhere in the middle, not at the
+start.
+
+Example from Vol32/March: "The Relief Society President" (index 04) matched
+the phrase "the Relief Society president" mid-sentence inside the body of
+"The Relief Society in Church Welfare" (index 03). The content of entry 04
+starts with lowercase "the Relief Society president have been described as the
+father and the mother of the ward" — a sentence fragment, not an article
+heading. Because the title is not at the start of the content, it gets flagged.
+
+**Flagged entry fields:**
+
+| Field | Description |
+|-------|-------------|
+| `title` | The TOC title. |
+| `author` | Author name, if any. |
+| `etype` | Entry type. |
+| `index` | 1-based position within the issue. |
+| `month` | Month name. |
+| `strategy` | `strict` or `loose` — which match triggered the flag. |
+| `file` | Filename on disk. |
+| `path` | Path to containing folder. |
+| `position` | Character offset in source file. |
+| `length` | Character count of raw extracted slice. |
+| `content` | The noise-stripped content (for inspection). |
+| `strict_loose_identical` | Whether both strategies agreed for this entry. |
+| `title_not_at_start` | Always `true` in this file. |
+
+**How to use during review:**
+
+Entries in this file are strong candidates for false splits. For each flagged
+entry, check the preceding entry (index - 1) in the same month — the two
+likely belong together. The flagged entry's content is probably a fragment of
+the preceding article, while the real entry with that title may appear later
+in the text (captured correctly by strict matching) or may have been missed
+entirely.
+
 ### Directory layout
 
 ```
@@ -191,6 +241,7 @@ processed/
   manifest.csv
   Vol32/
     Vol32_entries.json
+    flagged_for_review.json
     March/
       01_strict_The_Relief_Society_in_Church_Welfare.txt
       01_loose_The_Relief_Society_in_Church_Welfare.txt

@@ -1540,6 +1540,7 @@ def main():
     # Collect JSON data per volume: { "Vol30": {"volume": ..., "months": {...}} }
     volume_json = {}
 
+
     for (vol, issue_key), entries in TOC.items():
         vol_num = int(vol.replace("Vol", ""))
         if args.volume and vol_num != args.volume:
@@ -1583,20 +1584,67 @@ def main():
             volume_json[vol] = {"volume": vol, "months": {}}
         volume_json[vol]["months"][month] = stats["month_json"]
 
+
         coverage = ((stats["total_bytes"] - stats["misc_bytes"]) / stats["total_bytes"] * 100
                      if stats["total_bytes"] > 0 else 0)
         print(f"  Entries matched: {stats['matched']}")
         print(f"  Coverage: {coverage:.1f}%")
         print(f"  Misc bytes: {stats['misc_bytes']}")
 
-    # Write per-volume JSON files
+    # Write per-volume JSON files and flagged_for_review.json
     if not args.dry_run:
         for vol, data in volume_json.items():
-            json_path = OUTPUT_DIR / vol / f"{vol}_entries.json"
-            json_path.parent.mkdir(parents=True, exist_ok=True)
+            vol_dir = OUTPUT_DIR / vol
+            vol_dir.mkdir(parents=True, exist_ok=True)
+
+            json_path = vol_dir / f"{vol}_entries.json"
             with open(json_path, "w", encoding="utf-8") as f:
                 json.dump(data, f, indent=2, ensure_ascii=False, default=str)
             print(f"\nJSON written: {json_path}")
+
+            # Build flagged_for_review.json — entries whose content does
+            # not start with their own title, indicating a likely false
+            # split where the title was matched mid-sentence in a
+            # preceding article's body text.
+            flagged = []
+            for month_name, month_data in data["months"].items():
+                for entry_json in month_data["entries"]:
+                    title = entry_json["title"]
+                    title_pat = re.compile(
+                        re.sub(r'\s+', r'\\s+', re.escape(title)),
+                        re.IGNORECASE,
+                    )
+                    for strategy in ("strict_match", "loose_match"):
+                        match_data = entry_json.get(strategy)
+                        if match_data is None:
+                            continue
+                        content = match_data["content"]
+                        # Check if the title appears near the start
+                        # (first 200 chars to allow for minor leading whitespace)
+                        head = content[:200] if content else ""
+                        if not title_pat.search(head):
+                            flagged.append({
+                                "title": title,
+                                "author": entry_json["author"],
+                                "etype": entry_json["etype"],
+                                "index": entry_json["index"],
+                                "month": month_name,
+                                "strategy": strategy.replace("_match", ""),
+                                "file": match_data["file"],
+                                "path": match_data["path"],
+                                "position": match_data["position"],
+                                "length": match_data["length"],
+                                "content": content,
+                                "strict_loose_identical": entry_json["strict_loose_identical"],
+                                "title_not_at_start": True,
+                            })
+
+            if flagged:
+                flagged_path = vol_dir / "flagged_for_review.json"
+                with open(flagged_path, "w", encoding="utf-8") as f:
+                    json.dump(flagged, f, indent=2, ensure_ascii=False, default=str)
+                print(f"Flagged for review: {flagged_path} "
+                      f"({len(flagged)} entries with title not at start)")
 
     # Write manifest CSV
     if all_manifest_rows and not args.dry_run:
