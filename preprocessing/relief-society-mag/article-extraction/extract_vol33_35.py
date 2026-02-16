@@ -226,22 +226,72 @@ def find_ads_section(body: str, body_offset: int) -> tuple[str, str, int]:
     return body_trimmed, ads_text, body_offset + earliest_pos
 
 
+def split_front_matter_fallback(text: str) -> tuple[str, str]:
+    """
+    Fallback method to split front matter when MAGAZINE CIRCULATION marker is missing.
+    Uses Contents section and page markers to identify the boundary.
+
+    Returns (front_matter, body).  If fallback fails, returns ("", text).
+    """
+    # Strategy 1: Find where CONTENTS section ends and first major section begins
+    # This is a good boundary since contents list articles, and first section starts them
+    contents_match = re.search(
+        r'CONTENTS\s*\n(.*?)(?=GENERAL\s+FEATURES|SPECIAL\s+FEATURES|FICTION|GENERAL\s+BOARD|PUBLISHED|$)',
+        text, re.DOTALL | re.IGNORECASE,
+    )
+
+    if contents_match:
+        # Found contents; now look for the first major section header after it
+        search_start = contents_match.end()
+        section_match = re.search(
+            r'\n\s*(GENERAL\s+FEATURES|SPECIAL\s+FEATURES|FICTION|GENERAL\s+ARTICLES|LESSON\s+DEPARTMENT)',
+            text[search_start:],
+            re.IGNORECASE,
+        )
+        if section_match:
+            split_pos = search_start + section_match.start()
+            return text[:split_pos], text[split_pos:]
+
+    # Strategy 2: Look for page markers (Page 4, Page 5, etc.)
+    # Articles typically start on page 4 or later, front matter is pages 1-3
+    page_matches = list(re.finditer(r'\nPage\s+(\d+)', text, re.IGNORECASE))
+    if page_matches:
+        # Find first page >= 4
+        for match in page_matches:
+            page_num = int(match.group(1))
+            if page_num >= 4:
+                return text[:match.start()], text[match.start():]
+        # If all pages < 4, use the last page marker
+        if page_matches:
+            last_match = page_matches[-1]
+            return text[:last_match.start()], text[last_match.start():]
+
+    # Strategy 3: Look for multiple consecutive section headers or major gaps
+    # Front matter tends to be more dense; body has clearer structure
+    # Find the first occurrence of a title pattern that looks like an article
+    # (capitalized phrase on its own line, not part of a list)
+
+    # Fallback: if all else fails, return empty front matter
+    print("  WARNING: Could not determine front matter boundary with fallback strategies")
+    return "", text
+
+
 def split_front_matter(text: str) -> tuple[str, str]:
     """
     Split the issue text into front matter (TOC, board listing, ads, subscription
     info) and body content.  The marker is 'MAGAZINE CIRCULATION' which appears
     in every issue of Vol 33-40 at the end of the front matter section.
 
-    Returns (front_matter, body).  If the marker is not found, front_matter is
-    empty and body is the full text.
+    Returns (front_matter, body).  If the marker is not found, attempts fallback
+    strategies using Contents section and page markers.
     """
     marker = re.search(r'MAGAZINE CIRCULATION[^\n]*', text)
     if marker:
         split_pos = marker.end()
         return text[:split_pos], text[split_pos:]
     else:
-        print("  WARNING: MAGAZINE CIRCULATION marker not found, searching full text")
-        return "", text
+        print("  WARNING: MAGAZINE CIRCULATION marker not found, using fallback method")
+        return split_front_matter_fallback(text)
 
 
 def _match_entries_with_strategy(body: str, entries: list[dict],
