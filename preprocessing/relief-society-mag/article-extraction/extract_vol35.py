@@ -74,6 +74,10 @@ class Vol35Extractor:
         for month in MONTHS:
             self.extract_month(month, dry_run)
 
+        # Write global JSON entries file after all months are processed
+        if not dry_run:
+            self._write_global_json()
+
     def extract_month(self, month: str, dry_run: bool = False) -> None:
         """Extract a single month."""
         filepath = RAW_DATA_DIR / f"vol35_No{self._month_to_number(month):.0f}_{month}_1948.txt"
@@ -483,47 +487,142 @@ class Vol35Extractor:
         return f"{entry.month}_{entry.page:03d}_{safe_title}.txt"
 
     def _write_output_files(self, month: str) -> None:
-        """Write extracted articles to files."""
+        """Write extracted articles to files using Vol34 compatible structure."""
         month_dir = OUTPUT_DIR / month
         month_dir.mkdir(parents=True, exist_ok=True)
 
-        # Write individual files
-        for article in self.extracted_articles:
-            if article.month != month:
-                continue
-
-            filepath = month_dir / article.filename
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(f"Title: {article.title}\n")
-                f.write(f"Author: {article.author or '(no author)'}\n")
-                f.write(f"Page: {article.page}\n")
-                f.write(f"Section: {article.section}\n")
-                f.write(f"\n{article.content}\n")
-
-        # Write JSON manifest
+        # Get articles for this month
         month_articles = [a for a in self.extracted_articles if a.month == month]
-        manifest = {
-            'month': month,
-            'year': 1948,
-            'total_extracted': len(month_articles),
-            'articles': [
-                {
-                    'title': a.title,
-                    'author': a.author,
-                    'page': a.page,
-                    'section': a.section,
-                    'filename': a.filename,
-                }
-                for a in month_articles
-            ]
-        }
 
-        manifest_path = month_dir / "manifest.json"
-        with open(manifest_path, 'w', encoding='utf-8') as f:
-            json.dump(manifest, f, indent=2)
+        # Write individual files with naming convention: {sequence}_{confidence}_{title}.txt
+        for idx, article in enumerate(month_articles, 1):
+            # Determine confidence level (for now, use "loose" as default)
+            confidence = "loose"
+
+            # Create filename from title
+            safe_title = re.sub(r'[^a-zA-Z0-9\-_]', '_', article.title)[:50]
+            filename = f"{idx:02d}_{confidence}_{safe_title}.txt"
+            filepath = month_dir / filename
+
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(article.content)
+
+        # Write TOC.txt with table of contents
+        toc_path = month_dir / "TOC.txt"
+        with open(toc_path, 'w', encoding='utf-8') as f:
+            f.write(f"Table of Contents - {month} 1948\n")
+            f.write(f"{'='*60}\n\n")
+            for idx, article in enumerate(month_articles, 1):
+                author_str = f" by {article.author}" if article.author else ""
+                f.write(f"{idx:2d}. {article.title}{author_str} (p.{article.page})\n")
+                f.write(f"    Section: {article.section}\n")
+                f.write(f"    Type: {article.section}\n\n")
+
+        # Write MISC.txt with unmatched entries
+        unmatched_for_month = [e for e in self.unmatched_entries if e[0] == month]
+        if unmatched_for_month:
+            misc_path = month_dir / "MISC.txt"
+            with open(misc_path, 'w', encoding='utf-8') as f:
+                f.write(f"Unmatched/Miscellaneous Entries - {month} 1948\n")
+                f.write(f"{'='*60}\n\n")
+                f.write(f"The following entries from the Table of Contents were not\n")
+                f.write(f"successfully extracted from the body text:\n\n")
+                for _, entry, reason in unmatched_for_month:
+                    author_str = f" by {entry.author}" if entry.author else ""
+                    f.write(f"- {entry.title}{author_str} (p.{entry.page})\n")
+                    f.write(f"  Reason: {reason}\n\n")
 
         if self.verbose:
             print(f"\nWrote {len(month_articles)} articles to {month_dir}")
+
+    def _write_global_json(self) -> None:
+        """Write Vol35_entries.json with nested Vol30-33 schema."""
+        # Organize articles by month
+        articles_by_month = defaultdict(list)
+        for article in self.extracted_articles:
+            articles_by_month[article.month].append(article)
+
+        # Build the nested structure
+        months_data = {}
+
+        for month in MONTHS:
+            if month not in articles_by_month:
+                continue
+
+            month_articles = articles_by_month[month]
+            month_num = self._month_to_number(month)
+            source_filename = f"vol35_No{month_num:.0f}_{month}_1948.txt"
+
+            # Build entries for this month
+            entries = []
+            for idx, article in enumerate(month_articles, 1):
+                safe_title = re.sub(r'[^a-zA-Z0-9\-_]', '_', article.title)[:50]
+                filename = f"{idx:02d}_loose_{safe_title}.txt"
+
+                entry = {
+                    "index": idx,
+                    "title": article.title,
+                    "author": article.author,  # Keep as None or string
+                    "etype": article.section.lower().replace(" ", "_"),  # Convert section to etype
+                    "strict_loose_identical": False,  # Vol35 uses loose matching only
+                    "strict_match": None,
+                    "loose_match": {
+                        "file": filename,
+                        "path": f"processed/vol35/{month}",
+                        "position": 0,
+                        "length": len(article.content),
+                        "content": article.content
+                    }
+                }
+                entries.append(entry)
+
+            # Read TOC, ADS, MISC files if they exist
+            toc_data = self._read_output_file(month, "TOC.txt")
+            ads_data = self._read_output_file(month, "ADS.txt")
+            misc_data = self._read_output_file(month, "MISC.txt")
+
+            months_data[month] = {
+                "source_file": source_filename,
+                "source_path": "cleaned-data/relief-society/txtvolumesbymonth/Vol35",
+                "entries": entries,
+                "toc": toc_data,
+                "ads": ads_data,
+                "misc": misc_data
+            }
+
+        # Build final structure
+        output_data = {
+            "volume": "Vol35",
+            "months": months_data
+        }
+
+        # Write JSON entries file
+        json_path = OUTPUT_DIR / "Vol35_entries.json"
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, indent=2)
+
+        if self.verbose:
+            print(f"\nWrote Vol35_entries.json with nested Vol30-33 schema")
+
+    def _read_output_file(self, month: str, filename: str) -> Optional[Dict[str, str]]:
+        """Read output files (TOC.txt, ADS.txt, MISC.txt) and return as dict."""
+        filepath = OUTPUT_DIR / month / filename
+        if not filepath.exists():
+            return None
+
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+
+            return {
+                "file": filename,
+                "path": f"processed/vol35/{month}",
+                "content": content
+            }
+        except Exception as e:
+            if self.verbose:
+                print(f"Warning: Could not read {filepath}: {e}")
+            return None
 
     def _print_summary(self) -> None:
         """Print extraction summary."""
