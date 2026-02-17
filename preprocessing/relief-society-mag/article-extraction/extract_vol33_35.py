@@ -123,17 +123,43 @@ for no, month, year in [
 def build_regex_for_title(title: str, require_line_start: bool = True) -> re.Pattern:
     """
     Build a regex pattern that finds the title in the text.
-    Allows for minor OCR variation and flexible whitespace.
-    When require_line_start is True, the title must appear at the
-    beginning of a line (after a newline or at position 0) to avoid
-    matching common phrases buried mid-sentence in article body text.
+    Allows for minor OCR variation, flexible whitespace, and semantic variations.
+
+    Handles:
+    - Case insensitivity
+    - Flexible whitespace (OCR artifacts)
+    - Optional articles and prepositions:
+      "of the relief society" matches "of relief society"
+      "the mission" matches "mission"
+    - When require_line_start is True, the title must appear at the
+      beginning of a line to avoid matching buried mid-sentence phrases.
     """
-    # Escape regex special chars in the title
+    # Escape regex special chars
     escaped = re.escape(title)
-    # Allow flexible whitespace (OCR may have inserted extra spaces)
-    escaped = re.sub(r'\\ ', r'\\s+', escaped)
+
+    # Allow flexible whitespace between words (replace escaped spaces with flexible pattern)
+    escaped = escaped.replace(r'\ ', r'\s+')
+
+    # Make common articles/prepositions optional to handle OCR/formatting variations
+    # Note: After the above replacement, literal backslash-s-plus appears in the string.
+    # We need to match those literal characters in the string using plain string methods.
+
+    # "of the" -> matches "of the" or "of"
+    escaped = escaped.replace(r'\s+of\s+the\s+', r'\s+of(?:\s+the)?\s+')
+    # "the " at start -> matches "the " or empty
+    if escaped.startswith(r'the\s+'):
+        escaped = r'(?:the\s+)?' + escaped[5:]  # len('the\s+') = 5
+    # " the " in middle -> optional (basic approach: just handle common case)
+    escaped = escaped.replace(r'\s+the\s+', r'\s+(?:the\s+)?')
+    # " and " -> already handled by flexible whitespace
+    # Optional "a " or "an " at boundaries
+    if escaped.startswith(r'a\s+'):
+        escaped = r'(?:a\s+)?' + escaped[4:]  # len('a\s+') = 4
+
     if require_line_start:
+        # Match after newline or start, with optional blank lines before
         escaped = r'(?:^|\n)\s*' + escaped
+
     return re.compile(escaped, re.IGNORECASE)
 
 
@@ -181,6 +207,26 @@ def strip_running_noise(text: str) -> tuple[str, list[str]]:
     text = re.sub(r'\n{3,}', '\n\n', text)
 
     return text, noise
+
+
+def is_substantial_content(text: str, min_bytes: int = 300) -> bool:
+    """
+    Validate that extracted content is substantial (not just a TOC stub).
+
+    TOC stubs typically have just: title + author + page number (< 200 bytes).
+    Substantial content should have meaningful body text.
+    """
+    if len(text) < min_bytes:
+        return False
+
+    # Check for patterns typical of TOC stubs:
+    # - Very few newlines (stubs are typically 1-3 lines)
+    # - Only metadata-like content (author, page numbers, dates)
+    newline_count = text.count('\n')
+    if newline_count < 2 and len(text) < min_bytes * 2:
+        return False
+
+    return True
 
 
 def find_ads_section(body: str, body_offset: int) -> tuple[str, str, int]:
@@ -294,12 +340,54 @@ def split_front_matter(text: str) -> tuple[str, str]:
         return split_front_matter_fallback(text)
 
 
+def _find_article_boundary_after_match(body: str, match_pos: int, entry: dict) -> int:
+    """
+    Given a regex match position for a title, refine the boundary to find the
+    actual semantic article start using structural patterns.
+
+    Looks for:
+    - ALL CAPS section headers or titles (common article markers)
+    - Blank lines before the title (article separators)
+    - Standalone line structure (title on its own line)
+
+    This helps handle cases where the same title appears in multiple formats
+    (transition line + ALL CAPS header) by finding the real article start.
+    """
+    # Walk backwards from match to find the start of the current line
+    start = match_pos
+    while start > 0 and body[start - 1] != '\n':
+        start -= 1
+
+    # Now look backwards for structural markers that indicate article boundaries
+    # Priority: look for a preceding double newline (paragraph break) which
+    # typically separates articles
+    search_start = max(0, start - 500)  # Don't search too far back
+    preceding_text = body[search_start:start]
+
+    # Find the last double-newline (blank line) before this line
+    last_blank = preceding_text.rfind('\n\n')
+    if last_blank != -1:
+        # Found a blank line; the article likely starts after it
+        actual_start = search_start + last_blank + 2
+        # Skip any leading whitespace on the new line
+        while actual_start < start and body[actual_start] in ' \t':
+            actual_start += 1
+        return actual_start
+
+    # If no blank line found, just return the start of the current line
+    # (the line where the title match was found)
+    return start
+
+
 def _match_entries_with_strategy(body: str, entries: list[dict],
                                  body_offset: int,
                                  require_line_start: bool) -> list[tuple[int, dict]]:
     """
     Match TOC entries in body text using one strategy.
     Returns list of (position_in_full_text, entry_dict) for found entries.
+
+    Now uses semantic boundary refinement to find actual article starts
+    rather than just title matches in the middle of text.
     """
     found = []
     for entry in entries:
@@ -316,7 +404,10 @@ def _match_entries_with_strategy(body: str, entries: list[dict],
                                            matched_text, re.IGNORECASE)
                 if title_in_match:
                     pos += title_in_match.start()
-            found.append((pos + body_offset, entry))
+
+            # Refine boundary using semantic structure
+            refined_pos = _find_article_boundary_after_match(body, pos, entry)
+            found.append((refined_pos + body_offset, entry))
     return found
 
 
@@ -423,17 +514,19 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
             all_noise.extend(noise_frags)
             covered_intervals.append((s_start, s_end))
 
-            s_filename = f"{idx:02d}_strict_{title_safe}.txt"
-            if not dry_run and cleaned:
-                (issue_dir / s_filename).write_text(cleaned, encoding="utf-8")
+            # Only create result if content is substantial (not a TOC stub)
+            if is_substantial_content(cleaned):
+                s_filename = f"{idx:02d}_strict_{title_safe}.txt"
+                if not dry_run:
+                    (issue_dir / s_filename).write_text(cleaned, encoding="utf-8")
 
-            strict_result = {
-                "file": s_filename,
-                "path": rel_dir,
-                "position": s_start,
-                "length": raw_len,
-                "content": cleaned,
-            }
+                strict_result = {
+                    "file": s_filename,
+                    "path": rel_dir,
+                    "position": s_start,
+                    "length": raw_len,
+                    "content": cleaned,
+                }
 
         # Process loose match
         loose_result = None
@@ -448,17 +541,19 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
                 all_noise.extend(noise_frags)
             covered_intervals.append((l_start, l_end))
 
-            l_filename = f"{idx:02d}_loose_{title_safe}.txt"
-            if not dry_run and cleaned:
-                (issue_dir / l_filename).write_text(cleaned, encoding="utf-8")
+            # Only create result if content is substantial (not a TOC stub)
+            if is_substantial_content(cleaned):
+                l_filename = f"{idx:02d}_loose_{title_safe}.txt"
+                if not dry_run:
+                    (issue_dir / l_filename).write_text(cleaned, encoding="utf-8")
 
-            loose_result = {
-                "file": l_filename,
-                "path": rel_dir,
-                "position": l_start,
-                "length": raw_len,
-                "content": cleaned,
-            }
+                loose_result = {
+                    "file": l_filename,
+                    "path": rel_dir,
+                    "position": l_start,
+                    "length": raw_len,
+                    "content": cleaned,
+                }
 
         if strict_result or loose_result:
             stats["matched"] += 1
