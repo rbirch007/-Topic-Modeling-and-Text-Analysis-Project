@@ -35,11 +35,24 @@ Run each chunk in order.
 ```{r config}
 # ── INPUT ─────────────────────────────────────────────────────────────────────
 # Folder that contains your large .txt transcription file.
-input_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input"
+#
+# normalizePath() asks Windows to resolve the real on-disk path for you,
+# handling OneDrive's long folder name, spaces, and any symlink/junction it
+# uses internally.  mustWork = FALSE means it won't error if the path does not
+# yet exist — the check in Chunk 2 will give a clear message instead.
+input_dir <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input",
+  winslash = "/",
+  mustWork = FALSE
+)
 
 # ── OUTPUT ────────────────────────────────────────────────────────────────────
 # Parent folder where WEVol*/ sub-folders will be created.
-output_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/by_volume"
+output_dir <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/by_volume",
+  winslash = "/",
+  mustWork = FALSE
+)
 
 # ── VOLUME → YEAR TABLE ───────────────────────────────────────────────────────
 # The Woman's Exponent ran June 1872 – February 1914 (41 volumes).
@@ -62,12 +75,60 @@ vol_year <- c(
 ## Chunk 2 — Read the Transcription File
 
 ```{r read_file}
-# Locate the .txt file in input_dir
-if (!dir.exists(input_dir)) {
-  stop("Input directory not found:\n  ", input_dir,
-       "\nCheck the path in Chunk 1.")
+# ── Path diagnostics ──────────────────────────────────────────────────────────
+# Always print where R is looking so you can compare to Windows Explorer.
+cat("=== PATH CHECK ===\n")
+cat("Input  dir R will use:\n  ", input_dir, "\n")
+cat("Output dir R will use:\n  ", output_dir, "\n\n")
+
+# Walk up the path tree and report which ancestor folders exist.
+# This quickly pinpoints where the path breaks (e.g. wrong OneDrive folder name).
+check_path_exists <- function(p) {
+  parts <- strsplit(p, "/")[[1]]
+  built <- parts[1]  # start with drive letter, e.g. "C:"
+  ok    <- TRUE
+  for (part in parts[-1]) {
+    built <- paste0(built, "/", part)
+    exists <- dir.exists(built) || file.exists(built)
+    if (!exists && ok) {
+      cat("  OK  : ", built, "\n", sep = "")  # last good segment
+      cat("  MISS: ", built, "  <-- not found\n", sep = "")
+      ok <- FALSE
+    } else if (ok) {
+      # only print the deepest existing segment to keep output short
+    }
+  }
+  if (ok) cat("  FULL PATH EXISTS:", p, "\n")
 }
 
+cat("Checking input path segment by segment:\n")
+check_path_exists(input_dir)
+cat("\n")
+
+# ── Require input directory ───────────────────────────────────────────────────
+if (!dir.exists(input_dir)) {
+  # Show what IS in the user's OneDrive root to help spot the real folder name
+  onedrive_root <- normalizePath(
+    paste0("C:/Users/", Sys.info()[["user"]], "/"),
+    winslash = "/", mustWork = FALSE
+  )
+  od_folders <- list.dirs(onedrive_root, recursive = FALSE, full.names = FALSE)
+  od_folders <- grep("(?i)onedrive", od_folders, value = TRUE)
+
+  cat("OneDrive-related folders found under", onedrive_root, ":\n")
+  if (length(od_folders) == 0) {
+    cat("  (none found — OneDrive may not be synced or the drive letter differs)\n")
+  } else {
+    cat(paste0("  ", od_folders, "\n"), sep = "")
+    cat("\nIf none match what you typed in Chunk 1, update input_dir to use\n")
+    cat("the exact folder name shown above.\n")
+  }
+
+  stop("\nInput directory not found:\n  ", input_dir,
+       "\nSee the folder listing above to correct the path in Chunk 1.")
+}
+
+# ── Find the transcription file ───────────────────────────────────────────────
 txt_files <- list.files(input_dir, pattern = "\\.txt$",
                          full.names = TRUE, ignore.case = TRUE)
 
