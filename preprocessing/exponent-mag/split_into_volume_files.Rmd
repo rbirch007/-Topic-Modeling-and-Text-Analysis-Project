@@ -1,0 +1,287 @@
+---
+title: "Woman's Exponent — Split Large File into Volume Files"
+output: html_notebook
+---
+
+# Overview
+
+This notebook reads the large transcription of the *Woman's Exponent* and
+writes one text file per volume, named **WEVol1\_1872.txt** through
+**WEVol41\_1912.txt**, each inside its own folder (**WEVol1\_1872/**,
+**WEVol2\_1873/**, …).
+
+**How volume boundaries are detected:**
+Every physical page in the transcription is preceded by a marker line such as:
+
+```
+----- new page (p025n_qM205_1_W84_v41-6.jpg)
+```
+
+The `v41` portion identifies the **volume number**.  For Volume 1, the
+publication uses the Roman numeral **I** in its text headers (`Vol. I`), but
+the page annotation still uses the digit `v1` — both are handled.
+
+**What is removed from the output:**
+Only the `----- new page (...)` annotation lines are stripped.
+Every other line — including blank lines, headers, article text, and columns —
+is written out exactly as it appears in the source file.
+
+Run each chunk in order.
+
+---
+
+## Chunk 1 — Configuration
+
+```{r config}
+# ── INPUT ─────────────────────────────────────────────────────────────────────
+# Folder that contains your large .txt transcription file.
+input_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input"
+
+# ── OUTPUT ────────────────────────────────────────────────────────────────────
+# Parent folder where WEVol*/ sub-folders will be created.
+output_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/by_volume"
+
+# ── VOLUME → YEAR TABLE ───────────────────────────────────────────────────────
+# The Woman's Exponent ran June 1872 – February 1914 (41 volumes).
+# Each entry is the year that volume STARTED.  Adjust if needed.
+vol_year <- c(
+  `1`  = 1872, `2`  = 1873, `3`  = 1874, `4`  = 1875, `5`  = 1876,
+  `6`  = 1877, `7`  = 1878, `8`  = 1879, `9`  = 1880, `10` = 1881,
+  `11` = 1882, `12` = 1883, `13` = 1884, `14` = 1885, `15` = 1886,
+  `16` = 1887, `17` = 1888, `18` = 1889, `19` = 1890, `20` = 1891,
+  `21` = 1892, `22` = 1893, `23` = 1894, `24` = 1895, `25` = 1896,
+  `26` = 1897, `27` = 1898, `28` = 1899, `29` = 1900, `30` = 1901,
+  `31` = 1902, `32` = 1903, `33` = 1904, `34` = 1905, `35` = 1906,
+  `36` = 1907, `37` = 1908, `38` = 1909, `39` = 1910, `40` = 1911,
+  `41` = 1912
+)
+```
+
+---
+
+## Chunk 2 — Read the Transcription File
+
+```{r read_file}
+# Locate the .txt file in input_dir
+if (!dir.exists(input_dir)) {
+  stop("Input directory not found:\n  ", input_dir,
+       "\nCheck the path in Chunk 1.")
+}
+
+txt_files <- list.files(input_dir, pattern = "\\.txt$",
+                         full.names = TRUE, ignore.case = TRUE)
+
+if (length(txt_files) == 0) {
+  stop("No .txt file found in:\n  ", input_dir,
+       "\nPlace your transcription file there and re-run.")
+}
+if (length(txt_files) > 1) {
+  cat("Multiple .txt files found — using the first one.\n")
+  cat(paste0("  ", basename(txt_files), "\n"), sep = "")
+  cat("\n")
+}
+
+input_file <- txt_files[1]
+cat("Reading:", input_file, "\n")
+
+raw_lines <- readLines(input_file, warn = FALSE, encoding = "UTF-8")
+cat("Lines read:", format(length(raw_lines), big.mark = ","), "\n")
+```
+
+---
+
+## Chunk 3 — Identify Annotation Lines and Extract Volume Numbers
+
+Page annotation lines look like:
+```
+----- new page (p025n_qM205_1_W84_v41-6.jpg)
+```
+We extract the `v##` (or `vI` for Volume 1) from each annotation and assign
+every subsequent line to that volume until the next annotation appears.
+
+```{r assign_volumes}
+n <- length(raw_lines)
+
+# ── Identify annotation lines ─────────────────────────────────────────────────
+# Annotation lines start with "----- new page ("
+is_annotation <- grepl("^----- new page \\(", raw_lines)
+cat("Total annotation (page marker) lines:", sum(is_annotation), "\n")
+
+# ── Extract volume number from each annotation ────────────────────────────────
+# Pattern: _v followed by a Roman-numeral I  OR  one-or-more digits, then a hyphen
+# Examples: _v1-2.jpg  _v41-6.jpg  _vI-1.jpg
+extract_vol <- function(line) {
+  # Roman numeral I for Vol. 1
+  m_roman <- regmatches(line, regexpr("_vI-", line))
+  if (length(m_roman) > 0 && nchar(m_roman) > 0) return(1L)
+
+  # Numeric volume
+  m_num <- regmatches(line, regexpr("_v(\\d+)-", line))
+  if (length(m_num) > 0 && nchar(m_num) > 0) {
+    return(as.integer(sub("_v", "", sub("-", "", m_num))))
+  }
+  return(NA_integer_)
+}
+
+# ── Walk through lines and assign volume ─────────────────────────────────────
+line_vol   <- integer(n)   # 0 = preamble / unassigned
+current_vol <- 0L
+
+for (i in seq_len(n)) {
+  if (is_annotation[i]) {
+    v <- extract_vol(raw_lines[i])
+    if (!is.na(v)) current_vol <- v
+  }
+  line_vol[i] <- current_vol
+}
+
+# ── Report ────────────────────────────────────────────────────────────────────
+unique_vols <- sort(unique(line_vol[line_vol > 0L]))
+cat("Unique volumes detected:", length(unique_vols), "\n")
+cat("Volume range:", min(unique_vols), "to", max(unique_vols), "\n")
+
+preamble_n <- sum(line_vol == 0L)
+cat("Lines before first annotation (preamble):", preamble_n, "\n")
+
+# Check for any volumes not in the year table
+missing_years <- setdiff(unique_vols, as.integer(names(vol_year)))
+if (length(missing_years) > 0) {
+  cat("\nWARNING: No year entry for volume(s):", paste(missing_years, collapse = ", "), "\n")
+  cat("Add them to vol_year in Chunk 1 before writing files.\n")
+} else {
+  cat("All detected volumes have year entries. Ready to write.\n")
+}
+```
+
+---
+
+## Chunk 4 — Preview Volume Line Counts
+
+Review before writing any files.
+
+```{r preview}
+cat("=== VOLUME PREVIEW ===\n\n")
+cat(sprintf("%-6s  %-6s  %-12s  %-s\n",
+            "Vol.", "Year", "Lines", "Output folder"))
+cat(strrep("-", 55), "\n")
+
+for (v in unique_vols) {
+  yr      <- vol_year[as.character(v)]
+  yr_str  <- if (!is.na(yr)) as.character(yr) else "UNKNOWN"
+  n_lines <- sum(line_vol == v)
+  # Subtract annotation lines within this volume (they will be stripped)
+  n_ann   <- sum(is_annotation & line_vol == v)
+  folder  <- paste0("WEVol", v, "_", yr_str)
+  cat(sprintf("Vol.%-3d  %-6s  %6d lines   %s\n",
+              v, yr_str, n_lines - n_ann, folder))
+}
+
+cat(strrep("-", 55), "\n")
+cat("Total volumes to write:", length(unique_vols), "\n")
+```
+
+---
+
+## Chunk 5 — Write Volume Files
+
+Creates `output_dir/WEVol{n}_{year}/WEVol{n}_{year}.txt` for each volume.
+Annotation lines are removed; all other lines are written as-is.
+
+```{r write_volumes}
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+cat("Output directory:", output_dir, "\n\n")
+
+files_written  <- 0L
+files_skipped  <- 0L
+errors_log     <- character(0)
+
+for (v in unique_vols) {
+  yr <- vol_year[as.character(v)]
+
+  if (is.na(yr)) {
+    cat("SKIP Vol.", v, "— no year in table\n")
+    files_skipped <- files_skipped + 1L
+    next
+  }
+
+  # Select lines for this volume, excluding annotation lines
+  mask <- (line_vol == v) & (!is_annotation)
+  vol_lines <- raw_lines[mask]
+
+  # Build folder and file names
+  base_name  <- paste0("WEVol", v, "_", yr)
+  vol_folder <- file.path(output_dir, base_name)
+  vol_file   <- file.path(vol_folder, paste0(base_name, ".txt"))
+
+  # Create folder
+  dir.create(vol_folder, showWarnings = FALSE, recursive = TRUE)
+
+  # Write file
+  result <- tryCatch({
+    writeLines(vol_lines, con = vol_file, useBytes = TRUE)
+    TRUE
+  }, error = function(e) {
+    conditionMessage(e)
+  })
+
+  if (isTRUE(result)) {
+    cat(sprintf("Written: %-30s  (%d lines)\n",
+                paste0(base_name, ".txt"), length(vol_lines)))
+    files_written <- files_written + 1L
+  } else {
+    msg <- paste0("ERROR Vol.", v, ": ", result)
+    cat(msg, "\n")
+    errors_log <- c(errors_log, msg)
+  }
+}
+
+cat("\n=== WRITE SUMMARY ===\n")
+cat("Files written :", files_written, "\n")
+cat("Files skipped :", files_skipped, "\n")
+cat("Errors        :", length(errors_log), "\n")
+if (length(errors_log) > 0) {
+  cat("\nError details:\n")
+  cat(paste0("  ", errors_log, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 6 — Verify Output
+
+Confirms every expected folder exists and reports file sizes.
+
+```{r verify}
+cat("=== OUTPUT VERIFICATION ===\n\n")
+cat(sprintf("%-30s  %10s  %8s\n", "Folder / File", "Size (KB)", "Lines"))
+cat(strrep("-", 55), "\n")
+
+total_lines <- 0L
+total_kb    <- 0.0
+
+for (v in unique_vols) {
+  yr <- vol_year[as.character(v)]
+  if (is.na(yr)) next
+
+  base_name  <- paste0("WEVol", v, "_", yr)
+  vol_file   <- file.path(output_dir, base_name, paste0(base_name, ".txt"))
+
+  if (!file.exists(vol_file)) {
+    cat(sprintf("  MISSING: %s\n", base_name))
+    next
+  }
+
+  info    <- file.info(vol_file)
+  size_kb <- round(info$size / 1024, 1)
+  n_lines <- length(readLines(vol_file, warn = FALSE))
+  total_lines <- total_lines + n_lines
+  total_kb    <- total_kb + size_kb
+
+  cat(sprintf("%-30s  %10.1f  %8d\n",
+              paste0(base_name, ".txt"), size_kb, n_lines))
+}
+
+cat(strrep("-", 55), "\n")
+cat(sprintf("%-30s  %10.1f  %8d\n", "TOTAL", total_kb, total_lines))
+cat("\nVerification complete.\n")
+```
