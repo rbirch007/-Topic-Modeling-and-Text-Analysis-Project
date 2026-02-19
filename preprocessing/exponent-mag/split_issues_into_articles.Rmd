@@ -1,0 +1,478 @@
+---
+title: "Woman's Exponent — Split Issue Files into Individual Articles"
+output: html_notebook
+---
+
+# Overview
+
+This notebook reads the per-issue `.txt` files produced by
+`split_volumes_into_issues.Rmd` and splits each one into individual
+**article files**.
+
+**Two-method article detection (used together):**
+
+1. **Contents section** (primary): Many issues open with a `CONTENTS` block
+   listing article titles, optionally followed by page numbers.  The notebook
+   parses that block and uses the titles it finds as split boundaries.
+
+2. **ALL CAPS headings** (flexible fallback / supplement): Regardless of
+   whether a Contents section exists, any line that is ≥ 75 % uppercase,
+   at least 6 characters long, and either preceded or followed by a blank
+   line is treated as an article-title boundary.  This catches titles missed
+   by the Contents parser and handles issues with no Contents section at all.
+
+Both methods are combined; duplicate boundary lines are de-duplicated.
+
+**Output structure** (created inside each volume folder):
+```
+by_volume/
+  WEVol1_1872/
+    WEVol1_1872issues/
+      WEVol1_1872_issue1.txt         <- full issue (from previous step)
+      ...
+    WEVol1_1872articles/             <- NEW folder created by this notebook
+      WEVol1_1872_issue1_TITLE_OF_ARTICLE.txt
+      WEVol1_1872_issue1_ANOTHER_TITLE.txt
+      WEVol1_1872_issue2_TITLE_OF_ARTICLE.txt
+      ...
+  WEVol2_1873/
+    ...
+```
+
+Run each chunk in order.
+
+---
+
+## Chunk 1 — Configuration
+
+```{r config}
+# ── INPUT: BY-VOLUME FOLDER ───────────────────────────────────────────────────
+# Must match by_volume_dir used in split_volumes_into_issues.Rmd.
+by_volume_dir <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input/by_volume",
+  winslash = "/",
+  mustWork = FALSE
+)
+
+# ── TUNING PARAMETERS ─────────────────────────────────────────────────────────
+# Minimum % of alpha characters that must be uppercase for a line to be treated
+# as an ALL CAPS heading (0–1).  Lower = more permissive, higher = stricter.
+ALLCAPS_THRESHOLD    <- 0.75
+
+# Minimum total characters a heading line must have (excludes very short lines
+# like "BY", "TO", "OR" that happen to be all-caps).
+ALLCAPS_MIN_CHARS    <- 6
+
+# Minimum number of alpha characters a heading line must contain.
+ALLCAPS_MIN_ALPHA    <- 4
+
+# How many lines from the top of an issue file to scan for a CONTENTS section.
+CONTENTS_SCAN_LINES  <- 120
+
+# Minimum character length of a contents entry to be used as a split boundary.
+CONTENTS_MIN_CHARS   <- 5
+
+# Maximum file-name slug length for the article title portion.
+SLUG_MAX_CHARS       <- 60
+
+# Minimum number of lines an article block must contain to be written.
+# Blocks shorter than this are treated as noise / orphan headings and skipped.
+MIN_ARTICLE_LINES    <- 3
+```
+
+---
+
+## Chunk 2 — Verify Input Directory
+
+```{r check_dir}
+cat("=== PATH CHECK ===\n")
+cat("by_volume_dir:\n  ", by_volume_dir, "\n\n")
+
+if (!dir.exists(by_volume_dir)) {
+  stop(
+    "by_volume_dir not found:\n  ", by_volume_dir,
+    "\n\nMake sure split_volumes_into_issues.Rmd has been run first."
+  )
+}
+
+vol_folders <- list.dirs(by_volume_dir, recursive = FALSE, full.names = FALSE)
+vol_folders <- sort(grep("^WEVol\\d+_\\d{4}$", vol_folders, value = TRUE))
+
+cat("Volume folders found:", length(vol_folders), "\n")
+if (length(vol_folders) == 0) {
+  stop("No WEVol*_**** folders found. Run split_into_volume_files.Rmd first.")
+}
+
+# Check how many issue files exist across all volumes
+total_issue_files <- 0L
+for (vf in vol_folders) {
+  issues_dir <- file.path(by_volume_dir, vf, paste0(vf, "issues"))
+  if (dir.exists(issues_dir)) {
+    n <- length(list.files(issues_dir, pattern = "\\.txt$", ignore.case = TRUE))
+    total_issue_files <- total_issue_files + n
+  }
+}
+cat("Total issue .txt files found across all volumes:", total_issue_files, "\n")
+if (total_issue_files == 0) {
+  stop("No issue files found. Run split_volumes_into_issues.Rmd first.")
+}
+```
+
+---
+
+## Chunk 3 — Helper Functions
+
+```{r helpers}
+
+# ── title_to_slug() ───────────────────────────────────────────────────────────
+# Convert an article title string into a filesystem-safe uppercase slug.
+# Used as the article-title portion of the output filename.
+title_to_slug <- function(title, max_chars = SLUG_MAX_CHARS) {
+  slug <- iconv(title, to = "ASCII//TRANSLIT")      # transliterate accents
+  slug <- gsub("[^A-Za-z0-9 ]", " ", slug)          # keep only alphanumeric
+  slug <- trimws(gsub("\\s+", "_", slug))            # collapse spaces to _
+  slug <- toupper(slug)
+  if (nchar(slug) > max_chars) slug <- substr(slug, 1, max_chars)
+  slug <- gsub("_+$", "", slug)                      # trim trailing _
+  if (nchar(slug) == 0) slug <- "UNTITLED"
+  slug
+}
+
+# ── is_masthead() ─────────────────────────────────────────────────────────────
+# Returns TRUE for Woman's Exponent masthead lines (Vol. + No. on same line).
+# Used to exclude mastheads from ALL CAPS heading detection.
+is_masthead <- function(line) {
+  has_vol <- grepl("(?i)\\bVol\\.\\s*([IVXLivxl]+|\\d+)\\b", line, perl = TRUE)
+  has_no  <- grepl("(?i)\\bNo\\.\\s*\\d+",                    line, perl = TRUE)
+  has_vol && has_no
+}
+
+# ── is_allcaps_heading() ──────────────────────────────────────────────────────
+# Returns TRUE if a single line looks like an ALL CAPS article heading.
+# Criteria (all must be met):
+#   - At least ALLCAPS_MIN_CHARS total characters (after trimming)
+#   - At least ALLCAPS_MIN_ALPHA alpha characters
+#   - At least ALLCAPS_THRESHOLD fraction of alpha chars are uppercase
+#   - Not a masthead line
+is_allcaps_heading <- function(line) {
+  line <- trimws(line)
+  if (nchar(line) < ALLCAPS_MIN_CHARS) return(FALSE)
+  if (is_masthead(line))               return(FALSE)
+
+  alpha  <- gsub("[^A-Za-z]", "", line)
+  if (nchar(alpha) < ALLCAPS_MIN_ALPHA) return(FALSE)
+
+  upper  <- gsub("[^A-Z]", "", alpha)
+  (nchar(upper) / nchar(alpha)) >= ALLCAPS_THRESHOLD
+}
+
+# ── parse_contents_section() ──────────────────────────────────────────────────
+# Scans the first CONTENTS_SCAN_LINES lines of an issue for a CONTENTS header,
+# then extracts article title strings from the lines that follow.
+# Trailing page-number patterns (dots + digits) are stripped.
+# Returns a character vector of title strings (may be empty).
+parse_contents_section <- function(lines) {
+  scan_n  <- min(CONTENTS_SCAN_LINES, length(lines))
+  region  <- lines[seq_len(scan_n)]
+
+  # Find "CONTENTS" line (whole-line or near-whole-line match, case-insensitive)
+  cont_idx <- grep("^\\s*CONTENTS[.:\\s]*$", region, ignore.case = TRUE)
+  if (length(cont_idx) == 0) {
+    # Broader: any line that IS just the word "contents" (allow extra spaces)
+    cont_idx <- grep("(?i)^\\s*contents\\s*$", region, perl = TRUE)
+  }
+  if (length(cont_idx) == 0) return(character(0))
+
+  start     <- cont_idx[1] + 1L
+  end       <- min(start + 80L, scan_n)
+  titles    <- character(0)
+  blank_run <- 0L
+
+  for (i in start:end) {
+    line <- trimws(region[i])
+
+    if (nchar(line) == 0L) {
+      blank_run <- blank_run + 1L
+      if (blank_run >= 3L) break   # three consecutive blanks → end of contents
+      next
+    }
+    blank_run <- 0L
+
+    # Strip trailing page number: "TITLE .......... 12" or "TITLE  12"
+    clean <- sub("[\\.\\s]{2,}\\d+\\s*$", "", line)
+    clean <- sub("\\s+\\d+\\s*$",         "", clean)
+    clean <- trimws(clean)
+
+    if (nchar(clean) >= CONTENTS_MIN_CHARS) {
+      titles <- c(titles, clean)
+    }
+  }
+  titles
+}
+
+# ── find_article_boundaries() ─────────────────────────────────────────────────
+# Identifies article-start line indices and their titles within an issue.
+# Combines the Contents section titles with ALL CAPS heading detection.
+#
+# Returns a list with two parallel vectors:
+#   $idx    integer vector of 1-based line indices
+#   $title  character vector of article titles (one per index)
+find_article_boundaries <- function(lines) {
+  n              <- length(lines)
+  boundary_idx   <- integer(0)
+  boundary_title <- character(0)
+
+  # ── Step 1: parse Contents section for expected titles ────────────────────
+  contents_titles <- parse_contents_section(lines)
+
+  # ── Step 2: scan every line ───────────────────────────────────────────────
+  for (i in seq_len(n)) {
+    line <- trimws(lines[i])
+    if (nchar(line) == 0L) next
+
+    matched_title <- NA_character_
+
+    # 2a) Check whether this line matches a Contents title
+    if (length(contents_titles) > 0) {
+      for (ct in contents_titles) {
+        # Case-insensitive substring match; require content title ≥ 5 chars
+        if (nchar(ct) >= 5 &&
+            grepl(ct, line, ignore.case = TRUE, fixed = FALSE)) {
+          matched_title <- ct
+          break
+        }
+      }
+    }
+
+    # 2b) ALL CAPS heading detection (runs independently of contents match)
+    if (is.na(matched_title) && is_allcaps_heading(line)) {
+      # Require the heading to be "standalone": at least one adjacent blank line
+      prev_blank <- (i == 1L) || (nchar(trimws(lines[i - 1L])) == 0L)
+      next_blank <- (i == n)  || (nchar(trimws(lines[i + 1L])) == 0L)
+      if (prev_blank || next_blank) {
+        matched_title <- line
+      }
+    }
+
+    # 2c) Record the boundary (deduplicate by line index)
+    if (!is.na(matched_title) && !(i %in% boundary_idx)) {
+      boundary_idx   <- c(boundary_idx, i)
+      boundary_title <- c(boundary_title, matched_title)
+    }
+  }
+
+  # ── Sort by line index ─────────────────────────────────────────────────────
+  ord            <- order(boundary_idx)
+  list(idx = boundary_idx[ord], title = boundary_title[ord])
+}
+```
+
+---
+
+## Chunk 4 — Preview Article Detection (Dry Run)
+
+Scans every issue file and reports the article boundaries detected.
+**No files are written.**  Review the output before running Chunk 5.
+
+```{r preview}
+cat("=== ARTICLE DETECTION PREVIEW ===\n\n")
+
+grand_articles <- 0L
+
+for (vf in vol_folders) {
+  issues_dir <- file.path(by_volume_dir, vf, paste0(vf, "issues"))
+  if (!dir.exists(issues_dir)) next
+
+  issue_files <- sort(list.files(issues_dir, pattern = "\\.txt$",
+                                  full.names = FALSE, ignore.case = TRUE))
+  if (length(issue_files) == 0L) next
+
+  cat(sprintf("── %s (%d issue file(s)) ──\n", vf, length(issue_files)))
+
+  for (iff in issue_files) {
+    issue_path   <- file.path(issues_dir, iff)
+    lines        <- readLines(issue_path, warn = FALSE, encoding = "UTF-8")
+    bounds       <- find_article_boundaries(lines)
+    n_boundaries <- length(bounds$idx)
+
+    # Report Contents section
+    ct <- parse_contents_section(lines)
+    cat(sprintf(
+      "  %-40s  %2d article boundary/ies  (Contents titles found: %d)\n",
+      iff, n_boundaries, length(ct)
+    ))
+
+    if (n_boundaries > 0) {
+      for (k in seq_along(bounds$idx)) {
+        preview <- substr(trimws(bounds$title[k]), 1, 70)
+        cat(sprintf("    line %5d  %s\n", bounds$idx[k], preview))
+      }
+      grand_articles <- grand_articles + n_boundaries
+    } else {
+      cat("    *** No article boundaries detected — issue will be one file ***\n")
+      grand_articles <- grand_articles + 1L   # whole issue = 1 "article"
+    }
+    cat("\n")
+  }
+}
+
+cat(strrep("=", 60), "\n")
+cat("Total article sections detected (approx.):", grand_articles, "\n")
+```
+
+---
+
+## Chunk 5 — Split and Write Article Files
+
+Creates `WEVol{n}_{year}articles/` inside each volume folder and writes
+one `.txt` file per detected article, named:
+
+```
+WEVol{n}_{year}_issue{m}_TITLE_OF_ARTICLE.txt
+```
+
+All text is preserved; only the split points change.
+
+```{r write_articles}
+cat("=== WRITING ARTICLE FILES ===\n\n")
+
+total_written <- 0L
+total_skipped <- 0L
+errors_log    <- character(0)
+
+for (vf in vol_folders) {
+  issues_dir   <- file.path(by_volume_dir, vf, paste0(vf, "issues"))
+  articles_dir <- file.path(by_volume_dir, vf, paste0(vf, "articles"))
+
+  if (!dir.exists(issues_dir)) {
+    cat(vf, ": issues folder not found — skipping\n\n")
+    next
+  }
+
+  issue_files <- sort(list.files(issues_dir, pattern = "\\.txt$",
+                                  full.names = FALSE, ignore.case = TRUE))
+  if (length(issue_files) == 0L) {
+    cat(vf, ": no issue files found — skipping\n\n")
+    next
+  }
+
+  dir.create(articles_dir, showWarnings = FALSE, recursive = TRUE)
+  cat(sprintf("── %s → %s ──\n", vf, paste0(vf, "articles")))
+
+  for (iff in issue_files) {
+    issue_path <- file.path(issues_dir, iff)
+    lines      <- readLines(issue_path, warn = FALSE, encoding = "UTF-8")
+    bounds     <- find_article_boundaries(lines)
+    n_bounds   <- length(bounds$idx)
+
+    # Extract the issue stem (e.g. "WEVol1_1872_issue3") from the filename
+    issue_stem <- sub("\\.txt$", "", iff, ignore.case = TRUE)
+
+    # ── Build article blocks ───────────────────────────────────────────────
+    if (n_bounds == 0L) {
+      # No boundaries found: treat the entire issue as a single article
+      blocks <- list(list(
+        start = 1L,
+        end   = length(lines),
+        title = "FULL_ISSUE"
+      ))
+    } else {
+      blocks <- vector("list", n_bounds)
+      for (k in seq_len(n_bounds)) {
+        start <- bounds$idx[k]
+        end   <- if (k < n_bounds) bounds$idx[k + 1L] - 1L else length(lines)
+        blocks[[k]] <- list(start = start, end = end, title = bounds$title[k])
+      }
+      # Prepend any lines before the first boundary as FRONT_MATTER
+      if (bounds$idx[1L] > 1L) {
+        pre_block <- list(
+          start = 1L,
+          end   = bounds$idx[1L] - 1L,
+          title = "FRONT_MATTER"
+        )
+        blocks <- c(list(pre_block), blocks)
+      }
+    }
+
+    # ── Write one file per block ───────────────────────────────────────────
+    slug_tally <- list()   # track duplicate slugs within this issue
+
+    for (blk in blocks) {
+      blk_lines <- lines[blk$start:blk$end]
+
+      # Drop blocks that are too short to be real articles
+      if (length(blk_lines) < MIN_ARTICLE_LINES) next
+
+      slug      <- title_to_slug(blk$title)
+
+      # Resolve duplicate slugs by appending _2, _3, …
+      base_slug <- slug
+      suffix    <- 1L
+      while (!is.null(slug_tally[[slug]])) {
+        suffix <- suffix + 1L
+        slug   <- paste0(base_slug, "_", suffix)
+      }
+      slug_tally[[slug]] <- TRUE
+
+      out_name <- paste0(issue_stem, "_", slug, ".txt")
+      out_path <- file.path(articles_dir, out_name)
+
+      result <- tryCatch({
+        writeLines(blk_lines, con = out_path, useBytes = TRUE)
+        TRUE
+      }, error = function(e) conditionMessage(e))
+
+      if (isTRUE(result)) {
+        cat(sprintf("  Written: %-65s  (%d lines)\n",
+                    out_name, length(blk_lines)))
+        total_written <- total_written + 1L
+      } else {
+        msg <- paste0("ERROR ", issue_stem, " / ", slug, ": ", result)
+        cat(" ", msg, "\n")
+        errors_log <- c(errors_log, msg)
+      }
+    }
+  }
+  cat("\n")
+}
+
+cat(strrep("=", 60), "\n")
+cat("Article files written:", total_written,      "\n")
+cat("Issues skipped       :", total_skipped,      "\n")
+cat("Errors               :", length(errors_log), "\n")
+if (length(errors_log) > 0) {
+  cat("\nError details:\n")
+  cat(paste0("  ", errors_log, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 6 — Verify Output
+
+Prints a summary table showing how many article files were created per volume.
+
+```{r verify}
+cat("=== OUTPUT VERIFICATION ===\n\n")
+cat(sprintf("%-22s  %10s  %s\n", "Volume folder", "Articles", "Articles folder"))
+cat(strrep("-", 70), "\n")
+
+grand_total <- 0L
+
+for (vf in vol_folders) {
+  articles_dir <- file.path(by_volume_dir, vf, paste0(vf, "articles"))
+  if (!dir.exists(articles_dir)) {
+    cat(sprintf("%-22s  %10s  (folder not created)\n", vf, "--"))
+    next
+  }
+  art_files   <- list.files(articles_dir, pattern = "\\.txt$",
+                             full.names = FALSE, ignore.case = TRUE)
+  n           <- length(art_files)
+  grand_total <- grand_total + n
+  cat(sprintf("%-22s  %10d  %s\n", vf, n, paste0(vf, "articles")))
+}
+
+cat(strrep("-", 70), "\n")
+cat(sprintf("%-22s  %10d\n", "TOTAL article files", grand_total))
+cat("\nVerification complete.\n")
+```
