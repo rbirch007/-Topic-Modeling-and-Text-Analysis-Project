@@ -48,9 +48,9 @@ Run each chunk in order.
 
 ```{r config}
 # ── BY-VOLUME FOLDER ──────────────────────────────────────────────────────────
-# This must match the output_dir you used in split_into_volume_files.Rmd.
+# Folder containing the WEVol*_**** sub-folders with the per-volume .txt files.
 by_volume_dir <- normalizePath(
-  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/by_volume",
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input/by_volume",
   winslash = "/",
   mustWork = FALSE
 )
