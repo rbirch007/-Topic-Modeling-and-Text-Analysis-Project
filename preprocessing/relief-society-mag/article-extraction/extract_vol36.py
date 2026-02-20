@@ -68,7 +68,7 @@ def sanitize_filename(s: str, max_len: int = 80) -> str:
 #   etype  - entry type classification
 # ---------------------------------------------------------------------------
 
-VOL36_TOC = {
+dontuseVOL36_TOC = {
     ("Vol36", "No01_January_1949"): [
         {"title": "January Snow", "author": "Eva Willes Wangsgaard", "etype": "poem"},
         {"title": "New Year Greetings", "author": "General Presidency of Relief Society", "etype": "article"},
@@ -543,6 +543,14 @@ VOL36_TOC = {
     ],
 }
 
+VOL36_TOC = {
+    ("Vol36", "No12_December_1949"): [
+        {"title": "Dimensions", "author": "Della Adams Leitner", "etype": "poem"},
+        {"title": "Joanna (Conclusion)", "author": "Margery S. Stewart", "etype": "fiction"},
+    ]
+}
+
+
 # ---------------------------------------------------------------------------
 # Filename mapping: issue key -> (source filename, month name for output)
 # ---------------------------------------------------------------------------
@@ -622,10 +630,10 @@ def strip_running_noise(text: str) -> tuple[str, list[str]]:
     return '\n'.join(cleaned), noise
 
 
-def find_ads_section(body: str, body_offset: int) -> tuple[str, str, int]:
+def find_ads_section(body: str) -> str:
     """
-    Split body text into main body and ads section.
-    Returns (body, ads_text, ads_start_offset).
+    Discover ads text and return it.  Leave body unchanged.
+    Returns (ads_text).
     """
     # Look for common ads section markers
     ads_markers = [
@@ -638,10 +646,10 @@ def find_ads_section(body: str, body_offset: int) -> tuple[str, str, int]:
     for marker in ads_markers:
         match = re.search(marker, body, re.IGNORECASE)
         if match:
-            ads_start = match.start()
-            return body[:ads_start], body[ads_start:], body_offset + ads_start
+            # this kinda sucks because it assumes the ads are the end but meh
+            return body[match.start():]
 
-    return body, "", body_offset + len(body)
+    return ""
 
 
 def split_front_matter(text: str) -> tuple[str, str]:
@@ -649,32 +657,28 @@ def split_front_matter(text: str) -> tuple[str, str]:
     Split text into front matter (TOC, etc.) and body.
     Looks for "PUBLISHED MONTHLY BY THE GENERAL BOARD" marker which ends front matter.
     """
-    lines = text.split('\n')
-    split_point = len(lines)
 
-    # Primary marker: "PUBLISHED MONTHLY BY THE GENERAL BOARD OF RELIEF SOCIETY"
-    # This reliably marks the end of front matter/TOC
-    for i, line in enumerate(lines):
-        if 'PUBLISHED MONTHLY BY THE GENERAL BOARD' in line:
-            # Body starts after this marker (skip 1-2 lines)
-            split_point = min(i + 2, len(lines))
-            break
+    toc_end_markers = [
+        "PUBLISHED MONTHLY BY THE GENERAL BOARD",
+        "ISHED MONTHLY BY THE GENERAL BOARD",
+        "MONTHLY BY THE GENERAL BOARD"
+    ]
 
-    # Fallback: look for first "Page X" pattern followed by article title
-    if split_point == len(lines):
-        for i, line in enumerate(lines):
-            if i > 5 and re.match(r'^Page\s+\d+\s+[A-Z]', line):  # "Page 3 The Modern..."
-                split_point = i
-                break
+    split_point = -1
+    for marker in toc_end_markers:
+        match = re.search(marker, text, re.IGNORECASE)
+        if match:
+            split_point = match.start()
+            front_matter = text[:split_point]
+            body = text[split_point:]
 
-    front_matter = '\n'.join(lines[:split_point])
-    body = '\n'.join(lines[split_point:])
+            return front_matter, body
 
-    return front_matter, body
+    if split_point == -1:
+        raise Exception("Unable to find 'PUBLISHED MONTHLY BY THE GENERAL BOARD' (case sensitive) and so couldn't split text.")
 
 
-def _match_entries_with_strategy(body: str, entries: list[dict],
-                                 body_offset: int) -> list[tuple[int, dict]]:
+def _match_entries_with_strategy(body: str, entries: list[dict]) -> list[tuple[int, dict]]:
     """
     Match all entries in the body.
     Returns list of (position, entry_dict) tuples.
@@ -683,16 +687,16 @@ def _match_entries_with_strategy(body: str, entries: list[dict],
 
     for entry in entries:
         pattern = build_regex_for_title(entry["title"])
+        import ipdb; ipdb.set_trace(context=17)
         match = pattern.search(body)
 
         if match:
-            found.append((body_offset + match.start(), entry))
+            found.append((match.start(), entry))
 
     return found
 
 
-def _boundaries_from_found(found: list[tuple[int, dict]],
-                           body_end: int) -> list[tuple[int, int, dict]]:
+def _boundaries_from_found(body: str, found: list[tuple[int, dict]]) -> list[tuple[int, int, dict]]:
     """
     Convert (position, entry) list into (start, end, entry) boundaries.
     Each entry's text extends from its match to the next entry's match.
@@ -706,8 +710,7 @@ def _boundaries_from_found(found: list[tuple[int, dict]],
     bounds = []
     for i, (pos, entry) in enumerate(found):
         start = pos
-        # End is the start of the next entry, or body_end
-        end = found[i + 1][0] if i + 1 < len(found) else body_end
+        end = found[i + 1][0] if i + 1 < len(found) else len(body)
         bounds.append((start, end, entry))
 
     return bounds
@@ -729,7 +732,15 @@ def extract_toc_from_front_matter(front_matter: str) -> tuple[str, str]:
     remaining = front_matter[:toc_start]
 
     # Try to find where TOC ends
-    toc_end_markers = ["PUBLISHED MONTHLY", "^[Page\s]*\d+"]
+    # use raw strings e.g. r""
+    # that way it's explicit that the backslashes belong to regex
+    # and not python's string parser
+    toc_end_markers = [
+        "PUBLISHED MONTHLY BY THE GENERAL BOARD",
+        "ISHED MONTHLY BY THE GENERAL BOARD",
+        "MONTHLY BY THE GENERAL BOARD",
+        r"^[Page\s]*\d+"
+    ]
     for marker in toc_end_markers:
         match = re.search(marker, toc_text, re.IGNORECASE)
         if match:
@@ -749,15 +760,13 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
     """
     # Split off front matter so title matches happen in body only
     front_matter, body = split_front_matter(text)
-    body_offset = len(front_matter)
 
     # Separate ads from the tail of the body
-    body, ads_text, ads_start = find_ads_section(body, body_offset)
-    body_end = body_offset + len(body)
+    ads_text = find_ads_section(body)
 
     # Run matching (single strategy - no line-start dependency)
-    found = _match_entries_with_strategy(body, entries, body_offset)
-    bounds = _boundaries_from_found(found, body_end)
+    found = _match_entries_with_strategy(body, entries)
+    bounds = _boundaries_from_found(body, found)
 
     # Build lookup dict: title -> (start, end)
     by_title = {e["title"]: (s, nd) for s, nd, e in bounds}
@@ -907,7 +916,7 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
 
     # Find gaps in body not covered by any entry (using union of intervals)
     all_intervals = sorted(set(covered_intervals))
-    cursor = body_offset
+    cursor = 0
     for iv_start, iv_end in all_intervals:
         if cursor < iv_start:
             gap_text = text[cursor:iv_start].strip()
@@ -915,8 +924,8 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
                 misc_parts.append(gap_text)
         cursor = max(cursor, iv_end)
 
-    if cursor < body_end:
-        gap_text = text[cursor:body_end].strip()
+    if cursor < len(body):
+        gap_text = text[cursor:].strip()
         if gap_text:
             misc_parts.append(gap_text)
 
