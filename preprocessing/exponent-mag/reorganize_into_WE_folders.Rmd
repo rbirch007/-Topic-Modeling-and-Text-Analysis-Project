@@ -1,0 +1,465 @@
+---
+title: "Woman's Exponent — Reorganize into WE-indivolumes, WE-Issues, and WE-articles-byvolumeandissue"
+output: html_notebook
+---
+
+# Overview
+
+This notebook reads the existing `by_volume` output (produced by
+`split_into_volume_files.Rmd`, `split_volumes_into_issues.Rmd`, and
+`split_issues_into_articles.Rmd`) and creates **three new parallel folder
+structures**:
+
+| New folder | Contents | Example file |
+|---|---|---|
+| `WE-indivolumes/` | One `.txt` per volume | `WEVol1_1872.txt` |
+| `WE-Issues/WEVol1-1872/` | All issue files for that volume | `WEVol1_1872_issue1.txt` |
+| `WE-articles-byvolumeandissue/WEVol1-1872/WEVol1-1872-Issue1/` | All articles for that issue | `WEVol1_1872_issue1_TITLE.txt` |
+
+**Naming convention:**
+
+- **Folder names** use dashes: `WE-indivolumes`, `WEVol1-1872`, `WEVol1-1872-Issue3`
+- **File names** use underscores: `WEVol1_1872.txt`, `WEVol1_1872_issue3.txt`, `WEVol1_1872_issue3_TITLE.txt`
+
+Files are **copied** by default — originals in the input `by_volume` tree are
+never touched.  Set `copy_mode <- FALSE` in Chunk 1 to move instead.
+
+Run each chunk in order.  Chunks 4, 5, and 6 are independent once Chunk 3 has
+run; you can execute any subset of them.
+
+---
+
+## Chunk 1 — Configuration
+
+```{r config}
+# ── SOURCE ─────────────────────────────────────────────────────────────────────
+# The by_volume folder that contains your WEVol*_**** sub-folders.
+# This is the output produced by split_into_volume_files.Rmd.
+by_volume_dir <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input/by_volume",
+  winslash = "/",
+  mustWork = FALSE
+)
+
+# ── OUTPUT ROOT ────────────────────────────────────────────────────────────────
+# Parent folder where the three new WE-* directories will be created.
+output_root <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output",
+  winslash = "/",
+  mustWork = FALSE
+)
+
+# ── COPY vs MOVE ───────────────────────────────────────────────────────────────
+# TRUE  = copy files (originals in by_volume are kept — RECOMMENDED)
+# FALSE = move files (originals are removed after a successful move)
+copy_mode <- TRUE
+
+# ── VOLUME → YEAR TABLE ────────────────────────────────────────────────────────
+# The Woman's Exponent ran June 1872 – February 1914 (41 volumes).
+# Each entry is the year that volume started.  Must match the table used in the
+# split notebooks so folder names are resolved correctly.
+vol_year <- c(
+  `1`  = 1872, `2`  = 1873, `3`  = 1874, `4`  = 1875, `5`  = 1876,
+  `6`  = 1877, `7`  = 1878, `8`  = 1879, `9`  = 1880, `10` = 1881,
+  `11` = 1882, `12` = 1883, `13` = 1884, `14` = 1885, `15` = 1886,
+  `16` = 1887, `17` = 1888, `18` = 1889, `19` = 1890, `20` = 1891,
+  `21` = 1892, `22` = 1893, `23` = 1894, `24` = 1895, `25` = 1896,
+  `26` = 1897, `27` = 1898, `28` = 1899, `29` = 1900, `30` = 1901,
+  `31` = 1902, `32` = 1903, `33` = 1904, `34` = 1905, `35` = 1906,
+  `36` = 1907, `37` = 1908, `38` = 1909, `39` = 1910, `40` = 1911,
+  `41` = 1912
+)
+```
+
+---
+
+## Chunk 2 — Verify Paths
+
+```{r check_paths}
+cat("=== PATH CHECK ===\n")
+cat("by_volume_dir :", by_volume_dir, "\n")
+cat("output_root   :", output_root,   "\n")
+cat("Mode          :", if (copy_mode) "COPY (originals kept)" else "MOVE (originals removed)", "\n\n")
+
+if (!dir.exists(by_volume_dir)) {
+  stop(
+    "by_volume_dir not found:\n  ", by_volume_dir,
+    "\n\nRun split_into_volume_files.Rmd first, then update the path in Chunk 1."
+  )
+}
+
+if (!dir.exists(output_root)) {
+  cat("output_root does not exist yet — it will be created.\n")
+}
+cat("Path check passed.\n")
+```
+
+---
+
+## Chunk 3 — Discover Volume Folders
+
+Scans `by_volume_dir` for `WEVol{n}_{year}` source sub-folders (which use
+underscores, as created by the split notebooks) and sorts them numerically.
+Every subsequent chunk relies on the `vol_folders` and `vol_nums` vectors built
+here.
+
+The **destination** folder names substitute the underscore separator with a
+dash, e.g. source `WEVol1_1872` → destination `WEVol1-1872`.
+
+```{r discover_volumes}
+all_dirs    <- list.dirs(by_volume_dir, recursive = FALSE, full.names = FALSE)
+vol_folders <- grep("^WEVol\\d+_\\d{4}$", all_dirs, value = TRUE)
+
+# Extract the numeric volume number from each folder name and sort
+vol_nums    <- as.integer(sub("^WEVol(\\d+)_.*", "\\1", vol_folders))
+ord         <- order(vol_nums)
+vol_folders <- vol_folders[ord]   # source folder names:  WEVol1_1872, WEVol2_1873, …
+vol_nums    <- vol_nums[ord]
+
+# Build destination folder names (dashes instead of underscore between vol# and year)
+# Source:  WEVol1_1872  →  Dest folder:  WEVol1-1872
+vol_dest_names <- sub("^(WEVol\\d+)_(\\d{4})$", "\\1-\\2", vol_folders)
+
+cat("=== VOLUME FOLDERS DISCOVERED ===\n")
+cat("Count:", length(vol_folders), "\n\n")
+
+if (length(vol_folders) == 0) {
+  stop(
+    "No WEVol*_**** folders found in:\n  ", by_volume_dir,
+    "\n\nRun split_into_volume_files.Rmd first."
+  )
+}
+
+# Preview table
+cat(sprintf("%-6s  %-22s  %-22s  %-10s  %-10s\n",
+            "Vol.", "Source folder", "Dest folder", "Issues?", "Articles?"))
+cat(strrep("-", 75), "\n")
+
+for (i in seq_along(vol_folders)) {
+  vf    <- vol_folders[i]
+  vdest <- vol_dest_names[i]
+  vn    <- vol_nums[i]
+  has_issues   <- dir.exists(file.path(by_volume_dir, vf, paste0(vf, "issues")))
+  has_articles <- dir.exists(file.path(by_volume_dir, vf, paste0(vf, "articles")))
+  cat(sprintf("Vol.%-3d  %-22s  %-22s  %-10s  %-10s\n",
+              vn, vf, vdest,
+              if (has_issues)   "yes" else "-- missing",
+              if (has_articles) "yes" else "-- missing"))
+}
+cat(strrep("-", 75), "\n")
+cat("Ready to reorganize.\n")
+```
+
+---
+
+## Chunk 4 — Section 1: WE-indivolumes
+
+Copies (or moves) each volume `.txt` file into a single flat folder
+`WE-indivolumes/`.  Filenames are kept as-is from the source (underscores).
+
+**Result:**
+```
+output/
+  WE-indivolumes/
+    WEVol1_1872.txt
+    WEVol2_1873.txt
+    ...
+    WEVol41_1912.txt
+```
+
+```{r section1_indivolumes}
+cat("=== SECTION 1: WE-indivolumes ===\n\n")
+
+indi_dir <- file.path(output_root, "WE-indivolumes")
+dir.create(indi_dir, showWarnings = FALSE, recursive = TRUE)
+cat("Output folder:", indi_dir, "\n\n")
+
+written <- 0L
+skipped <- 0L
+errors  <- character(0)
+
+for (i in seq_along(vol_folders)) {
+  vf       <- vol_folders[i]        # source folder name, e.g. "WEVol1_1872"
+  src_name <- paste0(vf, ".txt")    # source filename:    WEVol1_1872.txt (keep as-is)
+  src      <- file.path(by_volume_dir, vf, src_name)
+  dst      <- file.path(indi_dir, src_name)
+
+  if (!file.exists(src)) {
+    cat(sprintf("SKIP (volume file not found): %s\n", src))
+    skipped <- skipped + 1L
+    next
+  }
+
+  ok <- if (copy_mode) file.copy(src, dst, overwrite = FALSE) else file.rename(src, dst)
+
+  if (isTRUE(ok)) {
+    cat(sprintf("  %s\n", src_name))
+    written <- written + 1L
+  } else {
+    msg <- paste0("ERROR copying ", src_name)
+    cat(msg, "\n")
+    errors <- c(errors, msg)
+  }
+}
+
+cat(sprintf("\nSection 1 done — written: %d  skipped: %d  errors: %d\n",
+            written, skipped, length(errors)))
+if (length(errors) > 0) {
+  cat("Errors:\n")
+  cat(paste0("  ", errors, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 5 — Section 2: WE-Issues
+
+Copies every issue file from each source `WEVol{n}_{year}issues/` folder into
+a volume subfolder that uses dashes in the folder name.  File names are kept
+as-is (underscores).
+
+**Result:**
+```
+output/
+  WE-Issues/
+    WEVol1-1872/
+      WEVol1_1872_issue1.txt
+      WEVol1_1872_issue2.txt
+      ...
+    WEVol2-1873/
+      ...
+```
+
+```{r section2_issues}
+cat("=== SECTION 2: WE-Issues ===\n\n")
+
+issues_root <- file.path(output_root, "WE-Issues")
+dir.create(issues_root, showWarnings = FALSE, recursive = TRUE)
+cat("Output root:", issues_root, "\n\n")
+
+written <- 0L
+skipped <- 0L
+errors  <- character(0)
+
+for (i in seq_along(vol_folders)) {
+  vf    <- vol_folders[i]       # source: "WEVol1_1872"
+  vdest <- vol_dest_names[i]    # dest:   "WEVol1-1872"
+
+  src_issues_dir <- file.path(by_volume_dir, vf, paste0(vf, "issues"))
+  dst_vol_dir    <- file.path(issues_root, vdest)   # WE-Issues/WEVol1-1872/
+
+  if (!dir.exists(src_issues_dir)) {
+    cat(sprintf("SKIP (issues folder not found): %s\n", src_issues_dir))
+    skipped <- skipped + 1L
+    next
+  }
+
+  issue_files <- sort(list.files(src_issues_dir, pattern = "\\.txt$",
+                                  full.names = FALSE, ignore.case = TRUE))
+
+  if (length(issue_files) == 0L) {
+    cat(sprintf("SKIP (no .txt files in issues folder): %s\n", vf))
+    skipped <- skipped + 1L
+    next
+  }
+
+  dir.create(dst_vol_dir, showWarnings = FALSE, recursive = TRUE)
+  cat(sprintf("%s/  (%d issue file(s))  ->  %s/\n", vf, length(issue_files), vdest))
+
+  for (iff in issue_files) {
+    # File names are kept exactly as produced by split_volumes_into_issues.Rmd
+    # (underscores already embedded):
+    #   WEVol1_1872_issue3.txt  ->  WE-Issues/WEVol1-1872/WEVol1_1872_issue3.txt
+    src <- file.path(src_issues_dir, iff)
+    dst <- file.path(dst_vol_dir, iff)
+
+    ok <- if (copy_mode) file.copy(src, dst, overwrite = FALSE) else file.rename(src, dst)
+
+    if (isTRUE(ok)) {
+      cat(sprintf("  %s\n", iff))
+      written <- written + 1L
+    } else {
+      msg <- paste0("ERROR: ", vf, "/", iff)
+      cat(msg, "\n")
+      errors <- c(errors, msg)
+    }
+  }
+  cat("\n")
+}
+
+cat(sprintf("Section 2 done — written: %d  skipped: %d  errors: %d\n",
+            written, skipped, length(errors)))
+if (length(errors) > 0) {
+  cat("Errors:\n")
+  cat(paste0("  ", errors, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 6 — Section 3: WE-articles-byvolumeandissue
+
+Copies every article file into a two-level hierarchy.  Both the volume subfolder
+and the issue subfolder use dashes.  File names are kept as-is (underscores).
+
+**Result:**
+```
+output/
+  WE-articles-byvolumeandissue/
+    WEVol1-1872/
+      WEVol1-1872-Issue1/
+        WEVol1_1872_issue1_TITLE_OF_ARTICLE.txt
+        WEVol1_1872_issue1_ANOTHER_TITLE.txt
+      WEVol1-1872-Issue2/
+        WEVol1_1872_issue2_TITLE_OF_ARTICLE.txt
+        ...
+    WEVol2-1873/
+      ...
+```
+
+```{r section3_articles}
+cat("=== SECTION 3: WE-articles-byvolumeandissue ===\n\n")
+
+art_root <- file.path(output_root, "WE-articles-byvolumeandissue")
+dir.create(art_root, showWarnings = FALSE, recursive = TRUE)
+cat("Output root:", art_root, "\n\n")
+
+written <- 0L
+skipped <- 0L
+errors  <- character(0)
+
+for (i in seq_along(vol_folders)) {
+  vf    <- vol_folders[i]       # source: "WEVol1_1872"
+  vdest <- vol_dest_names[i]    # dest:   "WEVol1-1872"
+
+  src_art_dir <- file.path(by_volume_dir, vf, paste0(vf, "articles"))
+  dst_vol_dir <- file.path(art_root, vdest)   # WE-articles-.../WEVol1-1872/
+
+  if (!dir.exists(src_art_dir)) {
+    cat(sprintf("SKIP (articles folder not found): %s\n", src_art_dir))
+    skipped <- skipped + 1L
+    next
+  }
+
+  art_files <- sort(list.files(src_art_dir, pattern = "\\.txt$",
+                                full.names = FALSE, ignore.case = TRUE))
+
+  if (length(art_files) == 0L) {
+    cat(sprintf("SKIP (no .txt files in articles folder): %s\n", vf))
+    skipped <- skipped + 1L
+    next
+  }
+
+  cat(sprintf("%s/  (%d article file(s))  ->  %s/\n", vf, length(art_files), vdest))
+
+  for (af in art_files) {
+    # ── Extract the issue number from the filename ────────────────────────────
+    # Filename pattern: WEVol1_1872_issue3_SOME_TITLE.txt
+    # Matches "_issue3", "_issue10", "_issue3a", etc.
+    m <- regmatches(af, regexpr("(?i)_issue(\\d+[a-z]?)", af, perl = TRUE))
+
+    if (length(m) == 0 || nchar(m) == 0) {
+      # Cannot parse issue number — place in a catch-all subfolder
+      issue_subfolder <- paste0(vdest, "-Issue-Unknown")
+      cat(sprintf("  WARNING: cannot extract issue # from '%s' — using %s/\n",
+                  af, issue_subfolder))
+    } else {
+      issue_num       <- sub("(?i)_issue", "", m, perl = TRUE)   # e.g. "3" or "3a"
+      issue_subfolder <- paste0(vdest, "-Issue", issue_num)      # e.g. "WEVol1-1872-Issue3"
+    }
+
+    dst_issue_dir <- file.path(dst_vol_dir, issue_subfolder)
+    dir.create(dst_issue_dir, showWarnings = FALSE, recursive = TRUE)
+
+    src <- file.path(src_art_dir, af)
+    dst <- file.path(dst_issue_dir, af)   # filename unchanged (keeps underscores)
+
+    ok <- if (copy_mode) file.copy(src, dst, overwrite = FALSE) else file.rename(src, dst)
+
+    if (isTRUE(ok)) {
+      cat(sprintf("  [%-30s]  %s\n", issue_subfolder, af))
+      written <- written + 1L
+    } else {
+      msg <- paste0("ERROR: ", vf, "/", af)
+      cat(msg, "\n")
+      errors <- c(errors, msg)
+    }
+  }
+  cat("\n")
+}
+
+cat(sprintf("Section 3 done — written: %d  skipped: %d  errors: %d\n",
+            written, skipped, length(errors)))
+if (length(errors) > 0) {
+  cat("Errors:\n")
+  cat(paste0("  ", errors, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 7 — Verify All Three Output Structures
+
+Run after all three section chunks to confirm the expected folders and file
+counts.
+
+```{r verify}
+cat("=== OUTPUT VERIFICATION ===\n\n")
+
+# ── WE-indivolumes ─────────────────────────────────────────────────────────────
+cat("── WE-indivolumes ──────────────────────────────────────\n")
+indi_path  <- file.path(output_root, "WE-indivolumes")
+if (dir.exists(indi_path)) {
+  indi_files <- sort(list.files(indi_path, pattern = "\\.txt$", ignore.case = TRUE))
+  cat(sprintf("  Volume files: %d\n", length(indi_files)))
+  cat(paste0("    ", indi_files, "\n"), sep = "")
+} else {
+  cat("  Folder does not exist yet — run Chunk 4.\n")
+}
+
+# ── WE-Issues ─────────────────────────────────────────────────────────────────
+cat("\n── WE-Issues ───────────────────────────────────────────\n")
+issues_path <- file.path(output_root, "WE-Issues")
+if (dir.exists(issues_path)) {
+  issue_vdirs  <- sort(list.dirs(issues_path, recursive = FALSE, full.names = FALSE))
+  cat(sprintf("  Volume subfolders: %d\n\n", length(issue_vdirs)))
+  cat(sprintf("  %-22s  %s\n", "Subfolder", "Issue files"))
+  cat("  ", strrep("-", 45), "\n", sep = "")
+  grand_issues <- 0L
+  for (vd in issue_vdirs) {
+    n <- length(list.files(file.path(issues_path, vd), pattern = "\\.txt$",
+                           ignore.case = TRUE))
+    grand_issues <- grand_issues + n
+    cat(sprintf("  %-22s  %d\n", vd, n))
+  }
+  cat("  ", strrep("-", 45), "\n", sep = "")
+  cat(sprintf("  %-22s  %d\n", "TOTAL", grand_issues))
+} else {
+  cat("  Folder does not exist yet — run Chunk 5.\n")
+}
+
+# ── WE-articles-byvolumeandissue ──────────────────────────────────────────────
+cat("\n── WE-articles-byvolumeandissue ────────────────────────\n")
+art_path  <- file.path(output_root, "WE-articles-byvolumeandissue")
+if (dir.exists(art_path)) {
+  art_vdirs  <- sort(list.dirs(art_path, recursive = FALSE, full.names = FALSE))
+  cat(sprintf("  Volume subfolders: %d\n\n", length(art_vdirs)))
+  cat(sprintf("  %-22s  %-20s  %s\n", "Vol folder", "Issue subfolders", "Total articles"))
+  cat("  ", strrep("-", 60), "\n", sep = "")
+  grand_arts <- 0L
+  for (vd in art_vdirs) {
+    vpath     <- file.path(art_path, vd)
+    iss_subs  <- list.dirs(vpath, recursive = FALSE, full.names = FALSE)
+    n_arts    <- length(list.files(vpath, pattern = "\\.txt$",
+                                    recursive = TRUE, ignore.case = TRUE))
+    grand_arts <- grand_arts + n_arts
+    cat(sprintf("  %-22s  %-20d  %d\n", vd, length(iss_subs), n_arts))
+  }
+  cat("  ", strrep("-", 60), "\n", sep = "")
+  cat(sprintf("  %-22s  %-20s  %d\n", "TOTAL", "", grand_arts))
+} else {
+  cat("  Folder does not exist yet — run Chunk 6.\n")
+}
+
+cat("\nVerification complete.\n")
+```
