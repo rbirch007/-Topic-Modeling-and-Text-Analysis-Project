@@ -235,9 +235,14 @@ find_article_boundaries <- function(lines) {
     # 2a) Check whether this line matches a Contents title
     if (length(contents_titles) > 0) {
       for (ct in contents_titles) {
-        # Case-insensitive substring match; require content title ≥ 5 chars
+        # Case-insensitive literal substring match.
+        # tolower() on both sides + fixed = TRUE avoids two problems:
+        #   1. fixed = TRUE prevents title strings that contain regex
+        #      metacharacters (., [, (, -, etc.) from being misinterpreted.
+        #   2. ignore.case = TRUE is silently ignored when fixed = TRUE in R,
+        #      so we fold case manually instead to avoid the warning.
         if (nchar(ct) >= 5 &&
-            grepl(ct, line, ignore.case = TRUE, fixed = FALSE)) {
+            grepl(tolower(ct), tolower(line), fixed = TRUE)) {
           matched_title <- ct
           break
         }
