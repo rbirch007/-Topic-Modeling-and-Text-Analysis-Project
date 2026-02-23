@@ -1,6 +1,8 @@
 """
-Table of Contents for Relief Society Magazine Volumes 33-35
+Table of Contents for Relief Society Magazine Volumes 34-35
 Manually extracted from cleaned data files using LLM/NLP understanding
+
+Volume 33 has been extracted to a separate vol33_toc.py module.
 
 Format: TOC = { ("VolN", "NoX_Month_Year"): [entries], ... }
 Each entry: {"title": str, "author": str or None, "etype": str}
@@ -8,10 +10,10 @@ Each entry: {"title": str, "author": str or None, "etype": str}
 
 TOC = {
     # ===================================================================
-    # VOLUME 33 (1946)
+    # VOLUME 34 (1947)
     # ===================================================================
 
-    ("Vol33", "No1_January_1946"): [
+    ("Vol34", "No1_January_1947"): [
         {"title": "Frontispiece Picture", "author": "General Presidency of Relief Society", "etype": "front_matter"},
         {"title": "New Year's Greeting", "author": "Belle S. Spafford", "etype": "editorial"},
         {"title": "Margaret Cummock Pickering", "author": "Amy Brown Lyman", "etype": "article"},

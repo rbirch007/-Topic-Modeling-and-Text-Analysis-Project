@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Extraction script for Relief Society Magazine Volumes 33-40.
+Extraction script for Relief Society Magazine Volumes 34-35.
 
 Reads cleaned monthly issue files from cleaned-data/ and extracts them into
 individual entries (articles, poems, editorials, fiction, lessons, etc.).
@@ -10,10 +10,12 @@ anywhere-match) and both results are written as separate text files plus
 a per-volume JSON containing full content.  See processed/README.md for
 schema documentation.
 
+NOTE: Volume 33 has been extracted to a separate extract_vol33.py script.
+
 Usage:
-    python extract_vol33-40.py
-    python extract_vol33-40.py --dry-run
-    python extract_vol33-40.py --volume 33
+    python extract_vol34_35.py
+    python extract_vol34_35.py --dry-run
+    python extract_vol34_35.py --volume 34
 """
 
 import argparse
@@ -64,31 +66,19 @@ def sanitize_filename(s: str, max_len: int = 80) -> str:
 #   author - author name or None
 #   etype  - entry type classification
 #
-# NOTE: This script contains TOC data for Vol33-35 (manually extracted).
+# NOTE: This script imports TOC data for Vol34-35 from vol33_35_toc.py.
+#       Vol33 has a separate vol33_toc.py module and extract_vol33.py script.
 #       Vol36-40 TOC data should be added when available.
 # ---------------------------------------------------------------------------
 
-import vol33_35_toc
+import vol34_35_toc
 
-TOC = vol33_35_toc.TOC
+TOC = vol34_35_toc.TOC
 
 # ---------------------------------------------------------------------------
 # Filename mapping: issue key -> (source filename, month name for output)
 # ---------------------------------------------------------------------------
 ISSUE_FILES = {}
-
-# Volume 33
-for no, month, year in [
-    ("No1", "January", "1946"), ("No2", "February", "1946"),
-    ("No3", "March", "1946"), ("No4", "April", "1946"),
-    ("No5", "May", "1946"), ("No6", "June", "1946"),
-    ("No7", "July", "1946"), ("No8", "August", "1946"),
-    ("No9", "September", "1946"), ("No10", "October", "1946"),
-    ("No11", "November", "1946"), ("No12", "December", "1946"),
-]:
-    key = f"{no}_{month}_{year}"
-    fname = f"vol33_{key}.txt"
-    ISSUE_FILES[("Vol33", key)] = (fname, month)
 
 # Volume 34
 for no, month, year in [
