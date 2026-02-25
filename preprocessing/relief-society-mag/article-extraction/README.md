@@ -1,3 +1,1 @@
-# ArticleExtraction
-
-Extracted article-level metadata and content for analysis.
+all extract\*.py comes from the attempts to use the LLM to find the TOC and split it out into lists and tuples that can be used as regex anchors and alleviate LLM use.  this is faster, but not as good as NLP.

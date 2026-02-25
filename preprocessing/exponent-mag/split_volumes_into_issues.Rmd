@@ -1,0 +1,320 @@
+---
+title: "Woman's Exponent — Split Volume Files into Issue Files"
+output: html_notebook
+---
+
+# Overview
+
+This notebook reads the per-volume `.txt` files produced by
+`split_into_volume_files.Rmd` and splits each one into individual
+**issue files**.
+
+**How issue boundaries are detected:**
+Each issue in the *Woman's Exponent* opens with a masthead line that
+contains both a volume label (`Vol. I`, `Vol. 2`, …) **and** an issue
+label (`No. 1`, `No. 2`, …) on the same line, e.g.:
+
+```
+Vol. I.        SALT LAKE CITY, UTAH, JUNE 1, 1872.        No. 1.
+Vol. 34  SALT LAKE CITY UTAH, MAY, 1906  No. 10
+```
+
+Any line matching that pattern is treated as the start of a new issue.
+Everything up to (but not including) the next such line belongs to the
+current issue.  The masthead line itself **stays in the output** — no
+content is removed.
+
+**Output structure** (created inside the same `by_volume` folder):
+```
+by_volume/
+  WEVol1_1872/
+    WEVol1_1872.txt              <- full volume (already exists)
+    WEVol1_1872issues/           <- NEW folder created by this notebook
+      WEVol1_1872_issue1.txt
+      WEVol1_1872_issue2.txt
+      ...
+  WEVol2_1873/
+    WEVol2_1873.txt
+    WEVol2_1873issues/
+      WEVol2_1873_issue1.txt
+      ...
+```
+
+Run each chunk in order.
+
+---
+
+## Chunk 1 — Configuration
+
+```{r config}
+# ── BY-VOLUME FOLDER ──────────────────────────────────────────────────────────
+# Folder containing the WEVol*_**** sub-folders with the per-volume .txt files.
+by_volume_dir <- normalizePath(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/input/by_volume",
+  winslash = "/",
+  mustWork = FALSE
+)
+
+# ── VOLUME → YEAR TABLE ───────────────────────────────────────────────────────
+# Needed so the notebook knows which folder name belongs to which volume.
+# Must match the table in split_into_volume_files.Rmd.
+vol_year <- c(
+  `1`  = 1872, `2`  = 1873, `3`  = 1874, `4`  = 1875, `5`  = 1876,
+  `6`  = 1877, `7`  = 1878, `8`  = 1879, `9`  = 1880, `10` = 1881,
+  `11` = 1882, `12` = 1883, `13` = 1884, `14` = 1885, `15` = 1886,
+  `16` = 1887, `17` = 1888, `18` = 1889, `19` = 1890, `20` = 1891,
+  `21` = 1892, `22` = 1893, `23` = 1894, `24` = 1895, `25` = 1896,
+  `26` = 1897, `27` = 1898, `28` = 1899, `29` = 1900, `30` = 1901,
+  `31` = 1902, `32` = 1903, `33` = 1904, `34` = 1905, `35` = 1906,
+  `36` = 1907, `37` = 1908, `38` = 1909, `39` = 1910, `40` = 1911,
+  `41` = 1912
+)
+```
+
+---
+
+## Chunk 2 — Verify Input Directory
+
+```{r check_dir}
+cat("=== PATH CHECK ===\n")
+cat("by_volume_dir:\n  ", by_volume_dir, "\n\n")
+
+if (!dir.exists(by_volume_dir)) {
+  stop(
+    "by_volume_dir not found:\n  ", by_volume_dir,
+    "\n\nMake sure split_into_volume_files.Rmd has been run first ",
+    "and that the path in Chunk 1 above matches its output_dir."
+  )
+}
+
+# List all WEVol* sub-folders found
+vol_folders <- list.dirs(by_volume_dir, recursive = FALSE, full.names = FALSE)
+vol_folders <- sort(grep("^WEVol\\d+_\\d{4}$", vol_folders, value = TRUE))
+
+cat("Volume folders found:", length(vol_folders), "\n")
+if (length(vol_folders) == 0) {
+  stop("No WEVol*_**** folders found. Run split_into_volume_files.Rmd first.")
+}
+cat(paste0("  ", vol_folders, "\n"), sep = "")
+```
+
+---
+
+## Chunk 3 — Issue-Detection Helper Functions
+
+```{r helpers}
+# ── is_masthead() ─────────────────────────────────────────────────────────────
+# Returns TRUE for lines that look like a Woman's Exponent masthead, i.e.
+# lines that contain BOTH a Vol. label AND a No. label with a digit.
+#
+# Vol. label matches:  Vol. I  Vol. II  Vol. 2  Vol. 34  VOL. XL  etc.
+#   - Starts with "Vol." (case-insensitive)
+#   - Followed by a roman numeral (I V X L combinations) or digits
+#
+# No. label matches:   No. 1  No. 10  NO. 4  No.3  etc.
+#   - "No." (case-insensitive) followed by optional space then digits
+#
+# Both must appear on the SAME line.  This avoids false matches from
+# body text that mentions "No." on its own.
+is_masthead <- function(lines) {
+  has_vol <- grepl(
+    "(?i)\\bVol\\.\\s*([IVXLivxl]+|\\d+)\\b",
+    lines, perl = TRUE
+  )
+  has_no <- grepl(
+    "(?i)\\bNo\\.\\s*\\d+",
+    lines, perl = TRUE
+  )
+  has_vol & has_no
+}
+
+# ── extract_issue_num() ───────────────────────────────────────────────────────
+# Pulls the first issue number out of a masthead line.
+# Handles:  No. 1   No. 10   No. 1-2   No. 1 & 2   NO. 4
+# Returns the number as an integer (takes the first number for combined issues).
+extract_issue_num <- function(line) {
+  m <- regmatches(line, regexpr("(?i)\\bNo\\.\\s*(\\d+)", line, perl = TRUE))
+  if (length(m) == 0 || nchar(m) == 0) return(NA_integer_)
+  as.integer(gsub("[^0-9]", "", regmatches(m, regexpr("\\d+", m))))
+}
+```
+
+---
+
+## Chunk 4 — Preview Issue Headers (Dry Run)
+
+Scans every volume file and reports the masthead lines found.
+**No files are written.**  Review this output before running Chunk 5.
+
+```{r preview}
+cat("=== ISSUE HEADER PREVIEW ===\n\n")
+
+total_issues_found <- 0L
+
+for (folder in vol_folders) {
+  vol_path <- file.path(by_volume_dir, folder)
+  vol_file <- file.path(vol_path, paste0(folder, ".txt"))
+
+  if (!file.exists(vol_file)) {
+    cat(folder, ": volume file not found — skipping\n\n")
+    next
+  }
+
+  lines     <- readLines(vol_file, warn = FALSE, encoding = "UTF-8")
+  mast_idx  <- which(is_masthead(lines))
+  iss_nums  <- sapply(lines[mast_idx], extract_issue_num)
+
+  cat(sprintf("%-20s  %2d masthead line(s) found\n", folder, length(mast_idx)))
+
+  if (length(mast_idx) > 0) {
+    # Show each detected masthead line (truncated to 80 chars)
+    for (j in seq_along(mast_idx)) {
+      preview <- substr(trimws(lines[mast_idx[j]]), 1, 80)
+      cat(sprintf("    line %5d  No.%-3s  %s\n",
+                  mast_idx[j],
+                  ifelse(is.na(iss_nums[j]), "?", iss_nums[j]),
+                  preview))
+    }
+    total_issues_found <- total_issues_found + length(mast_idx)
+  } else {
+    cat("    *** No masthead lines detected — entire volume will be one file ***\n")
+  }
+  cat("\n")
+}
+
+cat(strrep("=", 55), "\n")
+cat("Total issue headers across all volumes:", total_issues_found, "\n")
+```
+
+---
+
+## Chunk 5 — Split and Write Issue Files
+
+Creates `WEVol{n}_{year}issues/` inside each volume folder and writes
+one `.txt` file per issue.  All text is preserved exactly; only the
+split boundaries change.
+
+```{r write_issues}
+cat("=== WRITING ISSUE FILES ===\n\n")
+
+total_written  <- 0L
+total_skipped  <- 0L
+errors_log     <- character(0)
+
+for (folder in vol_folders) {
+  vol_path <- file.path(by_volume_dir, folder)
+  vol_file <- file.path(vol_path, paste0(folder, ".txt"))
+
+  if (!file.exists(vol_file)) {
+    cat(folder, ": volume file not found — skipping\n")
+    total_skipped <- total_skipped + 1L
+    next
+  }
+
+  lines    <- readLines(vol_file, warn = FALSE, encoding = "UTF-8")
+  mast_idx <- which(is_masthead(lines))
+
+  # ── Create the issues output folder ─────────────────────────────────────────
+  issues_folder <- file.path(vol_path, paste0(folder, "issues"))
+  dir.create(issues_folder, showWarnings = FALSE, recursive = TRUE)
+
+  # ── Build issue blocks ───────────────────────────────────────────────────────
+  # If no masthead lines found, treat the whole volume as issue "1"
+  if (length(mast_idx) == 0) {
+    blocks <- list(list(start = 1L, end = length(lines), issue_num = 1L))
+  } else {
+    blocks <- vector("list", length(mast_idx))
+    for (j in seq_along(mast_idx)) {
+      start   <- mast_idx[j]
+      end     <- if (j < length(mast_idx)) mast_idx[j + 1] - 1L else length(lines)
+      iss_num <- extract_issue_num(lines[start])
+      if (is.na(iss_num)) iss_num <- j   # fallback: sequential numbering
+      blocks[[j]] <- list(start = start, end = end, issue_num = iss_num)
+    }
+
+    # If there are lines BEFORE the first masthead, prepend them to block 1
+    if (mast_idx[1] > 1L) {
+      blocks[[1]]$start <- 1L
+    }
+  }
+
+  # ── Write one file per block ─────────────────────────────────────────────────
+  cat(folder, "->", issues_folder, "\n")
+
+  seen_nums <- integer(0)   # track duplicates within this volume
+
+  for (blk in blocks) {
+    iss_num   <- blk$issue_num
+    blk_lines <- lines[blk$start:blk$end]
+
+    # Resolve duplicate issue numbers by appending a letter suffix
+    base_iss  <- iss_num
+    suffix    <- ""
+    attempt   <- 1L
+    while (iss_num %in% seen_nums) {
+      suffix  <- letters[attempt]
+      iss_num <- paste0(base_iss, suffix)   # e.g. "3b"
+      attempt <- attempt + 1L
+    }
+    seen_nums <- c(seen_nums, iss_num)
+
+    out_name <- paste0(folder, "_issue", iss_num, ".txt")
+    out_path <- file.path(issues_folder, out_name)
+
+    result <- tryCatch({
+      writeLines(blk_lines, con = out_path, useBytes = TRUE)
+      TRUE
+    }, error = function(e) conditionMessage(e))
+
+    if (isTRUE(result)) {
+      cat(sprintf("  Written: %-45s  (%d lines)\n", out_name, length(blk_lines)))
+      total_written <- total_written + 1L
+    } else {
+      msg <- paste0("ERROR ", folder, " issue ", iss_num, ": ", result)
+      cat(" ", msg, "\n")
+      errors_log <- c(errors_log, msg)
+    }
+  }
+  cat("\n")
+}
+
+cat(strrep("=", 55), "\n")
+cat("Issue files written :", total_written,  "\n")
+cat("Volumes skipped     :", total_skipped,  "\n")
+cat("Errors              :", length(errors_log), "\n")
+if (length(errors_log) > 0) {
+  cat("\nError details:\n")
+  cat(paste0("  ", errors_log, "\n"), sep = "")
+}
+```
+
+---
+
+## Chunk 6 — Verify Output
+
+Prints a summary table showing how many issue files exist per volume.
+
+```{r verify}
+cat("=== OUTPUT VERIFICATION ===\n\n")
+cat(sprintf("%-22s  %8s  %s\n", "Volume folder", "Issues", "Issues folder"))
+cat(strrep("-", 65), "\n")
+
+grand_total <- 0L
+
+for (folder in vol_folders) {
+  issues_folder <- file.path(by_volume_dir, folder, paste0(folder, "issues"))
+  if (!dir.exists(issues_folder)) {
+    cat(sprintf("%-22s  %8s  (folder not created)\n", folder, "--"))
+    next
+  }
+  iss_files <- list.files(issues_folder, pattern = "\\.txt$",
+                           full.names = FALSE, ignore.case = TRUE)
+  n <- length(iss_files)
+  grand_total <- grand_total + n
+  cat(sprintf("%-22s  %8d  %s\n", folder, n, paste0(folder, "issues")))
+}
+
+cat(strrep("-", 65), "\n")
+cat(sprintf("%-22s  %8d\n", "TOTAL issue files", grand_total))
+cat("\nVerification complete.\n")
+```
