@@ -32,7 +32,7 @@ from pathlib import Path
 # Paths
 # ---------------------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parents[3]  # up from article-extraction → relief-society-mag → preprocessing → root
-OUTPUT_DIR = PROJECT_ROOT / "processed"
+OUTPUT_DIR = PROJECT_ROOT / "processed" / "regex_and_llm"
 
 # ---------------------------------------------------------------------------
 # Helper to sanitize filenames
@@ -68,7 +68,7 @@ def sanitize_filename(s: str, max_len: int = 80) -> str:
 #   etype  - entry type classification
 # ---------------------------------------------------------------------------
 
-dontuseVOL36_TOC = {
+VOL36_TOC = {
     ("Vol36", "No01_January_1949"): [
         {"title": "January Snow", "author": "Eva Willes Wangsgaard", "etype": "poem"},
         {"title": "New Year Greetings", "author": "General Presidency of Relief Society", "etype": "article"},
@@ -543,14 +543,6 @@ dontuseVOL36_TOC = {
     ],
 }
 
-VOL36_TOC = {
-    ("Vol36", "No12_December_1949"): [
-        {"title": "Dimensions", "author": "Della Adams Leitner", "etype": "poem"},
-        {"title": "Joanna (Conclusion)", "author": "Margery S. Stewart", "etype": "fiction"},
-    ]
-}
-
-
 # ---------------------------------------------------------------------------
 # Filename mapping: issue key -> (source filename, month name for output)
 # ---------------------------------------------------------------------------
@@ -600,12 +592,37 @@ def extract_section_header(text: str) -> tuple[str, str]:
 
 
 def build_regex_for_title(title: str) -> re.Pattern:
-    """Build a regex pattern for matching a title in body text."""
-    # Escape special regex chars and collapse whitespace variations
-    escaped = re.escape(title)
-    pattern = re.sub(r'\\s+', r'\\s+', escaped)  # Allow flexible whitespace
+    """Build a flexible regex pattern for matching a title in OCR'd body text.
 
-    # No line anchors - titles can appear anywhere, not dependent on newline placement
+    Handles common OCR artifacts:
+    - Em/en dashes may be dropped or replaced with spaces
+    - Apostrophes/quotes may be dropped or change form
+    - Colons may be dropped
+    - Whitespace varies (extra spaces, missing spaces at punctuation)
+    """
+    parts = []
+    i = 0
+    while i < len(title):
+        ch = title[i]
+
+        if ch in '\u2014\u2013-':  # em dash, en dash, hyphen
+            # Dashes may vanish, become spaces, or remain as any dash variant
+            parts.append(r'[\s\-\u2014\u2013]*')
+        elif ch in "\u2018\u2019\u201c\u201d'\"":  # curly/straight quotes
+            # Quotes/apostrophes may vanish or change form
+            parts.append(r'[\u2018\u2019\u2032\u0027]?')
+        elif ch == ':':
+            # Colons sometimes dropped by OCR
+            parts.append(r':?\s*')
+        elif ch == ' ':
+            # Whitespace: one or more whitespace chars
+            parts.append(r'\s+')
+        else:
+            parts.append(re.escape(ch))
+
+        i += 1
+
+    pattern = ''.join(parts)
     return re.compile(pattern, re.IGNORECASE)
 
 
@@ -687,7 +704,6 @@ def _match_entries_with_strategy(body: str, entries: list[dict]) -> list[tuple[i
 
     for entry in entries:
         pattern = build_regex_for_title(entry["title"])
-        import ipdb; ipdb.set_trace(context=17)
         match = pattern.search(body)
 
         if match:
@@ -804,7 +820,7 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
         match_result = None
         if title in by_title:
             start, end = by_title[title]
-            raw_text = text[start:end].strip()
+            raw_text = body[start:end].strip()
             raw_len = len(raw_text)
             cleaned, noise_frags = strip_running_noise(raw_text)
             cleaned = cleaned.strip()
@@ -919,13 +935,13 @@ def extract_issue(text: str, entries: list[dict], vol: str, month: str,
     cursor = 0
     for iv_start, iv_end in all_intervals:
         if cursor < iv_start:
-            gap_text = text[cursor:iv_start].strip()
+            gap_text = body[cursor:iv_start].strip()
             if gap_text:
                 misc_parts.append(gap_text)
         cursor = max(cursor, iv_end)
 
     if cursor < len(body):
-        gap_text = text[cursor:].strip()
+        gap_text = body[cursor:].strip()
         if gap_text:
             misc_parts.append(gap_text)
 
@@ -1029,7 +1045,8 @@ def main():
 
         text = source_path.read_text(encoding="utf-8", errors="replace")
 
-        stats = extract_issue(text, entries, vol, month, filename,
+        out_vol = vol.lower()
+        stats = extract_issue(text, entries, out_vol, month, filename,
                               OUTPUT_DIR, dry_run=args.dry_run)
 
         issues_processed += 1
@@ -1039,9 +1056,9 @@ def main():
         all_manifest_rows.extend(stats["manifest_rows"])
 
         # Accumulate into volume JSON
-        if vol not in volume_json:
-            volume_json[vol] = {"volume": vol, "months": {}}
-        volume_json[vol]["months"][month] = stats["month_json"]
+        if out_vol not in volume_json:
+            volume_json[out_vol] = {"volume": out_vol, "months": {}}
+        volume_json[out_vol]["months"][month] = stats["month_json"]
 
         coverage = ((stats["total_bytes"] - stats["misc_bytes"]) / stats["total_bytes"] * 100
                      if stats["total_bytes"] > 0 else 0)
