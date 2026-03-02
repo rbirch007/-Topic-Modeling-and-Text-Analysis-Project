@@ -6,20 +6,30 @@ This document is a self-contained prompt for extracting articles from any Relief
 ## Usage
 Tell Claude Code:
 ```
-Read /Users/chris/devel/rbirch/preprocessing/relief-society-mag/article-extraction/VOLUME_EXTRACTION_PROMPT.md and follow its instructions to extract Volume NN.
+Read VOLUME_EXTRACTION_PROMPT.md and follow its instructions to extract Volume NN.
 ```
+
+**This task is designed to run completely autonomously without any user prompts or confirmations. All necessary permissions are pre-granted in the "Allowed Operations" section below.**
 
 ---
 
 ## Allowed Operations (No Confirmation Needed)
-- Read any file under `/Users/chris/devel/rbirch/`
-- Write/edit files under `preprocessing/relief-society-mag/article-extraction/`
-- Write files under `processed/regex_and_llm/`
-- Run `python3` commands
-- Run `/bin/ls`, `/bin/rm -rf` on output directories under `processed/regex_and_llm/`
-- Use `grep`, `glob`, and `read` tools freely on any project files
-- Launch Task subagents for TOC extraction and OCR pattern research
+**IMPORTANT: This extraction should run COMPLETELY AUTONOMOUSLY with NO user prompts.**
+
+All of the following operations are pre-approved and should never prompt for confirmation:
+- **Read tool**: Read any file under the project directory (including all cleaned-data/, preprocessing/, processed/ paths)
+- **Grep tool**: Search file contents anywhere in the project with any pattern, output mode, or parameters
+- **Glob tool**: Find files by pattern anywhere in the project
+- **Write tool**: Write new files under `preprocessing/relief-society-mag/article-extraction/` and `processed/regex_and_llm/`
+- **Edit tool**: Edit files under `preprocessing/relief-society-mag/article-extraction/`
+- **Bash tool**:
+  - Run `python3` commands (scripts, one-liners, diagnostics)
+  - Run `/bin/ls`, `/bin/rm -rf` on output directories under `processed/regex_and_llm/`
+  - Run `git` commands if explicitly requested
+- **Task tool**: Launch subagents (general-purpose, Explore) for TOC extraction and OCR pattern research
 - Delete and recreate output directories under `processed/regex_and_llm/volNN/` during iterative runs
+
+**When launching Task subagents**: The subagents inherit these permissions and should also run without prompts. They have full access to Read, Grep, and Glob tools across all project files.
 
 ## Tool Usage Rules
 - **NEVER** use Bash for file reading or searching. Use the dedicated tools instead:
