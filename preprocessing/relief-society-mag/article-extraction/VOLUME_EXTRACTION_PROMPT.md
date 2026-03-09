@@ -105,6 +105,8 @@ Read `extract_vol38.py` in full. Understand every section:
 - `extract_issue()`: the main per-issue pipeline
 - `main()`: CLI entry point with JSON/manifest/flagged output
 
+**Newline warning:** The template script may contain newline-dependent regex anchors (`^`, `$`, or patterns that assume `\n` between sections). Note these, but do NOT replicate them in new extraction scripts. The OCR source text has unreliable newline placement — newlines may or may not appear between sections, so any regex that depends on their presence will silently fail on some issues. See "Never Rely on Newlines" under CRITICAL THINGS TO WATCH FOR.
+
 ### STEP 2: Extract TOC data from all 12 source files
 Launch a Task subagent (general-purpose) to read the first ~150 lines of each of the 12 source files and extract every TOC entry. The TOC appears near the beginning of each file, grouped by sections.
 
@@ -155,9 +157,22 @@ Search the body text (after "PUBLISHED MONTHLY BY THE GENERAL BOARD") of at leas
 12. Any other section headers unique to this volume
 
 Report the exact OCR'd text so regex patterns can be built accurately.
+
+IMPORTANT: Do not assume newlines separate sections. The OCR text may run
+sections together without line breaks. Report whether headers appear on their
+own line or are run together with surrounding text.
 ```
 
 ### STEP 4: Create the extraction script
+
+**CRITICAL — Never rely on newlines:** The OCR source files have unreliable newline placement. When writing regex patterns for the new script:
+- Do NOT use `^` or `$` anchors to find section boundaries or titles
+- Do NOT assume `\n` separates sections, headers, or titles from body text
+- Use `\s+` or `\s*` to bridge whitespace (which covers both spaces and newlines) rather than requiring newlines
+- TOC title entries must never contain literal `\n`. If a title accidentally reads `"Moby\nDick"`, the regex built from it must not require that newline — use `\s+` or `\s*` between words instead
+- Patterns like `r"Moby\s+Dick"` are correct; patterns like `r"Moby.*?Dick"` are not (`.` does not match `\n` by default, and the match is too greedy)
+- If the template script (`extract_vol38.py`) uses `^`, `$`, or newline-dependent patterns, replace them with newline-agnostic equivalents in the new script
+
 Copy `extract_vol38.py` as the base. Change ONLY these things:
 
 1. **Docstring**: Update volume number and year
@@ -258,6 +273,16 @@ Print a summary table showing:
 ---
 
 ## CRITICAL THINGS TO WATCH FOR
+
+### Never Rely on Newlines
+The OCR source text files have **unreliable newline placement**. Newlines may or may not appear between sections, between a header and its body, or between title words. Therefore:
+- **Never** use `^` or `$` regex anchors to locate section boundaries or titles
+- **Never** assume `\n` exists between a section header and the text that follows
+- **Never** place literal `\n` in TOC title entries in the Python dict
+- **Always** use `\s+` or `\s*` to bridge whitespace between words in regex patterns — this matches both spaces and newlines without requiring either
+- A pattern like `r"Moby\s+Dick"` is correct. A pattern like `r"Moby.*?Dick"` is wrong (`.` does not match `\n` by default, making the match fragile in a different way)
+
+This applies to all regex construction: `_KNOWN_HEADER_PATTERNS`, `build_regex_for_title()` output, serial fiction chapter patterns, and any ad-hoc patterns added during debugging.
 
 ### OCR Patterns That Change Between Volumes
 The OCR artifacts are caused by decorative/large-font initial letters in the printed magazine. These are **mostly consistent** across volumes 36-38 but may shift:
