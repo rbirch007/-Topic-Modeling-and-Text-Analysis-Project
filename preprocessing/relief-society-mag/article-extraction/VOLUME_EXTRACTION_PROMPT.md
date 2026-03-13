@@ -60,7 +60,7 @@ Each volume corresponds to a calendar year. The formula is: **year = volume_numb
 | 38  | 1951 | 48  | 1961 |     |      |
 | 39  | 1952 | 49  | 1962 |     |      |
 
-Already processed: vol30-vol38. Remaining: vol39-vol57.
+Already processed: vol30-vol47. Remaining: vol48-vol57.
 
 ## File Locations
 
@@ -72,9 +72,18 @@ cleaned-data/relief-society/txtvolumesbymonth/VolNN/VolNN_No02_February_YYYY.txt
 cleaned-data/relief-society/txtvolumesbymonth/VolNN/VolNN_No12_December_YYYY.txt
 ```
 
-### Template script (ALWAYS USE THIS AS THE BASE)
+### Reference scripts (USE THESE AS THE BASE)
 ```
 preprocessing/relief-society-mag/article-extraction/extract_vol38.py
+preprocessing/relief-society-mag/article-extraction/extract_vol39.py
+preprocessing/relief-society-mag/article-extraction/extract_vol40.py
+preprocessing/relief-society-mag/article-extraction/extract_vol41.py
+preprocessing/relief-society-mag/article-extraction/extract_vol42.py
+preprocessing/relief-society-mag/article-extraction/extract_vol43.py
+preprocessing/relief-society-mag/article-extraction/extract_vol44.py
+preprocessing/relief-society-mag/article-extraction/extract_vol45.py
+preprocessing/relief-society-mag/article-extraction/extract_vol46.py
+preprocessing/relief-society-mag/article-extraction/extract_vol47.py
 ```
 
 ### Output script
@@ -93,8 +102,8 @@ processed/regex_and_llm/volNN/flagged_for_review.json
 
 ## STEP-BY-STEP PROCEDURE
 
-### STEP 1: Read the template script
-Read `extract_vol38.py` in full. Understand every section:
+### STEP 1: Read the reference scripts
+Read `extract_vol38.py` through `extract_vol47.py` (all 10 reference scripts). The most recent scripts (vol45-vol47) will generally have the most refined patterns and should be weighted most heavily when deciding how to handle the new volume. Understand every section:
 - `VOLNN_TOC` dict: keyed by `("VolNN", "NoMM_Month_YYYY")`, each value is a list of entry dicts
 - `ISSUE_FILES`: maps issue keys to `(filename, month_name)` tuples
 - `_OCR_WORD_START_ALTS`, `_OCR_SINGLE_CHAR_ALTS`: OCR character substitution tables
@@ -105,7 +114,9 @@ Read `extract_vol38.py` in full. Understand every section:
 - `extract_issue()`: the main per-issue pipeline
 - `main()`: CLI entry point with JSON/manifest/flagged output
 
-**Newline warning:** The template script may contain newline-dependent regex anchors (`^`, `$`, or patterns that assume `\n` between sections). Note these, but do NOT replicate them in new extraction scripts. The OCR source text has unreliable newline placement — newlines may or may not appear between sections, so any regex that depends on their presence will silently fail on some issues. See "Never Rely on Newlines" under CRITICAL THINGS TO WATCH FOR.
+When building the new script, use the most recent script (closest volume number) as the direct base to copy from, but consult the full range of reference scripts to understand how patterns evolved, what OCR artifacts appeared or disappeared, and how edge cases were handled across volumes.
+
+**Newline warning:** The reference scripts may contain newline-dependent regex anchors (`^`, `$`, or patterns that assume `\n` between sections). Note these, but do NOT replicate them in new extraction scripts. The OCR source text has unreliable newline placement — newlines may or may not appear between sections, so any regex that depends on their presence will silently fail on some issues. See "Never Rely on Newlines" under CRITICAL THINGS TO WATCH FOR.
 
 ### STEP 2: Extract TOC data from all 12 source files
 Launch a Task subagent (general-purpose) to read the first ~150 lines of each of the 12 source files and extract every TOC entry. The TOC appears near the beginning of each file, grouped by sections.
@@ -173,7 +184,7 @@ own line or are run together with surrounding text.
 - Patterns like `r"Moby\s+Dick"` are correct; patterns like `r"Moby.*?Dick"` are not (`.` does not match `\n` by default, and the match is too greedy)
 - If the template script (`extract_vol38.py`) uses `^`, `$`, or newline-dependent patterns, replace them with newline-agnostic equivalents in the new script
 
-Copy `extract_vol38.py` as the base. Change ONLY these things:
+Copy the most recent reference script (e.g., `extract_vol47.py`) as the base. Change ONLY these things:
 
 1. **Docstring**: Update volume number and year
 2. **`VOLNN_TOC` dict**: Replace with new TOC data from Step 2. Key format: `("VolNN", "NoMM_Month_YYYY")`
@@ -200,7 +211,7 @@ Copy `extract_vol38.py` as the base. Change ONLY these things:
    ```python
    "Serial Title, Chapter 1": _SERIAL_CHAPTER_PAT + r"(?:1|I)\b",
    ```
-6. **`main()` function**: Update description string and `VOL37_TOC` → `VOLNN_TOC` reference
+6. **`main()` function**: Update description string and the TOC reference to `VOLNN_TOC`
 7. **`source_rel_path`**: Update in `extract_issue()` to `VolNN`
 
 ### STEP 5: First run and verify
@@ -242,18 +253,18 @@ After diagnosing:
 # Verify output structure
 /bin/ls processed/regex_and_llm/volNN/
 
-# Verify JSON schema matches vol38
+# Verify JSON schema matches a prior volume (use the most recent available)
 python3 -c "
 import json
-with open('processed/regex_and_llm/vol38/vol38_entries.json') as f:
-    v38 = json.load(f)
+with open('processed/regex_and_llm/vol47/vol47_entries.json') as f:
+    vRef = json.load(f)
 with open('processed/regex_and_llm/volNN/volNN_entries.json') as f:
     vNN = json.load(f)
-v38_e = v38['months']['January']['entries'][0]
+vRef_e = vRef['months']['January']['entries'][0]
 vNN_e = vNN['months']['January']['entries'][0]
-print('Top keys match:', sorted(v38.keys()) == sorted(vNN.keys()))
-print('Entry keys match:', sorted(v38_e.keys()) == sorted(vNN_e.keys()))
-print('Match keys match:', sorted(v38_e['match'].keys()) == sorted(vNN_e['match'].keys()))
+print('Top keys match:', sorted(vRef.keys()) == sorted(vNN.keys()))
+print('Entry keys match:', sorted(vRef_e.keys()) == sorted(vNN_e.keys()))
+print('Match keys match:', sorted(vRef_e['match'].keys()) == sorted(vNN_e['match'].keys()))
 print('Months:', list(vNN['months'].keys()))
 for m, md in vNN['months'].items():
     print(f'  {m}: {len(md[\"entries\"])} entries')
@@ -285,7 +296,7 @@ The OCR source text files have **unreliable newline placement**. Newlines may or
 This applies to all regex construction: `_KNOWN_HEADER_PATTERNS`, `build_regex_for_title()` output, serial fiction chapter patterns, and any ad-hoc patterns added during debugging.
 
 ### OCR Patterns That Change Between Volumes
-The OCR artifacts are caused by decorative/large-font initial letters in the printed magazine. These are **mostly consistent** across volumes 36-38 but may shift:
+The OCR artifacts are caused by decorative/large-font initial letters in the printed magazine. These are **mostly consistent** across volumes 36-47 but may shift:
 - `Th` → `Sh` or `Ch` (very consistent)
 - `T` → `S`, `J`, or `(` (very consistent)
 - `F` → `St` (very consistent)
@@ -327,7 +338,7 @@ Each volume typically has 1-2 serial novels running across multiple issues. Iden
 - Create separate `_SERIAL_CHAPTER_PAT` for each serial
 
 ### Front Matter Splitting
-The script splits on `"PUBLISHED MONTHLY BY THE GENERAL BOARD"`. This marker is present in all volumes 36-38. If it's absent in a new volume, the script will raise an exception. Check for OCR variants like `"ISHED MONTHLY"` or `"MONTHLY BY THE GENERAL BOARD"` (already handled).
+The script splits on `"PUBLISHED MONTHLY BY THE GENERAL BOARD"`. This marker is present in all volumes 36-47. If it's absent in a new volume, the script will raise an exception. Check for OCR variants like `"ISHED MONTHLY"` or `"MONTHLY BY THE GENERAL BOARD"` (already handled).
 
 ### Manifest CSV
 The script writes `processed/regex_and_llm/manifest.csv`. This gets **overwritten** each run with ONLY the current volume's data. This is expected behavior — the manifest is per-run, not cumulative.
@@ -378,4 +389,4 @@ Target metrics:
 - All 12 months produce output directories
 - >80% match rate per month
 - >90% overall coverage
-- JSON schema identical to vol38
+- JSON schema identical to prior volumes
