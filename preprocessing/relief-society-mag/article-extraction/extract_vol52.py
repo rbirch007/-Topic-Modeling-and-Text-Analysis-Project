@@ -587,6 +587,8 @@ _OCR_SINGLE_CHAR_ALTS = {
     # "M" may OCR as "IT", "ITl", "Tl" (e.g. "Made" -> "ITlade")
     "M": r"(?:M|IT(?:l)?|Tl)",
     "m": r"(?:m|it(?:l)?|tl)",
+    # "I" may OCR as "|" or "l" (pipe/lowercase-L)
+    "I": r"(?:I|\||l)",
 }
 
 # ---------------------------------------------------------------------------
@@ -711,21 +713,41 @@ _KNOWN_HEADER_PATTERNS = {
         r"Notes?\s+(?:T|S|J|\()o\s+(?:Th|Sh|Ch|th|t)e\s+(?:F|St|S)(?:i|e)?eld"
         r":?\s*"
     ),
-    # Prize poems: match actual poem headers, not the award announcement
+    # Prize poems: match the actual poem headers (FIRST/SECOND/THIRD PRIZE POEM
+    # + author name), NOT the contest announcement section which mentions the
+    # poem titles in prose.  The actual poems appear later in the issue under
+    # headers like "FIRST PRIZE POEM Lenora Hansen".
     "Wind Valley": (
-        r"(?:First|1st)\s+Prize\s+(?:Poem|Winn)"
-        r"[\s\S]{0,50}?"
-        r"Wind\s+Valley"
+        r"(?:FIRST|First|1st)\s+PRIZE\s+POEM"
+        r"[\s\S]{0,30}?"
+        r"Lenora\s+Hansen"
     ),
     "Progeny": (
-        r"(?:Second|2nd)\s+Prize\s+Poem"
-        r"[\s\S]{0,50}?"
-        r"Progeny"
+        r"(?:SECOND|Second|2nd)\s+PRIZE\s+POEM"
+        r"[\s\S]{0,30}?"
+        r"Pearle\s+M\.?\s+Olsen"
     ),
     "Love\u2019s Gifts": (
-        r"(?:Third|3rd)\s+Prize\s+(?:Poem|Winn)"
-        r"[\s\S]{0,50}?"
-        r"Love.s\s+Gifts"
+        r"(?:THIRD|Third|3rd)\s+PRIZE\s+(?:POEM|Poem)"
+        r"[\s\S]{0,30}?"
+        r"(?:Love.s\s+Gifts|Lila\s+Benn?ett?\s+Spencer)"
+    ),
+    # Jul "Homecoming": title is OCR-garbled as "OMeCOMNG" in the body.
+    # Match the garbled title variant only; the author name (Mary R. MacArthur)
+    # is kept outside the pattern so the +100 author-proximity score triggers.
+    "Homecoming": (
+        r"(?:H(?:ome)?|(?:OM|0M)e?)(?:C|c)(?:OM|om)(?:NG|ing|ING)"
+    ),
+    # Sep "Autumn" poem by Celestia J. Taylor: the poem text is missing from
+    # the OCR source (not present in body).  Must prevent false matches:
+    # 1. "Creek in Autumn" is a different poem by Ethel Jacobson
+    # 2. Author name appears in board member lists, not poem context
+    # Use a pattern that requires the title as a standalone heading followed
+    # by the author name with poem-like content (not a name list).
+    "Autumn": (
+        r"(?<![Ii]n\s)(?<![Ii]n\s\s)"
+        r"(?:^|\n)\s*Autumn\s+"
+        r"Celestia\s+J\.?\s+Taylor\s*\n"
     ),
     # First-prize-winning story: match the story heading, not the award announcement
     "Heart Room": (
@@ -1410,6 +1432,14 @@ def _match_entries_with_strategy(body: str, entries: list[dict]) -> list[tuple[i
                 r'sister|mother|father|President|Bishop|Elder|Professor|'
                 r'children|parents|wrote|author|written|said)\s*$',
                 before_stripped, re.IGNORECASE
+            ):
+                score -= 80
+
+            # Reject if preceded by a name-list pattern (consecutive proper
+            # names separated by whitespace, typical of board member lists)
+            if re.search(
+                r'[A-Z][a-z]+\s+[A-Z]\.?\s+[A-Z][a-z]+\s+[A-Z][a-z]+\s+[A-Z]\.?\s+[A-Z][a-z]+\s*$',
+                before_stripped
             ):
                 score -= 80
 
