@@ -198,6 +198,9 @@ def main():
     for vol_dir in vol_dirs:
         if not vol_dir.is_dir():
             continue
+        # Skip superseded old-schema directories
+        if "old_schema" in vol_dir.name:
+            continue
 
         vol_name = vol_dir.name.lower()
         vol_num = int(re.search(r'\d+', vol_name).group())
