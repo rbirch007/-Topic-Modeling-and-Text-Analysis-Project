@@ -34,6 +34,11 @@ _LESSON_HEADERS = [
     re.compile(r'Social\s+(?:R|r)elations[\s\u2014\u2013\-:]', re.IGNORECASE),
     re.compile(r'Cultural\s+(?:R|r)efinement[\s\u2014\u2013\-:]', re.IGNORECASE),
     re.compile(r'LESS.{0,10}N\s+(?:DE.{0,6}\s+)?DEPARTMENT', re.IGNORECASE),
+    # Early-volume lesson headers (Vols 1-29)
+    re.compile(r'(?:Th|Sh|Ch)eology\s+(?:and|Gnd)\s+(?:T|S)estimony[\s\u2014\u2013\-:]', re.IGNORECASE),
+    re.compile(r'Work[\s\-]*and[\s\-]*(?:B|G)usiness[\s\u2014\u2013\-:]', re.IGNORECASE),
+    re.compile(r'(?:Th|Sh|Ch)e\s+Mission\s+Lessons?\b', re.IGNORECASE),
+    re.compile(r'Mission\s+Lessons?\s+Latter[\s\-]day\s+Saint\s+Hymns', re.IGNORECASE),
 ]
 
 # Structural break: page numbers, magazine headers, separators
