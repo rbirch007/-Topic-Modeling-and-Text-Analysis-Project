@@ -403,6 +403,12 @@ for (vf in vol_folders) {
       # Drop blocks that are too short to be real articles
       if (length(blk_lines) < MIN_ARTICLE_LINES) next
 
+      # Skip FULL_ISSUE (whole issue written when no boundaries found — the
+      # issue file already exists in the issues folder) and FRONT_MATTER
+      # (masthead / contents section before the first article heading — not
+      # article content).
+      if (blk$title %in% c("FULL_ISSUE", "FRONT_MATTER")) next
+
       slug      <- title_to_slug(blk$title)
 
       # Resolve duplicate slugs by appending _2, _3, …
@@ -475,4 +481,76 @@ for (vf in vol_folders) {
 cat(strrep("-", 70), "\n")
 cat(sprintf("%-22s  %10d\n", "TOTAL article files", grand_total))
 cat("\nVerification complete.\n")
+```
+
+---
+
+## Chunk 7 — Clean Up FULL_ISSUE and FRONT_MATTER Files
+
+Run this **once** to delete any `_FULL_ISSUE.txt` and `_FRONT_MATTER.txt` files
+that were written by earlier runs of this notebook (before the fix was applied).
+It also removes them from any already-reorganized `WE-articles-byvolumeandissue`
+tree if you point `extra_roots` at those folders.
+
+**Preview first (dry_run = TRUE), then set dry_run = FALSE to delete.**
+
+```{r cleanup_full_issue}
+# ── Set to FALSE when you are ready to actually delete ────────────────────────
+dry_run <- TRUE
+
+# ── Folders to scan (add more paths as needed) ────────────────────────────────
+# by_volume articles folders
+roots_to_scan <- list(by_volume_dir)
+
+# Also clean reorganized output trees if they exist — update paths as needed
+extra_roots <- c(
+  normalizePath(
+    "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/WE-articles-byvolumeandissue",
+    winslash = "/", mustWork = FALSE
+  ),
+  normalizePath(
+    "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/input",
+    winslash = "/", mustWork = FALSE
+  )
+)
+for (er in extra_roots) {
+  if (dir.exists(er)) roots_to_scan <- c(roots_to_scan, list(er))
+}
+
+# ── Find and delete ───────────────────────────────────────────────────────────
+pattern <- "_(FULL_ISSUE|FRONT_MATTER)(_.+)?\\.txt$"
+
+cat(sprintf("=== %s FULL_ISSUE / FRONT_MATTER FILES ===\n\n",
+            if (dry_run) "DRY RUN — would delete" else "DELETING"))
+
+total_found   <- 0L
+total_deleted <- 0L
+
+for (root in roots_to_scan) {
+  targets <- list.files(root, pattern = pattern,
+                         recursive = TRUE, full.names = TRUE,
+                         ignore.case = FALSE)
+  if (length(targets) == 0L) next
+
+  cat(sprintf("Root: %s\n", root))
+  for (f in targets) {
+    cat(sprintf("  %s\n", f))
+    total_found <- total_found + 1L
+    if (!dry_run) {
+      if (file.remove(f)) {
+        total_deleted <- total_deleted + 1L
+      } else {
+        cat("    ** could not delete **\n")
+      }
+    }
+  }
+  cat("\n")
+}
+
+if (dry_run) {
+  cat(sprintf("DRY RUN complete — %d file(s) would be deleted.\n", total_found))
+  cat("Set dry_run <- FALSE and re-run to delete.\n")
+} else {
+  cat(sprintf("Done — deleted %d of %d file(s).\n", total_deleted, total_found))
+}
 ```
