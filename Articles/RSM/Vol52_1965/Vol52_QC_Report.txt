@@ -1,0 +1,124 @@
+Quality Control Report — Vol52 (1965)
+Generated: 2026-03-11 12:35:56.099636
+======================================================================
+
+Total issues: 115
+  ERROR: 1
+  WARNING: 99
+  INFO: 15
+
+[WARNING] April / V52_04_12_SpFt_How_Gould.txt: UNDERSIZED — Size 203 chars, expected ~4800 (pg 273, span 2 pages, 4% of expected)
+[WARNING] April / V52_04_24_SpFt_One_Teaching.txt: UNDERSIZED — Size 826 chars, expected ~4800 (pg 289, span 2 pages, 17% of expected)
+[INFO] April / V52_04_38_Poem_Dialogue_Stewart.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 12 (threshold 7)
+[WARNING] April / V52_04_38_Poem_Dialogue_Stewart.txt: HIGH_AD_DENSITY — Ad score density 11.8 per 1K chars (total score 12, size 1014)
+[WARNING] April / V52_04_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Volume 52 Number 4 April 1965 I Special Short Story Issue Ci...
+[WARNING] April / V52_04_42_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Elizabeth Jane Russell Day Hunter, Utah Mrs. Sarah Eliz...
+[WARNING] April / V52_04_28_The Home_Homemaking_Stock.txt: DUPLICATE_CONTENT — 41% n-gram overlap with V52_04_29_The Home_Cherry-Rhubarb_Lei.txt (179 shared of 440)
+[WARNING] April / V52_04_28_The Home_Homemaking_Stock.txt: DUPLICATE_CONTENT — 94% n-gram overlap with V52_04_30_Poem_April_Candland.txt (238 shared of 252)
+[INFO] August / V52_08_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] August / V52_08_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: a Relief SOCISTY Magazine Volume 52 Number 8 August 1965 Les...
+[WARNING] August / V52_08_31_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Annie Erickson Benson Manti, Utah 98 Mrs. Sarah Francis...
+[WARNING] August / V52_08_09_Poem_The_Chamberlin.txt: DUPLICATE_CONTENT — 52% n-gram overlap with V52_08_10_GenFt_Womans_Cannon.txt (141 shared of 270)
+[WARNING] August / V52_08_30_Poem_The_Bowles.txt: DUPLICATE_CONTENT — 55% n-gram overlap with V52_08_31_GenFt_Bday_Congrats.txt (133 shared of 243)
+[WARNING] December / V52_12_15_SpFt_Christmas_Board.txt: UNDERSIZED — Size 190 chars, expected ~4800 (pg 908, span 2 pages, 4% of expected)
+[WARNING] December / V52_12_25_The Home_Candle_Gifts.txt: UNDERSIZED — Size 743 chars, expected ~4800 (pg 917, span 2 pages, 15% of expected)
+[INFO] December / V52_12_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] December / V52_12_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: December 1965 Lessons for March "MAGAZINE Volume 52 Number 1...
+[WARNING] December / V52_12_42_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Ann Crawford Jensen Mrs. Hannah Dudley Ellsworth Poole ...
+[WARNING] December / V52_12_14_GenFt_Editorial_Conferen.txt: DUPLICATE_CONTENT — 90% n-gram overlap with V52_12_16_Poem_I_Sabin.txt (122 shared of 136)
+[WARNING] December / V52_12_17_The Home_How_Breeze.txt: DUPLICATE_CONTENT — 32% n-gram overlap with V52_12_24_The Home_Red.txt (135 shared of 428)
+[WARNING] December / V52_12_18_The Home_Lauretta_Quilts.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_12_24_The Home_Red.txt (278 shared of 288)
+[WARNING] December / V52_12_18_The Home_Lauretta_Quilts.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (278 shared of 288)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 76% n-gram overlap with V52_12_20_Poem_Where_Rothe.txt (181 shared of 239)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_12_21_Poem_To_Make_Wangsgaard.txt (184 shared of 202)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 79% n-gram overlap with V52_12_22_The Home_I_Am_a_Burton.txt (74 shared of 94)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 31% n-gram overlap with V52_12_23_The Home_Roses_Tree.txt (30 shared of 96)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_12_24_The Home_Red.txt (381 shared of 394)
+[WARNING] December / V52_12_19_The Home_Festive_Skollingsh.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (381 shared of 394)
+[WARNING] December / V52_12_20_Poem_Where_Rothe.txt: DUPLICATE_CONTENT — 31% n-gram overlap with V52_12_21_Poem_To_Make_Wangsgaard.txt (63 shared of 202)
+[WARNING] December / V52_12_20_Poem_Where_Rothe.txt: DUPLICATE_CONTENT — 79% n-gram overlap with V52_12_22_The Home_I_Am_a_Burton.txt (74 shared of 94)
+[WARNING] December / V52_12_20_Poem_Where_Rothe.txt: DUPLICATE_CONTENT — 82% n-gram overlap with V52_12_23_The Home_Roses_Tree.txt (79 shared of 96)
+[WARNING] December / V52_12_20_Poem_Where_Rothe.txt: DUPLICATE_CONTENT — 96% n-gram overlap with V52_12_24_The Home_Red.txt (230 shared of 239)
+[WARNING] December / V52_12_20_Poem_Where_Rothe.txt: DUPLICATE_CONTENT — 96% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (230 shared of 239)
+[WARNING] December / V52_12_21_Poem_To_Make_Wangsgaard.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_12_24_The Home_Red.txt (184 shared of 202)
+[WARNING] December / V52_12_21_Poem_To_Make_Wangsgaard.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (184 shared of 202)
+[WARNING] December / V52_12_22_The Home_I_Am_a_Burton.txt: DUPLICATE_CONTENT — 79% n-gram overlap with V52_12_24_The Home_Red.txt (74 shared of 94)
+[WARNING] December / V52_12_22_The Home_I_Am_a_Burton.txt: DUPLICATE_CONTENT — 79% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (74 shared of 94)
+[WARNING] December / V52_12_23_The Home_Roses_Tree.txt: DUPLICATE_CONTENT — 82% n-gram overlap with V52_12_24_The Home_Red.txt (79 shared of 96)
+[WARNING] December / V52_12_23_The Home_Roses_Tree.txt: DUPLICATE_CONTENT — 82% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (79 shared of 96)
+[WARNING] December / V52_12_24_The Home_Red.txt: DUPLICATE_CONTENT — 92% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (859 shared of 929)
+[WARNING] December / V52_12_25_The Home_Candle_Gifts.txt: DUPLICATE_CONTENT — 92% n-gram overlap with V52_12_26_The Home_Quilts_Gifts.txt (116 shared of 126)
+[WARNING] February / V52_02_05_Fict_Among_Littke.txt: UNDERSIZED — Size 3110 chars, expected ~16800 (pg 94, span 7 pages, 19% of expected)
+[WARNING] February / V52_02_06_GenFt_Womans_Cannon.txt: OVERSIZED — Size 20281 chars, expected ~2400 (pg 101, span 1 pages, 845% of expected)
+[WARNING] February / V52_02_13_The Home_Birthday_Woolley.txt: UNDERSIZED — Size 925 chars, expected ~4800 (pg 115, span 2 pages, 19% of expected)
+[WARNING] February / V52_02_34_The Home_Hurry_Bunker.txt: UNDERSIZED — Size 103 chars, expected ~4800 (pg 159, span 2 pages, 2% of expected)
+[WARNING] February / V52_02_35_Poem_Death_Hill.txt: HIGH_AD_DENSITY — Ad score density 15.5 per 1K chars (total score 23, size 1484)
+[WARNING] February / V52_02_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The Relief Society Magazine Both Mother and I have had great...
+[WARNING] February / V52_02_37_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Ninety-eight Mrs. Jeanette Bennion Gerrard Taylorsville, Uta...
+[WARNING] February / V52_02_02_SpFt_Oakland.txt: DUPLICATE_CONTENT — 65% n-gram overlap with V52_02_03_SpFt_The_Romney.txt (305 shared of 469)
+[WARNING] February / V52_02_02_SpFt_Oakland.txt: DUPLICATE_CONTENT — 30% n-gram overlap with V52_02_06_GenFt_Womans_Cannon.txt (141 shared of 469)
+[WARNING] February / V52_02_05_Fict_Among_Littke.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_02_11_Fict_Valentines_Trutton.txt (543 shared of 562)
+[WARNING] February / V52_02_13_The Home_Birthday_Woolley.txt: DUPLICATE_CONTENT — 93% n-gram overlap with V52_02_14_Poem_Home_Roberts.txt (143 shared of 154)
+[WARNING] February / V52_02_31_Poem_Prayer_Smith.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_02_35_Poem_Death_Hill.txt (116 shared of 127)
+[WARNING] February / V52_02_33_Poem_Grandson_Coles.txt: DUPLICATE_CONTENT — 62% n-gram overlap with V52_02_37_GenFt_Bday_Congrats.txt (140 shared of 226)
+[WARNING] February / V52_02_36_Poem_Mountain_Rubin.txt: DUPLICATE_CONTENT — 51% n-gram overlap with V52_02_37_GenFt_Bday_Congrats.txt (138 shared of 269)
+[WARNING] January / V52_01_22_Lssn_Theology_Doxey.txt: UNDERSIZED — Size 1306 chars, expected ~12000 (pg 58, span 5 pages, 11% of expected)
+[WARNING] January / V52_01_26_Lssn_Social_Ballif.txt: OVERSIZED — Size 15334 chars, expected ~4800 (pg 74, span 2 pages, 319% of expected)
+[INFO] January / V52_01_16_GenFt_Notes.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 8 (threshold 7)
+[WARNING] January / V52_01_16_GenFt_Notes.txt: HIGH_AD_DENSITY — Ad score density 9.4 per 1K chars (total score 8, size 855)
+[INFO] January / V52_01_26_Lssn_Social_Ballif.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 15 (threshold 7)
+[INFO] January / V52_01_27_GenFt_Bday_Congrats.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 13 (threshold 7)
+[WARNING] January / V52_01_27_GenFt_Bday_Congrats.txt: HIGH_AD_DENSITY — Ad score density 7.2 per 1K chars (total score 28, size 3888)
+[INFO] January / V52_01_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text); 1 UNCAPTURED BODY TEXT segment(s)
+[WARNING] January / V52_01_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Vol.52, No. 1 January Relief Society Magaine To each of you,...
+[WARNING] January / V52_01_27_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Ninety-eight Mrs. Mary Hegsted Rawson Whittier, California M...
+[WARNING] January / V52_01_01_SpFt_New_Presidency.txt: DUPLICATE_CONTENT — 85% n-gram overlap with V52_01_05_Poem_Old_Wrathall.txt (91 shared of 107)
+[WARNING] January / V52_01_15_SpFt_The_Voss.txt: DUPLICATE_CONTENT — 95% n-gram overlap with V52_01_17_GenFt_Womans_Cannon.txt (326 shared of 343)
+[WARNING] July / V52_07_08_GenFt_Notes_Order.txt: UNDERSIZED — Size 275 chars, expected ~4800 (pg 502, span 2 pages, 6% of expected)
+[WARNING] July / V52_07_21_SpFt_Dont_Sabin.txt: UNDERSIZED — Size 969 chars, expected ~7200 (pg 517, span 3 pages, 13% of expected)
+[INFO] July / V52_07_31_The Home_Social.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 10 (threshold 7)
+[INFO] July / V52_07_33_Poem_While_Bennion.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 7 (threshold 7)
+[WARNING] July / V52_07_33_Poem_While_Bennion.txt: HIGH_AD_DENSITY — Ad score density 7.4 per 1K chars (total score 7, size 951)
+[WARNING] July / V52_07_35_Poem_Moon-Beguiled.txt: HIGH_AD_DENSITY — Ad score density 6.8 per 1K chars (total score 14, size 2048)
+[INFO] July / V52_07_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] July / V52_07_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Margery S. Stewart The mist has purple in it, Inside the chi...
+[WARNING] July / V52_07_36_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Mary Ann Brown Clark TH Mrs. Martha Christensen Hansen ...
+[WARNING] July / V52_07_10_Poem_Deep_Fairbairn.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_07_37_Poem_Dear_Curtis.txt (125 shared of 137)
+[WARNING] July / V52_07_30_The Home_Work_Jardine.txt: DUPLICATE_CONTENT — 36% n-gram overlap with V52_07_31_The Home_Social.txt (495 shared of 1376)
+[WARNING] July / V52_07_30_The Home_Work_Jardine.txt: DUPLICATE_CONTENT — 36% n-gram overlap with V52_07_32_Lssn_Literature_Clark.txt (495 shared of 1376)
+[WARNING] July / V52_07_31_The Home_Social.txt: DUPLICATE_CONTENT — 99% n-gram overlap with V52_07_32_Lssn_Literature_Clark.txt (2343 shared of 2365)
+[WARNING] July / V52_07_35_Poem_Moon-Beguiled.txt: DUPLICATE_CONTENT — 44% n-gram overlap with V52_07_36_GenFt_Bday_Congrats.txt (108 shared of 248)
+[INFO] June / V52_06_19_The Home_The_Setting.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 14 (threshold 7)
+[INFO] June / V52_06_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] June / V52_06_33_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Adelia Felt Young Salt Lake City, Utah 95 Mrs. Isbell C...
+[WARNING] March / V52_03_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: ; The Cover: Frontispiece: Art Layout: Linnie F. Robinson Tr...
+[WARNING] March / V52_03_34_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Mary C. Regg Burlington, Wyoming NINETY-EIGHT Mrs. Susa...
+[WARNING] March / V52_03_12_GenFt_Editorial_Crawford.txt: DUPLICATE_CONTENT — 79% n-gram overlap with V52_03_14_GenFt_Womans_Cannon.txt (224 shared of 285)
+[WARNING] March / V52_03_13_SpFt_The_Red_Sarnoff.txt: DUPLICATE_CONTENT — 66% n-gram overlap with V52_03_15_SpFt_Latter-day_Noall.txt (31 shared of 47)
+[WARNING] March / V52_03_18_The Home_A.txt: DUPLICATE_CONTENT — 98% n-gram overlap with V52_03_19_The Home_Harvest.txt (429 shared of 437)
+[WARNING] March / V52_03_20_The Home_Tacoma_Nations.txt: DUPLICATE_CONTENT — 91% n-gram overlap with V52_03_21_The Home_Around_Bazaar.txt (126 shared of 139)
+[WARNING] May / V52_05_20_The Home_Desserts_Lovett.txt: UNDERSIZED — Size 124 chars, expected ~4800 (pg 355, span 2 pages, 3% of expected)
+[WARNING] May / V52_05_28_SpFt_Magazine_Sharp.txt: UNDERSIZED — Size 3792 chars, expected ~26400 (pg 372, span 11 pages, 14% of expected)
+[INFO] May / V52_05_35_Lssn_Work_Christensen.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 10 (threshold 7)
+[INFO] May / V52_05_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] May / V52_05_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The IRCGIief Society Magazine, Volume 52 «Number 5 - see VE...
+[WARNING] May / V52_05_40_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Anna Glackmyre Agee Mora, Minnesota Of Mrs. Martha Jone...
+[WARNING] May / V52_05_16_GenFt_Womans_Cannon.txt: DUPLICATE_CONTENT — 90% n-gram overlap with V52_05_17_Fict_Abide_Hansen.txt (152 shared of 169)
+[WARNING] May / V52_05_39_Poem_A_Schow.txt: DUPLICATE_CONTENT — 63% n-gram overlap with V52_05_40_GenFt_Bday_Congrats.txt (180 shared of 287)
+[WARNING] November / V52_11_35_Poem_November_Taylor.txt: HIGH_AD_DENSITY — Ad score density 7.7 per 1K chars (total score 13, size 1686)
+[WARNING] November / V52_11_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: MAGAZINE Volume 52 Number 11 November 1965 Lessons for Febru...
+[WARNING] November / V52_11_36_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Hilda Erickson Grantsville, Utah a2 Mrs. Johanne Mariah...
+[WARNING] November / V52_11_13_GenFt_Notes_Available.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_11_14_Poem_One_Gabbott.txt (290 shared of 300)
+[ERROR] November / (missing): NO_BOARD_FILE — No BOARD file found for this month
+[WARNING] October / V52_10_36_Poem_Hurry_Breeze.txt: HIGH_AD_DENSITY — Ad score density 13.3 per 1K chars (total score 21, size 1583)
+[WARNING] October / V52_10_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The Relief Society Magazine Volume 52+ Number 10. October 19...
+[WARNING] October / V52_10_03_Poem_Dear_Miller.txt: DUPLICATE_CONTENT — 83% n-gram overlap with V52_10_04_Poem_Inland_Hill.txt (59 shared of 71)
+[WARNING] September / V52_09_10_GenFt_In_Widtsoe.txt: UNDERSIZED — Size 598 chars, expected ~4800 (pg 668, span 2 pages, 12% of expected)
+[WARNING] September / V52_09_12_GenFt_Notes_Available.txt: UNDERSIZED — Size 940 chars, expected ~4800 (pg 669, span 2 pages, 20% of expected)
+[INFO] September / V52_09_25_The Home_Social_Christensen.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 10 (threshold 7)
+[WARNING] September / V52_09_05_Poem_Shared_Fairbairn.txt: DUPLICATE_CONTENT — 60% n-gram overlap with V52_09_29_Poem_Give_Me_Coles.txt (193 shared of 320)
+[WARNING] September / V52_09_08_GenFt_Womans_Cannon.txt: DUPLICATE_CONTENT — 96% n-gram overlap with V52_09_30_Poem_French_Krambule.txt (249 shared of 259)
+[WARNING] September / V52_09_09_GenFt_Editorial_Sharp.txt: DUPLICATE_CONTENT — 78% n-gram overlap with V52_09_28_Poem_Autumn_Taylor.txt (31 shared of 40)
+[WARNING] September / V52_09_11_Poem_From_a_Ames..txt: DUPLICATE_CONTENT — 74% n-gram overlap with V52_09_12_GenFt_Notes_Available.txt (58 shared of 78)
+[WARNING] September / V52_09_13_Poem_Creek_Jacobson.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V52_09_14_The Home_Promise_Nelson.txt (271 shared of 280)
+[WARNING] September / V52_09_17_The Home_Make_a_Williams.txt: DUPLICATE_CONTENT — 31% n-gram overlap with V52_09_18_Poem_Four-_Hill.txt (65 shared of 209)

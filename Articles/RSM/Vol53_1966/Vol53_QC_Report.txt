@@ -1,0 +1,84 @@
+Quality Control Report — Vol53 (1966)
+Generated: 2026-03-13 18:22:25.298627
+======================================================================
+
+Total issues: 75
+  ERROR: 2
+  WARNING: 59
+  INFO: 14
+
+[WARNING] April / V53_04_13_GenFt_Notes.txt: UNDERSIZED — Size 690 chars, expected ~4800 (pg 270, span 2 pages, 14% of expected)
+[WARNING] April / V53_04_15_SpFt_Look_to_Peck.txt: OVERSIZED — Size 10911 chars, expected ~2400 (pg 271, span 1 pages, 455% of expected)
+[WARNING] April / V53_04_13_GenFt_Notes.txt: HIGH_AD_DENSITY — Ad score density 5.8 per 1K chars (total score 4, size 690)
+[WARNING] April / V53_04_38_Lssn_Work_Poulson.txt: HIGH_AD_DENSITY — Ad score density 5.1 per 1K chars (total score 48, size 9365)
+[WARNING] April / V53_04_03_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Ast the Transparency by Lucien Bown Lithographed in Full Col...
+[WARNING] April / V53_04_40_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Anna Glackmyre Agee Mrs. Sarah Humphreys Passey Mora, M...
+[INFO] August / V53_08_29_GenFt_Cultural_Clark.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 17 (threshold 7)
+[WARNING] August / V53_08_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Dorothy J. Roberts: As winds of spring walk over the hill ag...
+[WARNING] August / V53_08_31_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Annie Erickson Benson Logan, Utah Mrs.. Needa Johnson J...
+[WARNING] August / V53_08_11_Poem_Her_Swenson.txt: DUPLICATE_CONTENT — 93% n-gram overlap with V53_08_12_GenFt_Womans_Cannon.txt (214 shared of 231)
+[WARNING] August / V53_08_11_Poem_Her_Swenson.txt: DUPLICATE_CONTENT — 44% n-gram overlap with V53_08_13_GenFt_Editorial_Madsen.txt (208 shared of 469)
+[WARNING] December / V53_12_09_SpFt_The.txt: UNDERSIZED — Size 702 chars, expected ~4800 (pg 904, span 2 pages, 15% of expected)
+[INFO] December / V53_12_23_GenFt_Cultural_Thomas.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 12 (threshold 7)
+[INFO] December / V53_12_26_Poem_Late_Hill.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 8 (threshold 7)
+[WARNING] December / V53_12_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: DECEMBER 1966 Volume 53 Number 12  Transparency by Three Lio...
+[WARNING] December / V53_12_27_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Hilda Anderson Erickson. Grantsville, Utah Mrs. Hannah ...
+[INFO] February / V53_02_34_Poem_To_an_Coles.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 11 (threshold 7)
+[WARNING] February / V53_02_34_Poem_To_an_Coles.txt: HIGH_AD_DENSITY — Ad score density 5.7 per 1K chars (total score 20, size 3484)
+[INFO] February / V53_02_37_GenFt_This_Hatch.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 15 (threshold 7)
+[WARNING] February / V53_02_37_GenFt_This_Hatch.txt: HIGH_AD_DENSITY — Ad score density 8.7 per 1K chars (total score 23, size 2649)
+[WARNING] February / V53_02_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The Relief Society. Magazine Volume 53 Number 2 we — ye I ...
+[WARNING] February / V53_02_38_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Jane Clark Angus Banks Bancroft, Idaho Mrs. Elizabeth E...
+[WARNING] February / V53_02_07_GenFt_Womans_Cannon.txt: DUPLICATE_CONTENT — 48% n-gram overlap with V53_02_10_GenFt_Notes_Emblem.txt (224 shared of 462)
+[WARNING] February / V53_02_08_GenFt_Editorial_Crawford.txt: DUPLICATE_CONTENT — 98% n-gram overlap with V53_02_10_GenFt_Notes_Emblem.txt (602 shared of 617)
+[WARNING] February / V53_02_09_GenFt_In_Boyer.txt: DUPLICATE_CONTENT — 96% n-gram overlap with V53_02_10_GenFt_Notes_Emblem.txt (224 shared of 234)
+[WARNING] February / V53_02_25_The Home_Sunburst_Quilts.txt: DUPLICATE_CONTENT — 94% n-gram overlap with V53_02_26_Fict_Wheat_Stewart.txt (298 shared of 318)
+[WARNING] January / V53_01_16_GenFt_Notes.txt: UNDERSIZED — Size 163 chars, expected ~4800 (pg 33, span 2 pages, 3% of expected)
+[WARNING] January / V53_01_15_GenFt_Womans_Cannon.txt: HIGH_AD_DENSITY — Ad score density 6.5 per 1K chars (total score 13, size 2010)
+[INFO] January / V53_01_39_GenFt_Bday_Congrats.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 15 (threshold 7)
+[WARNING] January / V53_01_39_GenFt_Bday_Congrats.txt: HIGH_AD_DENSITY — Ad score density 6.7 per 1K chars (total score 17, size 2519)
+[WARNING] January / V53_01_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Magazine me 58 Number 1 i "Happy New Year'' has become a sta...
+[WARNING] January / V53_01_39_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Anna Wagstaff McGhie Salt Lake City, Utah Mrs. Mary E. ...
+[ERROR] January / (missing): NO_BOARD_FILE — No BOARD file found for this month
+[WARNING] July / V53_07_11_GenFt_Wealtha_Board.txt: UNDERSIZED — Size 953 chars, expected ~4800 (pg 506, span 2 pages, 20% of expected)
+[INFO] July / V53_07_32_Poem_Morning_Young.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 14 (threshold 7)
+[WARNING] July / V53_07_32_Poem_Morning_Young.txt: HIGH_AD_DENSITY — Ad score density 12.5 per 1K chars (total score 14, size 1124)
+[INFO] July / V53_07_33_Poem_Summertime_Green.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 15 (threshold 7)
+[WARNING] July / V53_07_33_Poem_Summertime_Green.txt: HIGH_AD_DENSITY — Ad score density 14.3 per 1K chars (total score 47, size 3292)
+[WARNING] July / V53_07_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: SWEETNESS IN YOUR LIFE! ANNIVERSARY I thank you for our wond...
+[WARNING] July / V53_07_34_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Sally Quachmana rooney Polacca, Arizona Mrs. Sarah Luel...
+[WARNING] July / V53_07_18_The Home_Passing_Hopper.txt: DUPLICATE_CONTENT — 98% n-gram overlap with V53_07_19_The Home_Dripless_Woolley.txt (479 shared of 488)
+[WARNING] June / V53_06_01_Art_Editor_Spafford.txt: UNDERSIZED — Size 284 chars, expected ~948000 (pg 6, span 395 pages, 0% of expected)
+[WARNING] June / V53_06_40_Art_June.txt: UNDERSIZED — Size 83 chars, expected ~4800 (pg 530, span 2 pages, 2% of expected)
+[INFO] June / V53_06_34_The Home_Homemaking_Cannon.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 16 (threshold 7)
+[WARNING] June / V53_06_34_The Home_Homemaking_Cannon.txt: HIGH_AD_DENSITY — Ad score density 5.8 per 1K chars (total score 45, size 7724)
+[WARNING] June / V53_06_03_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The Relief SOCIGCY Magazine JUNE 1966 Volume 53 Number 6 Chr...
+[WARNING] June / V53_06_41_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Isabell Christensen Overson Richfield, Utah Mrs. Serena...
+[WARNING] June / V53_06_23_The Home_The_Men.txt: DUPLICATE_CONTENT — 98% n-gram overlap with V53_06_24_The Home_Home_Is.txt (778 shared of 795)
+[WARNING] June / V53_06_39_Poem_My_Olsen.txt: DUPLICATE_CONTENT — 37% n-gram overlap with V53_06_41_GenFt_Bday_Congrats.txt (61 shared of 166)
+[WARNING] March / V53_03_11_SpFt_You_Can_Henderson-.txt: UNDERSIZED — Size 328 chars, expected ~4800 (pg 189, span 2 pages, 7% of expected)
+[WARNING] March / V53_03_30_Lssn_Work_Cannon.txt: OVERSIZED — Size 15619 chars, expected ~4800 (pg 233, span 2 pages, 325% of expected)
+[WARNING] March / V53_03_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Katherine F. Larsen... Low hills, lovely with green, fresh g...
+[WARNING] March / V53_03_33_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Eliza Jane Wilcox Sparks 9 Mrs. Edith Maude Ellerby Lan...
+[WARNING] March / V53_03_01_Frnt_From_Larsen.txt: DUPLICATE_CONTENT — 89% n-gram overlap with V53_03_02_GenFt_From_Near_and_Far.txt (145 shared of 163)
+[WARNING] May / V53_05_33_The Home_Time_of_Department.txt: UNDERSIZED — Size 947 chars, expected ~4800 (pg 386, span 2 pages, 20% of expected)
+[INFO] May / V53_05_36_The Home_Work_Childs.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 17 (threshold 7)
+[WARNING] May / V53_05_01_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Relief Society _- Magazine Volume 53 Number § MAY 1966 _—...
+[WARNING] May / V53_05_41_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Mary Adelia Felt Young Salt Lake City, Utah Mrs. Mary M...
+[WARNING] May / V53_05_10_Poem_Journal_Fairbairn.txt: DUPLICATE_CONTENT — 62% n-gram overlap with V53_05_11_Poem_Susquehanna_Bailey.txt (28 shared of 45)
+[ERROR] May / (missing): NO_BOARD_FILE — No BOARD file found for this month
+[WARNING] November / V53_11_30_The Home_Cultural_Clark.txt: OVERSIZED — Size 16394 chars, expected ~4800 (pg 873, span 2 pages, 342% of expected)
+[INFO] November / V53_11_30_The Home_Cultural_Clark.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 15 (threshold 7)
+[INFO] November / V53_11_00_Misc.txt: MISC_ARTICLE_LEAK — 1 low-ad-score section(s) in Misc (possible article text)
+[WARNING] November / V53_11_03_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: Margery S. Stewart God, thou hast left The blue doors open. ...
+[WARNING] November / V53_11_31_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Ann Crawford Jensen Salt Lake City, Utah Mrs. Jennie Gi...
+[WARNING] November / V53_11_09_Poem_First_Coles.txt: DUPLICATE_CONTENT — 93% n-gram overlap with V53_11_32_Poem_Children_Hill.txt (113 shared of 121)
+[INFO] October / V53_10_31_GenFt_Cultural_Thomas.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 14 (threshold 7)
+[WARNING] October / V53_10_03_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The.  Transparency by Lucien B. Brown Lithographed in Full C...
+[WARNING] October / V53_10_33_GenFt_Bday_Congrats.txt: NO_BRACKET_HEADER — File starts with: Mrs. Pauline B. Wale 9] Mrs. Myrtle May Tuttle Webster 101 S...
+[WARNING] September / V53_09_30_The Home_Social_Christensen.txt: OVERSIZED — Size 20053 chars, expected ~4800 (pg 713, span 2 pages, 418% of expected)
+[INFO] September / V53_09_08_GenFt_Editorial_Sharp.txt: AD_CONTAMINATION — Trailing 500 chars have ad score 10 (threshold 7)
+[WARNING] September / V53_09_02_GenFt_From_Near_and_Far.txt: NO_BRACKET_HEADER — File starts with: The, Cover: Frontispiece: Art Layout: Illustrations: 'Alice ...
+[WARNING] September / V53_09_05_Poem_Arrowhead.txt: DUPLICATE_CONTENT — 97% n-gram overlap with V53_09_06_Fict_Always_Yost.txt (300 shared of 310)
+[WARNING] September / V53_09_18_The Home_A_Feast_Burt.txt: DUPLICATE_CONTENT — 95% n-gram overlap with V53_09_20_The Home_Woman_Breinholt.txt (375 shared of 394)
+[WARNING] September / V53_09_19_The Home_The_Cassatt.txt: DUPLICATE_CONTENT — 93% n-gram overlap with V53_09_21_The Home_Aunt_Williams.txt (286 shared of 306)

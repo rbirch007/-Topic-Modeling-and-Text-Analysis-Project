@@ -1,0 +1,175 @@
+QC Report: Vol 56 (1969)
+======================================================================
+
+HIGH   | DUPLICATE                 | January    | p.  4 | V56_01_02_SpFt_Joyous.txt <-> V56_01_03_SpFt_Our_Smith.txt
+       94% overlap
+MEDIUM | OVERSIZED                 | January    | p.  8 | V56_01_03_SpFt_Our_Smith.txt
+       26822 chars
+HIGH   | MID_SENTENCE_START        | January    | p.  8 | V56_01_03_SpFt_Our_Smith.txt
+       starts: "ber of Relief Society as the year 1969 rises on the horizon. It is a time to loo..."
+HIGH   | BOUNDARY_LEAK             | January    | p. 16 | V56_01_04_SpFt_Obligations_Lee.txt -> V56_01_05_SpFt_Mayola_Heywood.txt
+       A's tail has 2/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | January    | p. 22 | V56_01_09_GenFt_Womans_Cannon.txt -> V56_01_10_GenFt_Editorial_Sharp.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | January    | p. 25 | V56_01_12_SpFt_Genealogical.txt
+       starts: "vocal works of the last century have been renewed because of her superb vocal ar..."
+HIGH   | DUPLICATE                 | January    | p. 25 | V56_01_12_SpFt_Genealogical.txt <-> V56_01_13_Poem_Snowbound_Cox.txt
+       100% overlap
+HIGH   | MID_SENTENCE_START        | January    | p. 40 | V56_01_20_GenFt_Bone_Wrathall.txt
+       starts: "mas." Mary removed her coat before sitting down. "My children, that is, my son a..."
+HIGH   | MID_SENTENCE_START        | January    | p. 42 | V56_01_22_GenFt_Calling_Watkins.txt
+       starts: "ants:... That thy fasting may be perfect, or in other words, that thy joy may be..."
+HIGH   | MID_SENTENCE_START        | January    | p. 51 | V56_01_27_GenFt_Notes_Date.txt
+       starts: "spiritual living class leader; tenth from the left: Nila Burash, President, Saug..."
+HIGH   | MID_SENTENCE_START        | January    | p. 67 | V56_01_31_GenFt_Homemaking_Taylor.txt
+       starts: "and for little Bill, and for the rest, and the blessings for himself that his ow..."
+HIGH   | BOUNDARY_LEAK             | January    | p. 67 | V56_01_31_GenFt_Homemaking_Taylor.txt -> V56_01_32_GenFt_Social_Christensen.txt
+       A's tail has 2/4 of B's title words
+HIGH   | EMPTY                     | February   | p.  4 | V56_02_01_Fict_Welcome_Chapter.txt
+       0 chars
+HIGH   | MID_SENTENCE_START        | February   | p. 99 | V56_02_04_Fict_The_Lloyd.txt
+       starts: "se. I don't remember when I first heard my parents discuss the possibility of th..."
+HIGH   | MID_SENTENCE_START        | February   | p.103 | V56_02_06_GenFt_From.txt
+       starts: "d wife and mother. Jane Elligett, wife, mother, homemaker, graduate of Bryn Mawr..."
+HIGH   | EMPTY                     | February   | p.106 | V56_02_08_SpFt_According_Romney.txt
+       0 chars
+HIGH   | MID_SENTENCE_START        | February   | p.107 | V56_02_10_Fict_Common_Partridge.txt
+       starts: "had set an egg-beater in the middle of it and given it half a turn.  "No," Mama..."
+HIGH   | MID_SENTENCE_START        | February   | p.114 | V56_02_12_GenFt_Birthday.txt
+       starts: "ing their work as gifts and bazaar items. Martha Callahan Durfee, Weiser Stake,..."
+HIGH   | MID_SENTENCE_START        | February   | p.119 | V56_02_15_GenFt_Made-Over_Olson.txt
+       starts: "made. There it was in all its beautywhat mattered it if it in. No way "matched"..."
+HIGH   | DUPLICATE                 | February   | p.119 | V56_02_16_Poem_On_A_Roberts.txt <-> V56_02_17_GenFt_Grandmother_Stange.txt
+       42% overlap
+HIGH   | MID_SENTENCE_START        | February   | p.126 | V56_02_24_Fict_A_Day_Bailey.txt
+       starts: "er 4 Bea was silent for a few minutes. "Well, Jenny, one never knows. We both ha..."
+MEDIUM | LOW_OCR                   | February   | p.159 | V56_02_37_Poem_Spring_Robinson.txt
+       score 1/100
+HIGH   | BOUNDARY_LEAK             | February   | p.159 | V56_02_36_Poem_Jacaranda_Ames.txt -> V56_02_37_Poem_Spring_Robinson.txt
+       A's tail has 3/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | March      | p.161 | V56_03_02_Frnt_Sparrows_Kay.txt -> V56_03_03_SpFt_Relief_Taylor.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | March      | p.174 | V56_03_05_SpFt_The_Spafford.txt
+       starts: "would be combined with opportunities for mental and spiritual growth, and provid..."
+HIGH   | MID_SENTENCE_START        | March      | p.184 | V56_03_12_SpFt_Genealogy_Society.txt
+       starts: "h cooperative efforts of Red Cross and the Relief Societyemergency action on be..."
+HIGH   | BOUNDARY_LEAK             | March      | p.204 | V56_03_17_GenFt_Make_Decoupage.txt -> V56_03_18_GenFt_Make_a_Kerr.txt
+       A's tail has 2/2 of B's title words
+HIGH   | DUPLICATE                 | March      | p.205 | V56_03_18_GenFt_Make_a_Kerr.txt <-> V56_03_19_GenFt_Spring_Snow.txt
+       66% overlap
+HIGH   | MID_SENTENCE_START        | March      | p.206 | V56_03_19_GenFt_Spring_Snow.txt
+       starts: "d C. Kimball, Stake President. A lovely quilt was presented to President and Mrs..."
+HIGH   | DUPLICATE                 | March      | p.229 | V56_03_25_GenFt_Magazines.txt <-> V56_03_26_GenFt_Hobby_Departr-^nt.txt
+       84% overlap
+MEDIUM | LOW_OCR                   | March      | p.240 | V56_03_27_GenFt_Notes_Activities.txt
+       score 2/100
+HIGH   | MID_SENTENCE_START        | March      | p.240 | V56_03_27_GenFt_Notes_Activities.txt
+       starts: "ering from Orange. EI REISS ieibisisisini=isi= > 6c be SS aa cas Miran heise rea..."
+HIGH   | MID_SENTENCE_START        | April      | p.254 | V56_04_08_SpFt_Of_Bailey.txt
+       starts: "would some day travel the world around into far corners of numerous countries wh..."
+HIGH   | MID_SENTENCE_START        | April      | p.256 | V56_04_09_SpFt_Woman_Olsen.txt
+       starts: "1968  award winners  Relief Society Poem Contest  ■ The Relief Society General B..."
+HIGH   | BOUNDARY_LEAK             | April      | p.263 | V56_04_10_SpFt_A_Horse_Schow.txt -> V56_04_11_SpFt_Mama_Littke.txt
+       A's tail has 3/4 of B's title words
+HIGH   | MID_SENTENCE_START        | April      | p.283 | V56_04_17_GenFt_Project_Watson.txt
+       starts: "h of office as President of the United States on January 20, 1969. Anna Moffo, M..."
+HIGH   | MID_SENTENCE_START        | April      | p.300 | V56_04_21_GenFt_Womans_Cannon.txt
+       starts: "118 91 133 106 91 82 82 111 98 109 125 94 99 78 125 110 76 80 103 112 123 lsora..."
+HIGH   | BOUNDARY_LEAK             | May        | p.  7 | V56_05_01_Fict_Welcome_Chapter.txt -> V56_05_02_Poem_No_Sadleir.txt
+       A's tail has 2/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | May        | p.334 | V56_05_05_SpFt_Is_Barlow.txt -> V56_05_06_Poem_The_Kleinman.txt
+       A's tail has 2/3 of B's title words
+HIGH   | MID_SENTENCE_START        | May        | p.344 | V56_05_10_GenFt_Womans_Cannon.txt
+       starts: "addy's vocabulary was "exaggerated imagination,' and he always used it when he t..."
+HIGH   | MID_SENTENCE_START        | May        | p.348 | V56_05_14_Fict_A_Stratton.txt
+       starts: "ing. The structures speak of power, a power that lifts mountains, lays down plai..."
+HIGH   | MID_SENTENCE_START        | May        | p.352 | V56_05_15_Fict_The_Roehl.txt
+       starts: "orkings of that particular marvel of man's invention. A few seconds later and th..."
+HIGH   | MID_SENTENCE_START        | May        | p.378 | V56_05_29_GenFt_Recipe_Watkins.txt
+       starts: "appearance of the ballet skirts Pavlova wore during her career as a famous dance..."
+HIGH   | BOUNDARY_LEAK             | June       | p.428 | V56_06_10_SpFt_In_Peterson.txt -> V56_06_11_SpFt_South_Miner.txt
+       A's tail has 3/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | June       | p.442 | V56_06_12_GenFt_Hobby_Staples.txt -> V56_06_13_GenFt_The_Art_Alvord.txt
+       A's tail has 2/2 of B's title words
+HIGH   | MID_SENTENCE_START        | June       | p.445 | V56_06_13_GenFt_The_Art_Alvord.txt
+       starts: "s color to some extent. Not so with bread clay because Transparency by Dorothy J..."
+HIGH   | MID_SENTENCE_START        | June       | p.450 | V56_06_16_GenFt_The_Brienholt.txt
+       starts: "wee "THE GIRL IN WHITE" by Julian Alden Weir (1852-1919) American Brigham Young..."
+HIGH   | MID_SENTENCE_START        | June       | p.453 | V56_06_18_GenFt_Womans_Cannon.txt
+       starts: "oxes was papered with Relief Society Magazine covers. The Magazines from which t..."
+HIGH   | MID_SENTENCE_START        | June       | p.459 | V56_06_20_GenFt_Notes_Contest.txt
+       starts: "girls fussing over him, keeping the house clean, bottling his fruit and bringing..."
+MEDIUM | UNDERSIZED                | July       | p.  1 | V56_07_01_GenFt_Social_Part.txt
+       181 chars
+MEDIUM | LOW_OCR                   | July       | p.494 | V56_07_06_SpFt_Announcement_Conte.txt
+       score 8/100
+MEDIUM | OVERSIZED                 | July       | p.532 | V56_07_20_GenFt_Editorial_Madsen.txt
+       27118 chars
+HIGH   | MID_SENTENCE_START        | July       | p.532 | V56_07_20_GenFt_Editorial_Madsen.txt
+       starts: "s anybody else's." Rosemary dimpled with pleasure. "You know when they had those..."
+HIGH   | DUPLICATE                 | August     | p.  2 | V56_08_01_GenFt_Social_Part.txt <-> V56_08_02_Fict_Heart_Chapter.txt
+       100% overlap
+MEDIUM | LOW_OCR                   | August     | p.578 | V56_08_08_GenFt_Birthday.txt
+       score 9/100
+HIGH   | MID_SENTENCE_START        | August     | p.580 | V56_08_11_GenFt_Womans_Cannor.txt
+       starts: "will suggest ways of making existing programs more effective and will struggle t..."
+HIGH   | BOUNDARY_LEAK             | August     | p.582 | V56_08_13_GenFt_Editorial_Sharp.txt -> V56_08_14_GenFt_Irene_Board.txt
+       A's tail has 4/4 of B's title words
+HIGH   | DUPLICATE                 | August     | p.583 | V56_08_14_GenFt_Irene_Board.txt <-> V56_08_15_Poem_Six_of_Jennings.txt
+       100% overlap
+HIGH   | MID_SENTENCE_START        | August     | p.590 | V56_08_17_Fict_The_Applegate.txt
+       starts: ", the light revealed the toes of her leather shoes, the slender white curve of h..."
+HIGH   | MID_SENTENCE_START        | August     | p.603 | V56_08_24_Fict_In_the_Miller.txt
+       starts: "e. "IT told you not to go in," reminded Tommy. "But she's right. Rosemary's righ..."
+HIGH   | BOUNDARY_LEAK             | August     | p.608 | V56_08_25_Poem_Stay.txt -> V56_08_26_GenFt_Notes_Packet.txt
+       A's tail has 2/4 of B's title words
+HIGH   | DUPLICATE                 | September  | p.  4 | V56_09_01_Fict_Heart_Chapter.txt <-> V56_09_02_GenFt_The.txt
+       100% overlap
+HIGH   | DUPLICATE                 | September  | p.  5 | V56_09_02_GenFt_The.txt <-> V56_09_03_GenFt_Sunday.txt
+       100% overlap
+HIGH   | DUPLICATE                 | September  | p.662 | V56_09_08_GenFt_Womans_Cannon.txt <-> V56_09_09_GenFt_Editorial_Crawford.txt
+       100% overlap
+HIGH   | MID_SENTENCE_START        | September  | p.665 | V56_09_11_Fict_Gramps_Trutton.txt
+       starts: "en?" "I'd have gone out and borrowed the money," replied Tommy calmly. "I didn't..."
+HIGH   | MID_SENTENCE_START        | September  | p.680 | V56_09_14_GenFt_Art_in_Cutler.txt
+       starts: "saying he just made them up."  Naomi put her glass down. "Mike, let's change the..."
+HIGH   | MID_SENTENCE_START        | September  | p.693 | V56_09_22_GenFt_Nut_Oertle.txt
+       starts: "t and the inland sea. If one does not have the advantages of being surrounded wi..."
+HIGH   | MID_SENTENCE_START        | September  | p.694 | V56_09_23_Fict_Alice.txt
+       starts: "hildren, \ and to countless friends and neighbors. I das a teacher and execu d s..."
+HIGH   | MID_SENTENCE_START        | September  | p.696 | V56_09_25_GenFt_In_Eyring.txt
+       starts: "also caught in the sudden sprinkle, but screams of delight and laughter escaped..."
+HIGH   | BOUNDARY_LEAK             | September  | p.713 | V56_09_29_GenFt_Homemaking_Taylor.txt -> V56_09_30_GenFt_Social_Christensen.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | October    | p.732 | V56_10_03_SpFt_Testimony_Brown.txt
+       starts: "testimony of the gospel will meet the demands of home building with poise and di..."
+HIGH   | BOUNDARY_LEAK             | October    | p.738 | V56_10_05_Poem_Autumn_Hansen.txt -> V56_10_06_SpFt_New_Society.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | October    | p.746 | V56_10_09_GenFt_Womans_Cannon.txt
+       starts: "ve the first shots available. Ramona W. Cannon Jan Armstrong, Joan Aldrin, and P..."
+HIGH   | MID_SENTENCE_START        | October    | p.760 | V56_10_19_GenFt_Make_Jessen.txt
+       starts: "u may prefer to draw your own if you have artistic talent. You will need a fine..."
+HIGH   | BOUNDARY_LEAK             | October    | p.777 | V56_10_24_GenFt_Hobby_Department.txt -> V56_10_25_GenFt_Spiritual_Doxey.txt
+       A's tail has 3/4 of B's title words
+HIGH   | MID_SENTENCE_START        | October    | p.792 | V56_10_28_GenFt_Social_Christensen.txt
+       starts: "es what he knows, thinks, and feels. 792 INTRODUCTORY COMMENTS From childhood, m..."
+HIGH   | EMPTY                     | October    | p.800 | V56_10_29_GenFt_Notes_Activities.txt
+       0 chars
+HIGH   | MID_SENTENCE_START        | November   | p.834 | V56_11_13_GenFt_Look_To_Brown.txt
+       starts: "books have been written, some of the finest paintings painted, some of the most..."
+HIGH   | MID_SENTENCE_START        | November   | p.843 | V56_11_17_Fict_Trouble_Gregory.txt
+       starts: "lovely handmade articles, ranging from exquisite quilts to delightful children's..."
+HIGH   | BOUNDARY_LEAK             | November   | p.862 | V56_11_21_Poem_Precious_Fairbairn.txt -> V56_11_22_GenFt_Spiritual_Doxey.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | November   | p.864 | V56_11_23_GenFt_Visiting_Smith.txt
+       starts: "to the home of Colonel Watkins. He answered her knock, looking just as ill as Ma..."
+HIGH   | MID_SENTENCE_START        | November   | p.866 | V56_11_24_GenFt_Homemaking_Taylor.txt
+       starts: "**the Home** inside and out  [PHOTOGRAPH]  **WINGED RETURN**  I sent her out to..."
+HIGH   | BOUNDARY_LEAK             | December   | p.900 | V56_12_09_GenFt_Editorial.txt -> V56_12_10_GenFt_Singing_Radio.txt
+       A's tail has 4/4 of B's title words
+HIGH   | MID_SENTENCE_START        | December   | p.927 | V56_12_23_GenFt_Something_Home.txt
+       starts: "(continued on page 934) 925 wr Something Different For Your Home Arrangements by..."
+HIGH   | MID_SENTENCE_START        | December   | p.945 | V56_12_29_GenFt_Visiting_Smith.txt
+       starts: "surance fellows can do the same. That way we're both ahead."  His impact on the..."
+HIGH   | MID_SENTENCE_START        | December   | p.952 | V56_12_32_GenFt_Social_Christensen.txt
+       starts: "ing amazing likenesses of family and friends. At eleven he was accepted into the..."

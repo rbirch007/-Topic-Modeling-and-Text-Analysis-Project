@@ -1,0 +1,150 @@
+QC Report: Vol 55 (1968)
+======================================================================
+
+HIGH   | NEEDS_REEXTRACT           | January    | p.  ? | V55_01_02_Art_From_Near_and_Far.txt
+MEDIUM | LOW_OCR                   | January    | p.  ? | V55_01_35_GenFt_Bday_Congrats.txt
+       score 1/100
+HIGH   | BOUNDARY_LEAK             | January    | p. 16 | V55_01_08_SpFt_Hulda_Sharp.txt -> V55_01_09_SpFt_Award_Contest.txt
+       A's tail has 2/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | January    | p. 17 | V55_01_09_SpFt_Award_Contest.txt -> V55_01_10_SpFt_In_Blanchard.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | January    | p. 34 | V55_01_17_SpFt_Josie_Board.txt
+       starts: "josie B. Bay Resigns as a Member of the General Board # General Board members an..."
+HIGH   | MID_SENTENCE_START        | January    | p. 36 | V55_01_19_SpFt_Birth_Voss.txt
+       starts: "birth defects. With one great victory—the conquest of polio—achieved, the unique..."
+MEDIUM | UNDERSIZED                | January    | p. 37 | V55_01_21_SpFt_Transcript_Father.txt
+       102 chars
+HIGH   | DUPLICATE                 | January    | p. 37 | V55_01_21_SpFt_Transcript_Father.txt <-> V55_01_22_Poem_A_Atterton.txt
+       92% overlap
+HIGH   | MID_SENTENCE_START        | January    | p. 38 | V55_01_23_GenFt_The_Thulin.txt
+       starts: "the Home inside and out  MAKE A HANGABOUT APRON Shirley Thulin  When is an apron..."
+MEDIUM | LOW_OCR                   | February   | p.  ? | V55_02_33_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | DUPLICATE                 | February   | p. 81 | V55_02_02_Art_Solace_Brown.txt <-> V55_02_03_Art_From_Near_and_Far.txt
+       81% overlap
+MEDIUM | UNDERSIZED                | February   | p.125 | V55_02_23_GenFt_Pioneer_Smith.txt
+       167 chars
+HIGH   | DUPLICATE                 | March      | p.161 | V55_03_02_Art_Compass_Tangren.txt <-> V55_03_03_Art_From_Near_and_Far.txt
+       78% overlap
+HIGH   | BOUNDARY_LEAK             | March      | p.175 | V55_03_07_SpFt_Third_Neilson.txt -> V55_03_08_SpFt_How_Eagar.txt
+       A's tail has 2/3 of B's title words
+HIGH   | MID_SENTENCE_START        | March      | p.188 | V55_03_10_Fict_General_Crawford.txt
+       starts: "a part of her life, she will be gaining the equivalent of a college education. S..."
+HIGH   | BOUNDARY_LEAK             | March      | p.204 | V55_03_14_Fict_The_Wangsgaard.txt -> V55_03_15_Fict_Sugar_Cannon.txt
+       A's tail has 2/4 of B's title words
+HIGH   | DUPLICATE                 | March      | p.218 | V55_03_18_Fict_Tranquility_Burnha.txt <-> V55_03_19_Poem_Anxiety_Rothe.txt
+       100% overlap
+MEDIUM | LOW_OCR                   | April      | p.  ? | V55_04_30_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | DUPLICATE                 | April      | p.241 | V55_04_02_Art_Love_Hill.txt <-> V55_04_03_Art_From_Near_and_Far.txt
+       55% overlap
+HIGH   | MID_SENTENCE_START        | April      | p.249 | V55_04_06_SpFt_Open_Blodgett.txt
+       starts: "small part of the effort expended and the good that is done can be recorded in t..."
+HIGH   | MID_SENTENCE_START        | April      | p.253 | V55_04_08_Fict_Mabel.txt
+       starts: "\y A SS Elena Hassell Stanley tetera renetiatie sant en 4; \ Lt} i wy EAST URE..."
+HIGH   | MID_SENTENCE_START        | April      | p.278 | V55_04_15_SpFt_Evon_W..txt
+       starts: "the blessing of Church members. Two thousand, eight hundred and eleven Relief So..."
+HIGH   | DUPLICATE                 | April      | p.294 | V55_04_22_GenFt_English_Adams.txt <-> V55_04_23_GenFt_Daily_Stauffer.txt
+       77% overlap
+MEDIUM | LOW_OCR                   | May        | p.  ? | V55_05_35_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | DUPLICATE                 | May        | p.321 | V55_05_02_Art_Day_Perry.txt <-> V55_05_03_Art_From_Near_and_Far.txt
+       78% overlap
+HIGH   | MID_SENTENCE_START        | May        | p.330 | V55_05_06_Fict_The_Littke.txt
+       starts: "joining the group would be an opportunity to meet some of the other young women..."
+HIGH   | BOUNDARY_LEAK             | May        | p.337 | V55_05_08_GenFt_Womans_Cannon.txt -> V55_05_09_GenFt_Editorial_Spafford.txt
+       A's tail has 2/4 of B's title words
+HIGH   | EMPTY                     | May        | p.340 | V55_05_11_GenFt_Wanted!_Plays.txt
+       0 chars
+HIGH   | DUPLICATE                 | May        | p.341 | V55_05_12_GenFt_Notes_Contests.txt <-> V55_05_13_GenFt_The_Beck.txt
+       100% overlap
+HIGH   | DUPLICATE                 | May        | p.341 | V55_05_13_GenFt_The_Beck.txt <-> V55_05_14_Poem_Spring.txt
+       53% overlap
+HIGH   | MID_SENTENCE_START        | May        | p.346 | V55_05_18_Fict_Hand_in_Smith.txt
+       starts: "d awaken with a start, and the darkness would seem terrible and bleak. Clare wal..."
+HIGH   | MID_SENTENCE_START        | May        | p.356 | V55_05_24_GenFt_Konsternation_Jone.txt
+       starts: "nckley Jones "TI guess it would be too late to add some concentrated gelatin," s..."
+HIGH   | BOUNDARY_LEAK             | May        | p.366 | V55_05_29_GenFt_The_Young.txt -> V55_05_30_Poem_Music_Morris.txt
+       A's tail has 2/2 of B's title words
+HIGH   | NEEDS_REEXTRACT           | June       | p.  ? | V55_06_03_Art_From_Near_and_Far.txt
+MEDIUM | LOW_OCR                   | June       | p.  ? | V55_06_34_GenFt_Bday_Congrats.txt
+       score 1/100
+HIGH   | MID_SENTENCE_START        | June       | p.408 | V55_06_06_SpFt_Elder.txt
+       starts: "to The s Elder Marion D. Hanks was sustained as an Assistant to the Twelve at th..."
+HIGH   | MID_SENTENCE_START        | June       | p.421 | V55_06_13_Fict_The_Yost.txt
+       starts: "pickle booth." "A pickle booth?" "Yes, your pickles go over so well, that instea..."
+HIGH   | MID_SENTENCE_START        | June       | p.440 | V55_06_18_GenFt_Wild_Gardens.txt
+       starts: "ee WILD AND CULTIVATED GARDENS « Flowers and shrubs and grasses grow intimately..."
+HIGH   | MID_SENTENCE_START        | June       | p.447 | V55_06_22_GenFt_Chestnut_Breinholt.txt
+       starts: "7 i " 7  ee ee ee "CHESTNUT TREES" by Paul Cezanne (1839-1906), French (Minneap..."
+HIGH   | NEEDS_REEXTRACT           | July       | p.  ? | V55_07_03_Art_From_Near_and_Far.txt
+MEDIUM | LOW_OCR                   | July       | p.  ? | V55_07_31_GenFt_Bday_Congrats.txt
+       score 2/100
+HIGH   | MID_SENTENCE_START        | July       | p.  4 | V55_07_01_Fict_If_Chapter.txt
+       starts: "school, unnatural and uncomfortable. The office door was open, across from the d..."
+HIGH   | MID_SENTENCE_START        | July       | p.486 | V55_07_05_SpFt_After_Spafford.txt
+       starts: "an." In the early part of the 19th Century, a woman's world, in large measure, w..."
+HIGH   | MID_SENTENCE_START        | July       | p.511 | V55_07_17_GenFt_Just_By_Arnold.txt
+       starts: "just by might have misse My two sons went west, inste chance tha d it. T we saw..."
+HIGH   | MID_SENTENCE_START        | July       | p.541 | V55_07_27_Lssn_Homemaking_Taylor.txt
+       starts: ""eternal life, which gift is the HOMEMAKING—Development Through Homemaking Educa..."
+HIGH   | BOUNDARY_LEAK             | July       | p.544 | V55_07_28_Lssn_Social_Christensen.txt -> V55_07_29_Lssn_Cultural_Clark.txt
+       A's tail has 2/4 of B's title words
+HIGH   | NEEDS_REEXTRACT           | August     | p.  ? | V55_08_03_Art_From_Near_and_Far.txt
+MEDIUM | LOW_OCR                   | August     | p.  ? | V55_08_40_GenFt_Bday_Congrats.txt
+       score 1/100
+HIGH   | DUPLICATE                 | August     | p.567 | V55_08_05_Poem_Summer-Long_Myers.txt <-> V55_08_06_SpFt_Literary.txt
+       30% overlap
+HIGH   | MID_SENTENCE_START        | August     | p.568 | V55_08_06_SpFt_Literary.txt
+       starts: "written. Only one side of the paper is to be used. (A duplicate copy of the poem..."
+HIGH   | DUPLICATE                 | August     | p.576 | V55_08_42_Poem_Sea_Feltch.txt <-> V55_08_43_Poem_Reflections.txt
+       90% overlap
+HIGH   | MID_SENTENCE_START        | August     | p.582 | V55_08_10_GenFt_The_Ravsten.txt
+       starts: "borate. Air travel is common; space is being explored, and with each great ship..."
+MEDIUM | UNDERSIZED                | August     | p.598 | V55_08_24_GenFt_Extra_Kinsley.txt
+       154 chars
+HIGH   | DUPLICATE                 | August     | p.598 | V55_08_24_GenFt_Extra_Kinsley.txt <-> V55_08_25_Poem_Our_Welker.txt
+       65% overlap
+HIGH   | MID_SENTENCE_START        | August     | p.602 | V55_08_29_GenFt_Leavening_Esplin.txt
+       starts: "leavening Annie C. Esplin = When it was my chore to go for the yeast, I preferre..."
+HIGH   | BOUNDARY_LEAK             | August     | p.625 | V55_08_34_Poem_Interval_Stanley.txt -> V55_08_35_Lssn_Homemaking_Taylor.txt
+       A's tail has 2/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | September  | p.646 | V55_09_01_SpFt_McKay.txt -> V55_09_02_Poem_Visiting_Esplin.txt
+       A's tail has 2/3 of B's title words
+HIGH   | MID_SENTENCE_START        | September  | p.651 | V55_09_03_SpFt_Because_West.txt
+       starts: "r them all. I have a room some of them could use. It gives me a lift to be think..."
+HIGH   | DUPLICATE                 | September  | p.660 | V55_09_05_GenFt_Womans_Cannon.txt <-> V55_09_06_GenFt_Birthday.txt
+       95% overlap
+HIGH   | MID_SENTENCE_START        | September  | p.682 | V55_09_13_GenFt_The_Willardson.txt
+       starts: "(continued on page 693) 679 The Wonder of Bulbs Alice Willardson = Bulbs are rea..."
+HIGH   | MID_SENTENCE_START        | September  | p.696 | V55_09_20_GenFt_Editorial_Madsen.txt
+       starts: "life, contrasting completely with his _ less fortunate counterparts at the hospi..."
+HIGH   | BOUNDARY_LEAK             | September  | p.709 | V55_09_23_GenFt_Spiritual_Doxey.txt -> V55_09_24_GenFt_Visiting_Smith.txt
+       A's tail has 3/4 of B's title words
+HIGH   | NEEDS_REEXTRACT           | October    | p.  ? | V55_10_03_Art_From_Near_and_Far.txt
+HIGH   | MID_SENTENCE_START        | October    | p.724 | V55_10_04_SpFt_For_All_Lee.txt
+       starts: "han had she. Why then had this last I of The Council of the Twelve promised bles..."
+HIGH   | MID_SENTENCE_START        | October    | p.744 | V55_10_10_GenFt_Editorial_Madsen.txt
+       starts: "o Antarctica, for the National Science Foundation. Mayla Ann Mitchell, seventeen..."
+HIGH   | MID_SENTENCE_START        | October    | p.747 | V55_10_13_GenFt_Announcement_Conte.txt
+       starts: "best. A marsh duck flaps in perfect, homing lines And skids across the water wit..."
+HIGH   | MID_SENTENCE_START        | October    | p.749 | V55_10_14_Fict_The_Gregory.txt
+       starts: "— 7 ee, inet 22 a 748 Kathleen Peace Gregory Dewsbury, Yorkshire, England =» "He..."
+HIGH   | MID_SENTENCE_START        | October    | p.756 | V55_10_18_GenFt_A_Norton.txt
+       starts: "for Tomorrow Helen Cazier Norton iW 2) @ "He's been such a good boy all afternoo..."
+HIGH   | DUPLICATE                 | November   | p.801 | V55_11_02_Art_The_Roberts.txt <-> V55_11_03_Art_From_Near_and_Far.txt
+       65% overlap
+HIGH   | MID_SENTENCE_START        | November   | p.812 | V55_11_07_Art_To_Walk_Sharp.txt
+       starts: "bey these commandments for the eternal welfare of ourselves and our children tha..."
+MEDIUM | LOW_OCR                   | December   | p.  ? | V55_12_41_GenFt_Bday_Congrats.txt
+       score 2/100
+HIGH   | DUPLICATE                 | December   | p.881 | V55_12_02_Art_Mary_Stewart.txt <-> V55_12_03_Art_From_Near_and_Far.txt
+       73% overlap
+HIGH   | BOUNDARY_LEAK             | December   | p.912 | V55_12_15_Fict_Her_Arnold.txt -> V55_12_16_GenFt_The_Told.txt
+       A's tail has 2/3 of B's title words
+HIGH   | BOUNDARY_LEAK             | December   | p.914 | V55_12_17_GenFt_Christmas_Cannon.txt -> V55_12_18_GenFt_Cookies_Flack.txt
+       A's tail has 2/3 of B's title words
+HIGH   | BOUNDARY_LEAK             | December   | p.916 | V55_12_18_GenFt_Cookies_Flack.txt -> V55_12_19_GenFt_Candy_Layton.txt
+       A's tail has 2/4 of B's title words
+MEDIUM | LOW_OCR                   | December   | p.960 | V55_12_40_Poem_Happiness.txt
+       score 14/100

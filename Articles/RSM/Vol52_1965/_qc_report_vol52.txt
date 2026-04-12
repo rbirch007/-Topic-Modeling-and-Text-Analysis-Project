@@ -1,0 +1,189 @@
+QC Report: Vol 52 (1965)
+======================================================================
+
+HIGH   | DUPLICATE                 | January    | p.  1 | V52_01_01_SpFt_New_Presidency.txt <-> V52_01_02_GenFt_From_Near_and_Far.txt
+       77% overlap
+MEDIUM | OVERSIZED                 | January    | p.  7 | V52_01_06_SpFt_Place_Lee.txt
+       40708 chars
+HIGH   | BOUNDARY_LEAK             | January    | p. 20 | V52_01_07_Poem_Pine_Gabbott.txt -> V52_01_08_SpFt_Award_Contest.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | January    | p. 21 | V52_01_08_SpFt_Award_Contest.txt
+       starts: "is awarded to Lenora Hansen, Snowflake, Arizona, for her poem ''Wind Valley."" T..."
+HIGH   | DUPLICATE                 | January    | p. 36 | V52_01_15_SpFt_The_Voss.txt <-> V52_01_16_GenFt_Notes.txt
+       59% overlap
+HIGH   | BOUNDARY_LEAK             | January    | p. 63 | V52_01_23_Lssn_Visiting_Robinson.txt -> V52_01_24_Lssn_Work_Christensen.txt
+       A's tail has 2/4 of B's title words
+HIGH   | DUPLICATE                 | January    | p. 74 | V52_01_26_Lssn_Social_Ballif.txt <-> V52_01_27_GenFt_Bday_Congrats.txt
+       38% overlap
+MEDIUM | LOW_OCR                   | February   | p.  ? | V52_02_37_GenFt_Bday_Congrats.txt
+       score 9/100
+HIGH   | DUPLICATE                 | February   | p. 84 | V52_02_02_SpFt_Oakland.txt <-> V52_02_03_SpFt_The_Romney.txt
+       66% overlap
+HIGH   | EMPTY                     | February   | p. 92 | V52_02_04_SpFt_Mother_Matthews.txt
+       0 chars
+HIGH   | BOUNDARY_LEAK             | February   | p.104 | V52_02_08_GenFt_In_Ivins.txt -> V52_02_09_GenFt_Notes_Available.txt
+       A's tail has 2/4 of B's title words
+HIGH   | DUPLICATE                 | February   | p.115 | V52_02_13_The Home_Birthday_Woolley.txt <-> V52_02_14_Poem_Home_Roberts.txt
+       100% overlap
+HIGH   | MID_SENTENCE_START        | February   | p.119 | V52_02_17_The Home_Ireva_Happy.txt
+       starts: "€ refined Bold js eft here th Cool, pure light of nter eigns — reign Uring the l..."
+HIGH   | BOUNDARY_LEAK             | February   | p.120 | V52_02_18_Fict_Turn_of_Harmer.txt -> V52_02_19_GenFt_Notes_Activities.txt
+       A's tail has 2/3 of B's title words
+HIGH   | DUPLICATE                 | February   | p.157 | V52_02_32_Poem_Valentine_Jacobson.txt <-> V52_02_33_Poem_Grandson_Coles.txt
+       55% overlap
+HIGH   | EMPTY                     | February   | p.159 | V52_02_34_The Home_Hurry_Bunker.txt
+       0 chars
+MEDIUM | LOW_OCR                   | February   | p.159 | V52_02_35_Poem_Death_Hill.txt
+       score 9/100
+HIGH   | DUPLICATE                 | February   | p.160 | V52_02_36_Poem_Mountain_Rubin.txt <-> V52_02_37_GenFt_Bday_Congrats.txt
+       53% overlap
+MEDIUM | LOW_OCR                   | March      | p.  ? | V52_03_34_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | MID_SENTENCE_START        | March      | p.167 | V52_03_06_Fict_A_Doll_Wrathall.txt
+       starts: "s in two brown paper packages and wrote each girl's name with the stub of a penc..."
+HIGH   | MID_SENTENCE_START        | March      | p.174 | V52_03_08_SpFt_Teaching_Walch.txt
+       starts: "truths to lots THROUGH THE FAMILY HOME EVENING Lila B. Walch Member, General Boa..."
+HIGH   | MID_SENTENCE_START        | March      | p.184 | V52_03_11_SpFt_Through_Potts.txt
+       starts: "the Convert Ida M. Potts Wuat are the objects of Relief Society? I thought I kne..."
+HIGH   | DUPLICATE                 | March      | p.199 | V52_03_18_The Home_A.txt <-> V52_03_19_The Home_Harvest.txt
+       61% overlap
+HIGH   | DUPLICATE                 | March      | p.223 | V52_03_28_The Home_Nurture_Miner.txt <-> V52_03_29_The Home_Framed_Olsen.txt
+       100% overlap
+MEDIUM | LOW_OCR                   | April      | p.  ? | V52_04_42_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | MID_SENTENCE_START        | April      | p.250 | V52_04_04_Fict_A_Gleave.txt
+       starts: "swedish Conversion Melba Taylor Gleave m Anna Mary Gabrielson carried two bucket..."
+HIGH   | DUPLICATE                 | April      | p.269 | V52_04_09_GenFt_Womans_Cannon.txt <-> V52_04_10_GenFt_Editorial_Sharp.txt
+       81% overlap
+HIGH   | EMPTY                     | April      | p.273 | V52_04_12_SpFt_How_Gould.txt
+       2 chars
+HIGH   | MID_SENTENCE_START        | April      | p.284 | V52_04_17_SpFt_The_Everett.txt
+       starts: "of thought is necesTHE NATURE OF THOUGHT sary, though it is not easy. Try it for..."
+HIGH   | DUPLICATE                 | April      | p.288 | V52_04_22_The Home_Spring_Franks.txt <-> V52_04_23_Poem_Never_McKey.txt
+       67% overlap
+HIGH   | DUPLICATE                 | April      | p.289 | V52_04_24_SpFt_One_Teaching.txt <-> V52_04_25_Poem_You_Can_Coles.txt
+       88% overlap
+HIGH   | MID_SENTENCE_START        | April      | p.290 | V52_04_26_The Home_Baby_Christensen.txt
+       starts: "the Home inside and out  Baby Bonnet Made From a Handkerchief  Opal F. Christens..."
+HIGH   | MID_SENTENCE_START        | April      | p.293 | V52_04_29_The Home_Cherry-Rhubarb_Lei.txt
+       starts: "r. Cover with top crust and cut slits in it. Bake until nicely browned and juice..."
+HIGH   | BOUNDARY_LEAK             | April      | p.293 | V52_04_28_The Home_Homemaking_Stock.txt -> V52_04_29_The Home_Cherry-Rhubarb_Lei.txt
+       A's tail has 4/4 of B's title words
+HIGH   | MID_SENTENCE_START        | April      | p.299 | V52_04_34_The Home_A_Petersen.txt
+       starts: "edle and thread can make us—and that is close." 299 Chapter 7 he Turn of the Whe..."
+HIGH   | BOUNDARY_LEAK             | May        | p.332 | V52_05_08_Poem_Drafted.txt -> V52_05_09_Fict_Ring_Thulin.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | May        | p.333 | V52_05_09_Fict_Ring_Thulin.txt
+       starts: "- ualize. The villain was misunderstanding and circumstances. Maybe the villain..."
+HIGH   | MID_SENTENCE_START        | May        | p.341 | V52_05_13_Fict_The_Judd.txt
+       starts: "there was that proverbial Sunday feast to prepare, a custom that the Larkin fami..."
+HIGH   | DUPLICATE                 | May        | p.345 | V52_05_14_Poem_A_Stacey.txt <-> V52_05_15_GenFt_Editorial_Sharp.txt
+       53% overlap
+HIGH   | EMPTY                     | May        | p.355 | V52_05_20_The Home_Desserts_Lovett.txt
+       0 chars
+HIGH   | MID_SENTENCE_START        | May        | p.359 | V52_05_24_The Home_Quality_Tradition.txt
+       starts: "quilts and numerous other handicraft articles for Relief Society ever since the..."
+HIGH   | DUPLICATE                 | May        | p.361 | V52_05_26_Fict_The_Ellis.txt <-> V52_05_27_Fict_The_Harmer.txt
+       40% overlap
+MEDIUM | LOW_OCR                   | May        | p.372 | V52_05_28_SpFt_Magazine_Sharp.txt
+       score 0/100
+HIGH   | BOUNDARY_LEAK             | May        | p.384 | V52_05_31_Poem_May_Tanner.txt -> V52_05_32_SpFt_The_Wathen.txt
+       A's tail has 4/4 of B's title words
+MEDIUM | LOW_OCR                   | May        | p.385 | V52_05_32_SpFt_The_Wathen.txt
+       score 4/100
+HIGH   | DUPLICATE                 | May        | p.385 | V52_05_32_SpFt_The_Wathen.txt <-> V52_05_33_Poem_Rain_Jacobson.txt
+       63% overlap
+HIGH   | MID_SENTENCE_START        | May        | p.386 | V52_05_34_GenFt_Notes_Activities.txt
+       starts: "wearing an attractive Christmas corsage, sang 'their hearts out' as each thrilli..."
+HIGH   | DUPLICATE                 | May        | p.400 | V52_05_39_Poem_A_Schow.txt <-> V52_05_40_GenFt_Bday_Congrats.txt
+       63% overlap
+MEDIUM | LOW_OCR                   | June       | p.  ? | V52_06_33_GenFt_Bday_Congrats.txt
+       score 1/100
+HIGH   | MID_SENTENCE_START        | June       | p.404 | V52_06_02_SpFt_Birthday_McKay.txt
+       starts: "to Emma Ray Riggs McKay June 23, 1965 ™ In this year of 1965, in the early summe..."
+HIGH   | MID_SENTENCE_START        | June       | p.416 | V52_06_07_Fict_When_Sabin.txt
+       starts: "way." "TI haven't wiped the cupboards ~ around the sink yet," I said. "All right..."
+HIGH   | BOUNDARY_LEAK             | June       | p.424 | V52_06_10_GenFt_Womans_Cannon.txt -> V52_06_11_Fict_Ring_Thulin.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | June       | p.431 | V52_06_14_The Home_They.txt
+       starts: "+s & 'ie They Work With Words and Music Edna Paulson Church, Burley, Idaho, has..."
+HIGH   | MID_SENTENCE_START        | June       | p.441 | V52_06_19_The Home_The_Setting.txt
+       starts: "right), which are hollowed out to fit the ends of the dowel stick, and are naile..."
+HIGH   | MID_SENTENCE_START        | June       | p.442 | V52_06_20_The Home_Feather_Gledhill.txt
+       starts: "_ a 5 " a z: - — " +° ' Feather Howers RaNae Gledhill TRANSPARENCIES BY L. PAUL..."
+HIGH   | BOUNDARY_LEAK             | June       | p.467 | V52_06_27_The Home_Theology_Doxey.txt -> V52_06_28_The Home_Visiting_Robinson.txt
+       A's tail has 3/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | June       | p.470 | V52_06_29_The Home_Work.txt -> V52_06_30_Lssn_Literature_Clark.txt
+       A's tail has 3/4 of B's title words
+MEDIUM | LOW_OCR                   | July       | p.  ? | V52_07_36_GenFt_Bday_Congrats.txt
+       score 6/100
+HIGH   | MID_SENTENCE_START        | July       | p.494 | V52_07_06_Fict_Postmark_Harlow.txt
+       starts: "in New York for that breakfast date at the Waldorf with the captain before their..."
+HIGH   | BOUNDARY_LEAK             | July       | p.506 | V52_07_12_Poem_In_the_Houghton.txt -> V52_07_13_The Home_Easier_Hicks.txt
+       A's tail has 2/3 of B's title words
+HIGH   | MID_SENTENCE_START        | July       | p.507 | V52_07_13_The Home_Easier_Hicks.txt
+       starts: "hot food during the day? You'll find a few recipes at the end of this article to..."
+HIGH   | EMPTY                     | July       | p.551 | V52_07_31_The Home_Social.txt
+       0 chars
+HIGH   | DUPLICATE                 | July       | p.560 | V52_07_35_Poem_Moon-Beguiled.txt <-> V52_07_36_GenFt_Bday_Congrats.txt
+       43% overlap
+HIGH   | MID_SENTENCE_START        | August     | p.  ? | V52_08_02_GenFt_From_Near_and_Far.txt
+       starts: "a Relief SOCISTY Magazine Volume 52 Number 8 August 1965 Lessons for November ...."
+HIGH   | MID_SENTENCE_START        | August     | p.564 | V52_08_03_SpFt_Lord_McConkie.txt
+       starts: "sa on.: ni ' had ee bo 8 DES 3 INCREASE CS SR SE ae Elder Bruce R. McConkie Of t..."
+HIGH   | BOUNDARY_LEAK             | August     | p.568 | V52_08_04_Poem_Farewell_Stewart.txt -> V52_08_05_SpFt_Companionship_Walc.txt
+       A's tail has 2/4 of B's title words
+HIGH   | MID_SENTENCE_START        | August     | p.569 | V52_08_05_SpFt_Companionship_Walc.txt
+       starts: "hers and sisters to applaud. There would be no surprise dessert, kept hidden by..."
+HIGH   | MID_SENTENCE_START        | August     | p.586 | V52_08_12_GenFt_Notes_Conference.txt
+       starts: "e Belle S. Spafford, President @ Marianne C. Sharp, First Counselor e Louise W...."
+HIGH   | DUPLICATE                 | August     | p.640 | V52_08_30_Poem_The_Bowles.txt <-> V52_08_31_GenFt_Bday_Congrats.txt
+       55% overlap
+HIGH   | DUPLICATE                 | September  | p.668 | V52_09_11_Poem_From_a_Ames..txt <-> V52_09_12_GenFt_Notes_Available.txt
+       75% overlap
+MEDIUM | UNDERSIZED                | September  | p.682 | V52_09_16_The Home_Swedish_Tangren.txt
+       239 chars
+HIGH   | BOUNDARY_LEAK             | October    | p.751 | V52_10_15_Poem_Supplicacion.txt -> V52_10_16_SpFt_Turning_Chamberlin.txt
+       A's tail has 2/2 of B's title words
+HIGH   | MID_SENTENCE_START        | October    | p.752 | V52_10_16_SpFt_Turning_Chamberlin.txt
+       starts: "family and did €verything I could for them. Itisa Sad commentary on my Christian..."
+MEDIUM | LOW_OCR                   | October    | p.754 | V52_10_18_Poem_An_Bills.txt
+       score 13/100
+HIGH   | DUPLICATE                 | October    | p.759 | V52_10_21_Poem_Housewife_Christen.txt <-> V52_10_22_Poem_Quantity_Shurtz.txt
+       27% overlap
+MEDIUM | LOW_OCR                   | October    | p.760 | V52_10_22_Poem_Quantity_Shurtz.txt
+       score 8/100
+HIGH   | DUPLICATE                 | October    | p.786 | V52_10_30_Lssn_Visiting_Robinson.txt <-> V52_10_31_Lssn_Work.txt
+       96% overlap
+HIGH   | MID_SENTENCE_START        | October    | p.792 | V52_10_34_Lssn_Literature_Clark.txt
+       starts: "list and short-story writer of the nineteenth century, and "The Bear' by William..."
+MEDIUM | LOW_OCR                   | November   | p.  ? | V52_11_36_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | MID_SENTENCE_START        | November   | p.804 | V52_11_03_SpFt_The_Spafford.txt
+       starts: "unsolicited manuipts. 803 The Blessings of Experience President Belle S. Spaffor..."
+HIGH   | MID_SENTENCE_START        | November   | p.819 | V52_11_10_Fict_Frost_Moss.txt
+       starts: "ve her a spark of courage and she raised her troubled eyes to his. '""We've seen..."
+HIGH   | DUPLICATE                 | November   | p.828 | V52_11_13_GenFt_Notes_Available.txt <-> V52_11_14_Poem_One_Gabbott.txt
+       26% overlap
+MEDIUM | LOW_OCR                   | December   | p.  ? | V52_12_42_GenFt_Bday_Congrats.txt
+       score 0/100
+HIGH   | BOUNDARY_LEAK             | December   | p.893 | V52_12_06_SpFt_Elaine.txt -> V52_12_07_SpFt_The_Young.txt
+       A's tail has 2/4 of B's title words
+HIGH   | BOUNDARY_LEAK             | December   | p.899 | V52_12_09_Poem_At_Bell.txt -> V52_12_10_Fict_Mothers_Brown.txt
+       A's tail has 3/4 of B's title words
+HIGH   | EMPTY                     | December   | p.908 | V52_12_15_SpFt_Christmas_Board.txt
+       0 chars
+HIGH   | BOUNDARY_LEAK             | December   | p.908 | V52_12_16_Poem_I_Sabin.txt -> V52_12_17_The Home_How_Breeze.txt
+       A's tail has 2/4 of B's title words
+HIGH   | DUPLICATE                 | December   | p.911 | V52_12_19_The Home_Festive_Skollingsh.txt <-> V52_12_20_Poem_Where_Rothe.txt
+       70% overlap
+HIGH   | DUPLICATE                 | December   | p.915 | V52_12_23_The Home_Roses_Tree.txt <-> V52_12_24_The Home_Red.txt
+       100% overlap
+HIGH   | MID_SENTENCE_START        | December   | p.916 | V52_12_24_The Home_Red.txt
+       starts: "from old cards or made from paper should have a small hole punched in the top en..."
+MEDIUM | UNDERSIZED                | December   | p.917 | V52_12_26_The Home_Quilts_Gifts.txt
+       293 chars
+HIGH   | MID_SENTENCE_START        | December   | p.944 | V52_12_37_Lssn_Work_Cannon.txt
+       starts: "work meeting leader and community leader; John who is seventeen, plays basketbal..."
+HIGH   | MID_SENTENCE_START        | December   | p.951 | V52_12_40_Lssn_Literature_Clark.txt
+       starts: "efer to concentrate on only one or two or three of the four. A valuable hour cou..."
