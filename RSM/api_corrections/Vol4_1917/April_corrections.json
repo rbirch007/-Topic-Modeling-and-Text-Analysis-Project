@@ -1,0 +1,110 @@
+{
+  "volume": 4,
+  "month": "April",
+  "year": 1917,
+  "total_files_checked": 12,
+  "files_correct": [
+    "April_Vol4_02_Article_Birthday_Celebration_of_our_Honored_President.txt",
+    "April_Vol4_05_Article_April_Entertainment_Morag.txt",
+    "April_Vol4_06_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "April_Vol4_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "April_Vol4_08_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "April_Vol4_09_Article_Social_Work.txt",
+    "April_Vol4_11_Editorial_Editorial_Spiritual_Manifestations.txt"
+  ],
+  "corrections": [
+    {
+      "file": "April_Vol4_01_Frontispiece_Font_for_the_Hawaiian_Temple_Avard_Fairbanks_Frontispiece_La.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the wrong article - it has the Latter-day Temples article instead of the Frontispiece",
+      "action": "replace_content",
+      "text": "This file should contain the Frontispiece content for the Hawaiian Temple Font by Avard Fairbanks, but contains the Latter-day Temples article instead",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "April_Vol4_04_Article_Winning_the_Man's_Mother_Ida_Stewart_Peay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "WINNING THE MAN'S MOTHER. 203 cried again with incredulous astonishment",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol4_10a_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "on their four hundred years of \"bondage\" to the Egyptians",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol4_12_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content that should be in Misc",
+      "action": "trim_end",
+      "text": "associates. COLUMBIA GRAFONOLAS",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "April Lucy May Green",
+      "expected_page": 183,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Latter-day Temples",
+      "expected_page": 183,
+      "status": "merged_with_another",
+      "merged_into": "April_Vol4_01_Frontispiece_Font_for_the_Hawaiian_Temple_Avard_Fairbanks_Frontispiece_La.txt"
+    },
+    {
+      "title": "Our New Board Member",
+      "expected_page": 201,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "On the Way Mrs. Parley Nelson",
+      "expected_page": 227,
+      "status": "merged_with_another",
+      "merged_into": "April_Vol4_09_Article_Social_Work.txt"
+    }
+  ],
+  "notes": "Several articles are missing or incorrectly merged. The Frontispiece file contains the wrong content entirely. Some files have bleeding from adjacent articles. The Guide Lessons appear to be split across multiple files but are incomplete.",
+  "validated_corrections": [
+    {
+      "file": "April_Vol4_04_Article_Winning_the_Man's_Mother_Ida_Stewart_Peay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "WINNING THE MAN'S MOTHER. 203 cried again with incredulous astonishment",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol4_10a_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "on their four hundred years of \"bondage\" to the Egyptians",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol4_12_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content that should be in Misc",
+      "action": "trim_end",
+      "text": "associates. COLUMBIA GRAFONOLAS",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

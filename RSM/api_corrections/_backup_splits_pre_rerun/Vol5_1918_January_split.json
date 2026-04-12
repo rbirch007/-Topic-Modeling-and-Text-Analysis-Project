@@ -1,0 +1,128 @@
+{
+  "volume": 5,
+  "month": "January",
+  "year": 1918,
+  "total_merged": 3,
+  "total_splits": 4,
+  "total_cost": 0.5162,
+  "files": [
+    {
+      "source_file": "January_Vol5_05a_Article_Mothers_in_Israel_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mothers in Israel",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Mothers in Israel. The picture of Mrs. Margaret",
+          "end_boundary": "more devoted to God and his kingdom.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MOTHERS IN ISRAEL"
+      ],
+      "notes": "This file contains a single article titled 'Mothers in Israel' which includes biographical sketches of two pioneer women: Margaret McIntire Burgess (with her personal reminiscences) and Ansine Marie Larsen Peterson. The article appears to be complete and self-contained, matching the contents listing which shows 'Mothers in Israel' as a single entry on page 11.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14004,
+      "tier": 1,
+      "pdf_pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "api_usage": {
+        "input_tokens": 60773,
+        "output_tokens": 256,
+        "cost": 0.1862
+      }
+    },
+    {
+      "source_file": "January_Vol5_08a_Article_A_200_Year_Calendar_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A 200 Year Calendar",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "A 200-Year Calendar: Many people have an interest",
+          "end_boundary": "28i29 1 21i'22 25 '3 ?At 2f ?2 ?X!",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A 200-YEAR CALENDAR"
+      ],
+      "notes": "This file contains only the A 200 Year Calendar article as listed in the contents. The text is heavily corrupted with OCR errors, especially in the calendar tables, but represents a single continuous article providing a perpetual calendar system for determining days of the week for dates between 1776-1978.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11778,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 52595,
+        "output_tokens": 269,
+        "cost": 0.1618
+      }
+    },
+    {
+      "source_file": "January_Vol5_18a_Guide_Lessons_Guide_Lessons_a_a_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "a century Alexandria became larger than Carthage",
+          "end_boundary": "salt must keep them entirely covered.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Peace I Leave With You",
+          "category": "Poem",
+          "author": "Lucy May Green",
+          "start_boundary": "Peace I Leave With You. Lucy May",
+          "end_boundary": "Lucy May Green. When you buy",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "The first section continues Guide Lessons content covering ancient history (Alexandria, Carthage, etc.) and home economics topics. The second section is clearly a separate poem by Lucy May Green as listed in the contents. There appears to be an advertisement at the very end that should be included with the poem section.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10038,
+      "tier": 1,
+      "pdf_pages": [
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "api_usage": {
+        "input_tokens": 54177,
+        "output_tokens": 380,
+        "cost": 0.1682
+      }
+    }
+  ]
+}

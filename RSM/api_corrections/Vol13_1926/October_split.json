@@ -1,0 +1,79 @@
+{
+  "volume": 13,
+  "month": "October",
+  "year": 1926,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.178,
+  "files": [
+    {
+      "source_file": "October_Vol13_12_Article_Lessons_for_December.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Twelve Apostles",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lessons for December LESSON I Theology and Testimony",
+          "end_boundary": "What is the most valuable thought suggested by this lesson?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Teachers' Topic for December",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business TEACHERS' TOPIC FOR DECEMBER",
+          "end_boundary": "Heaven and earth shall pass away: but my words shall not pass away. Luke 21:33.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Sara Teasdale",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature LESSON III (Third Week in December) SARA TEASDALE",
+          "end_boundary": "What new ideas have been stimulated through reading Sara Teasdale?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson VI - Social Service - Intellectual Problems",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON VI. Social Service (Fourth Week in December ) INTELLECTUAL PROBLEMS",
+          "end_boundary": "communicate with Mrs. Brown at the Experiment Station, Logan, Utah.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for December, covering Theology, Work and Business, Literature, and Social Service. Each lesson has clear boundaries with titles, content, and questions/problems sections. Note that there appears to be an article about Utah Farm Families at the end that may be part of Lesson VI or a separate piece.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34599,
+      "tier": 1,
+      "pdf_pages": [
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634
+      ],
+      "api_usage": {
+        "input_tokens": 56416,
+        "output_tokens": 582,
+        "cost": 0.178
+      }
+    }
+  ]
+}

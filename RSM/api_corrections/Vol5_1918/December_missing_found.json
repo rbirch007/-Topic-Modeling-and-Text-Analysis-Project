@@ -1,0 +1,50 @@
+{
+  "volume": 5,
+  "month": "December",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.023,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "General Conference of Relief Society",
+      "printed_page": 659,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "We Are All God's Children Grace Ingles Frost",
+      "printed_page": 676,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Grace Ingles Frost",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 593-596 which contain Guide Lessons content about warfare and genealogy. Page 676 where this poem should appear is not included in the provided images. The poem may exist but is not visible in the current page range.",
+      "api_usage": {
+        "input_tokens": 6886,
+        "output_tokens": 155,
+        "cost": 0.023
+      },
+      "pdf_pages": [
+        666,
+        667,
+        668,
+        669
+      ]
+    },
+    {
+      "title": "In Paradise Sophia Valentine",
+      "printed_page": 682,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

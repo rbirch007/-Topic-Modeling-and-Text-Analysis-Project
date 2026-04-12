@@ -1,0 +1,150 @@
+{
+  "volume": 12,
+  "month": "July",
+  "year": 1925,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.3347,
+  "files": [
+    {
+      "source_file": "July_Vol12_12_Article_Sabbath_E_Curtis.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Pioneer Woman Editor",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Sabbath morning. On the occasion to which reference",
+          "end_boundary": "have been, and likely will continue to be, built.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Relief Society Social Service Institute",
+          "category": "Article",
+          "author": "Cora Kasius",
+          "start_boundary": "The Relief Society Social Service Institute Cora Kasius",
+          "end_boundary": "and the General Board members who were present.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The attendance at the Institute",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "SOCIAL SERVICE INSTITUTE 349 The attendance at the",
+          "end_boundary": "Oquirrh: stake worker, Lois Turpin.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "She Refused to Ride with Charles Dickens",
+          "category": "Article",
+          "author": "Annie Pike Greenwood",
+          "start_boundary": "She Refused to Ride with Charles Dickens",
+          "end_boundary": "—Annie Pike Greenwood.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "PIONEER WOMAN EDITOR",
+        "RELIEF SOCIETY MAGAZINE",
+        "SOCIAL SERVICE INSTITUTE"
+      ],
+      "notes": "This file contains the end of the Pioneer Woman Editor article, followed by the complete Social Service Institute article with its continuation, and ends with the short Charles Dickens anecdote. The first article appears to be a continuation from a previous file, starting mid-sentence.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 17780,
+      "tier": 1,
+      "pdf_pages": [
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401
+      ],
+      "api_usage": {
+        "input_tokens": 48655,
+        "output_tokens": 520,
+        "cost": 0.1538
+      }
+    },
+    {
+      "source_file": "July_Vol12_15_Article_Notes_from_Field_Amy_B_Lyman.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes From The Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes From The Field Amy Brown Lyman Swiss-German Mission",
+          "end_boundary": "His spirit burns anew. ?Theodore E. Curtis.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for September",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for September LESSON I (First Week",
+          "end_boundary": "Reference: Normal Life, page 42. Questions and Problems",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Teacher's Topic for September",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Teacher's Topic for September Work AS A DEVELOPER",
+          "end_boundary": "By reducing the cost in operation, maintenance and",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSONS FOR SEPTEMBER",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains three distinct sections: the main Notes from Field article by Amy Brown Lyman, followed by the Guide Lessons for September (which includes multiple lesson topics), and finally a brief Teacher's Topic section. The Guide Lessons section is quite extensive and covers multiple lesson topics but appears to be one cohesive unit based on the formatting and structure.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10761,
+      "tier": 1,
+      "pdf_pages": [
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441
+      ],
+      "api_usage": {
+        "input_tokens": 58031,
+        "output_tokens": 456,
+        "cost": 0.1809
+      }
+    }
+  ]
+}

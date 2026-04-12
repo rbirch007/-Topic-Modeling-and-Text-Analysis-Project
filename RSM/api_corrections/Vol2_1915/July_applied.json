@@ -1,0 +1,37 @@
+{
+  "volume": 2,
+  "month": "July",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "July_Vol2_02_Article_Augusta_Joyce_Crocheron_—_Emmeline_B._Wells.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "July_Vol2_03_Article_Research.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1346 chars removed)"
+    },
+    {
+      "file": "July_Vol2_11_Article_Good_Health_—_Maud_Baggarley.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "July_Vol2_12_Prince_of_Ur_The_Prince_of_Ur.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3679 chars added)"
+    },
+    {
+      "file": "July_Vol2_13_Article_Homespun.txt",
+      "action": "note",
+      "result": "INFO: File ends mid-sentence and appears to be part of 'The Prince of Ur' story, not a separate 'Homespun' article"
+    }
+  ]
+}

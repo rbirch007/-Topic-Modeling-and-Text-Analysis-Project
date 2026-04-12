@@ -1,0 +1,155 @@
+{
+  "volume": 56,
+  "month": "July",
+  "year": 1969,
+  "total_files_checked": 26,
+  "files_correct": [
+    "V56_07_07_Poem_Summer_Russell.txt",
+    "V56_07_11_Poem_A_Lamp_Jennings.txt",
+    "V56_07_14_Poem_Grandmas_Rothe.txt",
+    "V56_07_18_Poem_Winged_Ames.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_07_01_GenFt_Social_Part.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a photograph description and title, missing the actual Social Relations lesson content",
+      "action": "replace_content",
+      "text": "Social Relations lesson content from OCR starting with 'If I were asked to name what I considered to be the most outstanding trend of modern life...'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_02_Fict_Heart_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains New Year greeting and From Near and Far content instead of Heart Room for Home Chapter 2",
+      "action": "replace_content",
+      "text": "Heart Room for Home Chapter 2 content starting with 'Rosemary was her charming best throughout the slow process of the dinner...'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_03_Poem_North.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains magazine masthead and beginning of Doctrine and Covenants article instead of a poem",
+      "action": "replace_content",
+      "text": "Correct poem content if this should be a poem, or rename file appropriately",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_04_Frnt_By_Hazel.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the poem 'By Handcart Came' but continues with From Near and Far content",
+      "action": "trim_end",
+      "text": "Walk unshod. Hazel Loomis Meeting of Desert and Mountains, Southern Utah Transparency by Lucien Bown Lithographed in Full Color by Deseret News Press Handcart in the West Photograph by Dorothy J.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_07_05_SpFt_How_I_Doxey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content and lesson previews instead of the Doctrine and Covenants article",
+      "action": "replace_content",
+      "text": "How I Became Involved in the Doctrine and Covenants article starting with 'I assume that it would be a little easier if I were to address myself to the subject...'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information and poem content before From Near and Far section",
+      "action": "trim_start",
+      "text": "The Cover: Frontispiece: Art Layout: INlustrations: BY HANDCART CAME",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_07_10_Fict_Missionaries_Ahlma.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains editorial content about gifts instead of the fiction story 'Missionaries to Dinner'",
+      "action": "replace_content",
+      "text": "Missionaries to Dinner story starting with 'Lenora Peterson had hurriedly glanced at the clock...'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_16_GenFt_A_Brace_Jones.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Woman's Sphere content instead of A Brace of Horses article",
+      "action": "replace_content",
+      "text": "A Brace of Horses content starting with discussion of getting out of ruts",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_19_Fict_Just_a_Hansen.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Love Is Not Veiled story content instead of Just a Dab of Butter",
+      "action": "replace_content",
+      "text": "Just a Dab of Butter story content from OCR",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_07_20_GenFt_Editorial_Madsen.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Heart Room for Home Chapter 2 content instead of the Editorial",
+      "action": "replace_content",
+      "text": "Editorial 'To Each Is Given a Gift' starting with 'For all have not every gift given unto them...'",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Keys to Child Guidance: Goal, Understanding, and Technique Jean Larsen",
+      "expected_page": 494,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Her Hobby Is Writing Bertha Anderson Kleinman",
+      "expected_page": 524,
+      "status": "merged_with_another",
+      "merged_into": "V56_07_17_GenFt_Her_Kleinman.txt"
+    },
+    {
+      "title": "Budget Decorating The Tapestry Touch June Feulner Krambule",
+      "expected_page": 524,
+      "status": "merged_with_another",
+      "merged_into": "V56_07_21_GenFt_Budget_Department.txt"
+    },
+    {
+      "title": "Cultural Refinement The Meaning of Freedom Robert K. Thomas",
+      "expected_page": 554,
+      "status": "merged_with_another",
+      "merged_into": "V56_07_25_GenFt_Alberta.txt"
+    }
+  ],
+  "notes": "Many files contain incorrect content, suggesting systematic extraction errors. Several articles are missing or merged incorrectly. The OCR quality appears good, but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "V56_07_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information and poem content before From Near and Far section",
+      "action": "trim_start",
+      "text": "The Cover: Frontispiece: Art Layout: INlustrations: BY HANDCART CAME",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V56_07_04_Frnt_By_Hazel.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the poem 'By Handcart Came' but continues with From Near and Far content",
+      "action": "trim_end",
+      "text": "Walk unshod. Hazel Loomis Meeting of Desert and Mountains, Southern Utah Transparency by Lucien Bown Lithographed in Full Color by Deseret News Press Handcart in the West Photograph by Dorothy J.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

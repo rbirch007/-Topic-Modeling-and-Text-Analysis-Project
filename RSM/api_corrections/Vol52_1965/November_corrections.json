@@ -1,0 +1,290 @@
+{
+  "volume": 52,
+  "month": "November",
+  "year": 1965,
+  "total_files_checked": 36,
+  "files_correct": [
+    "V52_11_01_Frnt_I_Autumn.txt",
+    "V52_11_04_SpFt_Love_Sharp.txt",
+    "V52_11_05_SpFt_Behold_Madsen.txt",
+    "V52_11_06_Poem_Only_Stewart.txt",
+    "V52_11_07_Poem_Life_Bowles.txt",
+    "V52_11_09_Poem_Unexpected_Coles.txt",
+    "V52_11_11_GenFt_Womans_Cannon.txt",
+    "V52_11_12_GenFt_Editorial_Sharp.txt",
+    "V52_11_16_Poem_Autumn_Kay.txt",
+    "V52_11_17_Poem_Pledge_Fairbairn.txt",
+    "V52_11_18_Poem_Prayer_Hill.txt",
+    "V52_11_19_The Home_Waiting_Grimm.txt",
+    "V52_11_21_The Home_Pudding_Wilson.txt",
+    "V52_11_24_Poem_Angel_Jacobson.txt",
+    "V52_11_26_Lssn_Theology_Doxey.txt",
+    "V52_11_27_Lssn_Visiting_Robinson.txt",
+    "V52_11_28_Lssn_Work.txt",
+    "V52_11_29_Poem_Leave_Wangsgaard.txt",
+    "V52_11_30_Lssn_Work_Jardine.txt",
+    "V52_11_31_Lssn_Social_Christensen.txt",
+    "V52_11_32_Lssn_Literature_Thomas.txt",
+    "V52_11_33_Poem_Truth_McAllister.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V52_11_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with garbled text from previous article instead of proper beginning",
+      "action": "trim_start",
+      "text": "MAGAZINE Volume 52 Number 11 November 1965 Lessons for February T Wak Remeber Asotiw Linnie F. Robinson When winter comes I will",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article instead of proper ending",
+      "action": "trim_end",
+      "text": "Emmaline Winsor McBride Pima, Arizona en me",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_03_SpFt_The_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "unsolicited manuipts. 803",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_08_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "May the Lord bless you to this end, I pray.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_10_Fict_Frost_Moss.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "ve her a spark of courage and she raised her troubled eyes to his.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_10_Fict_Frost_Moss.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "His answer was a smile, with the firm pressure of his strong hand. Ramona W. Cannon Mrs. Don L. (Alice Welti) Buehner, Second Counselor in the East Mill Creek Eighth Ward Relief Society, Salt Lake City, Utah, and mother of six children under eleven years of age, became the new Mrs. America on August 28 in San Diego, California. The fifty contestants—one from each State—passed tests in baking, laundry, flower arrangements, auto driving, a Mrs. United States Savings Bond contest, essay writing, and self-expression. In the last category Mrs. Buehner sang \"Sound of Music' and displayed an original painting of Logan Canyon, Utah. — Joan Sutherland, known as '\"La Stupenda'' in the world of opera, returned to her native Australia in July 1965, to sing the role of the forsaken Scottish girl in Donizetti's ''Lucia di Lammermoor.\"' Critics described her voice as '\"superb,''.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_13_GenFt_Notes_Available.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles instead of just the Notes to the Field article",
+      "action": "replace_content",
+      "text": "A booklet \"For the Strength of Youth\"—Latter-day Saint Standards, is just off the press. It has been prepared by the general officers of the Young Men's and Young Women's Mutual Improvement Associations, together with the Brigham Young University and the Church School System and a large group of representative youth of the Church. It includes information on dress, hair fashions, good grooming, the proprieties, dating, acceptable dancing, and clean living. A Preface has been written by the First Presidency commending the recommendations contained in the treatise \"to all into whose hands they may come.\" The General Board calls this booklet to the attention of Relief Society members. All mothers would be wise to study it in order that they may be guided by its recommendations in rearing their children. The booklet may be purchased for 10c at the P. B. O. Central Distribution, 33 Richards Street, Salt Lake City, Utah 84101. No postage required. Money must accompany orders.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_11_14_Poem_One_Gabbott.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content including Notes to the Field article instead of just the poem",
+      "action": "replace_content",
+      "text": "\"One More Story\" Mabel Jones Gabbott How many times have I heard these words: \"One more story... Just one, please...?\" The hour is late; the lights are low; Their eyes are heavy, and still they tease, \"One more story....\" And how many times Have I let the dishes and ironing wait, While I led their thoughts adventuring Down thunderous plains, or through fancy's gate? How many times in years to come Will we remember poignantly, The intimate half-dark, the urgent words, And the heroes riding brave and free?",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_11_20_The Home_Fruit_Harmer.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence without completing the recipes",
+      "action": "append",
+      "text": "Measure flour, sugar, baking powder, and salt; sift over fruit, blend well. Beat eggs, add vanilla, blend into nut-fruit mixture, spoon into loaf pan, spread evenly. Bake at 300° 134 hr. To 2 hrs., until firm on top. This makes one 9x5x3 loaf cake. Keeps well in refrigerator. It makes a very special gift. LIGHT FRUIT CAKE 14 c. Flour 1 c. Shortening 1 pkg. Fruit mix (about 1 Ib.) 14, c. Sugar 14, Ib. Candied cherries 14, c. Honey 14 Ib. Dates 5 beaten eggs 3 ozs. Candied pineapple 114 c. Flour 4 ozs. Raisins 1 tsp. Salt 14 c. Walnuts 1 tsp. Baking powder 14 c. Pecans 14 tsp. Nutmeg 14 c. Orange juice 14, tsp. Cloves Mix nuts and fruit in large pan with 14 cup flour. Cream shortening and sugar, add honey and eggs. Mix dry ingredients, add alternately with orange juice. Pour batter over nut and fruit mix and blend well. Bake at 250° three hours and 15 minutes. GRAHAM CRACKER CAKE 1 square butter (1/4 Ib.) 2 tsp. Baking powder 1 c. Sugar ' 34, c. Milk 1 box graham crackers 3 egg yolks (30 halves crushed) 3 egg whites 34 ¢. Pecans Cream sugar and butter, mix with other ingredients. Beat egg whites stiff and fold in. Bake at 350° for 30 minutes. 839",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_22_The Home_Knitting.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains beginning of Ring Around Her Heart story instead of knitting content",
+      "action": "note",
+      "text": "This file appears to contain the wrong content entirely - it has the beginning of a fiction story rather than knitting/crochet content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_11_23_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "RING AROUND HER HEART",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_25_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of theology lesson",
+      "action": "trim_end",
+      "text": "Ardis Price is the new supervisor of the Samoan Mission Relief Society. B52",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_34_Poem_Diminuendo.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "In December's arms. 875",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_35_Poem_November_Taylor.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "But, hope eternal in our hearts, cold winter soon will pass and come the welcome spring.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_11_36_GenFt_Bday_Congrats.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content mixed with birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Annie Appleyard Rothe Lehi, Utah",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Knitting Needles and Crochet Hooks Bring Happiness to Many",
+      "expected_page": 841,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding issues where articles run into each other. The knitting article appears to be completely missing and replaced with fiction content. Multiple files contain advertisement content that should be separated into misc files. The OCR quality shows some garbled text in headers and transitions between articles.",
+  "validated_corrections": [
+    {
+      "file": "V52_11_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with garbled text from previous article instead of proper beginning",
+      "action": "trim_start",
+      "text": "MAGAZINE Volume 52 Number 11 November 1965 Lessons for February T Wak Remeber Asotiw Linnie F. Robinson When winter comes I will",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article instead of proper ending",
+      "action": "trim_end",
+      "text": "Emmaline Winsor McBride Pima, Arizona en me",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_03_SpFt_The_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "unsolicited manuipts. 803",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_08_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "May the Lord bless you to this end, I pray.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_10_Fict_Frost_Moss.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "ve her a spark of courage and she raised her troubled eyes to his.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_10_Fict_Frost_Moss.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "His answer was a smile, with the firm pressure of his strong hand. Ramona W. Cannon Mrs. Don L. (Alice Welti) Buehner, Second Counselor in the East Mill Creek Eighth Ward Relief Society, Salt Lake City, Utah, and mother of six children under eleven years of age, became the new Mrs. America on August 28 in San Diego, California. The fifty contestants—one from each State—passed tests in baking, laundry, flower arrangements, auto driving, a Mrs. United States Savings Bond contest, essay writing, and self-expression. In the last category Mrs. Buehner sang \"Sound of Music' and displayed an original painting of Logan Canyon, Utah. — Joan Sutherland, known as '\"La Stupenda'' in the world of opera, returned to her native Australia in July 1965, to sing the role of the forsaken Scottish girl in Donizetti's ''Lucia di Lammermoor.\"' Critics described her voice as '\"superb,''.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_20_The Home_Fruit_Harmer.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence without completing the recipes",
+      "action": "append",
+      "text": "Measure flour, sugar, baking powder, and salt; sift over fruit, blend well. Beat eggs, add vanilla, blend into nut-fruit mixture, spoon into loaf pan, spread evenly. Bake at 300° 134 hr. To 2 hrs., until firm on top. This makes one 9x5x3 loaf cake. Keeps well in refrigerator. It makes a very special gift. LIGHT FRUIT CAKE 14 c. Flour 1 c. Shortening 1 pkg. Fruit mix (about 1 Ib.) 14, c. Sugar 14, Ib. Candied cherries 14, c. Honey 14 Ib. Dates 5 beaten eggs 3 ozs. Candied pineapple 114 c. Flour 4 ozs. Raisins 1 tsp. Salt 14 c. Walnuts 1 tsp. Baking powder 14 c. Pecans 14 tsp. Nutmeg 14 c. Orange juice 14, tsp. Cloves Mix nuts and fruit in large pan with 14 cup flour. Cream shortening and sugar, add honey and eggs. Mix dry ingredients, add alternately with orange juice. Pour batter over nut and fruit mix and blend well. Bake at 250° three hours and 15 minutes. GRAHAM CRACKER CAKE 1 square butter (1/4 Ib.) 2 tsp. Baking powder 1 c. Sugar ' 34, c. Milk 1 box graham crackers 3 egg yolks (30 halves crushed) 3 egg whites 34 ¢. Pecans Cream sugar and butter, mix with other ingredients. Beat egg whites stiff and fold in. Bake at 350° for 30 minutes. 839",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_23_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "RING AROUND HER HEART",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_25_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of theology lesson",
+      "action": "trim_end",
+      "text": "Ardis Price is the new supervisor of the Samoan Mission Relief Society. B52",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_34_Poem_Diminuendo.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "In December's arms. 875",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_11_36_GenFt_Bday_Congrats.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content mixed with birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Annie Appleyard Rothe Lehi, Utah",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V52_11_35_Poem_November_Taylor.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "But, hope eternal in our hearts, cold winter soon will pass and come the welcome spring.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": 5,
+  "month": "March",
+  "year": 1918,
+  "timestamp": "20260315_120940",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol5_02_Frontispiece_Apostle_Hyrum_M._Smith_and_Family_Frontispiece_The_Passing_o.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "March_Vol5_05_Article_Unusual_Mothers.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "March_Vol5_07_Article_Integrity_and_Personal_Loyalty_Laura_J._Adamson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (660 chars removed)"
+    },
+    {
+      "file": "March_Vol5_10_Patriotic_Dept_Patriotic_Department_Mrs._Clarissa_Smith_Williams.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "March_Vol5_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol5_16_Article_The_Ship_of_Song_Hazel_S._Washburn.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1022 chars removed)"
+    },
+    {
+      "file": "March_Vol5_18d_Home_Science_Guide_Lessons_-_Lesson_IV_Home_Economics_-_Cereals.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "March_Vol5_20_Article_The_Magic_of_Song_(Music)_Mrs._Parley_Nielson,_Lucy_May_Gree.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7057 chars removed)"
+    }
+  ]
+}

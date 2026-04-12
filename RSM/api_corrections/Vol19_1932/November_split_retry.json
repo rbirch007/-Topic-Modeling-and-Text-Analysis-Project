@@ -1,0 +1,56 @@
+{
+  "volume": 19,
+  "month": "November",
+  "year": 1932,
+  "timestamp": "20260316_210708",
+  "dry_run": false,
+  "retried": 3,
+  "created": 3,
+  "failed": 4,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Procrastination",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Society is Right",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "When the Test Comes",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Save the Wild Birds",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Teachers' Topic - The Beatitudes",
+      "new_file": "November_Vol19_09b_Lesson_Teachers_Topic_-_The_Beatitudes.txt",
+      "chars": 2726,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Literature - The Delight of Great Books - Sir Walter Scott",
+      "new_file": "November_Vol19_09c_Lesson_Literature_-_The_Delight_of_Great_Books_-_Sir_Walter_Scott.txt",
+      "chars": 15174,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Social Service - Typical Behavior in Child Growth",
+      "new_file": "November_Vol19_09d_Lesson_Social_Service_-_Typical_Behavior_in_Child_Growth.txt",
+      "chars": 17263,
+      "match_type": "ocr_tolerant",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "volume": 17,
+  "month": "May",
+  "year": 1930,
+  "total": 25,
+  "ok": 23,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "May_Vol17_00_BOARD.txt",
+      "body_len": 1046,
+      "article_words": 107,
+      "words_in_ocr": 107,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_00_CONTENTS.txt",
+      "body_len": 787,
+      "article_words": 82,
+      "words_in_ocr": 82,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_00_Misc.txt",
+      "body_len": 9015,
+      "article_words": 564,
+      "words_in_ocr": 561,
+      "pct_in_ocr": 0.9947,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "May_Vol17_00_Misc_backup_premarker.txt",
+      "body_len": 8947,
+      "article_words": 557,
+      "words_in_ocr": 557,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_01a_Article_Tributes_to_Clarissa_Smith_Williams.txt",
+      "body_len": 11434,
+      "article_words": 674,
+      "words_in_ocr": 674,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4); MULTI_AUTHOR(9))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_02_Article_The_European_Missions_Arthur_Mother.txt",
+      "body_len": 6642,
+      "article_words": 397,
+      "words_in_ocr": 397,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_03_Article_Belle_Watson_Anderson.txt",
+      "body_len": 636,
+      "article_words": 69,
+      "words_in_ocr": 69,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_04_Article_British_National_Council_of_Women.txt",
+      "body_len": 2632,
+      "article_words": 202,
+      "words_in_ocr": 202,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05b_Article_For_the_Salvation_of_a_Nation.txt",
+      "body_len": 12146,
+      "article_words": 656,
+      "words_in_ocr": 656,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05c_Poem_Evidence.txt",
+      "body_len": 699,
+      "article_words": 72,
+      "words_in_ocr": 72,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05d_Editorial_Editorial_-_Ten_Years_of_Suffrage.txt",
+      "body_len": 2650,
+      "article_words": 211,
+      "words_in_ocr": 211,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05e_Editorial_Some_Things_Women_Can_Do.txt",
+      "body_len": 1408,
+      "article_words": 128,
+      "words_in_ocr": 128,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05f_Editorial_We_are_Proud_of_Both_of_You.txt",
+      "body_len": 1752,
+      "article_words": 154,
+      "words_in_ocr": 154,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05g_Editorial_This_Issue_Devotes_Space_to_Work_in_Missions.txt",
+      "body_len": 1076,
+      "article_words": 99,
+      "words_in_ocr": 98,
+      "pct_in_ocr": 0.9899,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "southe"
+      ]
+    },
+    {
+      "file": "May_Vol17_05h_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 10952,
+      "article_words": 627,
+      "words_in_ocr": 627,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_05j_Article_Faith_and_Faithfulness_Triumphant.txt",
+      "body_len": 7661,
+      "article_words": 478,
+      "words_in_ocr": 478,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_07_Article_Faith_and_Faithfulness_Triumphant_Lula_Greene_Richards.txt",
+      "body_len": 28923,
+      "article_words": 1262,
+      "words_in_ocr": 1262,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_08_Article_Spring_Time_Camille_Cole_Neuffer.txt",
+      "body_len": 865,
+      "article_words": 83,
+      "words_in_ocr": 83,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_09a_Article_Moral_Teaching_Through_Home_Work.txt",
+      "body_len": 22089,
+      "article_words": 985,
+      "words_in_ocr": 985,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_10_Article_Questions_in_THEOLOGY.txt",
+      "body_len": 5915,
+      "article_words": 324,
+      "words_in_ocr": 324,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_11_Article_The_Old_Juniper_Tree_Mrs_George_Q_Rich.txt",
+      "body_len": 1543,
+      "article_words": 148,
+      "words_in_ocr": 148,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_12b_Article_Thoms_Everyday_Problems_of_the_Everyday_Child.txt",
+      "body_len": 9554,
+      "article_words": 550,
+      "words_in_ocr": 550,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_12c_Poem_The_Homeless_Ones.txt",
+      "body_len": 1652,
+      "article_words": 162,
+      "words_in_ocr": 162,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_13_Article_The_Dawn_of_Hope_for_Saint_and_Sinner_in_the_Life_to_Come_J_H_Paul.txt",
+      "body_len": 11849,
+      "article_words": 705,
+      "words_in_ocr": 705,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol17_No5_06_Article_Faith_of_the_Mothers_Linda_S._Fletcher.txt",
+      "body_len": 3625,
+      "article_words": 295,
+      "words_in_ocr": 295,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol17_No5_May_1930.txt",
+    "ocr_chars": 160637,
+    "ocr_unique_words": 4443,
+    "contents_xref": {
+      "entries_in_contents": 14,
+      "matched": 14,
+      "match_details": [
+        {
+          "title": "Portrait of Clarissa Smith Williams Frontispiece",
+          "page": null,
+          "file": "May_Vol17_01a_Article_Tributes_to_Clarissa_Smith_Williams.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Tributes to Clarissa Smith Williams",
+          "page": 233,
+          "file": "May_Vol17_01a_Article_Tributes_to_Clarissa_Smith_Williams.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The European Missions Arthur Mother",
+          "page": 233,
+          "file": "May_Vol17_02_Article_The_European_Missions_Arthur_Mother.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Belle Watson Anderson",
+          "page": 233,
+          "file": "May_Vol17_03_Article_Belle_Watson_Anderson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "British National Council of Women",
+          "page": 235,
+          "file": "May_Vol17_04_Article_British_National_Council_of_Women.txt",
+          "score": 1.0
+        },
+        {
+          "title": "For the Salvation of a Nation",
+          "page": 236,
+          "file": "May_Vol17_05b_Article_For_the_Salvation_of_a_Nation.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Faith of the Mothers Linda S. Fletcher",
+          "page": 249,
+          "file": "May_Vol17_No5_06_Article_Faith_of_the_Mothers_Linda_S._Fletcher.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Faith and Faithfulness Triumphant Lula Greene Richards",
+          "page": 251,
+          "file": "May_Vol17_05j_Article_Faith_and_Faithfulness_Triumphant.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Spring Time Camille Cole Neuffer",
+          "page": 260,
+          "file": "May_Vol17_08_Article_Spring_Time_Camille_Cole_Neuffer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Moral Teaching Through Home Work Milton Bennion",
+          "page": 261,
+          "file": "May_Vol17_09a_Article_Moral_Teaching_Through_Home_Work.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Questions in THEOLOGY",
+          "page": 268,
+          "file": "May_Vol17_10_Article_Questions_in_THEOLOGY.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Old Juniper Tree Mrs. George Q. Rich",
+          "page": 270,
+          "file": "May_Vol17_11_Article_The_Old_Juniper_Tree_Mrs_George_Q_Rich.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Child's Everyday Problems of Everyday Child Laig V. Hales",
+          "page": 271,
+          "file": "May_Vol17_12b_Article_Thoms_Everyday_Problems_of_the_Everyday_Child.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Dawn of Hope for Saint and Sinner in the Life to Come J. H. Paul",
+          "page": 275,
+          "file": "May_Vol17_13_Article_The_Dawn_of_Hope_for_Saint_and_Sinner_in_the_Life_to_Come_J_H_Paul.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "May_Vol17_05c_Poem_Evidence.txt",
+        "May_Vol17_05d_Editorial_Editorial_-_Ten_Years_of_Suffrage.txt",
+        "May_Vol17_05e_Editorial_Some_Things_Women_Can_Do.txt",
+        "May_Vol17_05f_Editorial_We_are_Proud_of_Both_of_You.txt",
+        "May_Vol17_05g_Editorial_This_Issue_Devotes_Space_to_Work_in_Missions.txt",
+        "May_Vol17_05h_Notes_from_Field_Notes_from_the_Field.txt",
+        "May_Vol17_07_Article_Faith_and_Faithfulness_Triumphant_Lula_Greene_Richards.txt",
+        "May_Vol17_12c_Poem_The_Homeless_Ones.txt"
+      ]
+    }
+  }
+}

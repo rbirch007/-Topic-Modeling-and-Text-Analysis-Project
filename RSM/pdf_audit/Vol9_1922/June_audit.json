@@ -1,0 +1,189 @@
+{
+  "volume": 9,
+  "month": "June",
+  "year": 1922,
+  "total": 10,
+  "ok": 10,
+  "flagged": 0,
+  "empty": 0,
+  "records": [
+    {
+      "file": "June_Vol1_00_CONTENTS.txt",
+      "body_len": 326,
+      "article_words": 33,
+      "words_in_ocr": 33,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_01_ADVERTISERS_DIRECTORY.txt",
+      "body_len": 882,
+      "article_words": 56,
+      "words_in_ocr": 56,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_02_KEEP_ON_THE_KEY.txt",
+      "body_len": 846,
+      "article_words": 77,
+      "words_in_ocr": 77,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_03a_Article_General_Conference_of_Relief_Society.txt",
+      "body_len": 119969,
+      "article_words": 2983,
+      "words_in_ocr": 2983,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_04_TEACHERS_TOPICS.txt",
+      "body_len": 465,
+      "article_words": 42,
+      "words_in_ocr": 42,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_05_GENERAL_BOARD.txt",
+      "body_len": 935,
+      "article_words": 92,
+      "words_in_ocr": 92,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_06_EDITORIAL.txt",
+      "body_len": 3775,
+      "article_words": 292,
+      "words_in_ocr": 292,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_07_SMOKING_AND_NON_SMOKING_WOMEN.txt",
+      "body_len": 1600,
+      "article_words": 137,
+      "words_in_ocr": 137,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_08_MISC.txt",
+      "body_len": 2253,
+      "article_words": 187,
+      "words_in_ocr": 187,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol1_99_ADVERTISERS.txt",
+      "body_len": 7327,
+      "article_words": 483,
+      "words_in_ocr": 483,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol9_No6_June_1922.txt",
+    "ocr_chars": 139932,
+    "ocr_unique_words": 3439,
+    "contents_xref": {
+      "entries_in_contents": 6,
+      "matched": 4,
+      "match_details": [
+        {
+          "title": "Keep on the Key Joseph H. Dean",
+          "page": 293,
+          "file": "June_Vol1_02_KEEP_ON_THE_KEY.txt",
+          "score": 0.5
+        },
+        {
+          "title": "General Conference of Relief Society Amy Brown Lyman",
+          "page": 295,
+          "file": "June_Vol1_03a_Article_General_Conference_of_Relief_Society.txt",
+          "score": 0.57
+        },
+        {
+          "title": "Teachers' Topics for July and August",
+          "page": 343,
+          "file": "June_Vol1_04_TEACHERS_TOPICS.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Smoking and Non-Smoking Women Will H. Brown",
+          "page": 346,
+          "file": "June_Vol1_07_SMOKING_AND_NON_SMOKING_WOMEN.txt",
+          "score": 0.67
+        }
+      ],
+      "missing": [
+        {
+          "title": "Relief Society Assembly Hall and Board Meeting Room Frontispiece",
+          "page": null
+        },
+        {
+          "title": "Editorial: The Measure of Success",
+          "page": 344
+        }
+      ],
+      "extra_files": [
+        "June_Vol1_06_EDITORIAL.txt"
+      ]
+    }
+  }
+}

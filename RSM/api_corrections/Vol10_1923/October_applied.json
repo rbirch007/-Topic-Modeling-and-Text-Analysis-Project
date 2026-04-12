@@ -1,0 +1,52 @@
+{
+  "volume": 10,
+  "month": "October",
+  "year": 1923,
+  "timestamp": "20260315_120952",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol10_01_Frontispiece_The_Temple_at_Cardston,_Canada_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol10_02_Poetry_A_Temple_in_Canada_(A_Poem)_Helen_Orgill.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol10_04_Article_President_Heber_J._Grant_(Portrait).txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol10_05_Article_President_Grant's_Dedicatory_Prayer.txt",
+      "action": "append",
+      "result": "APPLIED append (16458 chars added)"
+    },
+    {
+      "file": "October_Vol10_06_Poetry_Now_is_the_Time_(Poem)_Annie_G._Lauritzen.txt",
+      "action": "append",
+      "result": "APPLIED append (180 chars added)"
+    },
+    {
+      "file": "October_Vol10_08b_Editorial_Editorial.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (297 chars removed)"
+    },
+    {
+      "file": "October_Vol10_11_Article_Mrs._Harriet_Perry_Whiting_Alice_Louise_Reynolds.txt",
+      "action": "append",
+      "result": "APPLIED append (43 chars added)"
+    },
+    {
+      "file": "October_Vol10_14f_Guide_Lessons_Teachers_Topic_for_December_-_Special_Significance_of_Christ.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "volume": 55,
+  "month": "December",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_12_42_Poem_The_Hunter.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of 'The Present' poem - need to add the title and first stanza",
+      "action": "prepend",
+      "text": "THE PRESENT\n\nIf I gave my love a present\nof a tinkling silver bell,\nCould it chime the hour I met him\nthat my heart remembers well?\n\nIf I gave my love a present,\na chain of gilded gold,\nCould it bind and entwine him\nbetter than my love could hold?\n\nIf I gave my love a ",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 3% OCR coverage"
+    }
+  ]
+}

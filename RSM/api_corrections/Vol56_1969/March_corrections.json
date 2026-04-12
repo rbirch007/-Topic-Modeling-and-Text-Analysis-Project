@@ -1,0 +1,311 @@
+{
+  "volume": 56,
+  "month": "March",
+  "year": 1969,
+  "total_files_checked": 28,
+  "files_correct": [
+    "V56_03_04_Poem_Identity_Jorgensen.txt",
+    "V56_03_06_Poem_The_Robinson.txt",
+    "V56_03_10_GenFt_In_Irvine.txt",
+    "V56_03_11_Poem_My_Willis.txt",
+    "V56_03_14_Poem_Silent_Liston.txt",
+    "V56_03_18_GenFt_Make_a_Kerr.txt",
+    "V56_03_22_Poem_Always_Gabbott.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_03_01_Fict_Welcome_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the poem 'Sparrow's Worth' instead of the fiction 'Welcome the Task Chapter 5'",
+      "action": "replace_content",
+      "text": "This file should contain the fiction story 'Welcome the Task Chapter 5' by Michele Bartmess, not the poem",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_02_Frnt_Sparrows_Kay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in a separate file",
+      "action": "trim_end",
+      "text": "Kathryn Kay The Cover:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_03_SpFt_Relief_Taylor.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about visiting teachers and 'The Salt of the Earth' which belongs to Belle S. Spafford's article, not Henry D. Taylor's welfare plan article",
+      "action": "replace_content",
+      "text": "This file should contain Henry D. Taylor's article 'Relief Society in the Welfare Plan' starting from page 164",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_05_SpFt_The_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "would be combined with opportunities for mental and spiritual growth",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_07_SpFt_What_Hunt.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content about General Board members and Singing Mothers that doesn't belong to this article",
+      "action": "trim_end",
+      "text": "Young Afton W. Hunt",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the poem 'Sparrow's Worth' and other content instead of the 'From Near and Far' section",
+      "action": "replace_content",
+      "text": "This file should contain the 'From Near and Far' section starting from page 162",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_09_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Singing Mothers instead of Ramona W. Cannon's 'Woman's Sphere' article",
+      "action": "replace_content",
+      "text": "This file should contain Ramona W. Cannon's 'Woman's Sphere' article from page 179",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_12_SpFt_Genealogy_Society.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains fiction story 'A Gift of Love' instead of genealogy article",
+      "action": "replace_content",
+      "text": "This file should contain the Genealogical Society article 'Genealogy and the New GIANT System' from page 177",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_13_GenFt_Birthday.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains homemaking fair content instead of birthday congratulations",
+      "action": "replace_content",
+      "text": "This file should contain the Birthday Congratulations section from page 240",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_15_GenFt_Homemaking_Olson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with photograph markers instead of the homemaking fair article content",
+      "action": "trim_start",
+      "text": "[PHOTOGRAPH]",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_16_GenFt_Austrian_Activitie.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains decoupage content instead of Austrian Mission activities",
+      "action": "replace_content",
+      "text": "This file should contain Austrian Mission, Sugar House Stake, North Columbia River Stake Relief Society Activities from page 200-201",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_17_GenFt_Make_Decoupage.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains rug-making content instead of decoupage instructions",
+      "action": "replace_content",
+      "text": "This file should contain the decoupage article 'Make Your Heirlooms With Decoupage' from page 202",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_19_GenFt_Spring_Snow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous articles instead of spring blossoms content",
+      "action": "trim_start",
+      "text": "d C. Kimball, Stake President.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_20_GenFt_Behold_Blakemore.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains decoupage instructions instead of the 'Open Door' article by Melva Blakemore",
+      "action": "replace_content",
+      "text": "This file should contain Melva Blakemore's article 'Behold, I Have Set Before Thee an Open Door' from page 206",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_21_GenFt_A_Way.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content about flower arrangements that belongs to another article",
+      "action": "trim_end",
+      "text": "207 Transparency by Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_23_GenFt_What_a_Roberts.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains fiction content instead of Dorothy J. Roberts' flower arrangement article",
+      "action": "replace_content",
+      "text": "This file should contain Dorothy J. Roberts' article 'What a Lovely Thing to Do!' about flower arrangements from page 208",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_24_Fict_A_Gift_Pierson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From the Field' section that doesn't belong to the fiction story",
+      "action": "trim_end",
+      "text": "(To be continued) FROM THE FIELD",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_25_GenFt_Magazines.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society activities content instead of magazine-related content",
+      "action": "replace_content",
+      "text": "This file should contain content about bound volumes of 1968 magazines from page 183",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_26_GenFt_Hobby_Departr-^nt.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains lesson department content instead of hobby features",
+      "action": "replace_content",
+      "text": "This file should contain hobby features by Julia A. Godfrey and Ethel S. West from page 222",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_27_GenFt_Notes_Activities.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains garbled text instead of 'Notes From the Field Relief Society Activities'",
+      "action": "replace_content",
+      "text": "This file should contain 'Notes From the Field Relief Society Activities' from page 229",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_03_28_GenFt_Editorial_Spafford.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles instead of Belle S. Spafford's editorial about music",
+      "action": "replace_content",
+      "text": "This file should contain Belle S. Spafford's editorial 'Music in Relief Society' from page 180",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Relief Society in the Welfare Plan Henry D. Taylor",
+      "expected_page": 164,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Genealogy and the New GIANT System Genealogical Society",
+      "expected_page": 177,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Mission of the American Red Cross Emil E. Henderson",
+      "expected_page": 184,
+      "status": "merged_with_another",
+      "merged_into": "V56_03_11_Poem_My_Willis.txt"
+    },
+    {
+      "title": "Welcome the Task Chapter 5 Michele Bartmess",
+      "expected_page": 223,
+      "status": "merged_with_another",
+      "merged_into": "V56_03_24_Fict_A_Gift_Pierson.txt"
+    },
+    {
+      "title": "Editorial Music in Relief Society Belle S. Spafford",
+      "expected_page": 180,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Notes To the Field Bound Volumes of 1968 Magazines",
+      "expected_page": 183,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "The article extraction for this volume has significant issues with content mismatches. Many files contain content from different articles than their filenames suggest. There appears to be substantial mixing of content between articles, particularly with the fiction stories, special features, and general features. The OCR text shows clear article boundaries, but the extraction process has not properly separated the content.",
+  "validated_corrections": [
+    {
+      "file": "V56_03_02_Frnt_Sparrows_Kay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in a separate file",
+      "action": "trim_end",
+      "text": "Kathryn Kay The Cover:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_05_SpFt_The_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "would be combined with opportunities for mental and spiritual growth",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_07_SpFt_What_Hunt.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content about General Board members and Singing Mothers that doesn't belong to this article",
+      "action": "trim_end",
+      "text": "Young Afton W. Hunt",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_15_GenFt_Homemaking_Olson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with photograph markers instead of the homemaking fair article content",
+      "action": "trim_start",
+      "text": "[PHOTOGRAPH]",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_19_GenFt_Spring_Snow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous articles instead of spring blossoms content",
+      "action": "trim_start",
+      "text": "d C. Kimball, Stake President.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_21_GenFt_A_Way.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content about flower arrangements that belongs to another article",
+      "action": "trim_end",
+      "text": "207 Transparency by Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_03_24_Fict_A_Gift_Pierson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From the Field' section that doesn't belong to the fiction story",
+      "action": "trim_end",
+      "text": "(To be continued) FROM THE FIELD",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

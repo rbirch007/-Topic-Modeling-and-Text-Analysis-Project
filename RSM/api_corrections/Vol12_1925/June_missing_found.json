@@ -1,0 +1,104 @@
+{
+  "volume": 12,
+  "month": "June",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0968,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Our Beloved Leader",
+      "printed_page": 281,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 319-322, but the missing article 'Our Beloved Leader' should be on page 281 according to the table of contents. The images provided do not contain this page range.",
+      "api_usage": {
+        "input_tokens": 7305,
+        "output_tokens": 132,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        319,
+        320,
+        321,
+        322
+      ]
+    },
+    {
+      "title": "The Assembly Hall, Salt Lake City",
+      "printed_page": 282,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements (Sawcroft's Kitchen King Cocoa), the magazine cover/contents page, more advertisements, and a poem 'At the Dawning' by Grace Ingles Frost. None of these pages contain the article 'The Assembly Hall, Salt Lake City' which should appear on page 282 according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7317,
+        "output_tokens": 170,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        319,
+        320,
+        321,
+        322
+      ]
+    },
+    {
+      "title": "Disaster Relief Annie D. Palmer",
+      "printed_page": 296,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie D. Palmer",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 319-322, but the article 'Disaster Relief' by Annie D. Palmer is listed on page 296 in the table of contents. The images provided do not contain this page range, so the article cannot be found in the attached images.",
+      "api_usage": {
+        "input_tokens": 7317,
+        "output_tokens": 152,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        319,
+        320,
+        321,
+        322
+      ]
+    },
+    {
+      "title": "Teachers' Topic for August",
+      "printed_page": 325,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Teachers' Topic for August' listed on page 325 in the table of contents is not present in any of the four PDF page images provided (pages 315-318). The images show other content including poems and advertisements, but not the missing Teachers' Topic article.",
+      "api_usage": {
+        "input_tokens": 7309,
+        "output_tokens": 149,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        315,
+        316,
+        317,
+        318
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "volume": 54,
+  "month": "September",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 14,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V54_09_01_Fict_Throw_Chapter.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V54_09_02_Fict_Caroline_Makes.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (320 chars)"
+    },
+    {
+      "file": "V54_09_05_SpFt_Birthday_McKay.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1805 chars)"
+    },
+    {
+      "file": "V54_09_06_SpFt_A_Crawford.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (774 chars)"
+    },
+    {
+      "file": "V54_09_09_Fict_Janet.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6268 chars removed)"
+    },
+    {
+      "file": "V54_09_12_Fict_Notes_Lessons.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (411 chars)"
+    },
+    {
+      "file": "V54_09_13_Fict_Womans_Cannon.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1550 chars removed)"
+    },
+    {
+      "file": "V54_09_15_Poem_Wide_Roberts.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (189 chars removed)"
+    },
+    {
+      "file": "V54_09_17_Fict_The.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (299 chars)"
+    },
+    {
+      "file": "V54_09_18_Fict_Luminous_McDonough.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V54_09_20_Fict_Quilts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (320 chars)"
+    },
+    {
+      "file": "V54_09_25_SpFt_Le_Breinholt.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2524 chars)"
+    },
+    {
+      "file": "V54_09_26_SpFt_To_Them_Breinholt.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V54_09_27_SpFt_Life_Breinholt.txt",
+      "action": "append",
+      "result": "APPLIED append (52 chars added)"
+    },
+    {
+      "file": "V54_09_30_Fict_Notes_Activities.txt",
+      "action": "append",
+      "result": "APPLIED append (48 chars added)"
+    },
+    {
+      "file": "V54_09_36_Fict_Bday_Congrats.txt",
+      "action": "note",
+      "result": "INFO: File contains birthday congratulations list instead of being properly categorized"
+    },
+    {
+      "file": "V54_09_37_Poem_September_Kay.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (741 chars removed)"
+    }
+  ]
+}

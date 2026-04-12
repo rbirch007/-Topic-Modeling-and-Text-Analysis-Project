@@ -1,0 +1,53 @@
+{
+  "volume": 19,
+  "month": "May",
+  "year": 1932,
+  "timestamp": "20260316_175719",
+  "dry_run": false,
+  "created": 4,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Relief Society Conference Address - President Heber J. Grant",
+      "new_file": "May_Vol19_12a_Article_Relief_Society_Conference_Address_-_President_Heber_J_Grant.txt",
+      "chars": 11462,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Relief Society Conference Address - Mrs. Annie Wells Cannon",
+      "new_file": "May_Vol19_12b_Article_Relief_Society_Conference_Address_-_Mrs_Annie_Wells_Cannon.txt",
+      "chars": 6352,
+      "result": "CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Relief Society Conference Address - Mrs. Nettie D. Bradford",
+      "new_file": "May_Vol19_12c_Article_Relief_Society_Conference_Address_-_Mrs_Nettie_D_Bradford.txt",
+      "chars": 2966,
+      "result": "CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Relief Society Conference Address - President Louise Y. Robison",
+      "result": "FAILED: end_pos (5055) <= start_pos (14559) for split 'd'"
+    },
+    {
+      "split": "e",
+      "title": "Relief Society Conference Address - Counselor Amy Brown Lyman",
+      "new_file": "May_Vol19_12e_Article_Relief_Society_Conference_Address_-_Counselor_Amy_Brown_Lyma.txt",
+      "chars": 9839,
+      "result": "CREATED"
+    },
+    {
+      "split": "f",
+      "title": "Relief Society Conference Address - Dr. Joseph F. Merrill",
+      "result": "FAILED: end_pos (5055) <= start_pos (105547) for split 'f'"
+    },
+    {
+      "file": "May_Vol19_12_Article_Thinking_of_You_Bertha_A_Kleinman.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol19_1932\\May\\_backups_split_20260316_175719\\May_Vol19_12_Article_Thinking_of_You_Bertha_A_Kleinman.txt"
+    }
+  ]
+}

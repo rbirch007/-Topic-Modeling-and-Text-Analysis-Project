@@ -1,0 +1,175 @@
+{
+  "volume": 54,
+  "month": "June",
+  "year": 1967,
+  "total_files_checked": 31,
+  "files_correct": [
+    "V54_06_02_Art_Eastward_Stewart.txt",
+    "V54_06_05_SpFt_For_Ashton.txt",
+    "V54_06_08_Fict_Hazel.txt",
+    "V54_06_09_SpFt_The_Breinholt.txt",
+    "V54_06_10_Fict_The_Flinders.txt",
+    "V54_06_12_Fict_East_Show.txt",
+    "V54_06_13_Fict_Embroidered_Willia.txt",
+    "V54_06_14_Fict_A_Williams.txt",
+    "V54_06_15_Fict_Spinner_Wool.txt",
+    "V54_06_18_Fict_Variations_Brown.txt",
+    "V54_06_19_Fict_Mix-and-Match_Keis.txt",
+    "V54_06_20_Fict_Medallions_Years.txt",
+    "V54_06_21_SpFt_Hulda.txt",
+    "V54_06_22_Poem_Lifes_Leigh-Kendal.txt",
+    "V54_06_24_Lssn_Summer_Jorgensen.txt",
+    "V54_06_25_Lssn_Roy_W..txt",
+    "V54_06_26_Lssn_Alice.txt",
+    "V54_06_27_Lssn_Celestia.txt",
+    "V54_06_28_Lssn_Alberta.txt",
+    "V54_06_29_Lssn_Bruce.txt",
+    "V54_06_30_Poem_Directions_Oveson.txt",
+    "V54_06_31_Fict_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_06_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Relief Society Short Story Contest winners instead of 'The Golden Chain Chapter 5'",
+      "action": "replace_content",
+      "text": "Synopsis: Nora Blake, alone in the world, secures a schoolteaching position in Banner, Idaho, where she lives in the home of Bishop Shepherd and becomes acquainted with a Latter-day Saint family. She meets Jed Oliver, a local rancher, and young Ben Wade, an orphan, who lives with Jed. Nora is astonished to find out that Jed cannot read and she offers to teach him. Finding a piece of land open for homesteading, Bishop Shepherd suggests to Nora that she homestead it. A mysterious elderly man, called Old Free, a non-Mormon, challenges Nora's interest. =» Nora returned to the barn to tell Sam about Trudy's death. Old Free stopped milking and sat listening. \"Tell them not to worry about the coffin,\" he said. \"I'll make it.\" He brought it to the house the following afternoon. It was made of cedar, polished to a fine finish. The Golden Chain Hazel M. Thomson Chapter 5 The Relief Society presidency came to line it with a light pink lining.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_06_03_Art_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File is essentially empty and needs proper content extraction",
+      "action": "replace_content",
+      "text": "From Near and Far How thrilled I was to see a picture of my mother and her co-workers in the Note From the Field from Sydney Stake (Australia) in the February Magazine. It has been eight years since I left my home, but some of the faces were still familiar. I would like to thank my mother for sending me a gift subscription to the Magazine. Nita Ehmann Olsen Ogden, Utah I have now received my fourth issue of The Relief Society Magazine, which has been a great source of strength to me, and adds much happiness and wonderful ideas to a newly married couple. Julie Tall Marshall Orem, Utah I wish to express my appreciation for all the work that goes into our Magazine. My mother gave me a year's subscription when I married, and I have very happily renewed it twice since. As we presently live thirty miles from the nearest church, I am unable to attend Relief Society, and miss both the lessons and the fellowship of the sisters. Last year I was homemaking leader and organist. Now I find that the Magazine helps to fill the gap that exists in my week, and I am glad to be able to study the appropriate lessons. I was thrilled to read the address by Elder Harold B. Lee in the January issue, and I took his counsel to my heart. Jeanette Miller Verona, Tasmania, Australia We thought my picture was so nice (hobby feature, October 1966) that my husband rushed out and got a nice little frame for it. I have received many letters, even from people not of our faith, saying how pleased they were to see it. Hestella Kuttler Pocatello, Idaho",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_06_04_SpFt_Emma_Ashton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Berl Typens, Pennsylvania' which appears to be from previous article",
+      "action": "trim_start",
+      "text": "Berl Typens, Pennsylvania",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_06_Fict_General_Conference.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete content and bleeds into next article about Woman's Sphere",
+      "action": "trim_end",
+      "text": "Miss Groesbeck, who was born in Ogden, Utah, has been a teacher in several Utah school districts, and is at present a Professor of Music at B. Y. U.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V54_06_07_Fict_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content that belongs to previous article about General Conference",
+      "action": "trim_start",
+      "text": "Miss Groesbeck, who was born in Ogden, Utah, has been a teacher in several Utah school districts, and is at present a Professor of Music at B. Y. U. 426",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_11_Poem_Wren_Jacobson.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from Mary Ila's Wedding Cake recipe instead of the poem",
+      "action": "replace_content",
+      "text": "WREN TIME Ethel Jacobson ~ In filaments of fine-spun gold The wrens' cadenzas, whorled and scrolled, Make filigrees of melody That glint from every aspen tree. Beaks, like slim curved needles, wrought This bright metallic lacework caught On dancing leaves that tip slim boughs Where the small winds of summer drowse. ~ LIFE'S JOURNEY The path, narrow and steep, winds its way to the top of the lofty, majestic mountain. Sharp rocks, thorns, and tangled underbrush reach out, threaten to trip, to turn me aside. Sometimes I feel myself slipping backwards. I'm tired. I stop to get a firm foothold, to renew my strength, then I continue to climb. Wouldn't it be easier to follow the wide paved road that travels around the base of the mountain? No. I must reach the top. That is my goal. Judith Leigh-Kendall",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_06_16_Fict_Flower_Idaho.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete content about tortillas",
+      "action": "trim_end",
+      "text": "A toria is a cake in South Americ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_17_Fict_Helen_Quilt.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about flower show",
+      "action": "trim_start",
+      "text": "440 Flower Show in Lost River Stake (Idaho) Mary 8B. Davies, President Lost River Stake Relief Society This picture of some of the lovely flowers grown in Lost River Valley is representative of the nine other floral displays which added much beauty to the flower show and Singing Mothers concert held in August 1966. The theme for the occasion was taken from the conference address of Sister Louise W. Madsen: \"Behold, I have set before thee an open door.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_23_Poem_Now_the_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains tortilla recipe content that should be in the variations article",
+      "action": "trim_end",
+      "text": "Judith Leigh-Kendall 461 June 1967 VARIATIONS OF THE TORTILLA",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files have content bleeding issues where articles are mixed together. The main problems are with the fiction files having wrong content assignments and some lesson/article boundaries being unclear. Most lesson department files are correctly extracted.",
+  "validated_corrections": [
+    {
+      "file": "V54_06_04_SpFt_Emma_Ashton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Berl Typens, Pennsylvania' which appears to be from previous article",
+      "action": "trim_start",
+      "text": "Berl Typens, Pennsylvania",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_07_Fict_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content that belongs to previous article about General Conference",
+      "action": "trim_start",
+      "text": "Miss Groesbeck, who was born in Ogden, Utah, has been a teacher in several Utah school districts, and is at present a Professor of Music at B. Y. U. 426",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_16_Fict_Flower_Idaho.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete content about tortillas",
+      "action": "trim_end",
+      "text": "A toria is a cake in South Americ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_17_Fict_Helen_Quilt.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about flower show",
+      "action": "trim_start",
+      "text": "440 Flower Show in Lost River Stake (Idaho) Mary 8B. Davies, President Lost River Stake Relief Society This picture of some of the lovely flowers grown in Lost River Valley is representative of the nine other floral displays which added much beauty to the flower show and Singing Mothers concert held in August 1966. The theme for the occasion was taken from the conference address of Sister Louise W. Madsen: \"Behold, I have set before thee an open door.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_06_23_Poem_Now_the_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains tortilla recipe content that should be in the variations article",
+      "action": "trim_end",
+      "text": "Judith Leigh-Kendall 461 June 1967 VARIATIONS OF THE TORTILLA",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V54_06_06_Fict_General_Conference.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete content and bleeds into next article about Woman's Sphere",
+      "action": "trim_end",
+      "text": "Miss Groesbeck, who was born in Ogden, Utah, has been a teacher in several Utah school districts, and is at present a Professor of Music at B. Y. U.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

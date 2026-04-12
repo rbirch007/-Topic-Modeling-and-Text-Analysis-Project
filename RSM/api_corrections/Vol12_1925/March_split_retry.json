@@ -1,0 +1,28 @@
+{
+  "volume": 12,
+  "month": "March",
+  "year": 1925,
+  "timestamp": "20260316_210704",
+  "dry_run": false,
+  "retried": 1,
+  "created": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Editorial—The Seventeenth of March",
+      "new_file": "March_Vol12_06b_Editorial_EditorialThe_Seventeenth_of_March.txt",
+      "chars": 380,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Swat the Fly",
+      "new_file": "March_Vol12_17b_Guide_Lessons_Swat_the_Fly.txt",
+      "chars": 1043,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

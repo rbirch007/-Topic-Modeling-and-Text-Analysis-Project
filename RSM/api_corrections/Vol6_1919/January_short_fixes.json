@@ -1,0 +1,40 @@
+{
+  "volume": 6,
+  "month": "January",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0213,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol6_20b_Guide_Lessons_LESSON_II_Work_and_Business_Fourth_Week_in_February.txt",
+      "status": "delete",
+      "current_chars": 181,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a header artifact. The PDF shows this is only a lesson title that appears at the top of page 117, but there is no actual lesson content for 'Work and Business' - it immediately transitions to 'LESSON III. Genealogy.' The file contains only the header with no substantive content.",
+      "api_usage": {
+        "input_tokens": 6186,
+        "output_tokens": 181,
+        "cost": 0.0213
+      },
+      "pdf_pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    }
+  ]
+}

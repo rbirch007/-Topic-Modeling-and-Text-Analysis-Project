@@ -1,0 +1,62 @@
+{
+  "volume": 9,
+  "month": "November",
+  "year": 1922,
+  "timestamp": "20260315_120950",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol9_01_Article_Jake_Clayton.txt",
+      "action": "note",
+      "result": "INFO: File contains table of contents instead of Jake Clayton article"
+    },
+    {
+      "file": "November_Vol9_02_Editorial_Editorial,_Spiritual_Status_of_Our_Present-day_World.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "November_Vol9_03_Frontispiece_Bureau_of_Information,_Temple_Block_Frontispiece.txt",
+      "action": "note",
+      "result": "INFO: File contains Bureau of Information article text instead of frontispiece"
+    },
+    {
+      "file": "November_Vol9_04_Article_The_Temple_Block_Mission_Levi_Edgar_Young.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (7862 chars added)"
+    },
+    {
+      "file": "November_Vol9_07_Article_A_Modern_John_Alden_Julia_A._F._Lund.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2502 chars added)"
+    },
+    {
+      "file": "November_Vol9_11_Article_Integrity—a_Noble_Word_Jesma.txt",
+      "action": "note",
+      "result": "INFO: File ends mid-sentence with incomplete text"
+    },
+    {
+      "file": "November_Vol9_12_Article_Pioneer_Days_Laura_F._Crane.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (39 chars added)"
+    },
+    {
+      "file": "November_Vol9_16_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5635 chars removed)"
+    },
+    {
+      "file": "November_Vol9_18a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLES_OF_THE_LATTER_D.txt",
+      "action": "append",
+      "result": "APPLIED append (24 chars added)"
+    },
+    {
+      "file": "November_Vol9_19_Article_Salt_Lake_City's_Milk_Supply_Fred_W._Merrill.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5635 chars removed)"
+    }
+  ]
+}

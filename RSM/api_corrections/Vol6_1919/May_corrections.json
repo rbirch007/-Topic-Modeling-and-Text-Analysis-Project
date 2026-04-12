@@ -1,0 +1,183 @@
+{
+  "volume": 6,
+  "month": "May",
+  "year": 1919,
+  "total_files_checked": 30,
+  "files_correct": [
+    "May_Vol6_05_Municipal_Kitchens_in_England...._Joseph_A._West.txt",
+    "May_Vol6_06_A_Lover_of_Grape_Vines_Frank_R._Arnold.txt",
+    "May_Vol6_07a_Article_Guidance_of_Children_Family_Organization.txt",
+    "May_Vol6_07b_Poem_Solace.txt",
+    "May_Vol6_08_Real_Economy_in_the_Home_Clara_Fagangren.txt",
+    "May_Vol6_09_Rainbows_on_War_Clouds...._Col._James_L._Hughes.txt",
+    "May_Vol6_10_The_Garden_in_May_Morag.txt",
+    "May_Vol6_11_The_Angel_Azrael_Sarah_L._Tenny.txt",
+    "May_Vol6_15a_Editorial_Editorial_Modern_Superstition.txt",
+    "May_Vol6_15b_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony.txt",
+    "May_Vol6_15c_Guide_Lessons_Lesson_II_Work_and_Business.txt",
+    "May_Vol6_15d_Genealogy_Lesson_III_Genealogy_-_Surnames_Derived_from_Trades_and_Occu.txt",
+    "May_Vol6_15e_Home_Science_Lesson_VI_Home_Courses_-_The_Influence_of_Domestic_Factors_i.txt",
+    "May_Vol6_15f_Article_Heavenly_Music.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Article starts mid-sentence with 'Month for Mothers' instead of 'The Month for Mothers'",
+      "action": "prepend",
+      "text": "The ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and bleeds into next article",
+      "action": "trim_end",
+      "text": "that enlarged loyalty and devotion of sons for",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_02_Mothers_of_Our_Leaders._.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "Mothers of Our Leaders. :",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_04_Lines_for_a_Golden_Wedding_Day._._Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article about Golden Wedding",
+      "action": "trim_start",
+      "text": "Lines for a Golden Wedding Day. . Mary Foster Gibbs",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12a_Current_Topics_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "OFFICIAL ROUND TABLE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12b_Home_Science_Construction_and_Reconstruction_in_the_Home.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends with content from next article",
+      "action": "trim_end",
+      "text": "He used his friends in all sorts of ways and for his own ends, and never hesitated to sacrifice their reputation for his own advantage.— Orison Sweet Harden, in the Nezv Success.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12c_Current_Topics_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "On the Watch Tower",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_13_Construction_and_Reconstruction_in_the_Home.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only table of contents entries, not the actual article content",
+      "action": "note",
+      "text": "This appears to be a table of contents fragment rather than the actual Construction and Reconstruction article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "May_Vol6_14_On_the_Watch_Tower_James_H._Anderson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a fragment mentioning James Kirkham, Sr. and Official Round Table",
+      "action": "note",
+      "text": "This appears to be a table of contents fragment rather than the actual On the Watch Tower article",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Mother Joseph H. Smart",
+      "expected_page": 249,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files appear to be table of contents fragments rather than actual articles. The OCR shows a poem 'Mother' by Joseph H. Smart at the beginning, but this is not captured in any extracted file. Some articles have bleeding issues where content from adjacent articles appears at the beginning or end.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and bleeds into next article",
+      "action": "trim_end",
+      "text": "that enlarged loyalty and devotion of sons for",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_02_Mothers_of_Our_Leaders._.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "Mothers of Our Leaders. :",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_04_Lines_for_a_Golden_Wedding_Day._._Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article about Golden Wedding",
+      "action": "trim_start",
+      "text": "Lines for a Golden Wedding Day. . Mary Foster Gibbs",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12a_Current_Topics_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "OFFICIAL ROUND TABLE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12b_Home_Science_Construction_and_Reconstruction_in_the_Home.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends with content from next article",
+      "action": "trim_end",
+      "text": "He used his friends in all sorts of ways and for his own ends, and never hesitated to sacrifice their reputation for his own advantage.— Orison Sweet Harden, in the Nezv Success.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol6_12c_Current_Topics_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article",
+      "action": "trim_start",
+      "text": "On the Watch Tower",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Article starts mid-sentence with 'Month for Mothers' instead of 'The Month for Mothers'",
+      "action": "prepend",
+      "text": "The ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

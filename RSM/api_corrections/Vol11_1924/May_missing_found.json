@@ -1,0 +1,88 @@
+{
+  "volume": 11,
+  "month": "May",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0725,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Brigham Young University Summer School Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages about Mrs. Jeanette A. Hyde, The Eliza Roxey Snow Memorial Contest, and editorial content from January 1924 (Vol. XI, No. 1). These appear to be from a different issue than the May 1924 volume being searched. No content related to 'Brigham Young University Summer School Frontispiece' was found in the provided images.",
+      "api_usage": {
+        "input_tokens": 7221,
+        "output_tokens": 186,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "title": "Efficient Motherhood Claire Stewart Boyer",
+      "printed_page": 232,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Getting Ready for Cousin Alice Annie Pike Greenwood",
+      "printed_page": 236,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Pike Greenwood",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 257-260). The article should appear on page 236 according to the table of contents, but the provided images start at page 257, so the article would be on earlier pages not included in these images.",
+      "api_usage": {
+        "input_tokens": 7259,
+        "output_tokens": 156,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        257,
+        258,
+        259,
+        260
+      ]
+    },
+    {
+      "title": "Teachers' Topic for July",
+      "printed_page": 268,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 257-260) but could not locate the article 'Teachers' Topic for July' which should appear on page 268 according to the table of contents. The provided images do not include page 268.",
+      "api_usage": {
+        "input_tokens": 7235,
+        "output_tokens": 146,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        257,
+        258,
+        259,
+        260
+      ]
+    }
+  ]
+}

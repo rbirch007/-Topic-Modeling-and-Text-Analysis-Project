@@ -1,0 +1,94 @@
+{
+  "volume": 1,
+  "month": "September",
+  "year": 1914,
+  "total_files_checked": 12,
+  "files_correct": [
+    "V1_1914_Sep_05_Art_TheGrain.txt",
+    "V1_1914_Sep_06_Art_Editorial.txt",
+    "V1_1914_Sep_07_Art_Great.txt",
+    "V1_1914_Sep_08_Art_Heirship.txt",
+    "V1_1914_Sep_09_Art_HomeEthics.txt",
+    "V1_1914_Sep_12_Art_Literature.txt",
+    "V1_1914_Sep_13_Art_Relief.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Sep_04_Art_LD.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains advertisement content followed by magazine header information that should not be in this article",
+      "action": "replace_content",
+      "text": "A SUCCESSFUL COLLEGE GROWS\n\nIn one year our increase has been forty per cent.\n\nL. D. S. BUSINESS COLLEGE\nSALT LAKE CITY, UTAH\n\nDay Sessions: seven dollars a month\nNight Sessions: four dollars a month",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Sep_10_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete reference information",
+      "action": "append",
+      "text": "II, U. S. Dept. of Agriculture, Farmers Bulletin 359.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Sep_11_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This appears to be a fragment that should be part of the Home Gardening article, not a separate poem",
+      "action": "note",
+      "text": "This content should be merged with the Home Gardening article as it completes the reference information",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Sep_13_Art_Relief.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends abruptly with incomplete advertisement text that should be in Misc file",
+      "action": "trim_end",
+      "text": "Salt Lake THOMAS HULL ELIJAH A.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Sep_15_Poem_TWOSTORES.txt",
+      "issue_type": "ad_content",
+      "description": "This file contains advertisement content that should be in the Misc file instead",
+      "action": "note",
+      "text": "All content appears to be advertisements and should be moved to Misc file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Sep_17_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "This appears to be advertisement fragment that should be in Misc file",
+      "action": "note",
+      "text": "Content appears to be part of advertisement and should be in Misc file",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files contain advertisement content that should be consolidated into a Misc file. The Home Gardening article appears to be split across multiple files. The Relief Society Nurse School article is cut off mid-advertisement. Overall article content extraction is good but advertisement boundaries need cleanup.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Sep_10_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete reference information",
+      "action": "append",
+      "text": "II, U. S. Dept. of Agriculture, Farmers Bulletin 359.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Sep_13_Art_Relief.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends abruptly with incomplete advertisement text that should be in Misc file",
+      "action": "trim_end",
+      "text": "Salt Lake THOMAS HULL ELIJAH A.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

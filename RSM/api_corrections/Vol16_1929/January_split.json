@@ -1,0 +1,83 @@
+{
+  "volume": 16,
+  "month": "January",
+  "year": 1929,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1145,
+  "files": [
+    {
+      "source_file": "January_Vol16_16_Article_Pioneers_Lois_V_Hales.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Pioneers",
+          "category": "Article",
+          "author": "Lois V. Hales",
+          "start_boundary": "Hamlin Garland's Trilogy?A Son of the Middle Border,",
+          "end_boundary": "Can keep my own away from me.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for March",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for March LESSON I Practical Religion",
+          "end_boundary": "Saturday, November 24, 1928. LESSON II Work and",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for March - Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Business (Second Week in March) Teachers' Topic for",
+          "end_boundary": "their husbands acknowledge it or not, and who",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for March - Social Service and Additional Content",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "say with Maggie, it is our only joke.",
+          "end_boundary": "Was. 2177 When Buying Mention Relief Society Magazine",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH",
+        "PIONEERS"
+      ],
+      "notes": "This file contains one main article about Hamlin Garland followed by multiple Guide Lessons sections covering different topics (Practical Religion, Literature with James Matthew Barrie biography and play analysis, and Social Service with child study). The final section also includes additional content like book reviews and advertisements that appear to be end matter.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 43328,
+      "tier": 2,
+      "pdf_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "api_usage": {
+        "input_tokens": 35409,
+        "output_tokens": 550,
+        "cost": 0.1145
+      }
+    }
+  ]
+}

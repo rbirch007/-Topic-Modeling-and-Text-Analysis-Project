@@ -1,0 +1,59 @@
+{
+  "volume": 57,
+  "month": "February",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_02_12_Fict_Happy_Addis.txt",
+      "issue_type": "bleed_end",
+      "description": "Story ends with 'As she made her way down' but file continues with text from next article",
+      "action": "trim_end",
+      "text": "As she made her way down",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V57_02_15_GenFt_Make_a_Watson.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous article, should begin with the title and author information",
+      "action": "trim_start",
+      "text": "Make a New Start With Alaskan Sourdough",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V57_02_21_Fict_Jerusha_Todd.txt",
+      "issue_type": "bleed_end",
+      "description": "Article cuts off mid-sentence 'and immediately wished she hadn't offer' - should end at a complete sentence",
+      "action": "trim_end",
+      "text": "\"I'd be glad to iron that, if you'd like me to,\" Jerusha said impulsively",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    },
+    {
+      "file": "V57_02_24_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "Article should end after the Burley Stake entry, before the incomplete Mt. Jordan Stake entry",
+      "action": "trim_end",
+      "text": "Jacqueline Sagers, cultural refinement leader, was chairman for the event.''",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V57_02_25_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts correctly with metadata headers followed by the article content beginning with 'Zion related? THE CATALYST'",
+      "action": "note",
+      "text": "The article file appears to be correct - it starts with proper metadata headers followed by the article content. The 'Zion related?' appears to be a section header or question within the article itself, not bleed from a previous article.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    }
+  ]
+}

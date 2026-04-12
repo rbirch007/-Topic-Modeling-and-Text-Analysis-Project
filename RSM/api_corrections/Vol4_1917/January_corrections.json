@@ -1,0 +1,158 @@
+{
+  "volume": 4,
+  "month": "January",
+  "year": 1917,
+  "total_files_checked": 17,
+  "files_correct": [
+    "January_Vol4_04_Article_Mrs._Alice_Merrill_Home.txt",
+    "January_Vol4_05_Article_Life's_Wintry_Way_Marie_Jenesn.txt",
+    "January_Vol4_08_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+    "January_Vol4_10_Article_Home_Evening_Entertainment_Morg.txt",
+    "January_Vol4_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "January_Vol4_13_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "January_Vol4_14a_Editorial_A_Call_to_the_Women_of_the_Church.txt",
+    "January_Vol4_14b_Editorial_High_Cost_of_Living.txt",
+    "January_Vol4_14c_Editorial_Call_for_History_Items.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol4_01_Article_Relief_Society_Calendar.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - missing the actual calendar content",
+      "action": "note",
+      "text": "OCR gap - calendar content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "January_Vol4_06_Article_A_Forceful_Business_Venture_Ida_Stewart_Peay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article (Isobel story)",
+      "action": "trim_end",
+      "text": "TOO BUSY.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol4_07_Article_Isobel_Gives_a_New_Year's_Dinner_Diana_Parrish.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing beginning of article",
+      "action": "prepend",
+      "text": "Isobel Gives a New Year's Dinner And Brings Mother to the Rescue. By Diana Farrish. Fate seemed to be against Tom's and Isobel's New Year's Eve dinner party from the start. The very day itself began with a blinding storm, which made one feel disagreeable. It was so dark that she and Tom were half an hour late in getting up. The baby waked and hindered them with a peevish fretting so that Tom was three-quarters of an hour later than usual, when he dashed off the porch to catch a car for the office without kissing Isobel goodbye. Both of them were annoyed that he should be late for work on the very day that he was going to bring his manager and his wife home for dinner. It looked as if he were making extraordinary preparations. Tom wanted the dinner to be without pretense  just the usual sort of dinner that they had every night. Isobel watched Tom from the door with her lace cap awry. Indeed it came dangerously near covering completely one eye. In her dismay at not being kissed goodbye, she scarcely noticed it. Then suddenly bethinking herself  of the task before her she wheeled about. A puff of smoke from the chafing-dish met her eye. Her nose told her that the electric current under it had not been turned off and that the remains of the scrambled eggs from breakfast had been burned into abominable-smelling gas. She switched off the current and carried the blackened pan to the kitchen. The burnt eggs struck her as being a bad omen. Isobel gathered the dishes into the sink, busily planning the while the best procedure for the day. The pastry must be made immediately after the dishes were finished. The thought of making pastry on the day of company was rather disturbing. Indeed, Isobel was conscious of a feeling of guilt when she recalled that she had spent the two days before in shopping and at parties instead of beginning preparations for the dinner for Mr. Benson and his wife. She wondered if she could not omit the pastry from her menu, but she remembered that Tom had asked especially to have green pea patties, as he had told Mr. Benson about the delicious ones Isobel could make and had promised to let him sample them. No, Tom should not be disappointed, and Isobel splashed into the dishes so that she could make good her promise. As she dried the first plate she heard a faint sound of crying from the bedroom. In her deep absorption she had forgotten to",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol4_09_Article_Mother_Alfred_Lambourne.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains end of previous article",
+      "action": "trim_start",
+      "text": "Mother Alfred Lambourne.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "January_Vol4_11_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+      "issue_type": "missing_text",
+      "description": "File is severely truncated - only contains title and first few words",
+      "action": "note",
+      "text": "OCR gap - most of Home Science content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "January_Vol4_14d_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "FROM OUR FRIEND'S ALBUM.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "January_Vol4_15_Article_High_Cost_of_Living.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Home Science content instead of High Cost of Living editorial",
+      "action": "replace_content",
+      "text": "HIGH COST OF LIVING. This high-cost-of-living talk has its limits. Hew Prices When you see women's clubs and men's Are Boosted. civic bodies, and even Congress making a tremendous fuss about the price of eggs and flour, while they say nothing whatever about the shoes and gloves, you get a bit angry  if your sympathies run with the farmers, and that is where Utah's sympathies should be. Here starts a man or a firm to raise prices-  on paper say; for that was one of the first big interests to deliberately take advantage of the war to raise prices and thus rake in a few millions of money  and that raise made printer's ink get a rise  then oil, gasoline, lumber, leather, rubber, tin, coal, iron, copper, and, in fact, every conceivable commodity was hoisted up in price to meet the original speculation. The Farmer Trails Behind Miles behind the other speculators come the food stuff's, meat and farmers' products, and Trails Behind, they accommodated themselves to the general rise in prices and lo, everybody gets mad at once. To think that milk and eggs and butter can dare to advance in price  O it's awful. There's a cry about high prices that shakes the foundations of the earth. Of course, we all know that the middlemen The get the big benefits out of this rise in eggs Middleman. and food stuffs  well so they do from coal and leather. The way society is now organized, the middleman is a necessity, and he has to live and get rich if he can. But the farmer gets better and steadier prices because of the middleman, and the farmer knows it. Of course, the farmer can cut out the middleman, and live on his own produce. But he won't, the modern farmer is too shrewd for that. I don't notice the club women crying out What Do about the rise in feathers and hats. Nor do Women Do I see them wearing any cheaper hats because About High of the unprecedented rise in all fancy goods. Priced No, no! My lady goes more richly clad, and Millinery? gives more luxurious entertainments than ever before. Then she gets together with her kind and shouts and resolutes and gets raving mad in the papers  getting publicity at the same time  and calls the egg man names and raises her hands in horror over the price of flour and sugar. O woman  and O man! Don't we all know enough of the primary The Sensible principles of political economy to know that View of The when prices are high, wages are correspond Presenting high and money is easy while prosperity reigns everywhere. That's the law of supply and demand. It's only silly folks who expect wages to rise and prices to fall at one and the same time. The sensible thing for you and me, my dear, is just to institute the severest economy we are capable of, refuse to go in debt, save all we can, wear last year's dresses and hats, use as few eggs as may be. and let the pseudo-reformers go their gait. This talk will all die. down, you know. Congress and clubs will spend uselessly a few dollars of money in investigating, and things will end up just where they began. It is. after all, purely a personal matter. If we will each economize and be ready for the crash that is sure to follow, at the close of the war, we can afford to forget all the talk and resolutions while we wait quietly upon the god of war and consequent high prices.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "January_Vol4_16_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content at the end",
+      "action": "trim_end",
+      "text": "FROM OUR FRIEND'S ALBUM.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "General Board of the Relief Society",
+      "expected_page": 2,
+      "status": "merged_with_another",
+      "merged_into": "January_Vol4_14a_Editorial_A_Call_to_the_Women_of_the_Church.txt"
+    },
+    {
+      "title": "New Year Epistle",
+      "expected_page": 3,
+      "status": "ocr_gap"
+    }
+  ],
+  "notes": "Several files have significant issues including missing content, wrong content, and advertisement bleed. The Home Science Department file is severely truncated and the High Cost of Living file contains wrong content entirely. Multiple files contain advertisement content that should be moved to Misc file.",
+  "validated_corrections": [
+    {
+      "file": "January_Vol4_06_Article_A_Forceful_Business_Venture_Ida_Stewart_Peay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article (Isobel story)",
+      "action": "trim_end",
+      "text": "TOO BUSY.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol4_07_Article_Isobel_Gives_a_New_Year's_Dinner_Diana_Parrish.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing beginning of article",
+      "action": "prepend",
+      "text": "Isobel Gives a New Year's Dinner And Brings Mother to the Rescue. By Diana Farrish. Fate seemed to be against Tom's and Isobel's New Year's Eve dinner party from the start. The very day itself began with a blinding storm, which made one feel disagreeable. It was so dark that she and Tom were half an hour late in getting up. The baby waked and hindered them with a peevish fretting so that Tom was three-quarters of an hour later than usual, when he dashed off the porch to catch a car for the office without kissing Isobel goodbye. Both of them were annoyed that he should be late for work on the very day that he was going to bring his manager and his wife home for dinner. It looked as if he were making extraordinary preparations. Tom wanted the dinner to be without pretense  just the usual sort of dinner that they had every night. Isobel watched Tom from the door with her lace cap awry. Indeed it came dangerously near covering completely one eye. In her dismay at not being kissed goodbye, she scarcely noticed it. Then suddenly bethinking herself  of the task before her she wheeled about. A puff of smoke from the chafing-dish met her eye. Her nose told her that the electric current under it had not been turned off and that the remains of the scrambled eggs from breakfast had been burned into abominable-smelling gas. She switched off the current and carried the blackened pan to the kitchen. The burnt eggs struck her as being a bad omen. Isobel gathered the dishes into the sink, busily planning the while the best procedure for the day. The pastry must be made immediately after the dishes were finished. The thought of making pastry on the day of company was rather disturbing. Indeed, Isobel was conscious of a feeling of guilt when she recalled that she had spent the two days before in shopping and at parties instead of beginning preparations for the dinner for Mr. Benson and his wife. She wondered if she could not omit the pastry from her menu, but she remembered that Tom had asked especially to have green pea patties, as he had told Mr. Benson about the delicious ones Isobel could make and had promised to let him sample them. No, Tom should not be disappointed, and Isobel splashed into the dishes so that she could make good her promise. As she dried the first plate she heard a faint sound of crying from the bedroom. In her deep absorption she had forgotten to",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol4_16_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content at the end",
+      "action": "trim_end",
+      "text": "FROM OUR FRIEND'S ALBUM.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "January_Vol4_09_Article_Mother_Alfred_Lambourne.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains end of previous article",
+      "action": "trim_start",
+      "text": "Mother Alfred Lambourne.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "January_Vol4_14d_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "FROM OUR FRIEND'S ALBUM.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

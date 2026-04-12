@@ -1,0 +1,52 @@
+{
+  "volume": 6,
+  "month": "November",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1321,
+  "files": [
+    {
+      "source_file": "November_Vol6_01_Hindu_Temple_Frontispiece.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Hindu Temple Frontispiece",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "Hindu Temple Frontispiece ====================================================================== HINDU TEMPLE, LUCKNOW, INDIA.",
+          "end_boundary": "HINDU TEMPLE, LUCKNOW, INDIA.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Temples",
+          "category": "Article",
+          "author": "Mary Foster Gibbs",
+          "start_boundary": "Temples. Mary Foster Gibbs All religious forms are symbolic",
+          "end_boundary": "Buddhism did not go so far, but we shall treat that belief in a latter paper. Beyond",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "TEMPLES"
+      ],
+      "notes": "This file contains a frontispiece image caption followed by a substantial article on temples by Mary Foster Gibbs. The article appears to continue beyond this file (ends with 'Beyond' suggesting continuation). The frontispiece is a simple image caption, while the main article discusses religious symbolism and temple practices across various cultures.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16431,
+      "tier": 1,
+      "pdf_pages": [
+        685,
+        686,
+        687
+      ],
+      "api_usage": {
+        "input_tokens": 42280,
+        "output_tokens": 351,
+        "cost": 0.1321
+      }
+    }
+  ]
+}

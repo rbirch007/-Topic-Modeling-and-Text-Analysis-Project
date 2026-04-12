@@ -1,0 +1,22 @@
+{
+  "volume": 8,
+  "month": "April",
+  "year": 1921,
+  "timestamp": "20260315_120946",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol8_05_Article_There_are_Times_Helen_Kimball_Orgill.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2 chars removed)"
+    },
+    {
+      "file": "April_Vol8_14_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "action": "note",
+      "result": "INFO: File appears to be incomplete - missing Lessons II and III content, and contains only partial Lesson IV"
+    }
+  ]
+}

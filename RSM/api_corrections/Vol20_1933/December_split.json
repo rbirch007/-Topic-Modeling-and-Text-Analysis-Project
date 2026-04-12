@@ -1,0 +1,82 @@
+{
+  "volume": 20,
+  "month": "December",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1158,
+  "files": [
+    {
+      "source_file": "December_Vol20_17_Article_Lesson_Department_RELIEF_SOCIETY_MAGAZINE.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Responsibility of Conveying the Truth to Others",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "acts of insincerity on the part of their parents?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - Self Control",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic SELF CONTROL \"He that is",
+          "end_boundary": "a greater conqueror is he that conquers himself.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Literature of the Bible",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature (Third Week in February) THE LITERATURE",
+          "end_boundary": "understanding of its literary beauty.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Affection—Sex and Emotional Maturity",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in February) AFFECTION?-SEX",
+          "end_boundary": "physical or mental health.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections for different weeks in February, covering Theology, Teachers' Topic, Literature, and Social Service. Each section has clear subject matter boundaries and different formatting styles typical of lesson materials.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 48504,
+      "tier": 2,
+      "pdf_pages": [
+        845,
+        846,
+        847,
+        848,
+        849,
+        850,
+        851,
+        852,
+        853,
+        854,
+        855,
+        856,
+        857,
+        858,
+        859
+      ],
+      "api_usage": {
+        "input_tokens": 36031,
+        "output_tokens": 513,
+        "cost": 0.1158
+      }
+    }
+  ]
+}

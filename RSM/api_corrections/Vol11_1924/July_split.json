@@ -1,0 +1,183 @@
+{
+  "volume": 11,
+  "month": "July",
+  "year": 1924,
+  "total_merged": 3,
+  "total_splits": 8,
+  "total_cost": 0.3949,
+  "files": [
+    {
+      "source_file": "July_Vol11_04_Article_Rosalia_Cox_Driggs.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Rosalia Cox Driggs",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "ROSALIA COX DRIGGS Rosalia Cox Driggs On Washington's birthday,",
+          "end_boundary": "saintly, self-sacrificing motherhood. EDITORIAL 339 In the very",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Pioneers Builded Better than they Knew",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "nature of the case, that people who put",
+          "end_boundary": "shall build better than they know.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "ROSALIA COX DRIGGS",
+        "EDITORIAL"
+      ],
+      "notes": "The file contains the biographical article about Rosalia Cox Driggs followed by an editorial section titled 'The Pioneers Builded Better than they Knew'. The editorial section appears to continue beyond what's shown in this file, as indicated by the incomplete ending.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12250,
+      "tier": 1,
+      "pdf_pages": [
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403
+      ],
+      "api_usage": {
+        "input_tokens": 38932,
+        "output_tokens": 351,
+        "cost": 0.1221
+      }
+    },
+    {
+      "source_file": "July_Vol11_11_Article_Relief_Society_Nurses.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Nurses",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY MAGAZINE poems I like best there are",
+          "end_boundary": "Prayer was offered by Sister Emma A. Empey.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman 1924",
+          "end_boundary": "and two great great grand-children. Wayne Stake In",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for September",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for September LESSON I Theology and",
+          "end_boundary": "changing mental attitudes. Teachers' Topic for September (Third",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Teachers' Topic for September",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Teachers' Topic for September (Third Week in",
+          "end_boundary": "displaying work at state and county fairs.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR SEPTEMBER",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains multiple distinct articles that were merged together. The first section appears to be continuing from a previous article about Oliver Wendell Holmes and includes Relief Society Nurses content. The boundaries are clear based on the table of contents and visual formatting changes in the text.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10523,
+      "tier": 1,
+      "pdf_pages": [
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445
+      ],
+      "api_usage": {
+        "input_tokens": 43299,
+        "output_tokens": 518,
+        "cost": 0.1377
+      }
+    },
+    {
+      "source_file": "July_Vol11_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman 1924",
+          "end_boundary": "Mrs, Heath was the mother of thirteen children,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for September",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for September LESSON I Theology and",
+          "end_boundary": "Tell me, therefore, which of them will love him most?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR SEPTEMBER"
+      ],
+      "notes": "Clear split between Notes from the Field (ending with Wayne Stake obituary) and Guide Lessons for September (starting with Lesson I on Theology and Testimony). The Guide Lessons section appears to be cut off mid-parable.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 15665,
+      "tier": 1,
+      "pdf_pages": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432
+      ],
+      "api_usage": {
+        "input_tokens": 42852,
+        "output_tokens": 438,
+        "cost": 0.1351
+      }
+    }
+  ]
+}

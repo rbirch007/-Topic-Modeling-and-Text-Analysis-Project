@@ -1,0 +1,37 @@
+{
+  "volume": 1,
+  "month": "August",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Aug_05_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Aug_06_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Aug_07_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Aug_08_Art_MI.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not article content"
+    },
+    {
+      "file": "V1_1914_Aug_10_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "volume": 4,
+  "month": "February",
+  "year": 1917,
+  "total_files_checked": 20,
+  "files_correct": [
+    "February_Vol4_01_Article_Things_Worth_While_Jessie_Sundwall.txt",
+    "February_Vol4_04_Article_Birth_Control.txt",
+    "February_Vol4_05_Article_Our_Lovely_Human_Heritage_President_Emmeline_B._Wells.txt",
+    "February_Vol4_09_Article_February_Entertainment_Morag.txt",
+    "February_Vol4_10_Article_Too_Busy_Mrs._Parley_Nelson.txt",
+    "February_Vol4_12_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "February_Vol4_13_Article_Memories_Marie_Jensen.txt",
+    "February_Vol4_15_Editorial_Editorial_The_Relief_Society_in_Its_Attitude_to_Dress_and_So.txt",
+    "February_Vol4_16a_Genealogy_Trade_Names_and_Surnames_from_Occupations.txt",
+    "February_Vol4_16b_Guide_Lessons_Literature_-_The_Song_or_Lyric.txt",
+    "February_Vol4_16c_Home_Science_Home_Economics_-_Bottle-fed_Babies.txt",
+    "February_Vol4_16d_Poem_Some_Day_Youll_Meet_-_Poem_and_Genealogical_Notice.txt"
+  ],
+  "corrections": [
+    {
+      "file": "February_Vol4_02_Frontispiece_Frontispiece_Francis_Marion_Lyman_President_Heber_J._Grant.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Birth Control article that should be in the next file",
+      "action": "trim_end",
+      "text": "Birth Control The articles on birth control printed in the July and August numbers of the Relief Society Magazine have attracted national attention to our Society and to the Magazine.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "February_Vol4_06_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Washington's Vision content that should be in separate file",
+      "action": "trim_end",
+      "text": "Washington's Vision. What the Father of His Country Saw of its Weal and Woe, More than a Century Ago. (Copied from an Old Newspaper.) The last time I ever saw Anthony Sherman was on the 4th of July, 1849, in Independence Square.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol4_07_Article_An_Incident_of_Faith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Washington's Vision content instead of An Incident of Faith",
+      "action": "replace_content",
+      "text": "A touching incident of the faith manifested by converts to the gospel and of the answer to prayer, is related by Sister M. Eirdie Langston, a widow, in a letter to President Joseph F. Smith. This sister speaks of her husband who recently died without having heard the gospel. His passing was peaceful and he bore testimony to his family shortly before his death, that all of the of his sons' churches should names were be man-made set down in the church, and book that none preferred This sister's sons, and she has several, have been trained in the right way, for they never use whiskey, tobacco, tea, coffee, nor bad language. Although none of them are at present converted, their faithful mother hopes that day is not far distant. The circumstance related by Sister Langston is as follows: For some reason, one of her sons hid her Book of Mormon and Doctrine and Covenants, and although she felt sure he had done it, he refused to tell anything about it. Some weeks after, the mother, while in fervent prayer, was inspired to get up from her bed and go at once to the hiding place of the books. She hastened to her sons to tell them she had found the books, but still they denied having hid them. Weeks later the son acknowledged that he had placed the books where they were, and that his mother had passed them many times without seeing them. This sister bore her testimony to her friends and a visiting minister, who tried to persuade her that she had been dreaming, but her son himself bore testimony to the fact and its miraculous accomplishment. , Our hearts go out in sympathy and love to our struggling sisters, and in our sheltered life in Zion we often wonder how they bear their trials and afflictions. May God bless Sister Langston. \"Life is real, life is earnest, And the grave is not its goal; Dn<=t thou art to dust returnest. Was not spoken of the soul.\"  Longfellow.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "February_Vol4_11a_Editorial_Editorial_The_Relief_Society_in_Its_Attitude_to_Dress_and_So.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with board member names instead of editorial content",
+      "action": "prepend",
+      "text": "EDITORIAL Entered as second-class matter at the Post Office, Salt Lake City, Utah. Motto  Charity Never Faileth. THE GENERAL BOARD Mbs. Eumeline B. Wells President Mm. Clarissa S. Willi and First Counselor Mrs. Julina L. Smith Second Counselor Mrs.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Bible_Lesson_Seeking_a_Wife_Rebecca.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains trade names content that should be in separate genealogy file",
+      "action": "trim_end",
+      "text": "LESSON II. Work and Business. Second Week in March. LESSON III. Genealogy and Literature. Third Week in March. TRADE NAMES.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Washington's Vision",
+      "expected_page": 84,
+      "status": "merged_with_another",
+      "merged_into": "February_Vol4_06_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt"
+    },
+    {
+      "title": "Current Topics James H. Anderson",
+      "expected_page": 99,
+      "status": "merged_with_another",
+      "merged_into": "February_Vol4_13_Article_Memories_Marie_Jensen.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding between articles. The Washington's Vision and An Incident of Faith articles need to be properly separated. Current Topics appears to be merged with Memories. The editorial file is missing its proper beginning. Overall extraction quality shows systematic issues with article boundaries.",
+  "validated_corrections": [
+    {
+      "file": "February_Vol4_06_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Washington's Vision content that should be in separate file",
+      "action": "trim_end",
+      "text": "Washington's Vision. What the Father of His Country Saw of its Weal and Woe, More than a Century Ago. (Copied from an Old Newspaper.) The last time I ever saw Anthony Sherman was on the 4th of July, 1849, in Independence Square.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol4_11a_Editorial_Editorial_The_Relief_Society_in_Its_Attitude_to_Dress_and_So.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with board member names instead of editorial content",
+      "action": "prepend",
+      "text": "EDITORIAL Entered as second-class matter at the Post Office, Salt Lake City, Utah. Motto  Charity Never Faileth. THE GENERAL BOARD Mbs. Eumeline B. Wells President Mm. Clarissa S. Willi and First Counselor Mrs. Julina L. Smith Second Counselor Mrs.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Bible_Lesson_Seeking_a_Wife_Rebecca.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains trade names content that should be in separate genealogy file",
+      "action": "trim_end",
+      "text": "LESSON II. Work and Business. Second Week in March. LESSON III. Genealogy and Literature. Third Week in March. TRADE NAMES.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "February_Vol4_02_Frontispiece_Frontispiece_Francis_Marion_Lyman_President_Heber_J._Grant.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Birth Control article that should be in the next file",
+      "action": "trim_end",
+      "text": "Birth Control The articles on birth control printed in the July and August numbers of the Relief Society Magazine have attracted national attention to our Society and to the Magazine.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

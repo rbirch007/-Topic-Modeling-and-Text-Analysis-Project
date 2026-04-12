@@ -1,0 +1,79 @@
+{
+  "volume": 14,
+  "month": "December",
+  "year": 1927,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1785,
+  "files": [
+    {
+      "source_file": "December_Vol14_13_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - The Dispensation of the Fulness of Times",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY LESSON I Theology and",
+          "end_boundary": "the event was the birth of a kingdom, etc.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "'Work and Business LESSON II WORK AND BUSINESS",
+          "end_boundary": "corner stone in the edifice of order,\"",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - Carl Sandburg",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR: FEBRUARY 623 LESSON III Literature",
+          "end_boundary": "realistic presentation of the life of our own time.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - The Child-Study Course",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in February)",
+          "end_boundary": "chief responsibility of parents. @ \\ - ictency--",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for February Guide Lessons, each covering a different week and subject area: Theology, Work/Business, Literature (Carl Sandburg), and Social Service (Child Study). The file ends with some advertising content that appears to be part of the magazine layout.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 27212,
+      "tier": 1,
+      "pdf_pages": [
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762
+      ],
+      "api_usage": {
+        "input_tokens": 56751,
+        "output_tokens": 547,
+        "cost": 0.1785
+      }
+    }
+  ]
+}

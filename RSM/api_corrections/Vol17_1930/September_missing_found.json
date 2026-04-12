@@ -1,0 +1,38 @@
+{
+  "volume": 17,
+  "month": "September",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 1,
+  "total_cost": 0.0302,
+  "stats": {
+    "found": 1,
+    "not_found": 0,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Book of Mormon. S. T. Brimhall-Foley",
+      "printed_page": 463,
+      "status": "found",
+      "complete_text": "The Book of Mormon\nBy S. T. Brimhall-Foley\n\nFlower from the hillside,\nSweet September rose,\nPlanted by prophets\nIn soil that they chose.\n\nSilent for ages,\nAt length to come forth\nAnd speak as by magic\nThrough tongues of the earth.\n\nRose of Columbia\nNo hand shall destroy,\nPlucked by an angel\nAnd read by a boy.\n\nFlower of a nation\nAnd light to a world,\nWith fragrance unceasing\nIts bright leaves unfold.\n\nThe plant of its fountain\nShall ever increase,\nBe guarded by angels\nTill earth rests in peace.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "S. T. Brimhall-Foley",
+      "confidence": "high",
+      "notes": "Found the complete poem on page 463. It's a 5-stanza poem about the Book of Mormon, using metaphors of flowers and roses to describe the sacred text.",
+      "api_usage": {
+        "input_tokens": 8416,
+        "output_tokens": 333,
+        "cost": 0.0302
+      },
+      "pdf_pages": [
+        467,
+        468,
+        469,
+        470
+      ]
+    }
+  ]
+}

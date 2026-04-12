@@ -1,0 +1,52 @@
+{
+  "volume": 55,
+  "month": "August",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_08_18_Poem_Loath_Cook.txt",
+      "issue_type": "missing_text",
+      "description": "Missing author name 'Cook' at the end of the poem",
+      "action": "append",
+      "text": "Cook",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 0% OCR coverage"
+    },
+    {
+      "file": "V55_08_25_Poem_Our_Welker.txt",
+      "issue_type": "bleed_start",
+      "description": "Article contains jam making and pancake recipe content before the poem. Should start with the poem title.",
+      "action": "trim_start",
+      "text": "CLOSE NEIGHBORS",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    },
+    {
+      "file": "V55_08_28_Poem_Swift_Perry.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains wrong content - has recipes and different poem from page 601 instead of Swift Shadows poem from page 602",
+      "action": "replace_content",
+      "text": "SWIFT SHADOWS\n\nI see the shadows on the sunny hill,\nPatterns that the drifting clouds have made,\nThey slide across each gentle rise and fill\nThe chasm's cup with pools of sudden shade.\nThey trace their path along the windy arc\nThat pours its freshness on the valley floor;\nAll this day the earth has borne a mark\nFor every bouyant thing the heavens wore.\nSummer splashes all we see with light,\nThen underlines this joy with blue and green,\nBalancing the darks with tones more bright,\nAn ever glad, and ever changing scene.\n\n—Lucille R. Perry",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 19% OCR coverage"
+    },
+    {
+      "file": "V55_08_34_Poem_Interval_Stanley.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains homemaking lesson content that should be removed, poem should end at author attribution",
+      "action": "trim_end",
+      "text": "Jennings »'",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    }
+  ]
+}

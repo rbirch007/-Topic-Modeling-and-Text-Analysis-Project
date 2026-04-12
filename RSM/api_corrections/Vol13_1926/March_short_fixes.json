@@ -1,0 +1,62 @@
+{
+  "volume": 13,
+  "month": "March",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0489,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 2,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "March_Vol13_10_Article_Joaquin_Miller_and_His_Grandson.txt",
+      "status": "delete",
+      "current_chars": 134,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a misextracted header fragment. The PDF pages show household tips, a poem about children, a Sunday School song contest, literary lessons, and priesthood convention notes, but no article about Joaquin Miller and his grandson. This is likely a header artifact that should be deleted.",
+      "api_usage": {
+        "input_tokens": 7272,
+        "output_tokens": 161,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "source_file": "March_Vol13_12_Article_Lake_Scene_on_the_Miller_Estate.txt",
+      "status": "delete",
+      "current_chars": 109,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a misextraction. The file contains only 'LAKE SCENE!' which seems to be a caption or header fragment. Looking at the table of contents, 'Lake Scene on the Miller Estate' is listed on page 133, but the provided PDF pages are 127-130, so the actual article is not visible in these images. The current file content appears to be just a caption or header artifact with no substantial article content.",
+      "api_usage": {
+        "input_tokens": 7260,
+        "output_tokens": 193,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

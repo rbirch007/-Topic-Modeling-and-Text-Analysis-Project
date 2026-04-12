@@ -1,0 +1,50 @@
+{
+  "volume": 7,
+  "month": "October",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.0493,
+  "files": [
+    {
+      "source_file": "October_Vol7_09_Editorial_Editorial—The_Deadly_Foes_of_the_Night.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial—The Deadly Foes of the Night",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL 593 is your side, or bowels, or",
+          "end_boundary": "rebuke your fears in Christ's name, and turn",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lesson Suggestions",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lesson Suggestions Lesson I. TESTIMONY AND GENEALOGY.",
+          "end_boundary": "clean food. Pork production is another matter in",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains an editorial piece about nighttime fears and anxieties followed by multiple guide lesson sections covering testimony/genealogy, Book of Mormon studies, literature (Tennyson), and social service/health topics. The guide lessons section contains multiple sub-lessons but they are all part of the same Guide Lesson Suggestions feature.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 57079,
+      "tier": 2,
+      "api_usage": {
+        "input_tokens": 14673,
+        "output_tokens": 354,
+        "cost": 0.0493
+      }
+    }
+  ]
+}

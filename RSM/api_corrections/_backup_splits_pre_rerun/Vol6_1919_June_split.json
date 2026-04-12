@@ -1,0 +1,239 @@
+{
+  "volume": 6,
+  "month": "June",
+  "year": 1919,
+  "total_merged": 7,
+  "total_splits": 10,
+  "total_cost": 1.6415,
+  "files": [
+    {
+      "source_file": "June_Vol6_02_In_Memory_of_the_Martyrdom.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Rambling Reminiscences of Margaret Gay Judd Clawson",
+          "category": "Article",
+          "author": "Margaret Gay Judd Clawson",
+          "start_boundary": "MARTYRDOM OCCURRED. What did she care for",
+          "end_boundary": "every one at the same instant. {To be continued.)",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MARGARET GAY JUDD CLAW SON"
+      ],
+      "notes": "This file appears to be a continuation of Margaret Gay Judd Clawson's reminiscences from a previous issue. The text begins mid-sentence and ends with 'To be continued', indicating this is part of a serialized autobiography. The content covers her journey west with her family, including experiences on the plains, encounters with other travelers, and a cattle stampede. There are also some historical photographs of Carthage Jail and other locations mentioned in the narrative.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11109,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76273,
+        "output_tokens": 304,
+        "cost": 0.2334
+      }
+    },
+    {
+      "source_file": "June_Vol6_05_Rambling_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Rambling Reminiscences of Margaret Gay Judd Clawson",
+          "category": "Article",
+          "author": "Margaret Gay Judd Clawson",
+          "start_boundary": "Rambling Reminiscencesof Marga ret Gay Judd Clawson. (Continued from",
+          "end_boundary": "ROOM IN CARTHAGE JAIL WHERE THE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MARGARET GAY JUDD CLAW SON"
+      ],
+      "notes": "This file contains a single continuing article from Margaret Gay Judd Clawson's reminiscences. The article appears to be a continuation from a previous issue (page 262) and ends mid-sentence with an image caption about Carthage Jail. The file includes running headers with page numbers (318, 319, 320, 321, 322) that should be stripped during processing.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 12155,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76597,
+        "output_tokens": 315,
+        "cost": 0.2345
+      }
+    },
+    {
+      "source_file": "June_Vol6_07_The_Paymaster_Lucy_S._Burnham.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Paymaster",
+          "category": "Article",
+          "author": "Lucy S. Burnham",
+          "start_boundary": "The Paymaster Lucy S. Burnham",
+          "end_boundary": "shall some day be paid in full.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE PAYMASTER",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single complete story/article titled 'The Paymaster' by Lucy S. Burnham. The story appears to be complete from beginning to end with no other articles merged in.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 15366,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 77544,
+        "output_tokens": 220,
+        "cost": 0.2359
+      }
+    },
+    {
+      "source_file": "June_Vol6_10_History_of_Instrumental_Music_Brigham_Cecil_Gates_33,5.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "History of Instrumental Music",
+          "category": "Article",
+          "author": "Brigham Cecil Gates",
+          "start_boundary": "History of Instrumental Music. Brigham Cecil Gates. Instrumental",
+          "end_boundary": "such ballads as: \"Smiles,\" \"I'll say she does,\" and \"Wee, wee, Marie.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HISTORY OF INSTRUMENTAL MUSIC"
+      ],
+      "notes": "This file contains a single complete article on the history of instrumental music and its application to church and Relief Society service. The article includes both historical information about musical instruments and practical guidance for choir leaders.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 13116,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76641,
+        "output_tokens": 255,
+        "cost": 0.2337
+      }
+    },
+    {
+      "source_file": "June_Vol6_13_The_House_of_Gifts_Clara_S._Fagergren.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The House of Gifts",
+          "category": "Article",
+          "author": "Clara S. Fagergren",
+          "start_boundary": "The House of Gifts Clara S. Fagergren",
+          "end_boundary": "then you will be sure to be suited.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Our Temple Mothers",
+          "category": "Poem",
+          "author": "James Kirkham, Sr.",
+          "start_boundary": "Our Temple Mothers. By James Kirkham, Sr.",
+          "end_boundary": "Crowned with immortality.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE HOUSE OE GIETS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two distinct articles: a story about birthday gifts in a family, and a poem about temple mothers. The story takes up the majority of the content, while the poem is brief and appears at the end.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14017,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76860,
+        "output_tokens": 326,
+        "cost": 0.2355
+      }
+    },
+    {
+      "source_file": "June_Vol6_15_The_Official_Round_Table.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "The Official Round Table ======================================================================",
+          "end_boundary": "Number of napkins 16,220",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Construction and Reconstruction in the Home",
+          "category": "Home_Science",
+          "author": null,
+          "start_boundary": "Construction ^no Weconstwction in TheHome.. The Plain Tailored Skirt.",
+          "end_boundary": "allowing about six inches extra for curving at the top",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE OFFICIAL ROUND TABLE",
+        "CONSTRUCTION IN THE HOME"
+      ],
+      "notes": "File contains two distinct articles - The Official Round Table with field notes and statistics, followed by Construction and Reconstruction in the Home focusing on tailored skirt making. The second article appears to be cut off mid-sentence at the end of the file.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11130,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76573,
+        "output_tokens": 332,
+        "cost": 0.2347
+      }
+    },
+    {
+      "source_file": "June_Vol6_17_On_the_Watch_Tower.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "On the Watch Tower",
+          "category": "Current_Topics",
+          "author": null,
+          "start_boundary": "On the Watch Tower ====================================================================== Watch Tower Yokohama, Japan, had",
+          "end_boundary": "whole batch of the male soviet propaganda !",
+          "confidence": "high",
+          "end_match_words": 7
+        },
+        {
+          "order": "b",
+          "title": "Editorial: Reconstruction",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL Entered as second-class matter at the Post Office",
+          "end_boundary": "plan under heaven by which men can be saved.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "ON THE WATCH TOWER"
+      ],
+      "notes": "This file contains two distinct articles: 'On the Watch Tower' (a current events summary) and 'Editorial: Reconstruction' (an editorial piece). The file includes the Relief Society Magazine masthead and board information between the articles, which should be stripped as running header content.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11835,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 76311,
+        "output_tokens": 326,
+        "cost": 0.2338
+      }
+    }
+  ]
+}

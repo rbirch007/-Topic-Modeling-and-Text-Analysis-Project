@@ -1,0 +1,198 @@
+{
+  "volume": 57,
+  "month": "October",
+  "year": 1970,
+  "total_files_checked": 36,
+  "files_correct": [
+    "V57_10_01_Poem_October_Kay.txt",
+    "V57_10_09_Poem_Happy_Sabin.txt",
+    "V57_10_10_GenFt_Notice_Subscribers.txt",
+    "V57_10_13_Fict_Snow_Hansen.txt",
+    "V57_10_14_Poem_Housecleaning_Blai.txt",
+    "V57_10_18_GenFt_A_Walk_Woolley.txt",
+    "V57_10_19_Poem_Hearts_Brown.txt",
+    "V57_10_20_GenFt_Hobby_Richins.txt",
+    "V57_10_31_GenFt_Visiting.txt",
+    "V57_10_32_Poem_Life_Office.txt",
+    "V57_10_33_GenFt_Homemaking.txt",
+    "V57_10_34_GenFt_Social_Too.txt",
+    "V57_10_35_GenFt_Cultural_Church.txt",
+    "V57_10_36_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_10_02_SpFt_Church_Rules.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from 'Be a Professional Homemaker' article instead of Church Magazine Conversion Rules",
+      "action": "replace_content",
+      "text": "Church Magazine Conversion Rules\nThe following are rules the Church Magazine Office is using to apply The Era,\nInstructor, and Relief Society credits toward the Adult Magazine.\nThe subscriber's name and address as it appears on The Era file will be used\nfor the Adult Magazine. The Era file is being used as the base for the Adult file.\nThe months remaining on an Instructor subscription and a Relief Society Magazine\nsubscription will be added to The Era subscription.\nThe number of Adult Magazines a subscriber receives will be determined by\nthe number of Eras being received. If a person is not receiving an Era, the number\nof Adult Magazines he receives will be determined by the number of Instructors\nbeing received. If a person is not receiving The Era or Instructor, the number of\nAdult Magazines he receives will be determined by the number of Relief Society\nMagazines being received. In the case of institutional subscribers such as seminaries,\ninstitutes, and ward libraries, the number of Adult Magazines they will receive\nwill be determined by the largest number they are receiving of either The Era or\nThe Instructor.\nSamples of typical situations encountered in the combining of Era and Relief\nSociety subscriptions are printed on the following pages. The rule being followed\nin each case is stipulated. While it is realized on occasion these may not be the\nactions subscribers desire, rules have to be adopted that would seem to apply in most\ncases. Where a particular example fits your situation and the action taken isn't what\nis desired, write and tell the Church Magazine Office at 79 South State Street, Salt\nLake City, Utah 84111, and they will attempt to follow your wishes.\n1. If the complete name and address are exactly the same on the Relief Society Magazine\nand Era list, the remaining months of the Relief Society Magazine beyond\nDecember will be added to The Era.\nSAMPLE\nEra Subscription List Relief Society Magazine Subscription List\n84302HUME-216E017 0CT71\nOLIVE A HUME\n216 E 3RD S\nBRIGHAM CITY UT 84302\n722\nMRS. OLIVE A HUME\n216 E 3RD S\nBRIGHAM CITY UTAH 84302 JAN72\nBRIG C-B C 17",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_10_03_SpFt_Be_a_Bradshaw.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Be a PROFESSIONAL Homemaker, My Daughter\nLillian Y. Bradshaw\n\nTaking you back to school the other night, sweet daughter nearly twenty, we talked of school and working and future plans of marriage. You said, \"But, Mom, I lke to work. I like the excitement of it.\" I heard the echo of my own voice just that many years ago as I said to your father, \"But honey, I want the challenge working outside the house would give me. I would feel like I'm doing something. I want to be someone, not just lost in diapers and dishes and scrubbing floors.\" And then I had bitterly added, \"Anyone can do that!\" I felt again a warm breeze blow a wisp of hair across my face as your father left for work that morning. Diaper and another diaper and another diaper blew in the Hawaiian breeze and tears streamed down my cheek. Thumb tackedthat's just how I feltthumb tacked to my home! Everytime I wanted to go out I had to weigh the cost of baby sitting, if I could find a baby sitter, against the food budget or think of little hands tugging at my skirts and crying to go home while I shopped just for the necessities. Resentment, acrid and hurting, choked all the beauty of my island home from my heart and mind and I longed to be free to go to work again. I had known the important feeling of being a head dietitian at one of the hospitals before I was married. I knew the feel of money of my own jingling in my pocketsto be free like my husband, talking with new vital people everyday. Just the luxury of talking real talk would seem like heaven and having luncheons. Which didn't have to be accounted for out of the family food budget! Like the diapers whipping vigorously, the harder my mind wrestled and twisted and thrashed as thoughts breezed through, the more I felt helplessly pinned. It was the treadmill of everyday blending into the last and so it seemed it would be forever! Emotionally spent and hurting all over with \"outside-itis,\" out of the clear bluetoo audibly to denycame the thought quiet and pleading, '\"\"Have you forgotten? Have you forgotten so soon?\" Somersaulting one upon the other came thoughts of the prayers I once asked to find just the right man for me, then the prayer for a temple marriage, and then prayers that followed later that a healthy child, then another and another be born. Then sobbing in humility for all I had forgotten, I determined from that momentif I could not go out to find the business worldI would make our home my business and bring all I had learned into my home. I would find the excitement there. And if I couldn't find it I would create it. The same thought would go into running our home eflficiently as if I were still in the business world. I realized for the first time that my home held all the possibilities of achievement I could hope to find outside in any field.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_10_04_Poem_The_Shomaker.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Song Contest content instead of poem",
+      "action": "replace_content",
+      "text": "The Maturity of Seed\nMargaret B. Shomaker\n\nYes, the maturity\nOf seed\nGlories with ripeness\nWith truththe Poet's goal",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_10_05_Poem_Why_Jorgensen.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Song Contest content instead of poem",
+      "action": "replace_content",
+      "text": "Why Poetry?\nMargaret B. Jorgensen\n\nThe flame of Phlox\nAnd the molten color\nOf the Virginia creeper\nBrighten my cottage door\nEnough to speak\nOur thought\nOr read another's as our own?\nTo soar with music,\nLeap in dance,\nWeep with prose,\nExult in drama?\nWhy, then the poet?\nHis to magnify a sunbeam\nTill its focus burns into a soul,\nSetting it afire\nWith truththe Poet's goal",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_10_06_Poem_Respite.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Song Contest content instead of poem",
+      "action": "note",
+      "text": "OCR gap - poem text not clearly visible in source",
+      "confidence": "low",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_10_11_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Editorial article at the end",
+      "action": "trim_end",
+      "text": "Virginia Tanner, Utah's instructor of dancing, has been internationally acclaimed for her beautiful programs presented with creative children. She will now direct a pilot children's dance program sponsored by the National Endowments of the Arts. It will be conducted in four-week seminars in five United States school districts: in Pennsylvania, Alabama, Ohio, Oregon, and California. June Arey is director of dance in the National Endowments of the Arts.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_10_15_GenFt_Cooking_Clark.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-recipe without proper beginning",
+      "action": "prepend",
+      "text": "Cooking With Peanut Butter\nJulia Read Clark\n\nPEANUT BUTTER PIE\nServe 8 Serve 100\neggs 2 2 doz.\nCorn syrup lec. 3 qt.\nSugar lec. 3 at.\nPeanut butter YC, 6 c.\nVanilla 1 tsp. 2 tbsp.\nUnbaked 8-inch pie crust 1 12 or 13\nBeat eggs. Mix eggs, corn syrup, sugar, peanut butter, and vanilla together. Pour into unbaked pie crust. Bake at 350° (moderate oven) 45 to 60 minutes, until top is brown and crisp. This tastes like an old-fashioned molasses pie.\n\nPEANUT BUTTER COOKIES\nYield 4 to 5 Dozen Yield 200\n1 c. Fat 4c.\n1 c. Peanut butter 4c.\n2 c. Sugar, one white and one brown 4c.\n2 eggs 8\n22 c. Flour 3 qts.\n14 tsp. Salt 1 tbsp.\nTsp. Soda 2 tsp.\nMix fat a",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_10_22_Poem_October_Oswald.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Late Word poem",
+      "action": "trim_end",
+      "text": "OCTOBER 2ist\nEyes blue, tears of pain,\nhair none, years come,\nautumn day, years wane.\nGolden sun. Loved and fed\nCrisp air, then wed.\nLeaves falling, It's nice to ''be.''\nmother sewing, Thanks, Mom\ndaughter growing. For having me.\nLaughing joy, Marilyn M. Oswald",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_10_23_Poem_Late_Roberts.txt",
+      "issue_type": "bleed_start",
+      "description": "File missing author name at end",
+      "action": "append",
+      "text": "Roberts",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V57_10_26_Poem_Hope_Cutler.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Secret of Blueberry Hill",
+      "action": "trim_end",
+      "text": "HOPE\nSnow, deep snow everywhere,\nBut high on a limb, a robin's there.\nGrayce E. Cutler",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_10_28_Poem_North.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains fiction content instead of being a poem file",
+      "action": "note",
+      "text": "This appears to be misnamed - contains fiction content from The Secret of Blueberry Hill, not a poem",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 722,
+      "status": "merged_with_another",
+      "merged_into": "V57_10_11_GenFt_Womans_Cannon.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues, particularly poems that contain content from other articles. The OCR quality makes it difficult to extract clean poem text in some cases. The Church Magazine Conversion Rules article appears to have been completely replaced with content from another article.",
+  "validated_corrections": [
+    {
+      "file": "V57_10_03_SpFt_Be_a_Bradshaw.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Be a PROFESSIONAL Homemaker, My Daughter\nLillian Y. Bradshaw\n\nTaking you back to school the other night, sweet daughter nearly twenty, we talked of school and working and future plans of marriage. You said, \"But, Mom, I lke to work. I like the excitement of it.\" I heard the echo of my own voice just that many years ago as I said to your father, \"But honey, I want the challenge working outside the house would give me. I would feel like I'm doing something. I want to be someone, not just lost in diapers and dishes and scrubbing floors.\" And then I had bitterly added, \"Anyone can do that!\" I felt again a warm breeze blow a wisp of hair across my face as your father left for work that morning. Diaper and another diaper and another diaper blew in the Hawaiian breeze and tears streamed down my cheek. Thumb tackedthat's just how I feltthumb tacked to my home! Everytime I wanted to go out I had to weigh the cost of baby sitting, if I could find a baby sitter, against the food budget or think of little hands tugging at my skirts and crying to go home while I shopped just for the necessities. Resentment, acrid and hurting, choked all the beauty of my island home from my heart and mind and I longed to be free to go to work again. I had known the important feeling of being a head dietitian at one of the hospitals before I was married. I knew the feel of money of my own jingling in my pocketsto be free like my husband, talking with new vital people everyday. Just the luxury of talking real talk would seem like heaven and having luncheons. Which didn't have to be accounted for out of the family food budget! Like the diapers whipping vigorously, the harder my mind wrestled and twisted and thrashed as thoughts breezed through, the more I felt helplessly pinned. It was the treadmill of everyday blending into the last and so it seemed it would be forever! Emotionally spent and hurting all over with \"outside-itis,\" out of the clear bluetoo audibly to denycame the thought quiet and pleading, '\"\"Have you forgotten? Have you forgotten so soon?\" Somersaulting one upon the other came thoughts of the prayers I once asked to find just the right man for me, then the prayer for a temple marriage, and then prayers that followed later that a healthy child, then another and another be born. Then sobbing in humility for all I had forgotten, I determined from that momentif I could not go out to find the business worldI would make our home my business and bring all I had learned into my home. I would find the excitement there. And if I couldn't find it I would create it. The same thought would go into running our home eflficiently as if I were still in the business world. I realized for the first time that my home held all the possibilities of achievement I could hope to find outside in any field.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_10_11_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Editorial article at the end",
+      "action": "trim_end",
+      "text": "Virginia Tanner, Utah's instructor of dancing, has been internationally acclaimed for her beautiful programs presented with creative children. She will now direct a pilot children's dance program sponsored by the National Endowments of the Arts. It will be conducted in four-week seminars in five United States school districts: in Pennsylvania, Alabama, Ohio, Oregon, and California. June Arey is director of dance in the National Endowments of the Arts.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_10_15_GenFt_Cooking_Clark.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-recipe without proper beginning",
+      "action": "prepend",
+      "text": "Cooking With Peanut Butter\nJulia Read Clark\n\nPEANUT BUTTER PIE\nServe 8 Serve 100\neggs 2 2 doz.\nCorn syrup lec. 3 qt.\nSugar lec. 3 at.\nPeanut butter YC, 6 c.\nVanilla 1 tsp. 2 tbsp.\nUnbaked 8-inch pie crust 1 12 or 13\nBeat eggs. Mix eggs, corn syrup, sugar, peanut butter, and vanilla together. Pour into unbaked pie crust. Bake at 350° (moderate oven) 45 to 60 minutes, until top is brown and crisp. This tastes like an old-fashioned molasses pie.\n\nPEANUT BUTTER COOKIES\nYield 4 to 5 Dozen Yield 200\n1 c. Fat 4c.\n1 c. Peanut butter 4c.\n2 c. Sugar, one white and one brown 4c.\n2 eggs 8\n22 c. Flour 3 qts.\n14 tsp. Salt 1 tbsp.\nTsp. Soda 2 tsp.\nMix fat a",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_10_22_Poem_October_Oswald.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Late Word poem",
+      "action": "trim_end",
+      "text": "OCTOBER 2ist\nEyes blue, tears of pain,\nhair none, years come,\nautumn day, years wane.\nGolden sun. Loved and fed\nCrisp air, then wed.\nLeaves falling, It's nice to ''be.''\nmother sewing, Thanks, Mom\ndaughter growing. For having me.\nLaughing joy, Marilyn M. Oswald",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_10_23_Poem_Late_Roberts.txt",
+      "issue_type": "bleed_start",
+      "description": "File missing author name at end",
+      "action": "append",
+      "text": "Roberts",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V57_10_26_Poem_Hope_Cutler.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Secret of Blueberry Hill",
+      "action": "trim_end",
+      "text": "HOPE\nSnow, deep snow everywhere,\nBut high on a limb, a robin's there.\nGrayce E. Cutler",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

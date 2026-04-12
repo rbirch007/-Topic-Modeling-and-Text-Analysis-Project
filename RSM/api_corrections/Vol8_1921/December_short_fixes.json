@@ -1,0 +1,40 @@
+{
+  "volume": 8,
+  "month": "December",
+  "year": 1921,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0208,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol8_05b_Guide_Lessons_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 54,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (37-40) contain 'Notes from the Field' content about Relief Society activities, reorganizations, and memorials. No Guide Lessons content for February or 'Work and Business' lesson is visible in these pages. The file appears to reference content from a different section of the magazine not shown in the provided PDF images.",
+      "api_usage": {
+        "input_tokens": 6055,
+        "output_tokens": 175,
+        "cost": 0.0208
+      },
+      "pdf_pages": [
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "volume": 17,
+  "month": "June",
+  "year": 1930,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.2705,
+  "files": [
+    {
+      "source_file": "June_Vol17_01_Article_Department_Meeting_Afternoon_Session.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Department Meetings (Afternoon Session) - Secretaries' Department",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Department Meetings (Afternoon Session) Secretaries' Department ES meeting convened",
+          "end_boundary": "which was most practical and interesting.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Educational Department - Adult Training and the Larger Life",
+          "category": "Article",
+          "author": "Dr. L. John Nuttall",
+          "start_boundary": "Educational Department ASSEMBLY HALL on the Temple Block",
+          "end_boundary": "adult interests and study habits.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Theological Department",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Theological Department Tr large department meeting was held",
+          "end_boundary": "furnished the outline.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literary Department - The Short Story",
+          "category": "Article",
+          "author": "Jennie B. Knight",
+          "start_boundary": "Literary Department THE Literary Department Meeting was held",
+          "end_boundary": "Think of books in terms of personality.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Social Service Class Leaders' Department - Psychology and Personal Development",
+          "category": "Article",
+          "author": "Professor M. Wilford Poulson",
+          "start_boundary": "Social Service Class Leaders' Department THIS meeting was so",
+          "end_boundary": "hold us back.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Social Service Case-Work Department and Work and Business Department",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Social Service Case-Work Department SOCIAL Service Case Work,",
+          "end_boundary": "keep every member of the organization interested,",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains multiple department meeting reports from the Relief Society Conference afternoon session. Each department meeting is a distinct article covering different topics and speakers. The Literary Department section includes a substantial presentation on short stories by Jennie B. Knight.",
+      "validation_issues": [
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34940,
+      "tier": 1,
+      "pdf_pages": [
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366
+      ],
+      "api_usage": {
+        "input_tokens": 66233,
+        "output_tokens": 695,
+        "cost": 0.2091
+      }
+    },
+    {
+      "source_file": "June_Vol17_06_Article_General_Session_Saturday_Morning.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "General Session, Saturday Morning",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Relief Society Conference General Session, Saturday Morning PRESIDENT",
+          "end_boundary": "sprinkled with fresh straw upon the dirt floor, and received",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This appears to be a single conference session report containing multiple speakers' presentations. The CONTENTS listing shows this as one entry 'General Session, Saturday Morning 311', and the text flows continuously as one conference session with multiple speakers (President Louise Y. Robison, Mrs. Julia A. F. Lund, Mrs. Lalene H. Hart, etc.). The text ends mid-sentence, suggesting it continues in the next file.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 57856,
+      "tier": 2,
+      "pdf_pages": [
+        395,
+        396,
+        397
+      ],
+      "api_usage": {
+        "input_tokens": 19118,
+        "output_tokens": 270,
+        "cost": 0.0614
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "volume": 2,
+  "month": "April",
+  "year": 1915,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.0859,
+  "files": [
+    {
+      "source_file": "April_Vol2_10_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Theology and Testimony (Baptism)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 201 his subjects, or his fellow",
+          "end_boundary": "Ready References, and Talmage's Articles of Faith.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Genealogy (Family Group Forum)",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "Genealogy. Third Week. Lesson III ? Family Group",
+          "end_boundary": "will be taken up in future lessons.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons - Home Ethics (Truth)",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. ETHICS. Lesson IV",
+          "end_boundary": "Say What is Truth,\" etc. ? John Jaques.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons - Art (Devotees and Their Shrines)",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART. \"Man is that he might have",
+          "end_boundary": "beautiful homes and gardens near you?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSOXS"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Guide Lessons: Theology/Baptism, Genealogy/Family Group Forum, Home Ethics/Truth, and Art/Devotees and Their Shrines. Each represents a different subject area with clear topic boundaries and distinct content focus.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10782,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 25924,
+        "output_tokens": 543,
+        "cost": 0.0859
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "volume": 54,
+  "month": "November",
+  "year": 1967,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V54_11_01_Fict_Throw.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "The article file contains the wrong content. The filename suggests it should be 'Throw Down the Gauntlet—Chapter' but the content is 'Unwelcome Caller' by Nancy M. Armstrong, plus additional unrelated content including 'Love's Magic', 'Sandwich Surprises', and an article about Agnes Kunz Dansie. The page images show 'Unwelcome Caller' continuing from a previous page and 'Love's Magic' poem, but no content related to 'Throw Down the Gauntlet'.",
+      "action": "note",
+      "text": "File needs complete re-extraction. The filename indicates this should contain 'Throw Down the Gauntlet—Chapter' content, but the actual content is multiple different articles starting with 'Unwelcome Caller'. This appears to be a mislabeled or mismatched file.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V54_11_09_SpFt_Security_Sharp.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "The article file contains content from a different article. The page shows 'The Heart and Willing Mind' by Counselor Louise W. Madsen, not 'Security Amid Change' by Marianne C. Sharp.",
+      "action": "replace_content",
+      "text": "[Vol54 | November 1967 | Page 813 | Special Feature | The Heart and Willing Mind | Counselor Louise W. Madsen]\n[The Heart and Willing Mind Counselor Louise W. Madsen]\n\n[Address Delivered at the General Session of the Relief Society Annual General Conference September 27, 1967]\n\n• Two things the Lord requires if one is to obtain the fullness of his blessings. \"Behold, the Lord requireth the heart and a willing mind\" (D&C 64:34).\n\nThe heart, according to the understanding received from studying the words of Christ, his prophets and apostles, is the repository of that which is good, the storehouse of those thoughts which bring the deepest meditation. Those things which are heard but not fully understood are stored in the heart to ponder, as did Mary. When the events leading to the birth of the Son were unfolded she \"pondered them in her heart\" (Luke 2:19).\n\nThe pure heart is the dwelling place of the Holy Ghost. \"Yea, behold, I will tell you in your mind and in your heart, by the Holy Ghost, which shall come upon you and which shall dwell in your heart\" (D&C 8:2). This is the promise given to those who ask in faith, with an honest heart, believing that knowledge will be received.\n\nThe heart is not only a repository and a storehouse but it is a motive power. \"With my whole heart I have sought thee; O let me not wander from thy commandments,\" the Psalmist sings (Psalms 119:10). Love, which is described as the greatest thing in the world, the basis of the first and greatest commandment, is centered in the heart. \"I have you in my heart\" (Phil. 1:7), Paul writes to his beloved people, the Philippians. Compassion, the desire to express love by serving others, springs from the heart. The heart rejoices in righteousness or is saddened by unrighteousness. It is the heart which",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

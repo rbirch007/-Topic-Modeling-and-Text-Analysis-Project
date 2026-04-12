@@ -1,0 +1,51 @@
+{
+  "volume": 7,
+  "month": "July",
+  "year": 1920,
+  "total_files_checked": 11,
+  "files_correct": [
+    "July_Vol7_03_Article_Traditions_and_Customs_of_the_Navajo_Indians_Lucy_Gayman_Blo.txt",
+    "July_Vol7_04_Article_Beyond_Arsareth_Nephi_Anderson.txt",
+    "July_Vol7_05_Article_Hydrotherapy_Victoria_B._Christenson.txt",
+    "July_Vol7_06_Article_Blind_Authority_Ida_Smoot_Dusenberry.txt",
+    "July_Vol7_07_Article_A_Daughter_to_Love_Ruth_Moench_Bell.txt",
+    "July_Vol7_08_Article_On_the_Watchtower_James_H._Anderson.txt",
+    "July_Vol7_09_Article_The_Official_Round_Table.txt",
+    "July_Vol7_10_Editorial_Editorial.txt",
+    "July_Vol7_11_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol7_01_Article_My_Son_Jane_Howard.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the wrong article - it has the L.D.S. Relief Society Class for Training Nurses' Aids content instead of the poem 'My Son' by Jane Howard",
+      "action": "replace_content",
+      "text": "MY SON. Jane Harvard. My son, I cannot think of thee As lying dead beneath the sod. Thy spirit Hives, thou journeys far Into the paradise of God. My son, I can but think of thee As happy, pure, and undefiled. As in that better place thou art, Because of this, I'm reconciled. My son, I want to live, that when My life has past mortality, By faith and with good works, I'll come To paradise and dwell with thee. Praise God, the Father and the Son, That by and through his holy grace, We live for all eternity — If faithful, see him face to face.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "July_Vol7_02_Article_L._D._S._Relief_Society_Class_for_Training_Nurses'_Aids_Mrs..txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence and is missing the beginning of the article",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. VII July, 1920 No. 7 L. D. S. Relief Society Class For Training Nurses' Aids. Mrs. Susa Young Gates The General Board of the Relief Society are happy to present to the members of the organization the new plan for training nurses' aids and for distributing the needed help, which will come from their services, all over this intermountain country. Our course for nurses' aids must not in any way be confused with the regular three-year hospital course of training, which is required by law for a nurse who wishes to become a graduate registered nurse. This course for nurses' aids is a continuation of the Relief Society School of Obstetrics and Nursing. The General Board has realized from the beginning that the Relief Society Nurse Class, in the past, has been greatly handicapped because of lack of opportunity to give the students practical experience in bedside nursing, under supervision. The present plan is a realization of the finest hope of the General Board. The general authorities of the Church, with the authorities of the hospital, are to be congratulated for their willingness to permit this innovation in hospital procedure. We know of no other hospital in the United States, which provides for a one-year course for the training of practical nurses, or nurses' aids. It is realized throughout the country that it is absolutely necessary to arrange for the training of nurses' aids, in order that people of moderate means may have nursing service;  but so far as we know, outside of a few courses for nurses' aids given by some of our hospitals during the war, the",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issue is that the first file contains the wrong article content entirely - it has the nurses' aids article instead of the poem 'My Son'. The second file is missing its beginning and starts mid-sentence. All other files appear to be correctly extracted with proper boundaries.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol7_02_Article_L._D._S._Relief_Society_Class_for_Training_Nurses'_Aids_Mrs..txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence and is missing the beginning of the article",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. VII July, 1920 No. 7 L. D. S. Relief Society Class For Training Nurses' Aids. Mrs. Susa Young Gates The General Board of the Relief Society are happy to present to the members of the organization the new plan for training nurses' aids and for distributing the needed help, which will come from their services, all over this intermountain country. Our course for nurses' aids must not in any way be confused with the regular three-year hospital course of training, which is required by law for a nurse who wishes to become a graduate registered nurse. This course for nurses' aids is a continuation of the Relief Society School of Obstetrics and Nursing. The General Board has realized from the beginning that the Relief Society Nurse Class, in the past, has been greatly handicapped because of lack of opportunity to give the students practical experience in bedside nursing, under supervision. The present plan is a realization of the finest hope of the General Board. The general authorities of the Church, with the authorities of the hospital, are to be congratulated for their willingness to permit this innovation in hospital procedure. We know of no other hospital in the United States, which provides for a one-year course for the training of practical nurses, or nurses' aids. It is realized throughout the country that it is absolutely necessary to arrange for the training of nurses' aids, in order that people of moderate means may have nursing service;  but so far as we know, outside of a few courses for nurses' aids given by some of our hospitals during the war, the",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

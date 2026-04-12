@@ -1,0 +1,59 @@
+{
+  "volume": 3,
+  "month": "August",
+  "year": 1916,
+  "total_files_checked": 12,
+  "files_correct": [
+    "August_Vol3_02_Article_Mary_Ann_Frost_Stearns_Pratt.txt",
+    "August_Vol3_03_Article_Birth-Control.txt",
+    "August_Vol3_04_Article_Mother_Takes_Advice_Diana_Parrish.txt",
+    "August_Vol3_05_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+    "August_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+    "August_Vol3_07_Article_Crochet_Nut_Basket_Isabel_W._Sears.txt",
+    "August_Vol3_10_Editorial_Editorial_Will_Conquering.txt",
+    "August_Vol3_11a_Poem_The_Toilers.txt",
+    "August_Vol3_11b_Guide_Lessons_Guide_Lessons.txt",
+    "August_Vol3_12_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "August_Vol3_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Current Topics section that should be in separate file",
+      "action": "trim_end",
+      "text": "Current Topics. James H. Anderson. A German submarine has crossed the Atlantic Ocean to the United States — this being the greatest feat on record thus far for an undersea boat.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol3_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only magazine header text instead of Current Topics article content",
+      "action": "replace_content",
+      "text": "Current Topics. James H. Anderson. A German submarine has crossed the Atlantic Ocean to the United States — this being the greatest feat on record thus far for an undersea boat. Murray City, seven miles south of Salt Lake City, has again voted to exclude the saloon — this time by a larger majority than heretofore. It is notable that the women voters were the chief contributors to this result. V. Carranza, whom the American policy placed at the head of the Mexican republic, by reason of favors shown his cause, turned and plunged the United States into practically a state of war with Mexico — a not altogether unexpected culmination of events. The bomb which exploded in an Oregon Short Line mail car at Butte, Montana, and which was asserted by some to have been intended for the governor of Utah, is now shown to have not been intended for Utah at all, but for a station in Idaho. O. N. Hilton, the Denver lawyer who abused the Utah courts and people because the murderer Hillstrom was convicted and executed, has been disbarred from practicing law in Utah. By his actions and language, long since, Hilton barred himself from being listed as a gentleman. Archaeology in Utah is receiving special attention from the State University, through an expedition headed by Prof. L. E. Young. Southeastern Utah doubtless will contribute its share of archaeology testimony to the fact that the New World, after all, is practically as old in its civilization as is the eastern hemisphere. The Old Folks of northern Utah had one of the most enjoyable of Old Folks' Day observances in June this year, the assemblage at the Temple Block in Salt Lake City comprising nearly 5,000 people over 70 years of age. Presidential nominations for the two great political parties in the United States have resulted in the choice of Charles E. Hughes of New York by the Republicans and the re-nomination of Woodrow Wilson of New Jersey by the Democrats. The political contest promises to be hard and close. Courtesy in public officials is not altogether eliminated from among the things the people demand and expect, as shown in the fact that a deputy auditor in Salt Lake County was required by the board of county commissioners to apologize to a young woman to whom he had been needlessly discourteous. Equal suffrage for women has made a notable gain in receiving favorable mention in the great national political conventions in the United States. The woman suffragists seem better satisfied with the Republican than with the Democratic pronouncement, but as to the cause itself in which they are interested there is in each of them a great stride forward. Earl H. H. Kitchener, England's great soldier, was drowned in the sinking of the warship Hampshire, which struck a mine off the British coast. Much of England's success in army organization during the present war is due to Kitchener's skill and energy; and he was about the only one of the great military leaders who foresaw that the war would be a long one on the first day of the outbreak he estimated that it would last three years. The Mexican situation has grown so much worse recently through attacks of Mexican troops on parts of the American punitive expedition which started into Mexico after the bandit Villa, that the national guard of the various States, aggregating about 150,000 men, has been called into active service by President Wilson. The first contingent of the national guard to reach the front under this call was Battery A, Utah, its destination being Nogales, Arizona. Utah will send upwards of a thousand of its troops, at the first call, for Mexican service. The anti-prohibitionists in Utah are directly and vigorously supporting Gov. Wm. Spry for a third term as governor of Utah. One of his opponents for the Republican nomination is Edward E. Jenkins of Salt Lake City, who is a determined advocate of the immediate prohibition of the whisky traffic in Utah, and who also believes that the burden of taxation on the people of the State is unnecessarily heavy. The threat of the saloon element is that if the Republicans do not accept their candidate they will put up a third ticket in the State.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Two-Faced Clock Ida Stewart Peay",
+      "expected_page": 421,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Current Topics content was incorrectly split between Notes from Field and Current Topics files, 2) The Two-Faced Clock article is missing entirely from the extracted files, and 3) Some files contain advertisement content at the end that should be in a separate Misc file.",
+  "validated_corrections": [
+    {
+      "file": "August_Vol3_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Current Topics section that should be in separate file",
+      "action": "trim_end",
+      "text": "Current Topics. James H. Anderson. A German submarine has crossed the Atlantic Ocean to the United States — this being the greatest feat on record thus far for an undersea boat.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

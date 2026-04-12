@@ -1,0 +1,15 @@
+Looking at the page image, I can see this is a poem titled "MOTHER'S DAY" by Patricia A. Lamb that appears in a green-tinted box on page 331. However, the article file content shows text about "Sister Anderson" and housecleaning, which appears to be from a different story ("A Woman Alone and Home Evening" by Lila B. Walch that I can see starting on the next page).
+
+The article file contains completely wrong content - it has text from a different article entirely, not the Mother's Day poem that should be extracted.
+
+Since the article file doesn't contain any of the actual poem text that I can see in the page image, I need to replace the entire content with the correct poem text from the page image.
+
+{
+  "file": "V54_05_07_Poem_Mothers_Lamb.txt",
+  "issue_type": "bleed_start", 
+  "description": "Article file contains completely wrong content from a different story instead of the Mother's Day poem",
+  "action": "replace_content",
+  "text": "MOTHER'S DAY\n\nDowny soft, and cuddly, blue as a baby's eyes;\nShe turns the bootee gently and breathes a longing sigh.\nUnder the folds of tissue the other bootee lies,\nWetted once by scalding tears—now dry.\n\nShe folds them both together and puts them back to rest\nIn the cedar chest of treasures she loves the very best.\nSomeday when the time is right, when God thinks it is best,\nShe'll use them for the baby at her breast.\n\n♦ Patricia A. Lamb",
+  "confidence": "high",
+  "page_verified": true
+}

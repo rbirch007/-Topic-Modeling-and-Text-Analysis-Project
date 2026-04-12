@@ -1,0 +1,57 @@
+{
+  "volume": 10,
+  "month": "September",
+  "year": 1923,
+  "timestamp": "20260315_120952",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "September_Vol10_01a_Article_The_Book_of_Mormon_Tested.txt",
+      "action": "append",
+      "result": "APPLIED append (588 chars added)"
+    },
+    {
+      "file": "September_Vol10_01b_Editorial_Editorial.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol10_01d_Editorial_The_Scenic_West_and_Its_Natural_Resources.txt",
+      "action": "append",
+      "result": "APPLIED append (1628 chars added)"
+    },
+    {
+      "file": "September_Vol10_02_Article_THE_SCENIC_WEST.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol10_03_Article_HARDING_PRAISES_PIONEERS.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol10_04_Article_TWO_PRAYERS.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol10_05_Article_BOY_OF_MY_DREAMS.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol10_07_Notes_from_Field_NOTES_FROM_THE_FIELD.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol10_09_Article_Washes.txt",
+      "action": "note",
+      "result": "INFO: This file contains only advertisement content and should be moved to Misc file"
+    }
+  ]
+}

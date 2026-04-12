@@ -1,0 +1,71 @@
+{
+  "volume": 11,
+  "month": "January",
+  "year": 1924,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1185,
+  "files": [
+    {
+      "source_file": "January_Vol11_13_Guide_Lessons_Guide_Lessons_for_March.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for March - Lesson I Theology Lesson",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for March LESSON I Theology Lesson",
+          "end_boundary": "Of what value is this parable in our day?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for March - Lesson II Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Second Week in March):",
+          "end_boundary": "LESSON II. Work and Business (Second Week in March):",
+          "confidence": "medium"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for March - Lesson III Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in March) This",
+          "end_boundary": "Yet Love will dream, and Faith will trust.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for March - Lesson IV Social Service and Teachers' Topic",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in March)",
+          "end_boundary": "Office 319 Main St.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections for March. Lesson II appears to be just a header with no content, while the other three lessons have substantial content. The file ends with advertisements that are part of the final lesson section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 19385,
+      "tier": 1,
+      "pdf_pages": [
+        50,
+        51,
+        52,
+        53
+      ],
+      "api_usage": {
+        "input_tokens": 36857,
+        "output_tokens": 530,
+        "cost": 0.1185
+      }
+    }
+  ]
+}

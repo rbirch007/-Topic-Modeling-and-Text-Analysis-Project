@@ -1,0 +1,37 @@
+{
+  "volume": 3,
+  "month": "November",
+  "year": 1916,
+  "timestamp": "20260315_120937",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (18 chars removed)"
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4441 chars removed)"
+    }
+  ]
+}

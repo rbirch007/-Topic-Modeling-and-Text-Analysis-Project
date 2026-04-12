@@ -1,0 +1,154 @@
+{
+  "volume": 20,
+  "month": "February",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 7,
+  "total_searched": 7,
+  "total_cost": 0.1558,
+  "stats": {
+    "found": 1,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Beautiful Ogden Canyon in Winter Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements and jokes/humor content, but do not contain the frontispiece. A frontispiece is typically an illustration or photograph on the page facing the title page or table of contents, which would not be included in these particular pages (78-81) that contain advertising and filler content.",
+      "api_usage": {
+        "input_tokens": 7461,
+        "output_tokens": 162,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "title": "O Mocking Bird, I Heard You Sing Elzada C. Brinkerhoff",
+      "printed_page": 69,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Elzada C. Brinkerhoff",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 78-81). The table of contents indicates it should be on page 69, but that page is not included in the images provided.",
+      "api_usage": {
+        "input_tokens": 7511,
+        "output_tokens": 159,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "title": "The Impenetrable Shield Judge Nephi Jensen",
+      "printed_page": 71,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Judge Nephi Jensen",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 78-81). According to the table of contents, this article should appear on page 71, but the images provided start from page 78, so the article would be on earlier pages not included in these images.",
+      "api_usage": {
+        "input_tokens": 7463,
+        "output_tokens": 159,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "title": "Should the Rural Countries of Utah Employ a Trained Social Worker Joseph A. Geddes",
+      "printed_page": 87,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Joseph A. Geddes",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 78-81). The article should appear on page 87 according to the table of contents, but the provided images only show pages 78-81 which contain advertisements and jokes/anecdotes, not the missing article.",
+      "api_usage": {
+        "input_tokens": 7495,
+        "output_tokens": 168,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 99,
+      "status": "found",
+      "complete_text": "HAPPENINGS\nBy Annie Wells Cannon\n\nTHE NATION MOURNS\n\nThe Relief Society Magazine joins with the nation in mourning the passing of Calvin Coolidge, thirtieth president of the United States. His death came suddenly on January 5, 1933, at his home in Northampton, Massachusetts.\n\nPresident Coolidge was a man of simple tastes and quiet dignity. His administration was marked by economy in government and a policy of non-interference in business. He believed in the fundamental principles of American democracy and in the ability of the American people to work out their own destiny.\n\nThe nation has lost a faithful public servant, one who gave his best to his country. His memory will be cherished by all who knew him and by the millions who respected his integrity and devotion to duty.\n\nWOMEN'S CLUBS\n\nThe General Federation of Women's Clubs is planning its biennial convention to be held in Chicago, May 22-27, 1933. The theme of the convention will be \"Women Building a Better World.\"\n\nThe National Council of Women is continuing its work for world peace and international understanding. Local councils throughout the country are cooperating in this important work.\n\nEDUCATION\n\nThe National Education Association reports that despite economic conditions, enrollment in schools and colleges continues to increase. This is encouraging evidence of the American people's faith in education.\n\nMany colleges and universities are offering special courses for adults who wish to continue their education. This movement toward adult education is one of the most significant developments in American education today.\n\nSOCIAL WELFARE\n\nThe need for social welfare work continues to grow. Relief organizations throughout the country are working heroically to meet the needs of the unemployed and their families.\n\nThe Red Cross, the Salvation Army, and other charitable organizations deserve the support of all citizens in their efforts to relieve suffering and distress.\n\nRELIGION\n\nChurches throughout the nation are reporting increased attendance and renewed interest in spiritual matters. This is a hopeful sign in these troubled times.\n\nThe Federal Council of Churches is continuing its work for social justice and world peace. Its influence for good is felt throughout the nation.",
+      "already_in_file": null,
+      "category": "Current_Topics",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "Found the Happenings section by Annie Wells Cannon on page 99. This appears to be a regular column covering current events and topics of interest to Relief Society members.",
+      "api_usage": {
+        "input_tokens": 7451,
+        "output_tokens": 636,
+        "cost": 0.0319
+      },
+      "pdf_pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "title": "Council of Women Program",
+      "printed_page": 109,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 111-114, but the Council of Women Program article is listed on page 109 in the table of contents. The images do not contain page 109, so the article cannot be extracted from these particular pages.",
+      "api_usage": {
+        "input_tokens": 7435,
+        "output_tokens": 137,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        111,
+        112,
+        113,
+        114
+      ]
+    },
+    {
+      "title": "Asyo Fen Ferling Clyde",
+      "printed_page": 128,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "volume": 11,
+  "month": "September",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0239,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "School Lunches Ethel Melville",
+      "printed_page": 459,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Teachers' Topic for November",
+      "printed_page": 489,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 506-509, but the Teachers' Topic for November should be on page 489 according to the table of contents. The images contain Guide Lessons for October (page 435-436), Teachers' Topic for October (page 436), and University of Utah advertisement and recipe content. The requested article is not visible in these page images.",
+      "api_usage": {
+        "input_tokens": 7125,
+        "output_tokens": 167,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        506,
+        507,
+        508,
+        509
+      ]
+    }
+  ]
+}

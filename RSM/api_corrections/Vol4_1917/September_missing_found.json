@@ -1,0 +1,44 @@
+{
+  "volume": 4,
+  "month": "September",
+  "year": 1917,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0227,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "A Bouquet and a Sentiment Lula Greene Richards",
+      "printed_page": 481,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Friend of the Helpless Dead",
+      "printed_page": 483,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 486-489, but the article 'A Friend of the Helpless Dead' is listed on page 483 in the table of contents. The images show content about 'Mothers in Israel' (pages 427-430) and 'Red Cross Work in the Relief Society' (page 430), but do not contain the missing article from page 483.",
+      "api_usage": {
+        "input_tokens": 6691,
+        "output_tokens": 175,
+        "cost": 0.0227
+      },
+      "pdf_pages": [
+        486,
+        487,
+        488,
+        489
+      ]
+    }
+  ]
+}

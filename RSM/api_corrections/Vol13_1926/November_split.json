@@ -1,0 +1,133 @@
+{
+  "volume": 13,
+  "month": "November",
+  "year": 1926,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3373,
+  "files": [
+    {
+      "source_file": "November_Vol13_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman",
+          "end_boundary": "in proof reading.?Editors.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lessons for January",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lessons for January INTRODUCTION TO LESSON WORK",
+          "end_boundary": "SALT LAKE CITY Snowcroft?s Blue Pine Extracts.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "LESSONS FOR JANUARY"
+      ],
+      "notes": "The file contains two distinct articles: 'Notes from the Field' by Amy Brown Lyman covering mission reports from various conferences, and 'Lessons for January' which includes theology, work/business, literature, and social service lessons. The second article appears to include some advertising content at the end.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14193,
+      "tier": 1,
+      "pdf_pages": [
+        677,
+        678,
+        679,
+        680,
+        681,
+        682,
+        683,
+        684
+      ],
+      "api_usage": {
+        "input_tokens": 47166,
+        "output_tokens": 359,
+        "cost": 0.1469
+      }
+    },
+    {
+      "source_file": "November_Vol13_12_Article_Lessons_for_January_Ee.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lessons for January - Introduction to Lesson Work of 1927",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lessons for January INTRODUCTION TO LESSON WORK",
+          "end_boundary": "all the mothers of our organization.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson I - Theology and Testimony - Paul",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First",
+          "end_boundary": "related to our Articles of Faith?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson II - Work and Business / Teachers' Topic / Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second",
+          "end_boundary": "go to make up this portrait.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Emotional Problems of Childhood",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week",
+          "end_boundary": "What is a psychiatrist?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains 4 lesson sections merged together. The lessons cover Theology, Work/Business/Literature, and Social Service topics. There appears to be some content missing between Lesson II and Lesson IV (no Lesson III section found as a separate entity, though literature content is embedded in Lesson II section). The file includes introduction material, detailed lesson content, poetry, and questions/problems sections for each lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 30101,
+      "tier": 1,
+      "pdf_pages": [
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696
+      ],
+      "api_usage": {
+        "input_tokens": 60720,
+        "output_tokens": 550,
+        "cost": 0.1904
+      }
+    }
+  ]
+}

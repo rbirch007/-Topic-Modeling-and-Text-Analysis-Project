@@ -1,0 +1,19 @@
+{
+  "volume": 56,
+  "month": "January",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_01_07_Poem_Advice_Blanchard.txt",
+      "issue_type": "bleed_end",
+      "description": "Author name is incomplete, missing 'Blanchard' at the end",
+      "action": "append",
+      "text": "Blanchard",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 0% OCR coverage"
+    }
+  ]
+}

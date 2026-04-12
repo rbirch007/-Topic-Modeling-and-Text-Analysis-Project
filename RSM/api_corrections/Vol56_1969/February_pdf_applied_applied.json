@@ -1,0 +1,22 @@
+{
+  "volume": 56,
+  "month": "February",
+  "year": 1969,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V56_02_03_Poem_Peace_Blanchard.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    },
+    {
+      "file": "V56_02_09_Poem_City_Larsen.txt",
+      "action": "note",
+      "result": "INFO: File contains wrong content - has 'A Day for Diddle-Daddling' story instead of the 'City' poem by Katherine F. Larsen"
+    }
+  ]
+}

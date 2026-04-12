@@ -1,0 +1,324 @@
+{
+  "volume": 55,
+  "month": "November",
+  "year": 1968,
+  "total_files_checked": 40,
+  "files_correct": [
+    "V55_11_02_Art_The_Roberts.txt",
+    "V55_11_04_Art_Special_Sharp.txt",
+    "V55_11_05_Art_Our_Spafford.txt",
+    "V55_11_07_Art_To_Walk_Sharp.txt",
+    "V55_11_08_Art_My_Madsen.txt",
+    "V55_11_09_Art_In_Jr..txt",
+    "V55_11_10_Art_Norma_Larson.txt",
+    "V55_11_11_Art_Luella_McGhie.txt",
+    "V55_11_12_Art_Report_Spafford.txt",
+    "V55_11_14_GenFt_Womans_Cannon.txt",
+    "V55_11_17_Fict_Twice_Romrell.txt",
+    "V55_11_20_GenFt_The_Winters.txt",
+    "V55_11_21_GenFt_Lets_Woods.txt",
+    "V55_11_23_GenFt_Zerviah.txt",
+    "V55_11_24_Fict_If_Harmer.txt",
+    "V55_11_26_GenFt_Notes_Activities.txt",
+    "V55_11_27_Lssn_Southern_Doxey.txt",
+    "V55_11_28_Lssn_Visiting_Smith.txt",
+    "V55_11_30_Lssn_Homemaking_Taylor.txt",
+    "V55_11_32_Lssn_Social_Christensen.txt",
+    "V55_11_34_Lssn_Cultural_Thomas.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_11_01_Fict_Welcome_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains recipe content instead of Welcome the Task Chapter 1 fiction",
+      "action": "replace_content",
+      "text": "ws Jennifer Miles leaned against the big walnut tree gracing the back yard of the large family home in Springville, Utah. It was early spring, and the mountains to the south were still a beautiful blue and white from the winter's snow. The lake to the west and the sky above were an identical blue. The eastern mountains were beginning to turn green. The air was pleasantly warm and flowers were beginning to bloom all across the valley. Jennifer loved the springtime, for it signified new birth and was a change from the final dreary months of winter; but she loved each new season as it came. She sighed audibly. She was failing in a valiant but vain attempt to get an early start in preparing for final examinations at the university where she was a junior student in business eduChapter 1 Welcome The Task Michele Bartmess ° as told by Annette Giles » cation.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_03_Art_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem content instead of From Near and Far",
+      "action": "trim_start",
+      "text": "The Relief Society Magazine - November 1968, Vol. 55, No. 11",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_06_Poem_Cumorah_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains previous article content before the poem",
+      "action": "trim_start",
+      "text": "CUMORAH There is poetry in these hills.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_11_13_Fict_Michele.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "ws Jennifer Miles leaned against the big walnut tree gracing the back yard of the large family home in Springville, Utah. It was early spring, and the mountains to the south were still a beautiful blue and white from the winter's snow. The lake to the west and the sky above were an identical blue. The eastern mountains were beginning to turn green. The air was pleasantly warm and flowers were beginning to bloom all across the valley. Jennifer loved the springtime, for it signified new birth and was a change from the final dreary months of winter; but she loved each new season as it came. She sighed audibly. She was failing in a valiant but vain attempt to get an early start in preparing for final examinations at the university where she was a junior student in business eduChapter 1 Welcome The Task ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_15_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with previous article content",
+      "action": "trim_start",
+      "text": "TELL If Walk about Zion, and go round about her: tell the towers thereof.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_16_GenFt_Notes.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with previous article content",
+      "action": "trim_start",
+      "text": "ATTENTION: English-speaking Southern Hemisphere Stakes and Missions",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_11_18_Poem_Contrasts_Terry.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete poem",
+      "action": "append",
+      "text": "Terry",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_11_19_Poem_Interval_Stanley.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content instead of Interval poem",
+      "action": "replace_content",
+      "text": "INTERVAL Today I saw him sitting in the sun, His well-worn hat pulled down to shade his eyes, His shoulders bowed through years of endless toil To wrest a meager living from the soil. With trembling hands grasping a battered cane, He waits until the summer comes again. —Elena Hassell Stanley",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_22_GenFt_Steamed_Isaacson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content instead of steamed bread article",
+      "action": "replace_content",
+      "text": "STEAMED BREAD An Old-Fashioned Delicacy Ida Isaacson me there Isn't could Prepare me steamed bread, 843 sy the € a new delight In an old-fashioned",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_25_Poem_My_Wilson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Activities content after the poem",
+      "action": "trim_end",
+      "text": "Made of finer stuff than earth. —Julie Wilson",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_29_Poem_Better_Coles.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content",
+      "action": "replace_content",
+      "text": "BETTER Better keep a memory Free and sorrow-blended, Than to bear it guiltily, When a dream has ended. —Christie Lund Coles",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_31_Poem_Song_Larson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content",
+      "action": "replace_content",
+      "text": "SONG FOR A LOSS This know, dear heart—(be comforted) In every love that is, this comes: A time to give it back to God, Who gave it to you... Who strains to keep is discomfited, (His love takes on so many forms) —Love can be staff or can be rod— Know this, for it is true, That when one love seems ended, And your joy turned into pain, Remember God attended You formerly, and stands again Ready, though the world seems empty... Love lives, eternally! —Katherine F. Larson",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_33_Poem_Four_Larson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains incomplete content",
+      "action": "replace_content",
+      "text": "FOUR WORDS DEFINED PEACE is being loved in the deepest dimension. LIVING is loving someone beyond explanation. DEVOTION is serving others with sincere dedication. FAITH is saying ''I will\" when the time comes for action. —Leora G. Larson",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_35_Poem_Loved.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement and other content after the poem",
+      "action": "trim_end",
+      "text": "As a rainbow prismed On an edge of glass. —Carolle Denton",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_36_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content after birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Jennett Mitchel Smith",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_37_Poem_Significance.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains fiction content after the poem",
+      "action": "trim_end",
+      "text": "When the sun has gone away. —Barbara Huff",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V55_11_38_Poem_In_Gabbott.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-poem and contains story content",
+      "action": "replace_content",
+      "text": "\"IN WHOLENESS OR IN PART\" \"According to your faith,'' he said; his word Of healing was as gentle as his touch, And two who once were blind, having much Of faith, could see again. The day I heard The story I was low on faith... Suppose I thought, the one but half-believed, and when Through clouded eyes he saw the Lord—then Was full faith his? It must be that those With scanty measure of belief inherit Scanty blessings. One needs a deeper trust, A greater love, a more committed heart, Unwavering in the sudden storm, to merit Jesus' touch. For as your faith, so must Your blessing be... In wholeness or in part. —Mabel Jones Gabbott",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_11_39_Poem_Choice_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete content",
+      "action": "append",
+      "text": "oberts",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_11_40_Poem_The_Cameron.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains incomplete poem",
+      "action": "replace_content",
+      "text": "THE MASTER'S GIFTS God loved the flowers So he gave to them the dew, And he loved me, I know, For he gave to me—you. —Mary V. Cameron",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Light Upon the Earth Catherine B. Bowles",
+      "expected_page": 811,
+      "status": "merged_with_another",
+      "merged_into": "V55_11_06_Poem_Cumorah_Miller.txt"
+    }
+  ],
+  "notes": "Many poetry files contain wrong content or are merged with other articles. Several files have content bleeding from adjacent articles. The Welcome the Task fiction appears to be split across multiple files with some content misplaced.",
+  "validated_corrections": [
+    {
+      "file": "V55_11_03_Art_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem content instead of From Near and Far",
+      "action": "trim_start",
+      "text": "The Relief Society Magazine - November 1968, Vol. 55, No. 11",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_13_Fict_Michele.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "ws Jennifer Miles leaned against the big walnut tree gracing the back yard of the large family home in Springville, Utah. It was early spring, and the mountains to the south were still a beautiful blue and white from the winter's snow. The lake to the west and the sky above were an identical blue. The eastern mountains were beginning to turn green. The air was pleasantly warm and flowers were beginning to bloom all across the valley. Jennifer loved the springtime, for it signified new birth and was a change from the final dreary months of winter; but she loved each new season as it came. She sighed audibly. She was failing in a valiant but vain attempt to get an early start in preparing for final examinations at the university where she was a junior student in business eduChapter 1 Welcome The Task ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_15_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with previous article content",
+      "action": "trim_start",
+      "text": "TELL If Walk about Zion, and go round about her: tell the towers thereof.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_25_Poem_My_Wilson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Activities content after the poem",
+      "action": "trim_end",
+      "text": "Made of finer stuff than earth. —Julie Wilson",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_35_Poem_Loved.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement and other content after the poem",
+      "action": "trim_end",
+      "text": "As a rainbow prismed On an edge of glass. —Carolle Denton",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_36_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content after birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Jennett Mitchel Smith",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_11_37_Poem_Significance.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains fiction content after the poem",
+      "action": "trim_end",
+      "text": "When the sun has gone away. —Barbara Huff",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_11_06_Poem_Cumorah_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains previous article content before the poem",
+      "action": "trim_start",
+      "text": "CUMORAH There is poetry in these hills.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_11_16_GenFt_Notes.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with previous article content",
+      "action": "trim_start",
+      "text": "ATTENTION: English-speaking Southern Hemisphere Stakes and Missions",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_11_18_Poem_Contrasts_Terry.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete poem",
+      "action": "append",
+      "text": "Terry",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_11_39_Poem_Choice_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete content",
+      "action": "append",
+      "text": "oberts",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

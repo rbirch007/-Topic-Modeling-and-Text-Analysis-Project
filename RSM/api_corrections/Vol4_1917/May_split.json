@@ -1,0 +1,65 @@
+{
+  "volume": 4,
+  "month": "May",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.128,
+  "files": [
+    {
+      "source_file": "May_Vol4_11_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Gleaning in Alien Fields",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony.",
+          "end_boundary": "BIBLE LESSON FOR JUNE. \"Sanctify them through thy truth. Thy word is truth.\" Doctrine and Covenants, Section 21 — 57.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in June.",
+          "end_boundary": "LESSON III. Genealogy and Literature. Third Week in June.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy - Prefixes and Suffixes, Compound Surnames, Changed Surnames",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "PREFIXES AND SUFFIXES. COMPOUND SURNAMES — CHANGED SURNAMES.",
+          "end_boundary": "LITERATURE. Third Week in May. old time tales.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literature - Old Time Tales",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "From the great cliffs that make our craggy canyon walls.",
+          "end_boundary": "Be ready to tell some parable from the Bible. 5.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE DEPARTMENT"
+      ],
+      "notes": "This file contains multiple Guide Lessons sections merged together. Lesson II appears to be just a header with no content. The Literature section appears to be cut off at the end, ending mid-sentence in the lesson outline.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 28491,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39782,
+        "output_tokens": 579,
+        "cost": 0.128
+      }
+    }
+  ]
+}

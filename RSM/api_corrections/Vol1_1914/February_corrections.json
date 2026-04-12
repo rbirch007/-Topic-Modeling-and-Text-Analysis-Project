@@ -1,0 +1,77 @@
+{
+  "volume": 1,
+  "month": "February",
+  "year": 1914,
+  "total_files_checked": 21,
+  "files_correct": [
+    "V1_1914_Feb_03_Art_Address.txt",
+    "V1_1914_Feb_04_Art_Genealogy.txt",
+    "V1_1914_Feb_05_Art_CORRECTION.txt",
+    "V1_1914_Feb_06_Art_HomeEthics.txt",
+    "V1_1914_Feb_07_Art_HomeGarden.txt",
+    "V1_1914_Feb_08_Art_SOIL.txt",
+    "V1_1914_Feb_09_Art_FERTILIZER.txt",
+    "V1_1914_Feb_10_Art_PREPARATIO.txt",
+    "V1_1914_Feb_11_Art_PLANTING.txt",
+    "V1_1914_Feb_12_Art_CULTIVATIO.txt",
+    "V1_1914_Feb_13_Art_Literature.txt",
+    "V1_1914_Feb_14_Art_Architectu.txt",
+    "V1_1914_Feb_15_Art_Relief.txt",
+    "V1_1914_Feb_16_Art_Books.txt",
+    "V1_1914_Feb_17_Art_Relief.txt",
+    "V1_1914_Feb_18_Art_Future.txt",
+    "V1_1914_Feb_19_Art_BURIAL.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Feb_02_Art_EVERYTHING.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content that should be in Misc file instead",
+      "action": "note",
+      "text": "This entire file contains advertisement content (TEMPLE BRAND GARMENTS, SALT LAKE KNITTING STORE) and should be moved to Misc file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Feb_20_Art_COMMUNICAT.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end that should be trimmed",
+      "action": "trim_end",
+      "text": "Utah. ICE CREAM SHERBETS PUNCHES and CANDIES are the \"BEST BY TEST\" Special prices to all Ward and School Socials etc.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Feb_22_Art_LARKIN.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content that should be in Misc file instead",
+      "action": "note",
+      "text": "This entire file contains advertisement content and should be moved to Misc file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Feb_24_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only partial advertisement text, not a poem",
+      "action": "note",
+      "text": "This file contains only 'NIBLEY RICHARD W. YOUNG Member Ex. Com.' which appears to be part of an advertisement, not a poem",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files contain advertisement content that should be moved to a Misc file. The extraction appears to have incorrectly categorized advertisement sections as separate articles. The main content articles are correctly extracted, but advertisement content needs to be consolidated into appropriate Misc files.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Feb_20_Art_COMMUNICAT.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end that should be trimmed",
+      "action": "trim_end",
+      "text": "Utah. ICE CREAM SHERBETS PUNCHES and CANDIES are the \"BEST BY TEST\" Special prices to all Ward and School Socials etc.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

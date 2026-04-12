@@ -1,0 +1,62 @@
+{
+  "volume": 53,
+  "month": "February",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_02_04_Poem_No_Schow.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V53_02_05_SpFt_Self-Expression_Ma.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V53_02_15_Poem_In_Burt.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V53_02_16_Poem_Rain_Laster.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V53_02_17_Poem_Buying_Fairbairn.txt",
+      "action": "note",
+      "result": "INFO: File contains garbled OCR text that doesn't match the poem title"
+    },
+    {
+      "file": "V53_02_20_The Home_Scrap_Randall.txt",
+      "action": "append",
+      "result": "APPLIED append (722 chars added)"
+    },
+    {
+      "file": "V53_02_24_The Home_Phankuchen_Breeze.txt",
+      "action": "note",
+      "result": "INFO: File contains content from Promise article, not Phankuchen recipe"
+    },
+    {
+      "file": "V53_02_25_The Home_Sunburst_Quilts.txt",
+      "action": "note",
+      "result": "INFO: OCR gap - visual content not captured"
+    },
+    {
+      "file": "V53_02_29_Lssn_VisCihtriinsgt.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (365 chars)"
+    },
+    {
+      "file": "V53_02_39_Poem_81_Miller.txt",
+      "action": "note",
+      "result": "INFO: File contains Oakland poem by Marilyn McMeen Miller, not Temple Spires by Dorothy J. Roberts"
+    }
+  ]
+}

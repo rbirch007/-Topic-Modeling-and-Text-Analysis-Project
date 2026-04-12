@@ -1,0 +1,157 @@
+{
+  "volume": 5,
+  "month": "February",
+  "year": 1918,
+  "total_merged": 3,
+  "total_splits": 6,
+  "total_cost": 0.4555,
+  "files": [
+    {
+      "source_file": "February_Vol5_02a_Article_Ex-President_Roosevelt_Congratulates_American_Mothers_a_a_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Ex-President Roosevelt Congratulates American Mothers",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "PORTRAIT AND MESSAGE OF COL. THEODORE ROOSEVELT. Vol. V.",
+          "end_boundary": "mother of sixteen children, thirteen now living.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Mothers in Israel",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Mothers in Israel. Here are additional items from",
+          "end_boundary": "Truly your friend and sister in the gospel, Margaret McIntire Burgess.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EX-PRESIDENT ROOSEVELT'S MESSAGE"
+      ],
+      "notes": "This file contains the main Roosevelt article featuring portraits and biographies of mothers with many children, followed by a separate 'Mothers in Israel' section with additional historical material from Sister Burgess about early Mormon pioneers in Nauvoo and St. George.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12949,
+      "tier": 1,
+      "pdf_pages": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "api_usage": {
+        "input_tokens": 50710,
+        "output_tokens": 347,
+        "cost": 0.1573
+      }
+    },
+    {
+      "source_file": "February_Vol5_06a_Article_Mothers_Valentine_a_a.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mother's Valentine",
+          "category": "Article",
+          "author": "Diana Parrish",
+          "start_boundary": "Mother's Valentine. By Diana Parrish. The door bell rang",
+          "end_boundary": "resumed the bold ways of his youth as he whispered",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "John St. John (Book Review)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "JOHN ST. JOHN. Nephi Anderson has written another",
+          "end_boundary": "commend it to all our readers.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "February Home Entertainment",
+          "category": "Home_Ethics",
+          "author": "Morag",
+          "start_boundary": "February Home Entertainment. Morag. Birthday Calendar. Feb. 4",
+          "end_boundary": "Time....... Admission.......cents.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "MOTHER'S VALENTINE",
+        "RELIEF SOCIETY MAGAZINE",
+        "FEBRUARY HOME ENTERTAINMENT"
+      ],
+      "notes": "The file contains three distinct articles: a short story about Valentine's Day, a book review of 'John St. John' by Nephi Anderson, and a home entertainment guide for February activities. The story is complete and well-bounded, the book review is brief but complete, and the entertainment guide provides February birthday calendar and program suggestions.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10674,
+      "tier": 1,
+      "pdf_pages": [
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "api_usage": {
+        "input_tokens": 47409,
+        "output_tokens": 444,
+        "cost": 0.1489
+      }
+    },
+    {
+      "source_file": "February_Vol5_16a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Domestic_Life_Among_the_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony.",
+          "end_boundary": "All subjects treated in our Correspondence Course will be given. You are all invited to attend.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a single Guide Lessons section that includes Lesson I (Theology and Testimony - Domestic Life Among the Nephites), Lesson II (Work and Business), Lesson III (Genealogy and Literature - Japheth, His Descendants and Tribes), Lesson IV (Home Economics), plus an Aztec mother's advice text and a housekeepers' conference announcement. All content appears to be part of one comprehensive Guide Lessons article rather than separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14828,
+      "tier": 1,
+      "pdf_pages": [
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123
+      ],
+      "api_usage": {
+        "input_tokens": 48199,
+        "output_tokens": 316,
+        "cost": 0.1493
+      }
+    }
+  ]
+}

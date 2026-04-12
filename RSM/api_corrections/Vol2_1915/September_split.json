@@ -1,0 +1,113 @@
+{
+  "volume": 2,
+  "month": "September",
+  "year": 1915,
+  "total_merged": 3,
+  "total_splits": 5,
+  "total_cost": 0.3126,
+  "files": [
+    {
+      "source_file": "September_Vol2_01_Genealogy_International_Genealogical_Congress_at_the_Panama-Pacific_Ex.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "International Genealogical Congress at the Panama-Pacific Exposition",
+          "category": "Article",
+          "author": "Susa Young Gates",
+          "start_boundary": "International Genealogical Congress at the Panama-Pacific Exposition. By Susa Young Gates.",
+          "end_boundary": "Truly, we look with high hope into the future of the International Genealogical Federation.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The \"Selfishness\" of Jacob and Rachel",
+          "category": "Article",
+          "author": "Nephi Anderson",
+          "start_boundary": "The \"Selfishness'' of Jacob and Rachel By Nephi Anderson, author of \"Added Upon.\"",
+          "end_boundary": "Could we recommend someone?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "INTERNATIONAL GENEALOGICAL CONGRESS",
+        "THE \"SELFISHNESS\" OF JACOB AND RACHEL"
+      ],
+      "notes": "This file contains two complete articles from the September 1915 Relief Society Magazine. The first is a detailed account of the International Genealogical Congress at the Panama-Pacific Exposition by Susa Young Gates. The second article by Nephi Anderson appears to be cut off mid-sentence, ending abruptly with 'Could we recommend someone?' suggesting this may be an incomplete extraction from a larger merged file.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 37913,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36516,
+        "output_tokens": 434,
+        "cost": 0.1161
+      }
+    },
+    {
+      "source_file": "September_Vol2_04_Prince_of_Ur_A_Prince_of_Ur.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Prince of Ur",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "A Prince of Ur 409 Homespun. As Abram made",
+          "end_boundary": "God help them to be women and not wantons.\" (to be continued)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogical Classes for the Relief Society Conference",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "GENEALOGICAL CLASSES FOR THE RELIEF SOCIETY CONFERENCE. On Friday and Saturday,",
+          "end_boundary": "or a synopsis of this report might occupy a portion of the program.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A PRINCE OF UR"
+      ],
+      "notes": "This file contains the continuation of 'A Prince of Ur' story (marked as 'to be continued') followed by a brief announcement about genealogical classes. The story appears to be a serialized fiction piece about Abraham (Abram) in ancient Ur. Running headers with page numbers (409, 410, etc.) and magazine title appear throughout.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 20377,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32178,
+        "output_tokens": 380,
+        "cost": 0.1022
+      }
+    },
+    {
+      "source_file": "September_Vol2_09_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. Lesson I. Work and Business.",
+          "end_boundary": "to create our statuary and memorials.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a single comprehensive Guide Lessons article that includes multiple lesson sections: Theology and Testimony (The Passover or Sacrament), Genealogy (Relationship), Home Ethics and Art (Work), and Art (Mahonri M. Young). The content flows continuously as one structured lesson plan with different weekly topics, matching the 'Guide Lessons' entry from the table of contents.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11982,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 30142,
+        "output_tokens": 258,
+        "cost": 0.0943
+      }
+    }
+  ]
+}

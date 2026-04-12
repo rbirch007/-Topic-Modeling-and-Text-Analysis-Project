@@ -1,0 +1,72 @@
+{
+  "volume": 54,
+  "month": "April",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 10,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V54_04_01_Fict_The_Chapter.txt",
+      "action": "note",
+      "result": "INFO: File contains Relief Society Centennial Memorial content instead of The Golden Chain Chapter 3"
+    },
+    {
+      "file": "V54_04_04_SpFt_Correlation_Monson.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3354 chars added)"
+    },
+    {
+      "file": "V54_04_07_SpFt_Reba_O._Society.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3601 chars removed)"
+    },
+    {
+      "file": "V54_04_16_Fict_The_Schow.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (334 chars added)"
+    },
+    {
+      "file": "V54_04_21_Poem_Wind_Sadleir.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (390 chars)"
+    },
+    {
+      "file": "V54_04_22_Poem_My_Stevens.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (490 chars)"
+    },
+    {
+      "file": "V54_04_25_GenFt_On_Solury.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2033 chars removed)"
+    },
+    {
+      "file": "V54_04_26_Poem_A_Visit_Brown.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (594 chars)"
+    },
+    {
+      "file": "V54_04_32_Poem_To_My_Cushing.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (634 chars)"
+    },
+    {
+      "file": "V54_04_33_GenFt_Recipes_Molenaar.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (39 chars removed)"
+    },
+    {
+      "file": "V54_04_34_Poem_Going_Olsen.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V54_04_40_Poem_And_We_Robinson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (653 chars)"
+    }
+  ]
+}

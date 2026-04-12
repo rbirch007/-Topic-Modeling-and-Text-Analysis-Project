@@ -1,0 +1,195 @@
+{
+  "volume": 13,
+  "month": "August",
+  "year": 1926,
+  "total_merged": 3,
+  "total_splits": 9,
+  "total_cost": 0.5189,
+  "files": [
+    {
+      "source_file": "August_Vol13_02_Article_The_Ante-Room_of_Heaven_Minnie_J_Hardy.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Ante-Room of Heaven",
+          "category": "Article",
+          "author": "Minnie J. Hardy",
+          "start_boundary": "The Ante-Room of Heaven (Timpanogos Cave) By Minnie J.",
+          "end_boundary": "waiting for us at home in the shape of Sylvia's baby.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Let Me be a Friend",
+          "category": "Poem",
+          "author": "Eugene L. Roberts",
+          "start_boundary": "Let Me be a Friend Eugene L. Roberts",
+          "end_boundary": "His ancient faith appeasing,",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Tintype Lady",
+          "category": "Article",
+          "author": "Lillie M. Dale",
+          "start_boundary": "The Tintype Lady By Lillie M. Dale",
+          "end_boundary": "creators of conditions out of which laws arise — Charles F. Thwing.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE ANTE-ROOM OF HEAVEN"
+      ],
+      "notes": "The file contains three distinct pieces: a travel article about Timpanogos Cave, a short poem about friendship, and a story about a grandmother appearing to her modern granddaughter. The boundaries are clear with distinct titles and author bylines.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13956,
+      "tier": 1,
+      "pdf_pages": [
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462
+      ],
+      "api_usage": {
+        "input_tokens": 52107,
+        "output_tokens": 450,
+        "cost": 0.1631
+      }
+    },
+    {
+      "source_file": "August_Vol13_03_Article_The_Tintype_Lady_Lillie_M_Dale.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Tintype Lady",
+          "category": "Article",
+          "author": "Lillie M. Dale",
+          "start_boundary": "The Tintype Lady By Lillie M. Dale The clock",
+          "end_boundary": "conditions out of which laws arise — Charles F. Thwing.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "THE RELIEF SOCIETY OF THE CHURCH OF JESUS",
+          "end_boundary": "Vol. XIII AUGUST, 1926. No. 8 EDITORIAL",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains 'The Tintype Lady' story followed by the beginning of the Editorial section with masthead information. The story ends with a quote from Charles F. Thwing, and the Editorial section begins with the Relief Society organizational information and masthead.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8298,
+      "tier": 1,
+      "pdf_pages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "api_usage": {
+        "input_tokens": 58566,
+        "output_tokens": 335,
+        "cost": 0.1807
+      }
+    },
+    {
+      "source_file": "August_Vol13_11_Guide_Lessons_Guide_Lessons_for_October_--.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Dual Nature of Jesus Christ",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for October LESSON I Theology and",
+          "end_boundary": "other than those used in this lesson. II, III. IV.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Some Parental Obligations",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week in",
+          "end_boundary": "appeals to them rather than repels them.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Robert Frost",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in October) ROBERT",
+          "end_boundary": "reminds. Us of New England? GUIDE LESSONS FOR OCTOBER 437:",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Intellectual Problems of Childhood",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson IV Social Service (Fourth Week in October)",
+          "end_boundary": "When Buying Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR OCTOBER"
+      ],
+      "notes": "This file contains four distinct lesson sections for October, each covering a different week and subject area: Theology/Testimony, Work/Business, Literature (Robert Frost), and Social Service. Each lesson has clear boundaries and distinct content structure.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 35499,
+      "tier": 1,
+      "pdf_pages": [
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496,
+        497
+      ],
+      "api_usage": {
+        "input_tokens": 55619,
+        "output_tokens": 552,
+        "cost": 0.1751
+      }
+    }
+  ]
+}

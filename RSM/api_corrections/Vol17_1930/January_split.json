@@ -1,0 +1,174 @@
+{
+  "volume": 17,
+  "month": "January",
+  "year": 1930,
+  "total_merged": 4,
+  "total_splits": 9,
+  "total_cost": 0.4357,
+  "files": [
+    {
+      "source_file": "January_Vol17_08_Article_Medium_wt_Silk_for_men_and_women_new_style_only_2_50_In_ordering_be_sure_t.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Eliza Roxey Snow Poem Contest",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "In the contest one feature especially pleasing",
+          "end_boundary": "in the Eliza R. Snow Poetry Contest.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "President Louise Y. Robison Speaks at General Conference",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Much appreciated by the women of the",
+          "end_boundary": "who carry such significant responsibility.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "General Board of Relief Society Expresses Appreciation to Organist",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Edna Coray, for twenty-three years organist for",
+          "end_boundary": "praying that God will add abundant blessings,",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Annual Dues:",
+          "end_boundary": "named after their first great leader.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains multiple editorial sections and field notes, ending with the beginning of Guide Lessons for March. The content flows from editorial items about poetry contests and conference speaking to organizational updates and field reports.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10039,
+      "tier": 1,
+      "pdf_pages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "api_usage": {
+        "input_tokens": 46046,
+        "output_tokens": 518,
+        "cost": 0.1459
+      }
+    },
+    {
+      "source_file": "January_Vol17_09_Article_Merc_Lisle_Light_Wt_2_25.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Nephite Colony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Within this territory, probably the last removal",
+          "end_boundary": "Who was Ammon? Limhi? Gideon?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Teachers' Topic for March",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business TEACHERS'",
+          "end_boundary": "that the sketch was his masterpiece.. ?Alice Morrill.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - Autobiography of Joaquin Miller",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MARCH 37 LESSON III.",
+          "end_boundary": "And loving all things we believed in all.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains three distinct lesson sections from the Guide Lessons for March. The first is Lesson I on Theology (A Nephite Colony), the second is Lesson II on Work and Business (including a Teachers' Topic and a poem 'Two Artists'), and the third is Lesson III on Literature (Autobiography of Joaquin Miller). Each lesson has clear boundaries and distinct subject matter.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 17530,
+      "tier": 1,
+      "pdf_pages": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "api_usage": {
+        "input_tokens": 44837,
+        "output_tokens": 467,
+        "cost": 0.1415
+      }
+    },
+    {
+      "source_file": "January_Vol17_11_Article_MONTHS_PRESS_BANCROFT_GENERAL_AGENT_PHONES_WAS_30083078_For_further_inform.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Autobiography of Joaquin Miller (Literature Lesson III)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Pioneer who not only blazed the path but",
+          "end_boundary": "Adeline J. Haws, GUIDE LESSONS FOR MARCH 45",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service Lesson IV - Physical and Mental Diseases",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in March)",
+          "end_boundary": "One of the major causes of dependency, we saw, is physical or mental disease.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains two distinct lesson sections from the Guide Lessons for March. The first is Lesson III on Literature covering Joaquin Miller's autobiography, and the second is the beginning of Lesson IV on Social Service covering physical and mental diseases. The file appears to be cut off mid-sentence in the second lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8280,
+      "tier": 1,
+      "pdf_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "api_usage": {
+        "input_tokens": 47514,
+        "output_tokens": 384,
+        "cost": 0.1483
+      }
+    }
+  ]
+}

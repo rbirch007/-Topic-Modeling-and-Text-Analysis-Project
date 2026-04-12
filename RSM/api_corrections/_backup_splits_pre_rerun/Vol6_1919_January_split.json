@@ -1,0 +1,191 @@
+{
+  "volume": 6,
+  "month": "January",
+  "year": 1919,
+  "total_merged": 5,
+  "total_splits": 9,
+  "total_cost": 0.5676,
+  "files": [
+    {
+      "source_file": "January_Vol6_03_In_Memoriam_President_Joseph_F_Smith.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "In Memoriam: President Joseph F. Smith",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "In Memoriam: President Joseph F. Smith",
+          "end_boundary": "future associations with him and his.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "IN MEMORIAM"
+      ],
+      "notes": "This file contains a single comprehensive memorial article about President Joseph F. Smith, including biographical information, tributes from his wives and family, a tribute from Bishop Charles W. Nibley, and concludes with his Vision of the Redemption of the Dead. The article flows continuously from beginning to end without clear breaks into separate articles.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 18149,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 35783,
+        "output_tokens": 245,
+        "cost": 0.111
+      }
+    },
+    {
+      "source_file": "January_Vol6_05_Appreciation_from_the_Three_Leading_Women_of_the.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Appreciation from the Three Leading Women of the Church",
+          "category": "Article",
+          "author": "Emmeline B. Wells, Martha Horne Tingey, Louie B. Felt",
+          "start_boundary": "Appreciation from the Three Leading Women of",
+          "end_boundary": "delighted to bless his own and his neighbors' children.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Vision of the Redemption of the Dead",
+          "category": "Article",
+          "author": "Joseph F. Smith",
+          "start_boundary": "Vision of the Redemption of the Dead. On",
+          "end_boundary": "rise to the measure of fulness in response to this heavenly manifestation!",
+          "confidence": "high",
+          "start_match_words": 6
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "IN MEMORIAM"
+      ],
+      "notes": "This file contains two distinct articles. The first is tributes from three leading women about President Joseph F. Smith, and the second is President Smith's vision of the redemption of the dead. The content flows naturally from the memorial theme established in the previous sections.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 30748,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38863,
+        "output_tokens": 367,
+        "cost": 0.1221
+      }
+    },
+    {
+      "source_file": "January_Vol6_10_Heart_of_the_Household.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Heart of the Household",
+          "category": "Article",
+          "author": "Ruth Moench Bell",
+          "start_boundary": "Heart of the Household By Ruth Moench Bell",
+          "end_boundary": "sweep the bowels clean.",
+          "confidence": "high",
+          "start_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HEART OF THE HOUSEHOLD"
+      ],
+      "notes": "This file contains a single complete story/article about the Badger family implementing military-style discipline in their household during wartime. The story runs from the title through the end of the file with embedded running headers that should be stripped.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 17722,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36050,
+        "output_tokens": 222,
+        "cost": 0.1115
+      }
+    },
+    {
+      "source_file": "January_Vol6_12_Our_Indian_Cousins.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Our Indian Cousins",
+          "category": "Article",
+          "author": "C. L. Christensen",
+          "start_boundary": "Our Indian Cousins. In the October number",
+          "end_boundary": "obtain the blessing and reward. (To be continued.)",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OUR INDIAN COUSINS"
+      ],
+      "notes": "This file contains a single article about Indian traditions and customs, written by C. L. Christensen, a pioneer Indian scout. The article includes an introduction about Lamanite cousins and then transitions into 'MOQUI TRADITIONS' which is Part I of what appears to be a multi-part series. The content describes various Indian ceremonies and dances observed by the author during his time with the Moqui villages in Arizona in 1876.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 9425,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33650,
+        "output_tokens": 283,
+        "cost": 0.1052
+      }
+    },
+    {
+      "source_file": "January_Vol6_20_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony. First Week in February. BOOK OF MORMON LESSON. PROPHECY FULFILLED AGAIN.",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "What can you say about the United Order as set forth in the Book of Mormon?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business. Fourth Week in February.",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Fourth Week in February.",
+          "end_boundary": "LESSON II. Work and Business. Fourth Week in February.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy. SCOTCH AND IRISH SURNAMES.",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy. SCOTCH AND IRISH SURNAMES. (See Chapter",
+          "end_boundary": "What can you say of the Act of 1485, passed by Parliament concerning the Irish?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Home Courses. Fourth Week in February. NATIONAL ASPECTS OF PARENTHOOD, AND ITS PROBLEMS.",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Courses. Fourth Week in February. NATIONAL ASPECTS",
+          "end_boundary": "Why has it been necessary to organize the Children's Year Campaign?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections. Lesson II appears to be just a header with no content. The lessons cover theology/Book of Mormon prophecy, work/business (header only), genealogy focusing on Scottish and Irish surnames, and home ethics covering national aspects of parenthood.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 20389,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36238,
+        "output_tokens": 609,
+        "cost": 0.1178
+      }
+    }
+  ]
+}

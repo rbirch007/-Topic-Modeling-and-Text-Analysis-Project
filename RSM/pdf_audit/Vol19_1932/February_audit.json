@@ -1,0 +1,566 @@
+{
+  "volume": 19,
+  "month": "February",
+  "year": 1932,
+  "total": 26,
+  "ok": 23,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "February_Vol19_00_BOARD.txt",
+      "body_len": 81,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_00_CONTENTS.txt",
+      "body_len": 1036,
+      "article_words": 103,
+      "words_in_ocr": 103,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_00_Misc.txt",
+      "body_len": 2126,
+      "article_words": 176,
+      "words_in_ocr": 172,
+      "pct_in_ocr": 0.9773,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "cover",
+        "directory"
+      ]
+    },
+    {
+      "file": "February_Vol19_00_Misc_backup_premarker.txt",
+      "body_len": 2058,
+      "article_words": 169,
+      "words_in_ocr": 169,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_01_Article_Washington_Thackery.txt",
+      "body_len": 610,
+      "article_words": 67,
+      "words_in_ocr": 67,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02a_Article_Into_Whatsoever_House.txt",
+      "body_len": 78035,
+      "article_words": 2992,
+      "words_in_ocr": 2992,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(9))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02b_Poem_AcrosticFebruary.txt",
+      "body_len": 371,
+      "article_words": 42,
+      "words_in_ocr": 42,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02d_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 2477,
+      "article_words": 167,
+      "words_in_ocr": 167,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02g_Editorial_Leisure_Time.txt",
+      "body_len": 178045,
+      "article_words": 5116,
+      "words_in_ocr": 5116,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(10))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02h_Editorial_Funerals.txt",
+      "body_len": 933,
+      "article_words": 93,
+      "words_in_ocr": 91,
+      "pct_in_ocr": 0.9785,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ceases",
+        "renewed"
+      ]
+    },
+    {
+      "file": "February_Vol19_02i_Poem_Our_Savior.txt",
+      "body_len": 49377,
+      "article_words": 2115,
+      "words_in_ocr": 2115,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(9))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_02j_Guide_Lessons_Lesson_Department.txt",
+      "body_len": 2008,
+      "article_words": 183,
+      "words_in_ocr": 183,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_03_Article_Grandmothers_Quilts_Alice_M_Snock.txt",
+      "body_len": 2872,
+      "article_words": 220,
+      "words_in_ocr": 176,
+      "pct_in_ocr": 0.8,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "cabin",
+        "cherish",
+        "coverings",
+        "coverlets",
+        "creating",
+        "devotion",
+        "dresden",
+        "economical",
+        "expressions",
+        "fashioned"
+      ]
+    },
+    {
+      "file": "February_Vol19_04_Article_The_Mother_and_the_Wife_of_George_Washington_Fay_Ollerton.txt",
+      "body_len": 2936,
+      "article_words": 200,
+      "words_in_ocr": 177,
+      "pct_in_ocr": 0.885,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "affairs",
+        "convictions",
+        "customs",
+        "determination",
+        "discipline",
+        "hardships",
+        "helped",
+        "immeasurable",
+        "lancaster",
+        "managing"
+      ]
+    },
+    {
+      "file": "February_Vol19_05_Poem_New_Day.txt",
+      "body_len": 896,
+      "article_words": 91,
+      "words_in_ocr": 82,
+      "pct_in_ocr": 0.9011,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "bloom",
+        "breeze",
+        "brings",
+        "earth",
+        "fresh",
+        "greet",
+        "safely",
+        "sing",
+        "trials"
+      ]
+    },
+    {
+      "file": "February_Vol19_06_Poem_The_Doctor_Passes.txt",
+      "body_len": 610,
+      "article_words": 71,
+      "words_in_ocr": 57,
+      "pct_in_ocr": 0.8028,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "brings",
+        "burns",
+        "fanfare",
+        "heals",
+        "heartache",
+        "marks",
+        "martial",
+        "returns",
+        "round",
+        "sees"
+      ]
+    },
+    {
+      "file": "February_Vol19_07_Article_The_Americans_Creed_Emeline_Y_Nebeker.txt",
+      "body_len": 4446,
+      "article_words": 281,
+      "words_in_ocr": 281,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_08_Article_Side_Lights_on_the_Book_of_Mormon_John_Henry_Evans.txt",
+      "body_len": 6265,
+      "article_words": 373,
+      "words_in_ocr": 372,
+      "pct_in_ocr": 0.9973,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "pittsburgh"
+      ]
+    },
+    {
+      "file": "February_Vol19_09_Article_Into_Whatsoever_House_Fontella_S_Calder.txt",
+      "body_len": 9396,
+      "article_words": 583,
+      "words_in_ocr": 582,
+      "pct_in_ocr": 0.9983,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "hallowe"
+      ]
+    },
+    {
+      "file": "February_Vol19_10_Article_The_White_Silence_of_Winter.txt",
+      "body_len": 244,
+      "article_words": 27,
+      "words_in_ocr": 27,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_11_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 2476,
+      "article_words": 167,
+      "words_in_ocr": 167,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_12_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 7671,
+      "article_words": 480,
+      "words_in_ocr": 479,
+      "pct_in_ocr": 0.9979,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "pad"
+      ]
+    },
+    {
+      "file": "February_Vol19_13_Editorial_Leisure_Time.txt",
+      "body_len": 1349,
+      "article_words": 116,
+      "words_in_ocr": 116,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_14_Editorial_Funerals.txt",
+      "body_len": 933,
+      "article_words": 93,
+      "words_in_ocr": 91,
+      "pct_in_ocr": 0.9785,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ceases",
+        "severed"
+      ]
+    },
+    {
+      "file": "February_Vol19_15_Poem_Our_Savior_Elsie_E_Barratt.txt",
+      "body_len": 275,
+      "article_words": 30,
+      "words_in_ocr": 30,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol19_16_Guide_Lessons_Lesson_Department.txt",
+      "body_len": 6027,
+      "article_words": 397,
+      "words_in_ocr": 397,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol19_No2_February_1932.txt",
+    "ocr_chars": 181166,
+    "ocr_unique_words": 5167,
+    "contents_xref": {
+      "entries_in_contents": 23,
+      "matched": 18,
+      "match_details": [
+        {
+          "title": "Portrait of George Washington Frontispiece",
+          "page": null,
+          "file": "February_Vol19_04_Article_The_Mother_and_the_Wife_of_George_Washington_Fay_Ollerton.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Washington Thackery",
+          "page": 69,
+          "file": "February_Vol19_01_Article_Washington_Thackery.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Leisure Time Program Clarissa A. Beesley",
+          "page": 74,
+          "file": "February_Vol19_02g_Editorial_Leisure_Time.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Grandmother's Quilts Alice M. Snock",
+          "page": 77,
+          "file": "February_Vol19_03_Article_Grandmothers_Quilts_Alice_M_Snock.txt",
+          "score": 0.75
+        },
+        {
+          "title": "The Mother and the Wife of George Washington Fay Ollerton",
+          "page": 78,
+          "file": "February_Vol19_04_Article_The_Mother_and_the_Wife_of_George_Washington_Fay_Ollerton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "New Day Merling Clyde",
+          "page": 83,
+          "file": "February_Vol19_05_Poem_New_Day.txt",
+          "score": 0.6
+        },
+        {
+          "title": "The Doctor Passes Maxa Million",
+          "page": 84,
+          "file": "February_Vol19_06_Poem_The_Doctor_Passes.txt",
+          "score": 0.6
+        },
+        {
+          "title": "The American's Creed Emeline Y. Nebeker",
+          "page": 95,
+          "file": "February_Vol19_07_Article_The_Americans_Creed_Emeline_Y_Nebeker.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Side Lights on the Book of Mormon John Henry Evans",
+          "page": 97,
+          "file": "February_Vol19_08_Article_Side_Lights_on_the_Book_of_Mormon_John_Henry_Evans.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Into Whatsoever House Fontella S. Calder",
+          "page": 103,
+          "file": "February_Vol19_02a_Article_Into_Whatsoever_House.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The White Silence of Winter",
+          "page": 106,
+          "file": "February_Vol19_10_Article_The_White_Silence_of_Winter.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 107,
+          "file": "February_Vol19_02d_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 108,
+          "file": "February_Vol19_02d_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial?Bicentenary of George Washington",
+          "page": 111,
+          "file": "February_Vol19_04_Article_The_Mother_and_the_Wife_of_George_Washington_Fay_Ollerton.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Leisure Time",
+          "page": 112,
+          "file": "February_Vol19_02g_Editorial_Leisure_Time.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Funerals",
+          "page": 113,
+          "file": "February_Vol19_02h_Editorial_Funerals.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our Savior Elsie E. Barratt",
+          "page": 113,
+          "file": "February_Vol19_02i_Poem_Our_Savior.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 114,
+          "file": "February_Vol19_02j_Guide_Lessons_Lesson_Department.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "The Place of Recreation in Our Lives Elder Melvin J. Ballard",
+          "page": 71
+        },
+        {
+          "title": "What Christian Parents Can Teach Their Children Newell W. Edson",
+          "page": 89
+        },
+        {
+          "title": "Autumn (With Portrait) Beatrice K. Ekman",
+          "page": 94
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 101
+        },
+        {
+          "title": "Acrostic?February Bertha W. Pratt",
+          "page": 106
+        }
+      ],
+      "extra_files": [
+        "February_Vol19_02b_Poem_AcrosticFebruary.txt",
+        "February_Vol19_09_Article_Into_Whatsoever_House_Fontella_S_Calder.txt",
+        "February_Vol19_11_Notes_from_Field_Notes_to_the_Field.txt",
+        "February_Vol19_12_Notes_from_Field_Notes_from_the_Field.txt",
+        "February_Vol19_13_Editorial_Leisure_Time.txt",
+        "February_Vol19_14_Editorial_Funerals.txt",
+        "February_Vol19_15_Poem_Our_Savior_Elsie_E_Barratt.txt",
+        "February_Vol19_16_Guide_Lessons_Lesson_Department.txt"
+      ]
+    }
+  }
+}

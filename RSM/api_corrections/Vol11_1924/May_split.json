@@ -1,0 +1,99 @@
+{
+  "volume": 11,
+  "month": "May",
+  "year": 1924,
+  "total_merged": 2,
+  "total_splits": 3,
+  "total_cost": 0.2745,
+  "files": [
+    {
+      "source_file": "May_Vol11_04_Article_Portrait_of_Mother_of_James_Matthew_Barrie.txt",
+      "num_articles_found": 0,
+      "splits": [],
+      "running_headers_to_strip": [
+        "HOW MY MOTHER GOT HER SOFT FACE",
+        "RELIEF SOCIETY MAGAZINE",
+        "EDITORIAL"
+      ],
+      "notes": "This file appears to contain a single continuous article by J.M. Barrie titled 'How My Mother Got Her Soft Face' that runs from the beginning through most of the file, followed by what appears to be the start of editorial content at the very end. The 'Portrait of Mother of James Matthew Barrie' mentioned in the filename appears to be just an illustration caption within the Barrie article, not a separate article. The text flows continuously without clear article boundaries that would warrant splitting.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13478,
+      "tier": 1,
+      "pdf_pages": [
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273
+      ],
+      "api_usage": {
+        "input_tokens": 42983,
+        "output_tokens": 436,
+        "cost": 0.1355
+      }
+    },
+    {
+      "source_file": "May_Vol11_12_Article_The_Psalmist_David,_a_Modern_Singer_H_R_Merrill.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Psalmist David, A Modern Singer",
+          "category": "Article",
+          "author": "H. R. Merrill, B. Y. U.",
+          "start_boundary": "The Psalmist David, A Modern Singer By H. R. Merrill,",
+          "end_boundary": "BLESS THE LORD, O MY SOUL. HALLELUJAH!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Big Business",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "BIG BUSINESS Everything in these days is on the",
+          "end_boundary": "current of community affairs. ?New York Sun.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman Hawaiian",
+          "end_boundary": "And save thine erring child!",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A MODERN SINGER",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains three distinct articles: the main article about Psalm 104 as modern poetry, a short piece on women and business efficiency, and field notes from various Relief Society missions and stakes. The boundaries are clearly marked by title formatting and content changes.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11191,
+      "tier": 1,
+      "pdf_pages": [
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304
+      ],
+      "api_usage": {
+        "input_tokens": 44013,
+        "output_tokens": 463,
+        "cost": 0.139
+      }
+    }
+  ]
+}

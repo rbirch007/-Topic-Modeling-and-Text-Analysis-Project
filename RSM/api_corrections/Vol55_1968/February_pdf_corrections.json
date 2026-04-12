@@ -1,0 +1,19 @@
+{
+  "volume": 55,
+  "month": "February",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_02_19_Poem_For_Kay.txt",
+      "issue_type": "replace_content",
+      "description": "Article file contains wrong poem fragment, needs complete poem from page image",
+      "action": "replace_content",
+      "text": "FOR A HILL CHILD\nEthel Jacobson\n\nA breeze drifts down the canyon\nThrough dancing aspen glens,\nWhile bright against their murmur\nIs the evening song of wrens.\nFrom somewhere on the hilltop\nA lone coyote calls.\nThe creek has hidden harp strings\nIn crystal waterfalls.\nAnd all these are,\nThat there may be\nA lullaby\nFor Stephanie.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 17% OCR coverage"
+    }
+  ]
+}

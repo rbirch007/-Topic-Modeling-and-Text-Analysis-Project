@@ -1,0 +1,102 @@
+{
+  "volume": 56,
+  "month": "April",
+  "year": 1969,
+  "timestamp": "20260313_235324",
+  "dry_run": false,
+  "applied": 17,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V56_04_01_Fict_Welcome_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (96 chars)"
+    },
+    {
+      "file": "V56_04_02_Frnt_Let_Me_Robinson.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V56_04_04_SpFt_Hope_Kimball.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (122 chars)"
+    },
+    {
+      "file": "V56_04_05_SpFt_Award_Contest.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (106 chars)"
+    },
+    {
+      "file": "V56_04_06_SpFt_Award_Contest.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (108 chars)"
+    },
+    {
+      "file": "V56_04_07_SpFt_Pisgah_Hobson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (72 chars)"
+    },
+    {
+      "file": "V56_04_08_SpFt_Of_Bailey.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (78 chars)"
+    },
+    {
+      "file": "V56_04_09_SpFt_Woman_Olsen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (84 chars)"
+    },
+    {
+      "file": "V56_04_10_SpFt_A_Horse_Schow.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (19751 chars added)"
+    },
+    {
+      "file": "V56_04_11_SpFt_Mama_Littke.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (17221 chars removed)"
+    },
+    {
+      "file": "V56_04_12_GenFt_From_Near_and_Far.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (63 chars)"
+    },
+    {
+      "file": "V56_04_13_SpFt_The_Pratt.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (52 chars)"
+    },
+    {
+      "file": "V56_04_14_GenFt_Editorial_Sharp.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2208 chars removed)"
+    },
+    {
+      "file": "V56_04_16_GenFt_Birthday.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (40 chars removed)"
+    },
+    {
+      "file": "V56_04_19_GenFt_Black_Yates.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (44 chars)"
+    },
+    {
+      "file": "V56_04_20_SpFt_Research_Society.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (49 chars)"
+    },
+    {
+      "file": "V56_04_21_GenFt_Womans_Cannon.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (40 chars)"
+    },
+    {
+      "file": "V56_04_22_GenFt_Hobby_Department.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (44 chars)"
+    }
+  ]
+}

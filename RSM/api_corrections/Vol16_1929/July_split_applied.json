@@ -1,0 +1,32 @@
+{
+  "volume": 16,
+  "month": "July",
+  "year": 1929,
+  "timestamp": "20260316_175718",
+  "dry_run": false,
+  "created": 1,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Autobiography of Caroline Josephine Ballantyne Farr",
+      "new_file": "July_Vol16_10a_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt",
+      "chars": 18879,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Grandma's Quilts",
+      "result": "SKIP: Start boundary not found: Split 'b': start_boundary not found"
+    },
+    {
+      "split": "c",
+      "title": "Autobiography of Margaret Miller Watson De Witt",
+      "result": "SKIP: Start boundary not found: Split 'c': start_boundary not found"
+    },
+    {
+      "file": "July_Vol16_10_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol16_1929\\July\\_backups_split_20260316_175718\\July_Vol16_10_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt"
+    }
+  ]
+}

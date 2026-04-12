@@ -1,0 +1,135 @@
+{
+  "volume": 11,
+  "month": "February",
+  "year": 1924,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3485,
+  "files": [
+    {
+      "source_file": "February_Vol11_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman",
+          "end_boundary": "that of doing good to others.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Gospel to the Lamanites",
+          "category": "Article",
+          "author": "Lucy Wright Snow",
+          "start_boundary": "The Gospel to the Lamanites The following letter",
+          "end_boundary": "he will bless you for your faith and effort.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains two distinct articles as indicated in the table of contents. The first is 'Notes from the Field' by Amy Brown Lyman (page 88), and the second is 'The Gospel to the Lamanites' by Lucy Wright Snow (page 96). The boundary between them is clear where the second article begins with its own title and introduction.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 18062,
+      "tier": 1,
+      "pdf_pages": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "api_usage": {
+        "input_tokens": 50981,
+        "output_tokens": 361,
+        "cost": 0.1584
+      }
+    },
+    {
+      "source_file": "February_Vol11_15_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for April - Lesson I Theology",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR APRIL - 99 Lord,\" and the briefest",
+          "end_boundary": "How may it become the greatest source of joy and",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for April - Lesson II Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week in April)",
+          "end_boundary": "LESSON II Literature (Third Week in April)",
+          "confidence": "medium"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for April - Lesson III Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Literature (Third Week in April) James RussELL LOWELL",
+          "end_boundary": "Way the Vision of Sir Launfal.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for April - Lesson IV Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in April). Pene",
+          "end_boundary": "and the renewal of all things beautiful.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains the complete Guide Lessons for April with 4 distinct lesson sections: Theology (Lesson I), Work and Business (Lesson II - appears to be just a header), Literature (Lesson III on James Russell Lowell), and Social Service (Lesson IV). The Work and Business lesson appears to have minimal content, just transitioning to the Literature lesson. There are also some advertisements and other content at the end that should be preserved with the final lesson section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24167,
+      "tier": 1,
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "api_usage": {
+        "input_tokens": 60381,
+        "output_tokens": 594,
+        "cost": 0.1901
+      }
+    }
+  ]
+}

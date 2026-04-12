@@ -1,0 +1,129 @@
+{
+  "volume": 20,
+  "month": "April",
+  "year": 1933,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.2912,
+  "files": [
+    {
+      "source_file": "April_Vol20_15_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Northwestern States Mission:",
+          "end_boundary": "I didn't dream divinity In a little child could be.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "I Didn't Dream",
+          "category": "Poem",
+          "author": "Alberta J. Engar",
+          "start_boundary": "I Didn't Dream By Alberta J. Engar",
+          "end_boundary": "Amy Brown Lyman --- END FILE CONTENT ---",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains two distinct pieces: a lengthy 'Notes from the Field' section with reports from various missions and stakes, followed by a poem 'I Didn't Dream' by Alberta J. Engar that received honorable mention in a poetry contest. The poem is clearly separated and has its own title and author attribution.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12979,
+      "tier": 1,
+      "pdf_pages": [
+        259,
+        260,
+        261,
+        262,
+        263
+      ],
+      "api_usage": {
+        "input_tokens": 56692,
+        "output_tokens": 345,
+        "cost": 0.1753
+      }
+    },
+    {
+      "source_file": "April_Vol20_19_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Emma Smith, the Prophet's Wife",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "They must have the (Continued on page 256) Lesson Department",
+          "end_boundary": "of constant consolation to her husband? Teachers' Topic THE BEATITUDES",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - The Beatitudes",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic THE BEATITUDES Aim: To enable us to",
+          "end_boundary": "incorporate into her own life? Read Matthew, Chapter 5.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Delight of Great Books",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON DEPARTMENT 243 Literature THE DHELIGHT OF Great Books",
+          "end_boundary": "adequate if no other material is available.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Maintaining Peculiarities and Developing Originality",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON DEPARTMENT 247 Social Service (Fourth Week in June)",
+          "end_boundary": "Child Care and Training, p. 72.)",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Lesson Department: Theology and Testimony (Lesson IX about Emma Smith), Teachers' Topic on the Beatitudes, Literature lesson on Celtic literature and Irish poets, and Social Service lesson on maintaining individuality in education. Each section has clear subject matter boundaries and different content focus.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 44342,
+      "tier": 2,
+      "pdf_pages": [
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278
+      ],
+      "api_usage": {
+        "input_tokens": 35894,
+        "output_tokens": 551,
+        "cost": 0.1159
+      }
+    }
+  ]
+}

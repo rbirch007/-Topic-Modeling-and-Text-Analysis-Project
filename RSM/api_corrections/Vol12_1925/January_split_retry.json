@@ -1,0 +1,51 @@
+{
+  "volume": 12,
+  "month": "January",
+  "year": 1925,
+  "timestamp": "20260316_210704",
+  "dry_run": false,
+  "retried": 3,
+  "created": 3,
+  "failed": 3,
+  "entries": [
+    {
+      "split": "c",
+      "title": "Editorial—The Gospel as a Guide",
+      "result": "RETRY_REJECTED: STUB: body only 71 chars (< 200 threshold)"
+    },
+    {
+      "split": "d",
+      "title": "Mother's Milk Clinic",
+      "result": "RETRY_FAILED: end (253) <= start (275)"
+    },
+    {
+      "split": "e",
+      "title": "The Editor Abroad",
+      "result": "RETRY_REJECTED: STUB: body only 60 chars (< 200 threshold)"
+    },
+    {
+      "split": "c",
+      "title": "Lesson III - Literature - Emily Dickinson",
+      "new_file": "January_Vol12_15c_Guide_Lessons_Lesson_III_-_Literature_-_Emily_Dickinson.txt",
+      "chars": 4135,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Lesson IV - Social Service - The Unstable Family",
+      "new_file": "January_Vol12_15d_Guide_Lessons_Lesson_IV_-_Social_Service_-_The_Unstable_Family.txt",
+      "chars": 4520,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "e",
+      "title": "Supplement to October Theology Lesson and Outline of Guide Lessons for 1925",
+      "new_file": "January_Vol12_15e_Guide_Lessons_Supplement_to_October_Theology_Lesson_and_Outline_of_Guide_L.txt",
+      "chars": 4275,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

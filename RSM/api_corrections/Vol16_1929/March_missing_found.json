@@ -1,0 +1,148 @@
+{
+  "volume": 16,
+  "month": "March",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.1716,
+  "stats": {
+    "found": 2,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Mount Timpanogos from American Fork Canyon Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "MOUNT TIMPANOGOS FROM AMERICAN FORK CANYON\nCourtesy of Dr. Walter Cottam.",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a frontispiece image with caption. The image shows Mount Timpanogos viewed from American Fork Canyon, credited to Dr. Walter Cottam. It appears as a black and white photograph of the mountain through trees.",
+      "api_usage": {
+        "input_tokens": 8232,
+        "output_tokens": 170,
+        "cost": 0.0272
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    {
+      "title": "Unwanted Sarah Ahlstrom Nelson",
+      "printed_page": 121,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Sarah Ahlstrom Nelson",
+      "confidence": "high",
+      "notes": "Article listed in table of contents on page 121, but the provided PDF images are from pages 143-146, so the article content is not visible in these scanned pages",
+      "api_usage": {
+        "input_tokens": 8218,
+        "output_tokens": 326,
+        "cost": 0.0295
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    {
+      "title": "Portrait of Miss Mary E. Richmond",
+      "printed_page": 122,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 143-146, but the missing article 'Portrait of Miss Mary E. Richmond' should be on page 122 according to the table of contents. The images do not contain this article. However, I can see that there is an article about Mary E. Richmond by Amy W. Evans starting on page 123, which suggests the 'Portrait' may have been a photograph or illustration on page 122 that preceded the biographical article.",
+      "api_usage": {
+        "input_tokens": 8206,
+        "output_tokens": 187,
+        "cost": 0.0274
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    {
+      "title": "Mary E. Richmond",
+      "printed_page": 123,
+      "status": "found",
+      "complete_text": "Mary E. Richmond\nPhilanthropist and Social Worker\nBy Amy W. Evans\n\nOn the second day of the new year of 1929, some of Mary E. Richmond's friends met in the hall of the Russell Sage Foundation, New York City. The meeting was held in her honor. They spoke of her personality and the qualities that made her the leader and the pioneer that she was in the field of social work. They told of some of her achievements and the depth and breadth of her influence upon the new profession she was instrumental in establishing. Many had known her for years as friend and co-worker.\n\nMARY RICHMOND'S SMILE\n\nAs a keynote of the occasion the first speaker said, \"There was a certain smile that Mary Richmond reserved for bombast and overstatement. Pretense, exaggeration, words instead of ideas, would always evoke it. And so we must be cautious today and not exceed the facts; to try for the 'just word' that so delighted her, remembering that wise and quizzical smile. * * * We are gathered here to celebrate the fact that she was our great leader; and to lift up our hearts and strengthen our resolve in the light of her memory.\"\n\nHER WORK AND CHARACTER\n\nThrough her books she was our friend and the woman of our organization, who, as so many have done, have studied \"The Good Neighbor,\" \"Social Diagonsis,\" \"What is Social Case Work?\" These have been a light and a guide to our feet in our efforts to improve our social welfare work. Miss Richmond, who died September 12, 1928, in New York City, was born in Belleville, Illinois, in 1861. Her parents died at an early age, and she went to live with her grandmother and an aunt in Baltimore. There she graduated from high school but, because of straitened circumstances, was unable to continue her formal education.\n\nHER HARD WORK IN YOUTH\n\nWhen she was sixteen, she went to New York to a position in a publishing house, but received a mere pittance as a wage. Be-",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Amy W. Evans",
+      "confidence": "high",
+      "notes": "Article found on page starting with the title and author. Text appears to continue beyond the visible portion in the image, ending mid-sentence with 'Be-'",
+      "api_usage": {
+        "input_tokens": 8210,
+        "output_tokens": 601,
+        "cost": 0.0336
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    {
+      "title": "Women Legislators Annie Wells Cannon",
+      "printed_page": 128,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 143, 144, 145, 146). The article should appear on page 128 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 8206,
+        "output_tokens": 152,
+        "cost": 0.0269
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    },
+    {
+      "title": "A Reverie",
+      "printed_page": 159,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'A Reverie' listed on page 159 in the table of contents is not present in any of the four PDF page images provided (pages 143, 144, 145, 146). The images show pages from the middle of the magazine, while page 159 would be near the end of the issue.",
+      "api_usage": {
+        "input_tokens": 8194,
+        "output_tokens": 158,
+        "cost": 0.027
+      },
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146
+      ]
+    }
+  ]
+}

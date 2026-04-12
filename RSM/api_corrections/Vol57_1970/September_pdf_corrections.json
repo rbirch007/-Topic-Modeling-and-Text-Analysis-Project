@@ -1,0 +1,19 @@
+{
+  "volume": 57,
+  "month": "September",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_09_14_SpFt_Seeing_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts mid-sentence, missing proper title and beginning",
+      "action": "trim_start",
+      "text": "Seeing SwitzerlandLand of Peace",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    }
+  ]
+}

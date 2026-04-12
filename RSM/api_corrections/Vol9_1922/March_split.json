@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "March",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1294,
+  "files": [
+    {
+      "source_file": "March_Vol9_16_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Forgiveness",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON I Theology and Testimony",
+          "end_boundary": "consistently partake of the bread in the sacrament service.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. (Second Week in May)",
+          "end_boundary": "LESSON II. Work and Business. (Second Week in May)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Hymns of Alexander Neibaur",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Literature. (Third Week in May) HYMNS OF",
+          "end_boundary": "read the hymn. \"Let Judah rejoice.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Intellectual Leadership in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Social Service (Fourth Week in May) INTELLECTUAL",
+          "end_boundary": "published by Charles Scribner's Sons, Chicago, Ill.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the four Guide Lessons for May 1922. Lesson II appears to be just a header with no content. The lessons cover Theology/Forgiveness, Work/Business, Literature/Hymns, and Social Service/Home Leadership. The file also contains extensive advertisements at the end which should be preserved with the last lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24763,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40185,
+        "output_tokens": 587,
+        "cost": 0.1294
+      }
+    }
+  ]
+}

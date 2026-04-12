@@ -1,0 +1,378 @@
+{
+  "volume": 16,
+  "month": "April",
+  "year": 1929,
+  "total_merged": 4,
+  "total_splits": 23,
+  "total_cost": 0.7492,
+  "files": [
+    {
+      "source_file": "April_Vol16_06_Article_The_Centenary_of_the_Organization_of_the_Church.txt",
+      "num_articles_found": 8,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Centenary of the Organization of the Church",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "The Centenary of the Organization of the Church We are just",
+          "end_boundary": "establishing thereby its worth as a great welfare organization.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Editor's Note",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Editor's Note Mrs. Julina Green is the author of",
+          "end_boundary": "her name did not appear with the poem, as its author.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Retrospect",
+          "category": "Poem",
+          "author": "Lula Greene Richards",
+          "start_boundary": "Retrospect Lula Greene Richards Looking backward through the vista",
+          "end_boundary": "Drawing me, Thy daughter, nearer To a fullness of Thy peace.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Ugly Duckling",
+          "category": "Article",
+          "author": "Estelle Webb Thomas",
+          "start_boundary": "The Ugly Duckling By Estelle Webb Thomas II. December 25—or",
+          "end_boundary": "she and the professor will be home in another week.",
+          "confidence": "high",
+          "start_match_words": 7
+        },
+        {
+          "order": "e",
+          "title": "Easter Thoughts",
+          "category": "Poem",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Easter Thoughts Elsie E. Barrett Glad Easter Morn'. Break forth",
+          "end_boundary": "Though I can never, never pay, Help me, lest I forget.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Elvira Lathrop",
+          "category": "Article",
+          "author": "Fay Ollerton",
+          "start_boundary": "Elvira Lathrop By Fay Ollerton Elvira Lathrop did not go",
+          "end_boundary": "and Ward wanted his woolen socks for winter. As the",
+          "confidence": "medium"
+        },
+        {
+          "order": "g",
+          "title": "Guide Lessons for June",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JUNE 221 either you have rather a",
+          "end_boundary": "You have never understood me. And in the same way",
+          "confidence": "medium",
+          "end_match_words": 5
+        },
+        {
+          "order": "h",
+          "title": "Guide Lessons for June (continued)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "I have never understood you, till tonight. No, don't interrupt",
+          "end_boundary": "You have never understood me.",
+          "confidence": "low"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE UGLY DUCKLING",
+        "ELVIRA LATHROP",
+        "GUIDE LESSONS FOR JUNE"
+      ],
+      "notes": "This file contains multiple distinct articles merged together. The Elvira Lathrop story appears to be cut off mid-sentence, and the Guide Lessons section seems to contain dramatic dialogue that may be incomplete or continue beyond this file. The boundaries for the last two sections are less certain due to the abrupt transitions and incomplete content.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 90333,
+      "tier": 3,
+      "pdf_pages": [
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235
+      ],
+      "api_usage": {
+        "input_tokens": 37149,
+        "output_tokens": 974,
+        "cost": 0.1261
+      }
+    },
+    {
+      "source_file": "April_Vol16_07_Article_The_Ugly_Duckling_Estelle_Webb_Thomas.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Doll's House (Literature Lesson)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "* * * I have been greatly wronged, Torvald.",
+          "end_boundary": "words that he did speak? LESSON IV Social Service",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service Lesson - Present Status of Our Knowledge of Education",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in June)",
+          "end_boundary": "educational theory and educational practice? Hills By Christie Lund",
+          "confidence": "high",
+          "end_match_words": 6
+        },
+        {
+          "order": "c",
+          "title": "Hills",
+          "category": "Poem",
+          "author": "Christie Lund",
+          "start_boundary": "Hills By Christie Lund God, make me",
+          "end_boundary": "As the eternal, flower-strewn April hills.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "April",
+          "category": "Poem",
+          "author": "Susan T. Jennings",
+          "start_boundary": "April By Susan T. Jennings April, why",
+          "end_boundary": "April, hail, we honor you!",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JUNE"
+      ],
+      "notes": "This file contains the end of a literature lesson on Ibsen's 'The Doll's House', followed by a social service lesson on education, and two poems. The first section appears to be the conclusion of a longer lesson that started in a previous file.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10895,
+      "tier": 1,
+      "pdf_pages": [
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267
+      ],
+      "api_usage": {
+        "input_tokens": 75694,
+        "output_tokens": 537,
+        "cost": 0.2351
+      }
+    },
+    {
+      "source_file": "April_Vol16_16_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 7,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Ugly Duckling (continued)",
+          "category": "Article",
+          "author": "Estelle Webb Thomas",
+          "start_boundary": "perhaps I could return the favor sometime.",
+          "end_boundary": "and she and the professor will be home in another week.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Easter Thoughts",
+          "category": "Poem",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Easter Thoughts Elsie E. Barrett Glad Easter Morn'.",
+          "end_boundary": "Help me, lest I forget.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Elvira Lathrop",
+          "category": "Article",
+          "author": "Fay Ollerton",
+          "start_boundary": "Elvira Lathrop By Fay Ollerton Elvira Lathrop did",
+          "end_boundary": "they turned off the lights and went into their cold bedrooms.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Pioneers: When West Was West—Owen Wister",
+          "category": "Article",
+          "author": "Lois V. Hales",
+          "start_boundary": "Pioneers: WHEN WEST WAS WEST—OWEN WISTER By",
+          "end_boundary": "but one lives true.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Books",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Books Married Sweethearts Somehow I feel that",
+          "end_boundary": "crouch low over something, as if jealously guarded.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field South Sevier Stake",
+          "end_boundary": "in Relief Society endeavor,",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "g",
+          "title": "Guide Lessons for June",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for June LESSON I Practical",
+          "end_boundary": "As the eternal, flower-strewn April hills.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE UGLY DUCKLING",
+        "ELVIRA LATHROP",
+        "PIONEERS",
+        "BOOKS",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR JUNE"
+      ],
+      "notes": "This file contains multiple articles that were merged together. The first article appears to be a continuation of 'The Ugly Duckling' from a previous page, followed by a poem, a short story, book reviews, field notes, and guide lessons. The boundaries are clear based on title changes and content shifts.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 32015,
+      "tier": 1,
+      "pdf_pages": [
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241
+      ],
+      "api_usage": {
+        "input_tokens": 82674,
+        "output_tokens": 902,
+        "cost": 0.2616
+      }
+    },
+    {
+      "source_file": "April_Vol16_17_Article_Pioneers_Lois_V_Hales.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Pioneers",
+          "category": "Article",
+          "author": "Lois V. Hales",
+          "start_boundary": "Pioneers: WHEN WEST WAS WEST—OWEN WISTER By Lais V.",
+          "end_boundary": "one lives true.\" Books Married Sweethearts Somehow | feel",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Books",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Books Married Sweethearts Somehow | feel that when the",
+          "end_boundary": "The story ends right, and is a good one.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field South Sevier Stake On September",
+          "end_boundary": "Relief Society endeavor, Guide Lessons for June LESSON I",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for June",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for June LESSON I Practical Religion and",
+          "end_boundary": "Beneficial Insurance-- and Why?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JUNE",
+        "NOTES FROM THE FIELD",
+        "BOOKS"
+      ],
+      "notes": "This file contains four distinct sections: an article about pioneers by Lois V. Hales, a book review section, notes from various Relief Society stakes, and guide lessons for June with multiple lesson topics. The guide lessons section contains 4 separate lessons (I-IV) covering different subjects.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 60460,
+      "tier": 2,
+      "pdf_pages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "api_usage": {
+        "input_tokens": 39383,
+        "output_tokens": 548,
+        "cost": 0.1264
+      }
+    }
+  ]
+}

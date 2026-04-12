@@ -1,0 +1,56 @@
+{
+  "volume": 15,
+  "month": "June",
+  "year": 1928,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 7,
+  "created": 3,
+  "failed": 4,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Officers' Meeting (Afternoon Sessions)",
+      "new_file": "June_Vol15_02b_Article_Officers_Meeting_Afternoon_Sessions.txt",
+      "chars": 35350,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Literary Section",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "Social Service Department",
+      "result": "RETRY_FAILED: end (4035) <= start (4109)"
+    },
+    {
+      "split": "e",
+      "title": "Choristers and Organists' Department",
+      "new_file": "June_Vol15_02e_Article_Choristers_and_Organists_Department.txt",
+      "chars": 2028,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "f",
+      "title": "General Session (Thursday Morning)",
+      "result": "RETRY_FAILED: end (6065) <= start (6065)"
+    },
+    {
+      "split": "g",
+      "title": "General Session (Afternoon Meeting)",
+      "new_file": "June_Vol15_02g_Article_General_Session_Afternoon_Meeting.txt",
+      "chars": 29406,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "h",
+      "title": "Substitution / Be With Me, Lord / June / The Great Salt Lake",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

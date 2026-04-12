@@ -1,0 +1,148 @@
+{
+  "volume": 55,
+  "month": "July",
+  "year": 1968,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V55_07_02_Art_Axe_at_Stewart.txt",
+    "V55_07_04_SpFt_The_Spafford.txt",
+    "V55_07_05_SpFt_After_Spafford.txt",
+    "V55_07_06_Fict_Aunt_Moore.txt",
+    "V55_07_07_GenFt_Womans_Cannon.txt",
+    "V55_07_08_GenFt_Editorial_Sharp.txt",
+    "V55_07_10_Fict_As_Shields.txt",
+    "V55_07_11_Poem_Dagger_Kay.txt",
+    "V55_07_12_GenFt_Its_Doxey.txt",
+    "V55_07_19_GenFt_Casseroles_Willard.txt",
+    "V55_07_20_GenFt_Grandfathers_Fjeld.txt",
+    "V55_07_21_GenFt_Home.txt",
+    "V55_07_22_GenFt_Its_in_Thulin.txt",
+    "V55_07_24_GenFt_Notes_Activities.txt",
+    "V55_07_25_Lssn_Spiritual_Doxey.txt",
+    "V55_07_26_Lssn_Visiting_Smith.txt",
+    "V55_07_27_Lssn_Homemaking_Taylor.txt",
+    "V55_07_28_Lssn_Social_Christensen.txt",
+    "V55_07_29_Lssn_Cultural_Clark.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_07_01_Fict_If_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong story - has 'A Partridge In A Pear Tree' instead of 'If Spring Be Late Chapter 4'",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for 'If Spring Be Late Chapter 4' by Mabel Harmer starting on page 518",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_03_Art_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and missing the 'From Near and Far' content",
+      "action": "replace_content",
+      "text": "This file needs re-extraction - should contain reader letters starting with Elizabeth C. McCrimmon from Long Beach, California",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_09_GenFt_The_Mrovka.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'As Sounding Brass' story that should be in separate file",
+      "action": "trim_end",
+      "text": "There were these and many more sounds, but now the song is ended, and only the melody lingers on in the music of the hills. THE MAKER OF HILLS 1 look to the hills—dear hills of home— Untouched by winter's frigid blasts, Ageless, steadfast, they give me strength; I Summer's lightning and crashing thunder, Bulwarks of majestic splendor, Serenely they triumph, keeping vigil; impressively stretched the valley's length. Their constancy dissolves my fears away. As dusk envelops my universe, They hover protectingly near and strong; I whisper. A plea to the Maker of hills— Extend thy peace, and thy love prolong. Ng.;. I >  —Annie C. Esplin",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_13_Poem_Memory_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Lady Who Bakes Cakes' article that should be in separate file",
+      "action": "trim_end",
+      "text": "It was joy and pain, ecstasy and sorrowing, this silken moment of memory returning. I _.=Christie Lund Coles",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_14_Poem_Retrospect_Tanner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Lady Who Bakes Cakes' article that should be in separate file",
+      "action": "trim_end",
+      "text": "—Annie Atkin Tanner",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_15_GenFt_The_Ikerman.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - missing the beginning and end of 'The Lady Who Bakes Cakes' article",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for 'The Lady Who Bakes Cakes' by Ruth C. Ikerman starting on page 508",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_16_GenFt_Quilts_Wright.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains continuation of cake article instead of 'Quilts for all Occasions'",
+      "action": "replace_content",
+      "text": "This file needs re-extraction for 'Quilts for all Occasions' by Mildred Prince Wright starting on page 510",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_17_GenFt_Just_By_Arnold.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content and wrong article",
+      "action": "replace_content",
+      "text": "This file needs re-extraction for 'Just By Chance' by Cora Hill Arnold starting on page 511",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_18_Poem_Sweethearts_Rothe.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and missing the 'Sweethearts' poem content",
+      "action": "replace_content",
+      "text": "This file needs re-extraction for 'Sweethearts' poem by Ruth G. Rothe on page 515",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_23_Fict_Mabel.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'If Spring Be Late Chapter 4' content instead of separate Mabel Harmer work",
+      "action": "replace_content",
+      "text": "This file appears to be misnamed - contains 'If Spring Be Late Chapter 4' content that should be in V55_07_01_Fict_If_Chapter.txt",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_30_Poem_Moon_Fairbairn.txt",
+      "issue_type": "missing_text",
+      "description": "File is nearly empty - missing the 'Moon Magic' poem content",
+      "action": "replace_content",
+      "text": "This file needs re-extraction for 'Moon Magic' poem by Vesta N. Fairbairn on page 560",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_31_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "File missing header and some content for Birthday Congratulations",
+      "action": "prepend",
+      "text": "[Vol55 | July 1968 | Page 560 | General Feature | Birthday Congratulations | ]\n[Birthday Congratulations]\n\n100\n98\n97\n95\n94\n93\n92\n\n560",
+      "confidence": "high"
+    },
+    {
+      "file": "V55_07_32_Poem_The_Esplin.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles instead of just 'The Maker of Hills' poem",
+      "action": "replace_content",
+      "text": "This file needs re-extraction for 'The Maker of Hills' poem by Annie C. Esplin on page 498",
+      "confidence": "high"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Weaver Alice Morrey Bailey",
+      "expected_page": 491,
+      "status": "merged_with_another",
+      "merged_into": "V55_07_05_SpFt_After_Spafford.txt"
+    },
+    {
+      "title": "Over the Marsh Gladys Hesser Burnham",
+      "expected_page": 505,
+      "status": "merged_with_another",
+      "merged_into": "V55_07_10_Fict_As_Shields.txt"
+    }
+  ],
+  "notes": "Multiple files have significant content extraction issues. Several articles are merged together or contain wrong content entirely. The fiction pieces appear to be swapped between files. Many poetry pieces are incomplete or missing. The extraction process seems to have had difficulty with page boundaries and article separation."
+}

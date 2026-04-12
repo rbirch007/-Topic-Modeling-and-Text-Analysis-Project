@@ -1,0 +1,68 @@
+{
+  "volume": 7,
+  "month": "March",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1367,
+  "files": [
+    {
+      "source_file": "March_Vol7_10b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Genealogy and Testimony (Required.) First Week in April. SALVATION FOR THE DEAD, A VICARIOUS WORK.",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons LESSON I. Genealogy and Testimony (Required.) First",
+          "end_boundary": "genealogical letter during the month, and that the class practice on a model letter to secure required genealogical information of the Society.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business (Required) Second Week in April.",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Required) Second Week",
+          "end_boundary": "LESSON II. Work and Business (Required) Second Week in April.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Book of Mormon Bible Testimony (Optional) Third Week in April. Isaiah's prophecy and the Book of Mormon.",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON . Book of Mormon Third Week in April.",
+          "end_boundary": "Give in detail the circumstances attending the visit or Martin Harris to Professor Anthony? Literature (Optional.)",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Social Service (Required) Fourth Week in April. FEEDING THE SCHOOL CHILD",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "TENNYSON AS A POET LAUREATE. England has had",
+          "end_boundary": "Nobody else can do the work that God has marked out for you.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 lesson sections that were merged together. The lessons cover Genealogy/Testimony, Work/Business, Book of Mormon/Bible study, and Social Service topics. There appears to be some content mixing between lessons, particularly with the Tennyson literature section appearing to be part of Lesson III but continuing into Lesson IV territory. The second lesson appears to be just a header with no content.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 32243,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 42286,
+        "output_tokens": 655,
+        "cost": 0.1367
+      }
+    }
+  ]
+}

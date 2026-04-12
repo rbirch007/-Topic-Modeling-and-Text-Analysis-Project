@@ -1,0 +1,128 @@
+{
+  "volume": 10,
+  "month": "January",
+  "year": 1923,
+  "total_merged": 3,
+  "total_splits": 7,
+  "total_cost": 0.339,
+  "files": [
+    {
+      "source_file": "January_Vol10_05_Article_Another_Woman_for_the_Hall_of_Fame_Alice_L._Reynolds.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Another Woman for the Hall of Fame",
+          "category": "Article",
+          "author": "Alice L. Reynolds",
+          "start_boundary": "Another Woman for the Hall of Fame Alice L. Reynolds The prohibition",
+          "end_boundary": "bearing her name is found upon the campus of the University of Michigan.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Hints About Mailing",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "HINTS ABOUT MAILING Mrs. Jeanette A. Hyde, business manager of the Relief",
+          "end_boundary": "require a record or receipt.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "ANOTHER WOMAN FOR THE HALL OF FAME"
+      ],
+      "notes": "The file contains two distinct pieces: a biographical article about Alice Freeman Palmer by Alice L. Reynolds, and a brief informational piece about mailing hints by Mrs. Jeanette A. Hyde. The second piece appears to be administrative content for the magazine rather than a full article.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 16017,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 35123,
+        "output_tokens": 357,
+        "cost": 0.1107
+      }
+    },
+    {
+      "source_file": "January_Vol10_09_Article_Relief_Society_Nurse_Aids'_Course_Emma_A._Empey.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Nurse Aids' Course",
+          "category": "Article",
+          "author": "Emma A. Empey",
+          "start_boundary": "Relief Society Nurse Aids' Course Emma A. Empey For the benefit",
+          "end_boundary": "Avoid worry; it enfeebles mind and body.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY NURSE AID'S COURSE"
+      ],
+      "notes": "This file contains a single article about the Relief Society Nurse Aids' Course, followed by a short section titled 'QUALITY VS. QUANTITY LIVING' which appears to be part of the same article as it continues without a clear break and matches the content style. The article includes detailed requirements, instructions, and clothing lists for the nursing course.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 9379,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33910,
+        "output_tokens": 279,
+        "cost": 0.1059
+      }
+    },
+    {
+      "source_file": "January_Vol10_18_Guide_Lessons_Guide_Lessons_for_March.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guardian and Ministering Angels",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MARCH 43 is more than poetry",
+          "end_boundary": "to be taught the doctrine of guardian angels?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week in March)",
+          "end_boundary": "LESSON II Work and Business (Second Week in March)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Benjamin Franklin",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in March) BENJAMIN FRANKLIN",
+          "end_boundary": "Part I, Chapter II. Seeking His Fortune.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "What Courtship Should Reveal (Continued)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in March)",
+          "end_boundary": "10 vols. Of 1920, leather bound.................",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS FOR MARCH",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains the complete Guide Lessons for March with 4 distinct lessons: Lesson I (Theology - Guardian Angels), Lesson II (Work and Business - appears to be just a header), Lesson III (Literature - Benjamin Franklin), and Lesson IV (Social Service - Courtship). The file also includes advertisements and other content at the end that should be included with the final lesson split.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 28685,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38040,
+        "output_tokens": 554,
+        "cost": 0.1224
+      }
+    }
+  ]
+}

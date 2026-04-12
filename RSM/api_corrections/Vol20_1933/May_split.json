@@ -1,0 +1,52 @@
+{
+  "volume": 20,
+  "month": "May",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1695,
+  "files": [
+    {
+      "source_file": "May_Vol20_17_Article_Health_in_the_Vegetable_Kingdom_Lucy_Rose_Middleton.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Health in the Vegetable Kingdom",
+          "category": "Article",
+          "author": "Lucy Rose Middleton",
+          "start_boundary": "Health in the Vegetable Kingdom By Lucy Rose Middleton",
+          "end_boundary": "Serve with French Dressing made with lemon juice.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Relief Society Teachers",
+          "category": "Article",
+          "author": "Fern Rose McBride",
+          "start_boundary": "The Relief Society Teachers By Fern Rose McBride",
+          "end_boundary": "forgetting she had ever been down-hearted.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HEALTH IN THE VEGETABLE KINGDOM"
+      ],
+      "notes": "This file contains two distinct articles as listed in the table of contents. The first is a health/nutrition article with recipes, and the second is a short story about Relief Society visiting teachers. The boundary between articles is clear, with the second article starting immediately after the asparagus salad recipe that concludes the first article.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8136,
+      "tier": 1,
+      "pdf_pages": [
+        355,
+        356,
+        357
+      ],
+      "api_usage": {
+        "input_tokens": 54649,
+        "output_tokens": 367,
+        "cost": 0.1695
+      }
+    }
+  ]
+}

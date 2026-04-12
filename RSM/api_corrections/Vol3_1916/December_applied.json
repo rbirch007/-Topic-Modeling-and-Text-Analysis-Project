@@ -1,0 +1,32 @@
+{
+  "volume": 3,
+  "month": "December",
+  "year": 1916,
+  "timestamp": "20260315_120937",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol3_03_Article_Reception_at_the_McCune_Home_Susa_Young_Gates.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (8303 chars removed)"
+    },
+    {
+      "file": "December_Vol3_04_Article_Nearest_and_Dearest_Ruth_Moench_Bell.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (8298 chars added)"
+    },
+    {
+      "file": "December_Vol3_08_Article_Christmas_Menus.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol3_13_Article_Preview_of_Guide_Work_for_1916-17.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

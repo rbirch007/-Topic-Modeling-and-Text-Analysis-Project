@@ -1,0 +1,40 @@
+{
+  "volume": 6,
+  "month": "December",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0214,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol6_07b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 155,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only a header fragment. The PDF shows this is just a lesson title that appears in the table of contents on page 117, but there is no actual lesson content for 'Work and Business' in the provided pages. The actual guide lessons shown are about Jesus's prayer and genealogy topics.",
+      "api_usage": {
+        "input_tokens": 6278,
+        "output_tokens": 171,
+        "cost": 0.0214
+      },
+      "pdf_pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "volume": 2,
+  "month": "March",
+  "year": 1915,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1536,
+  "files": [
+    {
+      "source_file": "March_Vol2_17_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Lesson II: Repentance",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 161 cometh into the world",
+          "end_boundary": "sons of perdition. ? (From \"Gospel Themes.\")",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Lesson III: Individual and Family Histories",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "Genealogy. First Week. Lesson III ? Individual",
+          "end_boundary": "Specially Interested in.. .. 1",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Ethics - Lesson IV: Integrity",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. ETHICS. Lesson IV",
+          "end_boundary": "defining words and terms. ART. \"In my",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Art - In My Father's House Are Many Mansions",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART. \"In my Father's house are many",
+          "end_boundary": "Ramsey's carving on the great organ. NOTICE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains the Guide Lessons section with four distinct lesson topics: Theology (Repentance), Genealogy (Individual and Family Histories), Home Ethics (Integrity), and Art (architecture and music). The file also contains extensive advertisements at the end which are not part of the lesson content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12070,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 48444,
+        "output_tokens": 553,
+        "cost": 0.1536
+      }
+    }
+  ]
+}

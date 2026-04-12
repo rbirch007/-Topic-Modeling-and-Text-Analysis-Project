@@ -1,0 +1,187 @@
+{
+  "volume": 10,
+  "month": "January",
+  "year": 1923,
+  "total_files_checked": 20,
+  "files_correct": [
+    "January_Vol10_02_Article_Happy_New_Year_Lucy_May_Green.txt",
+    "January_Vol10_04_Article_Good-bye_Old_Year_Alveretta_S._Engar.txt",
+    "January_Vol10_05a_Article_Another_Woman_for_the_Hall_of_Fame.txt",
+    "January_Vol10_08_Article_The_Bringing_Round_of_Mr._Thompson_Venice_F._Anderson.txt",
+    "January_Vol10_09a_Article_Relief_Society_Nurse_Aids_Course.txt",
+    "January_Vol10_10_Article_President_Clarissa_S._Williams_Visits_Mexico.txt",
+    "January_Vol10_12_Article_Dairy_Products_and_Public_Welfare_Fred_W._Merrill.txt",
+    "January_Vol10_13_Article_A_Trusting_Heart_Hazel_S._Washburn.txt",
+    "January_Vol10_15_Article_How_not_to_Catch_Cold.txt",
+    "January_Vol10_18b_Guide_Lessons_Work_and_Business.txt",
+    "January_Vol10_18c_Guide_Lessons_Benjamin_Franklin.txt",
+    "January_Vol10_18d_Guide_Lessons_What_Courtship_Should_Reveal_Continued.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol10_03_Article_The_New_Year.txt",
+      "issue_type": "missing_text",
+      "description": "Missing page number '4' that appears between the end of this article and the start of the next",
+      "action": "append",
+      "text": "4 RELIEF SOCIETY MAGAZINE",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "January_Vol10_05b_Notes_from_Field_Hints_About_Mailing.txt",
+      "issue_type": "wrong_content",
+      "description": "This file contains mailing hints but should be part of the Amy Brown Lyman article based on OCR structure",
+      "action": "note",
+      "text": "This content should be merged with the Amy Brown Lyman article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "January_Vol10_06_Article_Amy_Brown_Lyman_Elected_to_State_Legislature_Dr._George_W._M.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and bleeds into National Council content",
+      "action": "trim_end",
+      "text": "As representative of the big Church organization with which she is affiliated, Mrs.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_07_Article_National_Council_of_Women.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of Amy Brown Lyman article",
+      "action": "trim_start",
+      "text": "National Council of Women",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_11_Conventions_Conventions_and_Conferences.txt",
+      "issue_type": "missing_text",
+      "description": "Article cuts off mid-word at 'Sarah M.' - missing 'McLelland'",
+      "action": "append",
+      "text": "McLelland",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol10_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "missing_text",
+      "description": "Missing page number '34' that appears at the end",
+      "action": "append",
+      "text": "34 RELIEF SOCIETY MAGAZINE",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "January_Vol10_16_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that should be in separate file",
+      "action": "trim_end",
+      "text": "A time budget helps greatly in saving time, energy, and worry.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_17_Editorial_Editorial,_Serving_in_a_Humble_Sphere.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of previous article content",
+      "action": "trim_start",
+      "text": "EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_18a_Guide_Lessons_Guardian_and_Ministering_Angels.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The nursery rhyme, \"Lie still, my babe, and sweetly slumber, Haly angels guard thy bed,\"",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most articles are correctly extracted. Main issues are with file boundaries where content bleeds between articles, particularly around the Amy Brown Lyman/National Council articles and the Editorial section. The Guide Lessons appear to be split appropriately into separate files. Some page numbers are missing from article endings.",
+  "validated_corrections": [
+    {
+      "file": "January_Vol10_03_Article_The_New_Year.txt",
+      "issue_type": "missing_text",
+      "description": "Missing page number '4' that appears between the end of this article and the start of the next",
+      "action": "append",
+      "text": "4 RELIEF SOCIETY MAGAZINE",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "January_Vol10_06_Article_Amy_Brown_Lyman_Elected_to_State_Legislature_Dr._George_W._M.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and bleeds into National Council content",
+      "action": "trim_end",
+      "text": "As representative of the big Church organization with which she is affiliated, Mrs.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_07_Article_National_Council_of_Women.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of Amy Brown Lyman article",
+      "action": "trim_start",
+      "text": "National Council of Women",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "missing_text",
+      "description": "Missing page number '34' that appears at the end",
+      "action": "append",
+      "text": "34 RELIEF SOCIETY MAGAZINE",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "January_Vol10_16_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that should be in separate file",
+      "action": "trim_end",
+      "text": "A time budget helps greatly in saving time, energy, and worry.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_17_Editorial_Editorial,_Serving_in_a_Humble_Sphere.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of previous article content",
+      "action": "trim_start",
+      "text": "EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol10_18a_Guide_Lessons_Guardian_and_Ministering_Angels.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The nursery rhyme, \"Lie still, my babe, and sweetly slumber, Haly angels guard thy bed,\"",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "January_Vol10_11_Conventions_Conventions_and_Conferences.txt",
+      "issue_type": "missing_text",
+      "description": "Article cuts off mid-word at 'Sarah M.' - missing 'McLelland'",
+      "action": "append",
+      "text": "McLelland",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

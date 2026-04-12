@@ -1,0 +1,117 @@
+{
+  "volume": 10,
+  "month": "July",
+  "year": 1923,
+  "total_merged": 2,
+  "total_splits": 5,
+  "total_cost": 0.2807,
+  "files": [
+    {
+      "source_file": "July_Vol10_08d_Notes_from_Field_Notes_from_the_Field_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman",
+          "end_boundary": "St. George Stake Mrs. Rosella",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains a single article 'Notes from the Field' by Amy Brown Lyman. The file appears to be cut off at the end, ending mid-sentence with 'Mrs. Rosella' in the 'IN MEMORIAM' section under 'St. George Stake'. This is consistent with it being part of a larger merged file that was split.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8753,
+      "tier": 1,
+      "pdf_pages": [
+        424,
+        425,
+        426,
+        427,
+        428,
+        429
+      ],
+      "api_usage": {
+        "input_tokens": 44411,
+        "output_tokens": 269,
+        "cost": 0.1373
+      }
+    },
+    {
+      "source_file": "July_Vol10_11a_Guide_Lessons_Guide_Lessons_for_September_c_c_c.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Exaltation",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First Week",
+          "end_boundary": "Discuss: God exalts no one arbitrarily. 12.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "Work and Business (Second Week in September)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - James Fenimore Cooper",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in September)",
+          "end_boundary": "7. Who wrote Adam Bede? LESSON IV",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Marriage and its Adjustments",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "enforcement. He regards it as no more",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 lesson sections from the Guide Lessons for September. Lesson II (Work and Business) appears to be just a header with no content. The file ends abruptly in the middle of a Teachers' Topic section, suggesting it may be incomplete or truncated.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11364,
+      "tier": 1,
+      "pdf_pages": [
+        433,
+        434,
+        435,
+        436,
+        437,
+        438
+      ],
+      "api_usage": {
+        "input_tokens": 45182,
+        "output_tokens": 526,
+        "cost": 0.1434
+      }
+    }
+  ]
+}

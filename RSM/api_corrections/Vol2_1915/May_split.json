@@ -1,0 +1,128 @@
+{
+  "volume": 2,
+  "month": "May",
+  "year": 1915,
+  "total_merged": 2,
+  "total_splits": 8,
+  "total_cost": 0.1959,
+  "files": [
+    {
+      "source_file": "May_Vol2_06_Home_Science_Home_Gardening_for_Women.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Men and women who actually build up, The Builders",
+          "end_boundary": "November — Alpine, Box Elder, Cache, Davis, Ensign,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Lesson II - Baptism for the Dead",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. Lesson I. Work and Business. First",
+          "end_boundary": "man's eternal welfare.— From Gospel Themes, by Orson F. Whitney.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons - Lesson III - Genealogy - Approximating Dates",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "Genealogy. Third Week. Lesson III — Approximating Dates.",
+          "end_boundary": "the marriage date of the widow in the death",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons - Lesson IV - Home Ethics and Art",
+          "category": "Home_Ethics",
+          "author": "Elizabeth S. Wilcox",
+          "start_boundary": "Home Ethics and Art. ETHICS. LESSON IV —",
+          "end_boundary": "UTAH AGRICULTURAL COLLEGE Mothers, educate your daughters —",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains multiple lesson sections from the Guide Lessons portion of the magazine, including Editorial content, Theology lesson on Baptism for the Dead, Genealogy lesson on Approximating Dates, and Home Ethics/Art lesson on Economy. The file also contains conference information and various administrative content mixed with the lessons.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10977,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 29124,
+        "output_tokens": 580,
+        "cost": 0.0961
+      }
+    },
+    {
+      "source_file": "May_Vol2_10_Genealogy_Genealogy.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Genealogy - Lesson III - Approximating Dates",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "Genealogy. Third Week. Lesson III — Approximating Dates.",
+          "end_boundary": "Mrs. Mary Smith, (widow) John Jones",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Home Ethics - Lesson IV - Economy",
+          "category": "Home_Ethics",
+          "author": "Elizabeth S. Wilcox",
+          "start_boundary": "Home Ethics and Art. ETHICS. LESSON IV",
+          "end_boundary": "suitable to the subject. — E. S. W.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Art - Devotees and their Shrines",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART. If there is anything lovely *",
+          "end_boundary": "exhibited by Salt Lake Artists?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Colds",
+          "category": "Home_Science",
+          "author": "Maud Baggarley",
+          "start_boundary": "Colds. By Maud Baggarley. \"Just an",
+          "end_boundary": "of the State of Utah.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE",
+        "COLDS"
+      ],
+      "notes": "This file contains multiple lesson sections merged together - a Genealogy lesson on approximating dates, a Home Ethics lesson on economy, an Art lesson referencing 'Devotees and their Shrines', and a health article on colds. The last section includes advertisements and appears to run to the end of the file content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 17097,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 30514,
+        "output_tokens": 548,
+        "cost": 0.0998
+      }
+    }
+  ]
+}

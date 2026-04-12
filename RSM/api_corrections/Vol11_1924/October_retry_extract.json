@@ -1,0 +1,61 @@
+{
+  "volume": 11,
+  "month": "October",
+  "year": 1924,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.1217,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Woman's Sphere Broadens",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article should be on page 501 according to the table of contents, but the provided PDF pages (577, 578, 579, 580, 581) do not include page 501. The pages shown contain advertisements and front matter only.",
+      "order": "d",
+      "pdf_pages": [
+        577,
+        578,
+        579,
+        580,
+        581
+      ],
+      "source_file": "October_Vol11_04_Article_Why_There_Should_be_More_Influence_of_Women_in_our_Legislatu.txt",
+      "api_usage": {
+        "input_tokens": 8451,
+        "output_tokens": 220,
+        "cost": 0.0287
+      }
+    },
+    {
+      "title": "Guide Lessons for December - Lesson IV: Social Service - Problems of Income",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (558-562) contain 'Notes from the Field' content about Relief Society stakes and a poem titled 'Cheerfulness' by Coral J. Black, followed by 'Guide Lessons for November' about parables. The December guide lessons are not present in these pages. The article would likely appear later in the magazine based on the table of contents showing it on page 532.",
+      "order": "d",
+      "pdf_pages": [
+        558,
+        559,
+        560,
+        561,
+        562
+      ],
+      "source_file": "October_Vol11_16_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "api_usage": {
+        "input_tokens": 8493,
+        "output_tokens": 166,
+        "cost": 0.028
+      }
+    }
+  ]
+}

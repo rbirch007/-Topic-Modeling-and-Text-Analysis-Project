@@ -1,0 +1,69 @@
+{
+  "volume": 8,
+  "month": "July",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1831,
+  "files": [
+    {
+      "source_file": "July_Vol8_05a_Article_Our_Music_Forces_a_a_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Our Music Forces",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "OUR MUSIC FORCES No better work has",
+          "end_boundary": "position they occupy. Out of the",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Out of the World",
+          "category": "Article",
+          "author": "Milton G. Babcock",
+          "start_boundary": "Out of the World By Milton G.",
+          "end_boundary": "Relief Society Magazine, Room 20 Bishop's Building.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NEW PRESIDENT AND GENERAL BOARD",
+        "OUT OF THE WORLD"
+      ],
+      "notes": "This file contains two distinct articles. The first is 'Our Music Forces' which profiles the musical leadership of the Relief Society including Mrs. Lizzie Thomas Edward and Miss Edna Coray. The second is a continuation of 'Out of the World' by Milton G. Babcock, a serialized story. The boundary is clear where one article ends and the other begins with the title 'Out of the World'.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 9304,
+      "tier": 1,
+      "pdf_pages": [
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430
+      ],
+      "api_usage": {
+        "input_tokens": 59197,
+        "output_tokens": 368,
+        "cost": 0.1831
+      }
+    }
+  ]
+}

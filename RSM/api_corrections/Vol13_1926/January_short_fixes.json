@@ -1,0 +1,39 @@
+{
+  "volume": 13,
+  "month": "January",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0195,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol13_03_Article_Where_Hollyhocks_Grew_Annie_D_Palmer.txt",
+      "status": "not_found",
+      "current_chars": 132,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Where Hollyhocks Grew' by Annie D. Palmer is listed in the table of contents on page 3, but the provided PDF images only show the cover page and two advertisement pages. The actual article content is not visible in these images.",
+      "api_usage": {
+        "input_tokens": 5694,
+        "output_tokens": 160,
+        "cost": 0.0195
+      },
+      "pdf_pages": [
+        0,
+        1,
+        2
+      ]
+    }
+  ]
+}

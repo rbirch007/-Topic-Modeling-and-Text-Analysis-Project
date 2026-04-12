@@ -1,0 +1,58 @@
+{
+  "volume": 6,
+  "month": "December",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.2612,
+  "files": [
+    {
+      "source_file": "December_Vol6_01a_Article_General_Relief_Society_Conference_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "General Relief Society Conference",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "General Relief Society Conference. . . .Amy Brown Lyman",
+          "end_boundary": "Discussion followed. VERA. Grace Ingles Frost. Fair as",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GENERAL CONFERENCE OF RELIEF SOCIETY"
+      ],
+      "notes": "This is a single comprehensive conference report, not multiple merged articles. The content flows as one continuous report covering the Relief Society Conference and associated genealogical convention.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 37434,
+      "tier": 1,
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "api_usage": {
+        "input_tokens": 85316,
+        "output_tokens": 353,
+        "cost": 0.2612
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "volume": 8,
+  "month": "November",
+  "year": 1921,
+  "timestamp": "20260315_120947",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 5,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol8_01_Frontispiece_1921_President_Heber_J._Grant_Overlooking_Dixie_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol8_02_Article_My_Dixie_Home_President_A._W._Ivins.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol8_03_Article_A_Memorable_Journey_to_the_Scenic_Glories_of_Southern_Utah_S.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "November_Vol8_03_Article_A_Memorable_Journey_to_the_Scenic_Glories_of_Southern_Utah_S.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3592 chars added)"
+    },
+    {
+      "file": "November_Vol8_05_Article_Marigold_Raveina_Lundgren.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "November_Vol8_05_Article_Marigold_Raveina_Lundgren.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol8_05_Article_Marigold_Raveina_Lundgren.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2047 chars removed)"
+    },
+    {
+      "file": "November_Vol8_08_Article_Out_of_the_World_G._Milton_Babcock.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "November_Vol8_12a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol8_12b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol8_12c_Guide_Lessons_Lesson_III_-_Literature.txt",
+      "action": "append",
+      "result": "APPLIED append (44 chars added)"
+    }
+  ]
+}

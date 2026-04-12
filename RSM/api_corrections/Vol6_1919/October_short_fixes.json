@@ -1,0 +1,45 @@
+{
+  "volume": 6,
+  "month": "October",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0218,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "October_Vol6_01_Reverend_Anna_Howard_Shaw_Frontispiece.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "October_Vol6_20c_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 193,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only lesson headers/titles from a table of contents or lesson index. The actual lesson content is not present in the provided PDF pages, which show different lessons (Problems and Questions, Genealogy, Home Courses). This appears to be a header artifact with no substantive article content.",
+      "api_usage": {
+        "input_tokens": 6457,
+        "output_tokens": 165,
+        "cost": 0.0218
+      },
+      "pdf_pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 5,
+  "month": "September",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0229,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Take Time Mrs. Effie Rowley",
+      "printed_page": 542,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": "Mrs. Effie Rowley",
+      "confidence": "high",
+      "notes": "The article 'Take Time' by Mrs. Effie Rowley listed on page 542 in the table of contents is not visible in any of the four provided PDF page images (pages 545, 546, 547, 548). The images show advertisements and other content but do not contain this article. The article may be on pages not included in these images.",
+      "api_usage": {
+        "input_tokens": 6756,
+        "output_tokens": 178,
+        "cost": 0.0229
+      },
+      "pdf_pages": [
+        545,
+        546,
+        547,
+        548
+      ]
+    }
+  ]
+}

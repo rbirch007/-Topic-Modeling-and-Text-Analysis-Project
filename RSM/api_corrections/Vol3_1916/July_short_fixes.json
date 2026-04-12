@@ -1,0 +1,38 @@
+{
+  "volume": 3,
+  "month": "July",
+  "year": 1916,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0218,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol3_01_Frontispiece_A_Little_Child_Shall_Lead_Them_Frontispiece.txt",
+      "status": "delete",
+      "current_chars": 32,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a caption fragment from a frontispiece image. The PDF pages show biographical text about Lucy Mack Smith and a poem 'Within the Locket', but no article titled 'A Little Child Shall Lead Them'. This appears to be a misextracted caption or header artifact.",
+      "api_usage": {
+        "input_tokens": 6379,
+        "output_tokens": 177,
+        "cost": 0.0218
+      },
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}

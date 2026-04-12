@@ -1,0 +1,42 @@
+{
+  "volume": 2,
+  "month": "November",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (714 chars added)"
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (25 chars added)"
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6986 chars removed)"
+    }
+  ]
+}

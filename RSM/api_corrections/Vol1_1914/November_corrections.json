@@ -1,0 +1,106 @@
+{
+  "volume": 1,
+  "month": "November",
+  "year": 1914,
+  "total_files_checked": 12,
+  "files_correct": [
+    "V1_1914_Nov_05_Art_Editorial.txt",
+    "V1_1914_Nov_06_Art_Genealogy.txt",
+    "V1_1914_Nov_07_Art_HomeGarden.txt",
+    "V1_1914_Nov_08_Art_Literature.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Nov_04_Art_LD.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains L.D.S. Business College ad but mostly contains Emmeline B. Wells' remarks which should be a separate article",
+      "action": "replace_content",
+      "text": "A SUCCESSFUL COLLEGE GROWS\n\nIn one year our increase has been forty per cent.\n\nL. D. S. BUSINESS COLLEGE\nSALT LAKE CITY, UTAH\n\nDay Sessions: seven dollars a month\nNight Sessions: four dollars a month",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Nov_09_Art_October.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'the Relief Society Magazine' in the text about the new magazine",
+      "action": "note",
+      "text": "OCR shows 'the Relief Society Magazine' but file shows incomplete text",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_09_Art_October.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'RELIEF SOCIETY MAGAZINE' in communications section",
+      "action": "note",
+      "text": "OCR shows 'RELIEF SOCIETY MAGAZINE' but file shows incomplete text",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_11_Art_OURADVERTI.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'THE RELIEF SOCIETY BULLETIN' in the committee attribution",
+      "action": "note",
+      "text": "OCR shows 'THE RELIEF SOCIETY BULLETIN COMMITTEE' but file shows incomplete text",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_11_Art_OURADVERTI.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'RELIEF SOCIETY BULLETIN' in the page number line",
+      "action": "note",
+      "text": "OCR shows 'RELIEF SOCIETY BULLETIN 15' but file shows incomplete text",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_12_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry, and has incorrect title",
+      "action": "note",
+      "text": "File contains LARKIN-HULL UNDERTAKING CO. and other ads, should be categorized as advertisement",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_13_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry, and has incorrect title",
+      "action": "note",
+      "text": "File contains Utah State National Bank and other ads, should be categorized as advertisement",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_14_Poem_TWOSTORES.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "File contains various business advertisements, should be categorized as advertisement",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Nov_15_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry, and has incorrect title",
+      "action": "note",
+      "text": "File contains Beneficial Life Insurance Co. ad, should be categorized as advertisement",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Remarks Pres. Emmeline B. Wells",
+      "expected_page": 1,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_Nov_04_Art_LD.txt"
+    }
+  ],
+  "notes": "Several files are incorrectly categorized as poetry when they contain advertisement content. The L.D.S. Business College file contains mostly Emmeline B. Wells' remarks rather than just the advertisement. Some text appears to be missing from OCR in certain files, particularly magazine titles and bulletin references.",
+  "validated_corrections": [],
+  "failed_validations": []
+}

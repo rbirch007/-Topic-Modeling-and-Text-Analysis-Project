@@ -1,0 +1,206 @@
+{
+  "volume": 1,
+  "month": "October",
+  "year": 1914,
+  "total_files_checked": 18,
+  "files_correct": [],
+  "corrections": [
+    {
+      "file": "V1_1914_Oct_04_Art_LD.txt",
+      "issue_type": "ad_content",
+      "description": "File contains L.D.S. Business College advertisement followed by magazine masthead - both should be in Misc",
+      "action": "replace_content",
+      "text": "This file contains advertisement content that should be moved to Misc file",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Oct_05_Art_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Editorial ends with 'October' which appears to be start of next lesson",
+      "action": "trim_end",
+      "text": "Smith, and of our own Presidency of this Society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_06_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This is not a poem but the start of Work and Business lesson - should be categorized as Article",
+      "action": "note",
+      "text": "Content is lesson material, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Oct_07a_Art_Genealogy_and_Testimony.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and appears to continue into next lesson",
+      "action": "append",
+      "text": "October",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_Oct_07b_Art_Art.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'October ART' suggesting it should start with just 'ART'",
+      "action": "trim_start",
+      "text": "ART  Lesson III.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_08_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This contains questions from the Art lesson, not poetry",
+      "action": "note",
+      "text": "Content is lesson questions, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Oct_09_Art_Literature.txt",
+      "issue_type": "bleed_end",
+      "description": "Literature lesson appears to continue into Home Ethics lesson without proper separation",
+      "action": "trim_end",
+      "text": "Name the public benefactions of Benjamin Franklin.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_10_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "Home Gardening article continues into Relief Society Magazine notice",
+      "action": "trim_end",
+      "text": "Sterilization, good jars, good rubbers, lids and cleanliness are the essentials to be relied on.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_13_Art_WHERE.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues into advertisement content",
+      "action": "trim_end",
+      "text": "Salt Lake THOMAS HULL ELIJAH A.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_14_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "replace_content",
+      "text": "This file contains advertisement content that should be moved to Misc file",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Oct_15_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "replace_content",
+      "text": "This file contains advertisement content that should be moved to Misc file",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Oct_16_Poem_TWOSTORES.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "replace_content",
+      "text": "This file contains advertisement content that should be moved to Misc file",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Oct_18_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "replace_content",
+      "text": "This file contains advertisement content that should be moved to Misc file",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Home-Ethics",
+      "expected_page": 9,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_Oct_09_Art_Literature.txt"
+    },
+    {
+      "title": "Relief Society Magazine notice",
+      "expected_page": 13,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_Oct_10_Art_HomeGarden.txt"
+    },
+    {
+      "title": "New Report Blank notice",
+      "expected_page": 14,
+      "status": "not_in_any_file"
+    }
+  ],
+  "notes": "Many files are incorrectly categorized as 'Poetry' when they contain advertisements or lesson content. Several articles have content bleeding between lessons. Multiple advertisement files should be consolidated into a Misc file. The extraction appears to have significant boundary issues between articles.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Oct_05_Art_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Editorial ends with 'October' which appears to be start of next lesson",
+      "action": "trim_end",
+      "text": "Smith, and of our own Presidency of this Society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_07b_Art_Art.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'October ART' suggesting it should start with just 'ART'",
+      "action": "trim_start",
+      "text": "ART  Lesson III.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_09_Art_Literature.txt",
+      "issue_type": "bleed_end",
+      "description": "Literature lesson appears to continue into Home Ethics lesson without proper separation",
+      "action": "trim_end",
+      "text": "Name the public benefactions of Benjamin Franklin.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_10_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "Home Gardening article continues into Relief Society Magazine notice",
+      "action": "trim_end",
+      "text": "Sterilization, good jars, good rubbers, lids and cleanliness are the essentials to be relied on.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Oct_13_Art_WHERE.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues into advertisement content",
+      "action": "trim_end",
+      "text": "Salt Lake THOMAS HULL ELIJAH A.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V1_1914_Oct_07a_Art_Genealogy_and_Testimony.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and appears to continue into next lesson",
+      "action": "append",
+      "text": "October",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

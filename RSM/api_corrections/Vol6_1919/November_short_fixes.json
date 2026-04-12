@@ -1,0 +1,62 @@
+{
+  "volume": 6,
+  "month": "November",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0424,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "November_Vol6_01a_Art_Hindu_Temple_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 127,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption. The PDF shows a photograph of the Gateway to Hindu Temple in Lucknow, India with the exact caption text that appears in the file. This is the complete content for this frontispiece image.",
+      "api_usage": {
+        "input_tokens": 6297,
+        "output_tokens": 151,
+        "cost": 0.0212
+      },
+      "pdf_pages": [
+        682,
+        683,
+        684,
+        685
+      ]
+    },
+    {
+      "source_file": "November_Vol6_12b_Lesson_LESSON_II_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 155,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The PDF pages shown are from March lessons (pages 116-119) covering religious topics and genealogy. No 'Work and Business' lesson for December is visible in these pages. The file appears to reference content not present in the provided PDF images.",
+      "api_usage": {
+        "input_tokens": 6304,
+        "output_tokens": 154,
+        "cost": 0.0212
+      },
+      "pdf_pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    }
+  ]
+}

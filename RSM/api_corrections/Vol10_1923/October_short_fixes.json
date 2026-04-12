@@ -1,0 +1,45 @@
+{
+  "volume": 10,
+  "month": "October",
+  "year": 1923,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0236,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 2,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "October_Vol10_02_Poetry_A_Temple_in_Canada_(A_Poem)_Helen_Orgill.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "October_Vol10_14c_Guide_Lessons_Guide_Lessons_for_December_-_Lesson_II_-_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 53,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The file references December lessons from October 1923 issue, but the PDF pages shown contain March lessons about Guardian Angels and W.C.T.U. content. The December lesson content is not present in these PDF pages.",
+      "api_usage": {
+        "input_tokens": 7035,
+        "output_tokens": 168,
+        "cost": 0.0236
+      },
+      "pdf_pages": [
+        43,
+        44,
+        45,
+        46
+      ]
+    }
+  ]
+}

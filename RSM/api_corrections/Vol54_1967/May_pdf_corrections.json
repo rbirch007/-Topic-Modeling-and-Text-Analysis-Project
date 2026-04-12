@@ -1,0 +1,55 @@
+{
+  "volume": 54,
+  "month": "May",
+  "year": 1967,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V54_05_01_Fict_The_Chapter.txt",
+      "status": "needs_fix",
+      "issue_type": "missing_text",
+      "description": "Article file is severely truncated - contains only header information and author name, missing the entire poem 'The Navajo Rug' by Barbara J. Warren which is the actual first prize poem content on this page",
+      "action": "replace_content",
+      "text": "[Vol54 | May 1967 | Page 4 | Fiction | The Golden | Chain Chapter]\n[The Golden Chain Chapter]\nWell of Peace Peggy Tangren\n\nFIRST PRIZE POEM\n\nTHE NAVAJO RUG\nBarbara J. Warren\n\nLike pieces of fallen cloud, the sheep are scattered on the hillside.\nIn the summer's hot wind and the winter's cold, the woman herds them.\nTo the hills in the day, to the corral at night,\nTo fresh grass and water she herds them.\nThe rug begins in Strength.\n\nA storm drapes itself around the mountain. The sheep are restless. They scatter.\nThe woman tries to gather them. She cannot.\nShe kneels in the dust of the land to pray. The sheep come together.\nTo the rug is added Faith.\n\nThe sheep are sheared. The wool stands in fat bags against the hogan wall.\nNow the carding begins. Short, quick strokes. Fibers straight. Dirt combed out.\nNow the spinning begins. Turning, turning, turning, turning of the spindle\nWhile knowing fingers pull the wool into a strong, straight thread.\nNow the washing begins; now the dyeing begins.\nInto the rug goes Patience.\n\nThe rug grows slowly on the loom.\nIts design, unwritten, has gathered itself in the mind of one\nWho has long looked out upon the land\nAnd seen its ever-changing colors and patterns.\nThe rug is woven in Beauty.\n\nThe way to the trading post is long.\nAnd when the woman gets there, what will she buy?\nLengths of sateen and velvet that shine like shimmering jewels on the shelf?\nNew dishes, a cooking pot? No, hers is so old.\nNo. This and this and — yes — this for her children.\nAnd this and this for her man.\nFor herself, not a thing.\nThe rug is finished in Love.\n\nThe woman is gone. You come to buy. The price is too much?\nNo, my friend. Not for the rug. Not for what is in it.\nAll that the woman is, is in this rug.\nAll she thinks, all she believes, all her skills, all she dreams of and hopes for\nHave been woven into one in this rug.\nAnd for all this, the price is never too much. Because you see, my friend,\nThe rug is the Woman.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V54_05_05_Poem_In_Jacobson.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains contest rules instead of the poem content - needs complete replacement with actual poem",
+      "action": "replace_content",
+      "text": "IN HIGH COUNTRY\n\nThe brisk, rare\nCrystal air\nOf timberline is washed and dried,\nPolished, burnished till it stings\nEyes and lungs, so close it brings\nShimmering distant cliffs, so near\nYou can see the\nGranite grain and crystal clear\nLake water, blue as winter sky.\n\nUp here the world\nIs cleanly furled\nIn space. The mind\nCan think, can find\nIts way through problems\nTangled, knotted\nIn the lower, thicker air.\nUp here, unspotted\nBy the world's confusion,\nThoughts can dare\nTo seek conclusion.\n\n♦ Ethel Jacobson",
+      "confidence": "high",
+      "page_verified": true
+    },
+    {
+      "file": "V54_05_07_Poem_Mothers_Lamb.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains completely wrong content from a different story instead of the Mother's Day poem",
+      "action": "replace_content",
+      "text": "MOTHER'S DAY\n\nDowny soft, and cuddly, blue as a baby's eyes;\nShe turns the bootee gently and breathes a longing sigh.\nUnder the folds of tissue the other bootee lies,\nWetted once by scalding tears—now dry.\n\nShe folds them both together and puts them back to rest\nIn the cedar chest of treasures she loves the very best.\nSomeday when the time is right, when God thinks it is best,\nShe'll use them for the baby at her breast.\n\n♦ Patricia A. Lamb",
+      "confidence": "high",
+      "page_verified": true
+    },
+    {
+      "file": "V54_05_29_Poem_I_Saw_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains entirely wrong content - cooking recipes instead of the expected poem by Christie Lund Coles",
+      "action": "note",
+      "text": "The article file contains cooking recipe content that does not match the expected poem 'I Saw Her Face' by Christie Lund Coles. The file needs to be completely replaced with the correct poem content from the page image.",
+      "confidence": "high",
+      "page_verified": true
+    },
+    {
+      "file": "V54_05_30_Poem_Desert_Chamberlin.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains content from next article about sewing that should be removed",
+      "action": "trim_end",
+      "text": "@ Enola Chamberlin",
+      "confidence": "high",
+      "page_verified": true
+    }
+  ]
+}

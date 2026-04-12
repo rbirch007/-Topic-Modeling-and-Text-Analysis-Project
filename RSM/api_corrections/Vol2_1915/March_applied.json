@@ -1,0 +1,22 @@
+{
+  "volume": 2,
+  "month": "March",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol2_02_Frontispiece_Frontispiece_—_Masonic_Lodge,_Nauvoo.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol2_17d_Art_Art_-_In_My_Fathers_House_Are_Many_Mansions.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

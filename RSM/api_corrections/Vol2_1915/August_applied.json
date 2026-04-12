@@ -1,0 +1,42 @@
+{
+  "volume": 2,
+  "month": "August",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol2_01_Article_Ye_Ancient_and_Honorable_Order_of_Midwifery.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1994 chars added)"
+    },
+    {
+      "file": "August_Vol2_01_Article_Ye_Ancient_and_Honorable_Order_of_Midwifery.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "August_Vol2_06_Article_Home_Department_—_Janette_A._Hyde.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "August_Vol2_07_Prince_of_Ur_A_Prince_of_Ur.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4072 chars added)"
+    },
+    {
+      "file": "August_Vol2_08_Article_Homespun.txt",
+      "action": "note",
+      "result": "INFO: This file contains the beginning of 'A Prince of Ur' story, not a separate 'Homespun' article"
+    },
+    {
+      "file": "August_Vol2_13d_Article_International_Genealogical_Congress_Trip_Report.txt",
+      "action": "note",
+      "result": "INFO: File starts mid-sentence without proper article beginning"
+    }
+  ]
+}

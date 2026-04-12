@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "August",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1065,
+  "files": [
+    {
+      "source_file": "August_Vol9_17_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for October - Lesson I - Theology and Testimony - Miracles",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for October LESSON I Theology and",
+          "end_boundary": "divine interposition in our behalf. BIN LESSON II",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for October - Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business. (Second Week",
+          "end_boundary": "in October) LESSON III Literature. (Third Week",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for October - Lesson III - Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature. (Third Week in October)",
+          "end_boundary": "of Latter-day Saints. WR WN LESSON IV",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for October - Lesson IV - Social Service - The Home and Early Adolescence",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "can no longer perceive.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections for October Guide Lessons, covering Theology/Miracles, Work/Business, Literature (focusing on Martin Luther's hymns), and Social Service (adolescence). Each lesson has clear boundaries with Roman numeral headings and distinct subject matter changes.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 19154,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32690,
+        "output_tokens": 562,
+        "cost": 0.1065
+      }
+    }
+  ]
+}

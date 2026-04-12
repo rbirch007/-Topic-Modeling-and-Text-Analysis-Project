@@ -1,0 +1,52 @@
+{
+  "volume": 8,
+  "month": "March",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1299,
+  "files": [
+    {
+      "source_file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Centennial of President Zina D. Huntington Young",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "the General Board are as follows: Mrs. Jeanette A. Hyde,",
+          "end_boundary": "before going into the Temple themselves.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Our Anniversary",
+          "category": "Article",
+          "author": "Lula L. Greene Richards",
+          "start_boundary": "Our Anniversary By Lula L. Greene Richards RAYS FROM",
+          "end_boundary": "Nancy's death, which was a remarkable one, occurred.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "CENTENNIAL OF PRESIDENT ZINA D. H. YOUNG",
+        "OUR ANNIVERSARY"
+      ],
+      "notes": "The file contains two distinct articles. The first is about the centennial celebration of President Zina D. H. Young, including a biographical sketch. The second is 'Our Anniversary' by Lula L. Greene Richards, which appears to be about Relief Society anniversary commemorations and includes historical sketches of early Relief Society members. There's a clear topic change between the two articles.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 19669,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 41328,
+        "output_tokens": 394,
+        "cost": 0.1299
+      }
+    }
+  ]
+}

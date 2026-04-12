@@ -1,0 +1,224 @@
+{
+  "volume": 1,
+  "month": "January",
+  "year": 1914,
+  "total": 11,
+  "ok": 11,
+  "flagged": 0,
+  "empty": 0,
+  "records": [
+    {
+      "file": "V1_1914_Jan_00_BOARD.txt",
+      "body_len": 2004,
+      "article_words": 177,
+      "words_in_ocr": 177,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_00_CONTENTS.txt",
+      "body_len": 203,
+      "article_words": 18,
+      "words_in_ocr": 18,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_00_Misc.txt",
+      "body_len": 15330,
+      "article_words": 556,
+      "words_in_ocr": 548,
+      "pct_in_ocr": 0.9856,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "additional",
+        "advertisements",
+        "commerci",
+        "consolidated",
+        "files",
+        "front",
+        "poem",
+        "separate"
+      ]
+    },
+    {
+      "file": "V1_1914_Jan_01_Art_Presidents_Address.txt",
+      "body_len": 5171,
+      "article_words": 340,
+      "words_in_ocr": 340,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_02_CurrEvents_Current_Events.txt",
+      "body_len": 4619,
+      "article_words": 361,
+      "words_in_ocr": 361,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_03_Gen_Genealogical_Department.txt",
+      "body_len": 5476,
+      "article_words": 341,
+      "words_in_ocr": 341,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_04_HomeEthics_Home_Ethics.txt",
+      "body_len": 1284,
+      "article_words": 108,
+      "words_in_ocr": 108,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_05_HomeGarden_Home_Gardening.txt",
+      "body_len": 5558,
+      "article_words": 405,
+      "words_in_ocr": 405,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_06_Lit_Literary_Department.txt",
+      "body_len": 7065,
+      "article_words": 485,
+      "words_in_ocr": 485,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_07_Art_Architecture_and_Art.txt",
+      "body_len": 4947,
+      "article_words": 346,
+      "words_in_ocr": 346,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jan_08_Instr_Instructions.txt",
+      "body_len": 5236,
+      "article_words": 351,
+      "words_in_ocr": 351,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol1_No1_January_1914.txt",
+    "ocr_chars": 44532,
+    "ocr_unique_words": 1894,
+    "contents_xref": {
+      "entries_in_contents": 8,
+      "matched": 8,
+      "match_details": [
+        {
+          "title": "President's Address",
+          "page": 1,
+          "file": "V1_1914_Jan_01_Art_Presidents_Address.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Current Events",
+          "page": 3,
+          "file": "V1_1914_Jan_02_CurrEvents_Current_Events.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Genealogical Department",
+          "page": 5,
+          "file": "V1_1914_Jan_03_Gen_Genealogical_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Home Ethics",
+          "page": 7,
+          "file": "V1_1914_Jan_04_HomeEthics_Home_Ethics.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Home Gardening",
+          "page": 8,
+          "file": "V1_1914_Jan_05_HomeGarden_Home_Gardening.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Literary Department",
+          "page": 11,
+          "file": "V1_1914_Jan_06_Lit_Literary_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Architecture and Art",
+          "page": 13,
+          "file": "V1_1914_Jan_07_Art_Architecture_and_Art.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Instructions",
+          "page": 14,
+          "file": "V1_1914_Jan_08_Instr_Instructions.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": []
+    }
+  }
+}

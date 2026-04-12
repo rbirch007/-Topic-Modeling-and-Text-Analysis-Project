@@ -1,0 +1,126 @@
+{
+  "volume": 1,
+  "month": "July",
+  "year": 1914,
+  "total_files_checked": 12,
+  "files_correct": [
+    "V1_1914_Jul_01_Art_Loyalty.txt",
+    "V1_1914_Jul_02_Art_Editorial.txt",
+    "V1_1914_Jul_04_Art_Notes.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Jul_03a_Lssn_Health_and_Hygiene_Lesson_II.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Lesson III which should be in the next file",
+      "action": "trim_end",
+      "text": "Penrose.) 8 .",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jul_03c_Lssn_Health_and_Hygiene_Lesson_IV.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from end of Lesson III",
+      "action": "trim_start",
+      "text": "11 July HEALTH AND HYGIENE Lesson IV.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jul_05_Art_SPECIAL.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and should continue with contact information",
+      "action": "append",
+      "text": "WILLIAMS, 37 North West Temple Street, Or DR. MARGARET C. ROBERTS, 79 C Street, Salt Lake City.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jul_06_Art_WILLIAMS.txt",
+      "issue_type": "wrong_content",
+      "description": "This file contains advertisement content that should be in Misc file",
+      "action": "replace_content",
+      "text": "This entire file contains advertisement content and should be moved to Misc",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Jul_07_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This is not a poem but administrative text about bulletin orders",
+      "action": "note",
+      "text": "Should be recategorized as administrative content, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jul_08_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains UNDERTAKING CO, ICE CREAM, and other ad markers",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jul_09_Poem_TWOSTORES.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains CO-OP FURNITURE, BURIAL CLOTHES and other ad markers",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jul_10_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains hotel and insurance advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jul_12_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This appears to be a fragment and not a complete poem",
+      "action": "note",
+      "text": "Very short fragment that may belong with another piece",
+      "confidence": "medium",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files labeled as 'Poetry' actually contain advertisement content that should be moved to a Misc file. The Health and Hygiene lessons have some boundary issues where content bleeds between files. Most advertisement content has been incorrectly categorized as poetry rather than being placed in appropriate Misc files.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Jul_03a_Lssn_Health_and_Hygiene_Lesson_II.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Lesson III which should be in the next file",
+      "action": "trim_end",
+      "text": "Penrose.) 8 .",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jul_03c_Lssn_Health_and_Hygiene_Lesson_IV.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from end of Lesson III",
+      "action": "trim_start",
+      "text": "11 July HEALTH AND HYGIENE Lesson IV.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jul_05_Art_SPECIAL.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and should continue with contact information",
+      "action": "append",
+      "text": "WILLIAMS, 37 North West Temple Street, Or DR. MARGARET C. ROBERTS, 79 C Street, Salt Lake City.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

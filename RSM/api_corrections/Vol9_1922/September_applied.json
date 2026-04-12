@@ -1,0 +1,62 @@
+{
+  "volume": 9,
+  "month": "September",
+  "year": 1922,
+  "timestamp": "20260315_120949",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 2,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "September_Vol9_01_Frontispiece_Pres._Heber_J._Grant_and_Pioneer_L._Sobriskie_Young_Frontisp.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "September_Vol9_03_Article_The_Pioneer_Jubilee_Annie_Wells_Cannon.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (60 chars added)"
+    },
+    {
+      "file": "September_Vol9_04_Article_This_is_the_Place_Julia_Dare.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2176 chars removed)"
+    },
+    {
+      "file": "September_Vol9_12_Article_My_Conversion_to_Work_for_the_Dead_Nina_B._McKean.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4813 chars removed)"
+    },
+    {
+      "file": "September_Vol9_14a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLESPART_IITHE_MIRAC.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (10 chars removed)"
+    },
+    {
+      "file": "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "September_Vol9_14d_Guide_Lessons_LESSON_IV_-_Social_Service_-_THE_PROBLEM_OF_DISCIPLINE_IN_EA.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6496 chars removed)"
+    }
+  ]
+}

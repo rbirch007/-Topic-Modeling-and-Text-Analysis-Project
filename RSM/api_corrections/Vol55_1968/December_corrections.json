@@ -1,0 +1,273 @@
+{
+  "volume": 55,
+  "month": "December",
+  "year": 1968,
+  "total_files_checked": 43,
+  "files_correct": [
+    "V55_12_02_Art_Mary_Stewart.txt",
+    "V55_12_03_Art_From_Near_and_Far.txt",
+    "V55_12_04_SpFt_The_Dyer.txt",
+    "V55_12_05_SpFt_Evon_W..txt",
+    "V55_12_06_Fict_Grandmother_Robins.txt",
+    "V55_12_07_Poem_Faith_Bowles.txt",
+    "V55_12_08_SpFt_With_a_Ross.txt",
+    "V55_12_10_GenFt_Womans_Cannon.txt",
+    "V55_12_12_SpFt_A_Tree.txt",
+    "V55_12_15_Fict_Her_Arnold.txt",
+    "V55_12_17_GenFt_Christmas_Cannon.txt",
+    "V55_12_18_GenFt_Cookies_Flack.txt",
+    "V55_12_19_GenFt_Candy_Layton.txt",
+    "V55_12_22_GenFt_Christmas_Felt.txt",
+    "V55_12_25_GenFt_A.txt",
+    "V55_12_26_GenFt_Christmas_Stake.txt",
+    "V55_12_28_GenFt_The_Hase.txt",
+    "V55_12_29_GenFt_Hobby_Head.txt",
+    "V55_12_30_Fict_Michele.txt",
+    "V55_12_32_Lssn_Spiritual_Doxey.txt",
+    "V55_12_33_Lssn_Visiting_Smith.txt",
+    "V55_12_34_Lssn_Homemaking_Taylor.txt",
+    "V55_12_35_Lssn_Social_Christensen.txt",
+    "V55_12_37_Lssn_Cultural_Clark.txt",
+    "V55_12_38_Poem_Remembered_Fairbai.txt",
+    "V55_12_39_Poem_Marriage_Larson.txt",
+    "V55_12_40_Poem_Happiness.txt",
+    "V55_12_41_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_12_01_Fict_Welcome_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be from a different story about Micronesia, not the Welcome the Task chapter 2 that should be on page 932",
+      "action": "replace_content",
+      "text": "This file contains content from a different story and needs to be replaced with the correct Welcome the Task Chapter 2 content",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_12_09_Poem_Told_By_Young.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content - shows Faith poem instead of Told By a Shepherd Boy",
+      "action": "replace_content",
+      "text": "I followed them to Bethlehem After the wondrous word, After the choir of angels came, oe After the song was heard. Over the hill to Bethlehem, Down to a stable door, Into the yellow lantern light, Softly across the floor, Softly beside a manger bed, To find the Christ Child there— How sweet his face, how small his hands, How silky, fine, his hair. Cradled low in a little stall, in a place where the cattle dwell— My heart was filled with a warming joy, A joy no words can tell... I followed them to Bethlehem, While the stars glowed tenderly— Now I keep my sheep on a lonely plain, But a king could envy me. —Sylvia Probst Young",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_12_11_GenFt_Editorials_Crawfor.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Relief Society board member names that belong to previous content",
+      "action": "trim_start",
+      "text": "Lloyd Hazel S. Love Fawn H. Sharp Celestia ). Taylor 902 Anne R. Gledhill Belva B. Ashton Zola J. McGhie Oa J. Cannon Lila B. Walch Lenore C. Gundersen Marjorie C. Pingree Darlene C. Dedekind Edythe K. Watson Ellen N. Barnes Kathryn S. Gilbert Verda F. Burton Myrtle R. Olson Alice C. Smith Lucile P. Peterson Elaine B. Curtis Zelma R. West Leanor J. Brown Reba C. Aldous Luetla W. Finlinson Norma 8B. Ashton Mayola R. Miitenberger Maurine M. Haycock O The 138th Semi-Annual Conference of the Church was held in the historic Tabernacle, Salt Lake City, Utah, October 4th, 5th, and 6th, 1968",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_13_Fict_A_Story_Shields.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "The glass had been broken out, but there were A Story for Christmas still the backing pieces of cardboard and a torn, yellowing piece of paper in it.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_14_Poem_South_McBride.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains story content instead of the South Window poem",
+      "action": "replace_content",
+      "text": "SOUTH WINDOW My south window is a. Happy place, I go there when I'm sad To gaze on varied scenes which lift My heart and make it glad. The seasons change the scenery My south window is a happy place, From daffodils to snow, I stand there every day But the feeling never changes— To let my heart laugh in the sun It's a lifting, lilting glow. And throw its cares away. —Ardith M. McBride",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_12_16_GenFt_The_Told.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous story",
+      "action": "trim_start",
+      "text": "There was Addie with the children's worn shoes before her.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_20_GenFt_Christmas_Dougal.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Christmas Comes to Australia content instead of Christmas Comes to Denmark",
+      "action": "replace_content",
+      "text": "Christmas Comes to Denmark content from OCR starting with Danish custom about Christmas cookies (Klejner)",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_12_21_GenFt_Christmas_Dansie.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be duplicate of Christmas Is for Friends content",
+      "action": "note",
+      "text": "File needs verification - appears to contain correct Christmas Is for Friends content but may be mislabeled",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_12_23_GenFt_A.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence about dried peaches",
+      "action": "append",
+      "text": "es. Roast beef, roast pork, chicken stuffed with dressing sometimes made the Christmas merry, and some of the English saints served roast goose, and the Danish mothers made many kinds of sweet rolls, rich with dried berries or dried fruit—in the days before raisins and currants were available. Scones were common in pioneer households, and precious small amounts of sugar were saved for many months for a \"sprinkling\" on the scones. A log cabin was large enough for the celebration of Christmas—for in the cabin were family and food—warmth and love—and the father with opened Bible—and the mother singing carols treasured from a far-off land—and children rejoicing in their new home.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_24_GenFt_A_Eccles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Pioneer Christmas article",
+      "action": "trim_start",
+      "text": "Roast beef, roast pork, chicken stuffed with dressing sometimes made the Christmas merry, and some of the English saints served roast goose, and the Danish mothers made many kinds of sweet rolls, rich with dried berries or dried fruit—in the days before raisins and currants were available. Scones were common in pioneer households, and precious small amounts of sugar were saved for many months for a \"sprinkling\" on the scones. A log cabin was large enough for the celebration of Christmas—for in the cabin were family and food—warmth and love—and the father with opened Bible—and the mother singing carols treasured from a far-off land—and children rejoicing in their new home. 925 Gladys Hibbard Eccles",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_27_GenFt_Look_Ones.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Christmas Heritage article",
+      "action": "trim_start",
+      "text": "Santa Claus dispensed gifts from the tree for the little ones. The refreshments were on a circular table with a candy covered gingerbread house as a centerpiece. The table was covered with a full length skirt of white felt, edged with gold fringe and decorated with felt cutouts. The cutouts were very clever reproductions of Santa and his reindeer, Mr. And Mrs. Snowman, and Christmas trees, decorated with rhinestones and sequins. 927 °7.**Look Books'' for the Little Ones",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_31_Poem_First_Coles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with story content instead of the First Hurt poem",
+      "action": "trim_start",
+      "text": "935 The game was exciting, finally ending in an extra-inning, onerun victory for the hometown -team, much to the delight of the fifty thousand plus who cheered wildly. The immense Astrodome made quite an impression on Jennifer. Any sport could be played in any weather, plus housing cultural and _ religious events. It was truly a twentieth century edifice. The company she was with was delightful, and Jennifer could hardly keep her eyes off the third young couple in the party. Jim Long was one of those young men girls dream about, with dark skin, thick dark hair, sparkling blue eyes that laughed constantly in a teasing, flirtatious way. When he spoke, Jennifer could see why he was studying law, and, in the meantime, worked as a radio disc jockey. She thought wr that television might suit him better, for the audience rating of women would soar. Of course Jennifer had to concede that he was with an equally attractive blonde, who was obviously bored with baseball. He devoted much of his attention to Jennifer. Dick seemed not to mind in the least his flirting with Jennifer, and Jennifer could hardly resist the temptation to be flattered and impressed with Jim. When they arrived home, much later, Bea was reading in bed. As Jennifer passed by and peeked in, Bea called, \"Hi, dear, did you have a nice time?\" Jennifer I dropped herself despondently on the edge of the bed. \"Oh, Bea, I just did the worst thing a girl can do. If I had any brains, I'd be dangerous.\" (To be continued) THE STAR WE SHARE Each of us had our Bethlehem, A mother's arms, a starfilled night, An angels' choir singing there...",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_36_Poem_Retrospect_Rothe.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson content instead of the Retrospect poem",
+      "action": "trim_start",
+      "text": "Unity need not lessen the exercise of one's inherent free agency —for in righteous unity one retains the priceless gift of individuality. President Clark implies this fact in the following phrases —\"one in purpose, one in will, one in faith, one in obedience, one in service, one in righteousness, but different personalities.\" (Melchizedek PriesthoodManual, 1968-69, Lesson 10.) How evident is the lack of unity in all nations of today's world. For Home-Doing Ask yourself: In what ways can I, as a Latter-day Saint woman, increase unity, harmony, and good will in our home, and in my neighborhood, and in the Church? Begin now. O\" THE ARTIST'S TOUCH So pure was the world when I was a child— Transparent and clear as a winter's night.... When hearthfire gleamed with warmth and love, For those were the years when the world was white. How wondrous the world when childhood was gone, And youth blossomed full as a summer's dream.... When days were Junetime.. For those were the years when the world was green. How restful the world now that youth has passed, And peace lies bounteous in the harvest fold.... When days stretch mellow as in autumn's dusk, For these are the years when the world is gold. ~..",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_42_Poem_The_Hunter.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - missing beginning of The Present poem",
+      "action": "prepend",
+      "text": "THE PRESENT If I gave my love a present of a tinkling silver bell, Could it chime the hour I met him that my heart remembers well? If I gave my love a present, a chain of gilded gold, Could it bind and entwine him better than my love could hold? If I gave my love a",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_12_43_Poem_The_Brown.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off incomplete at the end",
+      "action": "append",
+      "text": "ith emerald-glow, —Alda Larson Brown",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Many files have content bleeding issues where previous articles' content appears at the start of files. Several poems are incorrectly extracted or incomplete. The Welcome the Task Chapter 2 file contains completely wrong content from a different story. Overall extraction quality needs significant improvement for proper article boundaries.",
+  "validated_corrections": [
+    {
+      "file": "V55_12_11_GenFt_Editorials_Crawfor.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Relief Society board member names that belong to previous content",
+      "action": "trim_start",
+      "text": "Lloyd Hazel S. Love Fawn H. Sharp Celestia ). Taylor 902 Anne R. Gledhill Belva B. Ashton Zola J. McGhie Oa J. Cannon Lila B. Walch Lenore C. Gundersen Marjorie C. Pingree Darlene C. Dedekind Edythe K. Watson Ellen N. Barnes Kathryn S. Gilbert Verda F. Burton Myrtle R. Olson Alice C. Smith Lucile P. Peterson Elaine B. Curtis Zelma R. West Leanor J. Brown Reba C. Aldous Luetla W. Finlinson Norma 8B. Ashton Mayola R. Miitenberger Maurine M. Haycock O The 138th Semi-Annual Conference of the Church was held in the historic Tabernacle, Salt Lake City, Utah, October 4th, 5th, and 6th, 1968",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_13_Fict_A_Story_Shields.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "The glass had been broken out, but there were A Story for Christmas still the backing pieces of cardboard and a torn, yellowing piece of paper in it.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_16_GenFt_The_Told.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous story",
+      "action": "trim_start",
+      "text": "There was Addie with the children's worn shoes before her.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_23_GenFt_A.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence about dried peaches",
+      "action": "append",
+      "text": "es. Roast beef, roast pork, chicken stuffed with dressing sometimes made the Christmas merry, and some of the English saints served roast goose, and the Danish mothers made many kinds of sweet rolls, rich with dried berries or dried fruit—in the days before raisins and currants were available. Scones were common in pioneer households, and precious small amounts of sugar were saved for many months for a \"sprinkling\" on the scones. A log cabin was large enough for the celebration of Christmas—for in the cabin were family and food—warmth and love—and the father with opened Bible—and the mother singing carols treasured from a far-off land—and children rejoicing in their new home.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_24_GenFt_A_Eccles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Pioneer Christmas article",
+      "action": "trim_start",
+      "text": "Roast beef, roast pork, chicken stuffed with dressing sometimes made the Christmas merry, and some of the English saints served roast goose, and the Danish mothers made many kinds of sweet rolls, rich with dried berries or dried fruit—in the days before raisins and currants were available. Scones were common in pioneer households, and precious small amounts of sugar were saved for many months for a \"sprinkling\" on the scones. A log cabin was large enough for the celebration of Christmas—for in the cabin were family and food—warmth and love—and the father with opened Bible—and the mother singing carols treasured from a far-off land—and children rejoicing in their new home. 925 Gladys Hibbard Eccles",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_27_GenFt_Look_Ones.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Christmas Heritage article",
+      "action": "trim_start",
+      "text": "Santa Claus dispensed gifts from the tree for the little ones. The refreshments were on a circular table with a candy covered gingerbread house as a centerpiece. The table was covered with a full length skirt of white felt, edged with gold fringe and decorated with felt cutouts. The cutouts were very clever reproductions of Santa and his reindeer, Mr. And Mrs. Snowman, and Christmas trees, decorated with rhinestones and sequins. 927 °7.**Look Books'' for the Little Ones",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_31_Poem_First_Coles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with story content instead of the First Hurt poem",
+      "action": "trim_start",
+      "text": "935 The game was exciting, finally ending in an extra-inning, onerun victory for the hometown -team, much to the delight of the fifty thousand plus who cheered wildly. The immense Astrodome made quite an impression on Jennifer. Any sport could be played in any weather, plus housing cultural and _ religious events. It was truly a twentieth century edifice. The company she was with was delightful, and Jennifer could hardly keep her eyes off the third young couple in the party. Jim Long was one of those young men girls dream about, with dark skin, thick dark hair, sparkling blue eyes that laughed constantly in a teasing, flirtatious way. When he spoke, Jennifer could see why he was studying law, and, in the meantime, worked as a radio disc jockey. She thought wr that television might suit him better, for the audience rating of women would soar. Of course Jennifer had to concede that he was with an equally attractive blonde, who was obviously bored with baseball. He devoted much of his attention to Jennifer. Dick seemed not to mind in the least his flirting with Jennifer, and Jennifer could hardly resist the temptation to be flattered and impressed with Jim. When they arrived home, much later, Bea was reading in bed. As Jennifer passed by and peeked in, Bea called, \"Hi, dear, did you have a nice time?\" Jennifer I dropped herself despondently on the edge of the bed. \"Oh, Bea, I just did the worst thing a girl can do. If I had any brains, I'd be dangerous.\" (To be continued) THE STAR WE SHARE Each of us had our Bethlehem, A mother's arms, a starfilled night, An angels' choir singing there...",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_36_Poem_Retrospect_Rothe.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson content instead of the Retrospect poem",
+      "action": "trim_start",
+      "text": "Unity need not lessen the exercise of one's inherent free agency —for in righteous unity one retains the priceless gift of individuality. President Clark implies this fact in the following phrases —\"one in purpose, one in will, one in faith, one in obedience, one in service, one in righteousness, but different personalities.\" (Melchizedek PriesthoodManual, 1968-69, Lesson 10.) How evident is the lack of unity in all nations of today's world. For Home-Doing Ask yourself: In what ways can I, as a Latter-day Saint woman, increase unity, harmony, and good will in our home, and in my neighborhood, and in the Church? Begin now. O\" THE ARTIST'S TOUCH So pure was the world when I was a child— Transparent and clear as a winter's night.... When hearthfire gleamed with warmth and love, For those were the years when the world was white. How wondrous the world when childhood was gone, And youth blossomed full as a summer's dream.... When days were Junetime.. For those were the years when the world was green. How restful the world now that youth has passed, And peace lies bounteous in the harvest fold.... When days stretch mellow as in autumn's dusk, For these are the years when the world is gold. ~..",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_12_43_Poem_The_Brown.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off incomplete at the end",
+      "action": "append",
+      "text": "ith emerald-glow, —Alda Larson Brown",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_12_42_Poem_The_Hunter.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - missing beginning of The Present poem",
+      "action": "prepend",
+      "text": "THE PRESENT If I gave my love a present of a tinkling silver bell, Could it chime the hour I met him that my heart remembers well? If I gave my love a present, a chain of gilded gold, Could it bind and entwine him better than my love could hold? If I gave my love a",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

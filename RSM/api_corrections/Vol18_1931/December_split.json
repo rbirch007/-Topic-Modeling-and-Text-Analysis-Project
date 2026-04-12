@@ -1,0 +1,50 @@
+{
+  "volume": 18,
+  "month": "December",
+  "year": 1931,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.0872,
+  "files": [
+    {
+      "source_file": "December_Vol18_14_Article_Lesson_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "ineffective mere admonition,\"' \"pleasurable responsibilities.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains a single comprehensive lesson department section with multiple subsections including Theology and Testimony, Teachers' Topic, Literature (George Washington), and Social Service. All subsections are part of one unified lesson department article, not separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 44939,
+      "tier": 2,
+      "pdf_pages": [
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826,
+        827,
+        828,
+        829
+      ],
+      "api_usage": {
+        "input_tokens": 27958,
+        "output_tokens": 223,
+        "cost": 0.0872
+      }
+    }
+  ]
+}

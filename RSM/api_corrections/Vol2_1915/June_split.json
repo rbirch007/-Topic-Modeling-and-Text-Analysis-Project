@@ -1,0 +1,97 @@
+{
+  "volume": 2,
+  "month": "June",
+  "year": 1915,
+  "total_merged": 2,
+  "total_splits": 5,
+  "total_cost": 0.184,
+  "files": [
+    {
+      "source_file": "June_Vol2_13_Editorial_Editorial_The_Battle_of_Wills,.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial: The Battle of Wills",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . RELIEF SOCIETY MAGAZINE Editor Susa Young",
+          "end_boundary": "Published in London by Partridge & Co.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. Lesson I. Work and Business.",
+          "end_boundary": "but where God and Christ dwell they cannot",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EDITORIAL",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the Editorial section 'The Battle of Wills' followed by the Guide Lessons section. The Guide Lessons section includes multiple lessons: Theology (Lesson II - The Laying on of Hands), Genealogy (Lesson III - Numbering), and Home Ethics and Art (Lesson IV - The Golden Rule). The file appears to be cut off mid-sentence at the end.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10321,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 28366,
+        "output_tokens": 367,
+        "cost": 0.0906
+      }
+    },
+    {
+      "source_file": "June_Vol2_14_Guide_Lessons_Guide_Lessons,.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - The Laying on of Hands",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 295 \"but where God and Christ",
+          "end_boundary": "From Gospel Themes. Genealogy. Third Week. Lesson",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Numbering",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Genealogy. Third Week. Lesson III ? Numbering.",
+          "end_boundary": "for general purposes. Home Ethics and Art.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Ethics and Art - The Golden Rule",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. ETHICS. Lesson IV",
+          "end_boundary": "The Agricultural College of the State of Utah.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains three distinct lesson sections: Theology (Laying on of Hands), Genealogy (Numbering), and Home Ethics and Art (Golden Rule). Each section has clear subject boundaries and lesson numbering. The file also contains advertisements at the end which are part of the Home Ethics and Art section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12388,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 28898,
+        "output_tokens": 449,
+        "cost": 0.0934
+      }
+    }
+  ]
+}

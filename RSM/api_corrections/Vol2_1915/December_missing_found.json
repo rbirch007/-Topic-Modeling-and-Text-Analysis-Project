@@ -1,0 +1,44 @@
+{
+  "volume": 2,
+  "month": "December",
+  "year": 1915,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0224,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Christmas Tide",
+      "printed_page": 521,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "For a Safe and Sane Christmas Fromade",
+      "printed_page": 534,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 523-526). The images show: page 523 contains story text about Frank and Kate, page 524 begins 'In the Kitchen Laboratory' by Hazel Love Dunford with relishes and pickles recipes, page 525 continues the Kitchen Laboratory section with more recipes, and page 526 shows 'Notes from the Field' by Mrs. Amy B. Lyman. The missing article should appear on page 534 according to the table of contents, but that page is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 6371,
+        "output_tokens": 219,
+        "cost": 0.0224
+      },
+      "pdf_pages": [
+        523,
+        524,
+        525,
+        526
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "volume": 57,
+  "month": "February",
+  "year": 1970,
+  "total_files_checked": 30,
+  "files_correct": [
+    "V57_02_02_Poem_Winter_Tangren.txt",
+    "V57_02_05_Poem_Unclaimed_Sadleir.txt",
+    "V57_02_06_Poem_Sea_Roberts.txt",
+    "V57_02_08_Poem_On_Gabbott.txt",
+    "V57_02_13_Poem_A_Happy_Jessen.txt",
+    "V57_02_14_Poem_If_Clough.txt",
+    "V57_02_16_GenFt_The_Welch.txt",
+    "V57_02_17_Poem_Backyard_Kay.txt",
+    "V57_02_19_GenFt_The_Campbell.txt",
+    "V57_02_20_GenFt_Hobby_Ashworth.txt",
+    "V57_02_23_GenFt_Make_Department.txt",
+    "V57_02_26_GenFt_Visiting_Smith.txt",
+    "V57_02_27_GenFt_Homemaking-She_Tay.txt",
+    "V57_02_28_GenFt_Social_Christensen.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_02_01_Poem_The_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - has 'To Save Souls' article instead of 'The Flower Song When the Sun Is Out' poem",
+      "action": "replace_content",
+      "text": "\"THE FLOWER SONG WHEN THE SUN IS OUT\" (Words of Small John Grenawalt) The rain slid down on the world outside, On trees and the silver street, Inside, the tune that my grandson played Was lilting and strangely sweet. On. Of course, he couldn't play tunes at all, But gaily his fingers flew. I asked the name of the tune he played And somehow, I felt he knew. \"'A flower song when the sun is out!'\" He answered and smiled at me. The room was bright with his sparkling thought And wonderful imagery! Nona H. Brown",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_02_04_SpFt_To_Save_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'ord \"soul,\"' instead of beginning of article",
+      "action": "prepend",
+      "text": "To Save Souls Elder Marion G. Romney Of the Council of the Twelve [Address Delivered at the Stake Board Session of Relief Society Annual General Conference, October 2, 1969] = The Prophet Joseph Smith, early in the history of the Relief Society, instructed \"The Ladies' Relief Society,\" as he called it then, that it was \"not only to relieve the poor but to save souls.\" This was a charge to the \"Ladies\" to assist in the Lord's great \"... Work and.. -gloryto bring to pass the immortality and eternal life of man.\" (Moses 1:39.) It is about this awesome assignment your Relief Society Presidency has asked me to speak a few words this afternoon. The importance of saving souls has frequently been emphasized by the Lord. To John and Peter Whitmer, On separate occasions, he said: - behold, I say unto you, that the thing which will be of the most worth unto you will be to declare repentance unto this people, that you may bring souls unto me, that you may rest with them in the kingdom of my Father... (D&C 15:6; 16:6.) 84 To Cowdery, and David Whitmer, he gave this counsel: Joseph Smith, Oliver Remember the worth of souls is great in the sight of God; And if it so be that you should labor all your days... And bring, save it be one soul unto me, how great shall be your joy with him in the kingdom of my Father. (D&C 18:10, 15.) These scriptures teach that a soul is saved by being brought back into the \"kingdom of God.\" What he was speaking about when he used the w",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_09_Fict_An_Franks.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'to send valentines' instead of beginning of article",
+      "action": "prepend",
+      "text": "AN a ODD-SHAPED VALENTINE cy it / \\ iN Md I Kathryn E. Franks 'Win A ae ~e w In the Southwest where [ live, we have no February snow, but this morning great heavy clouds swooped down over the foothills, bringing the winter rains. A good day, I decided, casting aside the morning paper, to put a cake in the oven. This accomplished, I started a gelatin salad for the next day's luncheon. I had not realized it was Valentine's Day until Patrick, my threeyear-old neighbor, zigzagged through the puddles to my backdoor for his usual morning visit. He dried his feet on my throw rug while, in one breath, he greeted me with the morning news. \"My daddy couldn't start his car and Skippy Cat got caught in the rain. Know what? Terry took all the valentines to school.\"'. Wiping his wet hands on his pant's leg, he walked directly to the living room and_ looked around. He came back to the kitchen and pulled himself up on the maple, round-seated stool I had left beside the kitchen cupboard. I \"Did the mailman leave you some envelopes?\" he asked. \"Yes,\" I replied, \"two.\" <a SOS, 4, a = A moment of silence. \"Then where are your valentines?\" he asked. Apparently, he felt concerned because he had not discovered valentines lined along my livingroom mantelpiece, nor found any standing in my window sill above my kitchen sink. Patrick's eyes sobered in thought as he sat on the stool silently brooding. Knowing Patrick, I guessed he must be worried because my friends had forgotten",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_12_Fict_Happy_Addis.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next poem instead of ending with story",
+      "action": "trim_end",
+      "text": "One happy day arrived and beckoned more.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_02_15_GenFt_Make_a_Watson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about anniversary celebration",
+      "action": "trim_start",
+      "text": "Make A New Start With Alaskan Sourdough Edythe K. Watson Member, General Board of Relief Society",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (10 words)"
+    },
+    {
+      "file": "V57_02_18_GenFt_Penny-Wise_Krambul.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'ts of possibilities' instead of beginning of article",
+      "action": "prepend",
+      "text": "Penny-Wise Playgrounds June F. Krambule w As warm weather' unfolds tender, young leaves overhead, many young mothers begin to ask themselves, \"\"What can I do to keep the children happily occupied and off the street?\" The answer lies in well-planned playground equipmentand that doesn't necessarily mean expensive equipment. Nursery school supervisors are quick to agree that while swings and slippery slides are nice, these standard playground items are often not used, while their im- 108 aginative charges spend hours engrossed with playthings which we sometimes classify as junk. The problem, they say, is not a matter of money, but in knowing what to select or build that will stimulate the everactive imaginations of the young. Consider, for instance the wooden packing box, one of the most popular items in the nursery playground. Several of these boxes in a series of sizes provide all sor",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V57_02_21_Fict_Jerusha_Todd.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article instead of ending with story",
+      "action": "trim_end",
+      "text": "(to be continued) 117",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_02_24_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of lesson department instead of ending with Relief Society activities",
+      "action": "trim_end",
+      "text": "the General Board of Relief Society.\" Myrle F. Turner is the new president of Mount Jordan Stake Relief Society. French Mission, Spanish Branch (Madrid, Spain) Relief Society Holds First Bazaar May 13, 1969 Left to right: Patricia Oliveira, Second Counselor, Spanish Branch Relief Society; Paloma Aldaruez, President; Pearl Dean, First Counselor; Janet Baker, SecretaryTreasurer",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_02_25_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Relief Society activities",
+      "action": "trim_start",
+      "text": "The Doctrine and Covenants I SPIRITUAL LIVING Lesson 104 Zion and Its Future Elder Roy W. Doxey",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V57_02_29_GenFt_Cultural_Thomas.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with birthday congratulations content instead of ending with cultural refinement lesson",
+      "action": "trim_end",
+      "text": "Why might the young Shaker couple in \"The Canterbury Pilgrims\" be successful when the others, to whom they listened, have failed? Lesson Department",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_30_GenFt_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Names of Latter-day Saint women' instead of proper beginning",
+      "action": "prepend",
+      "text": "Birthday Congratulations The Home Inside and Out",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files have boundary issues with content bleeding between articles. Several files start mid-sentence or contain content from adjacent articles. The OCR quality is generally good but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "V57_02_04_SpFt_To_Save_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'ord \"soul,\"' instead of beginning of article",
+      "action": "prepend",
+      "text": "To Save Souls Elder Marion G. Romney Of the Council of the Twelve [Address Delivered at the Stake Board Session of Relief Society Annual General Conference, October 2, 1969] = The Prophet Joseph Smith, early in the history of the Relief Society, instructed \"The Ladies' Relief Society,\" as he called it then, that it was \"not only to relieve the poor but to save souls.\" This was a charge to the \"Ladies\" to assist in the Lord's great \"... Work and.. -gloryto bring to pass the immortality and eternal life of man.\" (Moses 1:39.) It is about this awesome assignment your Relief Society Presidency has asked me to speak a few words this afternoon. The importance of saving souls has frequently been emphasized by the Lord. To John and Peter Whitmer, On separate occasions, he said: - behold, I say unto you, that the thing which will be of the most worth unto you will be to declare repentance unto this people, that you may bring souls unto me, that you may rest with them in the kingdom of my Father... (D&C 15:6; 16:6.) 84 To Cowdery, and David Whitmer, he gave this counsel: Joseph Smith, Oliver Remember the worth of souls is great in the sight of God; And if it so be that you should labor all your days... And bring, save it be one soul unto me, how great shall be your joy with him in the kingdom of my Father. (D&C 18:10, 15.) These scriptures teach that a soul is saved by being brought back into the \"kingdom of God.\" What he was speaking about when he used the w",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_09_Fict_An_Franks.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'to send valentines' instead of beginning of article",
+      "action": "prepend",
+      "text": "AN a ODD-SHAPED VALENTINE cy it / \\ iN Md I Kathryn E. Franks 'Win A ae ~e w In the Southwest where [ live, we have no February snow, but this morning great heavy clouds swooped down over the foothills, bringing the winter rains. A good day, I decided, casting aside the morning paper, to put a cake in the oven. This accomplished, I started a gelatin salad for the next day's luncheon. I had not realized it was Valentine's Day until Patrick, my threeyear-old neighbor, zigzagged through the puddles to my backdoor for his usual morning visit. He dried his feet on my throw rug while, in one breath, he greeted me with the morning news. \"My daddy couldn't start his car and Skippy Cat got caught in the rain. Know what? Terry took all the valentines to school.\"'. Wiping his wet hands on his pant's leg, he walked directly to the living room and_ looked around. He came back to the kitchen and pulled himself up on the maple, round-seated stool I had left beside the kitchen cupboard. I \"Did the mailman leave you some envelopes?\" he asked. \"Yes,\" I replied, \"two.\" <a SOS, 4, a = A moment of silence. \"Then where are your valentines?\" he asked. Apparently, he felt concerned because he had not discovered valentines lined along my livingroom mantelpiece, nor found any standing in my window sill above my kitchen sink. Patrick's eyes sobered in thought as he sat on the stool silently brooding. Knowing Patrick, I guessed he must be worried because my friends had forgotten",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_15_GenFt_Make_a_Watson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about anniversary celebration",
+      "action": "trim_start",
+      "text": "Make A New Start With Alaskan Sourdough Edythe K. Watson Member, General Board of Relief Society",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (10 words)"
+    },
+    {
+      "file": "V57_02_18_GenFt_Penny-Wise_Krambul.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'ts of possibilities' instead of beginning of article",
+      "action": "prepend",
+      "text": "Penny-Wise Playgrounds June F. Krambule w As warm weather' unfolds tender, young leaves overhead, many young mothers begin to ask themselves, \"\"What can I do to keep the children happily occupied and off the street?\" The answer lies in well-planned playground equipmentand that doesn't necessarily mean expensive equipment. Nursery school supervisors are quick to agree that while swings and slippery slides are nice, these standard playground items are often not used, while their im- 108 aginative charges spend hours engrossed with playthings which we sometimes classify as junk. The problem, they say, is not a matter of money, but in knowing what to select or build that will stimulate the everactive imaginations of the young. Consider, for instance the wooden packing box, one of the most popular items in the nursery playground. Several of these boxes in a series of sizes provide all sor",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V57_02_25_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Relief Society activities",
+      "action": "trim_start",
+      "text": "The Doctrine and Covenants I SPIRITUAL LIVING Lesson 104 Zion and Its Future Elder Roy W. Doxey",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V57_02_29_GenFt_Cultural_Thomas.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with birthday congratulations content instead of ending with cultural refinement lesson",
+      "action": "trim_end",
+      "text": "Why might the young Shaker couple in \"The Canterbury Pilgrims\" be successful when the others, to whom they listened, have failed? Lesson Department",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_02_30_GenFt_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Names of Latter-day Saint women' instead of proper beginning",
+      "action": "prepend",
+      "text": "Birthday Congratulations The Home Inside and Out",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_02_12_Fict_Happy_Addis.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next poem instead of ending with story",
+      "action": "trim_end",
+      "text": "One happy day arrived and beckoned more.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_02_21_Fict_Jerusha_Todd.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article instead of ending with story",
+      "action": "trim_end",
+      "text": "(to be continued) 117",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_02_24_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of lesson department instead of ending with Relief Society activities",
+      "action": "trim_end",
+      "text": "the General Board of Relief Society.\" Myrle F. Turner is the new president of Mount Jordan Stake Relief Society. French Mission, Spanish Branch (Madrid, Spain) Relief Society Holds First Bazaar May 13, 1969 Left to right: Patricia Oliveira, Second Counselor, Spanish Branch Relief Society; Paloma Aldaruez, President; Pearl Dean, First Counselor; Janet Baker, SecretaryTreasurer",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

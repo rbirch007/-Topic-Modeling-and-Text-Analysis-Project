@@ -1,0 +1,29 @@
+{
+  "volume": 55,
+  "month": "June",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_06_13_Fict_The_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file is missing the entire beginning of the story, starting mid-dialogue instead of with the opening paragraph",
+      "action": "prepend",
+      "text": "\"There's nothing like a shift in the garden on a hot summer day to make one appreciate the coolness and downright loveliness of the inside of a home.\" Dear little Maggie McGee, age seventy-three, was speaking to the house itself. Maggie McGee asked the questions, and Maggie McGee gave the answers, and surely the little house of the Irish lady enjoyed the conversation. \"Who else is there to speak to these days? When a body lives alone as long as I have, she finds out a house gets lonely, too, or when it never hears any laughter and song. A house needs conversation, and, believe me, my house is going to get it, if I have to do all the talking myself.\" Maggie took off her bonnet and let the cucumbers she had gathered in her apron fall into the sink. Later, she would wash and dry them. It looked as if there were enough for a nice batch of bread-and-butter pickles. \"Later, this very day, I'll see them shining, pretty and lovely, like emerald jewels, in glass jars. Sure, and I will. And when the date for the Relief Society bazaar is set, why I'll make my usual contribution of a dozen full bottles. That I will. How many years has it been since I started contributing pickles instead of handiwork?\" \"It has been five years this coming bazaar,\" Maggie answered herself. \"It was the very year the doctor warned me that I'd have to stop preserving my eyes, or they would not be seeing me through. It would break my heart if the time came when I could not enjoy the beauty of my surroundings. And it would make me feel equally as miserable, if I were not able to make my contribution to the annual ward Relief Society bazaar.\" Ding! Ding! \"There's the telephone begging to be answered. It's a good thing I came in just when I did, or who would have taken the telephone off the hook?\" \"Hello! Maggie McGee speaking.\" \"This is Sister Clayson calling. How are you today, Sister Maggie?\" \"Fine as a frilly petunia on a sunny day, President Clayson.\" \"I'm so glad you are well, Sister Maggie.\" \"I can't remember the time when I wasn't, President Clayson.\" \"The Relief Society would like to ask a special favor of you, Sister McGee, if you feel you are up to it.\" \"I would be glad to do anything the sisters would ask of me, if it doesn't require taxing my eyes.\" \"We wondered if you would make extra pickles for the bazaar?\" \"I'd be glad to. And what type would you be wanting?\" \"Sister McGee, we want you to make your regular bread-and-butter pickles. But we want an abundance of them—perhaps fifty jars.\" \"Fifty jars, President Clayson! Why it would infringe on the room of the cooked food goodies.\" \"This year, Sister Maggie, we wanted to have a ",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V55_06_32_Poem_Snail.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains completely wrong content - has Ball jar ad and birthday congratulations instead of the SNAIL poem",
+      "action": "replace_content",
+      "text": "SNAIL\n\nArmored but unarmed,\nYou creep through a hostile world.\nFragile the spiraled shell\nWherein you lurk, close-curled.\nSuspect, the outspread feast.\nThe gardener's heavy sole\nWould crush without a qualm.\nThat goose would gulp you whole!\nYet what from peril to peril,\nCan make survival sweet?\nYou have no song, no friend.\nHere is a blossom. Eat.\n\n—Ethel Jacobson",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 21% OCR coverage"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "volume": 13,
+  "month": "February",
+  "year": 1926,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.2602,
+  "files": [
+    {
+      "source_file": "February_Vol13_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes From the Field Amy Brown Lyman",
+          "end_boundary": "March Magazine, 1925, page 115.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April LESSON I",
+          "end_boundary": "orations of Demosthenes or Cicero. (Examples: Deut. 9 and 28.)",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "The file contains two distinct articles: 'Notes from the Field' by Amy Brown Lyman covering various Relief Society activities across missions and stakes, and 'Guide Lessons for April' which begins the lesson content for April. The split occurs where the Guide Lessons section begins with 'LESSON I' after the references section of Notes from the Field.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14431,
+      "tier": 1,
+      "pdf_pages": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "api_usage": {
+        "input_tokens": 47080,
+        "output_tokens": 382,
+        "cost": 0.147
+      }
+    },
+    {
+      "source_file": "February_Vol13_13_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for April - Lesson I (Theology)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR APRIL 95 (b) The Psalms",
+          "end_boundary": "the greatest prophet born of woman. Work and",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Organization of the Church",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business TEACHER'S TOPIC —HOME TALKS",
+          "end_boundary": "Doc. and Cov. Sec. 20. GUIDE LESSONS",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for April - Lesson III (Literature)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR APRIL 97 LESSON III Literature",
+          "end_boundary": "Tarkington may account for much of this popularity,",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for April - Lesson IV (Social Service)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in April)",
+          "end_boundary": "can parents prevent children from developing faulty diet",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains 4 distinct lesson sections: Lesson I (Theology), a Work and Business section on Church Organization, Lesson III (Literature on Booth Tarkington), and Lesson IV (Social Service on childhood health problems). Each section has clear topical boundaries and different subject matter.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 41573,
+      "tier": 2,
+      "pdf_pages": [
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "api_usage": {
+        "input_tokens": 34935,
+        "output_tokens": 561,
+        "cost": 0.1132
+      }
+    }
+  ]
+}

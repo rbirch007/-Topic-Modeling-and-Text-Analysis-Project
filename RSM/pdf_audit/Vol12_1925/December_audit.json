@@ -1,0 +1,354 @@
+{
+  "volume": 12,
+  "month": "December",
+  "year": 1925,
+  "total": 18,
+  "ok": 15,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "December_Vol12_00_BOARD.txt",
+      "body_len": 661,
+      "article_words": 65,
+      "words_in_ocr": 65,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_00_CONTENTS.txt",
+      "body_len": 597,
+      "article_words": 59,
+      "words_in_ocr": 59,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_00_Misc.txt",
+      "body_len": 12387,
+      "article_words": 816,
+      "words_in_ocr": 813,
+      "pct_in_ocr": 0.9963,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "advertisers",
+        "directory",
+        "trailing"
+      ]
+    },
+    {
+      "file": "December_Vol12_01_Frontispiece_The_Christ,.txt",
+      "body_len": 26,
+      "article_words": 3,
+      "words_in_ocr": 3,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(26)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_02_Article_Come,_Thou_Glorious_Day_of_Promise_A_Alex_Neibaur.txt",
+      "body_len": 592,
+      "article_words": 63,
+      "words_in_ocr": 63,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_03a_Article_The_Editor_Abroad.txt",
+      "body_len": 11587,
+      "article_words": 750,
+      "words_in_ocr": 750,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_04_Article_If_Ye_Have_Faith_Claire_Stewart_Boyer.txt",
+      "body_len": 6101,
+      "article_words": 450,
+      "words_in_ocr": 450,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_05_Article_Relief_Society_Conference_Amy_Brown_Lyman.txt",
+      "body_len": 57228,
+      "article_words": 1722,
+      "words_in_ocr": 1722,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_06_Article_State_Welfare_Workers_Meet_Julia_A_F_Lund.txt",
+      "body_len": 7499,
+      "article_words": 490,
+      "words_in_ocr": 490,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_07_Editorial_Editorial—Yuletide_in_Jerusalem.txt",
+      "body_len": 2664,
+      "article_words": 225,
+      "words_in_ocr": 225,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_08_Article_The_Rock_of_Our_Salvation.txt",
+      "body_len": 1254,
+      "article_words": 111,
+      "words_in_ocr": 111,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_09_Article_The_Semi-Centennial_of_the_Brigham_Young_University.txt",
+      "body_len": 4216,
+      "article_words": 299,
+      "words_in_ocr": 299,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_10_Article_Semi-Centennial_Prayer_Annie_Pike_Greenwood.txt",
+      "body_len": 1293,
+      "article_words": 133,
+      "words_in_ocr": 133,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_11_Article_Dr_Valeria_Parker_Amy_Brown_Lyman.txt",
+      "body_len": 1744,
+      "article_words": 113,
+      "words_in_ocr": 113,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_12_Article_Condolence.txt",
+      "body_len": 440,
+      "article_words": 54,
+      "words_in_ocr": 54,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_13_Article_The_Home_Alfred_Osmond.txt",
+      "body_len": 3027,
+      "article_words": 268,
+      "words_in_ocr": 268,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_14a_Article_Tennyson_the_Boy_and_the_Match.txt",
+      "body_len": 3860,
+      "article_words": 305,
+      "words_in_ocr": 305,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol12_14b_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "body_len": 22094,
+      "article_words": 1127,
+      "words_in_ocr": 1127,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3); MULTI_LESSON(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol12_No12_December_1925.txt",
+    "ocr_chars": 135730,
+    "ocr_unique_words": 3944,
+    "contents_xref": {
+      "entries_in_contents": 14,
+      "matched": 14,
+      "match_details": [
+        {
+          "title": "The Christ, by Thorwaldsen Frontispiece",
+          "page": null,
+          "file": "December_Vol12_01_Frontispiece_The_Christ,.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Come, Thou Glorious Day of Promise A. Alex. Neibaur",
+          "page": 619,
+          "file": "December_Vol12_02_Article_Come,_Thou_Glorious_Day_of_Promise_A_Alex_Neibaur.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Editor Abroad Alice L. Reynolds",
+          "page": 621,
+          "file": "December_Vol12_03a_Article_The_Editor_Abroad.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"If Ye Have Faith\" Claire Stewart Boyer",
+          "page": 628,
+          "file": "December_Vol12_04_Article_If_Ye_Have_Faith_Claire_Stewart_Boyer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Relief Society Conference Amy Brown Lyman",
+          "page": 631,
+          "file": "December_Vol12_05_Article_Relief_Society_Conference_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "State Welfare Workers Meet Julia A. F. Lund",
+          "page": 652,
+          "file": "December_Vol12_06_Article_State_Welfare_Workers_Meet_Julia_A_F_Lund.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Yuletide in Jerusalem",
+          "page": 655,
+          "file": "December_Vol12_07_Editorial_Editorial—Yuletide_in_Jerusalem.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Rock of Our Salvation",
+          "page": 656,
+          "file": "December_Vol12_08_Article_The_Rock_of_Our_Salvation.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Semi-Centennial of the Brigham Young University",
+          "page": 657,
+          "file": "December_Vol12_09_Article_The_Semi-Centennial_of_the_Brigham_Young_University.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Semi-Centennial Prayer Annie Pike Greenwood",
+          "page": 659,
+          "file": "December_Vol12_10_Article_Semi-Centennial_Prayer_Annie_Pike_Greenwood.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Dr. Valeria Parker Amy Brown Lyman",
+          "page": 660,
+          "file": "December_Vol12_11_Article_Dr_Valeria_Parker_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Condolence",
+          "page": 660,
+          "file": "December_Vol12_12_Article_Condolence.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Home Alfred Osmond",
+          "page": 661,
+          "file": "December_Vol12_13_Article_The_Home_Alfred_Osmond.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Tennyson, The Boy and the Match Annie Pike Greenwood",
+          "page": 662,
+          "file": "December_Vol12_14a_Article_Tennyson_the_Boy_and_the_Match.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "December_Vol12_14b_Guide_Lessons_Guide_Lessons_for_February.txt"
+      ]
+    }
+  }
+}

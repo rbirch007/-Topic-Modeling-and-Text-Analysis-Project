@@ -1,0 +1,46 @@
+{
+  "volume": 1,
+  "month": "April",
+  "year": 1914,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.0463,
+  "files": [
+    {
+      "source_file": "V1_1914_Apr_03_Art_Genealogy.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Genealogy and Testimony",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "[Vol1 | April 1914 | Sequence: 03 | Category:",
+          "end_boundary": "given on page 15 of this Bulletin. April",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Home Ethics",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "HOME ETHICS Lesson IV. (Twenty Minutes.) Ten minutes",
+          "end_boundary": "these virtues should be as rich heritages. April",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "BELIEF SOCIETY BULLETIN"
+      ],
+      "notes": "Clear split between Genealogy lesson ending with reference to page 15, followed immediately by Home Ethics Lesson IV. Both are complete lessons with distinct subject matter and formatting.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8580,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 13888,
+        "output_tokens": 310,
+        "cost": 0.0463
+      }
+    }
+  ]
+}

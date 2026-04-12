@@ -1,0 +1,38 @@
+{
+  "volume": 17,
+  "month": "October",
+  "year": 1930,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0278,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Guide Lessons for December - Lesson 3: Literature",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from September 1930 (Vol. XVII, No. 9) but the article being sought is from December lessons. The images contain the magazine cover, table of contents, portrait of Joseph Smith, a poem about the Book of Mormon, and a portrait of Emma Hale Smith. None of these pages contain the December guide lessons content.",
+      "order": "c",
+      "pdf_pages": [
+        557,
+        558,
+        559,
+        560,
+        561
+      ],
+      "source_file": "October_Vol17_12_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "api_usage": {
+        "input_tokens": 8503,
+        "output_tokens": 153,
+        "cost": 0.0278
+      }
+    }
+  ]
+}

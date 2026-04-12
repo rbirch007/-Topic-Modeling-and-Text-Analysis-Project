@@ -1,0 +1,66 @@
+{
+  "volume": 11,
+  "month": "July",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0489,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "What the Pioneers Ate Jean Cox",
+      "printed_page": 330,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Jean Cox",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 342-345, but the article 'What the Pioneers Ate' by Jean Cox is listed on page 330 in the table of contents. The images provided do not contain this article - they show 'The Eighteenth Amendment' by Judge Florence Allen starting on page 341. To extract this article, images of pages 330-335 would be needed.",
+      "api_usage": {
+        "input_tokens": 7155,
+        "output_tokens": 177,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        342,
+        343,
+        344,
+        345
+      ]
+    },
+    {
+      "title": "The Eighteenth Amendment Judge Florence Allen",
+      "printed_page": 341,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Teachers' Topic for September",
+      "printed_page": 374,
+      "status": "found",
+      "complete_text": "Teachers' Topic for September\n\nConservation of Health\n\n\"And I the Lord gave unto them a promise, that the destroying angel shall pass by them, as the children of Israel, and not slay them.\"\n\nA. Personal hygiene—cleanliness, fresh air, proper food, elimination.\n\nB. Read and discuss the Word of Wisdom. Doc. and Cov. Section 89.",
+      "already_in_file": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the Teachers' Topic for September on page 374. It's a brief lesson outline focused on health conservation with a scriptural quote and two main points about personal hygiene and the Word of Wisdom.",
+      "api_usage": {
+        "input_tokens": 7143,
+        "output_tokens": 226,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        374,
+        375,
+        376,
+        377
+      ]
+    }
+  ]
+}

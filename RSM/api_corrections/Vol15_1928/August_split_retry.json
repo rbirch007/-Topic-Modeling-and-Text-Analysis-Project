@@ -1,0 +1,25 @@
+{
+  "volume": 15,
+  "month": "August",
+  "year": 1928,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 1,
+  "created": 1,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Eliza R. Snow Memorial Poem",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for October",
+      "new_file": "August_Vol15_08b_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "chars": 21339,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

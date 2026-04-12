@@ -1,0 +1,51 @@
+{
+  "volume": 55,
+  "month": "November",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_11_06_Poem_Cumorah_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from other articles but not the target poem 'CUMORAH' by Marilyn McMeen Miller",
+      "action": "replace_content",
+      "text": "CUMORAH\n\nThere is poetry in these hills.\nThey speak in whispered tones\nOf sacred things—\nOf golden plates and angel wings,\nOf one who knelt in fervent prayer\nBeside the sacred stones.\n\nThere is music in these hills.\nThey sing of blessed morn\nWhen heaven's door\nSwung wide once more,\nAnd truth and priesthood were restored\nTo earth where hope was born.\n\nThere is glory in these hills.\nThey shine with holy light\nThat beams afar\nLike some bright star\nTo guide all those who seek to know\nThe difference 'tween wrong and right.\n\n—Marilyn McMeen Miller",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 7% OCR coverage"
+    },
+    {
+      "file": "V55_11_16_GenFt_Notes.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts mid-paragraph, missing the opening paragraph about Southern Hemisphere cultural refinement lessons",
+      "action": "replace_content",
+      "text": "ATTENTION: English-speaking Southern Hemisphere Stakes and Missions\n\nIn the Southern Hemisphere, where eight cultural refinement lessons are needed and only seven are published in The Relief Society Magazine, the General Board suggests that each English-speaking stake and mission use the eighth cultural refinement lesson period to review the objectives of the seven preceding lessons, pointing out the values which have come to the class members in their lives as women, in applying the objectives to their own lives. Seven assignments might be made in each ward or branch. Since the ward or branch class leader has not presented all the selections from the text Out of the Best Books, Volume 4, she may bring unused selections from the text into her lesson.\n\n\"IN WHOLENESS OR IN PART\"\n\n\"According to your faith,'' he said; his word\nOf healing was as gentle as his touch,\nAnd two who once were blind, having much\nOf faith, could see again. The day I heard\nThe story I was low on faith... Suppose\nI thought, the one but half-believed, and when\nThrough clouded eyes he saw the Lord—then\nWas full faith his? It must be that those\nWith scanty measure of belief inherit\nScanty blessings. One needs a deeper trust,\nA greater love, a more committed heart,\nUnwavering in the sudden storm, to merit\nJesus' touch. For as your faith, so must\nYour blessing be... in wholeness or in part.\n\n—Mabel Jones Gabbott",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V55_11_18_Poem_Contrasts_Terry.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains OCR errors and incomplete poem text. The complete poem needs to replace the garbled content.",
+      "action": "replace_content",
+      "text": "[Vol55 | November 1968 | Page 839 | Poetry | Contrasts | Helen M. Terry]\n\nCONTRASTS\n\nI used to think the fabric\nOf my days should be\nA web of bright and shining strands,\nUnshaded, shadow-free.\nBut years have yielded wisdom;\nI have learned, instead,\nWe weave the tapestry of life\nWith variegated thread.\n\n—Helen M. Terry",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 13% OCR coverage"
+    },
+    {
+      "file": "V55_11_39_Poem_Choice_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extraneous text 'Yy 839 Photograph by Dorothy J. R' that bleeds from other page content",
+      "action": "trim_end",
+      "text": "—Vesta N. Fairbairn.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (3 words)"
+    }
+  ]
+}

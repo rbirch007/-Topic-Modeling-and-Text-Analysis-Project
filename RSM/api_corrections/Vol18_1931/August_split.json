@@ -1,0 +1,70 @@
+{
+  "volume": 18,
+  "month": "August",
+  "year": 1931,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1793,
+  "files": [
+    {
+      "source_file": "August_Vol18_13_Notes_from_Field_Field.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Happenings",
+          "category": "Current_Topics",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "Happenings By Annie Wells Cannon PRESIDENT LOUISE Y.",
+          "end_boundary": "The world is full of loneliness Let hearts be glad.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field CIRCLEVILLE WARD RELIEF SOCIETY",
+          "end_boundary": "presentation of the first organization. Notes to the Field",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Notes to the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes to the Field A Wonderful Magazine Subscription Campaign",
+          "end_boundary": "West Jordan......... October 25 Yellowstone........... August 30",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "NOTES FROM THE FIELD",
+        "NOTES TO THE FIELD",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains three distinct articles that were merged together. The first is a news/current events column, followed by two different administrative sections for Relief Society field work and communications.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 17517,
+      "tier": 1,
+      "pdf_pages": [
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536
+      ],
+      "api_usage": {
+        "input_tokens": 56973,
+        "output_tokens": 556,
+        "cost": 0.1793
+      }
+    }
+  ]
+}

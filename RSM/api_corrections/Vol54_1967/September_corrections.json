@@ -1,0 +1,281 @@
+{
+  "volume": 54,
+  "month": "September",
+  "year": 1967,
+  "total_files_checked": 38,
+  "files_correct": [
+    "V54_09_03_Art_Remembering_Coles.txt",
+    "V54_09_04_Art_From_Near_and_Far.txt",
+    "V54_09_07_Poem_Driftwood_Cook.txt",
+    "V54_09_08_SpFt_A_Hull.txt",
+    "V54_09_10_Poem_Swan_Simon.txt",
+    "V54_09_11_Poem_And_All_Brown.txt",
+    "V54_09_16_SpFt_The_Noall.txt",
+    "V54_09_19_Fict_Spanish-American_U.txt",
+    "V54_09_21_Fict_Chicken_Robinson.txt",
+    "V54_09_22_Fict_A_Burt.txt",
+    "V54_09_23_Fict_Fabulous_Gledhill.txt",
+    "V54_09_24_Fict_Brilliant.txt",
+    "V54_09_28_Fict_Beauty_Dansie.txt",
+    "V54_09_29_Fict_A.txt",
+    "V54_09_31_Lssn_Spiritual_Doxey.txt",
+    "V54_09_32_Lssn_Visiting_Smith.txt",
+    "V54_09_33_Lssn_Homemaking_Taylor.txt",
+    "V54_09_34_Poem_Child_Jacobsen.txt",
+    "V54_09_35_Lssn_Social_Christensen.txt",
+    "V54_09_38_Poem_Just_Rothe.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_09_01_Fict_Throw_Chapter.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header and other content before the actual fiction story",
+      "action": "trim_start",
+      "text": "The Relief Society Magazine - September 1967, Vol. 54, No.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_02_Fict_Caroline_Makes.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about President McKay and Relief Society history, not about Caroline Hepworth making quilts",
+      "action": "replace_content",
+      "text": "Caroline Hepworth, Gridley, California, Makes 239 Quilts Sister Hepworth is eighty-seven years old and still active as a member of Gridley Second Ward Relief Society. She has served as counselor to three ward presidents. Only a sampling of her quilts, colorful and intricate in design, can be illustrated in one picture.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_05_SpFt_Birthday_McKay.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Relief Society history instead of birthday congratulations to President McKay",
+      "action": "replace_content",
+      "text": "Birthday Congratulations To September 8, 1967 ¢ Relief Society women throughout the stakes and missions of the Church join together:'on this September day to express love and appreciation for President David O. McKay. Over the years, his counsel has blessed the sisters in their homes, in their Relief Society organizations, and in their spiritual and cultural development. His words of comfort, encouragement, and inspiration have been a guiding light to the world-wide sisterhood. It is the hope and the prayer of Relief Society women that this ninety-fourth birthday of the Prophet, Seer, and Revelator will bring to him a realization of the gratitude and affection of the members of the Church who thank the Heavenly Father for a prophet in these latter days. Selections from President McKay's counsel to the sisters are reprinted here that Relief Society members throughout the world may partake again of words of faith and wisdom and eternal truth. MOTHERHOOD The noblest calling in the world is that of mother. True motherhood is the most beautiful of all arts, the greatest of all professions. She who can paint a masterpiece or who can write a book that will influence millions deserves the plaudits and admiration of mankind; but she who rears successfully a family of healthy, beautiful sons and daughters whose immortal souls will be exerting an influence throughout the ages long after painting shall have faded, and books and statues shall have been destroyed, deserves the highest honor that man can give. The mother's image is the first to impress itself on the unwritten page of the young child's mind. It is her caress that first awakens a sense of security; her kiss the first realization of affection; her sympathy and tenderness, the first assurance that there is love in the world...",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_06_SpFt_A_Crawford.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete and missing most of the article content",
+      "action": "replace_content",
+      "text": "\"A Beacon Light and a Guiding Star\" Relief Society remembers its heritage and looks forward to a multiplication of its blessings in many nations. Vesta P. Crawford Associate Editor, The Relief Society Magazine ¢ Whatever season may mark the beginning of the \"Relief Society Year,\" and whether the time be autumn in the Northern Hemisphere or a resuming of regular meetings in the southern lands— whatever be the climate or the meeting place, Relief Society is a continuing blessing. The worldwide sisterhood is destined, by prophetic vision, and by a sacred foretelling, to stand as direction and guidance, as comfort and inspiration to the women of many nations, for \"this Society shall rejoice, and knowledge and intelligence shall flow down from this time henceforth....\"",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_09_Fict_Janet.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the fiction story including editorial content",
+      "action": "trim_end",
+      "text": "(To be continued) SEPTEMBER COURAGE Kathryn Kay September is the time of mellowing, of realizing summer's shine is past, the time when April green is yellowing to rusty gold. Which leaf will be the last? Now dew and early frost are interchanging; chaff is discarded, saving future seed. September is a month for rearranging the dreams that I shall keep for winter need. Like mountains, strong for constant weathering, 1, too, can face the lashing of the storm, the tawny cliffs and I, togethering, - will last. Wrapped in my dreams I shall be warm. In this, a month of joy-remembering, 1 can be brave in knowing Junes must fade, for faith and I have been Septembering so many autumns I am not afraid. In fall new hope is found to make hearts sing, in its own way, September can be spring! 659",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_12_Fict_Notes_Lessons.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about women's achievements rather than teaching aid packet information",
+      "action": "replace_content",
+      "text": "TEACHING AID PACKET FOR SOCIAL RELATIONS LESSONS A teaching aid packet has been prepared for use with the 1967-68 social relations lessons. It is available, on order, from the Deseret Book Store, only, 44 East South Temple, Salt Lake City, Utah, 84110, at a cost of $1.25, postpaid regular mail. Those desiring the teaching aid packet to be sent via air mail should include the cost for air mail, for 12 ounces.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_13_Fict_Womans_Cannon.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Golden Chain story instead of ending with Woman's Sphere content",
+      "action": "trim_end",
+      "text": "Many critics have pronounced Miss Moore ''the best woman poet presently writing in the English language.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_15_Poem_Wide_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the poem including photo caption",
+      "action": "trim_end",
+      "text": "The bright periphery of fall. 677",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_17_Fict_The.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be a mix of different content sections",
+      "action": "replace_content",
+      "text": "Pasadena Stake (California) Spring Fashion Show \"April In Paris\" Upper picture: Trudy Thody, Secretary-Treasurer, serves at the punch bowl; lower picture: Cheryl Dee Young, Terry Lee Young, and Daryl Young model ''look-alike'' costumes. Jasmine Ballard is president of Pasadena Stake Relief Society.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_18_Fict_Luminous_McDonough.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the instructions",
+      "action": "append",
+      "text": "679",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V54_09_20_Fict_Quilts.txt",
+      "issue_type": "wrong_content",
+      "description": "File is duplicate content from Spanish-American Branch article",
+      "action": "replace_content",
+      "text": "Caroline Hepworth, Gridley, California, Makes 239 Quilts Sister Hepworth is eighty-seven years old and still active as a member of Gridley Second Ward Relief Society. She has served as counselor to three ward presidents. Only a sampling of her quilts, colorful and intricate in design, can be illustrated in one picture.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_25_SpFt_Le_Breinholt.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, missing most of the art commentary",
+      "action": "replace_content",
+      "text": "\"Le Bénédicité\" by Jean Baptiste Simeon Chardin (1699-1779) (Louvre Museum, Paris, France). Painting to be studied in connection with Cultural Refinement Lesson No. 7 \"Charity Out of a Pure Heart'\" Commentary by Floyd E. Breinholt Associate Professor of Art Brigham Young University @ The artist Chardin lived in France at a time when a number of artists were changing the subject matter in art from the painting of the nobility, the pomp and gaiety of the court, and its extravagance, to the quaint homely scenes of everyday life. Paintings small enough and with subject matter fitting to a more humble setting were becoming more desirable. Chardin insisted on painting the everyday things of life and is said to have become more popular than the great artists who painted the nobility. His paintings told a story that the common people, the middle classes, could understand and identify with. This painting \"Le Bénédicité\" is such a work. His purpose may have been to say that to be grateful is to be wise. A wise man discovers his own true relationship and place in the pattern of life. He discovers that gratitude is prerequisite to learning to love. As in Timothy, \"the end of the commandment is charity out of a pure heart.\" To illustrate this noble idea, Chardin shows a small child in the attitude of giving thanks with an implied faith in those who taught her, and a simple faith in a divine providence. Thus portraying, through gratitude, love out of a pure heart. The story is told with astonishing naturalness and dignity. He had no use for tinsel or artificiality, but expressed himself in an unassuming and straightforward manner. This was unusual in his day, but his paintings influenced subsequent art. When the color in his work was being criticized by another artist, he said, \"And who told you, Sir, that one paints with color? One makes use of colors, but one paints with emotions.\" In Chardin's paintings we seem to be looking through a window, watching people live their private lives, always with a feeling of love and understanding. There are those who would call this painting sentimental. The writer Ventura says, \"A painting to be art must have feeling. But genuine feeling is a living approach to reality while sentimentality is a will to convince through sentiment, and a mistake in taste. And a will to sentiment destroys natural feeling.\" We leave the reader to decide whether sentiment is used in this case to convince, or whether the honest feeling of the artist thus expressed is paramount.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_09_26_SpFt_To_Them_Breinholt.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence",
+      "action": "append",
+      "text": "690",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V54_09_27_SpFt_Life_Breinholt.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete poem citation",
+      "action": "append",
+      "text": "(Reprinted by permission of The Improvement Era) 691",
+      "confidence": "medium",
+      "validated": true
+    },
+    {
+      "file": "V54_09_30_Fict_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text",
+      "action": "append",
+      "text": "= P we eae NS ~ cn Cee al \\ Ny aT oF Vvyyt } -V-",
+      "confidence": "low",
+      "validated": true
+    },
+    {
+      "file": "V54_09_36_Fict_Bday_Congrats.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains birthday congratulations list instead of being properly categorized",
+      "action": "note",
+      "text": "This appears to be birthday congratulations content that should be properly categorized",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V54_09_37_Poem_September_Kay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial board listing after the poem",
+      "action": "trim_end",
+      "text": "in its own way, September can be spring! 659",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Autumn Gifts Hannah C. Ashby",
+      "expected_page": 651,
+      "status": "merged_with_another",
+      "merged_into": "V54_09_06_SpFt_A_Crawford.txt"
+    }
+  ],
+  "notes": "Many files have content bleeding issues, wrong content, or incomplete extractions. Several files contain content that doesn't match their filenames. The OCR quality appears good but the article extraction process has significant issues with boundary detection and content categorization.",
+  "validated_corrections": [
+    {
+      "file": "V54_09_01_Fict_Throw_Chapter.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header and other content before the actual fiction story",
+      "action": "trim_start",
+      "text": "The Relief Society Magazine - September 1967, Vol. 54, No.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_09_Fict_Janet.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the fiction story including editorial content",
+      "action": "trim_end",
+      "text": "(To be continued) SEPTEMBER COURAGE Kathryn Kay September is the time of mellowing, of realizing summer's shine is past, the time when April green is yellowing to rusty gold. Which leaf will be the last? Now dew and early frost are interchanging; chaff is discarded, saving future seed. September is a month for rearranging the dreams that I shall keep for winter need. Like mountains, strong for constant weathering, 1, too, can face the lashing of the storm, the tawny cliffs and I, togethering, - will last. Wrapped in my dreams I shall be warm. In this, a month of joy-remembering, 1 can be brave in knowing Junes must fade, for faith and I have been Septembering so many autumns I am not afraid. In fall new hope is found to make hearts sing, in its own way, September can be spring! 659",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_13_Fict_Womans_Cannon.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Golden Chain story instead of ending with Woman's Sphere content",
+      "action": "trim_end",
+      "text": "Many critics have pronounced Miss Moore ''the best woman poet presently writing in the English language.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_15_Poem_Wide_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the poem including photo caption",
+      "action": "trim_end",
+      "text": "The bright periphery of fall. 677",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_09_27_SpFt_Life_Breinholt.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete poem citation",
+      "action": "append",
+      "text": "(Reprinted by permission of The Improvement Era) 691",
+      "confidence": "medium",
+      "validated": true
+    },
+    {
+      "file": "V54_09_30_Fict_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text",
+      "action": "append",
+      "text": "= P we eae NS ~ cn Cee al \\ Ny aT oF Vvyyt } -V-",
+      "confidence": "low",
+      "validated": true
+    },
+    {
+      "file": "V54_09_37_Poem_September_Kay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial board listing after the poem",
+      "action": "trim_end",
+      "text": "in its own way, September can be spring! 659",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V54_09_18_Fict_Luminous_McDonough.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the instructions",
+      "action": "append",
+      "text": "679",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V54_09_26_SpFt_To_Them_Breinholt.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence",
+      "action": "append",
+      "text": "690",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

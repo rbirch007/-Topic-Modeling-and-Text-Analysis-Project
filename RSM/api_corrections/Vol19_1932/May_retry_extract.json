@@ -1,0 +1,61 @@
+{
+  "volume": 19,
+  "month": "May",
+  "year": 1932,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.0568,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Relief Society Conference Address - President Louise Y. Robison",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "President Louise Y. Robison",
+      "confidence": "high",
+      "notes": "The provided PDF pages (263-267) contain articles about mothers and Mother's Day themes, including 'Mother Love' by Ida R. Alldredge and 'Mother Mine' by Eunice Jacobson Miles, but do not contain the Relief Society Conference Address by President Louise Y. Robison. According to the table of contents, this address should be on page 277, but that page is not included in the provided images.",
+      "order": "d",
+      "pdf_pages": [
+        263,
+        264,
+        265,
+        266,
+        267
+      ],
+      "source_file": "May_Vol19_12_Article_Thinking_of_You_Bertha_A_Kleinman.txt",
+      "api_usage": {
+        "input_tokens": 8528,
+        "output_tokens": 175,
+        "cost": 0.0282
+      }
+    },
+    {
+      "title": "Relief Society Conference Address - Dr. Joseph F. Merrill",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Dr. Joseph F. Merrill",
+      "confidence": "high",
+      "notes": "After carefully examining all 5 PDF page images (pages 263-267), I could not locate an article titled 'Relief Society Conference Address - Dr. Joseph F. Merrill' by Dr. Joseph F. Merrill. The pages contain other articles including 'Mother Love' by Ida R. Alldredge, 'Mother Mine' by Eunice Jacobson Miles, and 'Grow Dahlias This Year' by Maud Chegwidden, but the specified article is not present on these pages.",
+      "order": "f",
+      "pdf_pages": [
+        263,
+        264,
+        265,
+        266,
+        267
+      ],
+      "source_file": "May_Vol19_12_Article_Thinking_of_You_Bertha_A_Kleinman.txt",
+      "api_usage": {
+        "input_tokens": 8534,
+        "output_tokens": 200,
+        "cost": 0.0286
+      }
+    }
+  ]
+}

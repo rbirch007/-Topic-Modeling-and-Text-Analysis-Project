@@ -1,0 +1,173 @@
+{
+  "volume": 53,
+  "month": "January",
+  "year": 1966,
+  "total_files_checked": 39,
+  "files_correct": [
+    "V53_01_04_Poem_How_Coles.txt",
+    "V53_01_05_Poem_Sea_Roberts.txt",
+    "V53_01_13_Poem_January_Robinson.txt",
+    "V53_01_17_Poem_Samaritan_Young.txt",
+    "V53_01_20_Poem_Traveling.txt",
+    "V53_01_21_Poem_My_Pratt.txt",
+    "V53_01_22_The Home_Quantity_Shurtz.txt",
+    "V53_01_23_The Home_A_Quick_VanBrandwi.txt",
+    "V53_01_24_Poem_Hespite_Bills.txt",
+    "V53_01_25_The Home_Get_Williamson.txt",
+    "V53_01_26_The Home_Catherine_Cards.txt",
+    "V53_01_27_The Home_Our_Peterson.txt",
+    "V53_01_28_Poem_Across_Burnham.txt",
+    "V53_01_30_Lssn_Theology_Doxey.txt",
+    "V53_01_31_Lssn_VisitingR_H..txt",
+    "V53_01_32_Lssn_Work_Cannon.txt",
+    "V53_01_33_Lssn_Social_Christensen.txt",
+    "V53_01_34_Lssn_Literature_Thomas.txt",
+    "V53_01_35_Poem_Opportunity_Stewar.txt",
+    "V53_01_36_Poem_To_the_Gabbott.txt",
+    "V53_01_37_Poem_If_I_Fairbairn.txt",
+    "V53_01_38_The Home_Uncle_McAllister.txt",
+    "V53_01_39_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_01_01_SpFt_New_Presidency.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Teaching the Gospel article instead of New Year's Greeting",
+      "action": "replace_content",
+      "text": "\"Happy New Year'' has become a standard greeting and a common expression of kind wishes when a New Year dawns upon the world. The New Year suggests a time of beginnings and contemplates a closing of the door on the mistakes and difficulties of the past, except for those elements of good we may have extracted from them and upon which we may better build our lives. The expression \"'Happy New Year'' becomes a natural manifestation of one's feelings and desires for his friends and associates. It is indeed an exemplification of the spirit of the second great commandment: 'Thou shalt love thy neighbour as thyself.'' The General Presidency of Relief Society extends to Relief Society women throughout the world its very sincere wishes for a Happy New Year. Relief Society women have so much to make them genuinely happy. They have the sure knowledge of the truthfulness of the restored gospel, with its plan of life and salvation clearly delineated for them. Thousands of our Father's children find themselves in much the same position as the great Belgian playwright, Maeterlinck, when he exclaimed, ''If we knew but one thing to be true, would we not give our all!'' Relief Society members may be happy in the forward march of the work of this great and divinely inspired, Priesthood-directed organization. Happiness will flow to Relief Society members in the days ahead as they contemplate the development of their individual talents and characters through their Relief Society activities. They will also find happiness added to their lives in boundless measure through the sweet association of their Relief Society sisters. Surely every sister with mind and heart centered on the abiding truths of the gospel and devotedly engaged in the work of Relief Society, may look forward with confidence to much happiness in the New Year. The General Presidency and the General Board continually pray for the happiness and well-being of Relief Society sisters throughout the world. May they ever be blessed of the Lord with the joy which their unselfish devotion to our great work so much deserves. General Presidency",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from a previous letter",
+      "action": "trim_start",
+      "text": "I enjoy reading it so much",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of From Near and Far section with earlier letters",
+      "action": "prepend",
+      "text": "asient Colo | must write to thank you and tell you how thrilled | was to open the cover of my November Magazine and see our beautiful Mount McCaleb of the Lost River Mountains as the frontispiece. Our little town of Mackay rests at the foot of this lovely peak, and the mountain stands as a sentinel over our valley. The mountain is also my favorite view from my kitchen window. All of the Magazines are lovely and such an inspiration to all who read them. Leona B. Anderson Mackay, Idaho The wonderful Relief Society Magazine has been coming to our home for five years, and the teachings, both in love and spirituality, have helped tremendously in building our marriage and home. My husband has been attending school since we were married, and living on the kind of budget students live on, the Magazine has helped me greatly in figuring shortcuts, inexpensive food items, and sewing ideas, not to mention the uplift | receive from the Magazine when | need encouragement. Mrs. Marsha Ball Urbana, Illinois | am only twenty years old and single, but subscribe to The Relief Society Magazine. | think the Magazines would help the young women, for they could understand the appeal to the heart and to the personal being. They could learn of their roles as tomorrow's leaders of the women of the Church. Ailien Winn Smithfield, Utah | do love The Relief Society Magazine—the greatest of all magazines for women. Without it | would be lost. It gives me great inspiration each time | pick it up. It makes one feel close to the Heavenly Father. Its beauty, both inside and out, is beyond expression. Mrs. Ollie M. England Logan, Utah | would like to express my appreciation and thanks to a wonderful missionary sister from Utah. We had the pleasure of her company in our home, and we grew to love her very much. After she returned home she very kindly had The Relief Society Magazine sent to me, and | receive it regularly each month.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_14_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number instead of editorial title",
+      "action": "trim_start",
+      "text": "29 EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_14_GenFt_Editorial_Crawford.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the family member description part of the editorial",
+      "action": "append",
+      "text": "members were asked to tell what they had learned about this ancestor, and what his life and example meant to them personally. The discussion that followed was one of the most meaningful the family had ever shared together. Time—and the use we make of it—is indeed a sacred stewardship. As we begin this New Year, may we resolve to use our time wisely, to strengthen family ties, to serve others, and to draw closer to our Heavenly Father.",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V53_01_15_GenFt_Womans_Cannon.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of Woman's Sphere section",
+      "action": "prepend",
+      "text": "WOMAN'S SPHERE Ramona W. Cannon",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V53_01_16_GenFt_Notes.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content from Woman's Sphere instead of Notes to the Field",
+      "action": "replace_content",
+      "text": "NOTES TO THE FIELD: BOUND VOLUMES OF 1965 MAGAZINES Relief Society officers and members who wish to have their 1965 issues of The Relief Society Magazine bound may do so through The Deseret News Press, 1600 Empire Road, Salt Lake City, Utah 84104 (See advertisement in this issue of the Magazine.) The cost for binding the twelve issues in a permanent cloth binding is $3.25, leather $5.25, including the index. A limited number of 1965 Magazines are available at the offices of the General Board of Relief Society, 76 North Main Street, Salt Lake City, Utah 84111, for $2.00 for twelve issues. It is recommended that wards and stakes have one volume of the 1965 Magazines bound for preservation in ward and stake Relief Society libraries. Copies of The Relief Society Magazine index for 1965 for personal binding can be secured from the General Board office for 20¢ prepaid. Volumes bound at the Deseret News Press include a free index.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_01_18_SpFt_The_Voss.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from The Blue Crystal Vase story instead of The 1966 March of Dimes article",
+      "action": "note",
+      "text": "OCR gap - The 1966 March of Dimes article by George P. Voss is not visible in the source OCR text",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The 1966 March of Dimes",
+      "expected_page": 34,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Shifting Sands poem",
+      "expected_page": 34,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. Main issues are: 1) Wrong content in New Year's Greeting file (contains Teaching the Gospel instead), 2) Missing beginning of From Near and Far section, 3) The 1966 March of Dimes article appears to be missing from OCR, 4) Some minor bleed issues at file boundaries. The poetry and lesson sections are well-extracted.",
+  "validated_corrections": [
+    {
+      "file": "V53_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from a previous letter",
+      "action": "trim_start",
+      "text": "I enjoy reading it so much",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of From Near and Far section with earlier letters",
+      "action": "prepend",
+      "text": "asient Colo | must write to thank you and tell you how thrilled | was to open the cover of my November Magazine and see our beautiful Mount McCaleb of the Lost River Mountains as the frontispiece. Our little town of Mackay rests at the foot of this lovely peak, and the mountain stands as a sentinel over our valley. The mountain is also my favorite view from my kitchen window. All of the Magazines are lovely and such an inspiration to all who read them. Leona B. Anderson Mackay, Idaho The wonderful Relief Society Magazine has been coming to our home for five years, and the teachings, both in love and spirituality, have helped tremendously in building our marriage and home. My husband has been attending school since we were married, and living on the kind of budget students live on, the Magazine has helped me greatly in figuring shortcuts, inexpensive food items, and sewing ideas, not to mention the uplift | receive from the Magazine when | need encouragement. Mrs. Marsha Ball Urbana, Illinois | am only twenty years old and single, but subscribe to The Relief Society Magazine. | think the Magazines would help the young women, for they could understand the appeal to the heart and to the personal being. They could learn of their roles as tomorrow's leaders of the women of the Church. Ailien Winn Smithfield, Utah | do love The Relief Society Magazine—the greatest of all magazines for women. Without it | would be lost. It gives me great inspiration each time | pick it up. It makes one feel close to the Heavenly Father. Its beauty, both inside and out, is beyond expression. Mrs. Ollie M. England Logan, Utah | would like to express my appreciation and thanks to a wonderful missionary sister from Utah. We had the pleasure of her company in our home, and we grew to love her very much. After she returned home she very kindly had The Relief Society Magazine sent to me, and | receive it regularly each month.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_14_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number instead of editorial title",
+      "action": "trim_start",
+      "text": "29 EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_01_15_GenFt_Womans_Cannon.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of Woman's Sphere section",
+      "action": "prepend",
+      "text": "WOMAN'S SPHERE Ramona W. Cannon",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_01_14_GenFt_Editorial_Crawford.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the family member description part of the editorial",
+      "action": "append",
+      "text": "members were asked to tell what they had learned about this ancestor, and what his life and example meant to them personally. The discussion that followed was one of the most meaningful the family had ever shared together. Time—and the use we make of it—is indeed a sacred stewardship. As we begin this New Year, may we resolve to use our time wisely, to strengthen family ties, to serve others, and to draw closer to our Heavenly Father.",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

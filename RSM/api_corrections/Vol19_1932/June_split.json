@@ -1,0 +1,68 @@
+{
+  "volume": 19,
+  "month": "June",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1555,
+  "files": [
+    {
+      "source_file": "June_Vol19_11_Article_Lesson_Preparation_and_Union_Meeting_Kate_M_Barker.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Preparation and Union Meeting",
+          "category": "Article",
+          "author": "Kate M. Barker",
+          "start_boundary": "Lesson Preparation and Union Meeting Address delivered at Relief",
+          "end_boundary": "Let us strive for it! To Margaret W.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "To Margaret W. Manning",
+          "category": "Poem",
+          "author": "Edith E. Anderson",
+          "start_boundary": "To Margaret W. Manning On the twentieth anniversary",
+          "end_boundary": "Our R. S. Stake careers. The Wedding",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "The Wedding Gift",
+          "category": "Article",
+          "author": "Coral J. Black",
+          "start_boundary": "The Wedding Gift By Coral J. Black Y",
+          "end_boundary": "call it my Treasure Quilt.\" Aunt Eunice smiled",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON PREPARATION"
+      ],
+      "notes": "This file contains three distinct pieces: a main article on lesson preparation, a commemorative poem, and a short story about a wedding gift quilt. The boundaries are clear with distinct titles and author attributions.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9376,
+      "tier": 1,
+      "pdf_pages": [
+        402,
+        403,
+        404,
+        405,
+        406
+      ],
+      "api_usage": {
+        "input_tokens": 49455,
+        "output_tokens": 474,
+        "cost": 0.1555
+      }
+    }
+  ]
+}

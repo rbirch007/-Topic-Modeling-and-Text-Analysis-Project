@@ -1,0 +1,504 @@
+{
+  "volume": 18,
+  "month": "January",
+  "year": 1931,
+  "total_merged": 9,
+  "total_splits": 24,
+  "total_cost": 1.6827,
+  "files": [
+    {
+      "source_file": "January_Vol18_04_Article_Social_Work.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Social Work",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Social Work (Historical Sketch) By Amy Brown Lyman THE practice",
+          "end_boundary": "wholesome, abundant life for all.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "SOCIAL WORK"
+      ],
+      "notes": "This file contains a single complete article on Social Work by Amy Brown Lyman. The file includes some OCR artifacts and page numbers but represents one cohesive historical sketch of social work from ancient times through the LDS Relief Society's role in the early 20th century.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 15903,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 48973,
+        "output_tokens": 234,
+        "cost": 0.1504
+      }
+    },
+    {
+      "source_file": "January_Vol18_05_Article_Summer_Camps_of_the_Y_L_M_1_A.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Summer Camps of the Y. L. M. I. A.",
+          "category": "Article",
+          "author": "Rosetta W. Bennett",
+          "start_boundary": "Summer Camps of the Y. L. M. L. A. By Rosetta W. Bennett,",
+          "end_boundary": "building of future noble womanhood.: A NATURE STUDY GROUP",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Relief Society Social Service Department",
+          "category": "Article",
+          "author": "Genevieve Thornton",
+          "start_boundary": "The Relief Society Social Service Department By Genevieve Thornton (Supervisor Social",
+          "end_boundary": "various types of service. A. WARP bishops and 'Relief So",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "SUMMER CAMPS"
+      ],
+      "notes": "The file contains two complete articles. The first is about Y.L.M.I.A. summer camps and the second is about the Relief Society Social Service Department. The second article appears to be cut off at the end, ending mid-sentence with 'A. WARP bishops and Relief So' which suggests it continues in another file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10880,
+      "tier": 1,
+      "pdf_pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "api_usage": {
+        "input_tokens": 59377,
+        "output_tokens": 402,
+        "cost": 0.1842
+      }
+    },
+    {
+      "source_file": "January_Vol18_06_Article_Relief_Society_Service_Thornton.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Relief Society Social Service Department",
+          "category": "Article",
+          "author": "Genevieve Thornton",
+          "start_boundary": "The Relief Society Social Service Department By Genevieve Thornton",
+          "end_boundary": "to meet a particular need of the people.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The L. D. S. Children's Hospital",
+          "category": "Article",
+          "author": "Vera P. Wahlquist",
+          "start_boundary": "The L. D. S. Children's Hospital By Vera P. Wahlquist",
+          "end_boundary": "by our Primary Associations.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY SOCIAL SERVICE DEPARTMENT",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two complete articles as indicated in the table of contents. The first article by Genevieve Thornton runs from the beginning through page 17, and the second article by Vera P. Wahlquist starts on page 18. Both articles have clear title headers and author bylines that match the contents listing.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 13478,
+      "tier": 1,
+      "pdf_pages": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "api_usage": {
+        "input_tokens": 58021,
+        "output_tokens": 366,
+        "cost": 0.1796
+      }
+    },
+    {
+      "source_file": "January_Vol18_08_Article_Question_in_case_Palmer.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Question in Case Work",
+          "category": "Article",
+          "author": "Annie D. Palmer",
+          "start_boundary": "A Question in Case Work By Annie D, Palmer",
+          "end_boundary": "I think so. 'We shall work very fast.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Neighborhood House",
+          "category": "Article",
+          "author": "Ellen Taylor",
+          "start_boundary": "The Neighborhood House By Ellen Taylor HE work of",
+          "end_boundary": "hopes for a future of greater usefulness.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A QUESTION IN CASE WORK",
+        "THE NEIGHBORHOOD HOUSE"
+      ],
+      "notes": "Clear split between two distinct articles. First is a case work story about Joe Mann, second is about the Neighborhood House social service organization.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16012,
+      "tier": 1,
+      "pdf_pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "api_usage": {
+        "input_tokens": 62460,
+        "output_tokens": 410,
+        "cost": 0.1935
+      }
+    },
+    {
+      "source_file": "January_Vol18_19_Article_What_the_Social_Service_Institute_Means_to_Us.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "What the Social Service Institute Means to Us",
+          "category": "Article",
+          "author": "Laura A. Watkins",
+          "start_boundary": "What the Social Service Institute Means",
+          "end_boundary": "pray in the name of Jesus. Amen.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Hidden Opportunity",
+          "category": "Article",
+          "author": "Rose Ellen B. Valentine",
+          "start_boundary": "A Hidden Opportunity By Rose Ellen",
+          "end_boundary": "Great deeds cannot die They with",
+          "confidence": "high",
+          "end_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "WHAT THE SOCIAL SERVICE INSTITUTE MEANS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two complete articles. The first article ends with 'Amen.' and is followed by a Tennyson quote that serves as a transition. The second article begins clearly with its own title and author byline. Both articles have distinct topics and authors as listed in the table of contents.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 9411,
+      "tier": 1,
+      "pdf_pages": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "api_usage": {
+        "input_tokens": 54203,
+        "output_tokens": 343,
+        "cost": 0.1678
+      }
+    },
+    {
+      "source_file": "January_Vol18_20_Article_A_Hidden_Opportunity.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Hidden Opportunity",
+          "category": "Article",
+          "author": "Rose Ellen B. Valentine",
+          "start_boundary": "; A Hidden Opportunity By Rose Ellen B, Valentine AF'TER considering",
+          "end_boundary": "All who joy would win must share itHappiness was born Grant Stake",
+          "confidence": "high",
+          "end_match_words": 7
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A HIDDEN OPPORTUNITY"
+      ],
+      "notes": "This file contains a single article 'A Hidden Opportunity' by Rose Ellen B. Valentine. The article begins after the file header and continues to the end with some fragmentary text at the very end that appears to be from another source or page.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16038,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 49345,
+        "output_tokens": 239,
+        "cost": 0.1516
+      }
+    },
+    {
+      "source_file": "January_Vol18_21_Article_Notes_to_Field.txt",
+      "num_articles_found": 7,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes to the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes to the Field The Board hopes through",
+          "end_boundary": "It helps us to feel His glory. (Continued",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field North Sevier Stake: RELIEF",
+          "end_boundary": "the magnificent messages of the Book of Mormon.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Relief Society General Board and Magazine Information",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "THE RELIEF SOCIETY OF THE CHURCH OF",
+          "end_boundary": "Salt Lake 'City, Utah Voit. XVIII JANUARY,",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "d",
+          "title": "1931 Welcome",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL 1931 Welcome Cl bells are ringing",
+          "end_boundary": "General Presidency of the Relief Society.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Whitehouse Conference on Childhood Health and Protection",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Whitehouse Conference on Childhood Health and Protection",
+          "end_boundary": "and ability to keep things to himself.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "One Hundred Years",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "One Hundred Years \"One Hundred Years\" briefly",
+          "end_boundary": "genesis of great movements.",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Lesson Department",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department LESSON I Theology and 'Testimony",
+          "end_boundary": "When Buying Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES TO THE FIELD",
+        "NOTES FROM THE FIELD",
+        "EDITORIAL",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains multiple distinct sections including administrative notes, editorial content, articles, and lesson materials. The content flows from Notes to the Field through various articles and ends with extensive lesson department materials including theology lessons, work and business topics, literature studies, and social service content.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 19102,
+      "tier": 1,
+      "pdf_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "api_usage": {
+        "input_tokens": 73839,
+        "output_tokens": 780,
+        "cost": 0.2332
+      }
+    },
+    {
+      "source_file": "January_Vol18_22_Article_Editorial.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial - 1931 Welcome",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "XVIII JANUARY, 1931 No. 1 EDITORIAL 1931 Welcome",
+          "end_boundary": "General Presidency of the Relief Society.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Whitehouse Conference on Childhood Health and Protection",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Whitehouse Conference on Childhood Health and Protection THE",
+          "end_boundary": "available to him from maternity to maturity.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "One Hundred Years",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "One Hundred Years \"One Hundred Years\" briefly",
+          "end_boundary": "and survey the genesis of great movements.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains three distinct articles: an editorial welcoming 1931, an article about President Hoover's White House Conference on child health, and a review of the 'One Hundred Years' book about LDS Church history. The boundaries are clear with distinct topic changes between each section.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10465,
+      "tier": 1,
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "api_usage": {
+        "input_tokens": 57579,
+        "output_tokens": 417,
+        "cost": 0.179
+      }
+    },
+    {
+      "source_file": "January_Vol18_23_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department - Lesson I: Theology and Testimony",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department LESSON I Theology and 'Testimony",
+          "end_boundary": "between Jesus before and after the resurrection?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Teacher's Topic for March",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Work and Business TEACHER'S Topic For Marcu",
+          "end_boundary": "how much they appreciate their service.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Short Story in Germany",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature (Third Week. In March) Tue",
+          "end_boundary": "better insight into the German racial characteristics?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Personality Study: Habits and Growth",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service. (Fourth Week in March)",
+          "end_boundary": "do not readily agree. HAPPY LITTLE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections for different weeks in March: Theology and Testimony (Week 1), Work and Business (Week 1 teacher's meeting), Literature (Week 3), and Social Service (Week 4). Each section has its own topic, assignments, and discussion questions. The sections are clearly delineated by subject headers and week designations.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 38541,
+      "tier": 1,
+      "pdf_pages": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "api_usage": {
+        "input_tokens": 78485,
+        "output_tokens": 527,
+        "cost": 0.2434
+      }
+    }
+  ]
+}

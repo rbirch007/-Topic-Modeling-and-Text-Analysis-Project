@@ -1,0 +1,281 @@
+{
+  "volume": 55,
+  "month": "May",
+  "year": 1968,
+  "total_files_checked": 37,
+  "files_correct": [
+    "V55_05_02_Art_Day_Perry.txt",
+    "V55_05_03_Art_From_Near_and_Far.txt",
+    "V55_05_05_Poem_The_Esplin.txt",
+    "V55_05_06_Fict_The_Littke.txt",
+    "V55_05_08_GenFt_Womans_Cannon.txt",
+    "V55_05_09_GenFt_Editorial_Spafford.txt",
+    "V55_05_15_SpFt_Answer_Bond.txt",
+    "V55_05_17_SpFt_Relief_Ladd.txt",
+    "V55_05_18_Fict_Hand_in_Smith.txt",
+    "V55_05_22_SpFt_Testimony.txt",
+    "V55_05_24_GenFt_Konsternation_Jone.txt",
+    "V55_05_25_GenFt_Ways_to_Todd.txt",
+    "V55_05_26_GenFt_Something_Thulin.txt",
+    "V55_05_27_GenFt_Annie.txt",
+    "V55_05_28_GenFt_Say_Dixon.txt",
+    "V55_05_29_GenFt_The_Young.txt",
+    "V55_05_30_Poem_Music_Morris.txt",
+    "V55_05_31_Fict_Mabel.txt",
+    "V55_05_32_SpFt_Marianne.txt",
+    "V55_05_33_GenFt_Notes_Activities.txt",
+    "V55_05_34_Lssn_Homemaking_Hammond.txt",
+    "V55_05_35_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_05_01_Fict_If_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains poetry contest winners instead of 'If Spring Be Late Chapter 2'",
+      "action": "replace_content",
+      "text": "This file should contain 'If Spring Be Late Chapter 2' by Mabel Harmer, not poetry contest content",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_05_04_SpFt_Down_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Mary R. Young Member, General Board of Relief Society = She was just a little girl much too young to make important decisions and, yet, she wanted to be heard from during the family home evening hour. As this incident was told to me, this young child first expressed the desire to be a schoolteacher when she grew up, then she changed her mind and said she wanted to be a nurse; then, looking fondly over at her mother, she said, \"No, I have decided I want to be just like mothernothing!\" She meant her mother had not followed a career as a teacher or a nurse, she was just a wonderful mother and homemaker. What a lovely compliment to pay her mother, to want to be like her. I feel honored and complimented when a person says, \"You remind me of your mother.\" I remember how delighted my mother was when friends told 324 her she resembled her mother 'in many ways. I will be eternally grateful for the guidance and teachings of a good mother; for her strength of character; for the example she set by living the principles of the gospel; for her great courage, faith, and honesty, her deep reverence for the priesthood and desire to sustain and follow the counsel of the Authorities and prophets of the Lord. My mother, Mary Romney Ross, lovingly called Aunt Mamie by her nieces and nephews, was both mother and father to her five children. My father, George John Ross, was killed in 1908, in what was believed to be the first fatal auto mobile accident in the State of Utah. My _ youngest brother Charles was born some months after the accident, so mother had five young children to rear alone. She always said her Heav- enly Father blessed her with added strength and health to carry out her many responsibilities as a widow for fifty-four years of her life. Some of my earliest recollections and memories of home were those of hearing mother sing. She had a beautiful soprano voice. I would sit and listen to her practice a solo she was preparing to sing at church; or she and her friends would practice duets or quartets to sing at funerals. It was such fun to hear them make their plans. As children, we enjoyed hearing mother tell us about her childhood, how Brother C. R. Savage called her \"little canary\" when she sang as a very young girl. How thrilling it was to sing in the Tabernacle when Utah was made a State, and then, with great feeling, she would relate the impressive occasion of singing with the Tabernacle Choir at the dedication of the Salt Lake Temple.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_07_Poem_Mail_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about Woman's Sphere",
+      "action": "trim_end",
+      "text": "Christie Lund Coles 3 = (as Ramona W.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_10_GenFt_Cleone_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about MIA plays",
+      "action": "trim_end",
+      "text": "Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 S",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_11_GenFt_Wanted!_Plays.txt",
+      "issue_type": "wrong_content",
+      "description": "File is duplicate of preceding article instead of separate MIA plays content",
+      "action": "note",
+      "text": "Content needs re-extraction — duplicate of preceding article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_05_12_GenFt_Notes_Contests.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with MIA plays content instead of literary contests",
+      "action": "trim_start",
+      "text": "The MIA Drama Commitee is now reading short and long plays for inclusion in a new play book. Plays pertaining to all women-and-girl casts are especially invited. They should be written for family audiences and adhere to LDS standards. Publication and royalty rights will be purchased for all plays accepted by the committee. Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 South State Street, Salt Lake City, Utah 84111. 340",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_13_GenFt_The_Beck.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with MIA plays content instead of home mother reflections",
+      "action": "trim_start",
+      "text": "The MIA Drama Commitee is now reading short and long plays for inclusion in a new play book. Plays pertaining to all women-and-girl casts are especially invited. They should be written for family audiences and adhere to LDS standards. Publication and royalty rights will be purchased for all plays accepted by the committee. Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 South State Street, Salt Lake City, Utah 84111. 340 close in November, and the three prize-winning poems, as well as the three prizewinning stories, will be published in the April 1969 issue of the Magazine.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_14_Poem_Spring.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with notes to field content instead of Spring poem",
+      "action": "trim_start",
+      "text": "**NOTES TO THE FIELD**\n\n[ILLUSTRATION: Woman writing at desk with flowers]\n\n**Notes to the Field**\n\nCHANGE IN TIME SCHEDULES FOR LITERARY CONTESTS\n\nA new time has been adopted for the Relief Society Poem Contest and the Relief Society Short Story Contest. Formerly the announcements appeared each year in the May issue of the Magazine. Beginning in 1968, the contests will open in August, and the August issue will contain the rules for submitting entries. The contests will close in November, and the three prize-winning poems, as well as the three prize-winning stories, will be published in the April 1969 issue of the Magazine.\n\n❖❖❖❖❖❖❖❖❖\n\n**Reflections on Being a Home Mother**\n\nJosephine H. Beck\n\nA home mother is what I call myself, because that is what I am striving to be—a mother at home.\n\nI'm a mother with precious memories of a mother who was always home when I came home. Always, I could look back and wave goodbye to her as I went forth to perform my daily tasks. Whenever I needed comfort or reassurance, she was there, and I never went away \"heart-hungry.\" Time or loss of taste could never dim my memory of wonderful fragrant bread baking, or the aroma of chili sauce on the autumn air.\n\nSo that is what I choose to be—a home mother, and I sincerely hope my children, in their every need, will find me available when they need my help or encouragement in these trying days of growing up.\n\n**MAIL BOX (RFD)**\n\nIn summer, it seems, they always loiter long. . . .\nA rose to pick—the bridge to cross—a sunset's glow.\nBut in wintertime their pace is fleet and swift.\nWhat fun to run the length of lane in drifted snow!\n\nAnd oh, the thrill to find the waiting letter there—\nThe Christmas card, the valentine, a child's first scrawl.\nAnd always always the words most waited for:\n\"We are all just fine.\" \"We miss you so.\"\n\"God bless you all.\"\n\nAlda L. Brown\n\n341",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_16_Poem_Syringa_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Answer to My Daughter content instead of Syringa Blossoms poem",
+      "action": "trim_start",
+      "text": "Answer to My Daughter\n\nlearned something new about life that I never knew before, or, sometimes, even understood.\n\nThrough illness, I have gained a greater insight into the lives and feelings of others. I have learned to have sympathy, compassion, and empathy. Life, itself, has taken on new meaning for me. I am learning to choose the important things and not to clutter up my life with things that don't really matter, such as false pride and trying to keep up with the Joneses. There was a time when these meant quite a bit to me, but I have re-evaluated so many things. I still have to overcome being over-anxious and\n\nI must still learn to be more patient.\n\nBeing ill so much has opened up new avenues of self-expression for me, and for this I am truly grateful. And despite all the illness, pain, and difficulties that may have been my lot, I have gained two very important things, and they are my trust and faith in God's goodness to me and mine. I am truly blest, and, if I do nothing more in life than instill in you a desire to find, for yourself, the truth of these things, I shall not have lived in vain.\n\nYOUR LOVING MOTHER\n\n[ILLUSTRATION: A circular wreath of yellow/golden flowers surrounding the poem]",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_19_Poem_Story_Wrathall.txt",
+      "issue_type": "bleed_end",
+      "description": "File is incomplete, cuts off mid-poem",
+      "action": "append",
+      "text": "Wrathall Must light his small dim corner of the sphere;",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_20_SpFt_Dearest_Sandberg.txt",
+      "issue_type": "missing_text",
+      "description": "File appears to be missing the actual Dearest Mother content and contains Testimony content instead",
+      "action": "note",
+      "text": "OCR gap - Dearest Mother content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_05_21_Poem_The_Ravsten.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Konsternation in the Kitchen article",
+      "action": "trim_end",
+      "text": "_AONSTERNATION IN THE KITCHEN _ s There was consternation in the stake house kitchen the day the salad \"didn't set up.\" Ready were dainty rolls, split and spread with thyme, rosemary, and oregano; punch made of sweet apple cider and ginger ale, on which floated a coronet of giant fresh frozen strawberries; divinity, soft as a cloud; and butter-smooth pecan panocha. But what good was all of this beautiful food, when ninety sisters would be ready for luncheon in less than two hours, and the salad would have to be served in bowls and eaten with spoons. \"The salad didn't set up.\" The whispered information had all the overtones of a national calamity. This luncheon was important. The Relief Society stake board was honoring the ward officers and teachers following the last leadership meeting of the season. The salad looked perfect, a delicate shrimp color and loaded, everyone knew, with such delicacies as tiny whole shrimps, sour cream, chopped chives, and other true party fare. But everyone who shook one of the twelve pans, or tried with a knife to check the consistency, sorrowfully agreed, \"It hasn't set up.\" The panicked sisterhoodall dazzling cooks but onewere not used to failure. 356 Helen Hinckley Jones \"TI guess it would be too late to add some concentrated gelatin,\" someone suggested.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_23_Poem_I_Do_Burnham.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Konsternation in the Kitchen content instead of I Do Not Walk Alone poem",
+      "action": "replace_content",
+      "text": "\" I DO NOT WALK ALONE Some say that I am going blind Because I grope, my way to find. They do not know; they cannot see That there is One who walks with me. Though the way be dark and filled with pain, He comes to take my hand again, For he hath said in olden days, My child, I am with you always. » Lucy S. Burnham 365",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_05_36_Poem_May_Is_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Woman's Sphere article",
+      "action": "trim_end",
+      "text": "month One thinks of children, And becomes a child again. 336  Christie Lund Coles 3 = (as Ramona W. Cannon Ida Jensen Romney, wife of Elder Marion G. Romney of the Council of the Twelve of The Church of Jesus Christ of Latter-day Saints, was honored in February by the Associated Women Students of Ricks College, Rexburg, Idaho, for her outstanding service to youth, as a teacher, and as a devoted wife, mother, and grandmother. Mrs. Romney, as Miss Jensen, was a teacher of English at Ricks College, when she met Elder Romney. In her address to the students, after accepting the award, Mrs. Romney advised the girls to stay close to the principles taught them at Ricks College, by their parents, and by the Church. Ruth Heffner, Quinter, Kansas, is partner with her husband Frank Heffner in ''Wagons Ho!\"' a unique enterprise that takes people on authentic, covered-wagon journeys. Their journeys follow closely the historic Smoky Hill Trail, along which the pioneer wagons rolled a century ago. All summer long the Heffners run their wagon trains, with Frank as wagonmaster, Ruth as hostess, son David as wrangler, and daughter Ruth playing the accordion by the campfires at night. Joy Courtney, age twenty-five, formerly of Vicksburg, Mississippi, is a bush pilot, flying commercial tourist planes out of Dar Es Salaam, Tanzania, Africa. She has logged 3,000 hours of accident-free flying. Rosemary Ryan, who tives in Toorak, an exclusive suburb of Melbourne, Australia, has recently been honoredwith a special exhibition of her paintings at the South Yarra Gallery.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_37_Poem_Brief_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text after the poem",
+      "action": "trim_end",
+      "text": "A Vesta Nickerson fepairn ~ 351",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Dearest Mother Evalyn W. Sandberg",
+      "expected_page": 352,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding issues where articles run into each other. The 'If Spring Be Late Chapter 2' content appears to be completely replaced with poetry contest content. Some garbled text appears at the end of certain files, likely due to OCR errors. The Dearest Mother article content is missing from the OCR source.",
+  "validated_corrections": [
+    {
+      "file": "V55_05_04_SpFt_Down_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Mary R. Young Member, General Board of Relief Society = She was just a little girl much too young to make important decisions and, yet, she wanted to be heard from during the family home evening hour. As this incident was told to me, this young child first expressed the desire to be a schoolteacher when she grew up, then she changed her mind and said she wanted to be a nurse; then, looking fondly over at her mother, she said, \"No, I have decided I want to be just like mothernothing!\" She meant her mother had not followed a career as a teacher or a nurse, she was just a wonderful mother and homemaker. What a lovely compliment to pay her mother, to want to be like her. I feel honored and complimented when a person says, \"You remind me of your mother.\" I remember how delighted my mother was when friends told 324 her she resembled her mother 'in many ways. I will be eternally grateful for the guidance and teachings of a good mother; for her strength of character; for the example she set by living the principles of the gospel; for her great courage, faith, and honesty, her deep reverence for the priesthood and desire to sustain and follow the counsel of the Authorities and prophets of the Lord. My mother, Mary Romney Ross, lovingly called Aunt Mamie by her nieces and nephews, was both mother and father to her five children. My father, George John Ross, was killed in 1908, in what was believed to be the first fatal auto mobile accident in the State of Utah. My _ youngest brother Charles was born some months after the accident, so mother had five young children to rear alone. She always said her Heav- enly Father blessed her with added strength and health to carry out her many responsibilities as a widow for fifty-four years of her life. Some of my earliest recollections and memories of home were those of hearing mother sing. She had a beautiful soprano voice. I would sit and listen to her practice a solo she was preparing to sing at church; or she and her friends would practice duets or quartets to sing at funerals. It was such fun to hear them make their plans. As children, we enjoyed hearing mother tell us about her childhood, how Brother C. R. Savage called her \"little canary\" when she sang as a very young girl. How thrilling it was to sing in the Tabernacle when Utah was made a State, and then, with great feeling, she would relate the impressive occasion of singing with the Tabernacle Choir at the dedication of the Salt Lake Temple.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_07_Poem_Mail_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about Woman's Sphere",
+      "action": "trim_end",
+      "text": "Christie Lund Coles 3 = (as Ramona W.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_10_GenFt_Cleone_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about MIA plays",
+      "action": "trim_end",
+      "text": "Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 S",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_12_GenFt_Notes_Contests.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with MIA plays content instead of literary contests",
+      "action": "trim_start",
+      "text": "The MIA Drama Commitee is now reading short and long plays for inclusion in a new play book. Plays pertaining to all women-and-girl casts are especially invited. They should be written for family audiences and adhere to LDS standards. Publication and royalty rights will be purchased for all plays accepted by the committee. Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 South State Street, Salt Lake City, Utah 84111. 340",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_13_GenFt_The_Beck.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with MIA plays content instead of home mother reflections",
+      "action": "trim_start",
+      "text": "The MIA Drama Commitee is now reading short and long plays for inclusion in a new play book. Plays pertaining to all women-and-girl casts are especially invited. They should be written for family audiences and adhere to LDS standards. Publication and royalty rights will be purchased for all plays accepted by the committee. Plays, in their proper form, are to be submitted to MIA Drama Committee, 79 South State Street, Salt Lake City, Utah 84111. 340 close in November, and the three prize-winning poems, as well as the three prizewinning stories, will be published in the April 1969 issue of the Magazine.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_14_Poem_Spring.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with notes to field content instead of Spring poem",
+      "action": "trim_start",
+      "text": "**NOTES TO THE FIELD**\n\n[ILLUSTRATION: Woman writing at desk with flowers]\n\n**Notes to the Field**\n\nCHANGE IN TIME SCHEDULES FOR LITERARY CONTESTS\n\nA new time has been adopted for the Relief Society Poem Contest and the Relief Society Short Story Contest. Formerly the announcements appeared each year in the May issue of the Magazine. Beginning in 1968, the contests will open in August, and the August issue will contain the rules for submitting entries. The contests will close in November, and the three prize-winning poems, as well as the three prize-winning stories, will be published in the April 1969 issue of the Magazine.\n\n❖❖❖❖❖❖❖❖❖\n\n**Reflections on Being a Home Mother**\n\nJosephine H. Beck\n\nA home mother is what I call myself, because that is what I am striving to be—a mother at home.\n\nI'm a mother with precious memories of a mother who was always home when I came home. Always, I could look back and wave goodbye to her as I went forth to perform my daily tasks. Whenever I needed comfort or reassurance, she was there, and I never went away \"heart-hungry.\" Time or loss of taste could never dim my memory of wonderful fragrant bread baking, or the aroma of chili sauce on the autumn air.\n\nSo that is what I choose to be—a home mother, and I sincerely hope my children, in their every need, will find me available when they need my help or encouragement in these trying days of growing up.\n\n**MAIL BOX (RFD)**\n\nIn summer, it seems, they always loiter long. . . .\nA rose to pick—the bridge to cross—a sunset's glow.\nBut in wintertime their pace is fleet and swift.\nWhat fun to run the length of lane in drifted snow!\n\nAnd oh, the thrill to find the waiting letter there—\nThe Christmas card, the valentine, a child's first scrawl.\nAnd always always the words most waited for:\n\"We are all just fine.\" \"We miss you so.\"\n\"God bless you all.\"\n\nAlda L. Brown\n\n341",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_16_Poem_Syringa_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Answer to My Daughter content instead of Syringa Blossoms poem",
+      "action": "trim_start",
+      "text": "Answer to My Daughter\n\nlearned something new about life that I never knew before, or, sometimes, even understood.\n\nThrough illness, I have gained a greater insight into the lives and feelings of others. I have learned to have sympathy, compassion, and empathy. Life, itself, has taken on new meaning for me. I am learning to choose the important things and not to clutter up my life with things that don't really matter, such as false pride and trying to keep up with the Joneses. There was a time when these meant quite a bit to me, but I have re-evaluated so many things. I still have to overcome being over-anxious and\n\nI must still learn to be more patient.\n\nBeing ill so much has opened up new avenues of self-expression for me, and for this I am truly grateful. And despite all the illness, pain, and difficulties that may have been my lot, I have gained two very important things, and they are my trust and faith in God's goodness to me and mine. I am truly blest, and, if I do nothing more in life than instill in you a desire to find, for yourself, the truth of these things, I shall not have lived in vain.\n\nYOUR LOVING MOTHER\n\n[ILLUSTRATION: A circular wreath of yellow/golden flowers surrounding the poem]",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_19_Poem_Story_Wrathall.txt",
+      "issue_type": "bleed_end",
+      "description": "File is incomplete, cuts off mid-poem",
+      "action": "append",
+      "text": "Wrathall Must light his small dim corner of the sphere;",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_21_Poem_The_Ravsten.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Konsternation in the Kitchen article",
+      "action": "trim_end",
+      "text": "_AONSTERNATION IN THE KITCHEN _ s There was consternation in the stake house kitchen the day the salad \"didn't set up.\" Ready were dainty rolls, split and spread with thyme, rosemary, and oregano; punch made of sweet apple cider and ginger ale, on which floated a coronet of giant fresh frozen strawberries; divinity, soft as a cloud; and butter-smooth pecan panocha. But what good was all of this beautiful food, when ninety sisters would be ready for luncheon in less than two hours, and the salad would have to be served in bowls and eaten with spoons. \"The salad didn't set up.\" The whispered information had all the overtones of a national calamity. This luncheon was important. The Relief Society stake board was honoring the ward officers and teachers following the last leadership meeting of the season. The salad looked perfect, a delicate shrimp color and loaded, everyone knew, with such delicacies as tiny whole shrimps, sour cream, chopped chives, and other true party fare. But everyone who shook one of the twelve pans, or tried with a knife to check the consistency, sorrowfully agreed, \"It hasn't set up.\" The panicked sisterhoodall dazzling cooks but onewere not used to failure. 356 Helen Hinckley Jones \"TI guess it would be too late to add some concentrated gelatin,\" someone suggested.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_05_36_Poem_May_Is_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Woman's Sphere article",
+      "action": "trim_end",
+      "text": "month One thinks of children, And becomes a child again. 336  Christie Lund Coles 3 = (as Ramona W. Cannon Ida Jensen Romney, wife of Elder Marion G. Romney of the Council of the Twelve of The Church of Jesus Christ of Latter-day Saints, was honored in February by the Associated Women Students of Ricks College, Rexburg, Idaho, for her outstanding service to youth, as a teacher, and as a devoted wife, mother, and grandmother. Mrs. Romney, as Miss Jensen, was a teacher of English at Ricks College, when she met Elder Romney. In her address to the students, after accepting the award, Mrs. Romney advised the girls to stay close to the principles taught them at Ricks College, by their parents, and by the Church. Ruth Heffner, Quinter, Kansas, is partner with her husband Frank Heffner in ''Wagons Ho!\"' a unique enterprise that takes people on authentic, covered-wagon journeys. Their journeys follow closely the historic Smoky Hill Trail, along which the pioneer wagons rolled a century ago. All summer long the Heffners run their wagon trains, with Frank as wagonmaster, Ruth as hostess, son David as wrangler, and daughter Ruth playing the accordion by the campfires at night. Joy Courtney, age twenty-five, formerly of Vicksburg, Mississippi, is a bush pilot, flying commercial tourist planes out of Dar Es Salaam, Tanzania, Africa. She has logged 3,000 hours of accident-free flying. Rosemary Ryan, who tives in Toorak, an exclusive suburb of Melbourne, Australia, has recently been honoredwith a special exhibition of her paintings at the South Yarra Gallery.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_05_37_Poem_Brief_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text after the poem",
+      "action": "trim_end",
+      "text": "A Vesta Nickerson fepairn ~ 351",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

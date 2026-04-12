@@ -1,0 +1,87 @@
+{
+  "volume": 57,
+  "month": "May",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 10,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_05_01_Poem_I_Would_Sadleir.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (328 chars)"
+    },
+    {
+      "file": "V57_05_02_Poem_The_Tangren.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_05_03_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1043 chars removed)"
+    },
+    {
+      "file": "V57_05_04_SpFt_A_Pettit.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_05_05_SpFt_Children_With.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_05_09_Poem_On_Mays_Brown.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (831 chars)"
+    },
+    {
+      "file": "V57_05_10_Poem_Teach_Cannon.txt",
+      "action": "note",
+      "result": "INFO: Contains garbled text from previous poem instead of 'Teach Your Toddler Gospel Truths'"
+    },
+    {
+      "file": "V57_05_11_GenFt_Editorial_Sharp.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (174 chars removed)"
+    },
+    {
+      "file": "V57_05_13_Poem_A_Lark_Young.txt",
+      "action": "note",
+      "result": "INFO: Contains content from Woman's Sphere article instead of poem"
+    },
+    {
+      "file": "V57_05_16_Poem_Days_Taylor.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (22 chars removed)"
+    },
+    {
+      "file": "V57_05_21_Poem_Dear_Robinson.txt",
+      "action": "note",
+      "result": "INFO: Contains content from previous poem instead of 'Dear Mother'"
+    },
+    {
+      "file": "V57_05_30_The_Home_One_Peterson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (3219 chars)"
+    },
+    {
+      "file": "V57_05_32_The_Home_Hobby_McCabe.txt",
+      "action": "note",
+      "result": "INFO: Contains content from Kranj Wonder article instead of Hobby Features"
+    },
+    {
+      "file": "V57_05_37_Lssn_Homema_Taylor.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2274 chars removed)"
+    },
+    {
+      "file": "V57_05_39_Poem_I_Would_Sadleir.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1278 chars removed)"
+    }
+  ]
+}

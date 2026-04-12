@@ -1,0 +1,129 @@
+{
+  "volume": 4,
+  "month": "March",
+  "year": 1917,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.2712,
+  "files": [
+    {
+      "source_file": "March_Vol4_14b_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony_a_a_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony.",
+          "end_boundary": "30. Bible. Psalm, 34. LESSON II. Work",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week",
+          "end_boundary": "In April. LESSON III. Genealogy and Literature.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III: Genealogy and Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "end_boundary": "Surname Book Committee. HAVE YOU SUBSCRIBED FOR",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Advertisement - Relief Society Magazine Subscription",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "HAVE YOU SUBSCRIBED FOR THE Relief Society",
+          "end_boundary": "SALT LAKE CITY, UTAH",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple lesson sections from the Guide Lessons department. Lesson I is a complete theology lesson about Jacob and Rachel with questions and Bible readings. Lesson II appears to be just a title/header. Lesson III contains substantial content on place names, poetry for children, and home economics. There's also a small advertisement at the end.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11137,
+      "tier": 1,
+      "pdf_pages": [
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "api_usage": {
+        "input_tokens": 42491,
+        "output_tokens": 564,
+        "cost": 0.1359
+      }
+    },
+    {
+      "source_file": "March_Vol4_14c_Guide_Lessons_Guide_Lessons_-_Lesson_III_Genealogy_and_Literature_b_b_b.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Lesson III - Genealogy - Place Names",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "end_boundary": "hence the surname Yates. LITERATURE Third Week",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Literature - Poetry for Children",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LITERATURE Third Week in April. POETRY FOR",
+          "end_boundary": "spirit of child life. LESSON IV. Home",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two distinct lesson sections: first a genealogy lesson on place names and surnames, then a literature lesson on poetry for children. The split occurs at the clear 'LITERATURE' heading that begins the second section.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9189,
+      "tier": 1,
+      "pdf_pages": [
+        189,
+        190,
+        191,
+        192,
+        193,
+        194
+      ],
+      "api_usage": {
+        "input_tokens": 43358,
+        "output_tokens": 347,
+        "cost": 0.1353
+      }
+    }
+  ]
+}

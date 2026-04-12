@@ -1,0 +1,40 @@
+{
+  "volume": 12,
+  "month": "March",
+  "year": 1925,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0234,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "March_Vol12_02_Article_Portrait.txt",
+      "status": "not_found",
+      "current_chars": 93,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Portrait by Romney' listed on page 110 in the table of contents is not found in the provided PDF pages (127-130). The PDF pages show content from later in the magazine starting around page 127.",
+      "api_usage": {
+        "input_tokens": 7091,
+        "output_tokens": 139,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

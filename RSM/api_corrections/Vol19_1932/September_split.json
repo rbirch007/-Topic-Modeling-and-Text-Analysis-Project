@@ -1,0 +1,168 @@
+{
+  "volume": 19,
+  "month": "September",
+  "year": 1932,
+  "total_merged": 3,
+  "total_splits": 7,
+  "total_cost": 0.4911,
+  "files": [
+    {
+      "source_file": "September_Vol19_01_Article_Why_Religious_Training_Dr_Joseph_F_Merrill.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Why Religious Training?",
+          "category": "Article",
+          "author": "Dr. Joseph F. Merrill",
+          "start_boundary": "Why Religious Training? By Dr. Joseph F.",
+          "end_boundary": "our country and civilization would be safe.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Vagaries of an Autumn Day",
+          "category": "Poem",
+          "author": "Lettie B. H. Rich",
+          "start_boundary": "The Vagaries of an Autumn Day By",
+          "end_boundary": "With glittering soft raindrops.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "WHY RELIGIOUS TRAINING?"
+      ],
+      "notes": "This file contains two distinct pieces: a substantial article on religious training by Dr. Joseph F. Merrill, followed by a short poem by Lettie B. H. Rich. The article discusses the importance of religious education in modern society, while the poem describes the changing weather of an autumn day.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13893,
+      "tier": 1,
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578,
+        579,
+        580
+      ],
+      "api_usage": {
+        "input_tokens": 53117,
+        "output_tokens": 346,
+        "cost": 0.1645
+      }
+    },
+    {
+      "source_file": "September_Vol19_03_Article_Mormonism_in_a_Disturbed_Civilization_E_E_Erickson.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mormonism in a Disturbed Civilization",
+          "category": "Article",
+          "author": "E. E. Ericksen",
+          "start_boundary": "Mormonism in a Disturbed Civilization By E. E. Ericksen",
+          "end_boundary": "deepest faith of those who now \"carry on.\"",
+          "confidence": "high",
+          "end_match_words": 6
+        },
+        {
+          "order": "b",
+          "title": "A Day in Bed",
+          "category": "Article",
+          "author": "Estelle Webb Thomas",
+          "start_boundary": "A Day in Bed By Estelle Webb Thomas",
+          "end_boundary": "only to go over it all again as soon",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MORMONISM IN A DISTURBED CIVILIZATION"
+      ],
+      "notes": "The file contains two complete articles. The first article by E. E. Ericksen ends with the conclusion about Mormonism's future, and the second article by Estelle Webb Thomas begins immediately after. The second article appears to be cut off mid-sentence, suggesting this may be an incomplete extraction of that article.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 15830,
+      "tier": 1,
+      "pdf_pages": [
+        584,
+        585,
+        586
+      ],
+      "api_usage": {
+        "input_tokens": 48774,
+        "output_tokens": 382,
+        "cost": 0.1521
+      }
+    },
+    {
+      "source_file": "September_Vol19_04_Article_A_Day_in_Bed_Estelle_Webb_Thomas.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Day in Bed",
+          "category": "Article",
+          "author": "Estelle Webb Thomas",
+          "start_boundary": "A Day in Bed By Estelle Webb Thomas",
+          "end_boundary": "really try to relax and control your nerves!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Fish Lake at Night",
+          "category": "Poem",
+          "author": "Ethel Bean Andrew",
+          "start_boundary": "Fish Lake at Night By Ethel Bean Andrew",
+          "end_boundary": "Goes a motor-boat chugging by.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Mrs. Annie D. Palmer",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Mrs. Annie D. Palmer By Amy Brown Lyman",
+          "end_boundary": "(Signed) Ada Taylor Graham, Secretary.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A DAY IN BED",
+        "MRS. ANNIE D. PALMER"
+      ],
+      "notes": "This file contains three distinct pieces: a short story about a woman trying to have a restful day in bed, a poem about Fish Lake, and a biographical tribute to Mrs. Annie D. Palmer. The boundaries are clear with title/author headers separating each piece.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 16423,
+      "tier": 1,
+      "pdf_pages": [
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        592
+      ],
+      "api_usage": {
+        "input_tokens": 55933,
+        "output_tokens": 444,
+        "cost": 0.1745
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "volume": 8,
+  "month": "January",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.131,
+  "files": [
+    {
+      "source_file": "January_Vol8_11b_Guide_Lessons_Guide_Lessons_for_March_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for March - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "'Guide Lessons for March. LESSON I Theology and Testimony.",
+          "end_boundary": "Who holds the authority in this Church? LESSON II.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for March - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. SEconp WEEK IN",
+          "end_boundary": "Marcu. LESSON III. Literature. THirp WEEK IN Marcu.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for March - Lesson III: Literature - Latter-day Saint Hymns",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Literature. THirp WEEK IN Marcu. IILATTER-DAY",
+          "end_boundary": "simpleÂ«pageant illustrating this hymn for the meeting in",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for March - Lesson IV: Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Social Service. FourtH WEEK IN Marcu.",
+          "end_boundary": "Is moonlight dancing indulged in? The RELIEF SOCIETY",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the complete Guide Lessons for March with 4 distinct lesson sections: Theology and Testimony, Work and Business, Literature (focusing on LDS hymns), and Social Service. Each lesson has clear subject matter boundaries and question sections.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 23473,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40681,
+        "output_tokens": 594,
+        "cost": 0.131
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": 4,
+  "month": "August",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol4_02_Frontispiece_Mrs._Priscilla_Paul_Jennings_Frontispiece_Mrs._Priscilla_Pau.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "August_Vol4_04_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (53 chars added)"
+    },
+    {
+      "file": "August_Vol4_09_Article_Industrial_Education_in_the_Brigham_Young_University.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (641 chars removed)"
+    },
+    {
+      "file": "August_Vol4_10_Article_The_New_American_Army_Song_(Music).txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "August_Vol4_12_Article_Mother_Love_Sophie_Valentine.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (8611 chars removed)"
+    },
+    {
+      "file": "August_Vol4_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "August_Vol4_16b_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony.txt",
+      "action": "note",
+      "result": "INFO: File is missing the other Guide Lessons (II, III, IV) that should be included"
+    },
+    {
+      "file": "August_Vol4_17_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (19028 chars added)"
+    }
+  ]
+}

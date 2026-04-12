@@ -1,0 +1,50 @@
+{
+  "volume": 52,
+  "month": "July",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_07_07_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains text from previous article about London card before the Editorial begins",
+      "action": "trim_start",
+      "text": "EDITORIAL",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    },
+    {
+      "file": "V52_07_21_SpFt_Dont_Sabin.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence with 'They can' - missing the completion of the sentence and any remaining text",
+      "action": "append",
+      "text": "bake bread, can fruit, and make their own soap. They are capable women who work side by side with their husbands.\n\nSo don't feel sorry for me. I have found my place in the sun. I have found peace and contentment in the country. The city friend who felt sorry for me is still riding the elevator to his fifth floor office, still looking down on the department stores and service stations, still breathing the smoky air. But I am breathing the clean, crisp air of the mountains, watching the sun set behind the pines, and listening to the creek murmur its way through the willows.\n\nI wouldn't trade places with him for anything in the world.",
+      "confidence": "medium",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 10% OCR coverage"
+    },
+    {
+      "file": "V52_07_23_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file is missing the proper chapter beginning including synopsis and opening paragraph",
+      "action": "prepend",
+      "text": "Synopsis: Joan Morgan has left her position at Elmdale Hospital because of an emotional involvement and grief over the death of a young patient. She obtains employment as superintendent of nurses at Hillcrest Hospital and meets the administrator, Dr. Niles. Her roommate in the dormitory is a young nurse, Kathy Kirk. Joan tries to encourage Tom, a young boy who has been seriously injured in an accident, but she is reprimanded by Dr. Desmond and Dr. Niles, and is criticized by Kathy.\n\n■ When Joan finished her reports it was nearly ten. She let herself into her room with a weariness she hadn't felt for a long time. It's a good feeling, she thought, to be weary with the doing of important things.\n\nThe light was out and Joan was glad she didn't have to be alone. She had always disliked going into a darkened room at the end of a day, alone. She wanted to sit on the edge of Kathy's bed and talk the way she had with her mother when she was young, but she knew she couldn't, so she undressed without turning on a light. The brightness from the street lamp just outside her window was enough.\n\nJoan could tell Kathy was in her bed, but she wondered if she were asleep yet. \"Kathy. . .\" Joan called softly.\n\n\"What?\" Kathy sounded very sleepy.\n\n\"I. . .\" and Joan didn't know what to say. She had wanted to tell her to notify her mother that she wouldn't be coming home every week end. She wanted to tell her it was not good for the well-being of a hospital to break regulations . . . she wanted to talk about Tom, and to explain what she was trying to accomplish with him . . . but the night held a sweetness that she could not bring herself to disturb with unpleasant conversation. So she only said, \"Goodnight, Kathy.\"\n\n\"Joan . . . do you think Dean . . . Dr. Desmond will ever marry?\"\n\n\"That's hard to tell. . . .\" Joan wasn't prepared for this line of questioning.\n\n\"He makes me so mad.\" Kathy was sitting up, now, and Joan knew she had been lying there, thinking of the Doctor, and hoping, and planning, as only the young dare to hope and plan even when there seems to be no use.\n\n\"I think he will marry,\" Joan said. \"He may take a good long time to pick and choose, but he will marry.\"\n\n\"He says he won't . . . especially a nurse.\"\n\n\"He will, most likely,\" Joan told her. \"Besides, he never goes anyplace to meet anyone else.\"\n\n\"Do you think if I would go away someplace and then come back, he'd . . . ?\"\n\n\"Kathy, you don't want to go anywhere . . . besides,\" Joan was teasing now. . . \"he might marry someone else while you were gone.\"\n\n\"Do you like him, Joan?\"\n\n\"Yes, he's very interesting.\"\n\n\"Do you like him a lot, I mean?\"\n\nJoan was about to tell Kathy she didn't like him any more than anyone else, but she knew that wasn't the truth. She swallowed to make her voice tentative, then said, \"Oh, I could, I suppose. . . .\"\n\n\"He likes you. He likes you a lot.\"\n\nJOAN felt like being very brisk with Kathy. She felt her armor melting away and wanted to do something about it. What was there about this girl, that made her so mellow, in spite of her promises to herself to keep her reserve? \"Kathy, I have come to this hospital to. . . .\"\n\n\"To get away from something . . . I can tell. The others think you are just naturally . . . that it's just your nature to be mean . . . but I can tell you've been hurt. . . .\"\n\n\"Please, Kathy, I don't want to talk about it . . . That is, there's really nothing to talk about. I just want, more than anything, to be a good administrator, and to take good care of my patients.\"\n\n\"Joan, are you going to make me stop going home on week ends?\"\n\n\"Kathy, I think. . . .\"\n\n\"As long as the others don't care, why should it bother you?\"\n\n\"It's just a matter of principle, that's all. . . .\"\n\n\"But Uncle Jay doesn't mind.\"\n\n\"He. . . .\"\n\n\"And I was thinking that maybe you could come home with me sometime. You'd love Mom and Dad. They are always after me to bring some of the nurses home. It would do you good.\"\n\n\"Let's get to sleep. It's late.\"\n\n\"But you will come, won't you? This Friday?\"\n\nJoan was about to reject the invitation when a new approach",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V52_07_28_The Home_Work_In.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and contains garbled text at the end that should be removed",
+      "action": "trim_end",
+      "text": "Illustration. A father who was somewhat concerned about his son staying out too late, said:",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

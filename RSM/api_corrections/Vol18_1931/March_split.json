@@ -1,0 +1,126 @@
+{
+  "volume": 18,
+  "month": "March",
+  "year": 1931,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3418,
+  "files": [
+    {
+      "source_file": "March_Vol18_04_Christening_Ollerton.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Christening",
+          "category": "Article",
+          "author": "Fay Ollerton",
+          "start_boundary": "The Christening By Fay Ollerton In the year 1842",
+          "end_boundary": "and it is, as ever, the pioneer of their development.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Dreamer",
+          "category": "Poem",
+          "author": "Ivy Williams Stone",
+          "start_boundary": "The Dreamer By Ivy Williams Stone Some day when",
+          "end_boundary": "It's nicer far, to dream and play!",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Our Birthday",
+          "category": "Article",
+          "author": "President Louise Y. Robison",
+          "start_boundary": "Our Birthday By President Louise Y. Robison March 17th",
+          "end_boundary": "Relief Society, and resolve to make better preparation for that special work we are asked to do.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE CHRISTENING"
+      ],
+      "notes": "This file contains three distinct articles as listed in the contents: 'The Christening' by Fay Ollerton (main article about the founding of Relief Society), 'The Dreamer' poem by Ivy Williams Stone, and 'Our Birthday' by President Louise Y. Robison. The boundaries are clear with distinct titles and author bylines.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11428,
+      "tier": 1,
+      "pdf_pages": [
+        160,
+        161,
+        162,
+        163,
+        164
+      ],
+      "api_usage": {
+        "input_tokens": 53661,
+        "output_tokens": 460,
+        "cost": 0.1679
+      }
+    },
+    {
+      "source_file": "March_Vol18_13_Notes_from_Field_Field.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Salt Lake Stake:",
+          "end_boundary": "in the work of the Lord.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes to the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes to the Field Bicentennial of George Washington",
+          "end_boundary": "express themselves. Henry Ford asked Steinmetz,",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Editorial - Our Mother Tongue",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "THE RELIEF SOCIETY OF THE CHURCH",
+          "end_boundary": "Let us learn more of our mother tongue.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains three distinct sections: 'Notes from the Field' (reports from various stakes and missions), 'Notes to the Field' (announcements and information for field workers), and the beginning of the Editorial section with 'Our Mother Tongue'. The file appears to end mid-editorial section based on the table of contents which shows additional editorial content should follow.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13714,
+      "tier": 1,
+      "pdf_pages": [
+        190,
+        191,
+        192,
+        193,
+        194,
+        195
+      ],
+      "api_usage": {
+        "input_tokens": 55839,
+        "output_tokens": 428,
+        "cost": 0.1739
+      }
+    }
+  ]
+}

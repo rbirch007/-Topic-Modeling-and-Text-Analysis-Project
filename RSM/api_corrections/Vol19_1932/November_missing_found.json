@@ -1,0 +1,132 @@
+{
+  "volume": 19,
+  "month": "November",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.1197,
+  "stats": {
+    "found": 0,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "First Snowfall, Beaver Creek, Wasatch Forest Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show only advertisements and the table of contents page. A frontispiece would typically be an illustration or photograph at the beginning of the magazine, but no such image or related text content is visible in these particular pages. The frontispiece may be on a page not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7224,
+        "output_tokens": 164,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        706,
+        707,
+        708,
+        709
+      ]
+    },
+    {
+      "title": "Procrastination Marion Oakleigh",
+      "printed_page": 625,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Save the Wild Birds J. H. Paul",
+      "printed_page": 635,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "J. H. Paul",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 638, 639, 640, 641). The article should appear on page 635 according to the table of contents, but the provided images start at page 638, so the article pages are missing from this set of images.",
+      "api_usage": {
+        "input_tokens": 7194,
+        "output_tokens": 162,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        638,
+        639,
+        640,
+        641
+      ]
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 645,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "The article 'Happenings Annie Wells Cannon' listed on page 645 in the table of contents is not visible in the provided PDF page images (pages 638, 639, 640, 641). The images show pages 638-641 but the article should appear on page 645, which is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7190,
+        "output_tokens": 169,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        638,
+        639,
+        640,
+        641
+      ]
+    },
+    {
+      "title": "Relief Society Conference",
+      "printed_page": 647,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 636-639, but the Relief Society Conference article listed on page 647 in the table of contents is not visible in these images. The images show content from 'Save the Wild Birds' article and other material, but do not reach page 647 where this article should be located.",
+      "api_usage": {
+        "input_tokens": 7138,
+        "output_tokens": 152,
+        "cost": 0.0237
+      },
+      "pdf_pages": [
+        636,
+        637,
+        638,
+        639
+      ]
+    },
+    {
+      "title": "Seasonable Recipes Lucy Rose Middleton",
+      "printed_page": 689,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Home_Science",
+      "author": "Lucy Rose Middleton",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 706-709). The article should appear on page 689 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7198,
+        "output_tokens": 149,
+        "cost": 0.0238
+      },
+      "pdf_pages": [
+        706,
+        707,
+        708,
+        709
+      ]
+    }
+  ]
+}

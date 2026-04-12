@@ -1,0 +1,113 @@
+{
+  "volume": 9,
+  "month": "May",
+  "year": 1922,
+  "total_files_checked": 21,
+  "files_correct": [
+    "May_Vol9_03_Frontispiece_A_Pioneer_Mother's_Grave_on_the_Prairie_Frontispiece.txt",
+    "May_Vol9_04_Article_A_Pioneer_Mother's_Grave_on_the_Platte_River.txt",
+    "May_Vol9_05_Article_May—Mother's_Month.txt",
+    "May_Vol9_06_Article_Mothering_Elsie_C._Carroll.txt",
+    "May_Vol9_07_Article_Mother_Velora_Darger.txt",
+    "May_Vol9_08_Article_O_Mother_Mine_Matilda_K._Galloway.txt",
+    "May_Vol9_09_Article_Being_a_Mother_Genie_Mark.txt",
+    "May_Vol9_10_Article_When_Dreams_Come_True_Linda_S._Fletcher.txt",
+    "May_Vol9_11_Article_Life_and_Death_Margaret_Erickson.txt",
+    "May_Vol9_12_Article_The_Form_of_a_Little_Child_Hannah_Deady_Tomsick.txt",
+    "May_Vol9_13_Article_If_You_Should_Know_Ruth_M._Penrose.txt",
+    "May_Vol9_14_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+    "May_Vol9_16_Article_Old_Fashioned_Thrift_Coral_J._Black.txt",
+    "May_Vol9_17_Article_Tell_it_now_Bertha_A._Kleinman.txt",
+    "May_Vol9_18_Article_The_Awakening_of_Margaret_Vorrest_Ivy_Williams_Stone.txt",
+    "May_Vol9_19_Article_Freedom_and_the_Changing_Standards_May_Roberts_Rinehart.txt",
+    "May_Vol9_20_Article_The_General_Procession_James_H._Anderson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol9_01_Article_Contentment_Riveina_Lundgren.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of the Contentment poem",
+      "action": "replace_content",
+      "text": "CONTENTMENT Riveina Lundgren I used to fret because my hours were slow instead of fleet? I wished they all had rainbow wings, and silver-slippered feet. And still, the hours that were sent, I knew I needs must greet. So I went out to meet them, and waited at the stile; For they had come to find me, O many a tired mile. And each one as it saw me, gave a wistful little smile. Each brought a little gift for me And tendered it most graciously? And I so loved their company, That, when the shadows reached my door. And lengthened out across my floor, I left my labors to implore: ' \"Oh little sorrows, please to stay, You who have tarried here all day, Sweet, thoughtful spirits stoled in gray; Where you are, is a tender gloom, A soothing counsel at the loom; Pray you, stay on within my room. \"Oh little joys, pray you, remain. And I, removing dust and stain, Into a fragrant, shining chain, Will thread you, oh, so faithfully, For such as are one faith with me, And wear you like a rosary.\"",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "May_Vol9_02_Editorial_Editorial_Just_Mothering.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of editorial content",
+      "action": "trim_start",
+      "text": "Editorial: Just Mothering 285",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_15_Article_Unforgotten.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Old-Fashioned Thrift article that should be in separate file",
+      "action": "trim_end",
+      "text": "—Anon.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_16_Article_Old_Fashioned_Thrift_Coral_J._Black.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with 'OLD' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Old-Fashioned Thrift THROUGH THE EYES OF A MERE MAN By Coral J. Black Until a year ago I was addicted to the restaurant habit. For years my work had called me hither and yon about the country, necessitating stopovers at all manner of hotels and near hotels. Consequently the workings of the average home kitchen were as a closed book to me. I had no kitchen problem to worry over, except as it was reflected in letters of protest from the home office over the vaulting proclivity of my expense account. But I was dimly cognizant of the fact that the benedicts in our organization, as elsewhere, were confronted with a genuine problem. The unprecedented cost of necessities, to say nothing of the nationwide campaign for home thrift, made the topic of kitchen waste an extremely popular theme. One was forever hearing what the starving hordes of Europe could do if they but had the thousands of tons of edible garbage sent each week from American kitchens. I often speculated, in a lazy way, about these conditions and wondered vaguely why something wasn't done about it. Wasn't the American housewife equal to the task of conducting her kitchen without waste? Couldn't she practice, to some extent, at least, the wonderful thrift of the French? But having no kitchen problem of my own, all my ponderings on the subject were rather hazy and impersonal. Late in 1918 my work took me to a town in southeastern Alaska—a city it is called by its optimistic commercial club. For a matter of fact, it is a bustling little center, the largest and busiest town in that part of the territory, notwithstanding the rival claims of its neighbors. Knowing that I was destined to spend an indefinite number of months—possibly years—at my new post, and despairing, after the third day, of surviving a protracted course of restaurant meals, as served by the kitchen kings of the North, I looked around for a private boarding house. By the greatest of good luck, I shortly found myself billeted with a private family, not a boarding house by any means, but a good old-fashioned home. I was taken in with the understanding that I was to take \"pot luck\" with the family. Nothing could have suited me better. The lady of the house, Mrs. Graham, was a gray haired, motherly old soul, the very sight of whom brought back nearly 256, RELIEF SOCIETY MAGAZINE forgotten memories of Thanksgiving days spent at grandfather's farm. It was in this well-kept, homey, comfortable American domicile that I learned what genuine kitchen thrift is; not penurious pinching, but sound, sensible old-fashioned thrift. The scraps that leftithis kitchen via the garbage can would not have supported a consumptive canary. Waste! There positively wasn't any. Every morsel of left-overs was incorporated into some dainty dish for another meal. The meals for each ensuing day were carefully planned beforehand and practically all the shopping was done by Mrs. Graham herself, for she was old-fashioned in this regard as well as in numerous other ways, and strictly maintained that the first great waste in the average home took place in the buying. No tainted meat or rancid butter, half spoiled cabbage or jaundiced eggs, slightly frozen potatoes or other vegetables, short weights or \"substitute\" orders ever found their way into her kitchen. And, strange as it may seem, every grocer and butcher in town was sort o' wise to the fact and refrained from offering her any but the best.: I don't mean to infer that she bought the highest priced cuts of meat or indulged in fruits or vegetables out of season. The very thought of such extravagance would have given the dear, thrifty old soul nervous prostration. What I mean is that for every dollar spent she received 100 cents worth of strictly prime goods. The clean plate was the order of the day and, as I remarked before, all ieft-overs, from the unused portion of Sunday's roast to the bread crumbs from the cutting board were disguised, \"hidden, camouflaged and sent forth in fancy dress to the next meal. A bit of left-over cereal was added to the pancake batter, I shall never accustom myself to call them by any other name, And, ch boy! What a delightful crispness it gives them, the nut flavor, the so-different something which I am at a loss to describe. I have often wondered since sojourning in these northern latitudes why the women of the states do not make use of the sourdough pot, which seems to be essentially Alaskan, It is a sort of self-starting affair which requires neither yeast nor baking powder to put the kick in it. A little flour, water and sugar are mixed together and allowed to ferment. After this it seems to become a species of perpetual motion. All that is necessary now is to put a little flour and water in the sourdough pot in the evening, stir it thoroughly, set it on the range until morning, and lo! There is pancake batter, fit for the gods. Of course, they add a little salt, and, come to think of it, a pinch of soda. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_21_Article_Note_Nephi_Anderson.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Riveina Lundgren.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are: 1) First file contains wrong content (table of contents instead of poem), 2) Editorial file has content bleeding from previous sections, 3) Unforgotten article has content bleeding into Old-Fashioned Thrift, 4) Old-Fashioned Thrift starts mid-sentence, and 5) Note article has extensive advertisement content that should be separated. All articles from the table of contents are present in the files.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol9_02_Editorial_Editorial_Just_Mothering.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of editorial content",
+      "action": "trim_start",
+      "text": "Editorial: Just Mothering 285",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_15_Article_Unforgotten.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Old-Fashioned Thrift article that should be in separate file",
+      "action": "trim_end",
+      "text": "—Anon.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_16_Article_Old_Fashioned_Thrift_Coral_J._Black.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with 'OLD' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Old-Fashioned Thrift THROUGH THE EYES OF A MERE MAN By Coral J. Black Until a year ago I was addicted to the restaurant habit. For years my work had called me hither and yon about the country, necessitating stopovers at all manner of hotels and near hotels. Consequently the workings of the average home kitchen were as a closed book to me. I had no kitchen problem to worry over, except as it was reflected in letters of protest from the home office over the vaulting proclivity of my expense account. But I was dimly cognizant of the fact that the benedicts in our organization, as elsewhere, were confronted with a genuine problem. The unprecedented cost of necessities, to say nothing of the nationwide campaign for home thrift, made the topic of kitchen waste an extremely popular theme. One was forever hearing what the starving hordes of Europe could do if they but had the thousands of tons of edible garbage sent each week from American kitchens. I often speculated, in a lazy way, about these conditions and wondered vaguely why something wasn't done about it. Wasn't the American housewife equal to the task of conducting her kitchen without waste? Couldn't she practice, to some extent, at least, the wonderful thrift of the French? But having no kitchen problem of my own, all my ponderings on the subject were rather hazy and impersonal. Late in 1918 my work took me to a town in southeastern Alaska—a city it is called by its optimistic commercial club. For a matter of fact, it is a bustling little center, the largest and busiest town in that part of the territory, notwithstanding the rival claims of its neighbors. Knowing that I was destined to spend an indefinite number of months—possibly years—at my new post, and despairing, after the third day, of surviving a protracted course of restaurant meals, as served by the kitchen kings of the North, I looked around for a private boarding house. By the greatest of good luck, I shortly found myself billeted with a private family, not a boarding house by any means, but a good old-fashioned home. I was taken in with the understanding that I was to take \"pot luck\" with the family. Nothing could have suited me better. The lady of the house, Mrs. Graham, was a gray haired, motherly old soul, the very sight of whom brought back nearly 256, RELIEF SOCIETY MAGAZINE forgotten memories of Thanksgiving days spent at grandfather's farm. It was in this well-kept, homey, comfortable American domicile that I learned what genuine kitchen thrift is; not penurious pinching, but sound, sensible old-fashioned thrift. The scraps that leftithis kitchen via the garbage can would not have supported a consumptive canary. Waste! There positively wasn't any. Every morsel of left-overs was incorporated into some dainty dish for another meal. The meals for each ensuing day were carefully planned beforehand and practically all the shopping was done by Mrs. Graham herself, for she was old-fashioned in this regard as well as in numerous other ways, and strictly maintained that the first great waste in the average home took place in the buying. No tainted meat or rancid butter, half spoiled cabbage or jaundiced eggs, slightly frozen potatoes or other vegetables, short weights or \"substitute\" orders ever found their way into her kitchen. And, strange as it may seem, every grocer and butcher in town was sort o' wise to the fact and refrained from offering her any but the best.: I don't mean to infer that she bought the highest priced cuts of meat or indulged in fruits or vegetables out of season. The very thought of such extravagance would have given the dear, thrifty old soul nervous prostration. What I mean is that for every dollar spent she received 100 cents worth of strictly prime goods. The clean plate was the order of the day and, as I remarked before, all ieft-overs, from the unused portion of Sunday's roast to the bread crumbs from the cutting board were disguised, \"hidden, camouflaged and sent forth in fancy dress to the next meal. A bit of left-over cereal was added to the pancake batter, I shall never accustom myself to call them by any other name, And, ch boy! What a delightful crispness it gives them, the nut flavor, the so-different something which I am at a loss to describe. I have often wondered since sojourning in these northern latitudes why the women of the states do not make use of the sourdough pot, which seems to be essentially Alaskan, It is a sort of self-starting affair which requires neither yeast nor baking powder to put the kick in it. A little flour, water and sugar are mixed together and allowed to ferment. After this it seems to become a species of perpetual motion. All that is necessary now is to put a little flour and water in the sourdough pot in the evening, stir it thoroughly, set it on the range until morning, and lo! There is pancake batter, fit for the gods. Of course, they add a little salt, and, come to think of it, a pinch of soda. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol9_21_Article_Note_Nephi_Anderson.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Riveina Lundgren.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

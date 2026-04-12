@@ -1,0 +1,77 @@
+{
+  "volume": 55,
+  "month": "April",
+  "year": 1968,
+  "timestamp": "20260313_235309",
+  "dry_run": false,
+  "applied": 12,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_04_01_Fict_If_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (20291 chars)"
+    },
+    {
+      "file": "V55_04_05_Poem_Breath_Stanley.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_04_07_Poem_My_Leitner.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_04_11_SpFt_Cancer_Society.txt",
+      "action": "append",
+      "result": "APPLIED append (1553 chars added)"
+    },
+    {
+      "file": "V55_04_16_Poem_In_the_Ackerlind.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_04_19_Poem_Pigeons_Jacobson.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V55_04_21_Poem_The_Kleinman.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_04_22_GenFt_English_Adams.txt",
+      "action": "append",
+      "result": "APPLIED append (297 chars added)"
+    },
+    {
+      "file": "V55_04_27_Fict_Throw_Breeze.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (8473 chars added)"
+    },
+    {
+      "file": "V55_04_31_Poem_Be_Glad_Gudmundson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1579 chars removed)"
+    },
+    {
+      "file": "V55_04_32_Poem_So_I_Kay.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_04_33_Poem_To_A_Myers.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V55_04_34_Poem_Colored.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    }
+  ]
+}

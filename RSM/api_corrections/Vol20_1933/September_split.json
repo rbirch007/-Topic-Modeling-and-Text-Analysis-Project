@@ -1,0 +1,82 @@
+{
+  "volume": 20,
+  "month": "September",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1197,
+  "files": [
+    {
+      "source_file": "September_Vol20_18_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Obedience to Law the Basis of Reward",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "given April 2, 1843, at Ramus, Illinois,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - The Great Objective of Life",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY MAGAZINE in slightly different language,",
+          "end_boundary": "This is the goal we are seeking.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - Life and Literature",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature (Third Week in October) LIFE AND",
+          "end_boundary": "The aim of the lesson is the",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Facts on Physical Growth",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in October) Facts",
+          "end_boundary": "absence of punishment and all existing scenes",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Relief Society Magazine's Lesson Department, covering different subject areas: Theology, Teachers' Topic, Literature, and Social Service. Each section has its own lesson structure and content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 95999,
+      "tier": 3,
+      "pdf_pages": [
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "api_usage": {
+        "input_tokens": 36749,
+        "output_tokens": 630,
+        "cost": 0.1197
+      }
+    }
+  ]
+}

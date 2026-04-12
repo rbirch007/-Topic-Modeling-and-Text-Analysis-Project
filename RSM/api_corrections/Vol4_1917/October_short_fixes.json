@@ -1,0 +1,40 @@
+{
+  "volume": 4,
+  "month": "October",
+  "year": 1917,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0212,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "October_Vol4_11b_Guide_Lessons_LESSON_II_Work_and_Business_Second_Week_in_November.txt",
+      "status": "delete",
+      "current_chars": 54,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header/title with no actual content. The PDF shows this as a simple section divider between lessons, not a standalone article. Should be deleted as it's just a formatting artifact.",
+      "api_usage": {
+        "input_tokens": 6297,
+        "output_tokens": 156,
+        "cost": 0.0212
+      },
+      "pdf_pages": [
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ]
+}

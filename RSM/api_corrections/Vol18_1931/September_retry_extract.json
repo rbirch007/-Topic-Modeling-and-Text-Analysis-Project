@@ -1,0 +1,61 @@
+{
+  "volume": 18,
+  "month": "September",
+  "year": 1931,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0566,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Habit Training in Infancy and Early Childhood",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Milton Bennion",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images. The images show advertisements for coal companies, garments, furniture, laundry services, and other businesses, plus a table of contents page and an anti-smoking article titled 'What Am I?'. The article 'Habit Training in Infancy and Early Childhood' by Milton Bennion would appear on page 487 according to the table of contents, but none of the provided images contain this article.",
+      "order": "b",
+      "pdf_pages": [
+        562,
+        563,
+        564,
+        565,
+        566
+      ],
+      "source_file": "September_Vol18_02_Article_Habit_Training_Infancy_Bennion.txt",
+      "api_usage": {
+        "input_tokens": 8617,
+        "output_tokens": 175,
+        "cost": 0.0285
+      }
+    },
+    {
+      "title": "Keeping Up With Sonny",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "C. E. C.",
+      "confidence": "high",
+      "notes": "The article 'Keeping Up With Sonny' by C. E. C. is not present in the provided PDF page images (pages 149-153). According to the table of contents, this article should appear on page 499, but the provided images show different content including poems, other articles, and advertisements. The pages shown appear to be from a different section of the magazine.",
+      "order": "b",
+      "pdf_pages": [
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "source_file": "September_Vol18_04_Article_Elizabeth_Snow_Ivins_Gates.txt",
+      "api_usage": {
+        "input_tokens": 8604,
+        "output_tokens": 154,
+        "cost": 0.0281
+      }
+    }
+  ]
+}

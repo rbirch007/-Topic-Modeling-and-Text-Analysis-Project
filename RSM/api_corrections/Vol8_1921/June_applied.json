@@ -1,0 +1,32 @@
+{
+  "volume": 8,
+  "month": "June",
+  "year": 1921,
+  "timestamp": "20260315_120946",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "June_Vol8_02_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "June_Vol8_07_Article_Lines_Grace_Ingles_Frost.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol8_08_Article_The_Gospel_in_Armenia.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3838 chars removed)"
+    }
+  ]
+}

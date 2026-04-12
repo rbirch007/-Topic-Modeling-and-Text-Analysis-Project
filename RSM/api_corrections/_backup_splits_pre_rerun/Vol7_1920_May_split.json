@@ -1,0 +1,58 @@
+{
+  "volume": 7,
+  "month": "May",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1347,
+  "files": [
+    {
+      "source_file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_c_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Literature (Optional) - The Princess",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON . Literature (Optional) \"The Princess.\" Our first",
+          "end_boundary": "permit only a brief outline of so long a lesson,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service - Health (School Lunches)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. (Required.) Social Service Fourth Week",
+          "end_boundary": "must do much careful planning and preserving of various",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two distinct lesson sections from the Guide Lessons. The first is a literature lesson on Tennyson's 'The Princess' and the second is a social service lesson on health and school lunches. Both are clearly delineated with lesson headers and distinct subject matter.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9623,
+      "tier": 1,
+      "pdf_pages": [
+        326,
+        327,
+        328,
+        329,
+        330
+      ],
+      "api_usage": {
+        "input_tokens": 43182,
+        "output_tokens": 345,
+        "cost": 0.1347
+      }
+    }
+  ]
+}

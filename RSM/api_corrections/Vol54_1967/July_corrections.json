@@ -1,0 +1,180 @@
+{
+  "volume": 54,
+  "month": "July",
+  "year": 1967,
+  "total_files_checked": 25,
+  "files_correct": [
+    "V54_07_03_Art_From_Near_and_Far.txt",
+    "V54_07_06_SpFt_Sewing_Kimball.txt",
+    "V54_07_07_Fict_Trapped_Jorgensen.txt",
+    "V54_07_09_Fict_Womans_Cannon.txt",
+    "V54_07_10_Fict_Gold_Hansen.txt",
+    "V54_07_11_Poem_Another_Coles.txt",
+    "V54_07_14_Fict_Quilts.txt",
+    "V54_07_15_Fict_Hazel.txt",
+    "V54_07_16_Poem_Thorn_Jacobson.txt",
+    "V54_07_17_Fict_Notes.txt",
+    "V54_07_18_Lssn_Spiritual_Doxey.txt",
+    "V54_07_19_Lssn_Visiting_Smith.txt",
+    "V54_07_20_Lssn_Homemaking_Taylor.txt",
+    "V54_07_21_Lssn_Social_Christensen.txt",
+    "V54_07_22_Lssn_Cultural_Thomas.txt",
+    "V54_07_23_Poem_Home_Young.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_07_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong article - has 'From Near and Far' content instead of 'The Golden Chain Chapter 6'",
+      "action": "replace_content",
+      "text": "Synopsis: Nora Blake, a schoolteacher in Banner, Idaho, lives in the home of Bishop Shepherd and becomes acquainted with a Latter-day Saint family. She meets Jed Oliver, a local rancher, and is astonished to learn secretly that he cannot read. She offers to teach him, and Jed accepts her instruction. Being informed that good virgin land is available, Nora takes up a homestead. One of her neighbors is Old Free, a mysterious hermit, and a non-Mormon. When Trudy Shepherd dies of influenza, Nora learns significant gospel principles from the funeral talks and the attitude of the Shepherds. \"I came as soon as I could,\" Jed said. \"'Ben was sick today. He said you wanted to drive out to the Lang place. Hope you won't mind riding with me instead of Ben.\" \"Why, no, that is... Stopped, flustered. She pretended to busy herself in her top desk drawer. As she did so, her hand came upon the scrap of paper she had picked up, following the spelling match. She held it out to him. Jed glanced at it, crumpled it tighter, and tossed it into the wastebasket. \"Here,\"'she cried. \"Don't throw that away! That's my proof.\" 2' Nora 522 The et Bole Chain Hazel M. Thomson Chapter 6 \"Proof? Of what?\" \"That you really did know how to spell obfuscate.\" She glanced at him. Something in his eyes stopped her from pursuing the matter further. \"I'll get my things,\" she said. \"I'll only be a moment.\" On the road, the May afternoon sunshine was delightful. A slight breeze stirred Nora's brown hair, curling it around her face. Jed kept his team to a walk. \"I've been waiting for a chance like this, Nora,\"' he said. Nora! Not Miss Blake, but Nora! \"I want to tell you a story. You probably have no idea what you have done for me, in teaching me to read. I want you to know how it was that I never learned before.\" Nora was silent, waiting for him to begin. Jed reached down into the bottom of the buggy and pushed an empty grain sack under the seat. \"Y remember doing that as a boy a good many times,\" he said, \"pushing the grain sack down out of sight. Once when it was about half empty, I hid it under my saddle in the bottom of the wagon so Pa wouldn't be tempted to sell if for a grubstake. I'd seen him start off in search of gold often enough. I knew it meant trading something for food, but it would not be' the seed grain not if I could help it.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_07_02_Poem_Foresight_Sharp.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - only contains header information, missing the actual poem content",
+      "action": "replace_content",
+      "text": "FORESIGHT The woman I! Wish to be Will not allow the girl that I am To rob the children I hope to have Of the birthright of chastity. 518 Juanita W. Sharp",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_07_04_SpFt_Emma_Ashton.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "PART II (Continued from the June Magazine) CHILDREN CHURCH WORK TRAVEL Emma Rae McKay Ashton FUN TIMES WITH MOTHER ARE REMEMBERED BY THE CHILDREN On the children's eighth birthdays Ray gave them a party to which they could invite their friends for well-planned games, cake, and ice cream which she had prepared. On Saturdays, she took her young family shopping with her. Often the excursions ended with a silent movie starring John Bunny, Fatty Arbuckle, and the Old Maid, or a Big Bill Hart cowboy show, features she knew they would enjoy. The Barnum and Bailey circus was an exciting annual affair the McKays seldom missed. The wise parents suggested the children work for their show admission by digging dandelions out of the front lawn. They paid them a cent for every ten they dug. The evening before the intended matinee, their father, with a twinkle in his eye, would say, \"Which would you rather do, keep the money, or go to the circus?\" One of them invariably would say, \"Keep the money,\" but being outvoted, would accompany the family to the anticipated event. When her children were young, Emma Ray McKay served as president of the Ogden Fourth Ward Relief Society. Determined to make a success of this position, she bundled her baby in his carriage, and pushing him, made personal visits to the sisters of the ward, inviting them to attend the Relief Society meetings. Her diligence was rewarded. The membership increased from twelve to ninety. Later, she was asked to be counselor in the stake Relief Society presidency and traveled to the various wards on a streetcar, again taking her children with her. When she found this a hardship as her family increased, she was released from this position. She then served as a teacher of the Religion Class in the Ogden Fourth Ward, then as president of this organization for two or three years. Being able to accompany her children every week proved to be more compatible with her home situation. To her, home and her children came first. 'resident David O. McKay and Sister McKay, Temple Square, Salt Lake City, Utah, April 1949. 485 July 1967",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_05_SpFt_Family_Bradshaw.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about sewing machines",
+      "action": "trim_end",
+      "text": "(To be concluded) 503",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_08_Fict_General_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Woman's Sphere article that should be separate",
+      "action": "trim_end",
+      "text": "L. W. M. 511",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_12_Poem_Summer_Douglas.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains recipe content that belongs to different article",
+      "action": "trim_end",
+      "text": "softly as a bright-eyed fawn. \\ L 528",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V54_07_13_Fict_The_Thomson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with recipe content instead of proper article beginning",
+      "action": "trim_start",
+      "text": "Rl a and (rue Esther Thomson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V54_07_24_Poem_For_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Social Relations lesson that should be separate",
+      "action": "trim_end",
+      "text": "Beauty can die on a thirsty hill. 546",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V54_07_25_Poem_Golgotha_Stewart.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains homemaking lesson content instead of Golgotha poem",
+      "action": "replace_content",
+      "text": "GOLGOTHA Margery S. Stewart What thorn bush stripped To circle ultimate anguish? What nails forged To pierce blessings? (All roads empty now Of hallow and healing). Those who drink of the Grail and fall Must be pierced By the spear. God, forgive us Forgive us Who eat the bread And are destroyed Thereby. Water, tears, Forgiveness.... Empty us of the black Tides of forgetting. Is not the hollowness In us the forgetting? But in all Our caves Will, dwell. 559",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Rose Bower Revisited Vilate R. McAllister",
+      "expected_page": 481,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding issues and wrong article assignments. The Golden Chain Chapter 6 content appears to be merged with other articles. Rose Bower Revisited poem is missing entirely from extracted files but appears in OCR.",
+  "validated_corrections": [
+    {
+      "file": "V54_07_04_SpFt_Emma_Ashton.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "PART II (Continued from the June Magazine) CHILDREN CHURCH WORK TRAVEL Emma Rae McKay Ashton FUN TIMES WITH MOTHER ARE REMEMBERED BY THE CHILDREN On the children's eighth birthdays Ray gave them a party to which they could invite their friends for well-planned games, cake, and ice cream which she had prepared. On Saturdays, she took her young family shopping with her. Often the excursions ended with a silent movie starring John Bunny, Fatty Arbuckle, and the Old Maid, or a Big Bill Hart cowboy show, features she knew they would enjoy. The Barnum and Bailey circus was an exciting annual affair the McKays seldom missed. The wise parents suggested the children work for their show admission by digging dandelions out of the front lawn. They paid them a cent for every ten they dug. The evening before the intended matinee, their father, with a twinkle in his eye, would say, \"Which would you rather do, keep the money, or go to the circus?\" One of them invariably would say, \"Keep the money,\" but being outvoted, would accompany the family to the anticipated event. When her children were young, Emma Ray McKay served as president of the Ogden Fourth Ward Relief Society. Determined to make a success of this position, she bundled her baby in his carriage, and pushing him, made personal visits to the sisters of the ward, inviting them to attend the Relief Society meetings. Her diligence was rewarded. The membership increased from twelve to ninety. Later, she was asked to be counselor in the stake Relief Society presidency and traveled to the various wards on a streetcar, again taking her children with her. When she found this a hardship as her family increased, she was released from this position. She then served as a teacher of the Religion Class in the Ogden Fourth Ward, then as president of this organization for two or three years. Being able to accompany her children every week proved to be more compatible with her home situation. To her, home and her children came first. 'resident David O. McKay and Sister McKay, Temple Square, Salt Lake City, Utah, April 1949. 485 July 1967",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_05_SpFt_Family_Bradshaw.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about sewing machines",
+      "action": "trim_end",
+      "text": "(To be concluded) 503",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_08_Fict_General_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Woman's Sphere article that should be separate",
+      "action": "trim_end",
+      "text": "L. W. M. 511",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_07_24_Poem_For_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Social Relations lesson that should be separate",
+      "action": "trim_end",
+      "text": "Beauty can die on a thirsty hill. 546",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V54_07_12_Poem_Summer_Douglas.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains recipe content that belongs to different article",
+      "action": "trim_end",
+      "text": "softly as a bright-eyed fawn. \\ L 528",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V54_07_13_Fict_The_Thomson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with recipe content instead of proper article beginning",
+      "action": "trim_start",
+      "text": "Rl a and (rue Esther Thomson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

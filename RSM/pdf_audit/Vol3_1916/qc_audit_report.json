@@ -1,0 +1,4521 @@
+{
+  "volume": 3,
+  "year": 1916,
+  "generated_at": "2026-03-15T18:45:17.169374",
+  "summary": {
+    "total_files": 247,
+    "article_files": 209,
+    "special_files": 38,
+    "months_processed": 12,
+    "months_available": 12,
+    "ok": 239,
+    "flagged": 8,
+    "empty": 0,
+    "by_remediation": {
+      "manual_review": 2,
+      "re_extract": 3,
+      "api_fix": 3
+    },
+    "by_flag_type": {
+      "SHORT": 2,
+      "MERGED": 3,
+      "LOW_OCR_MATCH": 3
+    }
+  },
+  "months": {
+    "January": {
+      "total": 25,
+      "articles": 20,
+      "special": 5,
+      "ok": 25,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No1_January_1916.txt",
+      "ocr_chars": 138275,
+      "contents_xref": {
+        "entries_in_contents": 18,
+        "matched": 17,
+        "match_details": [
+          {
+            "title": "Byron's Unpublished Prayer",
+            "page": 1,
+            "file": "January_Vol3_01_Article_Byron's_Unpublished_Prayer.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mothers in Israel",
+            "page": 3,
+            "file": "January_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Within the Locket Alfred Lambourne",
+            "page": 6,
+            "file": "January_Vol3_03_Article_Within_the_Locket_Alfred_Lambourne.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Ma's New Year's Resolutions Elsie C. Carroll",
+            "page": 7,
+            "file": "January_Vol3_04_Article_Ma's_New_Year's_Resolutions_Elsie_C._Carroll.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Lord and Lady Aberdeen in Utah",
+            "page": 13,
+            "file": "January_Vol3_05_Article_Lord_and_Lady_Aberdeen_in_Utah.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Cobwebs Annie D. S. Palmer",
+            "page": 18,
+            "file": "January_Vol3_06_Article_Cobwebs_Annie_D._S._Palmer.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Prince of Ur Homespun",
+            "page": 19,
+            "file": "January_Vol3_07_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mental Hygiene for Women Past Fifty",
+            "page": 30,
+            "file": "January_Vol3_08_Article_Mental_Hygiene_for_Women_Past_Fifty.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Bride's Mother Nabby Howe",
+            "page": 33,
+            "file": "January_Vol3_09_Article_The_Bride's_Mother_Nabby_Howe.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy B. Lyman",
+            "page": 35,
+            "file": "January_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Snowflake Stake History Lulu J. Smith",
+            "page": 38,
+            "file": "January_Vol3_11_Article_Snowflake_Stake_History_Lulu_J._Smith.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 41,
+            "file": "January_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Instructions and Recipes Mme. Rover",
+            "page": 44,
+            "file": "January_Vol3_13_Instructions_Instructions_and_Recipes_Mme._Rover.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Poems by Emmeline B. Wells",
+            "page": 46,
+            "file": "January_Vol3_15_Poetry_Poems_by_Emmeline_B._Wells.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: A New Year Resolve",
+            "page": 47,
+            "file": "January_Vol3_16_Editorial_Editorial_A_New_Year_Resolve.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 49,
+            "file": "January_Vol3_17_Guide_Lessons_Guide_Lessons.txt",
+            "score": 1.0
+          },
+          {
+            "title": "International Congress of Genealogy Journal of Heredity",
+            "page": 61,
+            "file": "January_Vol3_18d_Genealogy_International_Congress_of_Genealogy.txt",
+            "score": 0.6
+          }
+        ],
+        "missing": [
+          {
+            "title": "Miscellaneous Notes Janette A. Hyde",
+            "page": 45
+          }
+        ],
+        "extra_files": [
+          "January_Vol3_18a_Genealogy_Genealogy_Lesson_-_Individual_Records_and_Letters.txt",
+          "January_Vol3_18b_Art_Art_and_Architecture_-_Winter_Landscape_and_Architecture_Les.txt",
+          "January_Vol3_18c_Home_Ethics_Home_Economics_-_The_Latter-day_Saint_Home.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "January_Vol3_00_BOARD.txt",
+          "body_len": 728,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_00_CONTENTS.txt",
+          "body_len": 639,
+          "article_words": 69,
+          "words_in_ocr": 69,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_01_Article_Byron's_Unpublished_Prayer.txt",
+          "body_len": 916,
+          "article_words": 97,
+          "words_in_ocr": 97,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "body_len": 7462,
+          "article_words": 487,
+          "words_in_ocr": 487,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_03_Article_Within_the_Locket_Alfred_Lambourne.txt",
+          "body_len": 642,
+          "article_words": 72,
+          "words_in_ocr": 72,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_04_Article_Ma's_New_Year's_Resolutions_Elsie_C._Carroll.txt",
+          "body_len": 14675,
+          "article_words": 818,
+          "words_in_ocr": 818,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_05_Article_Lord_and_Lady_Aberdeen_in_Utah.txt",
+          "body_len": 9186,
+          "article_words": 605,
+          "words_in_ocr": 605,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_06_Article_Cobwebs_Annie_D._S._Palmer.txt",
+          "body_len": 1436,
+          "article_words": 132,
+          "words_in_ocr": 132,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_07_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+          "body_len": 27621,
+          "article_words": 1354,
+          "words_in_ocr": 1354,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_08_Article_Mental_Hygiene_for_Women_Past_Fifty.txt",
+          "body_len": 7557,
+          "article_words": 470,
+          "words_in_ocr": 470,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_09_Article_The_Bride's_Mother_Nabby_Howe.txt",
+          "body_len": 4377,
+          "article_words": 317,
+          "words_in_ocr": 317,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+          "body_len": 6036,
+          "article_words": 400,
+          "words_in_ocr": 400,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_11_Article_Snowflake_Stake_History_Lulu_J._Smith.txt",
+          "body_len": 6017,
+          "article_words": 326,
+          "words_in_ocr": 326,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 6560,
+          "article_words": 522,
+          "words_in_ocr": 522,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_13_Instructions_Instructions_and_Recipes_Mme._Rover.txt",
+          "body_len": 2621,
+          "article_words": 210,
+          "words_in_ocr": 210,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_14_Misc_Notes_Miscellaneous_Notes_Janette_A._Hyde.txt",
+          "body_len": 2679,
+          "article_words": 231,
+          "words_in_ocr": 231,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_15_Poetry_Poems_by_Emmeline_B._Wells.txt",
+          "body_len": 1415,
+          "article_words": 129,
+          "words_in_ocr": 129,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_16_Editorial_Editorial_A_New_Year_Resolve.txt",
+          "body_len": 3506,
+          "article_words": 294,
+          "words_in_ocr": 294,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_17_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 6615,
+          "article_words": 445,
+          "words_in_ocr": 445,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_18a_Genealogy_Genealogy_Lesson_-_Individual_Records_and_Letters.txt",
+          "body_len": 3936,
+          "article_words": 273,
+          "words_in_ocr": 273,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_18b_Art_Art_and_Architecture_-_Winter_Landscape_and_Architecture_Les.txt",
+          "body_len": 2314,
+          "article_words": 163,
+          "words_in_ocr": 163,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_18c_Home_Ethics_Home_Economics_-_The_Latter-day_Saint_Home.txt",
+          "body_len": 6428,
+          "article_words": 442,
+          "words_in_ocr": 442,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_18d_Genealogy_International_Congress_of_Genealogy.txt",
+          "body_len": 6725,
+          "article_words": 429,
+          "words_in_ocr": 429,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol3_19_Home_Science_Miscellaneous_Notes_Janette_A_Hyde.txt",
+          "body_len": 1988,
+          "article_words": 186,
+          "words_in_ocr": 179,
+          "pct_in_ocr": 0.9624,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "dressed",
+            "leeched",
+            "leyal",
+            "lime",
+            "product",
+            "stone",
+            "top"
+          ]
+        },
+        {
+          "file": "January_Vol3_Misc.txt",
+          "body_len": 6146,
+          "article_words": 400,
+          "words_in_ocr": 398,
+          "pct_in_ocr": 0.995,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    },
+    "February": {
+      "total": 18,
+      "articles": 15,
+      "special": 3,
+      "ok": 17,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol3_No2_February_1916.txt",
+      "ocr_chars": 144360,
+      "contents_xref": null,
+      "records": [
+        {
+          "file": "February_Vol3_00_BOARD.txt",
+          "body_len": 716,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_00_CONTENTS.txt",
+          "body_len": 537,
+          "article_words": 60,
+          "words_in_ocr": 60,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_01_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "body_len": 20449,
+          "article_words": 1159,
+          "words_in_ocr": 1159,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_02_Genealogy_Echo_of_the_Genealogical_Congress.txt",
+          "body_len": 21199,
+          "article_words": 1164,
+          "words_in_ocr": 1164,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_03_Article_When_Dreams_Come_True_Rnth_]loench_Bell.txt",
+          "body_len": 19625,
+          "article_words": 1062,
+          "words_in_ocr": 1062,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_04_Article_Temple_Hymn_Lucy_May_Green.txt",
+          "body_len": 629,
+          "article_words": 65,
+          "words_in_ocr": 65,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_05_Article_A_Testimony_Lucy_May_Green.txt",
+          "body_len": 3526,
+          "article_words": 278,
+          "words_in_ocr": 278,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_06_Article_A_Prayer_Edith_McClendon.txt",
+          "body_len": 548,
+          "article_words": 61,
+          "words_in_ocr": 61,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_07_Article_My_Testimony_Concerning_Tem])le_Work_Lerona_A._Wilson._..txt",
+          "body_len": 6790,
+          "article_words": 430,
+          "words_in_ocr": 430,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_08_Article_ITome_Economics_Department_Janette_A._Hyde.txt",
+          "body_len": 11366,
+          "article_words": 691,
+          "words_in_ocr": 691,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_09_Article_A_Prince_of_LIr_Homespun.txt",
+          "body_len": 30034,
+          "article_words": 1642,
+          "words_in_ocr": 1642,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_10_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 2381,
+          "article_words": 220,
+          "words_in_ocr": 220,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "body_len": 11684,
+          "article_words": 670,
+          "words_in_ocr": 670,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_12a_Notes_from_Field_Notes_from_the_Field.txt",
+          "body_len": 3146,
+          "article_words": 250,
+          "words_in_ocr": 250,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_12b_Editorial_Efficiency_Editorial.txt",
+          "body_len": 3057,
+          "article_words": 236,
+          "words_in_ocr": 236,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_12c_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 5509,
+          "article_words": 387,
+          "words_in_ocr": 387,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_13_Editorial_EDITORIAL_Efficiency.txt",
+          "body_len": 89,
+          "article_words": 11,
+          "words_in_ocr": 11,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(89)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol3_Misc.txt",
+          "body_len": 6866,
+          "article_words": 489,
+          "words_in_ocr": 487,
+          "pct_in_ocr": 0.9959,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "accou",
+            "ads"
+          ]
+        }
+      ]
+    },
+    "March": {
+      "total": 19,
+      "articles": 16,
+      "special": 3,
+      "ok": 17,
+      "flagged": 2,
+      "empty": 0,
+      "ocr_file": "Vol3_No3_March_1916.txt",
+      "ocr_chars": 143966,
+      "contents_xref": {
+        "entries_in_contents": 12,
+        "matched": 12,
+        "match_details": [
+          {
+            "title": "The Female Relief Society of Nauvoo",
+            "page": 121,
+            "file": "March_Vol3_05_Article_Relief_Society_School_of_Obstetrics_Alice_Merrill_Horne.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Mothers in Israel Susa Young-Gates",
+            "page": 123,
+            "file": "March_Vol3_01a_Article_Mothers_in_Israel_a_a_a_a_a.txt",
+            "score": 0.4
+          },
+          {
+            "title": "My Friend L. Lula Greene Richards",
+            "page": 148,
+            "file": "March_Vol3_03_Article_My_Friend_L._Lula_Greene_Richards.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Prince of Ur ' Homespun",
+            "page": 149,
+            "file": "March_Vol3_04_Prince_of_Ur_The_Prince_of_Ur_'_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society School of Obstetrics Alice Merrill Horne",
+            "page": 155,
+            "file": "March_Vol3_05_Article_Relief_Society_School_of_Obstetrics_Alice_Merrill_Horne.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Science Department Janette A. Hyde",
+            "page": 157,
+            "file": "March_Vol3_06_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 159,
+            "file": "March_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 162,
+            "file": "March_Vol3_08_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Query Box Hazel Love Dunford",
+            "page": 164,
+            "file": "March_Vol3_09_Article_Query_Box_Hazel_Love_Dunford.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: A Testimony of the Truth of the Gospel",
+            "page": 166,
+            "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Our Delegates in Washington 168 Guide Lessons",
+            "page": 169,
+            "file": "March_Vol3_11_Article_Our_Delegates_in_Washington.txt",
+            "score": 0.5
+          },
+          {
+            "title": "An Expression of Approval",
+            "page": 181,
+            "file": "March_Vol3_13_Article_An_Expression_of_Approval.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "March_Vol3_12a_Guide_Lessons_Theology_and_Testimony_-_Women_of_the_Bible_Leah_and_Rachel.txt",
+          "March_Vol3_12b_Guide_Lessons_Work_and_Business.txt",
+          "March_Vol3_12c_Guide_Lessons_Genealogy_and_Art_a.txt",
+          "March_Vol3_12c_Guide_Lessons_Genealogy_and_Art_b.txt",
+          "March_Vol3_12d_Guide_Lessons_Home_Economics_-_The_Business_Side_of_Housekeeping_a_a_a_a_a.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "March_Vol3_00_BOARD.txt",
+          "body_len": 716,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_00_CONTENTS.txt",
+          "body_len": 531,
+          "article_words": 54,
+          "words_in_ocr": 54,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_01a_Article_Mothers_in_Israel_a_a_a_a_a.txt",
+          "body_len": 59612,
+          "article_words": 2293,
+          "words_in_ocr": 2293,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "MERGED(CAPS_HEADERS(9))"
+          ],
+          "is_special": false,
+          "remediation": "re_extract",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_03_Article_My_Friend_L._Lula_Greene_Richards.txt",
+          "body_len": 771,
+          "article_words": 81,
+          "words_in_ocr": 81,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_04_Prince_of_Ur_The_Prince_of_Ur_'_Homespun.txt",
+          "body_len": 15254,
+          "article_words": 937,
+          "words_in_ocr": 937,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_05_Article_Relief_Society_School_of_Obstetrics_Alice_Merrill_Horne.txt",
+          "body_len": 3522,
+          "article_words": 275,
+          "words_in_ocr": 275,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_06_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+          "body_len": 5128,
+          "article_words": 371,
+          "words_in_ocr": 371,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 7774,
+          "article_words": 519,
+          "words_in_ocr": 519,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_08_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 3905,
+          "article_words": 352,
+          "words_in_ocr": 352,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_09_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "body_len": 3779,
+          "article_words": 301,
+          "words_in_ocr": 301,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+          "body_len": 4531,
+          "article_words": 337,
+          "words_in_ocr": 337,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_11_Article_Our_Delegates_in_Washington.txt",
+          "body_len": 2090,
+          "article_words": 169,
+          "words_in_ocr": 169,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_12a_Guide_Lessons_Theology_and_Testimony_-_Women_of_the_Bible_Leah_and_Rachel.txt",
+          "body_len": 5373,
+          "article_words": 358,
+          "words_in_ocr": 358,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_12b_Guide_Lessons_Work_and_Business.txt",
+          "body_len": 4049,
+          "article_words": 280,
+          "words_in_ocr": 231,
+          "pct_in_ocr": 0.825,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "appointed",
+            "barrington",
+            "birthplace",
+            "blank",
+            "cambridge",
+            "christened",
+            "confirmation",
+            "confronted",
+            "deeds",
+            "eight"
+          ]
+        },
+        {
+          "file": "March_Vol3_12c_Guide_Lessons_Genealogy_and_Art_a.txt",
+          "body_len": 5027,
+          "article_words": 292,
+          "words_in_ocr": 292,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_12c_Guide_Lessons_Genealogy_and_Art_b.txt",
+          "body_len": 4550,
+          "article_words": 319,
+          "words_in_ocr": 319,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_12d_Guide_Lessons_Home_Economics_-_The_Business_Side_of_Housekeeping_a_a_a_a_a.txt",
+          "body_len": 13499,
+          "article_words": 614,
+          "words_in_ocr": 614,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "MERGED(CAPS_HEADERS(4); MULTI_LESSON(2))"
+          ],
+          "is_special": false,
+          "remediation": "re_extract",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_13_Article_An_Expression_of_Approval.txt",
+          "body_len": 6075,
+          "article_words": 466,
+          "words_in_ocr": 466,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol3_Misc.txt",
+          "body_len": 3541,
+          "article_words": 203,
+          "words_in_ocr": 202,
+          "pct_in_ocr": 0.9951,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads"
+          ]
+        }
+      ]
+    },
+    "April": {
+      "total": 22,
+      "articles": 19,
+      "special": 3,
+      "ok": 21,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol3_No4_April_1916.txt",
+      "ocr_chars": 135994,
+      "contents_xref": {
+        "entries_in_contents": 14,
+        "matched": 14,
+        "match_details": [
+          {
+            "title": "My Epitaph Eliza R. Snow",
+            "page": 181,
+            "file": "April_Vol3_01_Article_My_Epitaph_Eliza_R._Snow.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Mother of Mothers in Israel",
+            "page": 183,
+            "file": "April_Vol3_02_Mothers_in_Israel_The_Mother_of_Mothers_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "\"The Conference Folks\" Elsie Chamberlain Carroll",
+            "page": 191,
+            "file": "April_Vol3_03_Article_The_Conference_Folks_Elsie_Chamberlain_Carroll.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Sonnet Alfred Lambourne 196 A Prince of Ur Homespun",
+            "page": 197,
+            "file": "April_Vol3_04_Article_A_Sonnet_Alfred_Lambourne.txt",
+            "score": 0.6
+          },
+          {
+            "title": "Mary Ann's Family E. C. C.",
+            "page": 206,
+            "file": "April_Vol3_06_Article_Mary_Ann's_Family_E._C._C..txt",
+            "score": 1.0
+          },
+          {
+            "title": "Spring Maude Baggarly",
+            "page": 209,
+            "file": "April_Vol3_07_Article_Spring_Maude_Baggarly.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Wondrous Woman's Book Ida Husted Harper",
+            "page": 210,
+            "file": "April_Vol3_08_Article_A_Wondrous_Woman's_Book_Ida_Husted_Harper.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Science Department Juliette A. Hyde",
+            "page": 213,
+            "file": "April_Vol3_09_Home_Science_Home_Science_Department_Juliette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "\"Happy as a King\" Ida Stewart Peay",
+            "page": 216,
+            "file": "April_Vol3_10_Article_Happy_as_a_King_Ida_Stewart_Peay.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Query Box Hazel Love Dunford",
+            "page": 217,
+            "file": "April_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 219,
+            "file": "April_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 222,
+            "file": "April_Vol3_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: The Childless Ones",
+            "page": 225,
+            "file": "April_Vol3_14_Editorial_Editorial_The_Childless_Ones.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 227,
+            "file": "April_Vol3_15a_Guide_Lessons_LESSON_I_Theology_and_Testimony_First_Week_April_1916_WOMEN.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "April_Vol3_05_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+          "April_Vol3_15b_Guide_Lessons_LESSON_II_Work_and_Business_Second_Week_in_May.txt",
+          "April_Vol3_15c_Guide_Lessons_LESSON_III_Genealogy_and_Art_Third_Week_in_May_a.txt",
+          "April_Vol3_15c_Guide_Lessons_LESSON_III_Genealogy_and_Art_Third_Week_in_May_b.txt",
+          "April_Vol3_15d_Guide_Lessons_LESSON_IV_Home_Economics_Fourth_Week_in_May_THE_LATTER-DAY_S_a_a_a_a_a.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "April_Vol3_00_BOARD.txt",
+          "body_len": 716,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_00_CONTENTS.txt",
+          "body_len": 561,
+          "article_words": 60,
+          "words_in_ocr": 60,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_01_Article_My_Epitaph_Eliza_R._Snow.txt",
+          "body_len": 1190,
+          "article_words": 128,
+          "words_in_ocr": 128,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_02_Mothers_in_Israel_The_Mother_of_Mothers_in_Israel.txt",
+          "body_len": 16770,
+          "article_words": 984,
+          "words_in_ocr": 984,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_03_Article_The_Conference_Folks_Elsie_Chamberlain_Carroll.txt",
+          "body_len": 13208,
+          "article_words": 738,
+          "words_in_ocr": 738,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_04_Article_A_Sonnet_Alfred_Lambourne.txt",
+          "body_len": 667,
+          "article_words": 74,
+          "words_in_ocr": 74,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_05_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+          "body_len": 22723,
+          "article_words": 1246,
+          "words_in_ocr": 1246,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_06_Article_Mary_Ann's_Family_E._C._C..txt",
+          "body_len": 7968,
+          "article_words": 498,
+          "words_in_ocr": 498,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_07_Article_Spring_Maude_Baggarly.txt",
+          "body_len": 613,
+          "article_words": 76,
+          "words_in_ocr": 76,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_08_Article_A_Wondrous_Woman's_Book_Ida_Husted_Harper.txt",
+          "body_len": 8307,
+          "article_words": 540,
+          "words_in_ocr": 540,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_09_Home_Science_Home_Science_Department_Juliette_A._Hyde.txt",
+          "body_len": 6130,
+          "article_words": 455,
+          "words_in_ocr": 455,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_10_Article_Happy_as_a_King_Ida_Stewart_Peay.txt",
+          "body_len": 1083,
+          "article_words": 113,
+          "words_in_ocr": 113,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "body_len": 4626,
+          "article_words": 377,
+          "words_in_ocr": 377,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 13881,
+          "article_words": 827,
+          "words_in_ocr": 827,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 3694,
+          "article_words": 304,
+          "words_in_ocr": 304,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_14_Editorial_Editorial_The_Childless_Ones.txt",
+          "body_len": 4391,
+          "article_words": 339,
+          "words_in_ocr": 331,
+          "pct_in_ocr": 0.9764,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "beattie",
+            "crimson",
+            "edward",
+            "honor",
+            "janette",
+            "louie",
+            "nibour",
+            "stigmatize"
+          ]
+        },
+        {
+          "file": "April_Vol3_15a_Guide_Lessons_LESSON_I_Theology_and_Testimony_First_Week_April_1916_WOMEN.txt",
+          "body_len": 7161,
+          "article_words": 470,
+          "words_in_ocr": 470,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_15b_Guide_Lessons_LESSON_II_Work_and_Business_Second_Week_in_May.txt",
+          "body_len": 4043,
+          "article_words": 280,
+          "words_in_ocr": 225,
+          "pct_in_ocr": 0.8036,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "advance",
+            "baptized",
+            "barrett",
+            "barrington",
+            "birth",
+            "birthplace",
+            "christened",
+            "clerk",
+            "clerks",
+            "confronted"
+          ]
+        },
+        {
+          "file": "April_Vol3_15c_Guide_Lessons_LESSON_III_Genealogy_and_Art_Third_Week_in_May_a.txt",
+          "body_len": 5873,
+          "article_words": 387,
+          "words_in_ocr": 305,
+          "pct_in_ocr": 0.7881,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "advance",
+            "artists",
+            "baptized",
+            "barrett",
+            "barrington",
+            "birth",
+            "birthplace",
+            "brush",
+            "bushes",
+            "cardboard"
+          ]
+        },
+        {
+          "file": "April_Vol3_15c_Guide_Lessons_LESSON_III_Genealogy_and_Art_Third_Week_in_May_b.txt",
+          "body_len": 7956,
+          "article_words": 473,
+          "words_in_ocr": 473,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_15d_Guide_Lessons_LESSON_IV_Home_Economics_Fourth_Week_in_May_THE_LATTER-DAY_S_a_a_a_a_a.txt",
+          "body_len": 13322,
+          "article_words": 523,
+          "words_in_ocr": 523,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "MERGED(CAPS_HEADERS(3); MULTI_LESSON(3))"
+          ],
+          "is_special": false,
+          "remediation": "re_extract",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol3_Misc.txt",
+          "body_len": 4630,
+          "article_words": 328,
+          "words_in_ocr": 327,
+          "pct_in_ocr": 0.997,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads"
+          ]
+        }
+      ]
+    },
+    "May": {
+      "total": 22,
+      "articles": 19,
+      "special": 3,
+      "ok": 22,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No5_May_1916.txt",
+      "ocr_chars": 139113,
+      "contents_xref": {
+        "entries_in_contents": 1,
+        "matched": 0,
+        "match_details": [],
+        "missing": [
+          {
+            "title": ". MAY, 1916. Not Even Fate Alfred Lambourne 241 Mothers of Our Leaders in Israel Susa Young Gates 243 Music Department 256 Plain Gossip Mrs. Grundy 258 Betty Morgan's Dilemma Ruth Moench Bell 260 Home Science Department Hyde 263 Janette A. A Prince of Ur Homespun 265 Notes from the Field Amy Brown Lyman 270 Goodby, California Congress, Goodby 274 Crocheted Yoke Isabel Whitney Sears 275 The Flowers' Resurrection Hazel Washburn 277 Query Box Hazel Love Dunford 278 Current Topics James H. Anderson 280 Editorial: Paying the Price 283 Guide Lessons 287 A A^oice Calling Maud Baggarley",
+            "page": 300
+          }
+        ],
+        "extra_files": [
+          "May_Vol3_01_Article_Mothers_of_Our_Leaders_in_Israel_Susa_Young_Gates.txt",
+          "May_Vol3_02_Article_Music_Department.txt",
+          "May_Vol3_03_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+          "May_Vol3_04_Article_Betty_Morgan's_Dilemma_Ruth_Moench_Bell.txt",
+          "May_Vol3_05_Home_Science_Home_Science_Department_Hyde.txt",
+          "May_Vol3_06_Prince_of_Ur_Janette_A._A_Prince_of_Ur_Homespun.txt",
+          "May_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "May_Vol3_08_Article_Goodby,_California_Congress,_Goodby.txt",
+          "May_Vol3_09_Article_Crocheted_Yoke_Isabel_Whitney_Sears.txt",
+          "May_Vol3_10_Article_The_Flowers'_Resurrection_Hazel_Washburn.txt",
+          "May_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "May_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "May_Vol3_13a_Editorial_Editorial_Paying_the_Price.txt",
+          "May_Vol3_13b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "May_Vol3_13b_Guide_Lessons_Guide_Lessons_b.txt",
+          "May_Vol3_13b_Guide_Lessons_Guide_Lessons_c.txt",
+          "May_Vol3_13b_Guide_Lessons_Guide_Lessons_d.txt",
+          "May_Vol3_14a_Guide_Lessons_Guide_Lessons.txt",
+          "May_Vol3_14b_Poem_A_Voice_Calling.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "May_Vol3_00_BOARD.txt",
+          "body_len": 716,
+          "article_words": 65,
+          "words_in_ocr": 65,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_00_CONTENTS.txt",
+          "body_len": 597,
+          "article_words": 68,
+          "words_in_ocr": 68,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_01_Article_Mothers_of_Our_Leaders_in_Israel_Susa_Young_Gates.txt",
+          "body_len": 29944,
+          "article_words": 1511,
+          "words_in_ocr": 1511,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_02_Article_Music_Department.txt",
+          "body_len": 3732,
+          "article_words": 296,
+          "words_in_ocr": 296,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_03_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+          "body_len": 5321,
+          "article_words": 355,
+          "words_in_ocr": 355,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_04_Article_Betty_Morgan's_Dilemma_Ruth_Moench_Bell.txt",
+          "body_len": 6666,
+          "article_words": 475,
+          "words_in_ocr": 475,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_05_Home_Science_Home_Science_Department_Hyde.txt",
+          "body_len": 5027,
+          "article_words": 425,
+          "words_in_ocr": 425,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_06_Prince_of_Ur_Janette_A._A_Prince_of_Ur_Homespun.txt",
+          "body_len": 12034,
+          "article_words": 800,
+          "words_in_ocr": 800,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 6407,
+          "article_words": 421,
+          "words_in_ocr": 421,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_08_Article_Goodby,_California_Congress,_Goodby.txt",
+          "body_len": 1946,
+          "article_words": 154,
+          "words_in_ocr": 154,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_09_Article_Crocheted_Yoke_Isabel_Whitney_Sears.txt",
+          "body_len": 4937,
+          "article_words": 116,
+          "words_in_ocr": 116,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_10_Article_The_Flowers'_Resurrection_Hazel_Washburn.txt",
+          "body_len": 991,
+          "article_words": 98,
+          "words_in_ocr": 98,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "body_len": 5399,
+          "article_words": 329,
+          "words_in_ocr": 329,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 6317,
+          "article_words": 492,
+          "words_in_ocr": 492,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_13a_Editorial_Editorial_Paying_the_Price.txt",
+          "body_len": 5788,
+          "article_words": 461,
+          "words_in_ocr": 461,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_13b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "body_len": 4707,
+          "article_words": 339,
+          "words_in_ocr": 339,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_13b_Guide_Lessons_Guide_Lessons_b.txt",
+          "body_len": 3011,
+          "article_words": 219,
+          "words_in_ocr": 165,
+          "pct_in_ocr": 0.7534,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "acts",
+            "afraid",
+            "aim",
+            "blessing",
+            "buyeth",
+            "chapter",
+            "characteristics",
+            "consecrates",
+            "considereth",
+            "delivereth"
+          ]
+        },
+        {
+          "file": "May_Vol3_13b_Guide_Lessons_Guide_Lessons_c.txt",
+          "body_len": 8630,
+          "article_words": 523,
+          "words_in_ocr": 523,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_13b_Guide_Lessons_Guide_Lessons_d.txt",
+          "body_len": 10589,
+          "article_words": 633,
+          "words_in_ocr": 633,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_14a_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 6946,
+          "article_words": 451,
+          "words_in_ocr": 451,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_14b_Poem_A_Voice_Calling.txt",
+          "body_len": 4683,
+          "article_words": 389,
+          "words_in_ocr": 389,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol3_Misc.txt",
+          "body_len": 7779,
+          "article_words": 559,
+          "words_in_ocr": 557,
+          "pct_in_ocr": 0.9964,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "article"
+          ]
+        }
+      ]
+    },
+    "June": {
+      "total": 21,
+      "articles": 18,
+      "special": 3,
+      "ok": 21,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No6_June_1916.txt",
+      "ocr_chars": 136518,
+      "contents_xref": {
+        "entries_in_contents": 18,
+        "matched": 18,
+        "match_details": [
+          {
+            "title": "Old Folks Greeting",
+            "page": 301,
+            "file": "June_Vol3_19_Poem_Old_Folks_Greeting.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mothers of Leaders in Israel",
+            "page": 303,
+            "file": "June_Vol3_02_Article_Mothers_of_Leaders_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The April Conference Amy Brown Lyman",
+            "page": 309,
+            "file": "June_Vol3_03_Article_The_April_Conference_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Granite Stake Relief Society Cantata",
+            "page": 320,
+            "file": "June_Vol3_04_Article_Granite_Stake_Relief_Society_Cantata.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Cross",
+            "page": 324,
+            "file": "June_Vol3_05_Article_The_Cross.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Beyond the Portals Laura Moench Jenkins",
+            "page": 325,
+            "file": "June_Vol3_06_Article_Beyond_the_Portals_Laura_Moench_Jenkins.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Plain Gossip Mrs. Grundy",
+            "page": 335,
+            "file": "June_Vol3_07_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Seeing Heart Maud Baggarley",
+            "page": 337,
+            "file": "June_Vol3_08_Article_The_Seeing_Heart_Maud_Baggarley.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Prayer for Life Annie G. Lauritzen",
+            "page": 338,
+            "file": "June_Vol3_09_Article_A_Prayer_for_Life_Annie_G._Lauritzen.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Prince of Ur Homespun",
+            "page": 339,
+            "file": "June_Vol3_10_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Heroine Lucy Burnham",
+            "page": 343,
+            "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Science Department Janette A. Hyde",
+            "page": 344,
+            "file": "June_Vol3_12_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Ethics Lillian G. Knight",
+            "page": 348,
+            "file": "June_Vol3_13_Article_Ethics_Lillian_G._Knight.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field",
+            "page": 349,
+            "file": "June_Vol3_14_Notes_from_Field_Notes_from_the_Field.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Query Box Hazel Love Dunford",
+            "page": 350,
+            "file": "June_Vol3_15_Article_Query_Box_Hazel_Love_Dunford.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 352,
+            "file": "June_Vol3_16_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Climbing",
+            "page": 354,
+            "file": "June_Vol3_17_Editorial_Editorial_Climbing.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 355,
+            "file": "June_Vol3_18_Guide_Lessons_Guide_Lessons.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "June_Vol3_00_BOARD.txt",
+          "body_len": 718,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_00_CONTENTS.txt",
+          "body_len": 579,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_02_Article_Mothers_of_Leaders_in_Israel.txt",
+          "body_len": 6529,
+          "article_words": 475,
+          "words_in_ocr": 475,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_03_Article_The_April_Conference_Amy_Brown_Lyman.txt",
+          "body_len": 28583,
+          "article_words": 1233,
+          "words_in_ocr": 1233,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_04_Article_Granite_Stake_Relief_Society_Cantata.txt",
+          "body_len": 6512,
+          "article_words": 437,
+          "words_in_ocr": 437,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_05_Article_The_Cross.txt",
+          "body_len": 381,
+          "article_words": 42,
+          "words_in_ocr": 42,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_06_Article_Beyond_the_Portals_Laura_Moench_Jenkins.txt",
+          "body_len": 24551,
+          "article_words": 1126,
+          "words_in_ocr": 1126,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_07_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+          "body_len": 6600,
+          "article_words": 370,
+          "words_in_ocr": 370,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_08_Article_The_Seeing_Heart_Maud_Baggarley.txt",
+          "body_len": 217,
+          "article_words": 28,
+          "words_in_ocr": 28,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_09_Article_A_Prayer_for_Life_Annie_G._Lauritzen.txt",
+          "body_len": 1438,
+          "article_words": 131,
+          "words_in_ocr": 131,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_10_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+          "body_len": 10313,
+          "article_words": 681,
+          "words_in_ocr": 681,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+          "body_len": 1912,
+          "article_words": 197,
+          "words_in_ocr": 197,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_12_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+          "body_len": 1898,
+          "article_words": 172,
+          "words_in_ocr": 172,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_13_Article_Ethics_Lillian_G._Knight.txt",
+          "body_len": 2491,
+          "article_words": 197,
+          "words_in_ocr": 197,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_14_Notes_from_Field_Notes_from_the_Field.txt",
+          "body_len": 2434,
+          "article_words": 185,
+          "words_in_ocr": 185,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_15_Article_Query_Box_Hazel_Love_Dunford.txt",
+          "body_len": 5540,
+          "article_words": 465,
+          "words_in_ocr": 465,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_16_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 2546,
+          "article_words": 214,
+          "words_in_ocr": 214,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_17_Editorial_Editorial_Climbing.txt",
+          "body_len": 5147,
+          "article_words": 420,
+          "words_in_ocr": 420,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_18_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 11042,
+          "article_words": 705,
+          "words_in_ocr": 705,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol3_19_Poem_Old_Folks_Greeting.txt",
+          "body_len": 1047,
+          "article_words": 106,
+          "words_in_ocr": 81,
+          "pct_in_ocr": 0.7642,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "banquet",
+            "blossom",
+            "bowed",
+            "cactus",
+            "conquered",
+            "count",
+            "crossed",
+            "desert",
+            "dispel",
+            "faced"
+          ]
+        },
+        {
+          "file": "June_Vol3_Misc.txt",
+          "body_len": 8298,
+          "article_words": 590,
+          "words_in_ocr": 587,
+          "pct_in_ocr": 0.9949,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory",
+            "indisputab"
+          ]
+        }
+      ]
+    },
+    "July": {
+      "total": 22,
+      "articles": 19,
+      "special": 3,
+      "ok": 22,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No7_July_1916.txt",
+      "ocr_chars": 139480,
+      "contents_xref": {
+        "entries_in_contents": 1,
+        "matched": 0,
+        "match_details": [],
+        "missing": [
+          {
+            "title": ". JULY, 1916. To My Mother L. Lula Greene Richards 361 A Little Child Shall Lead Them Frontispiece Birth Control 363 A Priceless Golden Wedding 369 Mother's Day Nephi Anderson 374 The True Calendar Hazel S. Washburn 377 When First We Met Alfred Lambourne 378 Graduation Exercises 379 Crochet Centerpiece Isabel Whitney Sears 382 A Prince of Ur Homespun 386 Home Science Department Janette A. Hyde 396 Current Topics James H. Anderson 399 Plain Gossip Mrs. Grundy 402 Notes from the Field Amy Brown Lyman 404 Revelry Maud Baggarley 407 Genealogical Notes 408 Editorial: Who Can Help Me? 409 Guide Lessons 412 Charms of Springtime Evan Stephens",
+            "page": 418
+          }
+        ],
+        "extra_files": [
+          "July_Vol3_02a_Article_Birth_Control.txt",
+          "July_Vol3_03_Article_A_Priceless_Golden_Wedding.txt",
+          "July_Vol3_04_Article_Mother's_Day_Nephi_Anderson.txt",
+          "July_Vol3_05_Article_The_True_Calendar_Hazel_S._Washburn.txt",
+          "July_Vol3_06_Article_When_First_We_Met_Alfred_Lambourne.txt",
+          "July_Vol3_07_Article_Graduation_Exercises.txt",
+          "July_Vol3_08_Article_Crochet_Centerpiece_Isabel_Whitney_Sears.txt",
+          "July_Vol3_09_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+          "July_Vol3_10_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+          "July_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "July_Vol3_12_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+          "July_Vol3_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "July_Vol3_14_Article_Revelry_Maud_Baggarley.txt",
+          "July_Vol3_15_Genealogy_Genealogical_Notes.txt",
+          "July_Vol3_16a_Editorial_Editorial_Who_Can_Help_Me.txt",
+          "July_Vol3_16b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "July_Vol3_16b_Guide_Lessons_Guide_Lessons_b.txt",
+          "July_Vol3_17_Guide_Lessons_Guide_Lessons.txt",
+          "July_Vol3_18_Article_Charms_of_Springtime_Evan_Stephens.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "July_Vol3_00_BOARD.txt",
+          "body_len": 2001,
+          "article_words": 198,
+          "words_in_ocr": 198,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_00_CONTENTS.txt",
+          "body_len": 654,
+          "article_words": 71,
+          "words_in_ocr": 71,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_02a_Article_Birth_Control.txt",
+          "body_len": 12239,
+          "article_words": 743,
+          "words_in_ocr": 743,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_03_Article_A_Priceless_Golden_Wedding.txt",
+          "body_len": 10509,
+          "article_words": 644,
+          "words_in_ocr": 644,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_04_Article_Mother's_Day_Nephi_Anderson.txt",
+          "body_len": 7432,
+          "article_words": 440,
+          "words_in_ocr": 440,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_05_Article_The_True_Calendar_Hazel_S._Washburn.txt",
+          "body_len": 897,
+          "article_words": 98,
+          "words_in_ocr": 98,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_06_Article_When_First_We_Met_Alfred_Lambourne.txt",
+          "body_len": 636,
+          "article_words": 63,
+          "words_in_ocr": 63,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_07_Article_Graduation_Exercises.txt",
+          "body_len": 8056,
+          "article_words": 433,
+          "words_in_ocr": 433,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_08_Article_Crochet_Centerpiece_Isabel_Whitney_Sears.txt",
+          "body_len": 9443,
+          "article_words": 163,
+          "words_in_ocr": 163,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_09_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+          "body_len": 27070,
+          "article_words": 1553,
+          "words_in_ocr": 1553,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_10_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+          "body_len": 7536,
+          "article_words": 539,
+          "words_in_ocr": 539,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 5874,
+          "article_words": 474,
+          "words_in_ocr": 474,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_12_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+          "body_len": 4607,
+          "article_words": 301,
+          "words_in_ocr": 301,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 5621,
+          "article_words": 407,
+          "words_in_ocr": 407,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_14_Article_Revelry_Maud_Baggarley.txt",
+          "body_len": 726,
+          "article_words": 89,
+          "words_in_ocr": 89,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_15_Genealogy_Genealogical_Notes.txt",
+          "body_len": 2508,
+          "article_words": 175,
+          "words_in_ocr": 175,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_16a_Editorial_Editorial_Who_Can_Help_Me.txt",
+          "body_len": 7147,
+          "article_words": 568,
+          "words_in_ocr": 568,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_16b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "body_len": 6081,
+          "article_words": 443,
+          "words_in_ocr": 443,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_16b_Guide_Lessons_Guide_Lessons_b.txt",
+          "body_len": 4769,
+          "article_words": 358,
+          "words_in_ocr": 358,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_17_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 1803,
+          "article_words": 185,
+          "words_in_ocr": 185,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_18_Article_Charms_of_Springtime_Evan_Stephens.txt",
+          "body_len": 6650,
+          "article_words": 492,
+          "words_in_ocr": 492,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol3_Misc.txt",
+          "body_len": 9348,
+          "article_words": 669,
+          "words_in_ocr": 666,
+          "pct_in_ocr": 0.9955,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "article",
+            "sst"
+          ]
+        }
+      ]
+    },
+    "August": {
+      "total": 18,
+      "articles": 15,
+      "special": 3,
+      "ok": 16,
+      "flagged": 2,
+      "empty": 0,
+      "ocr_file": "Vol3_No8_August_1916.txt",
+      "ocr_chars": 144966,
+      "contents_xref": {
+        "entries_in_contents": 12,
+        "matched": 9,
+        "match_details": [
+          {
+            "title": "Mary Ann Frost Stearns Pratt",
+            "page": 423,
+            "file": "August_Vol3_02_Article_Mary_Ann_Frost_Stearns_Pratt.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Birth-Control",
+            "page": 433,
+            "file": "August_Vol3_03_Article_Birth-Control.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mother Takes Advice Diana Parrish",
+            "page": 436,
+            "file": "August_Vol3_04_Article_Mother_Takes_Advice_Diana_Parrish.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Proper Guidance of Children Lucy Wright Snow",
+            "page": 442,
+            "file": "August_Vol3_05_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Prince of Ur Homespun",
+            "page": 444,
+            "file": "August_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Crochet Nut Basket Isabel W. Sears",
+            "page": 457,
+            "file": "August_Vol3_07_Article_Crochet_Nut_Basket_Isabel_W._Sears.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 460,
+            "file": "August_Vol3_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Will Conquering",
+            "page": 465,
+            "file": "August_Vol3_10_Editorial_Editorial_Will_Conquering.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 468,
+            "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_a.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [
+          {
+            "title": "The Two-Faced Clock Ida Stewart Peay",
+            "page": 421
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 463
+          },
+          {
+            "title": "The Toilers Maud Baggarley",
+            "page": 467
+          }
+        ],
+        "extra_files": [
+          "August_Vol3_11a_Poem_The_Toilers.txt",
+          "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_a.txt",
+          "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_b.txt",
+          "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_b.txt",
+          "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_c.txt",
+          "August_Vol3_12_Guide_Lessons_Guide_Lessons.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "August_Vol3_00_BOARD.txt",
+          "body_len": 716,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_00_CONTENTS.txt",
+          "body_len": 416,
+          "article_words": 51,
+          "words_in_ocr": 51,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_02_Article_Mary_Ann_Frost_Stearns_Pratt.txt",
+          "body_len": 25242,
+          "article_words": 1181,
+          "words_in_ocr": 1181,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_03_Article_Birth-Control.txt",
+          "body_len": 7941,
+          "article_words": 552,
+          "words_in_ocr": 552,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_04_Article_Mother_Takes_Advice_Diana_Parrish.txt",
+          "body_len": 14928,
+          "article_words": 928,
+          "words_in_ocr": 928,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_05_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+          "body_len": 4457,
+          "article_words": 325,
+          "words_in_ocr": 325,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+          "body_len": 34873,
+          "article_words": 1784,
+          "words_in_ocr": 1784,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_07_Article_Crochet_Nut_Basket_Isabel_W._Sears.txt",
+          "body_len": 9349,
+          "article_words": 432,
+          "words_in_ocr": 432,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 1806,
+          "article_words": 148,
+          "words_in_ocr": 148,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_10_Editorial_Editorial_Will_Conquering.txt",
+          "body_len": 4813,
+          "article_words": 348,
+          "words_in_ocr": 348,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_11a_Poem_The_Toilers.txt",
+          "body_len": 851,
+          "article_words": 99,
+          "words_in_ocr": 99,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_a.txt",
+          "body_len": 7870,
+          "article_words": 484,
+          "words_in_ocr": 484,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_a.txt",
+          "body_len": 41,
+          "article_words": 5,
+          "words_in_ocr": 5,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(41)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_b.txt",
+          "body_len": 1027,
+          "article_words": 31,
+          "words_in_ocr": 21,
+          "pct_in_ocr": 0.6774,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "LOW_OCR_MATCH(68%)"
+          ],
+          "is_special": false,
+          "remediation": "api_fix",
+          "sample_not_in_ocr": [
+            "february",
+            "vii",
+            "viii",
+            "xii",
+            "xiii",
+            "xiv",
+            "xix",
+            "xvi",
+            "xvii",
+            "xviii"
+          ]
+        },
+        {
+          "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_b.txt",
+          "body_len": 4339,
+          "article_words": 312,
+          "words_in_ocr": 312,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_c.txt",
+          "body_len": 3581,
+          "article_words": 324,
+          "words_in_ocr": 324,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_12_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 14983,
+          "article_words": 891,
+          "words_in_ocr": 891,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol3_Misc.txt",
+          "body_len": 4640,
+          "article_words": 345,
+          "words_in_ocr": 343,
+          "pct_in_ocr": 0.9942,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    },
+    "September": {
+      "total": 22,
+      "articles": 19,
+      "special": 3,
+      "ok": 22,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No9_September_1916.txt",
+      "ocr_chars": 138916,
+      "contents_xref": {
+        "entries_in_contents": 16,
+        "matched": 14,
+        "match_details": [
+          {
+            "title": "Mothers in Israel",
+            "page": 483,
+            "file": "September_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Schemes and Schedules Ruth Moench Bell",
+            "page": 490,
+            "file": "September_Vol3_03_Article_Schemes_and_Schedules_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Being \"Gran\" Alfred Lambourne",
+            "page": 494,
+            "file": "September_Vol3_04_Article_Being_Gran_Alfred_Lambourne.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Prince of Ur Homespun",
+            "page": 497,
+            "file": "September_Vol3_05_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Filet Crochet Yoke Isabelle W. Sears",
+            "page": 505,
+            "file": "September_Vol3_06_Article_Filet_Crochet_Yoke_Isabelle_W._Sears.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Bible Lucy May Green",
+            "page": 507,
+            "file": "September_Vol3_07_Article_The_Bible_Lucy_May_Green.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Proper Guidance of Children Lucy Wright Snow",
+            "page": 510,
+            "file": "September_Vol3_08_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Sec. Amy Brown Lyman",
+            "page": 513,
+            "file": "September_Vol3_09_Notes_from_Field_Notes_from_the_Field_Sec._Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 518,
+            "file": "September_Vol3_10_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Science Department Janette A. Hyde",
+            "page": 521,
+            "file": "September_Vol3_11_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Self Pity",
+            "page": 524,
+            "file": "September_Vol3_12a_Editorial_Editorial_Self_Pity.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 526,
+            "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_a.txt",
+            "score": 1.0
+          },
+          {
+            "title": "At Evening Emmeline B. Wells",
+            "page": 539,
+            "file": "September_Vol3_14_Article_At_Evening_Emmeline_B._Wells.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Music: My Friend",
+            "page": 540,
+            "file": "September_Vol3_15_Article_Music_My_Friend.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [
+          {
+            "title": "Kirtland Temple Frontispiece",
+            "page": null
+          },
+          {
+            "title": "Absence Lucy Burnham",
+            "page": 481
+          }
+        ],
+        "extra_files": [
+          "September_Vol3_12b_Guide_Lessons_Guide_Lessons_b.txt",
+          "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_a_a.txt",
+          "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_b.txt",
+          "September_Vol3_12b_Guide_Lessons_Guide_Lessons_d.txt",
+          "September_Vol3_13_Guide_Lessons_Guide_Lessons.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "September_Vol3_00_BOARD.txt",
+          "body_len": 715,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_00_CONTENTS.txt",
+          "body_len": 551,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "body_len": 15762,
+          "article_words": 787,
+          "words_in_ocr": 787,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_03_Article_Schemes_and_Schedules_Ruth_Moench_Bell.txt",
+          "body_len": 9639,
+          "article_words": 582,
+          "words_in_ocr": 582,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_04_Article_Being_Gran_Alfred_Lambourne.txt",
+          "body_len": 5861,
+          "article_words": 411,
+          "words_in_ocr": 411,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_05_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+          "body_len": 19800,
+          "article_words": 1082,
+          "words_in_ocr": 1082,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_06_Article_Filet_Crochet_Yoke_Isabelle_W._Sears.txt",
+          "body_len": 2829,
+          "article_words": 172,
+          "words_in_ocr": 172,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_07_Article_The_Bible_Lucy_May_Green.txt",
+          "body_len": 6066,
+          "article_words": 400,
+          "words_in_ocr": 400,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_08_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+          "body_len": 5996,
+          "article_words": 400,
+          "words_in_ocr": 400,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_09_Notes_from_Field_Notes_from_the_Field_Sec._Amy_Brown_Lyman.txt",
+          "body_len": 12604,
+          "article_words": 743,
+          "words_in_ocr": 743,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_10_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 6456,
+          "article_words": 527,
+          "words_in_ocr": 527,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_11_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+          "body_len": 6750,
+          "article_words": 467,
+          "words_in_ocr": 467,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_12a_Editorial_Editorial_Self_Pity.txt",
+          "body_len": 3219,
+          "article_words": 292,
+          "words_in_ocr": 292,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_a.txt",
+          "body_len": 6586,
+          "article_words": 458,
+          "words_in_ocr": 458,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_b.txt",
+          "body_len": 2646,
+          "article_words": 180,
+          "words_in_ocr": 139,
+          "pct_in_ocr": 0.7722,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "accompany",
+            "avoid",
+            "benefits",
+            "carpenter",
+            "characterize",
+            "cor",
+            "degrading",
+            "dishonest",
+            "eccl",
+            "eden"
+          ]
+        },
+        {
+          "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_a_a.txt",
+          "body_len": 5400,
+          "article_words": 395,
+          "words_in_ocr": 395,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_b.txt",
+          "body_len": 4357,
+          "article_words": 320,
+          "words_in_ocr": 320,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_d.txt",
+          "body_len": 8895,
+          "article_words": 553,
+          "words_in_ocr": 553,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_13_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 5992,
+          "article_words": 412,
+          "words_in_ocr": 412,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_14_Article_At_Evening_Emmeline_B._Wells.txt",
+          "body_len": 919,
+          "article_words": 100,
+          "words_in_ocr": 100,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_15_Article_Music_My_Friend.txt",
+          "body_len": 5449,
+          "article_words": 429,
+          "words_in_ocr": 429,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol3_Misc.txt",
+          "body_len": 5138,
+          "article_words": 395,
+          "words_in_ocr": 393,
+          "pct_in_ocr": 0.9949,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    },
+    "October": {
+      "total": 18,
+      "articles": 15,
+      "special": 3,
+      "ok": 18,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No10_October_1916.txt",
+      "ocr_chars": 151309,
+      "contents_xref": {
+        "entries_in_contents": 12,
+        "matched": 12,
+        "match_details": [
+          {
+            "title": "The Future Life William Cullen Bryant",
+            "page": 541,
+            "file": "October_Vol3_01_Article_The_Future_Life_William_Cullen_Bryant.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mrs. Ida Bowman Smith Frontispiece",
+            "page": null,
+            "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Daughters of Zion",
+            "page": 543,
+            "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Sure Defense L. Lula Greene Richards",
+            "page": 546,
+            "file": "October_Vol3_03_Article_A_Sure_Defense_L._Lula_Greene_Richards.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from Our Secretary Afield Amy Brown Lyman",
+            "page": 547,
+            "file": "October_Vol3_04_Article_Notes_from_Our_Secretary_Afield_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Scientists in Convention Janette A. Hyde",
+            "page": 559,
+            "file": "October_Vol3_05_Article_Home_Scientists_in_Convention_Janette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Prince of Ur Homespun",
+            "page": 569,
+            "file": "October_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Semi-Annual Relief Society Conference",
+            "page": 573,
+            "file": "October_Vol3_07_Article_Semi-Annual_Relief_Society_Conference.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mothers in Israel",
+            "page": 574,
+            "file": "October_Vol3_08_Mothers_in_Israel_Mothers_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 582,
+            "file": "October_Vol3_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Out of Death Life is Born",
+            "page": 584,
+            "file": "October_Vol3_10a_Editorial_Editorial_Out_of_Death_Life_is_Born.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 586,
+            "file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_a_a.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "October_Vol3_10b_Guide_Lessons_Guide_Lessons_b.txt",
+          "October_Vol3_10b_Guide_Lessons_Guide_Lessons_c.txt",
+          "October_Vol3_10b_Guide_Lessons_Guide_Lessons_d.txt",
+          "October_Vol3_11_Guide_Lessons_Guide_Lessons.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "October_Vol3_00_BOARD.txt",
+          "body_len": 715,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_00_CONTENTS.txt",
+          "body_len": 459,
+          "article_words": 52,
+          "words_in_ocr": 52,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_01_Article_The_Future_Life_William_Cullen_Bryant.txt",
+          "body_len": 1605,
+          "article_words": 155,
+          "words_in_ocr": 155,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+          "body_len": 8473,
+          "article_words": 487,
+          "words_in_ocr": 487,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_03_Article_A_Sure_Defense_L._Lula_Greene_Richards.txt",
+          "body_len": 587,
+          "article_words": 72,
+          "words_in_ocr": 72,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_04_Article_Notes_from_Our_Secretary_Afield_Amy_Brown_Lyman.txt",
+          "body_len": 26709,
+          "article_words": 1120,
+          "words_in_ocr": 1120,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_05_Article_Home_Scientists_in_Convention_Janette_A._Hyde.txt",
+          "body_len": 19317,
+          "article_words": 1027,
+          "words_in_ocr": 1027,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+          "body_len": 30612,
+          "article_words": 1582,
+          "words_in_ocr": 1582,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_07_Article_Semi-Annual_Relief_Society_Conference.txt",
+          "body_len": 584,
+          "article_words": 59,
+          "words_in_ocr": 59,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_08_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "body_len": 16026,
+          "article_words": 761,
+          "words_in_ocr": 761,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 4263,
+          "article_words": 374,
+          "words_in_ocr": 374,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_10a_Editorial_Editorial_Out_of_Death_Life_is_Born.txt",
+          "body_len": 4020,
+          "article_words": 315,
+          "words_in_ocr": 315,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "body_len": 5570,
+          "article_words": 347,
+          "words_in_ocr": 347,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_b.txt",
+          "body_len": 4689,
+          "article_words": 332,
+          "words_in_ocr": 233,
+          "pct_in_ocr": 0.7018,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "achievements",
+            "afraid",
+            "arts",
+            "bringeth",
+            "buyeth",
+            "candle",
+            "chastity",
+            "combines",
+            "considereth",
+            "coverings"
+          ]
+        },
+        {
+          "file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_c.txt",
+          "body_len": 8090,
+          "article_words": 556,
+          "words_in_ocr": 556,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_d.txt",
+          "body_len": 445,
+          "article_words": 52,
+          "words_in_ocr": 51,
+          "pct_in_ocr": 0.9808,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "emp"
+          ]
+        },
+        {
+          "file": "October_Vol3_11_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 19831,
+          "article_words": 983,
+          "words_in_ocr": 983,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol3_Misc.txt",
+          "body_len": 4086,
+          "article_words": 301,
+          "words_in_ocr": 299,
+          "pct_in_ocr": 0.9934,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    },
+    "November": {
+      "total": 20,
+      "articles": 17,
+      "special": 3,
+      "ok": 18,
+      "flagged": 2,
+      "empty": 0,
+      "ocr_file": "Vol3_No11_November_1916.txt",
+      "ocr_chars": 140314,
+      "contents_xref": {
+        "entries_in_contents": 16,
+        "matched": 14,
+        "match_details": [
+          {
+            "title": "For Right Annie D. Palmer",
+            "page": 601,
+            "file": "November_Vol3_01_Article_For_Right_Annie_D._Palmer.txt",
+            "score": 1.0
+          },
+          {
+            "title": "War as it Was Frontispiece",
+            "page": null,
+            "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Call to Arms Edna Coray",
+            "page": 603,
+            "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+            "score": 1.0
+          },
+          {
+            "title": "How Betty Helped Elsie Chamberlain Carroll",
+            "page": 606,
+            "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Child's Record Maud Baggarley",
+            "page": 610,
+            "file": "November_Vol3_04_Article_A_Child's_Record_Maud_Baggarley.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Their Thanksgiving Ida S. Peay",
+            "page": 612,
+            "file": "November_Vol3_05_Article_Their_Thanksgiving_Ida_S._Peay.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Fear in a Little Child Lily Wright Snow",
+            "page": 619,
+            "file": "November_Vol3_06_Article_Fear_in_a_Little_Child_Lily_Wright_Snow.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Cliff Dwellers Susa Young Gates",
+            "page": 623,
+            "file": "November_Vol3_08_Article_The_Cliff_Dwellers_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Science Department Janette A. Hyde",
+            "page": 633,
+            "file": "November_Vol3_16_Home_Science_Home_Science_Department_Janette_A_Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 635,
+            "file": "November_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 639,
+            "file": "November_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mothers in Israel",
+            "page": 642,
+            "file": "November_Vol3_12_Mothers_in_Israel_Mothers_in_Israel.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: The Church Militant",
+            "page": 648,
+            "file": "November_Vol3_09a_Editorial_Editorial_The_Church_Militant.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 650,
+            "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_a_a.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [
+          {
+            "title": "Paradise Lost",
+            "page": 622
+          },
+          {
+            "title": "Music Page",
+            "page": 647
+          }
+        ],
+        "extra_files": [
+          "November_Vol3_09b_Guide_Lessons_Guide_Lessons_b.txt",
+          "November_Vol3_09b_Guide_Lessons_Guide_Lessons_c.txt",
+          "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+          "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "November_Vol3_00_BOARD.txt",
+          "body_len": 715,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_00_CONTENTS.txt",
+          "body_len": 556,
+          "article_words": 64,
+          "words_in_ocr": 64,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_01_Article_For_Right_Annie_D._Palmer.txt",
+          "body_len": 1399,
+          "article_words": 122,
+          "words_in_ocr": 122,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+          "body_len": 7110,
+          "article_words": 548,
+          "words_in_ocr": 548,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+          "body_len": 10251,
+          "article_words": 657,
+          "words_in_ocr": 657,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_04_Article_A_Child's_Record_Maud_Baggarley.txt",
+          "body_len": 5012,
+          "article_words": 398,
+          "words_in_ocr": 398,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_05_Article_Their_Thanksgiving_Ida_S._Peay.txt",
+          "body_len": 16563,
+          "article_words": 947,
+          "words_in_ocr": 947,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_06_Article_Fear_in_a_Little_Child_Lily_Wright_Snow.txt",
+          "body_len": 7094,
+          "article_words": 452,
+          "words_in_ocr": 452,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_08_Article_The_Cliff_Dwellers_Susa_Young_Gates.txt",
+          "body_len": 28595,
+          "article_words": 1440,
+          "words_in_ocr": 1440,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_09a_Editorial_Editorial_The_Church_Militant.txt",
+          "body_len": 3892,
+          "article_words": 299,
+          "words_in_ocr": 299,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "body_len": 5906,
+          "article_words": 414,
+          "words_in_ocr": 414,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_b.txt",
+          "body_len": 4292,
+          "article_words": 313,
+          "words_in_ocr": 200,
+          "pct_in_ocr": 0.639,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "LOW_OCR_MATCH(64%)"
+          ],
+          "is_special": false,
+          "remediation": "api_fix",
+          "sample_not_in_ocr": [
+            "applicable",
+            "appreciation",
+            "arise",
+            "beauty",
+            "bringeth",
+            "buyeth",
+            "capability",
+            "capable",
+            "citizen",
+            "clothed"
+          ]
+        },
+        {
+          "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_c.txt",
+          "body_len": 10660,
+          "article_words": 818,
+          "words_in_ocr": 818,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 2385,
+          "article_words": 183,
+          "words_in_ocr": 183,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 17272,
+          "article_words": 1060,
+          "words_in_ocr": 1060,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_12_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "body_len": 5120,
+          "article_words": 402,
+          "words_in_ocr": 402,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+          "body_len": 351,
+          "article_words": 37,
+          "words_in_ocr": 37,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 9361,
+          "article_words": 626,
+          "words_in_ocr": 626,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol3_16_Home_Science_Home_Science_Department_Janette_A_Hyde.txt",
+          "body_len": 1714,
+          "article_words": 136,
+          "words_in_ocr": 95,
+          "pct_in_ocr": 0.6985,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "LOW_OCR_MATCH(70%)"
+          ],
+          "is_special": false,
+          "remediation": "api_fix",
+          "sample_not_in_ocr": [
+            "attractively",
+            "autumn",
+            "basted",
+            "centerpiece",
+            "chrysanthemums",
+            "cocktail",
+            "coffee",
+            "combination",
+            "cranberry",
+            "creamed"
+          ]
+        },
+        {
+          "file": "November_Vol3_Misc.txt",
+          "body_len": 4205,
+          "article_words": 321,
+          "words_in_ocr": 319,
+          "pct_in_ocr": 0.9938,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    },
+    "December": {
+      "total": 20,
+      "articles": 17,
+      "special": 3,
+      "ok": 20,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol3_No12_December_1916.txt",
+      "ocr_chars": 168188,
+      "contents_xref": {
+        "entries_in_contents": 14,
+        "matched": 11,
+        "match_details": [
+          {
+            "title": "Similitude Lulu Greene Richards",
+            "page": 661,
+            "file": "December_Vol3_01_Article_Similitude_Lulu_Greene_Richards.txt",
+            "score": 1.0
+          },
+          {
+            "title": "General Conference of Relief Society Amy Brown Lyman",
+            "page": 663,
+            "file": "December_Vol3_02_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Reception at the McCune Home Susa Young Gates",
+            "page": 676,
+            "file": "December_Vol3_03_Article_Reception_at_the_McCune_Home_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Nearest and Dearest Ruth Moench Bell",
+            "page": 689,
+            "file": "December_Vol3_04_Article_Nearest_and_Dearest_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "How Betty Helped Elsie Chamberlain Carroll",
+            "page": 695,
+            "file": "December_Vol3_05_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Proper Guidance of Children Lucy W. Snow",
+            "page": 702,
+            "file": "December_Vol3_06_Article_Proper_Guidance_of_Children_Lucy_W._Snow.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Current Topics James H. Anderson",
+            "page": 705,
+            "file": "December_Vol3_07_Current_Topics_Current_Topics_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Suggestive List of Books for the Family Library",
+            "page": 709,
+            "file": "December_Vol3_11_Article_Suggestive_List_of_Books_for_the_Family_Library.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Peace on Earth",
+            "page": 710,
+            "file": "December_Vol3_12_Editorial_Editorial_Peace_on_Earth.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Preview of Guide Work for 1916-17",
+            "page": 712,
+            "file": "December_Vol3_10a_Genealogy_Genealogical_Report_and_Preview_of_Guide_Work.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 717,
+            "file": "December_Vol3_10b_Guide_Lessons_Literature_for_the_Home_-_Course_Overview.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [
+          {
+            "title": "Christmas Menus Gertrude McCheyne",
+            "page": 708
+          },
+          {
+            "title": "Christmas Menus",
+            "page": 706
+          },
+          {
+            "title": "Genealogical Lesson Boos",
+            "page": 709
+          }
+        ],
+        "extra_files": [
+          "December_Vol3_10c_Guide_Lessons_Home_Economics_Course_Outline.txt",
+          "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_a_a.txt",
+          "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_c.txt",
+          "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_d.txt",
+          "December_Vol3_13_Article_Preview_of_Guide_Work_for_1916-17.txt",
+          "December_Vol3_14_Guide_Lessons_Guide_Lessons.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "December_Vol3_00_BOARD.txt",
+          "body_len": 807,
+          "article_words": 71,
+          "words_in_ocr": 71,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_00_CONTENTS.txt",
+          "body_len": 576,
+          "article_words": 61,
+          "words_in_ocr": 61,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_01_Article_Similitude_Lulu_Greene_Richards.txt",
+          "body_len": 1778,
+          "article_words": 185,
+          "words_in_ocr": 185,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_02_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+          "body_len": 32256,
+          "article_words": 1290,
+          "words_in_ocr": 1290,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_03_Article_Reception_at_the_McCune_Home_Susa_Young_Gates.txt",
+          "body_len": 16827,
+          "article_words": 953,
+          "words_in_ocr": 953,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_04_Article_Nearest_and_Dearest_Ruth_Moench_Bell.txt",
+          "body_len": 14532,
+          "article_words": 818,
+          "words_in_ocr": 818,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_05_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+          "body_len": 17632,
+          "article_words": 1006,
+          "words_in_ocr": 1006,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_06_Article_Proper_Guidance_of_Children_Lucy_W._Snow.txt",
+          "body_len": 6928,
+          "article_words": 444,
+          "words_in_ocr": 444,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_07_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "body_len": 9079,
+          "article_words": 667,
+          "words_in_ocr": 667,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10a_Genealogy_Genealogical_Report_and_Preview_of_Guide_Work.txt",
+          "body_len": 2970,
+          "article_words": 208,
+          "words_in_ocr": 208,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10b_Guide_Lessons_Literature_for_the_Home_-_Course_Overview.txt",
+          "body_len": 3665,
+          "article_words": 242,
+          "words_in_ocr": 242,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10c_Guide_Lessons_Home_Economics_Course_Outline.txt",
+          "body_len": 561,
+          "article_words": 43,
+          "words_in_ocr": 43,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_a_a.txt",
+          "body_len": 6978,
+          "article_words": 446,
+          "words_in_ocr": 446,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_c.txt",
+          "body_len": 11670,
+          "article_words": 716,
+          "words_in_ocr": 716,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_d.txt",
+          "body_len": 5666,
+          "article_words": 438,
+          "words_in_ocr": 438,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_11_Article_Suggestive_List_of_Books_for_the_Family_Library.txt",
+          "body_len": 753,
+          "article_words": 65,
+          "words_in_ocr": 65,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_12_Editorial_Editorial_Peace_on_Earth.txt",
+          "body_len": 6761,
+          "article_words": 516,
+          "words_in_ocr": 516,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_13_Article_Preview_of_Guide_Work_for_1916-17.txt",
+          "body_len": 9131,
+          "article_words": 540,
+          "words_in_ocr": 540,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_14_Guide_Lessons_Guide_Lessons.txt",
+          "body_len": 15288,
+          "article_words": 972,
+          "words_in_ocr": 972,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol3_Misc.txt",
+          "body_len": 4346,
+          "article_words": 314,
+          "words_in_ocr": 312,
+          "pct_in_ocr": 0.9936,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ads",
+            "directory"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "volume": 11,
+  "month": "June",
+  "year": 1924,
+  "total_merged": 3,
+  "total_splits": 13,
+  "total_cost": 0.4388,
+  "files": [
+    {
+      "source_file": "June_Vol11_08_Article_How_to_Analyze_and_Prepare_Lessons.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "How to Analyze and Prepare Lessons - Theology",
+          "category": "Lesson",
+          "author": "Mrs. Julia A. Child",
+          "start_boundary": "HOW TO ANALYZE AND PREPARE LESSONS THEOLOGY",
+          "end_boundary": "would sacrifice all else for it.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "How to Analyze and Prepare Lessons - Literature",
+          "category": "Lesson",
+          "author": "Mrs. Annie Wells Cannon",
+          "start_boundary": "LITERATURE Mrs. Annie Wells Cannon, Member",
+          "end_boundary": "With a silence deep and white.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "How to Analyze and Prepare Lessons - Social Service",
+          "category": "Lesson",
+          "author": "Mrs. Amy W. Evans",
+          "start_boundary": "SoctaL SERVICE Mrs. Amy W. Evans,",
+          "end_boundary": "studying their social problems.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Visiting Teachers' Topic",
+          "category": "Article",
+          "author": "Miss Sarah M. McLelland",
+          "start_boundary": "VISITING TEACHERS' TOPIC Miss Sarah M.",
+          "end_boundary": "when we have done our duty.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Relief Society Nurse Aids' Class",
+          "category": "Article",
+          "author": "Mrs. Emma A. Empey",
+          "start_boundary": "RELIEF SOCIETY NURSE AIDS' CLASS Mrs.",
+          "end_boundary": "for regular training.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "General Meetings - Reports from Missions",
+          "category": "Article",
+          "author": "Various Mission Presidents",
+          "start_boundary": "GENERAL MEETINGS Morning Session President Williams",
+          "end_boundary": "MRS. GRACE E.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE MINUTES"
+      ],
+      "notes": "This file contains multiple lesson preparation guides and conference reports that were merged together. The sections are clearly delineated by subject headings and author attributions. The final section appears to be the beginning of mission reports but is incomplete in this file.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 22899,
+      "tier": 1,
+      "pdf_pages": [
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351
+      ],
+      "api_usage": {
+        "input_tokens": 49772,
+        "output_tokens": 757,
+        "cost": 0.1607
+      }
+    },
+    {
+      "source_file": "June_Vol11_16_Article_Northern_States_Rachel_Grant_Taylor.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Northern States Rachel Grant Taylor",
+          "category": "Article",
+          "author": "Rachel Grant Taylor",
+          "start_boundary": "Rachel Grant Taylor, president of the Relief Societies",
+          "end_boundary": "than in making clothing for themselves.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Leadership in the Stake",
+          "category": "Article",
+          "author": "Jennie B. Knight",
+          "start_boundary": "LEADERSHIP IN THE STAKE Counselor Jennie B.",
+          "end_boundary": "activities of the organization. Afternoon Session",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Annual Report Presented",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "ANNUAL REPORT PRESENTED The annual report was",
+          "end_boundary": "in the order in which they follow.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Stake Class Supervisor",
+          "category": "Article",
+          "author": "Jeannette A. Hyde",
+          "start_boundary": "THE STAKE CLASS SUPERVISOR Mrs. Jeannette A.",
+          "end_boundary": "is being carried out. THE WARD CLASS LEADER",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "The Ward Class Leader",
+          "category": "Article",
+          "author": "Louise Y. Robison",
+          "start_boundary": "THE WARD CLASS LEADER Counselor Louise Y.",
+          "end_boundary": "officers and members of the Relief Society..",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Object and Preview of Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "OBJECT AND PREVIEW OF LESSONS",
+          "end_boundary": "OBJECT AND PREVIEW OF LESSONS",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE MINUTES"
+      ],
+      "notes": "This file contains multiple sections from the Relief Society Conference Minutes, including mission reports, leadership discussions, and educational topics. The last section 'Object and Preview of Lessons' appears to be just a header with no content following it in this file.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11556,
+      "tier": 1,
+      "pdf_pages": [
+        335,
+        336,
+        337,
+        338
+      ],
+      "api_usage": {
+        "input_tokens": 40798,
+        "output_tokens": 739,
+        "cost": 0.1335
+      }
+    },
+    {
+      "source_file": "June_Vol11_20_Article_Prest_Heber_J_Grant.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "President Heber J. Grant",
+          "category": "Article",
+          "author": "Heber J. Grant",
+          "start_boundary": "PRESIDENT HEBER J. GRANT I do not believe",
+          "end_boundary": "between the Presiding Bishopric and the Relief Society",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY CONFERENCE MINUTES",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single address by President Heber J. Grant from the Relief Society Conference. The text appears to be incomplete, starting and ending mid-sentence, suggesting it's a fragment of a larger conference proceedings document.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13822,
+      "tier": 1,
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372
+      ],
+      "api_usage": {
+        "input_tokens": 46255,
+        "output_tokens": 388,
+        "cost": 0.1446
+      }
+    }
+  ]
+}

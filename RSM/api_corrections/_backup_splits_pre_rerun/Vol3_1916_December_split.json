@@ -1,0 +1,65 @@
+{
+  "volume": 3,
+  "month": "December",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1545,
+  "files": [
+    {
+      "source_file": "December_Vol3_10d_Guide_Lessons_Guide_Lessons_-_Multiple_Subjects_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - The Garden of Eden",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I. Theology and Testimony. First Week in January.",
+          "end_boundary": "10. What did they know, as compared with us today, do you think?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in January.",
+          "end_boundary": "LESSON II. Work and Business. Second Week in January.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Genealogy - Scandinavian Surnames Found in England",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week in January. GENEALOGY.",
+          "end_boundary": "7. What can you say of the Book of Life?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literature for the Home - Literature as Creative Art",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LITERATURE FOR THE HOME. LESSON I. LITERATURE AS CREATIVE ART.",
+          "end_boundary": "The fairy godmother in Cinderella is true to fairy life, as we imagine it to be.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple lesson sections merged together. Lesson II (Work and Business) appears to be just a header with no content. The genealogy and literature sections are substantial lessons with full content and questions.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24372,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 48747,
+        "output_tokens": 552,
+        "cost": 0.1545
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "volume": 19,
+  "month": "April",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 8,
+  "total_cost": 0.1255,
+  "files": [
+    {
+      "source_file": "April_Vol19_02_Editorial_Editorial_The_Drawing_Power_of_Christ.txt",
+      "num_articles_found": 8,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Nature's Awakening",
+          "category": "Article",
+          "author": "Julina B. Green",
+          "start_boundary": "Nature's Awakening By Julina B. Green There's a",
+          "end_boundary": "O, sweet balmy springtime already is here, Pictorial",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Door Mat",
+          "category": "Article",
+          "author": "Ivy Williams Stone",
+          "start_boundary": "The Door Mat By Ivy Williams Stone It",
+          "end_boundary": "It's not so bad, being a door mat,",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Russian Religious Question",
+          "category": "Article",
+          "author": "Thomas L. Martin",
+          "start_boundary": "The Russian Religious Question By Thomas L. Martin",
+          "end_boundary": "the Russian people previous to and during",
+          "confidence": "medium"
+        },
+        {
+          "order": "d",
+          "title": "Historic Markers",
+          "category": "Article",
+          "author": "Dr. George W. Middleton",
+          "start_boundary": "Historic Markers By Dr. George W. Middleton",
+          "end_boundary": "markers should be placed in every community.",
+          "confidence": "medium"
+        },
+        {
+          "order": "e",
+          "title": "Fidelity",
+          "category": "Article",
+          "author": "Edith E. Anderson",
+          "start_boundary": "Fidelity By Edith E. Anderson The word",
+          "end_boundary": "fidelity to God and to our fellowmen.",
+          "confidence": "medium"
+        },
+        {
+          "order": "f",
+          "title": "The Light Within",
+          "category": "Article",
+          "author": "Blanche Kendall McKey",
+          "start_boundary": "The Light Within By Blanche Kendall McKey",
+          "end_boundary": "the light within will guide us safely home.",
+          "confidence": "medium"
+        },
+        {
+          "order": "g",
+          "title": "Editorial The Drawing Power of Christ",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Editorial The Drawing Power of Christ Paul",
+          "end_boundary": "Counselor Lyman Honored 239 Lesson Department 240",
+          "confidence": "high",
+          "start_match_words": 6
+        },
+        {
+          "order": "h",
+          "title": "Spring A Fantasy",
+          "category": "Article",
+          "author": "Ezra J. Poulsen",
+          "start_boundary": "Spring A Fantasy By Ezra J. Poulsen",
+          "end_boundary": "resurrection and the life. For Spring Decorating",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE DOOR MAT"
+      ],
+      "notes": "This file contains multiple complete articles merged together, including poems, articles, and editorial content. Some article boundaries are unclear due to OCR issues and merged content, particularly in the middle sections.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 178074,
+      "tier": 3,
+      "pdf_pages": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86
+      ],
+      "api_usage": {
+        "input_tokens": 37236,
+        "output_tokens": 921,
+        "cost": 0.1255
+      }
+    }
+  ]
+}

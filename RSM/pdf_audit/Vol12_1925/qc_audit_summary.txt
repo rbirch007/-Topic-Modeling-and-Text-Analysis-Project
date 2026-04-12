@@ -1,0 +1,76 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 12 (1925)
+===========================================================================
+
+  Total files:      238 (200 articles, 38 special)
+  OK:               218
+  Flagged:          20
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 1
+    manual_review: 4
+    re_extract: 15
+
+
+  February:
+    February_Vol12_03_Article_The_Editor_Abroad_Alice_Louise_Reynolds.txt | MERGED(CAPS_HEADERS(6)) | 11898 chars | re_extract
+    February_Vol12_13b_Guide_Lessons_Guide_Lessons_for_April.txt | MERGED(MULTI_LESSON(4)) | 30369 chars | re_extract
+    [CONTENTS MISSING] "American Fork Canyon in February Frontispiece" (pNone)
+    [CONTENTS MISSING] "Love's Romance Alfred Lambourne" (p53)
+
+  March:
+    March_Vol12_02_Article_Portrait.txt | SHORT(18) | 18 chars | manual_review
+    March_Vol12_11_Article_A_Tribute_to_Our_Old_Sisterhood_Bertha_A._Kleinman.txt | MERGED(CAPS_HEADERS(5)) | 9568 chars | re_extract
+    [CONTENTS MISSING] "Portrait by Romney" (p110)
+    [CONTENTS MISSING] "The Justice Bell" (p123)
+
+
+
+  June:
+    June_Vol12_13a_Article_Family_Ties.txt | MERGED(CAPS_HEADERS(3)) | 51160 chars | re_extract
+    [CONTENTS MISSING] "Our Beloved Leader" (p281)
+    [CONTENTS MISSING] "The Assembly Hall, Salt Lake City" (p282)
+    [CONTENTS MISSING] "Teachers' Topic for August" (p325)
+
+  July:
+    July_Vol12_11_Article_Editor_Abroad_Alice_L._Reynolds.txt | MERGED(CAPS_HEADERS(4)) | 14825 chars | re_extract
+    July_Vol12_13_Article_Of_Interest_to_Women_Lalene_H._Hart.txt | MERGED(CAPS_HEADERS(7)) | 10213 chars | re_extract
+    July_Vol12_17_Article_Literature.txt | LOW_OCR_MATCH(66%) | 2452 chars | api_fix
+    [CONTENTS MISSING] "The Longest Alfred Osmond" (p337)
+    [CONTENTS MISSING] "Sabbath E. Curtis" (p371)
+    [CONTENTS MISSING] "Poetry" (p374)
+
+  August:
+    August_Vol12_09_Article_Out_of_Work_Martha_Hartford_Webb.txt | MERGED(CAPS_HEADERS(4)) | 9376 chars | re_extract
+    [CONTENTS MISSING] "The White House at Washington D. C. Frontispiece" (pNone)
+    [CONTENTS MISSING] "To a Woodpath Estelle Webb Thomas" (p395)
+
+  September:
+    September_Vol12_01_Frontispiece_Lake_Phoebe_(Big_Cottonwood_Canyon)_Alfred_Lambourne_Frontis.txt | SHORT(51) | 51 chars | manual_review
+    September_Vol12_08a_Editorial_William_Jennings_Bryan.txt | MERGED(CAPS_HEADERS(5)) | 14349 chars | re_extract
+    September_Vol12_08d_Guide_Lessons_Guide_Lessons_for_November.txt | MERGED(CAPS_HEADERS(4)) | 13440 chars | re_extract
+    [CONTENTS MISSING] "The Farmer's Wife Writes a Poem Annie Pike Greenwood" (p451)
+    [CONTENTS MISSING] "Be Patient Little Flock Theodore E. Curtis" (p458)
+    [CONTENTS MISSING] "A Tribute to John J. McClellan Dr. George W. Middleton" (p459)
+    [CONTENTS MISSING] "Obscurity Bertha A. Kleinman" (p461)
+    [CONTENTS MISSING] "The National Conference of Social Work" (p463)
+
+  October:
+    October_Vol12_03_Article_The_Editor_Abroad_Alice_L_Reynolds.txt | MERGED(CAPS_HEADERS(7)) | 18330 chars | re_extract
+    October_Vol12_08b_Lesson_Social_Service_-_The_Spirit_of_Social_Work.txt | MERGED(MULTI_LESSON(2)) | 8713 chars | re_extract
+    October_Vol12_11_Article_Phyllis_Morton's_Birthday_Gift_Myrtle_M._Dean.txt | MERGED(CAPS_HEADERS(3)) | 9465 chars | re_extract
+    October_Vol12_12_Article_Diet_for_the_Woman_of_Forty_Plus_Jean_Cox.txt | MERGED(CAPS_HEADERS(3)) | 17882 chars | re_extract
+    [CONTENTS MISSING] "American Literature Coming to its Own" (p525)
+    [CONTENTS MISSING] "Our Heritage Josephine Spencer" (p544)
+    [CONTENTS MISSING] "Frontispiece" (pNone)
+
+  November:
+    November_Vol12_01_Frontispiece_Rheims_Cathedral_Frontispiece.txt | SHORT(81) | 81 chars | manual_review
+
+  December:
+    December_Vol12_01_Frontispiece_The_Christ,.txt | SHORT(26) | 26 chars | manual_review
+    December_Vol12_03a_Article_The_Editor_Abroad.txt | MERGED(CAPS_HEADERS(4)) | 11587 chars | re_extract
+    December_Vol12_14b_Guide_Lessons_Guide_Lessons_for_February.txt | MERGED(CAPS_HEADERS(3); MULTI_LESSON(4)) | 22094 chars | re_extract
+
+===========================================================================

@@ -1,0 +1,113 @@
+{
+  "volume": 54,
+  "month": "November",
+  "year": 1967,
+  "total_files_checked": 54,
+  "files_correct": [
+    "V54_11_15_Poem_Heritage_Anderson.txt",
+    "V54_11_20_Poem_A_Dream_Leitner.txt",
+    "V54_11_23_Poem_Sisters.txt",
+    "V54_11_32_Home_Grandmother_Fjelds.txt",
+    "V54_11_48_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_11_02_Poem_The_Robinson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of the poem 'Autumn Leaves'",
+      "action": "replace_content",
+      "text": "Autumn Leaves Linnie Fisher Robinson So many times in years gone by, When autumn leaves were sailing high, We children ran across the grass Nor dreamed how fast the seasons pass But thought our days would all repeat. Today, as leaves in winds blow wild, I wish I were a little child, To go to bed without a care Save that I said my evening prayer, And kissed my parents life was sweet. Oh, leaves, that in the winds must play, My autumn, too, has come this day; So have my spring and summer flown And all my ties more loosely grown The cycle moves and it is fleet. The cycle moves and it is sweet Soon, soon I go on leaf, blown feet.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_05_Poem_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains publication information instead of 'From Near and Far' content",
+      "action": "replace_content",
+      "text": "From Near and Far I have enjoyed very much receiving The Relief Society Magazine in Spanish. Now I am sure of having a Magazine that educates so much and is guided by our Lord. I have been a member of the Church about twenty years, and these years have brought me knowledge and experience every counsel and teaching comes from heaven through our living prophet. Ninfa B. Torres Houston, Texas I enjoy the poems, stories, and everything else in the Magazine. I am especially interested in the sketch of the life of Emma Ray Riggs McKay (June and July 1967, by Emma Rae McKay Ashton). As a widow, I wish my thirty-one years of marriage and fifty years of friendship had gone on and on. Mrs. Sophia Jane Pearson Cleobury Mortimer Shropshire, England The story \"Trapped\" in the July issue of the Magazine, by Gail A. Jorgensen, caught my sole attention, while reading in the subway, and I was so spellbound that I almost missed my station. The story was intense and hair-raising. Anyone who can write a story that keeps people fascinated surely deserves recognition. Mary Wittorf Astoria, New York The Magazine is such a source of inspiration to all who receive it. Our branch is composed mostly of military personnel, and we strive to place the Magazine in each home. My husband, a recent convert, is quite impressed with the great variety of articles in the Magazine. Whoever greets the postman first gets first opportunity to read the Magazine. Margaret Perry Junction City, Kansas",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_07_SpFt_Those_Spafford.txt",
+      "issue_type": "missing_text",
+      "description": "File is truncated and missing the full article content",
+      "action": "replace_content",
+      "text": "Those Who Endureth to the End. What may well be called an adage is this statement of truth: \"The race is not to the swift, nor the battle to the strong, but to him that endureth to the end.\" To endure is to maintain the capability of holding out, of lasting, of continuing in the same state without weakening or perishing. It is the power to continue under pain, hardship, discouragement, suffering, without being overcome. History is replete with goals that have been realized and battles that have been won, not by those who made a brilliant beginning or an impressive first stand, but by those who had the power to remain firm, patiently to overcome obstacles, to be constant in their efforts. The scriptures offer a priceless blessing to those who accept the scriptures make reference to this, General Session of the Relief: i keep my commandments and endure to the end you shall have eternal life, which gift is the 804. President Belle S. Spafford [Address Delivered at the Society Annual General Conference, September 27, 1967] gospel of Christ and who endure to the end. Not only once do the but a number of times.",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_12_Poem_To_Give_Walker.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Golden Bowl' story after the poem",
+      "action": "trim_end",
+      "text": "for to live with love is the Master's way of life. 822",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_11_14_Fict_Theres_Trutton.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'The Golden Bowl' content instead of 'There's More to Christmas'",
+      "action": "replace_content",
+      "text": "There's More to Christmas «Sarah surveyed the stack of gaily wrapped Christmas gifts lying on the davenport beside her. Why, she thought, do we mortals go to so much expense when it puts such a strain on the budget? Wouldn't it be better to exchange simple gifts, and then dwell more on the true meaning of Christmas? She sighed. The family wouldn't agree with her — probably, not even the adults, let alone the children. She was simply exhausted from the days and days spent in shopping for just the right gift for Aunt Sue, and her sister Jane, who had everything already. Her two children Davey and Debbie gave her particular instructions as to the type of gift she should buy them, without regard to cost. She could go on and on.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_22_Fict_Throw.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'A Miracle at Christmas' content instead of 'Throw Down the Gauntlet'",
+      "action": "replace_content",
+      "text": "Throw Down the Gauntlet Janet W. Breeze Chapter 3 SYNOPSIS: Nancy Jackson, a dance instructor and mother of two children, is just opening a dance studio in her remodeled home, when her husband, Grant, tells her that he wants to accept a teaching assignment on the island of Saipan. Reluctantly, Nancy accepts her husband's decision and makes plans for the journey. An official letter arrives, changing the assignment to the island of Truk. ¢ Riding in the Trust Territory's DC-4 through cotton-puff clouds reminded Nancy of riding on a horse. If you went up and down when it did, you had it made. And if you didn't? Well—it couldn't last forever.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_24_GenFt_Simple_Thulin.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains holiday recipes instead of 'Simple Addition to a School Wardrobe'",
+      "action": "replace_content",
+      "text": "Simple Addition to a School Wardrobe Shirley Thulin Make a school dress that is inexpensive and lots of fun. A beginning seamstress can even make it herself and feel the satisfaction of accomplishment, for this sewing project is simple, yet looks professional. You begin with a purchased \"poor-boy\" top—the kind many girls are wearing these days. They come in many pretty colors and launder very well. They make a good beginning for a new dress. Choose a plain color and then buy a piece of fabric in a print or plaid to match or contrast with the shirt. The amount of fabric to buy will vary according to the type of skirt you want to make. If you want to have pleats all around, you will need two yards of material. A straight skirt will require less. If the shirt fits snugly, you will need a long zipper, if it is loose and slips over the head, you will not have to use a zipper. This dress will be long-waisted, because the shirt fits down over the hips.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_11_25_Home_Refreshments_McGhi.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains sewing diagram instead of holiday refreshment recipes",
+      "action": "replace_content",
+      "text": "REFRESHMENTS FOR THE HOLIDAY SEASON Zola McGhie Hot Cider 2 quarts cider 2 tsp. Whole cloves juice of 3 lemons 2 sticks cinnamon Simmer for 15 minutes, remove spices, and add: 4 cups unchilled gingerale 4 cups orange carbonated soda Serve hot and garnish with orange or lemon slices. Hot Spiced Cider (Old English) 1 gallon sweet cider 1 tbsp. Whole cloves 1144 pounds brown sugar 1 tbsp. Whole allspice 6 two-inch pieces cinnamon 14 tsp. Salt Mix in order given, and bring to the boiling point. Boil fifteen minutes and strain. Serve hot.. Punch for Twenty-Five Boil for 10 minutes: 1144 c. Water and 214 c. Sugar 2 c. Fruit syrup or fruit juice (preferReserve 14 c. Ably raspberry or Loganberry) 2 c. Orange juice 1 c. Maraschino cherries, with juice To the remainder add: 1 c. Lemon juice 2 c. White grape juice, pineapple juice, or crushed pineapple Stir. Let stand for 30 minutes or more. Drain and add ice water to make 2 gallons of liquid just before serving. Add reserved syrup if needed. Christmas Punch 1 quart pineapple juice 1 quart vanilla ice cream (well chilled) 1 quart lemon sherbet 1 quart gingerale grated nutmeg Place ice cream and sherbet in Jarge punch bowl. Add juice. When ice cream and sherbet begin to soften, beat until frothy. Pour in gingerale. Top with nutmeg. Makes four quarts. Christmas Wassail 84 c. Sugar 1 gallon cider 4 c. Water 5 or 6 tbsp. Candied ginger, chopped 2 tbsp. (about 25) whole cloves 4 quarts canned orange juice 25 cinnamon sticks 2 c. Lemon juice Combine sugar and water. Boil 10 minutes. Add spices and let mixture stand in warm place for 1 hour. Strain. Add orange juice, lemon juice, and cider. Bring to boil and serve. Yields 4 gallons. Serves 54 to 60.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Woman's Sphere by Ramona W. Cannon",
+      "expected_page": 829,
+      "status": "merged_with_another",
+      "merged_into": "V54_11_15_Poem_Heritage_Anderson.txt"
+    },
+    {
+      "title": "The Sisters Gathered by Gillian G. Brown-Lee",
+      "expected_page": 809,
+      "status": "not_in_any_file"
+    }
+  ],
+  "notes": "Many files contain content from different articles than their filenames suggest. There appears to be significant confusion in the extraction process with articles being mixed up or merged together. Several poetry files contain prose content and vice versa. The OCR quality is generally good where present, but content assignment to files is problematic.",
+  "validated_corrections": [
+    {
+      "file": "V54_11_12_Poem_To_Give_Walker.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Golden Bowl' story after the poem",
+      "action": "trim_end",
+      "text": "for to live with love is the Master's way of life. 822",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

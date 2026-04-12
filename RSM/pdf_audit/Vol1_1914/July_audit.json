@@ -1,0 +1,184 @@
+{
+  "volume": 1,
+  "month": "July",
+  "year": 1914,
+  "total": 9,
+  "ok": 9,
+  "flagged": 0,
+  "empty": 0,
+  "records": [
+    {
+      "file": "V1_1914_Jul_00_BOARD.txt",
+      "body_len": 3734,
+      "article_words": 258,
+      "words_in_ocr": 258,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_00_CONTENTS.txt",
+      "body_len": 147,
+      "article_words": 14,
+      "words_in_ocr": 14,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_00_Misc.txt",
+      "body_len": 14395,
+      "article_words": 822,
+      "words_in_ocr": 816,
+      "pct_in_ocr": 0.9927,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "additional",
+        "advertisements",
+        "consolidated",
+        "files",
+        "poem",
+        "separate"
+      ]
+    },
+    {
+      "file": "V1_1914_Jul_01_Art_Loyalty.txt",
+      "body_len": 3749,
+      "article_words": 290,
+      "words_in_ocr": 290,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_02_Edit_Editorial_Success.txt",
+      "body_len": 5372,
+      "article_words": 323,
+      "words_in_ocr": 323,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+      "body_len": 5672,
+      "article_words": 412,
+      "words_in_ocr": 410,
+      "pct_in_ocr": 0.9951,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "category",
+        "sequence"
+      ]
+    },
+    {
+      "file": "V1_1914_Jul_04_Art_Lesson_III.txt",
+      "body_len": 5766,
+      "article_words": 405,
+      "words_in_ocr": 405,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_05_Art_Lesson_IV.txt",
+      "body_len": 1171,
+      "article_words": 100,
+      "words_in_ocr": 100,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Jul_06_Art_Notes_for_Officers.txt",
+      "body_len": 2284,
+      "article_words": 164,
+      "words_in_ocr": 164,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol1_No7_July_1914.txt",
+    "ocr_chars": 39227,
+    "ocr_unique_words": 1788,
+    "contents_xref": {
+      "entries_in_contents": 5,
+      "matched": 5,
+      "match_details": [
+        {
+          "title": "Loyalty",
+          "page": 1,
+          "file": "V1_1914_Jul_01_Art_Loyalty.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial Success",
+          "page": 3,
+          "file": "V1_1914_Jul_02_Edit_Editorial_Success.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Health and Hygiene  Lesson II 5 Lesson III",
+          "page": 8,
+          "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+          "score": 0.8
+        },
+        {
+          "title": "Lesson IV",
+          "page": 11,
+          "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes for Officers",
+          "page": 11,
+          "file": "V1_1914_Jul_06_Art_Notes_for_Officers.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "V1_1914_Jul_04_Art_Lesson_III.txt",
+        "V1_1914_Jul_05_Art_Lesson_IV.txt"
+      ]
+    }
+  }
+}

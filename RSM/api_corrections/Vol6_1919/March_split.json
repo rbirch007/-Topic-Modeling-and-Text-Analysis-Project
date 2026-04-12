@@ -1,0 +1,250 @@
+{
+  "volume": 6,
+  "month": "March",
+  "year": 1919,
+  "total_merged": 5,
+  "total_splits": 14,
+  "total_cost": 0.6313,
+  "files": [
+    {
+      "source_file": "March_Vol6_01_Story_of_the_Organization_of_the_Relief_Society.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Story of the Organization of the Relief Society",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Story of the Organization of the Relief Society",
+          "end_boundary": "All honor to his name!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Babe of Mine",
+          "category": "Poem",
+          "author": "Lucy Wright Snow",
+          "start_boundary": "Babe of Mine. Lucy Wright Snow.",
+          "end_boundary": "God's Kingdom is made up of such as you.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Our Indian Cousins",
+          "category": "Article",
+          "author": "Melvin J. Ballard",
+          "start_boundary": "Our Indian Cousins [The editor has had",
+          "end_boundary": "we are experiencing similar manifestations. We often have Indians come from Canada and North Dakota to be administered to.\" CORRECTION. In \"Our Indian Cousins,\" in the February Magazine, the name of Ira D. Hatch was wrongly given as Harry Hatch. His numerous friends wish this typographical error made right.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "STORY OF THE RELIEF SOCIETY",
+        "OUR INDIAN COUSINS"
+      ],
+      "notes": "This file contains the complete 'Story of the Organization of the Relief Society' article which is the main content, followed by a short poem 'Babe of Mine', and then the beginning of 'Our Indian Cousins' article. The file appears to cut off mid-article for 'Our Indian Cousins' as it ends abruptly with a correction note.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 38293,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 43752,
+        "output_tokens": 516,
+        "cost": 0.139
+      }
+    },
+    {
+      "source_file": "March_Vol6_02_Our_Indian_Cousins_Melvin_J._Ballard.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Our Indian Cousins",
+          "category": "Article",
+          "author": "Melvin J. Ballard",
+          "start_boundary": "Our Indian Cousins [The editor has had a",
+          "end_boundary": "His numerous friends wish this typographical error made right.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Bending the Twig",
+          "category": "Article",
+          "author": "Elsie C. Carroll",
+          "start_boundary": "Bending the Twig Elsie C. Carroll At the",
+          "end_boundary": "She would go and talk it over with Mandy.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Inner Light",
+          "category": "Poem",
+          "author": "Lucy May Green",
+          "start_boundary": "The Inner Light. Lucy May Green. Jesus said,",
+          "end_boundary": "until the \"Perfect Day.\" The Holy Spirit's light.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OUR INDIAN COUSINS",
+        "BENDING THE TWIG"
+      ],
+      "notes": "This file contains three distinct articles that were merged together. The first is a substantial article about missionary work among Native Americans, followed by a short story about child-rearing, and ending with a religious poem. Page numbers like '144', '145', '147', '149', '151', '152' appear as running headers and should be stripped.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10620,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37643,
+        "output_tokens": 468,
+        "cost": 0.1199
+      }
+    },
+    {
+      "source_file": "March_Vol6_03_Bending_the_Twig_Elsie_C._Carroll.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Bending the Twig",
+          "category": "Article",
+          "author": "Elsie C. Carroll",
+          "start_boundary": "Bending the Twig Elsie C. Carroll At the click",
+          "end_boundary": "She would go and talk it over with Mandy. The",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Inner Light",
+          "category": "Poem",
+          "author": "Lucy May Green",
+          "start_boundary": "The Inner Light. Lucy May Green. Jesus said, \"I am",
+          "end_boundary": "The Holy Spirit's light.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Two Faith-Promoting Incidents",
+          "category": "Article",
+          "author": "Annie G. Lauritzen",
+          "start_boundary": "Two Faith-Promoting Incidents. Annie G. Laiiritzen OBEYING THE PROMPTINGS",
+          "end_boundary": "\"Thy will be done.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "BENDING THE TWIG",
+        "TWO FAITH-PROMOTING INCIDENTS"
+      ],
+      "notes": "The file contains three distinct articles as expected from the contents listing. The first is a complete short story, followed by a poem, and then a faith-promoting article with two incidents and a poem. All boundaries are clearly defined with distinct content transitions.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11166,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38039,
+        "output_tokens": 458,
+        "cost": 0.121
+      }
+    },
+    {
+      "source_file": "March_Vol6_10_The_Official_Round_Table_Clarissa_Smith_Williams_and_Amy_Bro.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": "Clarissa Smith Williams and Amy Brown Lyman",
+          "start_boundary": "The Official Round Table Clarissa Smith Williams and Amy Brown Lyman",
+          "end_boundary": "women in this stake have done their share in Red Cross work.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE OFFICIAL ROUND TABLE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article - 'The Official Round Table' which is a regular feature containing general news, field notes, and stake reports. The content includes news about women in railroad work, prohibition, teacher training, and various Relief Society activities and reports from different stakes.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 15296,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38793,
+        "output_tokens": 265,
+        "cost": 0.1204
+      }
+    },
+    {
+      "source_file": "March_Vol6_14_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony. First Week in April. THE SOCIAL ORDER OF THE PRINCE OF PEACE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week in April.",
+          "end_boundary": "sing the hymn, \"Glorious Things are Sung of Zion.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business. SECOND WEEK IN APRIL",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON H. Work and Business. SECOND WEEK IN APRIL.",
+          "end_boundary": "LESSON H. Work and Business. SECOND WEEK IN APRIL.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy; Third Week in April. PEOPLE SURNAMED THEMELVES FROM PLACES",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON HL Genealogy; Third Week in April. PEOPLE SURNAMED",
+          "end_boundary": "Fee, for preliminary investigation, of $1 must accom'pany inquiry.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON 4. Home Courses. Fourth Week in April. THE INTELLIGENT OBSERVATION OF CHILDREN",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 4. Home Courses. Fourth Week in April. THE",
+          "end_boundary": "bearing on the subject of this lesson. Z. C.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 Guide Lessons for April 1919. Lesson II appears to be just a header with no content. The file ends with advertisements that should be excluded from the lesson content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 22369,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40619,
+        "output_tokens": 607,
+        "cost": 0.131
+      }
+    }
+  ]
+}

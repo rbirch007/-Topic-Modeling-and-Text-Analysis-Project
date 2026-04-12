@@ -1,0 +1,47 @@
+{
+  "volume": 53,
+  "month": "April",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_04_01_Poem_Alpine_Roberts.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V53_04_01_Poem_Alpine_Roberts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (618 chars)"
+    },
+    {
+      "file": "V53_04_04_SpFt_The_Doxey.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1285 chars removed)"
+    },
+    {
+      "file": "V53_04_11_GenFt_Womans_Cannon.txt",
+      "action": "note",
+      "result": "INFO: File contains Relief Society board member names instead of Woman's Sphere content"
+    },
+    {
+      "file": "V53_04_21_The Home_How_to_Maturale.txt",
+      "action": "note",
+      "result": "INFO: File contains content about hope chest instead of nylon tricot sewing instructions"
+    },
+    {
+      "file": "V53_04_34_Fict_Wheat_Stewart.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V53_04_38_Lssn_Work_Poulson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (994 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "volume": 53,
+  "month": "August",
+  "year": 1966,
+  "total_files_checked": 31,
+  "files_correct": [
+    "V53_08_02_GenFt_From_Near_and_Far.txt",
+    "V53_08_06_SpFt_Are_We_Jones.txt",
+    "V53_08_07_Fict_Run_Shields.txt",
+    "V53_08_08_Poem_Requiem_Holden.txt",
+    "V53_08_09_Poem_For_Graham.txt",
+    "V53_08_10_Fict_With_Blagrove.txt",
+    "V53_08_11_Poem_Her_Swenson.txt",
+    "V53_08_12_GenFt_Womans_Cannon.txt",
+    "V53_08_14_GenFt_Notes_Conference.txt",
+    "V53_08_15_Poem_Back_to_Coles.txt",
+    "V53_08_18_Fict_A_Place_Yost.txt",
+    "V53_08_19_Poem_Here_._Gabbott.txt",
+    "V53_08_22_Fict_Tell_Me_Lloyd.txt",
+    "V53_08_23_GenFt_Notes_Activities.txt",
+    "V53_08_24_GenFt_Spiritual_Doxey.txt",
+    "V53_08_25_Poem_Ethel.txt",
+    "V53_08_26_GenFt_Visiting_Smith.txt",
+    "V53_08_27_GenFt_Homemaking_Cannon.txt",
+    "V53_08_28_GenFt_Social_Christensen.txt",
+    "V53_08_30_Poem_At_Heron.txt",
+    "V53_08_31_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_08_01_Frnt_Alien_Roberts.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only the ending fragment of the poem, missing the beginning",
+      "action": "prepend",
+      "text": "As winds of spring walk over the hill again - —— ' Bringing \"a. Strange, snew summer, a ~ ~ f whom your tongue had taught eo. | » 'With iridescent syllables,\" ©. _~- Must dearn and \"Unlearn, \\4 ~ <2\" All things*dimmed and shucked.' + r And winnowed of your 'word—=, a. Of trees unleaved and tumbled; cloud,.- - And rain's pale ri of cNsiowec in every pool; ' - Of places unadorne. *. Vacuum sand, vacant * of your wart ~~ «AM wakoted wonder of the waterfall: « 'Sealed and Silent, ~~. Throat of thrush without the bright ' Cadenza of. Reply; dsmust speak in honest tones, Not' murmured in the starry meadows of the night, Not maiden-shy, but unabashed ' * Im Summer and the light. R Though «torn to cling around the margin of your name, The shimmering substance of a phrase recalled, The continent your faith had formed for me, Without*your. Eyes, to see, your tone, to guide; 1_mitist wale where words abide, not yours, \"And Y into the rustle of new fields Wa dwith unfamiliar furrows of response. Upil Of your power,.| must stand Until the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_03_SpFt_How_to_McConkie.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article (Summer Song poem) at the end",
+      "action": "trim_end",
+      "text": "Those freedoms which are guaranteed by the United States Constitution are in fact the inalienable rights of \"all mankind,\" (D&C 101: 77-80).",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V53_08_04_Poem_Summer_Sabin.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Hear them, the gentle wind-fingers,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_05_Poem_Brief_Bailey.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article at the end",
+      "action": "trim_end",
+      "text": "Created Eden from an apple seed.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_13_GenFt_Editorial_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Volume 53 August 1966",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_16_SpFt_Summer_Twiddy.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with garbled OCR text",
+      "action": "note",
+      "text": "OCR quality is very poor for this article - text is heavily garbled and fragmented",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_08_17_SpFt_Songs_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Issued March by General Board of Relief Society 1966",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V53_08_20_Poem_Sparks_Olsen.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains recipe content that should be in home section",
+      "action": "trim_end",
+      "text": "For many years to come!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_21_Poem_August_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive recipe content that should be in home section",
+      "action": "trim_end",
+      "text": "AUGUST Alda L. Brown",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_29_GenFt_Cultural_Clark.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "Again, a rewarding hour can be _ spent studying this story for those groups who feel it will be especially valuable and appropriate for their needs. MUSIC ENRICHMENT In connection with the literature in this lesson, designated music from the recording should be heard to give emphasis to the refinement which a woman receives from an awareness and appreciation of music.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Cliffs of Tumurru, Elizabeth M. Lauritzen",
+      "expected_page": 609,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding between articles. The Summer Morning on Temple Grounds article has severely garbled OCR text. Multiple home section recipes are mixed into poetry files. One poem (Cliffs of Tumurru) appears to be missing entirely from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "V53_08_01_Frnt_Alien_Roberts.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only the ending fragment of the poem, missing the beginning",
+      "action": "prepend",
+      "text": "As winds of spring walk over the hill again - —— ' Bringing \"a. Strange, snew summer, a ~ ~ f whom your tongue had taught eo. | » 'With iridescent syllables,\" ©. _~- Must dearn and \"Unlearn, \\4 ~ <2\" All things*dimmed and shucked.' + r And winnowed of your 'word—=, a. Of trees unleaved and tumbled; cloud,.- - And rain's pale ri of cNsiowec in every pool; ' - Of places unadorne. *. Vacuum sand, vacant * of your wart ~~ «AM wakoted wonder of the waterfall: « 'Sealed and Silent, ~~. Throat of thrush without the bright ' Cadenza of. Reply; dsmust speak in honest tones, Not' murmured in the starry meadows of the night, Not maiden-shy, but unabashed ' * Im Summer and the light. R Though «torn to cling around the margin of your name, The shimmering substance of a phrase recalled, The continent your faith had formed for me, Without*your. Eyes, to see, your tone, to guide; 1_mitist wale where words abide, not yours, \"And Y into the rustle of new fields Wa dwith unfamiliar furrows of response. Upil Of your power,.| must stand Until the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_04_Poem_Summer_Sabin.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Hear them, the gentle wind-fingers,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_05_Poem_Brief_Bailey.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article at the end",
+      "action": "trim_end",
+      "text": "Created Eden from an apple seed.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_13_GenFt_Editorial_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Volume 53 August 1966",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_20_Poem_Sparks_Olsen.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains recipe content that should be in home section",
+      "action": "trim_end",
+      "text": "For many years to come!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_21_Poem_August_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive recipe content that should be in home section",
+      "action": "trim_end",
+      "text": "AUGUST Alda L. Brown",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_08_29_GenFt_Cultural_Clark.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "Again, a rewarding hour can be _ spent studying this story for those groups who feel it will be especially valuable and appropriate for their needs. MUSIC ENRICHMENT In connection with the literature in this lesson, designated music from the recording should be heard to give emphasis to the refinement which a woman receives from an awareness and appreciation of music.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_08_03_SpFt_How_to_McConkie.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article (Summer Song poem) at the end",
+      "action": "trim_end",
+      "text": "Those freedoms which are guaranteed by the United States Constitution are in fact the inalienable rights of \"all mankind,\" (D&C 101: 77-80).",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V53_08_17_SpFt_Songs_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from the previous article at the beginning",
+      "action": "trim_start",
+      "text": "Issued March by General Board of Relief Society 1966",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

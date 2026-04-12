@@ -1,0 +1,57 @@
+{
+  "volume": 5,
+  "month": "February",
+  "year": 1918,
+  "timestamp": "20260315_120939",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol5_02a_Article_Ex-President_Roosevelt_Congratulates_American_Mothers.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3246 chars removed)"
+    },
+    {
+      "file": "February_Vol5_05_Article_True_Friends_Edith_McClendon.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6680 chars removed)"
+    },
+    {
+      "file": "February_Vol5_06_Article_Mother's_Valentine_Diana_Parrish.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (6708 chars added)"
+    },
+    {
+      "file": "February_Vol5_07_Home_Entertainments_February_Home_Entertainment_Morag.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1585 chars removed)"
+    },
+    {
+      "file": "February_Vol5_08_Article_Mrs._Priscilla_P._Jennings.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol5_11_Patriotic_Dept_Patriotic_Department_Mrs._Clarissa_Smith_Williams.txt",
+      "action": "note",
+      "result": "INFO: File contains only General Board listing instead of Patriotic Department content"
+    },
+    {
+      "file": "February_Vol5_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2088 chars added)"
+    },
+    {
+      "file": "February_Vol5_15_Editorial_Editorial_O_War,_Where_is_Our_Fear_of_Thee.txt",
+      "action": "note",
+      "result": "INFO: File contains only the word 'EDITORIAL' instead of the full editorial content"
+    },
+    {
+      "file": "February_Vol5_16_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (15845 chars added)"
+    }
+  ]
+}

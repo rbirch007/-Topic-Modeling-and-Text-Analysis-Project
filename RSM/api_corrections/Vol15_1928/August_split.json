@@ -1,0 +1,164 @@
+{
+  "volume": 15,
+  "month": "August",
+  "year": 1928,
+  "total_merged": 3,
+  "total_splits": 5,
+  "total_cost": 0.5709,
+  "files": [
+    {
+      "source_file": "August_Vol15_06_Article_Helping_the_Adolescent_to_Develop_a_Wholesome_Personality_El.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Helping the Adolescent to Develop a Wholesome Personality",
+          "category": "Article",
+          "author": "Elna Miller",
+          "start_boundary": "Helping the Adolescent to Develop a Wholesome",
+          "end_boundary": "constantly being guarded and watched over.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Eliza R. Snow Memorial Poem",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Eliza R. Snow Memorial Poem Announcement,",
+          "end_boundary": "City, Utah, not later than October 15.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HELPING THE ADOLESCENT"
+      ],
+      "notes": "The file contains two distinct articles based on the contents listing. The first is the main article about adolescent development, and the second is an announcement about the Eliza R. Snow Memorial Poem contest with rules and submission guidelines.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 23117,
+      "tier": 1,
+      "pdf_pages": [
+        497,
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507
+      ],
+      "api_usage": {
+        "input_tokens": 55319,
+        "output_tokens": 346,
+        "cost": 0.1711
+      }
+    },
+    {
+      "source_file": "August_Vol15_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes From the Field By Amy Brown Lyman",
+          "end_boundary": "A neat program was arranged for the event.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for October",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for October LESSON I Theology and",
+          "end_boundary": "Like common logs of wood;",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR OCTOBER"
+      ],
+      "notes": "This file contains two main sections: 'Notes from the Field' by Amy Brown Lyman (which includes Salt Lake Stake activities and various mission reorganizations) and 'Guide Lessons for October' (which contains multiple lessons including Theology, Work and Business, and Literature sections with biographical material on Bertha A. Kleinman and Grace Ingles Frost). The Guide Lessons section is quite extensive and contains multiple sub-lessons but should be kept together as one cohesive instructional unit.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 37290,
+      "tier": 1,
+      "pdf_pages": [
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "api_usage": {
+        "input_tokens": 65546,
+        "output_tokens": 442,
+        "cost": 0.2033
+      }
+    },
+    {
+      "source_file": "August_Vol15_09_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for October",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR OCTOBER 451 For trees have",
+          "end_boundary": "Tuesday, October 2?Instruction begins.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR OCTOBER"
+      ],
+      "notes": "This file contains a single comprehensive Guide Lessons article for October with multiple lessons (I-IV) covering Theology, Work and Business, Literature (featuring poets Bertha A. Kleinman and Grace Ingles Frost), and Social Service (Child-Study Course). The file also includes advertisements at the end. All content appears to be part of one unified Guide Lessons section rather than separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 31552,
+      "tier": 1,
+      "pdf_pages": [
+        525,
+        526,
+        527,
+        528,
+        529,
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539
+      ],
+      "api_usage": {
+        "input_tokens": 64161,
+        "output_tokens": 268,
+        "cost": 0.1965
+      }
+    }
+  ]
+}

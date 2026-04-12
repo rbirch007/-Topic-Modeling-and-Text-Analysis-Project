@@ -1,0 +1,38 @@
+{
+  "volume": 20,
+  "month": "November",
+  "year": 1933,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0568,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Life Perfect / Sweet are the Uses of Adversity",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Alvaretta S. Engar / Vernessa M. Nagle",
+      "confidence": "high",
+      "notes": "The provided PDF pages (714-718) contain advertisements and the table of contents, but do not include the actual article content. The article 'Life Perfect / Sweet are the Uses of Adversity' by Alvaretta S. Engar / Vernessa M. Nagle should be on pages 695-697 according to the table of contents, but those pages are not included in the provided images.",
+      "order": "e",
+      "pdf_pages": [
+        714,
+        715,
+        716,
+        717,
+        718
+      ],
+      "source_file": "November_Vol20_19_Article_Old_Grist_Mill.txt",
+      "api_usage": {
+        "input_tokens": 8565,
+        "output_tokens": 179,
+        "cost": 0.0284
+      }
+    }
+  ]
+}

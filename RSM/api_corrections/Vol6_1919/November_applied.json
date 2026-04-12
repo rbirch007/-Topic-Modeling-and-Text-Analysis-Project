@@ -1,0 +1,27 @@
+{
+  "volume": 6,
+  "month": "November",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol6_01_Hindu_Temple_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol6_02_Temples.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "November_Vol6_03a_Article_Beyond_Arsareth.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

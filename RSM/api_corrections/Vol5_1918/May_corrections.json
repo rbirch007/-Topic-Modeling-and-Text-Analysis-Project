@@ -1,0 +1,167 @@
+{
+  "volume": 5,
+  "month": "May",
+  "year": 1918,
+  "total_files_checked": 16,
+  "files_correct": [
+    "May_Vol5_01_Article_The_Welding_Link.txt",
+    "May_Vol5_02_Article_APPRECIATION.txt",
+    "May_Vol5_03_Article_The_Mother-Father_Sacrifice.txt",
+    "May_Vol5_04_Article_Guidance_of_Children.txt",
+    "May_Vol5_05_Article_MOTHERHOOD.txt",
+    "May_Vol5_09_Article_MY_SONG.txt",
+    "May_Vol5_10_Current_Topics_Current_Topics.txt",
+    "May_Vol5_11_Notes_from_Field_NOTES_FROM_THE_FIELD.txt",
+    "May_Vol5_12_Article_MAKING_OVER.txt",
+    "May_Vol5_13_Article_WAR_ECONOMY_IN_CLOTHES.txt",
+    "May_Vol5_15a_Guide_Lessons_Agriculture_and_Stock_Raising_Among_Book_of_Mormon_Peoples.txt",
+    "May_Vol5_15b_Guide_Lessons_Work_and_Business.txt",
+    "May_Vol5_15d_Home_Science_Testing_and_Cleaning_of_Fabrics.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol5_06_Article_FAT_AND_FIFTY.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "FAT AND FIFTY. 265",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_07_Patriotic_Dept_PATRIOTIC_DEPARTMENT.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "PATRIOTIC DEPARTMENT. 267",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_08_Home_Science_HOME_SCIENCE_DEPARTMENT.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "HOME SCIENCE DEPARTMENT. 269",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_14_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Guide Lessons section",
+      "action": "trim_end",
+      "text": "We suggest the reading of this editorial in all our ward Relief Society meetings. Good will result from these stirring words of Mr. Otto H. Kahn.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Resurrection (poem)",
+      "expected_page": 247,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Our Picture Gallery",
+      "expected_page": 247,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "General Conference of Relief Society",
+      "expected_page": 315,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Mothers in Israel",
+      "expected_page": 329,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Experience",
+      "expected_page": 331,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Our New Board Member",
+      "expected_page": 339,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Insects of the Home Garden",
+      "expected_page": 341,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Home Entertainments",
+      "expected_page": 336,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "For Relief Society Singers",
+      "expected_page": 335,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "How to Present the Genealogical Lesson",
+      "expected_page": 354,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Conservation Pointers",
+      "expected_page": 350,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have incorrect start points due to mid-sentence breaks from previous articles. Many articles from the table of contents are missing from the extracted files, suggesting significant OCR gaps or extraction issues. The editorial file contains content that belongs to the Guide Lessons section.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol5_06_Article_FAT_AND_FIFTY.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "FAT AND FIFTY. 265",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_07_Patriotic_Dept_PATRIOTIC_DEPARTMENT.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "PATRIOTIC DEPARTMENT. 267",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_08_Home_Science_HOME_SCIENCE_DEPARTMENT.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "HOME SCIENCE DEPARTMENT. 269",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol5_14_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Guide Lessons section",
+      "action": "trim_end",
+      "text": "We suggest the reading of this editorial in all our ward Relief Society meetings. Good will result from these stirring words of Mr. Otto H. Kahn.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,91 @@
+{
+  "volume": 16,
+  "month": "October",
+  "year": 1929,
+  "total_merged": 1,
+  "total_splits": 5,
+  "total_cost": 0.1161,
+  "files": [
+    {
+      "source_file": "October_Vol16_15_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "There are 27 members of this organization, the picture",
+          "end_boundary": "Oh, truly, sunflowers know just where to grow.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Sunflowers",
+          "category": "Poem",
+          "author": "Kate Thomas",
+          "start_boundary": "Sunflowers By Kate Thomas Down on West Temple",
+          "end_boundary": "Oh, truly, sunflowers know just where to grow.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for December",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for December LESSON 1 Theology and",
+          "end_boundary": "Is it necessary that education lag behind social development? Explain.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Sunsets",
+          "category": "Poem",
+          "author": "Grace Mister Frost",
+          "start_boundary": "Sunsets By Grace Mister Frost Yesterday's sun went",
+          "end_boundary": "When there shall come the end of day for me!",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Advertisements",
+          "category": "Advertisement",
+          "author": null,
+          "start_boundary": "[ADVERTISEMENTS SECTION] PRIVATE SECRETARY Dress well, have money",
+          "end_boundary": "When Buying Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains the end of Notes from the Field, followed by a poem, the complete Guide Lessons for December (which includes 4 separate lessons), another poem, and advertisements. The Guide Lessons section is substantial and contains multiple subsections but should remain as one unit as it's a single monthly feature.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 44389,
+      "tier": 2,
+      "pdf_pages": [
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420
+      ],
+      "api_usage": {
+        "input_tokens": 35032,
+        "output_tokens": 734,
+        "cost": 0.1161
+      }
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+{
+  "volume": 19,
+  "month": "August",
+  "year": 1932,
+  "total": 28,
+  "ok": 26,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "August_Vol19_00_BOARD.txt",
+      "body_len": 2001,
+      "article_words": 167,
+      "words_in_ocr": 167,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_00_CONTENTS.txt",
+      "body_len": 1111,
+      "article_words": 117,
+      "words_in_ocr": 117,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_00_Misc.txt",
+      "body_len": 8304,
+      "article_words": 565,
+      "words_in_ocr": 562,
+      "pct_in_ocr": 0.9947,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "August_Vol19_00_Misc_backup_premarker.txt",
+      "body_len": 8236,
+      "article_words": 560,
+      "words_in_ocr": 560,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_01a_Article_Literature_in_the_Home.txt",
+      "body_len": 18439,
+      "article_words": 1043,
+      "words_in_ocr": 1043,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_02_Article_By_Grace_Ye_Are_Saved_Nephi_Jensen.txt",
+      "body_len": 15606,
+      "article_words": 776,
+      "words_in_ocr": 776,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_03_Article_A_Garden_is_a_Lovesome_Thing_Lais_V_Hales.txt",
+      "body_len": 4748,
+      "article_words": 378,
+      "words_in_ocr": 378,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_04_Article_Ginger_Sibyl_Spande_Bowen.txt",
+      "body_len": 21394,
+      "article_words": 1140,
+      "words_in_ocr": 1140,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_05_Article_Apple_Bark_Tea_Ruth_Rowland.txt",
+      "body_len": 9218,
+      "article_words": 515,
+      "words_in_ocr": 515,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_07_Article_Could_We_Know_Julina_B_Green.txt",
+      "body_len": 5193,
+      "article_words": 372,
+      "words_in_ocr": 372,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_08_Article_Happenings_Annie_Wells_Cannon.txt",
+      "body_len": 2635,
+      "article_words": 246,
+      "words_in_ocr": 246,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_09_Article_Sunset_Through_the_Clouds_Glen_Perrins.txt",
+      "body_len": 344,
+      "article_words": 43,
+      "words_in_ocr": 43,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_10_Article_We_Write_Upon_Walls_Lucy_Goodrich_Lind.txt",
+      "body_len": 476,
+      "article_words": 60,
+      "words_in_ocr": 60,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_11_Article_A_Desert_Sunset_Gertrude_Miller.txt",
+      "body_len": 832,
+      "article_words": 99,
+      "words_in_ocr": 99,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_12_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 2605,
+      "article_words": 183,
+      "words_in_ocr": 183,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_13b_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 9634,
+      "article_words": 534,
+      "words_in_ocr": 389,
+      "pct_in_ocr": 0.7285,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "accomplishing",
+        "accomplishments",
+        "allowing",
+        "announcer",
+        "annual",
+        "appoint",
+        "arranging",
+        "artemesia",
+        "assistants",
+        "associations"
+      ]
+    },
+    {
+      "file": "August_Vol19_14_Article_Seagulls_Merling_D_Clyde.txt",
+      "body_len": 1534,
+      "article_words": 156,
+      "words_in_ocr": 156,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_15_Editorial_EditorialConformity.txt",
+      "body_len": 1181,
+      "article_words": 113,
+      "words_in_ocr": 113,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_16_Article_Could_We_But_See_Ourselves_as_Others_See_Us.txt",
+      "body_len": 835,
+      "article_words": 91,
+      "words_in_ocr": 91,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_17_Article_Go_to_the_Mountains.txt",
+      "body_len": 2046,
+      "article_words": 188,
+      "words_in_ocr": 188,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_18_Article_Dr_Martha_Hughes_Cannon.txt",
+      "body_len": 880,
+      "article_words": 84,
+      "words_in_ocr": 84,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_19_Article_Lizzie_Thomas_Edward_Released.txt",
+      "body_len": 1232,
+      "article_words": 101,
+      "words_in_ocr": 101,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_21a_Guide_Lessons_Lesson_Department.txt",
+      "body_len": 8378,
+      "article_words": 410,
+      "words_in_ocr": 323,
+      "pct_in_ocr": 0.7878,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4); MULTI_LESSON(7))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": [
+        "affecting",
+        "alterations",
+        "arrange",
+        "assistance",
+        "basic",
+        "beautify",
+        "betterment",
+        "biographies",
+        "brings",
+        "broadens"
+      ]
+    },
+    {
+      "file": "August_Vol19_22_Article_A_Prayer_Dora_B_Knowland.txt",
+      "body_len": 487,
+      "article_words": 53,
+      "words_in_ocr": 53,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_23_Poem_Procrastination_Ella_J_Coulam.txt",
+      "body_len": 517,
+      "article_words": 54,
+      "words_in_ocr": 43,
+      "pct_in_ocr": 0.7963,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "harder",
+        "hoped",
+        "leads",
+        "maze",
+        "robs",
+        "softly",
+        "steals",
+        "suffice",
+        "thief",
+        "tomorrow"
+      ]
+    },
+    {
+      "file": "August_Vol19_No8_06_Article_A_Trip_to_Bermuda_Alice_D._Moyle.txt",
+      "body_len": 5143,
+      "article_words": 419,
+      "words_in_ocr": 419,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_No8_20_Article_Dry_Facts_Refute_Wet_Claims.txt",
+      "body_len": 3110,
+      "article_words": 235,
+      "words_in_ocr": 235,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol19_No8_23_Article_Procrastination_Ella_J._Coulam.txt",
+      "body_len": 2314,
+      "article_words": 202,
+      "words_in_ocr": 202,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol19_No8_August_1932.txt",
+    "ocr_chars": 167438,
+    "ocr_unique_words": 5237,
+    "contents_xref": {
+      "entries_in_contents": 27,
+      "matched": 23,
+      "match_details": [
+        {
+          "title": "Literature in the Home Elsie C. Carroll",
+          "page": 447,
+          "file": "August_Vol19_01a_Article_Literature_in_the_Home.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"By Grace Ye Are Saved\" Nephi Jensen",
+          "page": 453,
+          "file": "August_Vol19_02_Article_By_Grace_Ye_Are_Saved_Nephi_Jensen.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"A Garden is a Lovesome Thing\" Lais V. Hales",
+          "page": 458,
+          "file": "August_Vol19_03_Article_A_Garden_is_a_Lovesome_Thing_Lais_V_Hales.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Ginger Sibyl Spande Bowen",
+          "page": 460,
+          "file": "August_Vol19_04_Article_Ginger_Sibyl_Spande_Bowen.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Apple Bark Tea Ruth Rowland",
+          "page": 467,
+          "file": "August_Vol19_05_Article_Apple_Bark_Tea_Ruth_Rowland.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Trip to Bermuda Alice D. Moyle",
+          "page": 470,
+          "file": "August_Vol19_No8_06_Article_A_Trip_to_Bermuda_Alice_D._Moyle.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Could We Know Julina B. Green",
+          "page": 471,
+          "file": "August_Vol19_07_Article_Could_We_Know_Julina_B_Green.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 474,
+          "file": "August_Vol19_08_Article_Happenings_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Sunset Through the Clouds Glen Perrins",
+          "page": 475,
+          "file": "August_Vol19_09_Article_Sunset_Through_the_Clouds_Glen_Perrins.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"We Write Upon Walls\" Lucy Goodrich Lind",
+          "page": 476,
+          "file": "August_Vol19_10_Article_We_Write_Upon_Walls_Lucy_Goodrich_Lind.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Desert Sunset Gertrude Miller",
+          "page": 476,
+          "file": "August_Vol19_11_Article_A_Desert_Sunset_Gertrude_Miller.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 477,
+          "file": "August_Vol19_12_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 478,
+          "file": "August_Vol19_12_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Seagulls Merling D. Clyde",
+          "page": 483,
+          "file": "August_Vol19_14_Article_Seagulls_Merling_D_Clyde.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Conformity",
+          "page": 484,
+          "file": "August_Vol19_15_Editorial_EditorialConformity.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Could We But See Ourselves as Others See Us",
+          "page": 484,
+          "file": "August_Vol19_16_Article_Could_We_But_See_Ourselves_as_Others_See_Us.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Go to the Mountains",
+          "page": 485,
+          "file": "August_Vol19_17_Article_Go_to_the_Mountains.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Dr. Martha Hughes Cannon",
+          "page": 485,
+          "file": "August_Vol19_18_Article_Dr_Martha_Hughes_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lizzie Thomas Edward Released",
+          "page": 486,
+          "file": "August_Vol19_19_Article_Lizzie_Thomas_Edward_Released.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Dry Facts Refute Wet Claims",
+          "page": 486,
+          "file": "August_Vol19_No8_20_Article_Dry_Facts_Refute_Wet_Claims.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 488,
+          "file": "August_Vol19_21a_Guide_Lessons_Lesson_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Prayer Dora B. Knowland",
+          "page": 503,
+          "file": "August_Vol19_22_Article_A_Prayer_Dora_B_Knowland.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Procrastination Ella J. Coulam",
+          "page": 504,
+          "file": "August_Vol19_23_Poem_Procrastination_Ella_J_Coulam.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Beauty Spot in the Sierras Frontispiece",
+          "page": null
+        },
+        {
+          "title": "Believe in Yourself Bertha A. Kleinman",
+          "page": 445
+        },
+        {
+          "title": "A Little Child Shall Lead Them I. B. McKenzie",
+          "page": 472
+        },
+        {
+          "title": "Supt. George N. Child Called",
+          "page": 485
+        }
+      ],
+      "extra_files": [
+        "August_Vol19_13b_Notes_from_Field_Notes_from_the_Field.txt",
+        "August_Vol19_No8_23_Article_Procrastination_Ella_J._Coulam.txt"
+      ]
+    }
+  }
+}

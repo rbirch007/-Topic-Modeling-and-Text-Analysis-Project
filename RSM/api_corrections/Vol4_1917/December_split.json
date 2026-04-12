@@ -1,0 +1,78 @@
+{
+  "volume": 4,
+  "month": "December",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1421,
+  "files": [
+    {
+      "source_file": "December_Vol4_16b_Guide_Lessons_Guide_Lessons_a_a_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Book of Mormon",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony.",
+          "end_boundary": "Students are requested to read I Nephi and report",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notice to Our Students",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "NOTICE TO OUR STUDENTS. The General Board",
+          "end_boundary": "great Relief Society. LESSON II. Work and",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy and Literature - Race History",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "end_boundary": "Use any references available always remembering that",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson III - Home Economics - Plain Facts About Food",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Home Economics. Fourth Week in",
+          "end_boundary": "A lady in Salt Lake stake wishes",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple lesson sections from the Guide Lessons department, including theology, genealogy/literature, and home economics lessons, plus administrative notices to students. The lessons are clearly delineated with Roman numeral headings and subject areas.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9311,
+      "tier": 1,
+      "pdf_pages": [
+        802,
+        803,
+        804
+      ],
+      "api_usage": {
+        "input_tokens": 44735,
+        "output_tokens": 529,
+        "cost": 0.1421
+      }
+    }
+  ]
+}

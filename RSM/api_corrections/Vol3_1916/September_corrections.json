@@ -1,0 +1,38 @@
+{
+  "volume": 3,
+  "month": "September",
+  "year": 1916,
+  "total_files_checked": 15,
+  "files_correct": [
+    "September_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+    "September_Vol3_03_Article_Schemes_and_Schedules_Ruth_Moench_Bell.txt",
+    "September_Vol3_04_Article_Being_Gran_Alfred_Lambourne.txt",
+    "September_Vol3_05_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+    "September_Vol3_06_Article_Filet_Crochet_Yoke_Isabelle_W._Sears.txt",
+    "September_Vol3_07_Article_The_Bible_Lucy_May_Green.txt",
+    "September_Vol3_08_Article_Proper_Guidance_of_Children_Lucy_Wright_Snow.txt",
+    "September_Vol3_09_Notes_from_Field_Notes_from_the_Field_Sec._Amy_Brown_Lyman.txt",
+    "September_Vol3_10_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "September_Vol3_11_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "September_Vol3_12a_Editorial_Editorial_Self_Pity.txt",
+    "September_Vol3_12b_Guide_Lessons_Guide_Lessons.txt",
+    "September_Vol3_13_Guide_Lessons_Guide_Lessons.txt",
+    "September_Vol3_14_Article_At_Evening_Emmeline_B._Wells.txt",
+    "September_Vol3_15_Article_Music_My_Friend.txt"
+  ],
+  "corrections": [
+    {
+      "file": "September_Vol3_01_Frontispiece_Kirtland_Temple_Frontispiece_Absence_Lucy_Burnham.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the complete poem 'Absence' by Lucy Burnham - only contains the byline",
+      "action": "replace_content",
+      "text": "ABSENCE. It is morning, dearest husband, And from my bed I rise Upon the sleeping village near, I lift my lonely eyes. O'er the hill the sun is peeping, And all nature seems so gay Yet my heart shares not the gladness, Life is drear when you're away. It is mid-day, dearest husband. And the toilers hasten home. Each to find his happy fireside Where the loved ones hurrying come. But I linger here in sadness. O'er my lonely meal, today. And I whisper to the silence, \"Life's so drear when you're away.\" It is evening, dearest husband. And I bow my head in prayer, Asking God to bless my dear one. And to keep him in His care. Then I lay me down to slumber And to dream of you till day. 'Tis the only ray of comfort In my life when you're away. Lucy Burnham. Kirtland, New Mexico.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "The extraction quality is excellent overall. All articles are properly separated and contain their complete content. The only issue is with the first file which is missing the complete poem text and only contains the byline. All other files correctly start and end at appropriate boundaries without bleeding content from adjacent articles.",
+  "validated_corrections": [],
+  "failed_validations": []
+}

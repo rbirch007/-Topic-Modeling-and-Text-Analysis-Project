@@ -1,0 +1,134 @@
+{
+  "volume": 54,
+  "month": "May",
+  "year": 1967,
+  "total_files_checked": 31,
+  "files_correct": [
+    "V54_05_03_Art_From_Near_and_Far.txt",
+    "V54_05_06_SpFt_Literary.txt",
+    "V54_05_08_SpFt_A_Woman_Walch.txt",
+    "V54_05_09_Fict_Automation_Yost.txt",
+    "V54_05_10_Poem_First_Kent.txt",
+    "V54_05_12_Fict_Until_Anderson.txt",
+    "V54_05_13_SpFt_Standards_Spafford.txt",
+    "V54_05_14_GenFt_Womans_Cannon.txt",
+    "V54_05_15_GenFt_Editorial_Crawford.txt",
+    "V54_05_17_GenFt_Sew_Stock.txt",
+    "V54_05_18_GenFt_We_Took_Woods.txt",
+    "V54_05_19_GenFt_Recipes_Illescas.txt",
+    "V54_05_20_GenFt_Cleaning_Jones.txt",
+    "V54_05_21_GenFt_Mincemeat-Oatmeal.txt",
+    "V54_05_22_GenFt_Handwork_Life.txt",
+    "V54_05_23_Fict_Hazel.txt",
+    "V54_05_24_Poem_Favorite_Hill.txt",
+    "V54_05_26_GenFt_Notes_Activities.txt",
+    "V54_05_27_Lssn_Homemaking_Jorgens.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_05_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains poetry contest winners instead of 'Well of Peace' article",
+      "action": "replace_content",
+      "text": "Well of Peace Peggy Tangren",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_02_Art_Well_of_Tangren.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains table of contents and other material before the actual article",
+      "action": "trim_start",
+      "text": "These Things Endure Alice Colton Smith Assistant Professor of Soctology, Utah State University. Logan, Utah Membher. General Board of Relief Society ¢ The afternoon sun was mellow hot.",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_04_SpFt_These_Smith.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Article starts mid-sentence",
+      "action": "prepend",
+      "text": "These Things Endure Alice Colton Smith Assistant Professor of Soctology, Utah State University. Logan, Utah Membher. General Board of Relief Society ¢ The afternoon sun was mellow hot. Its warmth sent waves of pleasure down my back and bathed the whole world in wellbeing. The horse tossed his head impatiently for a moment and sent the flies buzzing. Then, he returned to cropping the early grass on the ditch bank. I was suspended in a sensation of perfect, low-keyed happiness. There I was on such a perfect, late spring afternoon listening to the two women I loved best, my grandmother and my mother. I wanted time to stand still. My grandmother, her gray hair in a knot on top of her head, 324 sat in her buggy while my mother and I leaned on the garden gate. Although I was not yet eight, I stored in the never-to-be-forgotten area of memory in my brain, those things about which they spoke. 'You are an angel of mercy," my mother said. I looked up. Grandmother's face was wrinkled and her hands were rough from hard work. She an angel? "Oh, pshaw," she said modestly, but at the same time smiled with pleasure. Silently, I had agreed with my mother. I couldn't imagine an angel more beautiful. Enraptured, I followed the story of heroism that my grand- _ mother unfolded. She would not become famous and_ world-renowned because of it, but it lodged unforgettably in onesmall girl's heart. Illness in the middle ~ of the night, a knock at the door in the early morn before the cock crowed, a plea of anguish, a horse and buggy hitched together by lantern light, a ride through the wind and sleet, the soothing voice of hope and rescue, the calming presencean angel of mercy in a land without hospitals and doctors. There followed tales of babies delivered, of feverish children nursed to health, and of sad times when old friends were laid to rest. This pattern of compassion was etched into my soul that faraway afternoon. Except for that one sentence of commendation, there were no more words of praise given, I think, or expected. The experiences were told as concern for friends and neighbors, what anyone would do under similar circumstances. She loved those people, and they loved her. Was there more to be said? Arm in my life, as my mother often remembered her crippled, nearly bedfast, unmarried friend and always sent her a Christmas dinner; or asked us each fall, as school started, to share our clothes with those less fortunate, the early lesson was reinforced. I do not remember any formal lessons given about the fact that all men are brothers, that each one is his brother's keeper, but I knew about love at an early age, about love and love of one's fellow men. It was a way of life.",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_05_Poem_In_Jacobson.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains contest rules before the poem",
+      "action": "trim_start",
+      "text": "IN HIGH COUNTRY The brisk, rare Crystal air Of timberline is washed and dried, Polished, burnished till it stings Eyes and lungs, so close it brings Shimmering distant cliffs, so near You can see the pines' dark pride Each cedar spire, each aspen clear. All gleams, lacquered gold, Till sudden thunderheads unfold Awesomely on a granite peak Where all the demons of storm will wreak Their savage furies. Yet as swift, Comes a rift.... Once more the prismed atmosphere, Where all glitters, and far is near, Claims its fortress homeland here Where soaring height Invites the might Of unleashed forces that harry and flail But cannotin the endprevail. @ Ethel Jacobson",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_07_Poem_Mothers_Lamb.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains text from previous article before the poem",
+      "action": "trim_start",
+      "text": "MOTHER'S DAY Downy soft, and cuddly, blue as a baby's eyes; She turns the bootee gently and breathes a longing sigh. Under the folds of tissue the other bootee lies, Wetted once by scalding tearsnow lovingly tucked away. One withered, faded rosebud, once pink as a baby's toes, Folded into the tissue with the dreams a mother knows. Yesterday is not forgotten, but softened through the years; The wings of love beat steadily and hope replaces tears. She sees him in the sunrise and in the budding rose; She hears him in the lark's song, while in her heart she knows He dwells with prophets, priests, and kings And waits for her to come. @ Patricia A. Lamb",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_11_Poem_To_Be_a_Thomas.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be a duplicate or placeholder",
+      "action": "replace_content",
+      "text": "TO BE A SISTER If clouds of doubt enshroud my heart and! Am sad and blue, my sister turns her smile on me and sends its sunshine through. When earthly ills and troubles become too much to bear, i hear a voice, and raise my eyes and find my sister there. What does my sister look iike? Has she golden hair, brown or gray? Wellyes! And sometimes it is white. And her eyes?They were blue today. You see, my sister exists in multiple, and every one of her is dear! When I go to Relief Society I find my sister here! My sister is never selfish: She knows I need something to do so sometimes she calls and gives me a chance to be her sister, too! @ Norma Madsen Thomas",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_16_GenFt_The_Barthel.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains previous article content before cooking article",
+      "action": "trim_start",
+      "text": "Cooking in Rhyme and Rhythm Mildred Barthel COOKED OUT I'm tired of eating, And tired of cooking, Tired of planning, And recipe looking. I can't seem to find A wholesome treat My family considers Fit to eat!",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_25_SpFt_Marianne.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains incomplete text and appears to have OCR issues",
+      "action": "trim_end",
+      "text": "The General Board extends to my faithful, devoted Magazine representatives throughout Relief Society organizations its heartfelt thanks and appreciation for their untired efforts and their outstanding achievement.",
+      "confidence": "medium"
+    },
+    {
+      "file": "V54_05_28_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "Mrs. Emma Tovey Page Nielson Woods Cross, Utah",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_29_Poem_I_Saw_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains cooking article content after the poem",
+      "action": "trim_end",
+      "text": "@ Christie Lund Coles",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_30_Poem_Desert_Chamberlin.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains next article content after the poem",
+      "action": "trim_end",
+      "text": "For she, with her working hands, her velvet singing. Had made the desert home in the beginning. @ Enola Chamberlin",
+      "confidence": "high"
+    },
+    {
+      "file": "V54_05_31_Poem_Winds_Bowles.txt",
+      "issue_type": "missing_text",
+      "description": "Poem is incomplete, missing most of the content",
+      "action": "replace_content",
+      "text": "WINDS OF LIFE The winds of life blow gently, And sunshine scatters the rain. The bended limbs all straighten When the sunshine comes again. The winds of life may darken  Blinding storm clouds dim the way, But strength comes with the morning And lifts our burdens today. @ Catherine B. Bowles",
+      "confidence": "high"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "And Now It Is May Mabel Jones Gabbott",
+      "expected_page": 339,
+      "status": "merged_with_another",
+      "merged_into": "V54_05_09_Fict_Automation_Yost.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues, particularly poems that contain text from adjacent articles. The poetry contest winners appear to be in the wrong file. Some OCR quality issues in the Magazine Honor Roll section. Overall extraction captured most content but requires significant cleanup for proper article boundaries."
+}

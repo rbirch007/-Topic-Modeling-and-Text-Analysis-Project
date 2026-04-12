@@ -1,0 +1,47 @@
+{
+  "volume": 2,
+  "month": "October",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol2_03_Article_His_Wife's_Talents_Elsie_Chamberlain_Carroll.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (5071 chars added)"
+    },
+    {
+      "file": "October_Vol2_04_Article_In_the_Kitchen_Laboratory_Hazel_Love_Dunford.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol2_05_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol2_06_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (18658 chars added)"
+    },
+    {
+      "file": "October_Vol2_08_Editorial_Editorial.txt",
+      "action": "append",
+      "result": "APPLIED append (3591 chars added)"
+    },
+    {
+      "file": "October_Vol2_09_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4007 chars added)"
+    },
+    {
+      "file": "October_Vol2_10_Article_Music.txt",
+      "action": "note",
+      "result": "INFO: File contains Editorial content instead of the Music article/sheet music"
+    }
+  ]
+}

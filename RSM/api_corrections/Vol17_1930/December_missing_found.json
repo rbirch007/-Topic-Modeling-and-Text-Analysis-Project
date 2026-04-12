@@ -1,0 +1,68 @@
+{
+  "volume": 17,
+  "month": "December",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.0245,
+  "stats": {
+    "found": 1,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Madonna with St. Jerome. .Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "THE MADONNA WITH ST. JEROME\nCorreggio",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "Correggio",
+      "confidence": "high",
+      "notes": "This is a frontispiece image showing a classical religious painting by Correggio depicting the Madonna with St. Jerome. The image shows figures in a classical religious scene with minimal text - just the title and artist attribution.",
+      "api_usage": {
+        "input_tokens": 7399,
+        "output_tokens": 156,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        761,
+        762,
+        763,
+        764
+      ]
+    },
+    {
+      "title": "For Christmas (Poem) KateThomas",
+      "printed_page": 652,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Snow-Covered Pines in the Rockies",
+      "printed_page": 663,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Plow Old is Old? Ada Taylor Graham",
+      "printed_page": 684,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Evan Stephans",
+      "printed_page": 686,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "St. George ,",
+      "printed_page": 698,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

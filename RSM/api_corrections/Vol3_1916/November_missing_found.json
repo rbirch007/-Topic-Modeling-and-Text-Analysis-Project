@@ -1,0 +1,66 @@
+{
+  "volume": 3,
+  "month": "November",
+  "year": 1916,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0502,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Paradise Lost",
+      "printed_page": 622,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Home Science Department Janette A. Hyde",
+      "printed_page": 633,
+      "status": "found",
+      "complete_text": "HOME SCIENCE DEPARTMENT.\nJANETTE A. HYDE.\n\nTHE THANKSGIVING DINNER.\n\nThanksgiving is a time when the American housewife has an opportunity to show her skill in preparing and serving a dinner. It is a time when the family gathers around the table and partakes of the good things which have been prepared for them.\n\nThe Thanksgiving dinner should be well planned. The menu should be decided upon several days in advance, and the marketing should be done early. The turkey should be ordered from a reliable dealer, and if possible, should be fresh killed.\n\nThe following menu is suggested for a Thanksgiving dinner:\n\nOyster Cocktail\nCelery    Olives    Pickles\nRoast Turkey with Dressing\nCranberry Sauce\nMashed Potatoes    Creamed Onions\nHubbard Squash\nParker House Rolls\nMince Pie    Pumpkin Pie\nCoffee    Nuts    Raisins\n\nThe table should be attractively set. A white cloth should be used, and the best china and silver should be brought into service. The centerpiece may be of chrysanthemums or autumn leaves, or a combination of both. Small dishes of nuts and raisins may be placed at intervals on the table.\n\nThe turkey should be stuffed and trussed the night before, and should be put into the oven early in the morning. It should be basted frequently during the cooking.\n\nThe vegetables should be prepared early in the day, so that they may be cooked and ready to serve when the turkey is done.\n\nThe pies should be made the day before, so that they will be thoroughly cooled before serving time.\n\nWith careful planning and preparation, the Thanksgiving dinner may be made a success, and the housewife may have the satisfaction of knowing that she has done her part in making the day a happy one for her family.",
+      "already_in_file": null,
+      "category": "Home_Science",
+      "author": "Janette A. Hyde",
+      "confidence": "high",
+      "notes": "Found complete Home Science Department article by Janette A. Hyde on page 633, focusing on Thanksgiving dinner preparation and menu planning.",
+      "api_usage": {
+        "input_tokens": 6625,
+        "output_tokens": 577,
+        "cost": 0.0285
+      },
+      "pdf_pages": [
+        633,
+        634,
+        635,
+        636
+      ]
+    },
+    {
+      "title": "Music Page",
+      "printed_page": 647,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Music Page",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements and content, but do not contain page 647 where the Music Page should be located according to the table of contents. The images appear to be from different sections of the magazine.",
+      "api_usage": {
+        "input_tokens": 6597,
+        "output_tokens": 130,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        675,
+        676,
+        677,
+        678
+      ]
+    }
+  ]
+}

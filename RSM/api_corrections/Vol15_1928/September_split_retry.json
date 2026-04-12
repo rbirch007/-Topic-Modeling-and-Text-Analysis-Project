@@ -1,0 +1,59 @@
+{
+  "volume": 15,
+  "month": "September",
+  "year": 1928,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 2,
+  "created": 4,
+  "failed": 3,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Rebecca Neibaur Nibley",
+      "new_file": "September_Vol15_03a_Article_Rebecca_Neibaur_Nibley.txt",
+      "chars": 8433,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "Sarah Elizabeth Carmichael Williamson",
+      "new_file": "September_Vol15_08a_Article_Sarah_Elizabeth_Carmichael_Williamson.txt",
+      "chars": 25698,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "The Russell Sisters",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "Notes from the Field",
+      "new_file": "September_Vol15_10a_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 13824,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for November",
+      "new_file": "September_Vol15_10b_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "chars": 6664,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "Theology and Testimony",
+      "result": "RETRY_FAILED: end (84) <= start (84)"
+    },
+    {
+      "split": "b",
+      "title": "Work and Business",
+      "result": "RETRY_FAILED: end (84) <= start (84)"
+    }
+  ]
+}

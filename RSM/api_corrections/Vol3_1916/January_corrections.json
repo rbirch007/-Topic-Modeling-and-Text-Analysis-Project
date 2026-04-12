@@ -1,0 +1,93 @@
+{
+  "volume": 3,
+  "month": "January",
+  "year": 1916,
+  "total_files_checked": 18,
+  "files_correct": [
+    "January_Vol3_01_Article_Byron's_Unpublished_Prayer.txt",
+    "January_Vol3_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+    "January_Vol3_03_Article_Within_the_Locket_Alfred_Lambourne.txt",
+    "January_Vol3_04_Article_Ma's_New_Year's_Resolutions_Elsie_C._Carroll.txt",
+    "January_Vol3_07_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+    "January_Vol3_08_Article_Mental_Hygiene_for_Women_Past_Fifty.txt",
+    "January_Vol3_09_Article_The_Bride's_Mother_Nabby_Howe.txt",
+    "January_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+    "January_Vol3_11_Article_Snowflake_Stake_History_Lulu_J._Smith.txt",
+    "January_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "January_Vol3_15_Poetry_Poems_by_Emmeline_B._Wells.txt",
+    "January_Vol3_16_Editorial_Editorial_A_New_Year_Resolve.txt",
+    "January_Vol3_17_Guide_Lessons_Guide_Lessons.txt",
+    "January_Vol3_18a_Genealogy_Genealogy_Lesson_-_Individual_Records_and_Letters.txt",
+    "January_Vol3_18b_Art_Art_and_Architecture_-_Winter_Landscape_and_Architecture_Les.txt",
+    "January_Vol3_18c_Home_Ethics_Home_Economics_-_The_Latter-day_Saint_Home.txt",
+    "January_Vol3_18d_Genealogy_International_Congress_of_Genealogy.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol3_05_Article_Lord_and_Lady_Aberdeen_in_Utah.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article 'Cobwebs' by Annie D. S. Palmer",
+      "action": "trim_end",
+      "text": "All in all, we have fulfilled, in part, the expectations that the nobles of the earth should come up to Zion to learn of her ways, and we feel that great credit is due to all who in any way contributed to this splendid affair.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol3_06_Article_Cobwebs_Annie_D._S._Palmer.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with only the ending of the poem",
+      "action": "prepend",
+      "text": "Cobwebs. \"Good morning, Kate, I've just been calling On Lucile Hart, across the way She's the kindest little woman, Bright and cheery as the May; But oh, what poor housekeeping! Would you believe it, dear, I counted nine big cobwebs!\" As sure as I am here 'Twas a neighbor stopped to gossip, And I feared the awful nine Would be few and quite forgotten After Bessie counted mine. But the cobwebs set me thinking Of the little wife Lucile, Of the work that daily calls her, Of the burdens she must feel There are seven little children. Each with a baby's right To her care, her love, her training And she gives it day and night To her husband she is offering A companionship that's true, With smile and help and comfort Such as come but to the few To her neighbors, her example Is a source of pure delight When, instead of hunting cobwebs. They are seeking truth and right To the world Lucile gives blessing. That the world will never know. In the hope and faith that follow Where her words of comfort go. \"Bessie, don't be counting cobwebs Why, when you are laid to rest. Gossips will be searching corners For the things that please them best. If it's cobwebs, they will find them. If it's virtues sweet and rare, That a dearest friend would mention, They will find such virtues there, You're a thrifty little housewife. But you labor quite in vain. If, with all your anxious sweeping.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol3_13_Instructions_Instructions_and_Recipes_Mme._Rover.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with header text that should be removed",
+      "action": "trim_start",
+      "text": "Recipes by Mme. Rorer, given in her classes in Salt Lake City, August, 1915.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Miscellaneous Notes Janette A. Hyde",
+      "expected_page": 45,
+      "status": "merged_with_another",
+      "merged_into": "January_Vol3_13_Instructions_Instructions_and_Recipes_Mme._Rover.txt"
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Lord and Lady Aberdeen article bleeds into Cobwebs content, 2) Cobwebs article is missing most of its content, 3) Instructions and Recipes file has header text that should be removed, and 4) Miscellaneous Notes appears to be merged with the Instructions file rather than being separate.",
+  "validated_corrections": [
+    {
+      "file": "January_Vol3_05_Article_Lord_and_Lady_Aberdeen_in_Utah.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article 'Cobwebs' by Annie D. S. Palmer",
+      "action": "trim_end",
+      "text": "All in all, we have fulfilled, in part, the expectations that the nobles of the earth should come up to Zion to learn of her ways, and we feel that great credit is due to all who in any way contributed to this splendid affair.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol3_06_Article_Cobwebs_Annie_D._S._Palmer.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with only the ending of the poem",
+      "action": "prepend",
+      "text": "Cobwebs. \"Good morning, Kate, I've just been calling On Lucile Hart, across the way She's the kindest little woman, Bright and cheery as the May; But oh, what poor housekeeping! Would you believe it, dear, I counted nine big cobwebs!\" As sure as I am here 'Twas a neighbor stopped to gossip, And I feared the awful nine Would be few and quite forgotten After Bessie counted mine. But the cobwebs set me thinking Of the little wife Lucile, Of the work that daily calls her, Of the burdens she must feel There are seven little children. Each with a baby's right To her care, her love, her training And she gives it day and night To her husband she is offering A companionship that's true, With smile and help and comfort Such as come but to the few To her neighbors, her example Is a source of pure delight When, instead of hunting cobwebs. They are seeking truth and right To the world Lucile gives blessing. That the world will never know. In the hope and faith that follow Where her words of comfort go. \"Bessie, don't be counting cobwebs Why, when you are laid to rest. Gossips will be searching corners For the things that please them best. If it's cobwebs, they will find them. If it's virtues sweet and rare, That a dearest friend would mention, They will find such virtues there, You're a thrifty little housewife. But you labor quite in vain. If, with all your anxious sweeping.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol3_13_Instructions_Instructions_and_Recipes_Mme._Rover.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with header text that should be removed",
+      "action": "trim_start",
+      "text": "Recipes by Mme. Rorer, given in her classes in Salt Lake City, August, 1915.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

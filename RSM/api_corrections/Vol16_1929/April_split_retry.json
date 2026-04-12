@@ -1,0 +1,90 @@
+{
+  "volume": 16,
+  "month": "April",
+  "year": 1929,
+  "timestamp": "20260316_210706",
+  "dry_run": false,
+  "retried": 4,
+  "created": 6,
+  "failed": 6,
+  "entries": [
+    {
+      "split": "c",
+      "title": "Retrospect",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "The Ugly Duckling",
+      "new_file": "April_Vol16_06d_Article_The_Ugly_Duckling.txt",
+      "chars": 11461,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "e",
+      "title": "Easter Thoughts",
+      "new_file": "April_Vol16_06e_Poem_Easter_Thoughts.txt",
+      "chars": 545,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "g",
+      "title": "Guide Lessons for June",
+      "new_file": "April_Vol16_06g_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "chars": 8907,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Hills",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "April",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Elvira Lathrop",
+      "new_file": "April_Vol16_16c_Article_Elvira_Lathrop.txt",
+      "chars": 29732,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Pioneers: When West Was West—Owen Wister",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "e",
+      "title": "Books",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "g",
+      "title": "Guide Lessons for June",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Notes from the Field",
+      "new_file": "April_Vol16_17c_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 8523,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Guide Lessons for June",
+      "new_file": "April_Vol16_17d_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "chars": 36091,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

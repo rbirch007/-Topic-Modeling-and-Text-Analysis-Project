@@ -1,0 +1,35 @@
+{
+  "volume": 12,
+  "month": "December",
+  "year": 1925,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 3,
+  "created": 1,
+  "failed": 3,
+  "entries": [
+    {
+      "split": "b",
+      "title": "If Ye Have Faith",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Relief Society Conference",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "State Welfare Workers Meet",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for February",
+      "new_file": "December_Vol12_14b_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "chars": 22197,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

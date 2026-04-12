@@ -1,0 +1,47 @@
+{
+  "volume": 3,
+  "month": "June",
+  "year": 1916,
+  "timestamp": "20260315_120936",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "June_Vol3_02_Article_Mothers_of_Leaders_in_Israel.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1977 chars added)"
+    },
+    {
+      "file": "June_Vol3_10_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7606 chars removed)"
+    },
+    {
+      "file": "June_Vol3_12_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of Home Science Department article"
+    },
+    {
+      "file": "June_Vol3_17_Editorial_Editorial_Climbing.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (235 chars removed)"
+    },
+    {
+      "file": "June_Vol3_18_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3725 chars removed)"
+    }
+  ]
+}

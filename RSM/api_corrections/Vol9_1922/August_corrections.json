@@ -1,0 +1,139 @@
+{
+  "volume": 9,
+  "month": "August",
+  "year": 1922,
+  "total_files_checked": 18,
+  "files_correct": [
+    "August_Vol9_03_Article_Our_Retiring_Editor.txt",
+    "August_Vol9_04_Article_Golden_Wedding_of_Mr._And_Mrs._A._W._McCune.txt",
+    "August_Vol9_05_Article_Girls_in_Our_Own_Zion's_Cooperative_Mercantile_Institution.txt",
+    "August_Vol9_06_Article_My_Baby's_Prayer_Mrs._L._E._Russon.txt",
+    "August_Vol9_07_Article_Notes_on_Bible_Poetry_L._Lulu_Greene_Richards.txt",
+    "August_Vol9_08_Article_The_Ungrateful_Indian_Nina_B._McKean.txt",
+    "August_Vol9_11_Article_Recreative_Grace_Ingles_Frost.txt",
+    "August_Vol9_12_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+    "August_Vol9_13_Article_Northern_Mexico_Recipes_Gladys_Sanders.txt",
+    "August_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "August_Vol9_15_Article_Nature's_Perfect_Food_A._A._Hinckley.txt",
+    "August_Vol9_17a_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_I_-_Theology_and_Testimon.txt",
+    "August_Vol9_17c_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_III_-_Literature.txt",
+    "August_Vol9_17d_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_IV_-_Social_Service_-_The.txt"
+  ],
+  "corrections": [
+    {
+      "file": "August_Vol9_01_Article_A_Tribute_to_Sister_Susa_Y._Gates_Ruth_May_Fox.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of the tribute poem",
+      "action": "replace_content",
+      "text": "A Tribute to Sister Susa Y. Gates Ruth May Fox Thou gifted daughter of a mighty seer, All hail! Thy fellow workers waft good cheer, Our blessing, praise, and honor give to thee, We thank the Father for thy ministry. Each passing year hath added to thy crown, Gems unsurpassed, until thy fair renown Hath spread abroad, scaled mountains, crossed the sea, Thy sex in many lands rejoice in thee. And yet we know thou lovest best of all The women who responded to the call Of God's own Church; who threw aside their pride, To walk in ways the haughty oft deride. And we love thee, dear sister, well we know The wondrous faith thy zealous labors show; Thy leadership; thy staunch integrity; Thy reverence for God's authority. From early youth thy pen so free and bold Hath fed the hearts of numbers manifold; Thy voice inspired hath fall'n on grateful ears. Thy benedictions in high heaven appears. Thy ministrations, by our Father's grace, Dispensing blessings in his holy place, Shall bind the hearts of those beyond the veil So close to thine, their love can never fail. Could'st ask for more? And still the shining way Throws wide its gates and bids thee, day by day, Continue on toward ambition's goal, Until his just reward shall satisfy thy soul.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "August_Vol9_02_Editorial_EDITORIAL_Resignation_of_Mrs._Susa_Young_Gates.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of editorial content",
+      "action": "trim_start",
+      "text": "EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_09_Article_The_Relief_Society_Magazine_Mrs._Christine_Stacey.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Summer Menus article at the end",
+      "action": "trim_end",
+      "text": "The R. S. Magazine.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_10_Article_Summer_Menus_Jeanette_A._Hyde.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-word with 'SUMMER' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Summer Menus Jeannette A. Hyde The most natural thing in work is for us to work along the line of least resistance. We are all hunting for the best thing in the easiest way. As soon as the hot days begin, you hear the house wife ask, \"What can we have to eat today?\" We all desire something appetizing, something easy to get, something to keep the body cool and something nourishing as well. All wise house wives know that to make sudden changes upsets the digestive organs and creates all kinds of disturbances. So we begin planning our meals with the thought in mind of keeping the family well, giving them cooling things with the least effort and with the least disturbance to the general outline of home work. If we would live simply during the summer months, eliminating rich pastry, such as pie, cake, puddings; eating but little meat and especially fat meats preparing our heavy meal in the morning before the heat of the day, serving only one hot vegetable or beverage at the dinner hour, eliminating stewing and fretting over meals, we would find ourselves much cooler and more comfortable. We must eat plenty of vegetables and fresh fruits, bread and butter, milk, eggs, and cheese, cottage cheese especially. These things are available to most families in city and country. Plenty of greens combined with fruits, vegetables, fish, cottage cheese and other cheese, cold meats, chicken and so forth should be a part of our variety served during the week, but not too great a variety for each meal. Fe will furnish a few suggestive menus for hot days: Menu No. I BREAKFAST Raspberries or currants, strawberries, stewed gooseberries, dewberries, stewed black currants, sliced apricots, sliced peaches, cooked pears or any seasonable fruits. Cooked cereal with cream. Toast, French, buttered, or dry. Postum, hot mifk or cocoa. LUNCHEON Veal cutlet and brown sauce. Buttered beets. Os Head lettuce with French dressing, mayonnaise or thousand island. Wafers with cream cheese or cottage-cheese. Any kind of jelly or jam.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (15 words)"
+    },
+    {
+      "file": "August_Vol9_16_Article_Your_Services_to_God_and_Man_Sarah_Deady_Tomsik.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content and board information at the end",
+      "action": "trim_end",
+      "text": "Your service to God and man.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_17b_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_II_-_Work_and_Business.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains header text, missing actual lesson content",
+      "action": "note",
+      "text": "Lesson II content appears to be missing from OCR - only header present",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "August_Vol9_18_Article_God_Bless_My_Stupid_Soul_Mary_Foster_Gibbs.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Help Thou my great stupidity!",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are: 1) First file contains wrong content (table of contents instead of poem), 2) Several files have advertisement bleed that should be moved to Misc file, 3) One file starts mid-sentence, 4) Lesson II appears to have missing content in OCR. The editorial structure and most article boundaries are properly maintained.",
+  "validated_corrections": [
+    {
+      "file": "August_Vol9_02_Editorial_EDITORIAL_Resignation_of_Mrs._Susa_Young_Gates.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of editorial content",
+      "action": "trim_start",
+      "text": "EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_09_Article_The_Relief_Society_Magazine_Mrs._Christine_Stacey.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Summer Menus article at the end",
+      "action": "trim_end",
+      "text": "The R. S. Magazine.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_10_Article_Summer_Menus_Jeanette_A._Hyde.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-word with 'SUMMER' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Summer Menus Jeannette A. Hyde The most natural thing in work is for us to work along the line of least resistance. We are all hunting for the best thing in the easiest way. As soon as the hot days begin, you hear the house wife ask, \"What can we have to eat today?\" We all desire something appetizing, something easy to get, something to keep the body cool and something nourishing as well. All wise house wives know that to make sudden changes upsets the digestive organs and creates all kinds of disturbances. So we begin planning our meals with the thought in mind of keeping the family well, giving them cooling things with the least effort and with the least disturbance to the general outline of home work. If we would live simply during the summer months, eliminating rich pastry, such as pie, cake, puddings; eating but little meat and especially fat meats preparing our heavy meal in the morning before the heat of the day, serving only one hot vegetable or beverage at the dinner hour, eliminating stewing and fretting over meals, we would find ourselves much cooler and more comfortable. We must eat plenty of vegetables and fresh fruits, bread and butter, milk, eggs, and cheese, cottage cheese especially. These things are available to most families in city and country. Plenty of greens combined with fruits, vegetables, fish, cottage cheese and other cheese, cold meats, chicken and so forth should be a part of our variety served during the week, but not too great a variety for each meal. Fe will furnish a few suggestive menus for hot days: Menu No. I BREAKFAST Raspberries or currants, strawberries, stewed gooseberries, dewberries, stewed black currants, sliced apricots, sliced peaches, cooked pears or any seasonable fruits. Cooked cereal with cream. Toast, French, buttered, or dry. Postum, hot mifk or cocoa. LUNCHEON Veal cutlet and brown sauce. Buttered beets. Os Head lettuce with French dressing, mayonnaise or thousand island. Wafers with cream cheese or cottage-cheese. Any kind of jelly or jam.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (15 words)"
+    },
+    {
+      "file": "August_Vol9_16_Article_Your_Services_to_God_and_Man_Sarah_Deady_Tomsik.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content and board information at the end",
+      "action": "trim_end",
+      "text": "Your service to God and man.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol9_18_Article_God_Bless_My_Stupid_Soul_Mary_Foster_Gibbs.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Help Thou my great stupidity!",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

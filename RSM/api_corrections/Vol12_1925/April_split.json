@@ -1,0 +1,79 @@
+{
+  "volume": 12,
+  "month": "April",
+  "year": 1925,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1841,
+  "files": [
+    {
+      "source_file": "April_Vol12_14_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - The Abrahamic Dispensation",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JUNE LESSON I (First Week",
+          "end_boundary": "Discuss Hagar as the grand-mother of twelve princes. (Gen. 17:20.)",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in June) Work and Business",
+          "end_boundary": "preparations for such elaborate and wholly uncalled for exercises.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature: Henry David Thoreau",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in June) Literature HENRY DAVID",
+          "end_boundary": "in the selections you have read from Thoreau?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service: Social Aspects of Education",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in June) Social Service",
+          "end_boundary": "in the selection of his vocation?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JUNE"
+      ],
+      "notes": "This file contains four distinct lesson sections for June, each covering a different week and subject area: Theology/Testimony, Work/Business, Literature, and Social Service. Each lesson has clear boundaries with Roman numeral headings and ends with Questions and Problems sections.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34614,
+      "tier": 1,
+      "pdf_pages": [
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "api_usage": {
+        "input_tokens": 58613,
+        "output_tokens": 551,
+        "cost": 0.1841
+      }
+    }
+  ]
+}

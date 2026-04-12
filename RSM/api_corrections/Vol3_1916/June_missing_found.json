@@ -1,0 +1,38 @@
+{
+  "volume": 3,
+  "month": "June",
+  "year": 1916,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0267,
+  "stats": {
+    "found": 1,
+    "not_found": 0,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Old Folks Greeting",
+      "printed_page": 301,
+      "status": "found",
+      "complete_text": "Old Folk's Greetings.\n\n(Tune: \"Count your many blessings.\")\n\nWhen you bowed, this morning, on your knees to pray,\nDid you ask God's blessings on the old folks' day?\nHave you come to greet them with a smiling face,\nAnd dispel the sorrow from their gathering place?\n\nCHORUS:\n\nWelcome, Grandma, with your locks of gray;\nWelcome, Grandpa, to our feast today;\nCheer the old folks, greet them with a call,\nWelcome to our banquet, welcome one and all.\n\nIn life's battles ever they've been brave and true,\nThey have wrought and conquered, wrought for me and you;\nFaced the hostile Indians, where the cactus grows,\nMade the desert blossom as the fragrant rose.\n\nLet us cheer the old folks, make them glad today,\nFill their souls with sunshine, help them on life's way;\nLoving acts of kindness wield a power to save\nGreater far than garlands strewn upon the grave.\n\nSome have crossed the river, in the year just past,\nFaithful to their children, faithful to the last;\nMay we ever follow in the path they've trod,\nFaithful to each other, faithful to our God!",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete poem on page 340 of the PDF images. This is a song/poem with tune notation and chorus structure for Old Folks Day celebration.",
+      "api_usage": {
+        "input_tokens": 6616,
+        "output_tokens": 459,
+        "cost": 0.0267
+      },
+      "pdf_pages": [
+        337,
+        338,
+        339,
+        340
+      ]
+    }
+  ]
+}

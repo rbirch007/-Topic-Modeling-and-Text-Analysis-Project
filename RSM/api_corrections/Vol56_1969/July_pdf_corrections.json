@@ -1,0 +1,19 @@
+{
+  "volume": 56,
+  "month": "July",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_07_04_Frnt_By_Hazel.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues past the photo credits into 'From Near and Far' content which belongs to a different article",
+      "action": "trim_end",
+      "text": "Roberts Dick Scopes Mary Scopes",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ]
+}

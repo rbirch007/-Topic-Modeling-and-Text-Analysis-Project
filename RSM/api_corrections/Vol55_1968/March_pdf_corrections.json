@@ -1,0 +1,29 @@
+{
+  "volume": 55,
+  "month": "March",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_03_05_SpFt_Knowledge_Cameron.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence and includes content from next poem",
+      "action": "trim_end",
+      "text": "We owe it to ourselves and to our chil",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V55_03_13_Fict_A_Pepper.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains entirely wrong content - no part of the actual 'A Summer's Day' story is present",
+      "action": "replace_content",
+      "text": "A Summer's Day\nRuth N. Pepper\nCorrimal East, New South Wales, Australia\n\nThe day she had had misgivings about had arrived.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 2% OCR coverage"
+    }
+  ]
+}

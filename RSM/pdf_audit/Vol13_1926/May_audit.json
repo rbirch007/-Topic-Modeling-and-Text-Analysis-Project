@@ -1,0 +1,568 @@
+{
+  "volume": 13,
+  "month": "May",
+  "year": 1926,
+  "total": 24,
+  "ok": 19,
+  "flagged": 5,
+  "empty": 0,
+  "records": [
+    {
+      "file": "May_Vol13_00_BOARD.txt",
+      "body_len": 661,
+      "article_words": 65,
+      "words_in_ocr": 29,
+      "pct_in_ocr": 0.4462,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "alder",
+        "alice",
+        "barbara",
+        "baxter",
+        "bennion",
+        "bradford",
+        "brimhall",
+        "clarissa",
+        "cora",
+        "coray"
+      ]
+    },
+    {
+      "file": "May_Vol13_00_CONTENTS.txt",
+      "body_len": 1020,
+      "article_words": 108,
+      "words_in_ocr": 90,
+      "pct_in_ocr": 0.8333,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "bldg",
+        "bostonne",
+        "carrie",
+        "contents",
+        "copy",
+        "depends",
+        "editorials",
+        "foreign",
+        "gates",
+        "lowry"
+      ]
+    },
+    {
+      "file": "May_Vol13_00_Misc.txt",
+      "body_len": 9548,
+      "article_words": 663,
+      "words_in_ocr": 366,
+      "pct_in_ocr": 0.552,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advantageous",
+        "advertisers",
+        "alder",
+        "alice",
+        "aluminum",
+        "angeles",
+        "annuals",
+        "appearance",
+        "appearing"
+      ]
+    },
+    {
+      "file": "May_Vol13_03_Article_A_Mother's_Success_Depends_on_her_Daughters_Agnes_Bostonne.txt",
+      "body_len": 10860,
+      "article_words": 560,
+      "words_in_ocr": 396,
+      "pct_in_ocr": 0.7071,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "acres",
+        "adviser",
+        "age",
+        "ahead",
+        "anyway",
+        "apricots",
+        "arranged",
+        "asset",
+        "assistance",
+        "assume"
+      ]
+    },
+    {
+      "file": "May_Vol13_04_Article_White_Birch_to_Honor_Motherhood.txt",
+      "body_len": 1769,
+      "article_words": 126,
+      "words_in_ocr": 88,
+      "pct_in_ocr": 0.6984,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(70%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "antietan",
+        "auspices",
+        "banked",
+        "betula",
+        "bouquets",
+        "caressing",
+        "characteristics",
+        "chose",
+        "coolidge",
+        "crystalized"
+      ]
+    },
+    {
+      "file": "May_Vol13_05_Article_Dear_Mother_Tree_Carrie_Tanner.txt",
+      "body_len": 887,
+      "article_words": 107,
+      "words_in_ocr": 67,
+      "pct_in_ocr": 0.6262,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(63%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "airy",
+        "bird",
+        "boughs",
+        "bounteous",
+        "breezes",
+        "carrie",
+        "charm",
+        "dart",
+        "doth",
+        "drooping"
+      ]
+    },
+    {
+      "file": "May_Vol13_06_Article_Birthday_Party_of_Mrs_Susa_Young_Gates_Annie_Wells_Cannon.txt",
+      "body_len": 6680,
+      "article_words": 508,
+      "words_in_ocr": 321,
+      "pct_in_ocr": 0.6319,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(63%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "absence",
+        "acquaintance",
+        "acted",
+        "admiring",
+        "admonition",
+        "adversity",
+        "affection",
+        "age",
+        "almost",
+        "amazement"
+      ]
+    },
+    {
+      "file": "May_Vol13_07_Article_Mother_Memories_Lowry_Nelson.txt",
+      "body_len": 965,
+      "article_words": 107,
+      "words_in_ocr": 65,
+      "pct_in_ocr": 0.6075,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(61%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "abides",
+        "aflare",
+        "ahead",
+        "alice",
+        "attuned",
+        "blight",
+        "cells",
+        "chambers",
+        "clarissa",
+        "distant"
+      ]
+    },
+    {
+      "file": "May_Vol13_08_Editorial_Editorials—James_Matthew_Barrie.txt",
+      "body_len": 2256,
+      "article_words": 186,
+      "words_in_ocr": 186,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_09_Article_Mother,_the_Most_Popular_Theme.txt",
+      "body_len": 1083,
+      "article_words": 109,
+      "words_in_ocr": 109,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_10_Article_Prohibition.txt",
+      "body_len": 6034,
+      "article_words": 409,
+      "words_in_ocr": 409,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_11_Article_Mrs._Annie_Wells_Cannon_Honored.txt",
+      "body_len": 2041,
+      "article_words": 150,
+      "words_in_ocr": 150,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_12a_Article_The_Souls_Sincere_Desire.txt",
+      "body_len": 8217,
+      "article_words": 541,
+      "words_in_ocr": 541,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_13_Article_To_My_Mother_Camilla_W_Judd.txt",
+      "body_len": 662,
+      "article_words": 68,
+      "words_in_ocr": 68,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_14_Article_Mothers'_Day_Tributes_Lula_Greene_Richards.txt",
+      "body_len": 6962,
+      "article_words": 488,
+      "words_in_ocr": 488,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_15a_Article_The_Triumph_of_Love.txt",
+      "body_len": 19023,
+      "article_words": 1043,
+      "words_in_ocr": 1043,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_15b_Article_Garden_Flowers_for_Decoration_Day.txt",
+      "body_len": 2609,
+      "article_words": 214,
+      "words_in_ocr": 214,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_16_Article_Intellectual_Requirements_of_Mormonism_Thomas_L_Martin.txt",
+      "body_len": 7918,
+      "article_words": 447,
+      "words_in_ocr": 447,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_17_Article_Of_Interest_to_Women_Lalene_H_Hart.txt",
+      "body_len": 3204,
+      "article_words": 283,
+      "words_in_ocr": 283,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_18a_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 12519,
+      "article_words": 615,
+      "words_in_ocr": 615,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_18b_Notes_from_Field_Relief_Society_Annual_Report.txt",
+      "body_len": 12097,
+      "article_words": 604,
+      "words_in_ocr": 604,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_19_Article_Relief_Society_Annual_Report.txt",
+      "body_len": 4172,
+      "article_words": 133,
+      "words_in_ocr": 133,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol13_19_Poem_An_Old_Fashioned_Garden_Grace_Zenor_Pratt.txt",
+      "body_len": 603,
+      "article_words": 50,
+      "words_in_ocr": 31,
+      "pct_in_ocr": 0.62,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(62%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "blossoms",
+        "climbing",
+        "faces",
+        "glories",
+        "golden",
+        "hollyhocks",
+        "lowly",
+        "memories",
+        "mignonette",
+        "pansies"
+      ]
+    },
+    {
+      "file": "May_Vol13_20_Article_Leisure_Time_for_What_Jean_Cox.txt",
+      "body_len": 16881,
+      "article_words": 875,
+      "words_in_ocr": 875,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol13_No5_May_1926.txt",
+    "ocr_chars": 95319,
+    "ocr_unique_words": 3350,
+    "contents_xref": {
+      "entries_in_contents": 20,
+      "matched": 19,
+      "match_details": [
+        {
+          "title": "An Old Fashioned Garden. .Grace Zenor Pratt",
+          "page": 226,
+          "file": "May_Vol13_19_Poem_An_Old_Fashioned_Garden_Grace_Zenor_Pratt.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Daughters Agnes Bostonne",
+          "page": 228,
+          "file": "May_Vol13_03_Article_A_Mother's_Success_Depends_on_her_Daughters_Agnes_Bostonne.txt",
+          "score": 1.0
+        },
+        {
+          "title": "White Birch to Honor Motherhood",
+          "page": 232,
+          "file": "May_Vol13_04_Article_White_Birch_to_Honor_Motherhood.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Dear Mother Tree Carrie Tanner",
+          "page": 233,
+          "file": "May_Vol13_05_Article_Dear_Mother_Tree_Carrie_Tanner.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Annie Wells Cannon",
+          "page": 234,
+          "file": "May_Vol13_06_Article_Birthday_Party_of_Mrs_Susa_Young_Gates_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mother Memories Lowry Nelson",
+          "page": 236,
+          "file": "May_Vol13_07_Article_Mother_Memories_Lowry_Nelson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorials—James Matthew Barrie",
+          "page": 237,
+          "file": "May_Vol13_08_Editorial_Editorials—James_Matthew_Barrie.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mother, the Most Popular Theme",
+          "page": 238,
+          "file": "May_Vol13_03_Article_A_Mother's_Success_Depends_on_her_Daughters_Agnes_Bostonne.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Prohibition",
+          "page": 239,
+          "file": "May_Vol13_10_Article_Prohibition.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mrs. Annie Wells Cannon Honored",
+          "page": 241,
+          "file": "May_Vol13_11_Article_Mrs._Annie_Wells_Cannon_Honored.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Soul's Sincere Desire Lillith Shell",
+          "page": 242,
+          "file": "May_Vol13_12a_Article_The_Souls_Sincere_Desire.txt",
+          "score": 0.4
+        },
+        {
+          "title": "To My Mother Camilla W. Judd",
+          "page": 245,
+          "file": "May_Vol13_13_Article_To_My_Mother_Camilla_W_Judd.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mothers' Day Tributes Lula Greene Richards",
+          "page": 246,
+          "file": "May_Vol13_14_Article_Mothers'_Day_Tributes_Lula_Greene_Richards.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Triumph of Love Sylvia",
+          "page": 249,
+          "file": "May_Vol13_15a_Article_The_Triumph_of_Love.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Thomas L. Martin",
+          "page": 258,
+          "file": "May_Vol13_16_Article_Intellectual_Requirements_of_Mormonism_Thomas_L_Martin.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Of Interest to Women Lalene H. Hart",
+          "page": 261,
+          "file": "May_Vol13_17_Article_Of_Interest_to_Women_Lalene_H_Hart.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 263,
+          "file": "May_Vol13_18a_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Relief Society Annual Report",
+          "page": 269,
+          "file": "May_Vol13_18b_Notes_from_Field_Relief_Society_Annual_Report.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Leisure Time for What? Jean Cox",
+          "page": 272,
+          "file": "May_Vol13_20_Article_Leisure_Time_for_What_Jean_Cox.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "May Alberta Huish Christensen",
+          "page": 225
+        }
+      ],
+      "extra_files": [
+        "May_Vol13_09_Article_Mother,_the_Most_Popular_Theme.txt",
+        "May_Vol13_15b_Article_Garden_Flowers_for_Decoration_Day.txt",
+        "May_Vol13_19_Article_Relief_Society_Annual_Report.txt"
+      ]
+    }
+  }
+}

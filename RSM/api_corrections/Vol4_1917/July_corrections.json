@@ -1,0 +1,82 @@
+{
+  "volume": 4,
+  "month": "July",
+  "year": 1917,
+  "total_files_checked": 19,
+  "files_correct": [
+    "July_Vol4_03_Article_Diantha_Lowry_Reid.txt",
+    "July_Vol4_04_Article_What_Women_Can_Do_in_Canning.txt",
+    "July_Vol4_05_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+    "July_Vol4_06_Article_Object,_Origin_and_Destiny_of_Women_Prest._John_Taylor.txt",
+    "July_Vol4_07_Article_Are_We_Wise_Grace_Jacobson.txt",
+    "July_Vol4_08_Article_Mother_Entertains_Diantha_Parrish.txt",
+    "July_Vol4_09_Article_How_to_Make_a_Homemade_Fireless_Cooker.txt",
+    "July_Vol4_10_Article_The_Iceless_Refrigerator.txt",
+    "July_Vol4_11_Home_Entertainments_Home_Entertainments_Morag.txt",
+    "July_Vol4_13_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "July_Vol4_14_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "July_Vol4_15_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "July_Vol4_16a_Editorial_Editorial.txt",
+    "July_Vol4_16b_Guide_Lessons_Guide_Lessons.txt",
+    "July_Vol4_17_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol4_01_Article_Hazel_Washburn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the poem 'In Memory of 1847' by Hazel Washburn but then continues with the beginning of the next article 'Epistle to the Relief Society'",
+      "action": "trim_end",
+      "text": "Hazel Washburn.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol4_12_Article_President_Joseph_F._Smith_on_Card_Playing.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from the 'Epistle to the Relief Society' article instead of President Smith's article on card playing",
+      "action": "replace_content",
+      "text": "President Joseph F. Smith on Card Playing. (From the Improvement Era.) A correspondent has sent a request that you say something of the position we take on card-playing. I therefore, I have written upon it, both in this magazine and others, and spoken of it many times before the congregations of the Saints. Personally, and always I am positively and insistently opposed to the Latter-day Saints playing cards, either at home, in private circles, in public, at socials or at any other gathering of the people. Our correspondent further states that he wishes to know how to meet the argument of a number of young ladies in his settlement who are or should be workers in the Sunday School and other organizations of the ward, who insist on playing cards \"in their private parties or gatherings, of three or four, and so on, when they get together for an evening's visit.\" They argue that they just play among themselves and enjoy it: they do not play for money; they play in their own homes, 50 they are not, as they claim, setting anyone else an example outside of their own circle of friends, and for that reason cannot see where they are doing any harm. They feel, also, and have so expressed it, that \"anyone who opposes them is interfering with their personal liberty.\" They say further \"that certain persons in high standing in the community have their card parties; they nevertheless, go to meeting, and are treated as the best of people;\" so that, \"if it is right for these people to play cards in social parties, it can not be wrong for us in our private parties.\" Our correspondent further states that he has even heard of \"certain high priests who play cards when they ought to be in meeting on Sunday.\" He wishes us to tell him how to meet the arguments of the young ladies. If there is any truth in what he says he has heard about \"certain high priests,\" they should be dealt with for their fellowship. Tt appears to me a very simple matter to meet such arguments. It is just as painful in the sight of the Lord to do an evil secretly or in the home, as it is to do one publicly, and it has practically the same effect upon the person who does the evil act. although the evil results may not be so far-reaching as if done in public. No person can play cards, or smoke, or drink, or do any other forbidden thing, in his home. 1>\\ himself or among his personal friends, without being guilty of wrong doing just as much as if he did all these things in public. We cannot be hypocrites, and whatever we do should be worthy, of course, of being done openly and above board, if we would be effective teachers. No young lady can teach children in the Sabbath School the evils of card-playing, who plays cards in her home society, or with her personal friends. The teachings of such will have no good effect, because her heart will not be in it, and example and habit are stronger than words. The same may be said of every other person including \"high priests,\" and \"certain persons in high standing.\" I have stated heretofore why I hold that card-playing is wrong. In the first place, it results in the useless waste of valuable time; secondly, the practice leads to the public card table, thence to the saloon, to gambling, and to ruin and shame. These facts can be easily demonstrated by the history of men who have time and pleasure in their private homes; but who have gradually become infatuated — crazed — with it, and left the home, and taken up with companions who have easily led them from cardplaying for fun or amusement, to playing cards for money and intoxicating drink, which, of course, most certainly leads to destruction am I absolutely opposed to playing cards in homes, in social gatherings, privately or publicly, and this applies as much to those our correspondent calls \"certain persons in high standing,\" as it does to the young lady or the young man who is or should be teaching in the Sabbath Schools even in the remotest village or community in the Church.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "July_Vol4_18_Article_In_Memory_of.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be a duplicate of the poem that should be in the first file, but is missing the author attribution",
+      "action": "replace_content",
+      "text": "IN MEMORY OF 1847. O come with me a little way — We'll turn time's pages back again, And gaze as at a long lost scroll. (Tis scarcely three-score years and ten). Dost see that stretch of sage-brush land? How grim, forbidding it appears; How dead and changeless it must be, Deserted lain, for countless years. And note the soil, the hard backed clay, '\"Twas never done, 'twill never be.\" \"It can't be done,\" the doubters say. Their leaders answer, \"Wait and see.\" Now look again, the scene is changed, And far and near on every side The valley teeming with full life Where Israel's chosen ones reside. Gone are those dauntless pioneers 'Who builded better than they knew. Their children reap w:th love and tears, Yet, let us hope, with hearts as true. Hazel Washburn.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "July_Vol4_19_Article_First_Winter_in_Salt_Lake_City,.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content instead of the article about First Winter in Salt Lake City",
+      "action": "note",
+      "text": "This file contains advertisement content and should be moved to Misc file. The actual article content is not found in the OCR.",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Epistle to the Relief Society Concerning these War Times",
+      "expected_page": 363,
+      "status": "merged_with_another",
+      "merged_into": "July_Vol4_12_Article_President_Joseph_F._Smith_on_Card_Playing.txt"
+    }
+  ],
+  "notes": "Several files have content mismatches. The Hazel Washburn poem appears in two files with different completeness. The President Smith card playing article file actually contains the Epistle content. The First Winter article file contains only advertisement content. The Epistle article appears to be merged into the wrong file.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol4_01_Article_Hazel_Washburn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the poem 'In Memory of 1847' by Hazel Washburn but then continues with the beginning of the next article 'Epistle to the Relief Society'",
+      "action": "trim_end",
+      "text": "Hazel Washburn.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

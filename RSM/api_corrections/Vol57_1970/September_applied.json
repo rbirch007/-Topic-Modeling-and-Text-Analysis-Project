@@ -1,0 +1,52 @@
+{
+  "volume": 57,
+  "month": "September",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_09_01_Poem_Your_Brown.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (234 chars)"
+    },
+    {
+      "file": "V57_09_03_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_09_04_SpFt_Temple_Christianse.txt",
+      "action": "note",
+      "result": "INFO: File starts mid-sentence with '643 @ Toa Latter-day Saint'"
+    },
+    {
+      "file": "V57_09_09_Fict_And_a_Parr.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2406 chars removed)"
+    },
+    {
+      "file": "V57_09_13_GenFt_Cookies_Wilson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2727 chars removed)"
+    },
+    {
+      "file": "V57_09_14_SpFt_Seeing_Yost.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_09_20_GenFt_Autumn_Dedekind.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1138 chars removed)"
+    },
+    {
+      "file": "V57_09_21_GenFt_Reflections_Depart.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1581 chars)"
+    }
+  ]
+}

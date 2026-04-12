@@ -1,0 +1,47 @@
+{
+  "volume": 8,
+  "month": "February",
+  "year": 1921,
+  "timestamp": "20260315_120946",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol8_02_Article_Baby_Dear_Abbie_R._Madsen.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol8_03_Article_The_Jerusalem_of_Today.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "February_Vol8_04_Article_Madame_Lydia_von_F._Mountford.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6778 chars removed)"
+    },
+    {
+      "file": "February_Vol8_05_Article_From_Zion_to_Jerusalem.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol8_06_Article_The_Plan_of_Salvation_Wilma_Stolworthy.txt",
+      "action": "append",
+      "result": "APPLIED append (28 chars added)"
+    },
+    {
+      "file": "February_Vol8_09_Article_New_Issue_of_the_Book_of_Mormon.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol8_16a_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2220 chars removed)"
+    }
+  ]
+}

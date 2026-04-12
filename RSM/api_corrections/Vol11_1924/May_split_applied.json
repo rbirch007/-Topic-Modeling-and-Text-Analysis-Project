@@ -1,0 +1,38 @@
+{
+  "volume": 11,
+  "month": "May",
+  "year": 1924,
+  "timestamp": "20260316_175717",
+  "dry_run": false,
+  "created": 2,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "May_Vol11_04_Article_Portrait_of_Mother_of_James_Matthew_Barrie.txt",
+      "result": "SKIP: No splits"
+    },
+    {
+      "split": "a",
+      "title": "The Psalmist David, A Modern Singer",
+      "new_file": "May_Vol11_12a_Article_The_Psalmist_David_A_Modern_Singer.txt",
+      "chars": 10403,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Big Business",
+      "new_file": "May_Vol11_12b_Article_Big_Business.txt",
+      "chars": 630,
+      "result": "CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Notes from the Field",
+      "result": "SKIP: Start boundary not found: Split 'c': start_boundary not found"
+    },
+    {
+      "file": "May_Vol11_12_Article_The_Psalmist_David,_a_Modern_Singer_H_R_Merrill.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol11_1924\\May\\_backups_split_20260316_175717\\May_Vol11_12_Article_The_Psalmist_David,_a_Modern_Singer_H_R_Merrill.txt"
+    }
+  ]
+}

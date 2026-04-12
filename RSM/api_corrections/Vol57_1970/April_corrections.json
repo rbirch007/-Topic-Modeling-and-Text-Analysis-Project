@@ -1,0 +1,158 @@
+{
+  "volume": 57,
+  "month": "April",
+  "year": 1970,
+  "total_files_checked": 36,
+  "files_correct": [
+    "V57_04_06_Poem_A_Gabbott.txt",
+    "V57_04_07_SpFt_Award_Contest.txt",
+    "V57_04_08_SpFt_Afterglow_Kammeyer.txt",
+    "V57_04_09_SpFt_Winds_Loomis.txt",
+    "V57_04_10_SpFt_Apples_Bailey.txt",
+    "V57_04_11_GenFt_Editorial_Madsen.txt",
+    "V57_04_12_GenFt_Womans_Cannon.txt",
+    "V57_04_13_SpFt_Award_Contest.txt",
+    "V57_04_14_SpFt_Come_Young.txt",
+    "V57_04_15_SpFt_A_Place_Neilson.txt",
+    "V57_04_17_SpFt_Fight_Parker.txt",
+    "V57_04_18_Poem_Spring_Fulton.txt",
+    "V57_04_19_GenFt_Gifts_Watson.txt",
+    "V57_04_20_Poem_Sunrise_Epps.txt",
+    "V57_04_21_GenFt_Feather_Cannon.txt",
+    "V57_04_22_Poem_Which_Harp.txt",
+    "V57_04_23_GenFt_Never_Nielsen.txt",
+    "V57_04_24_GenFt_Tamales.txt",
+    "V57_04_25_Poem_Barbaras_Madsen.txt",
+    "V57_04_26_Fict_A_Pan_Winters.txt",
+    "V57_04_27_GenFt_Hobby_Department.txt",
+    "V57_04_28_Fict_Jerusha_Todd.txt",
+    "V57_04_29_Poem_When_Tangren.txt",
+    "V57_04_30_GenFt_Notes_Activities.txt",
+    "V57_04_31_GenFt_Homemaking_Taylor.txt",
+    "V57_04_32_Poem_Reflection_Despain.txt",
+    "V57_04_33_Poem_Time_Shomaker.txt",
+    "V57_04_34_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with incomplete poem text",
+      "action": "prepend",
+      "text": "ST BEAUTIFUL ~ CJ ter move like folded silk, a foamy cuff of creamy lace.: This ts",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in separate file",
+      "action": "trim_end",
+      "text": "Deseret News",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_04_02_SpFt_President_Counselo.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about President Harold B. Lee but filename suggests it should be about a different counselor",
+      "action": "note",
+      "text": "Content appears to be about Harold B. Lee as First Counselor, but filename suggests different content",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_04_03_SpFt_President_Counselo.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content that appears to be the end of previous article about President Smith",
+      "action": "trim_start",
+      "text": "The Relief Society members throughout the world are blessed to have Relief Society go forward under the guidance of President Joseph Fielding Smith, who is filled with that charity which never faileth. 247 248 sident Harold B. Lee Called As First Counselor to President Smith January 23, 1970",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_04_16_SpFt_A_New_Kearl.txt",
+      "issue_type": "missing_text",
+      "description": "File appears to start mid-story and is missing the beginning of 'A New Season for Christy'",
+      "action": "note",
+      "text": "Story appears to start in the middle - missing beginning portion that should include the setup and early character development",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_04_35_SpFt_President.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and appears incomplete",
+      "action": "append",
+      "text": "Its divine birth and the blessing it is to the souls of men, characterize the content of his blessings.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_04_36_Poem_Longer_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains prose text about apple trees instead of the expected poem 'Longer Days'",
+      "action": "note",
+      "text": "Content does not match expected poem title - contains prose about apple orchards",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 242,
+      "status": "merged_with_another",
+      "merged_into": "V57_04_01_Frnt_Most_Late.txt"
+    },
+    {
+      "title": "Longer Days, Alda L Brown",
+      "expected_page": 289,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding issues, particularly around page boundaries. The poem 'Longer Days' appears to be missing entirely and replaced with prose content. Some files have incorrect content that doesn't match their filenames. Overall extraction quality is good for most articles but needs cleanup for proper article boundaries.",
+  "validated_corrections": [
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in separate file",
+      "action": "trim_end",
+      "text": "Deseret News",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_04_03_SpFt_President_Counselo.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content that appears to be the end of previous article about President Smith",
+      "action": "trim_start",
+      "text": "The Relief Society members throughout the world are blessed to have Relief Society go forward under the guidance of President Joseph Fielding Smith, who is filled with that charity which never faileth. 247 248 sident Harold B. Lee Called As First Counselor to President Smith January 23, 1970",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_04_35_SpFt_President.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and appears incomplete",
+      "action": "append",
+      "text": "Its divine birth and the blessing it is to the souls of men, characterize the content of his blessings.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with incomplete poem text",
+      "action": "prepend",
+      "text": "ST BEAUTIFUL ~ CJ ter move like folded silk, a foamy cuff of creamy lace.: This ts",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

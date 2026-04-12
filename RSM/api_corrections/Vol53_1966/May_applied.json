@@ -1,0 +1,42 @@
+{
+  "volume": 53,
+  "month": "May",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_05_04_SpFt_Literary.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V53_05_11_Poem_Susquehanna_Bailey.txt",
+      "action": "note",
+      "result": "INFO: File contains wrong poem content - shows Journal of Marriage text instead of Susquehanna River Valley poem"
+    },
+    {
+      "file": "V53_05_14_GenFt_Womans_Cannon.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (621 chars added)"
+    },
+    {
+      "file": "V53_05_28_The Home_Spring_Isaacson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (709 chars)"
+    },
+    {
+      "file": "V53_05_29_The Home_Ismilda_Needle.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1037 chars added)"
+    },
+    {
+      "file": "V53_05_33_The Home_Time_of_Department.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

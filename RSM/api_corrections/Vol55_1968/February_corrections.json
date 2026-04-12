@@ -1,0 +1,242 @@
+{
+  "volume": 55,
+  "month": "February",
+  "year": 1968,
+  "total_files_checked": 35,
+  "files_correct": [
+    "V55_02_02_Art_Solace_Brown.txt",
+    "V55_02_03_Art_From_Near_and_Far.txt",
+    "V55_02_05_SpFt_Eddie_Goodwin.txt",
+    "V55_02_06_SpFt_A_Gabbott.txt",
+    "V55_02_08_Fict_The_Harmer.txt",
+    "V55_02_10_GenFt_Womans_Cannon.txt",
+    "V55_02_11_GenFt_Editorial_Sharp.txt",
+    "V55_02_12_SpFt_Protect_Disease.txt",
+    "V55_02_13_Fict_The_Franks.txt",
+    "V55_02_15_SpFt_Reflections_Beck.txt",
+    "V55_02_20_GenFt_The_Jones.txt",
+    "V55_02_21_GenFt_Gifts_Chadwick.txt",
+    "V55_02_22_GenFt_Aunt_Everett.txt",
+    "V55_02_24_GenFt_Old_Brodt.txt",
+    "V55_02_25_GenFt_Double-Duty_Thulin.txt",
+    "V55_02_26_Fict_Janet.txt",
+    "V55_02_27_GenFt_Notes_Activities.txt",
+    "V55_02_28_Lssn_Spiritual_Doxey.txt",
+    "V55_02_29_Lssn_Visiting_Smith.txt",
+    "V55_02_30_Lssn_Social_Christensen.txt",
+    "V55_02_31_Lssn_Cultural_Thomas.txt",
+    "V55_02_32_Poem_To_A_Perry.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_02_01_Fict_Throw_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from January 1968 issue, not February 1968",
+      "action": "replace_content",
+      "text": "This file appears to contain content from a different issue and should be replaced with the correct February 1968 Throw Down the Gauntlet Chapter 6 content",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_02_04_SpFt_Mother_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Mother Eve",
+      "action": "trim_start",
+      "text": "Mother Eve, a Worthy Exemplar The virtues I speak of are these:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_07_Poem_Wakening_Neale.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content including spiritual communication text and poetry",
+      "action": "replace_content",
+      "text": "Should contain only the 'Wakening Thoughts' poem by Sylvia Neale from page 104",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_02_09_Poem_Mothers_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from The New Neighbor story",
+      "action": "trim_start",
+      "text": "As the children began to look distressed",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_14_Poem_Wasted_Rothe.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Rock-Strewn Road story after the poem",
+      "action": "trim_end",
+      "text": "There would have been no reason for it all.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_16_Poem_Icicles_Fairbairn.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from The Rock-Strewn Road story instead of the Icicles poem",
+      "action": "replace_content",
+      "text": "Should contain the 'Icicles' poem by Vesta N. Fairbairn from page 119",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_02_17_Fict_The_Wright.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence and contains garbled text",
+      "action": "replace_content",
+      "text": "Should contain complete Rock-Strewn Road story by Carolyn L. Wright starting from the beginning",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_02_18_Poem_For_a_Jacobson.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, cuts off mid-poem",
+      "action": "append",
+      "text": "ning song of wrens. From somewhere on the hilltop; A lone coyote calls. The creek has hidden harp strings — In crystal waterfalls. And all these are, That there may be A lullaby For Stephanie.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V55_02_19_Poem_For_Kay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous poem",
+      "action": "trim_start",
+      "text": "What else is there to do except stop crying",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_02_23_GenFt_Pioneer_Smith.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains the note, missing the main Pioneer Recipes content",
+      "action": "prepend",
+      "text": "PIONEER RECIPES Ruth Smith Are you becoming tired of the same old treats for parties or family nights? Try these old, old recipes for something new and delicious. Pioneer Wheat Place a cup of clean, dry wheat in a pre-heated (medium heat) heavy pan, containing just enough vegetable oil to cover the bottom. Stir about 5-10 minutes, until kernels are popped (they will pop without stirring, but scorch easily and taste burnt). Sprinkle with popcorn salt, stir, and spread out on a paper towel to cool. Keep small children's hands away until it does cool, as it can blister an overeager hand. Golden Parched Corn Dried kernels of sweet corn can be cooked the same way. They may take a trifle longer to pop, however.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_33_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, missing header and some content",
+      "action": "prepend",
+      "text": "Birthday Congratulations",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_02_34_Poem_My_Jones.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles instead of just the My Glasses poem",
+      "action": "replace_content",
+      "text": "MY GLASSES Lucy Woolley Jones I wonder why sight is not made to last As long as the rest of this frame, That glasses we need in order to read To me seems a pitiful shame! I lay them down here and I look for them there, And the minutes slip by and I bluster, ''Now where are those needful, but false, pesky orbs?'' I really am all in a fluster! I must bake a cake for our big ward bazaar And it's late and I can't find my glasses! Now what does that recipe say? I'm not sure; Could be sugar or spice or molasses? Glory be! If I didn't need glasses!",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_02_35_Poem_Organ_Robinson.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, cuts off at the end",
+      "action": "append",
+      "text": "O A Grandchild Lucille R. Perry When barely three begins her pilgrimage A picket fence surrounds her sovereign state. Small kingdom? Which of us can gauge Its vastness, though it ends beside the gate. Are we too old and traveled for this place, Its grand geography of wonders to recall? Then she will show us, laughter on her face— With fresh insight she contemplates it all. The bug that, prodded, rolls into a sphere, A frantic ant which seeks a shady crack, And if she crushes that. Which she holds dear, Of sentiment and tears there is no lack. The years will show her eyes more distant parts Than this some day, but let us take her hand, See through her eyes, reeducate our hearts As we return to a child's encompassed land 159",
+      "confidence": "medium",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Blind Dorothy J. Roberts",
+      "expected_page": 97,
+      "status": "merged_with_another",
+      "merged_into": "V55_02_07_Poem_Wakening_Neale.txt"
+    }
+  ],
+  "notes": "Many files contain content bleeding from adjacent articles or have incomplete extractions. Several poetry files are particularly problematic with mixed content. The OCR quality appears good overall, but article boundary detection needs improvement.",
+  "validated_corrections": [
+    {
+      "file": "V55_02_04_SpFt_Mother_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Mother Eve",
+      "action": "trim_start",
+      "text": "Mother Eve, a Worthy Exemplar The virtues I speak of are these:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_09_Poem_Mothers_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from The New Neighbor story",
+      "action": "trim_start",
+      "text": "As the children began to look distressed",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_14_Poem_Wasted_Rothe.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Rock-Strewn Road story after the poem",
+      "action": "trim_end",
+      "text": "There would have been no reason for it all.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_18_Poem_For_a_Jacobson.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, cuts off mid-poem",
+      "action": "append",
+      "text": "ning song of wrens. From somewhere on the hilltop; A lone coyote calls. The creek has hidden harp strings — In crystal waterfalls. And all these are, That there may be A lullaby For Stephanie.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V55_02_23_GenFt_Pioneer_Smith.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains the note, missing the main Pioneer Recipes content",
+      "action": "prepend",
+      "text": "PIONEER RECIPES Ruth Smith Are you becoming tired of the same old treats for parties or family nights? Try these old, old recipes for something new and delicious. Pioneer Wheat Place a cup of clean, dry wheat in a pre-heated (medium heat) heavy pan, containing just enough vegetable oil to cover the bottom. Stir about 5-10 minutes, until kernels are popped (they will pop without stirring, but scorch easily and taste burnt). Sprinkle with popcorn salt, stir, and spread out on a paper towel to cool. Keep small children's hands away until it does cool, as it can blister an overeager hand. Golden Parched Corn Dried kernels of sweet corn can be cooked the same way. They may take a trifle longer to pop, however.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_02_35_Poem_Organ_Robinson.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, cuts off at the end",
+      "action": "append",
+      "text": "O A Grandchild Lucille R. Perry When barely three begins her pilgrimage A picket fence surrounds her sovereign state. Small kingdom? Which of us can gauge Its vastness, though it ends beside the gate. Are we too old and traveled for this place, Its grand geography of wonders to recall? Then she will show us, laughter on her face— With fresh insight she contemplates it all. The bug that, prodded, rolls into a sphere, A frantic ant which seeks a shady crack, And if she crushes that. Which she holds dear, Of sentiment and tears there is no lack. The years will show her eyes more distant parts Than this some day, but let us take her hand, See through her eyes, reeducate our hearts As we return to a child's encompassed land 159",
+      "confidence": "medium",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_02_19_Poem_For_Kay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous poem",
+      "action": "trim_start",
+      "text": "What else is there to do except stop crying",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_02_33_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, missing header and some content",
+      "action": "prepend",
+      "text": "Birthday Congratulations",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "volume": 3,
+  "month": "October",
+  "year": 1916,
+  "timestamp": "20260315_120937",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "October_Vol3_07_Article_Semi-Annual_Relief_Society_Conference.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol3_08_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

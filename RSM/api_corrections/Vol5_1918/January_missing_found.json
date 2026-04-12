@@ -1,0 +1,38 @@
+{
+  "volume": 5,
+  "month": "January",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0229,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Revolutionary Patriots",
+      "printed_page": 3,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Revolutionary Patriots' listed on page 3 in the table of contents is not visible in any of the provided PDF page images. The images show advertisements, table of contents, and the poem 'Old Glory' but do not contain the Revolutionary Patriots article text.",
+      "api_usage": {
+        "input_tokens": 6892,
+        "output_tokens": 146,
+        "cost": 0.0229
+      },
+      "pdf_pages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}

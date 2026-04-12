@@ -1,0 +1,138 @@
+{
+  "volume": 2,
+  "month": "February",
+  "year": 1915,
+  "total_merged": 3,
+  "total_splits": 8,
+  "total_cost": 0.2808,
+  "files": [
+    {
+      "source_file": "February_Vol2_09_Notes_from_Field_Home_Gardening;'_75_Notes_from_the_Field.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Home Gardening",
+          "category": "Home_Science",
+          "author": null,
+          "start_boundary": "Home Gardening. 'There is seed-time and harvest time;\"",
+          "end_boundary": "prepared by the Utah Agricultural College, on \"Better Seeds,\" application.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field. Northern States Mission. \"There are",
+          "end_boundary": "Such a container is particularly suited for use on long golf courses and in harvest fields.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains two distinct sections: a Home Gardening article focused on seed preparation and planting advice, followed by Notes from the Field which includes mission reports and ends with a brief item about cement water tanks. The boundary between sections is clear where 'Notes from the Field' begins after the gardening content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10350,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 29389,
+        "output_tokens": 360,
+        "cost": 0.0936
+      }
+    },
+    {
+      "source_file": "February_Vol2_10_Editorial_Editorial.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . RELIEF SOCIETY MAGAZINE Editor Susa",
+          "end_boundary": "to glean and to save the wheat",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. Lesson I. Work and Business.",
+          "end_boundary": "the ancient prophets ?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "The file contains an Editorial section followed by Guide Lessons. The Editorial discusses human independence/dependence and the grain saving mission given to President Emmeline B. Wells. The Guide Lessons section includes Lesson I on Work and Business (Theology and Testimony) covering The Law of Faith, and Lesson III on Genealogy covering The Mission and Spirit of Elijah. The text appears to cut off mid-sentence in the Guide Lessons section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8064,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 28832,
+        "output_tokens": 347,
+        "cost": 0.0917
+      }
+    },
+    {
+      "source_file": "February_Vol2_11_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Lesson II: The Law of Faith",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 83 what were they but manifestations",
+          "end_boundary": "From Gospel Themes. Genealogy. Lesson III",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Lesson III: The Mission and Spirit of Elijah",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Genealogy. Lesson III ? The Mission and Spirit",
+          "end_boundary": "this great Society? Home Ethics and Art.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Ethics - Lesson IV: The Law of Obedience",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. ETHICS. Lesson IV",
+          "end_boundary": "Order of the Priesthood\"? ART. Lesson IV",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Art - Lesson IV: Art",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "ART. Lesson IV ? Art. \"Mine eye",
+          "end_boundary": "please notify the office at once.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Guide Lessons department: Theology/Testimony (Faith), Genealogy (Elijah), Home Ethics (Obedience), and Art. Each lesson has clear subject headings, content, and questions sections that mark the boundaries between lessons.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8714,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 29072,
+        "output_tokens": 554,
+        "cost": 0.0955
+      }
+    }
+  ]
+}

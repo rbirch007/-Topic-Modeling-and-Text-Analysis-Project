@@ -1,0 +1,42 @@
+{
+  "volume": 7,
+  "month": "March",
+  "year": 1920,
+  "timestamp": "20260315_120943",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol7_01_Article_To_the_Female_Relief_Society.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (232 chars removed)"
+    },
+    {
+      "file": "March_Vol7_07_Article_Beyond_Arsareth_Nephi_Anderson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "March_Vol7_08_Article_The_Official_Round_Table.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (447 chars added)"
+    },
+    {
+      "file": "March_Vol7_09_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol7_10a_Editorial_Editorial_The_Discipline_of_Obedience.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (829 chars added)"
+    },
+    {
+      "file": "March_Vol7_10b_Guide_Lessons_Guide_Lessons.txt",
+      "action": "append",
+      "result": "APPLIED append (499 chars added)"
+    }
+  ]
+}

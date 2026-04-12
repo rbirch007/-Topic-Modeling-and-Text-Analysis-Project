@@ -1,0 +1,265 @@
+{
+  "volume": 1,
+  "month": "May",
+  "year": 1914,
+  "total_files_checked": 12,
+  "files_correct": [
+    "V1_1914_May_01_Art_Relief.txt",
+    "V1_1914_May_02_Art_Editorial.txt",
+    "V1_1914_May_03_Art_Genealogy.txt",
+    "V1_1914_May_04_Art_HomeEthics.txt",
+    "V1_1914_May_05_Art_HomeGarden.txt",
+    "V1_1914_May_06_Art_Literature.txt",
+    "V1_1914_May_07_Art_Artand.txt",
+    "V1_1914_May_08_Art_Music.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_May_02_Art_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'the' before 'deep foundation'",
+      "action": "replace_content",
+      "text": "The mother's heart may be torn with sorrow over the death of her beautiful babe, but there may be no quality in that sorrow which disturbs the deep foundation of her perfect peace.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_May_02_Art_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 5)",
+      "action": "trim_end",
+      "text": "Discipline your children and yourselves, before asking for the priceless boon of perfect peace.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_03_Art_Genealogy.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 6 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_04_Art_HomeEthics.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 8 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 10 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 13)",
+      "action": "trim_end",
+      "text": "Squash (early) Summer, Crook Neck.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_06_Art_Literature.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 13 ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 14 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 15)",
+      "action": "trim_end",
+      "text": "For enlargement of this lesson, see Mrs. Alice Merrill Home's book, \"Devotees and Their Shrines.\" Price $1.00.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_08_Art_Music.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 15 ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V1_1914_May_09_Art_MONEY.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains primarily advertisement content and should be moved to Misc category",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_May_09_Art_MONEY.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'the Relief Society Bulletin' in the text",
+      "action": "replace_content",
+      "text": "All orders for Bulletins or Lesson Books, all money to be expended in this direction should be sent to the Relief Society Bulletin, Room 28 Bishop's Building.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_May_11_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "This file is miscategorized as Poetry when it contains advertisement content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_May_12_Art_SAMPLES.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains primarily advertisement content and should be moved to Misc category",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_May_14_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "This file is miscategorized as Poetry when it contains advertisement content",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Index to Lesson Statements",
+      "expected_page": 0,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Notices",
+      "expected_page": 16,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_May_08_Art_Music.txt"
+    }
+  ],
+  "notes": "Several files are missing page number headers from the OCR. Multiple files contain advertisement content that should be categorized as Misc rather than Article or Poetry. The Index to Lesson Statements appears to be missing entirely from the extracted files. The Notices section appears to be merged with the Music article.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_May_02_Art_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 5)",
+      "action": "trim_end",
+      "text": "Discipline your children and yourselves, before asking for the priceless boon of perfect peace.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 13)",
+      "action": "trim_end",
+      "text": "Squash (early) Summer, Crook Neck.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_06_Art_Literature.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 13 ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains text from next article (RELIEF SOCIETY BULLETIN 15)",
+      "action": "trim_end",
+      "text": "For enlargement of this lesson, see Mrs. Alice Merrill Home's book, \"Devotees and Their Shrines.\" Price $1.00.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_May_08_Art_Music.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 15 ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V1_1914_May_03_Art_Genealogy.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 6 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_04_Art_HomeEthics.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 8 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 10 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "issue_type": "bleed_start",
+      "description": "Missing page number from previous article",
+      "action": "prepend",
+      "text": "RELIEF SOCIETY BULLETIN 14 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

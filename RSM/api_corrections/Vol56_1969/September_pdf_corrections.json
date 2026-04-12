@@ -1,0 +1,19 @@
+{
+  "volume": 56,
+  "month": "September",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_09_12_SpFt_Indians_Hunter.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains completely wrong content - shows Rome/Vatican content instead of Indians of Guatemala article",
+      "action": "replace_content",
+      "text": "The content needs to be completely replaced with the actual Indians of Guatemala article text from the page image, but I cannot provide the full replacement text as it would require transcribing the entire article from the page image",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 2% OCR coverage"
+    }
+  ]
+}

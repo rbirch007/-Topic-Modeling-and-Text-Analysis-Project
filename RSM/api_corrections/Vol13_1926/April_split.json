@@ -1,0 +1,74 @@
+{
+  "volume": 13,
+  "month": "April",
+  "year": 1926,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1129,
+  "files": [
+    {
+      "source_file": "April_Vol13_14_Article_Amy_Brown_Lyman.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman CIVIC",
+          "end_boundary": "early in the year.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for June",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for June LESSON I Theology",
+          "end_boundary": "That its sparkle may amuse you.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for June - Literature and Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JUNE 213 LESSON III",
+          "end_boundary": "all about it.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JUNE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains three distinct sections: 1) Notes from the Field by Amy Brown Lyman covering civic improvement activities across various stakes, 2) Guide Lessons for June covering Lessons I and II (Theology/Testimony and Work/Business), and 3) The continuation of Guide Lessons covering Lessons III and IV (Literature on Amy Lowell and Social Service on intellectual problems of childhood). The literature lesson includes several complete poems by Amy Lowell.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 44151,
+      "tier": 2,
+      "pdf_pages": [
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244
+      ],
+      "api_usage": {
+        "input_tokens": 35323,
+        "output_tokens": 463,
+        "cost": 0.1129
+      }
+    }
+  ]
+}

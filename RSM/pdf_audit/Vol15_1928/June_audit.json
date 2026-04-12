@@ -1,0 +1,400 @@
+{
+  "volume": 15,
+  "month": "June",
+  "year": 1928,
+  "total": 20,
+  "ok": 19,
+  "flagged": 1,
+  "empty": 0,
+  "records": [
+    {
+      "file": "June_Vol15_00_BOARD.txt",
+      "body_len": 2740,
+      "article_words": 162,
+      "words_in_ocr": 162,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_00_CONTENTS.txt",
+      "body_len": 681,
+      "article_words": 57,
+      "words_in_ocr": 56,
+      "pct_in_ocr": 0.9825,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "contents"
+      ]
+    },
+    {
+      "file": "June_Vol15_00_Misc.txt",
+      "body_len": 3514,
+      "article_words": 202,
+      "words_in_ocr": 198,
+      "pct_in_ocr": 0.9802,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "contents",
+        "directory"
+      ]
+    },
+    {
+      "file": "June_Vol15_02a_Article_Relief_Society_Conference_Officers_Meeting_Morning_Session.txt",
+      "body_len": 35314,
+      "article_words": 1403,
+      "words_in_ocr": 1403,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_02b_Article_Officers_Meeting_Afternoon_Sessions.txt",
+      "body_len": 35350,
+      "article_words": 1404,
+      "words_in_ocr": 1403,
+      "pct_in_ocr": 0.9993,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "sessio"
+      ]
+    },
+    {
+      "file": "June_Vol15_02e_Article_Choristers_and_Organists_Department.txt",
+      "body_len": 2028,
+      "article_words": 147,
+      "words_in_ocr": 147,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_02g_Article_General_Session_Afternoon_Meeting.txt",
+      "body_len": 29406,
+      "article_words": 1246,
+      "words_in_ocr": 1246,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_03_Article_Officers'_Meeting_(Afternoon_Session).txt",
+      "body_len": 4385,
+      "article_words": 285,
+      "words_in_ocr": 285,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_05_Article_Literary_Section.txt",
+      "body_len": 18964,
+      "article_words": 990,
+      "words_in_ocr": 990,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_06_Article_Social_Service_Department.txt",
+      "body_len": 3523,
+      "article_words": 279,
+      "words_in_ocr": 279,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_07a_Article_Choristers_and_Organists_Department.txt",
+      "body_len": 18329,
+      "article_words": 894,
+      "words_in_ocr": 894,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_08a_Article_General_Session_Morning.txt",
+      "body_len": 23341,
+      "article_words": 988,
+      "words_in_ocr": 988,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_09_Article_General_Session_(Afternoon).txt",
+      "body_len": 19574,
+      "article_words": 904,
+      "words_in_ocr": 904,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_10_Article_Substitution_Alberta_Huish_Christensen.txt",
+      "body_len": 516,
+      "article_words": 59,
+      "words_in_ocr": 59,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_11_Article_Be_With_Me,_Lord_Annie_Pike_Greenwood.txt",
+      "body_len": 487,
+      "article_words": 48,
+      "words_in_ocr": 48,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_12_Article_June_Christie_Lund.txt",
+      "body_len": 2994,
+      "article_words": 244,
+      "words_in_ocr": 244,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_13_Article_The_Great_Salt_Lake_Linda_S_Fletcher.txt",
+      "body_len": 1038,
+      "article_words": 114,
+      "words_in_ocr": 114,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_14_Article_Work_and_Business.txt",
+      "body_len": 706,
+      "article_words": 63,
+      "words_in_ocr": 63,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_15_Article_Pictures.txt",
+      "body_len": 9434,
+      "article_words": 638,
+      "words_in_ocr": 638,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol15_15_Frontispiece_Frontispiece.txt",
+      "body_len": 651,
+      "article_words": 81,
+      "words_in_ocr": 62,
+      "pct_in_ocr": 0.7654,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "avarice",
+        "carrie",
+        "clutch",
+        "disdaining",
+        "doth",
+        "earthly",
+        "flow",
+        "gracious",
+        "grants",
+        "grim"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol15_No6_June_1928.txt",
+    "ocr_chars": 143014,
+    "ocr_unique_words": 3787,
+    "contents_xref": {
+      "entries_in_contents": 15,
+      "matched": 15,
+      "match_details": [
+        {
+          "title": "Frontispiece",
+          "page": null,
+          "file": "June_Vol15_15_Frontispiece_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Officers' Meeting (Morning Session)",
+          "page": 292,
+          "file": "June_Vol15_02a_Article_Relief_Society_Conference_Officers_Meeting_Morning_Session.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Officers' Meeting (Afternoon Session)",
+          "page": 298,
+          "file": "June_Vol15_03_Article_Officers'_Meeting_(Afternoon_Session).txt",
+          "score": 1.0
+        },
+        {
+          "title": "Theology Section",
+          "page": 304,
+          "file": "June_Vol15_05_Article_Literary_Section.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Literary Section",
+          "page": 310,
+          "file": "June_Vol15_05_Article_Literary_Section.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Social Service Department",
+          "page": 314,
+          "file": "June_Vol15_06_Article_Social_Service_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Choristers and Organists' Department",
+          "page": 318,
+          "file": "June_Vol15_02e_Article_Choristers_and_Organists_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "General Session (Morning)",
+          "page": 324,
+          "file": "June_Vol15_08a_Article_General_Session_Morning.txt",
+          "score": 1.0
+        },
+        {
+          "title": "General Session (Afternoon)",
+          "page": 334,
+          "file": "June_Vol15_02g_Article_General_Session_Afternoon_Meeting.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Substitution Alberta Huish Christensen",
+          "page": 341,
+          "file": "June_Vol15_10_Article_Substitution_Alberta_Huish_Christensen.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Be With Me, Lord Annie Pike Greenwood",
+          "page": 342,
+          "file": "June_Vol15_11_Article_Be_With_Me,_Lord_Annie_Pike_Greenwood.txt",
+          "score": 1.0
+        },
+        {
+          "title": "June Christie Lund",
+          "page": 343,
+          "file": "June_Vol15_12_Article_June_Christie_Lund.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Great Salt Lake Linda S. Fletcher",
+          "page": 344,
+          "file": "June_Vol15_13_Article_The_Great_Salt_Lake_Linda_S_Fletcher.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Work and Business",
+          "page": 348,
+          "file": "June_Vol15_14_Article_Work_and_Business.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Pictures",
+          "page": 350,
+          "file": "June_Vol15_15_Article_Pictures.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "June_Vol15_02b_Article_Officers_Meeting_Afternoon_Sessions.txt",
+        "June_Vol15_07a_Article_Choristers_and_Organists_Department.txt",
+        "June_Vol15_09_Article_General_Session_(Afternoon).txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "volume": 10,
+  "month": "April",
+  "year": 1923,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0234,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "April_Vol10_14d_Guide_Lessons_Guide_Lessons_for_June_b.txt",
+      "status": "delete",
+      "current_chars": 51,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header fragment 'LESSON II WORK AND BUSINESS (Second Week in June}' with no actual content. The PDF pages shown contain March lessons about Guardian Angels, not June lessons. This appears to be a misextracted header artifact.",
+      "api_usage": {
+        "input_tokens": 7006,
+        "output_tokens": 161,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        43,
+        44,
+        45,
+        46
+      ]
+    }
+  ]
+}

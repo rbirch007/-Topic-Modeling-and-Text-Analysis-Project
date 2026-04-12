@@ -1,0 +1,91 @@
+{
+  "volume": 17,
+  "month": "November",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 5,
+  "total_cost": 0.222,
+  "files": [
+    {
+      "source_file": "November_Vol17_14_Guide_Lessons_Guide_Lessons_for_January_1931.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for January, 1931 LESSON I",
+          "end_boundary": "chapters 25 and 26. LESSON II",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second",
+          "end_boundary": "constantly doing the things required. LESSON 3",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "Lesson 3 - Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 3 Literature (3rd Week in",
+          "end_boundary": "few words. LESSON 4 Social Service",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson 4 - Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 4 Social Service Fourth Week",
+          "end_boundary": "overhaul his verbal equipment. Gifts; By",
+          "confidence": "high",
+          "end_match_words": 4
+        },
+        {
+          "order": "e",
+          "title": "Gifts",
+          "category": "Poem",
+          "author": "Claire Stewart Boyer",
+          "start_boundary": "Gifts; By Claire Stewart Boyer In",
+          "end_boundary": "smile of His face.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains the complete Guide Lessons for January 1931 with 4 distinct lessons plus a poem at the end. Each lesson has clear boundaries marked by lesson numbers and titles. The lessons cover Theology, Work and Business, Literature, and Social Service topics.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 31042,
+      "tier": 1,
+      "pdf_pages": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752
+      ],
+      "api_usage": {
+        "input_tokens": 70968,
+        "output_tokens": 607,
+        "cost": 0.222
+      }
+    }
+  ]
+}

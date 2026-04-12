@@ -1,0 +1,94 @@
+{
+  "volume": 20,
+  "month": "November",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.0754,
+  "stats": {
+    "found": 0,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Indian Summer Ella J. Coulam",
+      "printed_page": 631,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Relief Society Conference Julia A. F. Lund",
+      "printed_page": 633,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Julia A. F. Lund",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 622-625, but the article listed on page 633 is not visible in these images. The images contain lesson department content about child development and theology/testimony topics, but do not include the Relief Society Conference article by Julia A. F. Lund.",
+      "api_usage": {
+        "input_tokens": 7545,
+        "output_tokens": 162,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        622,
+        623,
+        624,
+        625
+      ]
+    },
+    {
+      "title": "Relief Society Rally Miriam Jeanne Warnick Wright",
+      "printed_page": 665,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Miriam Jeanne Warnick Wright",
+      "confidence": "high",
+      "notes": "The article is not visible in any of the provided PDF page images (pages 654, 655, 656, 657). Page 665 where this article should appear is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7557,
+        "output_tokens": 151,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        654,
+        655,
+        656,
+        657
+      ]
+    },
+    {
+      "title": "Unusual Visits Marba C. Jacobson",
+      "printed_page": 680,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "\"Sweet Are the Uses of Adversity\" Vernessa M. Nagle",
+      "printed_page": 697,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Vernessa M. Nagle",
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 714-717) contain only advertisements and the magazine's table of contents/publication information. The article \"Sweet Are the Uses of Adversity\" by Vernessa M. Nagle, which should appear on page 697 according to the table of contents, is not present in these particular PDF page images.",
+      "api_usage": {
+        "input_tokens": 7570,
+        "output_tokens": 180,
+        "cost": 0.0254
+      },
+      "pdf_pages": [
+        714,
+        715,
+        716,
+        717
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "volume": 8,
+  "month": "June",
+  "year": 1921,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0473,
+  "stats": {
+    "found": 2,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Book Notices",
+      "printed_page": 372,
+      "status": "found",
+      "complete_text": "BOOK NOTICES\n\nOne of the most charming expositions of beauty and nature has recently been published under the title of God's Country, The Trail to Happiness, by James Oliver Curwood. Mr. Curwood himself says: \"Nature is my religion. And my desire—my ambition—the great goal I wish to achieve is to take my readers with me into the heart of this Nature. I love it, and I feel that they must love it—if I can only get the two acquainted.\"\n\nThe one objection that our Latter-day Saint readers would find in the book is that the author sets up Nature as a substitute for our Father in Heaven. The pantheistic, beautiful atmosphere of his book makes the subtle appeal of infidelity the more dangerous to young, uninformed minds. However, the readers of the Magazine would not be thus troubled in reading the book. This book is published by the Cosmopolitan Book Corporation, 119 West Fortieth Street, New York.\n\nA book, Christianity The Final Religion, written by a Christian minister who has had wide experience in Mohammedanism, has just been published by Eerdmans-Sevensma Co. Grand Rapids, Michigan, and is written by the Rev. Samuel M. Zwemer. The Chapter titles indicate the nature of the book and the conclusion reached by the Rev. author appeals to L. D. S. readers. Certainly the foundation thought of the triumph of Christianity will meet with general approval.",
+      "already_in_file": null,
+      "category": "Notes_from_Field",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete Book Notices section on page 372 of the PDF images",
+      "api_usage": {
+        "input_tokens": 6252,
+        "output_tokens": 428,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        401,
+        402,
+        403,
+        404
+      ]
+    },
+    {
+      "title": "Twilight Maud M. Cook",
+      "printed_page": 373,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "He Loves Me Abbie R. Madsen",
+      "printed_page": 373,
+      "status": "found",
+      "complete_text": "HE LOVES ME\n\nBy Abbie R. Madsen\n\nHe loves me, he loves me,\nThis I do know,\nFor his eyes and his lips\nThey tell me so.\n\nHe speaks not a word,\nJust laughs and crows,\nBut by these very signs\nA mother knows.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Abbie R. Madsen",
+      "confidence": "high",
+      "notes": "Found complete poem on page 403 of the PDF images. It's a short 8-line poem about a mother's love for her baby.",
+      "api_usage": {
+        "input_tokens": 6288,
+        "output_tokens": 219,
+        "cost": 0.0221
+      },
+      "pdf_pages": [
+        402,
+        403,
+        404,
+        405
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "volume": 20,
+  "month": "November",
+  "year": 1933,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3597,
+  "files": [
+    {
+      "source_file": "November_Vol20_03_Article_Opening_Session.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Conference",
+          "category": "Article",
+          "author": "Multiple speakers",
+          "start_boundary": "Opening Session Assembly Hall PRESIDENT LOUISE Y. ROBISON WE are",
+          "end_boundary": "shift this responsibility to the county or to the Church.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains a single comprehensive article covering the Relief Society Conference proceedings, including multiple speakers and sessions (Opening Session, Officers' Meeting, and various presentations). Despite its length and multiple speakers, it represents one cohesive conference report rather than separate articles. The content flows continuously from the opening remarks through various presentations to the closing discussion on unemployment insurance.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 85596,
+      "tier": 3,
+      "pdf_pages": [
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738,
+        739,
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746
+      ],
+      "api_usage": {
+        "input_tokens": 35794,
+        "output_tokens": 246,
+        "cost": 0.1111
+      }
+    },
+    {
+      "source_file": "November_Vol20_19_Article_Old_Grist_Mill.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Old Grist Mill",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "OLD GRIST MILL THAT ONCE STOOD WHERE LAFAYETTE",
+          "end_boundary": "LESSON DEPARTMENT 685 Teachers' Topic SELF EFFORT Individual",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - Self Effort",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic SELF EFFORT Individual soul growth and",
+          "end_boundary": "which will endure forever. Doctrine and 686 RELIEF",
+          "confidence": "high",
+          "end_match_words": 6
+        },
+        {
+          "order": "c",
+          "title": "Literature - Life and Literature",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature (Third Week in January) LIFE AND LITERATURE",
+          "end_boundary": "of the history of the England LESSON DEPARTMENT",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Foods and Eating Habits",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service. (Fourth Week in January) Foops AND",
+          "end_boundary": "good food habits.\" 141-142 Life Perfect (Second Honorable",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Life Perfect / Sweet are the Uses of Adversity",
+          "category": "Poem",
+          "author": "Alvaretta S. Engar / Vernessa M. Nagle",
+          "start_boundary": "Life Perfect (Second Honorable Mention in Eliza R.",
+          "end_boundary": "excuse our sloth under",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains multiple lesson sections from different subject areas (Teachers' Topic, Literature, Social Service) plus poems. The Old Grist Mill appears to be a photo caption/article at the beginning. The final section contains two poems that appear to be merged together.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 36855,
+      "tier": 1,
+      "pdf_pages": [
+        771,
+        772,
+        773,
+        774,
+        775,
+        776,
+        777,
+        778,
+        779,
+        780,
+        781,
+        782,
+        783,
+        784
+      ],
+      "api_usage": {
+        "input_tokens": 79463,
+        "output_tokens": 682,
+        "cost": 0.2486
+      }
+    }
+  ]
+}

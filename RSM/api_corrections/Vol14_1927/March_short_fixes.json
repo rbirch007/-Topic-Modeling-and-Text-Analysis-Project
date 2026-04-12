@@ -1,0 +1,40 @@
+{
+  "volume": 14,
+  "month": "March",
+  "year": 1927,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0241,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "March_Vol14_05_Article_Portrait_of_Dr_Valeria_H_Parker.txt",
+      "status": "delete",
+      "current_chars": 121,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be just a header artifact. The table of contents shows 'Portrait of Dr. Valeria H. Parker' as a separate entry from 'Dr. Valeria H. Parker', suggesting the portrait is likely just an image caption or photo credit, not a standalone article. No corresponding article content found in the provided PDF pages.",
+      "api_usage": {
+        "input_tokens": 7163,
+        "output_tokens": 173,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

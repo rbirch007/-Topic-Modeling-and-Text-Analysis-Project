@@ -1,0 +1,150 @@
+{
+  "volume": 53,
+  "month": "May",
+  "year": 1966,
+  "total_files_checked": 41,
+  "files_correct": [
+    "V53_05_01_GenFt_From_Near_and_Far.txt",
+    "V53_05_02_SpFt_Three_Taylor.txt",
+    "V53_05_03_Poem_Memories_Bowles.txt",
+    "V53_05_05_Poem_My_Roberts.txt",
+    "V53_05_06_Poem_A_Holden.txt",
+    "V53_05_07_Fict_The_Old_Littke.txt",
+    "V53_05_08_Poem_Claim_Coles.txt",
+    "V53_05_09_SpFt_Resembling_Olsen.txt",
+    "V53_05_10_Poem_Journal_Fairbairn.txt",
+    "V53_05_12_SpFt_Thoughts_Green.txt",
+    "V53_05_13_SpFt_A_Parker.txt",
+    "V53_05_15_GenFt_Editorial_Madsen.txt",
+    "V53_05_16_Fict_Washday_Yost.txt",
+    "V53_05_17_Poem_The_Kleinman.txt",
+    "V53_05_18_Poem_Meadow_Wrathall.txt",
+    "V53_05_19_The Home_Freezer_Bailey.txt",
+    "V53_05_20_Poem_Afterglow.txt",
+    "V53_05_21_The Home_Look_Roberts.txt",
+    "V53_05_22_Poem_Unto_Cook.txt",
+    "V53_05_23_The Home_Bulletin_Krambule.txt",
+    "V53_05_24_The Home_Much_of_Anderson.txt",
+    "V53_05_25_Poem_To_Chamberlin.txt",
+    "V53_05_26_The Home_Cousins_Wagenen.txt",
+    "V53_05_27_The Home_A_Pod_Jones.txt",
+    "V53_05_30_Fict_Wheat_Stewart.txt",
+    "V53_05_31_Poem_Memories_Tanner.txt",
+    "V53_05_32_SpFt_Magazine_Sharp.txt",
+    "V53_05_34_Poem_Blossomtime_Wangsg.txt",
+    "V53_05_35_GenFt_Notes_Activities.txt",
+    "V53_05_36_The Home_Work_Childs.txt",
+    "V53_05_37_Poem_From_Ames.txt",
+    "V53_05_38_Poem_Seasonal_Larsen.txt",
+    "V53_05_39_Poem_Sister-_Bills.txt",
+    "V53_05_40_Poem_Sunlit_Jacobson.txt",
+    "V53_05_41_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_05_04_SpFt_Literary.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'bmitted elsewhere' instead of beginning with 'nor submitted elsewhere'",
+      "action": "prepend",
+      "text": "nor su",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V53_05_11_Poem_Susquehanna_Bailey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content - shows Journal of Marriage text instead of Susquehanna River Valley poem",
+      "action": "note",
+      "text": "OCR gap - Susquehanna River Valley poem text not found in source OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_05_14_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete sentence about Patricia Gilroy instead of proper article beginning",
+      "action": "prepend",
+      "text": "Mrs. Evelyn Wood, a Latter-day Saint woman, in 1959, established in Washington, D. C., the first ''Evelyn Wood Reading Dynamics _ Institute.\"\" Today she manages fifty-nine institutes in the United States and Canada. She has traveled in many countries speaking on the importance of reading, giving demonstrations, opening institutes, and directing schoolteachers in the application of her methods. Her new technique for rapid reading has been featured in many national magazines, and she is the author of a textbook 'Reading Skills.'' Patricia Gilroy, a student at the University of Washington, is an expert figure skater.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_05_28_The Home_Spring_Isaacson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - shows recipe ingredients instead of Spring Dream Salad Dressing article text",
+      "action": "replace_content",
+      "text": "14 c. Vegetable oil 14 ¢. Light vinegar 14 c. Sugar dash paprika sprinkle of pepper 1 green pepper (medium sized, finely 1 can tomato soup cut) 1 tsp. Salt (or less for individual taste) 1 onion (size of small egg), minced 1 tsp. Mustard (prepared) 1% c. Finely cut celery Blend in your blender or mixmaster, or shake well in a bottle, all ingredients except the green pepper, onion, and celery. When the other ingredients are blended, toss in the cut green pepper, the minced onion, and the cut celery. Keep in a covered jar in the refrigerator. This wonderful dressing is delicious with lettuce and sliced tomatoes, or lettuce alone. Any combination of salad vegetables is delectable with this dressing. 364",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_05_29_The Home_Ismilda_Needle.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only the ending sentence, missing the main article content about Ismilda England",
+      "action": "prepend",
+      "text": "Ismilda Thueson Dorchues England, Ogden, Utah, throughout her long life, and during her many years as a homemaker, has found that her handicraft skills have helped to beautify her home, and the homes of her friends and relatives. She is an expert with the crochet hook, and makes many of her own patterns. She is currently busy making exquisite edgings on ~illowslips for her ward bazaar. She has made hundreds of quilts, and the homes of her six children, her grandchildren, and most of her great-grandchildren are adorned with beautifully designed and carefully stitched quilts. Ismilda Thueson Dorchues was married to William England in 1891, and they are said to be one of the longest married couples in the United States. Sister England has been a Relief Society class leader, a visiting teacher for more than fifty years, and she served as Relief Society president of Plain City (Utah) Ward for ten years. She is skilled in all household arts, and, in addition to her handicraft skills, she is noted for her cooking and baking. For",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_05_33_The Home_Time_of_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles mixed together",
+      "action": "trim_end",
+      "text": "Smile and wave goodbye.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Place of Prayer Marilyn McMeen Miller",
+      "expected_page": 321,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. Main issues are: 1) Some poems missing due to OCR gaps, 2) A few files have content bleeding between articles, 3) One file has completely wrong content substituted. The Place of Prayer poem appears to be in the OCR but was not extracted into a separate file.",
+  "validated_corrections": [
+    {
+      "file": "V53_05_14_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete sentence about Patricia Gilroy instead of proper article beginning",
+      "action": "prepend",
+      "text": "Mrs. Evelyn Wood, a Latter-day Saint woman, in 1959, established in Washington, D. C., the first ''Evelyn Wood Reading Dynamics _ Institute.\"\" Today she manages fifty-nine institutes in the United States and Canada. She has traveled in many countries speaking on the importance of reading, giving demonstrations, opening institutes, and directing schoolteachers in the application of her methods. Her new technique for rapid reading has been featured in many national magazines, and she is the author of a textbook 'Reading Skills.'' Patricia Gilroy, a student at the University of Washington, is an expert figure skater.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_05_29_The Home_Ismilda_Needle.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only the ending sentence, missing the main article content about Ismilda England",
+      "action": "prepend",
+      "text": "Ismilda Thueson Dorchues England, Ogden, Utah, throughout her long life, and during her many years as a homemaker, has found that her handicraft skills have helped to beautify her home, and the homes of her friends and relatives. She is an expert with the crochet hook, and makes many of her own patterns. She is currently busy making exquisite edgings on ~illowslips for her ward bazaar. She has made hundreds of quilts, and the homes of her six children, her grandchildren, and most of her great-grandchildren are adorned with beautifully designed and carefully stitched quilts. Ismilda Thueson Dorchues was married to William England in 1891, and they are said to be one of the longest married couples in the United States. Sister England has been a Relief Society class leader, a visiting teacher for more than fifty years, and she served as Relief Society president of Plain City (Utah) Ward for ten years. She is skilled in all household arts, and, in addition to her handicraft skills, she is noted for her cooking and baking. For",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_05_33_The Home_Time_of_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles mixed together",
+      "action": "trim_end",
+      "text": "Smile and wave goodbye.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_05_04_SpFt_Literary.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'bmitted elsewhere' instead of beginning with 'nor submitted elsewhere'",
+      "action": "prepend",
+      "text": "nor su",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

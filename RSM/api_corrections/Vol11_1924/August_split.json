@@ -1,0 +1,61 @@
+{
+  "volume": 11,
+  "month": "August",
+  "year": 1924,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1488,
+  "files": [
+    {
+      "source_file": "August_Vol11_16_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman PROGRAM",
+          "end_boundary": "The Juab Stake Relief Society observed the annual",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for October",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for October LESSON I Theology and",
+          "end_boundary": "savior of mankind. He sets forth the importance",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR OCTOBER"
+      ],
+      "notes": "The file contains two distinct articles as indicated in the contents. The first is 'Notes from the Field' by Amy Brown Lyman which includes program schedules, European Mission reports, and various stake reports. The second is 'Guide Lessons for October' which begins with theology lessons about parables. The text appears to cut off mid-sentence in the Guide Lessons section.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 20397,
+      "tier": 1,
+      "pdf_pages": [
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496
+      ],
+      "api_usage": {
+        "input_tokens": 47722,
+        "output_tokens": 376,
+        "cost": 0.1488
+      }
+    }
+  ]
+}

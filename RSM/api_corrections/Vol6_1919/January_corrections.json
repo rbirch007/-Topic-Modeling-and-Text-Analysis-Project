@@ -1,0 +1,49 @@
+{
+  "volume": 6,
+  "month": "January",
+  "year": 1919,
+  "total_files_checked": 21,
+  "files_correct": [
+    "January_Vol6_01_Thou_Dost_Not_Weep_to_Weep_Alone.txt",
+    "January_Vol6_02_My_Friend_Maud_Ellen_Baggarley_A_Tribute.txt",
+    "January_Vol6_03_In_Memoriam_President_Joseph_F_Smith.txt",
+    "January_Vol6_06_Vision_of_the_Redemption_of_the_Dead.txt",
+    "January_Vol6_07_General_John_J_Pershing.txt",
+    "January_Vol6_08_To_the_Departed_Year_1918.txt",
+    "January_Vol6_09_Lines_to_a_Tree_in_Winter.txt",
+    "January_Vol6_10_Heart_of_the_Household.txt",
+    "January_Vol6_11_Conservation_Cook_Book.txt",
+    "January_Vol6_12_Our_Indian_Cousins.txt",
+    "January_Vol6_13_Humility.txt",
+    "January_Vol6_14_The_Home_Coming.txt",
+    "January_Vol6_15_Construction_and_Reconstruction_in_the_Home.txt",
+    "January_Vol6_16_Dont_Worry.txt",
+    "January_Vol6_17_The_Official_Round_Table.txt",
+    "January_Vol6_18_On_the_Watch_Tower.txt",
+    "January_Vol6_19_Editorial.txt",
+    "January_Vol6_20_Guide_Lessons.txt",
+    "January_Vol6_21_A_Labor_of_Love.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol6_05_Appreciation_from_the_Three_Leading_Women_of_the.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents and advertisements instead of the appreciation article",
+      "action": "replace_content",
+      "text": "A TRIBUTE\n\nPresident Joseph F. Smith was to me the embodiment of greatness and goodness. I knew him from his childhood, through his youth and into his great maturity  knew him intimately and well and noted ever the strength of his character, and the onward and upward progress of his destiny. Surely no greater man has lived in this dispensation, save it were his uncle, the Prophet Joseph Smith. As I have been permitted to live through the long years, and see the many changes of the past century, I have noted not only the progress of the times, with its wonderful changes in industry, art, literature, invention and discovery, but also have I noted the advance of man, and I feel today, in thinking of the past, and the great men and women I have known, that among the leaders of the Latter-day Saints have been the purest, and brightest men and women of the age, and none of these excel our great leader who has just departed. Surely \"A great man has fallen in Israel today.\"\n\nWith all his strength and dignity President Smith was as tender as a little child. He loved children and was never happier than in their company, participating in their games or watching them at play. No one could be a more loyal friend, and to possess his friendship was truly a rich and treasured blessing. To his family he was not only a father, but a king, whom they adored with such reverence as is seldom shown to man, nor was this great fatherhood entirely confined to his immediate family, but enjoyed by the whole Church.\n\nI loved President Smith from his boyhood to the great age he attained. Through all the years he lived as true, as fine, as honest a life as befits the man destined to be a prophet, seer and revelator. His many gifts and graces endeared him to us all, and come what may, my heart will ever hold for him a lasting and enduring affection, through time and all eternity.\n\nEmmeline B. Wells, President of the General Board of the Relief Society.\n\nHERE WAS AN HONEST MAN\n\nPresident Joseph F. Smith  the soul of honor, unflinching in integrity, fearless for the right, strong as a lion in defense of truth, yet humble as a little child in obeying the Will of God, patient through trial, kind and considerate of the aged and afflicted, he was indeed a noble example of true manhood. \"An honest man is the noblest work of God.\" President Smith was worthy of the title. All honor to his memory. His life work is ended, but he will live forever in the hearts of those who knew and loved him.\n\n\"His words are bonds, his oaths are oracles, his heart as far from fraud as heaven from earth.\"\n\nMartha Horne Tingey, President of the General Board of the Y. L. M. I. A.\n\nA GREAT FATHER LOVE\n\nAll who have known President Joseph F. Smith have been impressed with the generous impulses which bestowed kindness and tempered his judgment of the weak and unfortunate. His love for his family sets him as an ideal for emulation. For all children he had the keenest and tenderest regard and interest, he could scarcely pass a little one without the bestowal of a loving touch or word. Children in his presence were always considered and respected. As a worker among children it has been my pleasure to ask advice and receive help in the conduct of the Primary associations of the Church, and it gives me great pleasure to record that every effort put forth to benefit the children met with his heartiest approval and support. At one time the General Board was impressed with the idea that the Primary associations could create a fund to be used for such unfortunate children as might need hospital and surgical assistance and which would react in ethical value to each child who voluntarily donated to such a worthy cause. The idea was taken to President Joseph F. Smith and it received the warmest sympathy, commendation and approval, and we know that he rejoiced with us when the idea became a fact, and as a result children were placed in the L. D. S. Hospital where with proper treatment they were restored to physical health. It may not be amiss to speak of a personal experience which gave me knowledge of this father-love we have all so much admired. In 1883 when my husband was away on a mission, two of the little ones in the family were afflicted with typhoid fever, and lay apparently at the point of death. The elders in the ward came repeatedly to administer to our children, but to the great grief of the two mothers there was little reason to believe that mortal power could preserve the lives of our dear ones. One night, a very anxious one in the family, there was being held in the old Social Hall a gathering at which was present our beloved President, Joseph F. Smith. He overheard some remark about the family of Elder Joseph H. Felt being seriously ill; he knew the father was on a mission and immediately the thought came, \"They have no father to help them.\" He called some of the brethren to him and invited them to accompany him. Leaving the party they went over a mile to give a blessing. His words of inspiration and love brought relief and joy to the anguished family, and to this day he is remembered as the instrument in the hands of the Lord in restoring to life our children. I have always been proud and grateful for my acquaintance with this noble man and that it has been my personal pleasure to know how wide and deep was the father-love that delighted to bless his own and his neighbors' children.\n\nLouie B. Felt, President of the General Board of the Primary Association.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Sentiments from the Presidency and General Board of the Relief Society",
+      "expected_page": 13,
+      "status": "merged_with_another",
+      "merged_into": "January_Vol6_03_In_Memoriam_President_Joseph_F_Smith.txt"
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issue is that file 05 contains table of contents and advertisements instead of the appreciation article. The 'Sentiments from the Presidency' article appears to be correctly merged into the In Memoriam article as it should be. All other articles are properly extracted with correct boundaries.",
+  "validated_corrections": [],
+  "failed_validations": []
+}

@@ -1,0 +1,62 @@
+{
+  "volume": 57,
+  "month": "July",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_07_02_Poem_Watercress_Miller.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (759 chars)"
+    },
+    {
+      "file": "V57_07_06_Poem_Third_Jorgensen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V57_07_07_Art_President_York.txt",
+      "action": "note",
+      "result": "INFO: File contains garbled OCR text that doesn't match the expected article about President Spafford being honored in New York"
+    },
+    {
+      "file": "V57_07_10_Poem_Cinquain_Harp.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (145 chars)"
+    },
+    {
+      "file": "V57_07_11_GenFt_Womans_Cannon.txt",
+      "action": "note",
+      "result": "INFO: File contains unrelated text instead of the Woman's Sphere article by Ramona W. Cannon"
+    },
+    {
+      "file": "V57_07_15_Poem_A_Thacker.txt",
+      "action": "append",
+      "result": "APPLIED append (183 chars added)"
+    },
+    {
+      "file": "V57_07_22_Poem_Wondering_Davis.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (237 chars)"
+    },
+    {
+      "file": "V57_07_24_Poem_San_Cutler.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1533 chars removed)"
+    },
+    {
+      "file": "V57_07_25_GenFt_Hobby_Department.txt",
+      "action": "note",
+      "result": "INFO: File contains partial hobby features content but is incomplete"
+    },
+    {
+      "file": "V57_07_34_Art_Tq_All_Subscribers.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1282 chars)"
+    }
+  ]
+}

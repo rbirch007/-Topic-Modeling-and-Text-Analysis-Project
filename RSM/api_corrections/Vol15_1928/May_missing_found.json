@@ -1,0 +1,104 @@
+{
+  "volume": 15,
+  "month": "May",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0984,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "My Mother's Ring Grace Ingles Frost",
+      "printed_page": 234,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Grace Ingles Frost",
+      "confidence": "high",
+      "notes": "The article 'My Mother's Ring' by Grace Ingles Frost listed on page 234 is not visible in the provided PDF images (pages 238-241). The images show 'Little Mother' by Josephine Spencer starting on page 238, but do not contain the earlier article from page 234.",
+      "api_usage": {
+        "input_tokens": 7463,
+        "output_tokens": 166,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        238,
+        239,
+        240,
+        241
+      ]
+    },
+    {
+      "title": "Gifts for Social Uplift",
+      "printed_page": 261,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Gifts for Social Uplift' is not present in the provided PDF page images (pages 277-280). The images show advertisements and the magazine cover/contents page, but do not contain page 261 where this article should appear according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7451,
+        "output_tokens": 153,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280
+      ]
+    },
+    {
+      "title": "Five Generations",
+      "printed_page": 264,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Five Generations' is not present in any of the four PDF page images provided (pages 277-280). The images show advertisements and the table of contents page, but do not contain page 264 where this article should appear according to the contents listing.",
+      "api_usage": {
+        "input_tokens": 7435,
+        "output_tokens": 146,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280
+      ]
+    },
+    {
+      "title": "Work and Business",
+      "printed_page": 288,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 277-280, but page 288 where 'Work and Business' should appear is not included in these images. The visible pages contain advertisements and the table of contents, but not the missing article.",
+      "api_usage": {
+        "input_tokens": 7435,
+        "output_tokens": 138,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280
+      ]
+    }
+  ]
+}

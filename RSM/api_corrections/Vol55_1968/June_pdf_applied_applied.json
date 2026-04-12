@@ -1,0 +1,22 @@
+{
+  "volume": 55,
+  "month": "June",
+  "year": 1968,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_06_13_Fict_The_Yost.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2650 chars added)"
+    },
+    {
+      "file": "V55_06_32_Poem_Snail.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 21% OCR coverage"
+    }
+  ]
+}

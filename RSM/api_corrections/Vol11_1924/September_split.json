@@ -1,0 +1,219 @@
+{
+  "volume": 11,
+  "month": "September",
+  "year": 1924,
+  "total_merged": 2,
+  "total_splits": 13,
+  "total_cost": 0.3067,
+  "files": [
+    {
+      "source_file": "September_Vol11_02_Article_The_Mountains_Shall_be_Laid_Low_Thomas_L_Martin.txt",
+      "num_articles_found": 11,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Mountains Shall be Laid Low",
+          "category": "Article",
+          "author": "Thomas L. Martin",
+          "start_boundary": "The Mountains Shall be Laid Low Thomas",
+          "end_boundary": "perfect as our Father in heaven is",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Editorial—Another Centenary—September 1824-1924",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Another Centenary---September, 1824-1924 The approach of",
+          "end_boundary": "numbered with that people. \"I am a",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Elizabeth Claridge McCune",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Elizabeth Claridge\" McCune Elizabeth Claridge McCune has",
+          "end_boundary": "eternal riches shall surely be her reward.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Cache Valley",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Cache Valley The Cache Valley people covered",
+          "end_boundary": "to make a city beautiful.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "School Lunches",
+          "category": "Article",
+          "author": "Ethel Melville",
+          "start_boundary": "School Lunches Ethel Melville, University of",
+          "end_boundary": "expansion of the institution, from a",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Etiquette",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Etiquette Etiquette is a subject that",
+          "end_boundary": "considerately and tactfully used to keep",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "The New Dentist",
+          "category": "Article",
+          "author": "Pearl Nelson",
+          "start_boundary": "The New Dentist By Pearl Nelson",
+          "end_boundary": "and your tooth",
+          "confidence": "medium"
+        },
+        {
+          "order": "h",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown",
+          "end_boundary": "secretary-treasurer.",
+          "confidence": "high"
+        },
+        {
+          "order": "i",
+          "title": "Cheerfulness",
+          "category": "Poem",
+          "author": "Coral J. Black",
+          "start_boundary": "Cheerfulness Coral J. Black All Nature's",
+          "end_boundary": "To unalloyed, unhindered Cheerfulness.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "j",
+          "title": "Guide Lessons for November—Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I",
+          "end_boundary": "begin to serve riches?",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "k",
+          "title": "Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in November)",
+          "end_boundary": "this story will not be difficult",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER",
+        "EDITORIAL",
+        "NOTES FROM THE FIELD",
+        "ETIQUETTE"
+      ],
+      "notes": "This file contains the main content articles from the September 1924 issue. The file appears to cut off mid-sentence in the Literature lesson section, suggesting it may be incomplete or continue in another file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': end_boundary not found",
+        "Split 'i': end_boundary not found",
+        "Split 'j': end_boundary not found",
+        "Split 'k': start_boundary not found",
+        "Split 'k': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 30088,
+      "tier": 1,
+      "pdf_pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "api_usage": {
+        "input_tokens": 55719,
+        "output_tokens": 1171,
+        "cost": 0.1847
+      }
+    },
+    {
+      "source_file": "September_Vol11_12_Literature_Literature.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Literature - Nathaniel Hawthorne's Writings",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II WorK AND BUSINESS LESSON III",
+          "end_boundary": "this story will not be difficult to obtain.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service - Problems of Behavior",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth week in",
+          "end_boundary": "the man who THINKS he CAN. ?Exchange.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains two distinct lesson sections from the Guide Lessons for November: Lesson III on Literature (Nathaniel Hawthorne's Writings) and Lesson IV on Social Service (Problems of Behavior). The file also includes a Teachers' Topic section and a poem at the end. The lessons are clearly separated by their Roman numeral headings and distinct subject matter.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11360,
+      "tier": 1,
+      "pdf_pages": [
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569
+      ],
+      "api_usage": {
+        "input_tokens": 38901,
+        "output_tokens": 354,
+        "cost": 0.122
+      }
+    }
+  ]
+}

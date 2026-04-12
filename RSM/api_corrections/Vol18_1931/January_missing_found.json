@@ -1,0 +1,182 @@
+{
+  "volume": 18,
+  "month": "January",
+  "year": 1931,
+  "mode": "find_missing",
+  "total_missing": 9,
+  "total_searched": 9,
+  "total_cost": 0.2399,
+  "stats": {
+    "found": 6,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Portrait of Sarah Ahlstrom Nelson Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "SARAH AHLSTROM NELSON\n\n[This is a portrait photograph of Sarah Ahlstrom Nelson, showing a middle-aged woman with wavy dark hair, wearing a dark dress with a V-neck and a pearl necklace. The photograph appears to be a formal portrait in black and white.]",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the frontispiece portrait of Sarah Ahlstrom Nelson on one of the PDF pages. This is a photographic portrait with caption, not a text article.",
+      "api_usage": {
+        "input_tokens": 7407,
+        "output_tokens": 199,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "title": "The L. D. S. Children's Hospital By Vera P. Walquist",
+      "printed_page": 18,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Vera P. Walquist",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 11-14). The images contain other articles including 'Social Work' by Amy Brown Lyman and 'Summer Camps of the Y.L.M.I.A.' by Rosetta W. Bennett, but the Children's Hospital article that should appear on page 18 is not visible in these particular pages.",
+      "api_usage": {
+        "input_tokens": 7433,
+        "output_tokens": 197,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "title": "Municipal Hospitals in Alberta, Canada By Dora H. Jacobs",
+      "printed_page": 32,
+      "status": "found",
+      "complete_text": "Municipal Hospitals in Alberta, Canada\nBy Dora H. Jacobs\n\nIN order to give a concrete example of how the Municipal Hospital Act operates, I will cite the Cardston Municipal Hospital District. In this district there are five units or subdivisions—four rural and one urban unit. The urban unit is the Town of Cardston. In the rural units there is an area of 508,197 acres. The district serves about 7000 people.\n\nBefore a hospital district is established, a petition is sent to the Minister of Health of the Province, which petition is signed by at least 10% of the rate payers or tax payers in the particular units seeking to be formed into a district. This petition contains the proposed hospital scheme. The scheme sets forth on what terms and conditions the rate payers desire to be formed into a district.\n\nAfter receiving the approval of the Minister, the scheme is voted on by the hospital rate payers in the proposed district. If the scheme is ratified by vote, it then becomes the constitution of the said hospital district.\n\nEach unit has a representative on the hospital board which forms the governing body of the hospital district. The board has powers for carrying out the provisions of the hospital scheme. Some of the principal provisions of the scheme are issuing bonds or debentures, erecting or purchasing a hospital, engaging the hospital staff, and in general assuming of the supervision of the said hospital.\n\nThe revenue of the hospital is raised by the hospital board making a requisition for certain funds each year from each of the five contributing hospital units. In the urban unit, the assessment and collection of the taxes or rates is made by the council of such urban unit. In the rural units the assessment is made and collected by the Provincial government.\n\nWhere rate payers' taxes amount to $6.00 yearly, the rate payer and all members of his or her household obtain all hospital privileges for $1.00 per day. These hospital privileges do not include the cost of a physician in performing operations. Persons who are not rate payers or who are not hospital supporters pay $4.50 per day for hospital privileges besides paying the usual fees for surgical operations.\n\nAny person who resides in the hospital district, and who pays $6.00 to the hospital board before the first day of March each year, becomes a hospital supporter and is entitled with all of the members of his or her household, to the $1.00 per day rate. This is a very generous provision for people of moderate means to obtain hospital privileges for a very nominal sum.\n\nSo far the scheme has worked out very well, and has been a source of great assistance to people who require hospital privileges.\n\nWe have a splendid Indian Hospital which is built on the Indian Reserve just across the road from the Cardston Municipal Hospital. The Indian Hospital is equipped with most of the latest devices used in hospitals. All the care taking is done under the direction of the Federal Government, while one of our local doctors has charge of all medical and surgical work. Hundreds of Indians receive medical attention there yearly, and their women during maternity, receive every attention as do the white women in our own hospital. The Indian Hospital is maintained wholly by the Federal Government and all Indians are admitted free of charge.\n\nIt is working a wonderful reformation among the Lamanite race, especially in the way of sanitary measures.\n\nOur Provincial Government also furnishes us with a travelling clinic consisting of a physician, surgeon, dentist and several nurses who travel around through the thinly populated rural areas of the Province, more especially where there are no hospital conveniences. These clinics do a great deal of good. We are indeed proud of the most excellent service rendered by our Provincial and Federal governments along these lines, for we feel that no governments could show greater interest in the health and well being of their subjects, than does ours.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Dora H. Jacobs",
+      "confidence": "high",
+      "notes": "Found complete article on page 32-33 of the PDF images. The article describes the Municipal Hospital Act system in Alberta, Canada, using the Cardston Municipal Hospital District as an example.",
+      "api_usage": {
+        "input_tokens": 7421,
+        "output_tokens": 991,
+        "cost": 0.0371
+      },
+      "pdf_pages": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "title": "IGE) By Else E. Barrett",
+      "printed_page": 33,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Whitehouse Conference on Childhood Health and Protection",
+      "printed_page": 48,
+      "status": "found",
+      "complete_text": "Whitehouse Conference on Childhood Health and Protection\n\nTHE United States is greatly blessed in having as its chief executive President Herbert Hoover, a man who is so vitally interested in human beings. His love for children is deep, and his interest in their welfare is one of his marked characteristics. Shortly after he became president, he announced that he would call a conference on child health and protection, with the object in view of finding out what ought to be done and the best way of doing it. At his call in 1929, the body met, and after several sessions adjourned to carry on a year's research. Twelve hundred experts have delved into the subject and in November, 1930, brought with them their printed report to the White House Conference on Child Health and Protection. For the use of this conference, foundations, educational institutions, and commissions have carried on investigations and have made surveys throughout the United States. This conference is not a governmental affair but is an unofficial service rendered in response to President Hoover's call. It is financed by funds given by those who, like the President, are interested in child welfare, and by grants from foundations and associations that are interested in child study. Secretary Wibur said these twelve hundred investigators are assembling all that it is possible to find out about children, to be sifted, sorted, and given back to those who have practical every-day dealings with them.\n\nPresident Hoover himself opened the White House Conference on Child Health and Protection. He said:\n\nFROM your explorations into the mental and moral endowment and opportunities of children will develop new methods to inspire their creative work and play, to substitute love and self discipline for the rigors of rule, to guide their recreations into wholesome channels, to steer them past the reefs of temptation, to develop their character and to bring them to adult age in tune with life, strong in moral fiber and prepared to play more happily their part in the productive tasks of society.\n\n\"The problems of the child are not always the problems of the child alone. In the vision of the whole of our social fabric, we have loosened new inhibitions, new energies; we have produced a complexity of life for which there is no precedent. With machines ever enlarging man's power and capacity, with electricity extending over the world its magic, with the air giving us a wholly new realm, our children must be prepared to meet entirely new contacts and new forces. They must be physically strong and mentally placed to stand up under the increasing pressure of life. Their problem is not alone one of physical health, but of mental, emotional and spiritual health.\n\n\"These are the problems that I charge you to answer. This task that you have come here to perform has never been done before. These problems are not easily answered, they reach the very root of our national life. We need to meet them squarely and to accuse ourselves as frankly as possible, to see all the implications that trail in our wake, and to place the blame where it lies and set resolutely to attack it.\"\n\nPresident Hoover told the conference that the problem falls into three groups: \"First, the protection and stimulation of the normal child; second, aid to the physically defective and handicapped child; third, the problems of the delinquent child.\"\n\nHe said that of 45,000,000 children, 10,000,000 are deficient, with more than 80% of these not receiving the necessary attention, and that \"we must get to the cause of their handicaps from the beginnings of their lives; we must not leave one of them uncared for.\"\n\nIn dealing with the complex problems of the delinquent child, \"we need to turn the methods of inquiry from the punishment of delinquency to the causes of delinquency. * * * It is not the delinquent child that is at the bar of judgment, but society itself.\"\n\n* * * \"Any labor which stunts growth, either physical or mental, that limits education, that deprives children of the right of comradeship, of joy and play, is sapping the next generation.\" * * * \"In the last half a century we have herded 50,000,000 more human beings into towns and cities, where the whole setting is new to the race. We have created highly congested areas with a thousand changes resulting in the swift transition from a rural and agrarian people to an urban, industrial nation. Perhaps the widest range of difficulties with which we are dealing in the betterment of children grows out of their crowding into cities.\" * * * \"Problems of sanitation and public health loom in every direction. Delinquency increases with congestion. Overcrowding produces disease and contagion. The child's natural play place is taken from him. His mind is stunted by the lack of imaginative surroundings and lack of contact with the fields, streams, trees and birds. Home life becomes more difficult. Cheerless homes produce morbid minds. Our growth of town life unendingly imposes such problems as milk and food supplies, for we have shifted these children from a diet of 10,000 years' standing.\n\n\"Nor is the problem one solely of the city child. We have grave responsibilities to the rural child. Adequate expert service should be as available to him from maternity to maturity.\"\n\nELDER DAVID O. McKAY, on his return from the conference, said: \"The conference fulfilled its purpose in bringing to the attention of the American people conditions that need remedying, but the great problem of how to do this is still unsolved. To translate theory into activity and practice is now the responsibility and duty of states and local communities. May these earnest seekers soon find the way to aid children whether they are normal, physically defective or delinquent, to a finer and fuller life.\n\nMan does not live to himself alone. He is part of the social order, \"verily, he is his brother's keeper.\" His duty is to minister to his fellows. Now, however, people are realizing that it takes training to constructively help the unfortunate. Ofttimes, well-intentioned people have, in their methods of giving, hindered rather than helped. To lead people to help themselves is the keynote of modern social work. Many in the past have been pauperized by the methods used. He who would intelligently help the needy, the unfortunate, the afflicted, should have an understanding heart, a deep sympathy, ability to make a correct diagnosis, and ability to keep things to himself.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete article starting on page 48 and continuing to page 50. The article discusses President Hoover's White House Conference on Child Health and Protection, including his opening remarks and Elder David O. McKay's comments upon returning from the conference.",
+      "api_usage": {
+        "input_tokens": 7397,
+        "output_tokens": 1596,
+        "cost": 0.0461
+      },
+      "pdf_pages": [
+        52,
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "title": "One Hundred Years",
+      "printed_page": 50,
+      "status": "found",
+      "complete_text": "One Hundred Years\n\n\"One Hundred Years\" briefly crystallizes in permanent form the achievements of the century that began April 6, 1830, and closed April 6, 1930. The following subjects are treated: \"The First Century of the Restoration,\" \"Why We Build Temples,\" \"Centennial Conference of the Church of Jesus Christ of Latter-day Saints,\" \"The Message of the Ages,\" \"The Relief Society of the Church,\" \"Latter-day Saint Sunday Schools,\" \"Young Men's Mutual Improvement Association,\" \"Young Ladies' Mutual Improvement Association,\" \"The Primary Association,\" \"Latter-day Saint Missions,\" \"Community Life Among the Latter-day Saints,\" \"Latter-day Saint Women,\" \"Outstanding Events of the Century,\" \"How Centennial News was Circulated.\" Excerpts from addresses delivered by the First Presidency, Council of the Twelve, and Patriarch at the Centennial Conference and a few excerpts from newspaper editorials are also included.\n\nThe book is a fine example of the printer's art and is beautifully illustrated. George D. Pyper, under whose able editorship it was issued must feel delighted with the outcome of his efforts.\n\nThis souvenir will be treasured in the homes of the Latter-day Saints. It will be enjoyed by those who love the beautiful. It will be of deep interest to all who like to mark progress and survey the genesis of great movements.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found as a book review/announcement in the editorial section on page 50",
+      "api_usage": {
+        "input_tokens": 7373,
+        "output_tokens": 434,
+        "cost": 0.0286
+      },
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "title": "She Never Refused to Sing (Poem) By Linda S. Fletcher",
+      "printed_page": 66,
+      "status": "found",
+      "complete_text": "She Never Refused to Sing\nBy Linda S. Fletcher\n\nShe was an old, old lady\nUpon whose gentle face,\nA life of love and service\nHad left a kindly trace.\n\n\"I sang for the Queen,\" she murmured,\n\"I might have won wealth and fame;\nThe annals of earth's illustrious\nMight have glorified my name.\"\n\n\"But I joined a humble people;\nIn trial, my gift would bring\nTo them a comforting pleasure,\nAnd I never refused to sing.\"\n\n\"Now I am old and feeble,\nBut still, 'tis a marvelous thing,\nI have never lost my talent,\nI still have the power to sing.\"\n\n\"Last Night,\" and her eyes grew misty,\n\"I trod the streets of gold;\nAnd, it seemed, in this heavenly vision,\nThat I sang, as I sang of old.\"\n\n\"And I know, very soon, my daughter,\nMy spirit in joy will wing\nTo the blest abode of my loved ones,\nAnd I'll sing for my Heavenly King.\"",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Linda S. Fletcher",
+      "confidence": "high",
+      "notes": "Found complete poem on page 66 of the PDF images. The poem tells the story of an elderly woman who chose to use her singing talent to serve humble people rather than pursue fame and wealth.",
+      "api_usage": {
+        "input_tokens": 7421,
+        "output_tokens": 434,
+        "cost": 0.0288
+      },
+      "pdf_pages": [
+        72,
+        73,
+        74,
+        75
+      ]
+    },
+    {
+      "title": "Procrastination (Poem) By Alice Morrill",
+      "printed_page": 66,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Conventions and Conferences",
+      "printed_page": 67,
+      "status": "found",
+      "complete_text": "Conventions and Conferences\n\nGeneral Board members visited Relief Society stake conventions and conferences, which were held in the stakes during 1930, as follows:\n\nAlberta—Mrs. Mary C. Kimball.\nAlpine—Mrs. Hazel H. Greenwood.\nBannock—Mrs. Julia A. Child.\nBear Lake—Mrs. Elise B. Alder.\nBear River—Mrs. Nettie D. Bradford.\nBeaver—Mrs. Inez K. Allen.\nBenson—Mrs. Julia A. Child.\nBig Horn—Mrs. Louise Y. Robison.\nBlackfoot—Mrs. Louise Y. Robison.\nBlaine—Mrs. Louise Y. Robison.\nBoise—Mrs. Ethel R. Smith.\nBox Elder—Mrs. Rosannah C. Irvine.\nBurley—Mrs. Julia A. Child.\nCache—Mrs. Amy W. Evans.\nCarbon—Mrs. Elise B. Alder.\nCassia—Mrs. Elise B. Alder.\nCottonwood—Mrs. Louise Y. Robison.\nCurlew—Mrs. Lotta Paul Baxter.\nDeseret—Mrs. Annie Wells Cannon.\nDuchesne—Mrs. Cora L. Bennion.\nEast Jordan—Mrs. Cora L. Bennion.\nEmery—Mrs. Julia A. F. Lund.\nEnsign—Mrs. Cora L. Bennion, Mrs. Mary C. Kimball.\nFranklin—Mrs. Ida Peterson Beal.\nFremont—Mrs. Kate M. Barker.\nGarfield—Mrs. Nettie D. Bradford.\nGranite—Mrs. Nettie D. Bradford, Mrs. Emeline Y. Nebeker.\nGrant—Mrs. Nettie D. Bradford, Miss Sarah M. McLelland.\nGunnison—Mrs. Julia A. F. Lund.\nHollywood—Mrs. Nettie D. Bradford.\nHyrum—Mrs. Lotta Paul Baxter.\nIdaho—Mrs. Elise B. Alder.\nIdaho Falls—Mrs. Hazel H. Greenwood.\nJuab—Mrs. Emeline Y. Nebeker.\nJuarez—Mrs. Jennie B. Knight.\nKanab—Mrs. Ida Peterson Beal.\nKolob—Mrs. Emeline Y. Nebeker.\nLehi—Mrs. Julia A. Child.\nLethbridge—Mrs. Louise Y. Robison.\nLiberty—Mrs. Julia A. F. Lund, Mrs Mary C. Kimball.\nLogan—Mrs. Marcia K. Howells.\nLos Angeles—Mrs. Nettie D. Bradford.\nLost River—Mrs. Louise Y. Robison.\nLyman—Mrs. Marcia K. Howells.\nMalad—Mrs. Nettie D. Bradford.\nMaricopa—Mrs. Jennie B. Knight.\nMillard—Mrs. Inez K. Allen.\nMinidoka—Mrs. Rosannah C. Irvine.\nMoapa—Mrs. Lotta Paul Baxter.\nMontpelier—Mrs. Julia A. Child.\nMorgan—Mrs. Kate M. Barker.\nMoroni—Mrs. Jennie B. Knight.\nMount Ogden—Mrs. Kate M. Barker, Mrs. Hazel H. Greenwood.\n\nNebo—Mrs. Ida Peterson Beal.\nNevada—Mrs. Jennie B. Knight.\nNorth Davis—Mrs. Lotta Paul Baxter.\nNorth Sanpete—Mrs. Inez K. Allen.\nNorth Sevier—Mrs. Mary C. Kimball.\nNorth Weber—Mrs. Elise B. Alder.\nOgden—Mrs. Ethel R. Smith.\n\nOneida—Mrs. Lotta Paul Baxter.\nOquirrh—Mrs. Annie Wells Cannon, Miss Sarah M. McLelland\nPalmyra—Mrs. Hazel H. Greenwood.\nPanguitch—Mrs. Kate M. Barker.\nParowan—Mrs. Cora L. Bennion.\nPioneer—Mrs. Julia A. Child, Mrs. Emeline Y. Nebeker.\nPocatello—Mrs. Lotta Paul Baxter.\nPortneuf—Mrs. Emeline Y. Nebeker.\nRaft River—Mrs. Ida Peterson Beal.\nRigby—Mrs. Marcia K. Howells.\nRoosevelt—Mrs. Inez K. Allen.\nSt. George—Mrs. Marcia K. Howells.\nSt. Johns—Mrs. Ethel R. Smith.\nSt. Joseph—Mrs. Jennie B. Knight.\nSalt Lake—Mrs. Ethel R. Smith.\nSan Francisco—Mrs. Jennie B. Knight.\nSan Juan—Mrs. Amy W. Evans.\nSan Luis—Mrs. Kate M. Barker.\nSevier—Mrs. Inez K. Allen.\nSharon—Mrs. Jennie B. Knight.\nShelley—Mrs. Julia A. F. Lund.\nSnowflake—Mrs. Ethel R. Smith.\nSouth Davis—Mrs. Amy W. Evans.\nSouth Sanpete—Mrs. Emeline Y. Nebeker.\nSouth Sevier—Mrs. Mary C. Kimball.\nStar Valley—Mrs. Ethel R. Smith.\nSummit—Mrs. Cora L. Bennion.\nTaylor—Mrs. Louise Y. Robison, Mrs. Mary C. Kimball.\nTeton—Mrs. Ethel R. Smith.\nTimpanogos—Miss Sarah M. McLelland.\nTintic—Mrs. Rosannah C. Irvine.\nTintic—Mrs. Inez K. Allen.\nTooele—Mrs. Julia A. F. Lund.\nTwin Falls—Mrs. Ida Peterson Beal.\nUintah—Mrs. Marcia K. Howells.\nUnion—Mrs. Louise Y. Robison.\nUtah—Mrs. Julia A. F. Lund.\nWasatch—Mrs. Kate M. Barker.\nWayne—Mrs. Ida Peterson Beal.\nWeber—Mrs. Julia A. F. Lund, Mrs. Emma A. Empey.\nWest Jordan—Mrs. Elise B. Alder.\nWoodruff—Mrs. Rosannah C. Irvine.\nYellowstone—Mrs. Hazel H. Greenwood.\nYoung—Mrs. Hazel H. Greenwood.\nZion Park—Mrs. Inez K. Allen.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete list of General Board members who visited Relief Society stake conventions and conferences in 1930, organized alphabetically by stake name with corresponding board member assignments.",
+      "api_usage": {
+        "input_tokens": 7377,
+        "output_tokens": 1778,
+        "cost": 0.0488
+      },
+      "pdf_pages": [
+        69,
+        70,
+        71,
+        72
+      ]
+    }
+  ]
+}

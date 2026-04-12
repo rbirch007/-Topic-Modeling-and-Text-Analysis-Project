@@ -1,0 +1,52 @@
+{
+  "volume": 9,
+  "month": "March",
+  "year": 1922,
+  "total_files_checked": 16,
+  "files_correct": [
+    "March_Vol9_03_Frontispiece_Officers_of_First_Relief_Society_in_Denmark_Frontispiece.txt",
+    "March_Vol9_04_Article_Relief_Society_Beginnings_in_Foreign_Lands.txt",
+    "March_Vol9_05_Article_A_Loan_Kate_B._Curtis.txt",
+    "March_Vol9_06_Article_Alexander_Neibaur_Susa_Young_Gates.txt",
+    "March_Vol9_07_Article_A_Mother's_Plea_Louise_Gulbransen.txt",
+    "March_Vol9_08_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+    "March_Vol9_09_Article_Uncommon_Honesty_Milton_Bennion.txt",
+    "March_Vol9_10_Article_I_Am_Going_Back_to_Father_Marie_Jensen.txt",
+    "March_Vol9_11_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+    "March_Vol9_12_Article_Women_and_the_Disarmament_Conference_Nancy_A._Leatherwood.txt",
+    "March_Vol9_13_Article_Sunshine_on_the_Peak_Nina_B._McKean.txt",
+    "March_Vol9_14_Article_The_General_Procession_James_H._Anderson.txt",
+    "March_Vol9_15_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "March_Vol9_16a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Forgiveness.txt",
+    "March_Vol9_16c_Guide_Lessons_Lesson_III_-_Literature_-_Hymns_of_Alexander_Neibaur.txt",
+    "March_Vol9_16d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Intellectual_Leadership_in_the.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol9_01_Article_The_Questions_Answered_Vera_Lee_Kearl.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of the actual article text",
+      "action": "replace_content",
+      "text": "THE QUESTIONS ANSWERED. Vera Lee Kearl. « Twinkle, twinkle, little star! How I wonder what you are, Shining, laughing, dancing there; Making night so bright and fair; Smiling from the heaven's dome; Bidding us a welcome home. Do you God's bright message know That you smile the long night so? Standing here beneath the sky Wondering, asking, seeking why— Wishing I could pierce the blue, Tell me, star-bright, who are you? Laughing, dancing, darling child; Sparkling blue-eyes undefiled, Know you I am born of God? His hand shaped me from the sod Burning! Glowing! Fallen here From a higher, better sphere. World children can be bright "Tis but God's reflected light. Therefore, child, in all you do Ne'er forget his hand made you.",
+      "confidence": "high"
+    },
+    {
+      "file": "March_Vol9_02_Editorial_Editorial_Prayer.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisement content before the editorial",
+      "action": "trim_start",
+      "text": "Editorial: Prayer 165",
+      "confidence": "high"
+    },
+    {
+      "file": "March_Vol9_16b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains header, missing the actual lesson content",
+      "action": "note",
+      "text": "Lesson II content appears to be missing from OCR - only header present",
+      "confidence": "high"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are: 1) The Questions Answered file contains table of contents instead of article text, 2) Editorial file has extraneous content at the beginning, and 3) Lesson II appears to have missing content in the OCR source. All other articles are properly extracted with correct boundaries."
+}

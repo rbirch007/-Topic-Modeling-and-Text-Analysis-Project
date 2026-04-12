@@ -1,0 +1,45 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 9 (1922)
+===========================================================================
+
+  Total files:      242 (205 articles, 37 special)
+  OK:               230
+  Flagged:          12
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 1
+    manual_review: 10
+    re_extract: 1
+
+  January:
+    January_Vol9_18b_Guide_Lessons_LESSON_II_Work_and_Business.txt | SHORT(53) | 53 chars | manual_review
+
+  February:
+    February_Vol9_02_Frontispiece_President_Charles_W._Penrose_Frontispiece.txt | SHORT(102) | 102 chars | manual_review
+    February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_a_a.txt | MERGED(MULTI_LESSON(3)) | 8033 chars | re_extract
+    February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_b.txt | SHORT(199) | 199 chars | manual_review
+
+
+  April:
+    April_Vol9_11b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt | SHORT(53) | 53 chars | manual_review
+
+
+
+  July:
+    July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt | SHORT(182) | 182 chars | manual_review
+    July_Vol9_12b_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_II_Work_and_Business.txt | SHORT(56) | 56 chars | manual_review
+
+
+
+  October:
+    October_Vol9_17b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt | SHORT(53) | 53 chars | manual_review
+
+
+  December:
+    December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt | SHORT(49) | 49 chars | manual_review
+    December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt | SHORT(37) | 37 chars | manual_review
+    December_Vol9_03_Article_General_Procession_James_H._Anderson.txt | SHORT(40) | 40 chars | manual_review
+    December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt | LOW_OCR_MATCH(64%) | 345 chars | api_fix
+
+===========================================================================

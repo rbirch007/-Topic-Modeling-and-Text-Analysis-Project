@@ -1,0 +1,186 @@
+{
+  "volume": 9,
+  "month": "September",
+  "year": 1922,
+  "total_files_checked": 14,
+  "files_correct": [
+    "September_Vol9_06_Article_Consolation_Zella_A._Johnson.txt",
+    "September_Vol9_07_Article_The_Poorhouse_for_Mother_Clara_Fagergren.txt",
+    "September_Vol9_08_Article_A_Widow's_Prayer_Hazel_S._Washburn.txt",
+    "September_Vol9_11_Article_The_General_Procession_James_H._Anderson.txt",
+    "September_Vol9_13_Article_The_International_Council_of_Women_to_Meet_in_U._S..txt",
+    "September_Vol9_14b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+    "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt"
+  ],
+  "corrections": [
+    {
+      "file": "September_Vol9_01_Frontispiece_Pres._Heber_J._Grant_and_Pioneer_L._Sobriskie_Young_Frontisp.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of frontispiece content",
+      "action": "replace_content",
+      "text": "PRESIDENT HEBER J. GRANT AND LORENZO SOBRISKIE YOUNG At Pioneer Monument at mouth of Emigrat? On Canyon",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and publication info instead of editorial",
+      "action": "trim_start",
+      "text": "Editorial—Priesthood 491",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "THE INTERNATIONAL COUNCIL OF WOMEN OF THE WORLD WILL MEET IN THE UNITED STATES IN 1925",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol9_03_Article_The_Pioneer_Jubilee_Annie_Wells_Cannon.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Article starts mid-sentence, missing beginning",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IX.. SEPTEMBER, 1922 No. 9 ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_04_Article_This_is_the_Place_Julia_Dare.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains continuation of Pioneer Jubilee article instead of 'This is the Place' poem",
+      "action": "replace_content",
+      "text": "\"This is the Place' \"This is the place,\" the leader said,? That beloved leader so brave, 'And we honor today the band he led To fair Utah, their lives to save. How brave they stood side by side How ardently the truth they sought, How bravely they stood side by side As the winning battle they fought. With faith unshaken their tasks they began, Looking to God for guidance and power; All hardships they were willing to withsti nd, Making this beautiful valley to flower. All honor we pay to those pioneers true Who made possible Utah's gem? All honor we pay to the loyal few? Our city,?all Utah, honors them. Blessed Pioneers, for ever and ever Of these in song wwe will sing, Nothing from them our hearts shall sever, On earth and in heaven their praises ring. Utah, Utah, truly, 'oday it seems That God has brought to pass That brave leader's most cherished dreams For surely, \"This is the place,\" at last. ?Julia Dire.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "September_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next article about dollar saving",
+      "action": "trim_end",
+      "text": "Mary M. Ure, organist.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_12_Article_My_Conversion_to_Work_for_the_Dead_Nina_B._McKean.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into editorial section",
+      "action": "trim_end",
+      "text": "And knew them as the line which gave me birth.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLESPART_IITHE_MIRAC.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next lesson",
+      "action": "trim_end",
+      "text": "I Tell how to study miracles.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next lesson",
+      "action": "trim_end",
+      "text": "Of whom was she speaking when she asked this question? \"I",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14d_Guide_Lessons_LESSON_IV_-_Social_Service_-_THE_PROBLEM_OF_DISCIPLINE_IN_EA.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Jame 1; Pearl 'i mi Me 4 ~: a Pann lor",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Multiple files have content bleeding issues and advertisement content mixed in. The frontispiece and 'This is the Place' files contain wrong content entirely. Several files need trimming to remove content from subsequent articles or advertisements.",
+  "validated_corrections": [
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and publication info instead of editorial",
+      "action": "trim_start",
+      "text": "Editorial—Priesthood 491",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "THE INTERNATIONAL COUNCIL OF WOMEN OF THE WORLD WILL MEET IN THE UNITED STATES IN 1925",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol9_03_Article_The_Pioneer_Jubilee_Annie_Wells_Cannon.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Article starts mid-sentence, missing beginning",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IX.. SEPTEMBER, 1922 No. 9 ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next article about dollar saving",
+      "action": "trim_end",
+      "text": "Mary M. Ure, organist.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_12_Article_My_Conversion_to_Work_for_the_Dead_Nina_B._McKean.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into editorial section",
+      "action": "trim_end",
+      "text": "And knew them as the line which gave me birth.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLESPART_IITHE_MIRAC.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next lesson",
+      "action": "trim_end",
+      "text": "I Tell how to study miracles.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into next lesson",
+      "action": "trim_end",
+      "text": "Of whom was she speaking when she asked this question? \"I",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol9_14d_Guide_Lessons_LESSON_IV_-_Social_Service_-_THE_PROBLEM_OF_DISCIPLINE_IN_EA.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Jame 1; Pearl 'i mi Me 4 ~: a Pann lor",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,94 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 19 (1932)
+===========================================================================
+
+  Total files:      319 (267 articles, 52 special)
+  OK:               297
+  Flagged:          22
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 1
+    manual_review: 2
+    re_extract: 19
+
+  January:
+    January_Vol19_28_Article_Mrs_Ida_V_Lister_and_Her_Nine_Daughters_Portrait.txt | SHORT(96) | 96 chars | manual_review
+    [CONTENTS MISSING] "Some Trends in Rural Life of Interest to Social Workers Joseph A. Geddes" (p11)
+
+  February:
+    February_Vol19_02a_Article_Into_Whatsoever_House.txt | MERGED(CAPS_HEADERS(9)) | 78035 chars | re_extract
+    February_Vol19_02g_Editorial_Leisure_Time.txt | MERGED(CAPS_HEADERS(10)) | 178045 chars | re_extract
+    February_Vol19_02i_Poem_Our_Savior.txt | MERGED(CAPS_HEADERS(9)) | 49377 chars | re_extract
+    [CONTENTS MISSING] "The Place of Recreation in Our Lives Elder Melvin J. Ballard" (p71)
+    [CONTENTS MISSING] "What Christian Parents Can Teach Their Children Newell W. Edson" (p89)
+    [CONTENTS MISSING] "Autumn (With Portrait) Beatrice K. Ekman" (p94)
+    [CONTENTS MISSING] "Happenings Annie Wells Cannon" (p101)
+    [CONTENTS MISSING] "Acrostic?February Bertha W. Pratt" (p106)
+
+  March:
+    March_Vol19_27_Article_Masonic_Hall_Nauvoo.txt | SHORT(88) | 88 chars | manual_review
+    [CONTENTS MISSING] "Our Ninetieth Anniversary Amy Brown Lyman" (p131)
+    [CONTENTS MISSING] "Recalling My Edith E. Anderson" (p187)
+
+  April:
+    April_Vol19_02d_Article_Historic_Markers.txt | MERGED(MULTI_LESSON(2)) | 129305 chars | re_extract
+    April_Vol19_04_Poem_High_Noon_on_the_Escalante_Harrison_R_Merrill.txt | LOW_OCR_MATCH(66%) | 675 chars | api_fix
+    [CONTENTS MISSING] "Fidelity Edith E. Anderson" (p215)
+    [CONTENTS MISSING] "Side Lights on the Book of Mormon John Henry Evans" (p218)
+    [CONTENTS MISSING] "The President of the National Council" (p239)
+
+
+  June:
+    June_Vol19_11a_Article_Lesson_Preparation_and_Union_Meeting.txt | MERGED(MULTI_LESSON(2)) | 8173 chars | re_extract
+    [CONTENTS MISSING] "Poppies in California Frontispiece" (pNone)
+    [CONTENTS MISSING] "The Milestones We March? Edith E. Anderson" (p360)
+    [CONTENTS MISSING] "Merry Little Mother Nona H. Brown" (p363)
+    [CONTENTS MISSING] "Two Items" (p382)
+
+  July:
+    July_Vol19_21a_Notes_from_Field_Notes_from_the_Field.txt | MERGED(CAPS_HEADERS(3)) | 15329 chars | re_extract
+    [CONTENTS MISSING] "This is the Place Vernald William Johns" (p385)
+    [CONTENTS MISSING] "A Shrine is Made Fay Ollerton" (p387)
+    [CONTENTS MISSING] "Margaret Emma Compton Smith Mary E. Able" (p429)
+
+  August:
+    August_Vol19_01a_Article_Literature_in_the_Home.txt | MERGED(CAPS_HEADERS(5)) | 18439 chars | re_extract
+    August_Vol19_21a_Guide_Lessons_Lesson_Department.txt | MERGED(CAPS_HEADERS(4); MULTI_LESSON(7)) | 8378 chars | re_extract
+    [CONTENTS MISSING] "Beauty Spot in the Sierras Frontispiece" (pNone)
+    [CONTENTS MISSING] "Believe in Yourself Bertha A. Kleinman" (p445)
+    [CONTENTS MISSING] "A Little Child Shall Lead Them I. B. McKenzie" (p472)
+    [CONTENTS MISSING] "Supt. George N. Child Called" (p485)
+
+  September:
+    September_Vol19_01a_Article_Why_Religious_Training.txt | MERGED(CAPS_HEADERS(3)) | 13778 chars | re_extract
+    September_Vol19_03a_Article_Mormonism_in_a_Disturbed_Civilization.txt | MERGED(CAPS_HEADERS(3)) | 15707 chars | re_extract
+    [CONTENTS MISSING] "Glacier National Park Frontispiece" (pNone)
+    [CONTENTS MISSING] "Gift Handkerchiefs Elsie E. Barrett" (p537)
+
+  October:
+    October_Vol19_12b_Lesson_Doctrine_and_Covenants_-_Significance_and_Purport.txt | MERGED(CAPS_HEADERS(4)) | 10264 chars | re_extract
+    October_Vol19_12d_Lesson_The_Delight_of_Great_Books_-_Faust.txt | MERGED(CAPS_HEADERS(15); MULTI_LESSON(2)) | 29992 chars | re_extract
+    [CONTENTS MISSING] "Francis Canyon Frontispiece" (pNone)
+    [CONTENTS MISSING] "Harrison R. Merrill" (p570)
+    [CONTENTS MISSING] "The Sun Dance Jane Bradford Terry" (p572)
+
+  November:
+    November_Vol19_02a_Poem_Iconoclasts.txt | MERGED(CAPS_HEADERS(3)) | 10011 chars | re_extract
+    November_Vol19_04a_Article_When_the_Test_Comes.txt | MERGED(CAPS_HEADERS(5)) | 21547 chars | re_extract
+    November_Vol19_08_Notes_from_Field_Notes_to_the_Field.txt | MERGED(CAPS_HEADERS(15)) | 55710 chars | re_extract
+    November_Vol19_09c_Lesson_Literature_-_The_Delight_of_Great_Books_-_Sir_Walter_Scott.txt | MERGED(CAPS_HEADERS(5)) | 15174 chars | re_extract
+    November_Vol19_09d_Lesson_Social_Service_-_Typical_Behavior_in_Child_Growth.txt | MERGED(CAPS_HEADERS(3); MULTI_LESSON(4)) | 17263 chars | re_extract
+    [CONTENTS MISSING] "First Snowfall, Beaver Creek, Wasatch Forest Frontispiece" (pNone)
+    [CONTENTS MISSING] "Iconoclasts Grace Ingles Frost" (p623)
+    [CONTENTS MISSING] "Procrastination Marion Oakleigh" (p625)
+    [CONTENTS MISSING] "Relief Society Conference" (p647)
+
+  December:
+    December_Vol19_10c_Article_At_Marys_Feet.txt | MERGED(CAPS_HEADERS(3)) | 12458 chars | re_extract
+    December_Vol19_20c_Lesson_Literature_-_The_Delight_of_Great_Books_-_The_Ordeals_of_Ric.txt | MERGED(CAPS_HEADERS(3)) | 16004 chars | re_extract
+    [CONTENTS MISSING] "Could We Hear? Helen M. Livingston" (p691)
+    [CONTENTS MISSING] "Christmas Day Matilda Peterson" (p702)
+    [CONTENTS MISSING] "At Mary's Feet Claire Stewart Boyer" (p724)
+
+===========================================================================

@@ -1,0 +1,27 @@
+{
+  "volume": 4,
+  "month": "October",
+  "year": 1917,
+  "timestamp": "20260315_120939",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol4_01_Article_I_Ought_to_Know_Annie_D._Palmer.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2670 chars removed)"
+    },
+    {
+      "file": "October_Vol4_02_Frontispiece_The_Woman_with_the_Hoe_Frontispiece_Conservation_as_Practice.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1922 chars added)"
+    },
+    {
+      "file": "October_Vol4_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2847 chars added)"
+    }
+  ]
+}

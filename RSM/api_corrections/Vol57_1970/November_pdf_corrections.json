@@ -1,0 +1,40 @@
+{
+  "volume": 57,
+  "month": "November",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_11_01_Poem_Indweller_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains content from next article starting with '802 We Lived After the Manner of Happiness'",
+      "action": "trim_end",
+      "text": "[Indweller Margery S. Stewart]",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V57_11_05_SpFt_No_One_Sharp.txt",
+      "issue_type": "bleed_start",
+      "description": "Article contains content from previous article about temples and buildings. Should start with the article title.",
+      "action": "trim_start",
+      "text": "No One Can Endure on Borrowed Light",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V57_11_13_Poem_Deep_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains content from next article 'Friendship Memories' - should end after author name",
+      "action": "trim_end",
+      "text": "Linnie F. Robinson",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (3 words)"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "volume": 16,
+  "month": "November",
+  "year": 1929,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1781,
+  "files": [
+    {
+      "source_file": "November_Vol16_16_Guide_Lessons_Guide_Lesson_for_January.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I - Theology and Testimony - BOOK OF MORMON LESSON 4—PROPHECIES AND DOCTRINES",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for January LESSON I Theology and",
+          "end_boundary": "speaks of wives and concubines? LESSON II Work",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II - Work and Business - TEACHERS' TOPIC FOR JANUARY - CHEERFULNESS",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business TEACHERS' TOPIC FOR",
+          "end_boundary": "what you were laughing at. ? 99 LESSON",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III - Literature - A SON OF THE MIDDLE BORDER By Hamlin Garland",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in January) A",
+          "end_boundary": "life of Hamlin Garland had on the west?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV - Social Service - THE FIELD OF SOCIAL WORK",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in January)",
+          "end_boundary": "Survey (published twice a month). Raked-Up Leaves By",
+          "confidence": "high",
+          "end_match_words": 5
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains four distinct lesson sections for January, each covering different subject areas: Theology/Book of Mormon, Work and Business/Teaching, Literature, and Social Service. Each lesson has clear start and end boundaries with distinct topics and question sections.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 38633,
+      "tier": 1,
+      "pdf_pages": [
+        728,
+        729,
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738
+      ],
+      "api_usage": {
+        "input_tokens": 56423,
+        "output_tokens": 591,
+        "cost": 0.1781
+      }
+    }
+  ]
+}

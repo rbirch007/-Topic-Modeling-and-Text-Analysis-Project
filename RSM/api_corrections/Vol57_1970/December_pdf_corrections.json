@@ -1,0 +1,19 @@
+{
+  "volume": 57,
+  "month": "December",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_12_03_SpFt_Mothers_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "The entire article file content is from a different article (Mothers in Israel by Joseph Fielding Smith) than what appears in the page image (Cultural Refinement lesson about Robert Browning)",
+      "action": "replace_content",
+      "text": "CULTURAL REFINEMENT\n\nIdeals of Womanhood in Relation to Home and the Family\n\nLesson 5—Principles With a Promise—Faith and Optimism\n\nTextbook: Out of the Best Books, volumes 1, 2, 3, 4, 5\nBy Bruce B. Clark and Robert K. Thomas\n\nNorthern Hemisphere: Fourth meeting, March 1971\nSouthern Hemisphere: Fourth meeting, July 1971\n\nOBJECTIVE: To encourage a woman to exercise faith and optimism as illustrated in the writings of Robert Browning.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 9% OCR coverage"
+    }
+  ]
+}

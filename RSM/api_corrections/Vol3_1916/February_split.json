@@ -1,0 +1,56 @@
+{
+  "volume": 3,
+  "month": "February",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1247,
+  "files": [
+    {
+      "source_file": "February_Vol3_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Hyde Assistant Manager Amy Brown Lyman Room",
+          "end_boundary": "Private visits of individuals to Temples need",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Efficiency (Editorial)",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Efficiency. The word used in modern business",
+          "end_boundary": "not be recorded on our reports.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony.",
+          "end_boundary": "Third Week in March.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file appears to contain multiple sections merged together: Notes from the Field by Amy Brown Lyman, an Editorial on Efficiency, and the beginning of Guide Lessons. The file cuts off mid-lesson in the Guide Lessons section, suggesting it may be incomplete or part of a larger merged file.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8707,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39441,
+        "output_tokens": 424,
+        "cost": 0.1247
+      }
+    }
+  ]
+}

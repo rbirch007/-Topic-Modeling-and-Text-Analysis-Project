@@ -1,0 +1,87 @@
+{
+  "volume": 18,
+  "month": "January",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 5,
+  "created": 5,
+  "failed": 7,
+  "entries": [
+    {
+      "split": "b",
+      "title": "The Relief Society Social Service Department",
+      "new_file": "January_Vol18_05b_Article_The_Relief_Society_Social_Service_Department.txt",
+      "chars": 1054,
+      "match_type": "short_window_3w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "The L. D. S. Children's Hospital",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "The Neighborhood House",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "A Hidden Opportunity",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Notes from the Field",
+      "new_file": "January_Vol18_21b_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 6293,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "1931 Welcome",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "e",
+      "title": "Whitehouse Conference on Childhood Health and Protection",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "f",
+      "title": "One Hundred Years",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "g",
+      "title": "Lesson Department",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Whitehouse Conference on Childhood Health and Protection",
+      "new_file": "January_Vol18_22b_Article_Whitehouse_Conference_on_Childhood_Health_and_Protection.txt",
+      "chars": 5461,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Work and Business - Teacher's Topic for March",
+      "new_file": "January_Vol18_23b_Lesson_Work_and_Business_-_Teachers_Topic_for_March.txt",
+      "chars": 2265,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Social Service - Personality Study: Habits and Growth",
+      "new_file": "January_Vol18_23d_Lesson_Social_Service_-_Personality_Study_Habits_and_Growth.txt",
+      "chars": 12785,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

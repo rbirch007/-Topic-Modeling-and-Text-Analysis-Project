@@ -1,0 +1,56 @@
+{
+  "volume": 17,
+  "month": "November",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.025,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Charity Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "CHARITY\nBy Abbott H. Thayer.",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "Abbott H. Thayer",
+      "confidence": "high",
+      "notes": "Found the frontispiece image on page 695 - it's an artistic illustration titled 'CHARITY' by Abbott H. Thayer showing a standing female figure in white robes with a smaller figure below. This is the frontispiece artwork for the issue, not a text article.",
+      "api_usage": {
+        "input_tokens": 7506,
+        "output_tokens": 166,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        693,
+        694,
+        695,
+        696
+      ]
+    },
+    {
+      "title": "Women in Industry Ruth May Fox",
+      "printed_page": 585,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Sunset Cliffs, California Glen Perrins",
+      "printed_page": 602,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Who? G. H. Brimhall",
+      "printed_page": 610,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

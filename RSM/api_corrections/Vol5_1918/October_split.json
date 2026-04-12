@@ -1,0 +1,68 @@
+{
+  "volume": 5,
+  "month": "October",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1281,
+  "files": [
+    {
+      "source_file": "October_Vol5_13_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony. WAR AND THE ART OF WAR AMONG BOOK OF MORMON PEOPLES",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. : i LESSON I. Theology and Testimony.",
+          "end_boundary": "when the people of the earth become wicked? LESSON n.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON n. Work and Business. Second Week in November.",
+          "end_boundary": "Second Week in November. LESSON HI. Genealogy.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy. ADDED OR SURNAMES THEIR ORIGIN",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON HI. Genealogy. ADDED OR SURNAMES THEIR ORIGIN.",
+          "end_boundary": "concerning the surname of each student. LESSON IV.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Home Courses. CONSERVATION OF WOOL AND WOOLEN CLOTHING",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Courses. Fourth Week in November.",
+          "end_boundary": "MRS. AMY BROWN LYMAN, General Secretary, | 28",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections as indicated by Roman numerals I-IV. Each lesson covers a different subject area: Theology, Work and Business, Genealogy, and Home Courses. The file ends with announcements about the Relief Society Song Book and School of Obstetrics and Nursing which appear to be part of the overall Guide Lessons section.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24364,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39671,
+        "output_tokens": 606,
+        "cost": 0.1281
+      }
+    }
+  ]
+}

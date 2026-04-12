@@ -1,0 +1,47 @@
+{
+  "volume": 7,
+  "month": "September",
+  "year": 1920,
+  "timestamp": "20260315_120944",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 2,
+  "entries": [
+    {
+      "file": "September_Vol7_01_Article_The_Needs_of_Yesterday_Bertha_A._Kleinman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol7_02_Article_Mrs._May_Wright_Sewell.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1607 chars added)"
+    },
+    {
+      "file": "September_Vol7_09_Article_Care_of_Clothing.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2751 chars removed)"
+    },
+    {
+      "file": "September_Vol7_10_Article_Summary_of_Woman's_Position_in_Newly-Enfranchised_Countries.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "September_Vol7_11_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "September_Vol7_12_Article_The_Official_Round_Table.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (24 chars added)"
+    },
+    {
+      "file": "September_Vol7_13_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (842 chars removed)"
+    }
+  ]
+}

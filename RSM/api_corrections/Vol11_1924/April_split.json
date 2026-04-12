@@ -1,0 +1,83 @@
+{
+  "volume": 11,
+  "month": "April",
+  "year": 1924,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.155,
+  "files": [
+    {
+      "source_file": "April_Vol11_14_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Parables of the Savior (Continued) - Lesson I Theology",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS ? 203 \"O hearken, my tongue",
+          "end_boundary": "Eternal work in God's employ. LESSON II Work",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Lesson II",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "Business (Second Week in June) LESSON III",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - Oliver Wendell Holmes - Lesson III",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third week in June)",
+          "end_boundary": "fused in one?a perfect form, an exquisite",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literature - Oliver Wendell Holmes (Continued)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "In our last lesson we gave you",
+          "end_boundary": "Where I cling.\" Questions and Problems 1.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple Guide Lessons sections that were merged together. The content flows from Lesson I (Theology - Parables of the Savior) through Lesson II (Work and Business) to Lesson III (Literature - Oliver Wendell Holmes). The Holmes lesson appears to continue beyond the typical lesson boundary, suggesting it may have been split across pages in the original. The file ends mid-sentence which indicates it was truncated from a longer article.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 15225,
+      "tier": 1,
+      "pdf_pages": [
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "api_usage": {
+        "input_tokens": 48779,
+        "output_tokens": 580,
+        "cost": 0.155
+      }
+    }
+  ]
+}

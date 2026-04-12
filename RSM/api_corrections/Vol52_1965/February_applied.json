@@ -1,0 +1,82 @@
+{
+  "volume": 52,
+  "month": "February",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 2,
+  "failed": 3,
+  "entries": [
+    {
+      "file": "V52_02_02_SpFt_Oakland.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2599 chars)"
+    },
+    {
+      "file": "V52_02_04_SpFt_Mother_Matthews.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (573 chars)"
+    },
+    {
+      "file": "V52_02_05_Fict_Among_Littke.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_02_09_GenFt_Notes_Available.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_02_11_Fict_Valentines_Trutton.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (2419 chars removed)"
+    },
+    {
+      "file": "V52_02_14_Poem_Home_Roberts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (327 chars)"
+    },
+    {
+      "file": "V52_02_16_The Home_Lace_McKenzie.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (189 chars removed)"
+    },
+    {
+      "file": "V52_02_25_Lssn_Literature_Thomas.txt",
+      "action": "note",
+      "result": "INFO: File is truncated and missing most of the literature lesson content"
+    },
+    {
+      "file": "V52_02_30_Poem_Gifts_Bowles.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_02_33_Poem_Grandson_Coles.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_02_34_The Home_Hurry_Bunker.txt",
+      "action": "note",
+      "result": "INFO: File contains only header, missing article content"
+    },
+    {
+      "file": "V52_02_35_Poem_Death_Hill.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of poem"
+    },
+    {
+      "file": "V52_02_36_Poem_Mountain_Rubin.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_02_38_Poem_83_The_Gabbott.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (728 chars)"
+    }
+  ]
+}

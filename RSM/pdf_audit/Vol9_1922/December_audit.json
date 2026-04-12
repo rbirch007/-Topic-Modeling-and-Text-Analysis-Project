@@ -1,0 +1,240 @@
+{
+  "volume": 9,
+  "month": "December",
+  "year": 1922,
+  "total": 12,
+  "ok": 8,
+  "flagged": 4,
+  "empty": 0,
+  "records": [
+    {
+      "file": "December_Vol9_00_CONTENTS.txt",
+      "body_len": 261,
+      "article_words": 25,
+      "words_in_ocr": 25,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+      "body_len": 49,
+      "article_words": 7,
+      "words_in_ocr": 7,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(49)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+      "body_len": 37,
+      "article_words": 4,
+      "words_in_ocr": 4,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(37)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+      "body_len": 40,
+      "article_words": 4,
+      "words_in_ocr": 4,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(40)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "body_len": 4934,
+      "article_words": 346,
+      "words_in_ocr": 346,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+      "body_len": 1579,
+      "article_words": 162,
+      "words_in_ocr": 162,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_06a_Poem_The_Message_of_the_Bells.txt",
+      "body_len": 1399,
+      "article_words": 110,
+      "words_in_ocr": 110,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_a_a.txt",
+      "body_len": 7566,
+      "article_words": 457,
+      "words_in_ocr": 457,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt",
+      "body_len": 345,
+      "article_words": 33,
+      "words_in_ocr": 21,
+      "pct_in_ocr": 0.6364,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(64%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "careless",
+        "compositions",
+        "considerable",
+        "devoted",
+        "devoting",
+        "hymnology",
+        "importance",
+        "justified",
+        "march",
+        "professor"
+      ]
+    },
+    {
+      "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_c.txt",
+      "body_len": 9609,
+      "article_words": 643,
+      "words_in_ocr": 643,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_d.txt",
+      "body_len": 7053,
+      "article_words": 430,
+      "words_in_ocr": 430,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol9_Misc_front_matter.txt",
+      "body_len": 81,
+      "article_words": 7,
+      "words_in_ocr": 7,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol9_No12_December_1922.txt",
+    "ocr_chars": 46421,
+    "ocr_unique_words": 2086,
+    "contents_xref": {
+      "entries_in_contents": 6,
+      "matched": 6,
+      "match_details": [
+        {
+          "title": "Arrival of the Shepherds Frontispiece",
+          "page": null,
+          "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "For Christmas The Good They Do Depends On You",
+          "page": 646,
+          "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Christmas Giving Mary E. Connelly",
+          "page": 647,
+          "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+          "score": 1.0
+        },
+        {
+          "title": "General Procession James H. Anderson",
+          "page": 648,
+          "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial, The Christmas Spirit",
+          "page": 651,
+          "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Message of the Bells Nina Burnham McKean",
+          "page": 652,
+          "file": "December_Vol9_06a_Poem_The_Message_of_the_Bells.txt",
+          "score": 0.4
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_a_a.txt",
+        "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt",
+        "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_c.txt",
+        "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_d.txt"
+      ]
+    }
+  }
+}

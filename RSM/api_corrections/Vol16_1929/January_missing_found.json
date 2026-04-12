@@ -1,0 +1,60 @@
+{
+  "volume": 16,
+  "month": "January",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0536,
+  "stats": {
+    "found": 1,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "My Neighbor (first prize poem) Alice M. Walker",
+      "printed_page": 31,
+      "status": "found",
+      "complete_text": "My Neighbor\nAlice M. Walker\n\nPoem awarded first prize in the Eliza Roxey Snow Poetry Contest\n\nLife was so full of petty care\nI had no time to really live,\nNo happiness had I to share,\nNo song to sing, no joy to give.\n\nEach day passed by on weary wings,\nEach night brought only brief surcease,\nI could not sense the greater things,\nCould only work, and wait—for peace.\n\nAnd then you came, and lo, it seemed\nThat through your eyes I learned to see\nLife, beauty, faith, of which I'd dreamed\nBut never hoped could come to me.\n\nI learned the joy of daily tasks,\nAnd found the calm of cloudy days,\nI came to know that Duty masks\nThe entrance to Life's sweetest ways.\n\nYou went away, but still I hold\nThe power you gave, to smile and sing,\nTo tinge the darkest clouds with gold,\nAnd see God's hand in everything.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Alice M. Walker",
+      "confidence": "high",
+      "notes": "Found the complete poem on page 34 of the PDF images. It's clearly marked as the first prize winner in the Eliza Roxey Snow Poetry Contest.",
+      "api_usage": {
+        "input_tokens": 7556,
+        "output_tokens": 393,
+        "cost": 0.0286
+      },
+      "pdf_pages": [
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "title": "Etched (second prize poem) Josephine Spencer",
+      "printed_page": 31,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Josephine Spencer",
+      "confidence": "high",
+      "notes": "The poem is not visible in the provided PDF page images (pages 5-8). According to the table of contents, this poem should appear on page 31, but the provided images only show pages 5-8 which contain advertisements and the magazine cover/contents page.",
+      "api_usage": {
+        "input_tokens": 7556,
+        "output_tokens": 156,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

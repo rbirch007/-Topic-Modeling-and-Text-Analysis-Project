@@ -1,0 +1,39 @@
+{
+  "volume": 20,
+  "month": "August",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.1402,
+  "files": [
+    {
+      "source_file": "August_Vol20_24_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Alpine Stake On Tuesday,",
+          "end_boundary": "Vol. XX AUGUST, 1933 No. 8",
+          "confidence": "high",
+          "end_match_words": 5
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article 'Notes from the Field' which includes reports from multiple stakes (Alpine, Granite, Liberty, Nebo, Rigby) followed by organizational information and masthead details. The file appears to be complete as one unit matching the contents listing.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13570,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 45502,
+        "output_tokens": 248,
+        "cost": 0.1402
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "volume": 4,
+  "month": "May",
+  "year": 1917,
+  "total_files_checked": 15,
+  "files_correct": [
+    "May_Vol4_01_Article_My_Masterpiece_Elsie_C._Carroll.txt",
+    "May_Vol4_03_Article_Departed_Spirits_Laura_Moench_Jenkins.txt",
+    "May_Vol4_04_Article_Children's_Problems_Lucy_Wright_Snow.txt",
+    "May_Vol4_05_Article_May_Entertainments_Morag.txt",
+    "May_Vol4_06_Article_A_Brave_Friend.txt",
+    "May_Vol4_07_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "May_Vol4_08_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "May_Vol4_10_Editorial_Editorial_War_is_Upon_Us.txt",
+    "May_Vol4_11a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Gleaning_in_Alien_Fields.txt",
+    "May_Vol4_11b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+    "May_Vol4_11c_Genealogy_Lesson_III_-_Genealogy_-_Prefixes_and_Suffixes_Compound_Surn.txt",
+    "May_Vol4_11d_Guide_Lessons_Literature_-_Old_Time_Tales.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol4_02_Mothers_in_Israel_Council_Bluffs_Ferry,_1853_Frontispiece_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with frontispiece title that should be separate",
+      "action": "trim_start",
+      "text": "COUNCIL BLUFFS FERRY 1853 \n Mothers in Israel.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "missing_text",
+      "description": "Missing beginning of Notes from the Field section",
+      "action": "prepend",
+      "text": "Notes from the Field. By General Secretary Amy Brozvn Lyman. RELIEF SOCIETY STAKE CONFERENCE FOR 1917. The Relief Society stake conferences appointed for May, June and July will be held in connection with the stake quarterly conferences; those appointed for November will be held independently. Conference Dates. May 5th and 6th — Curlew, Alberta, San Luis, Boise, St. Johns, South Sanpete, Wayne. May 12th and 13th — Emery, Millard, Juab, Taylor, Snowflake. May 19th and 20th — Young, Shelley, Bannock, Teton, Bighorn, Maricopa, Malad. Blackfoot. May 26th and 27th — Bingham, Portneuf, St. Joseph, Pocatello, Rigby, Panguitch. June 2nd and 3rd — Uintah, Kanab. Morgan, Oneida, San Juan. June 16th and 17th — St. George. North Sanpete, Moapa, Star Valley, Union, Parowan. June 23rd and 24th — Sevier, Fremont, Bear Lake, Deseret. Duchesne. June 30th and July 1st — Tooele. July 21st and 22nd — Benson, Beaver, Hyrum, Raft River. July 28th and 29th— Wasatch, Woodruff, Idaho, Cassia, Yellowstone. November (dates to be arranged later) — Alpine, Bear River. Box Elder, Cache, Carbon, Cottonwood, South Davis, Ensign, Granite, Jordan, Liberty, Nebo, North Davis, North Weber. Ogden. Pioneer, Salt Lake, Summit, Utah. Weber PROGRAM For stakes holding conferences in connection with quarterh con ferences: First Session. Officers' Meeting. Saturday, 4:00 p.m. Report bv Stake President. Guide Work. Member of the General Board. Second Session. Officers' Meeting. Sunday, 9 to 10:30 a.m. Relief Society Activities — Member of General Board Third Session. Public Session. Sunday, 10:30 a.m. 1 Fnder direction of Stake Authorities. Remarks hy Member of General Board. XOTES FROM THE FIELD. 275 ITEMS FROM RELIEF SOCIETY ANNUAL REPORT FOR THE YEAR CLOSING DECEMBER, 1916. The annual report shows a growth in all departments and an increase in the resources of the Society. With the exception of the membership dues, all the funds and property of the Society are held and controlled in the various local or ward branches. The means are collected and distributed without commission or salary. Every cent donated is used for the purpose for which it was given. The membership dues are sent to the general offices for the maintenance of Relief Society headquarters, for traveling expenses, and for printing and clerical hire. RESOURCES AND LIABILITIES. Resources: Balance on hand Dec. 31. 1916, all funds $119,129.83 Value of wheat on hand 216,397.81 Value of real estate, buildings, furniture 241,452.84 Value of invested funds 23,407.67 Other resources 8,361.97 Total $608,750.12 Liabilities: Indebtedness $ 2,722.53 Balance net resources 606,027.59 Total $608,750.12 WHEAT RECEIVED AND DISBURSED.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "trim_start",
+      "description": "File starts mid-section without proper beginning",
+      "action": "trim_start",
+      "text": "NOTES FROM THE FIELD. 277",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issue is with the Notes from the Field section which appears to be missing its beginning content and starts mid-section. The Mothers in Israel file includes frontispiece content that should be handled separately. All other articles appear complete and properly bounded.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol4_02_Mothers_in_Israel_Council_Bluffs_Ferry,_1853_Frontispiece_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with frontispiece title that should be separate",
+      "action": "trim_start",
+      "text": "COUNCIL BLUFFS FERRY 1853 \n Mothers in Israel.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "missing_text",
+      "description": "Missing beginning of Notes from the Field section",
+      "action": "prepend",
+      "text": "Notes from the Field. By General Secretary Amy Brozvn Lyman. RELIEF SOCIETY STAKE CONFERENCE FOR 1917. The Relief Society stake conferences appointed for May, June and July will be held in connection with the stake quarterly conferences; those appointed for November will be held independently. Conference Dates. May 5th and 6th — Curlew, Alberta, San Luis, Boise, St. Johns, South Sanpete, Wayne. May 12th and 13th — Emery, Millard, Juab, Taylor, Snowflake. May 19th and 20th — Young, Shelley, Bannock, Teton, Bighorn, Maricopa, Malad. Blackfoot. May 26th and 27th — Bingham, Portneuf, St. Joseph, Pocatello, Rigby, Panguitch. June 2nd and 3rd — Uintah, Kanab. Morgan, Oneida, San Juan. June 16th and 17th — St. George. North Sanpete, Moapa, Star Valley, Union, Parowan. June 23rd and 24th — Sevier, Fremont, Bear Lake, Deseret. Duchesne. June 30th and July 1st — Tooele. July 21st and 22nd — Benson, Beaver, Hyrum, Raft River. July 28th and 29th— Wasatch, Woodruff, Idaho, Cassia, Yellowstone. November (dates to be arranged later) — Alpine, Bear River. Box Elder, Cache, Carbon, Cottonwood, South Davis, Ensign, Granite, Jordan, Liberty, Nebo, North Davis, North Weber. Ogden. Pioneer, Salt Lake, Summit, Utah. Weber PROGRAM For stakes holding conferences in connection with quarterh con ferences: First Session. Officers' Meeting. Saturday, 4:00 p.m. Report bv Stake President. Guide Work. Member of the General Board. Second Session. Officers' Meeting. Sunday, 9 to 10:30 a.m. Relief Society Activities — Member of General Board Third Session. Public Session. Sunday, 10:30 a.m. 1 Fnder direction of Stake Authorities. Remarks hy Member of General Board. XOTES FROM THE FIELD. 275 ITEMS FROM RELIEF SOCIETY ANNUAL REPORT FOR THE YEAR CLOSING DECEMBER, 1916. The annual report shows a growth in all departments and an increase in the resources of the Society. With the exception of the membership dues, all the funds and property of the Society are held and controlled in the various local or ward branches. The means are collected and distributed without commission or salary. Every cent donated is used for the purpose for which it was given. The membership dues are sent to the general offices for the maintenance of Relief Society headquarters, for traveling expenses, and for printing and clerical hire. RESOURCES AND LIABILITIES. Resources: Balance on hand Dec. 31. 1916, all funds $119,129.83 Value of wheat on hand 216,397.81 Value of real estate, buildings, furniture 241,452.84 Value of invested funds 23,407.67 Other resources 8,361.97 Total $608,750.12 Liabilities: Indebtedness $ 2,722.53 Balance net resources 606,027.59 Total $608,750.12 WHEAT RECEIVED AND DISBURSED.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "trim_start",
+      "description": "File starts mid-section without proper beginning",
+      "action": "trim_start",
+      "text": "NOTES FROM THE FIELD. 277",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 10,
+  "month": "March",
+  "year": 1923,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0245,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Lillian Cameron Released from Board",
+      "printed_page": 121,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 127-130). Since the article should appear on page 121 according to the table of contents, and the provided images start at page 127, the article would be on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7430,
+        "output_tokens": 148,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

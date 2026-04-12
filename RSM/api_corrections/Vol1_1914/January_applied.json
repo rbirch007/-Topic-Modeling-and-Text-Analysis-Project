@@ -1,0 +1,32 @@
+{
+  "volume": 1,
+  "month": "January",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Jan_04_Art_HomeEthics.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V1_1914_Jan_09_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of poetry"
+    },
+    {
+      "file": "V1_1914_Jan_10_Art_GIVES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of article content"
+    },
+    {
+      "file": "V1_1914_Jan_12_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains only a fragment that appears to be advertisement content"
+    }
+  ]
+}

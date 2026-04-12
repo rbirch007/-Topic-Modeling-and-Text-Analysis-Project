@@ -1,0 +1,78 @@
+{
+  "volume": 17,
+  "month": "August",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.2016,
+  "files": [
+    {
+      "source_file": "August_Vol17_20_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons For October - Lesson 1: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons For October LESSON 1 Theology",
+          "end_boundary": "written record or not? LESSON 2",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons For October - Lesson 2: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 2 Work and Business TEACHER'S",
+          "end_boundary": "Social Service Aid. LESSON 3",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons For October - Lesson 3: Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 3 Literature (Third Week in",
+          "end_boundary": "Short Story, by Pattee. \"The",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons For October - Lesson 4: Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "child must have three more births",
+          "end_boundary": "Relief Society. God's Idea By Samuel",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSONS FOR OCTOBER"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for October, each covering different subject areas: Theology and Testimony, Work and Business, Literature, and Social Service. Each lesson has its own outline, content, and discussion questions. There are also some advertisements and a poem at the end that appear to be part of the overall magazine layout.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 27641,
+      "tier": 1,
+      "pdf_pages": [
+        538,
+        539,
+        540,
+        541,
+        542,
+        543,
+        544,
+        545,
+        546,
+        547,
+        548
+      ],
+      "api_usage": {
+        "input_tokens": 64235,
+        "output_tokens": 594,
+        "cost": 0.2016
+      }
+    }
+  ]
+}

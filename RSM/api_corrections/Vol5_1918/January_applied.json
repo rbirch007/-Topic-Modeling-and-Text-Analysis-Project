@@ -1,0 +1,57 @@
+{
+  "volume": 5,
+  "month": "January",
+  "year": 1918,
+  "timestamp": "20260315_120939",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 4,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "January_Vol5_02_Frontispiece_Mrs._Zina_D._H._Young_and_Daughter,_Zina_Y._Card_Frontispiec.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "January_Vol5_05a_Article_Mothers_in_Israel.txt",
+      "action": "append",
+      "result": "APPLIED append (477 chars added)"
+    },
+    {
+      "file": "January_Vol5_05b_Article_Where_Happiness_Is_Found.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol5_05c_Poem_Cecelia.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol5_06_Poetry_Cecelia_(A_Poem)_Alfred_Lambourne.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "January_Vol5_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "January_Vol5_15b_Home_Science_Home_Science_Department.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "January_Vol5_17a_Editorial_Editorial_The_New_Year_Relief_Society_Prayer.txt",
+      "action": "append",
+      "result": "APPLIED append (237 chars added)"
+    },
+    {
+      "file": "January_Vol5_18a_Guide_Lessons_Guide_Lessons.txt",
+      "action": "append",
+      "result": "APPLIED append (58 chars added)"
+    }
+  ]
+}

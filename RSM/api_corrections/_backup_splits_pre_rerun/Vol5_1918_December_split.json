@@ -1,0 +1,70 @@
+{
+  "volume": 5,
+  "month": "December",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.2077,
+  "files": [
+    {
+      "source_file": "December_Vol5_01_Article_Humanity's_Song_Maud_Boggarsley.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Humanity's Song",
+          "category": "Poem",
+          "author": "Maud Boggarsley",
+          "start_boundary": "Humanity's Song By Maud Boggarsley. From the",
+          "end_boundary": "With a bright and holy splendor, Shall shut",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "General Conference of Relief Society",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "General Conference of Relief Society By Amy Brown",
+          "end_boundary": "Salvation for the Living and for the Dead",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GENERAL CONFERENCE OF RELIEF SOCIETY"
+      ],
+      "notes": "This file contains mostly index content from Volume 5, but includes two actual articles from the December 1918 issue: the poem 'Humanity's Song' and the conference report. The vast majority of the file content appears to be index material that should not be split as separate articles.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12863,
+      "tier": 1,
+      "pdf_pages": [
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757
+      ],
+      "api_usage": {
+        "input_tokens": 67152,
+        "output_tokens": 419,
+        "cost": 0.2077
+      }
+    }
+  ]
+}

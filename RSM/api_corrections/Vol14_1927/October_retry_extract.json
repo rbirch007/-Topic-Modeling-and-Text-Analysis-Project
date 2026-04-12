@@ -1,0 +1,87 @@
+{
+  "volume": 14,
+  "month": "October",
+  "year": 1927,
+  "mode": "retry_extract",
+  "total_failed": 3,
+  "total_cost": 0.0577,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Our Inheritance",
+      "order": "d",
+      "status": "parse_error",
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578,
+        579
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Great Salt Lake",
+      "order": "f",
+      "status": "parse_error",
+      "pdf_pages": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Fall",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Merling Dennis Clyde",
+      "confidence": "high",
+      "notes": "The article 'Fall' by Merling Dennis Clyde is not present in the provided PDF page images (pages 22-26). The pages contain other content including editorial material, convention listings, and conference proceedings, but not the requested poem.",
+      "order": "g",
+      "pdf_pages": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "source_file": "October_Vol14_03_Article_Two_Outstanding_Features_of_Book_of_Mormon_History_J_M_Sjo.txt",
+      "api_usage": {
+        "input_tokens": 8471,
+        "output_tokens": 277,
+        "cost": 0.0296
+      }
+    },
+    {
+      "title": "Lesson IV - Social Service - Challenge of Childhood (Conclusion)",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (503-507) contain different content including poetry analysis and social service lessons about Harold and Henry, but do not contain the specific article titled 'Lesson IV - Social Service - Challenge of Childhood (Conclusion)'. The pages show 'GUIDE LESSONS FOR OCTOBER' content including poetry discussion and 'LESSON IV Social Service' about social problems of childhood, but this appears to be different lesson content than the requested article title.",
+      "order": "d",
+      "pdf_pages": [
+        503,
+        504,
+        505,
+        506,
+        507
+      ],
+      "source_file": "October_Vol14_14_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "api_usage": {
+        "input_tokens": 8510,
+        "output_tokens": 174,
+        "cost": 0.0281
+      }
+    }
+  ]
+}

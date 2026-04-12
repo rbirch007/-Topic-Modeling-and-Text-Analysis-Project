@@ -1,0 +1,57 @@
+{
+  "volume": 6,
+  "month": "May",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "May_Vol6_01_The_Month_of_Mothers.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "May_Vol6_02_Mothers_of_Our_Leaders._.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol6_04_Lines_for_a_Golden_Wedding_Day._._Mary_Foster_Gibbs.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol6_12a_Current_Topics_The_Official_Round_Table.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (143 chars removed)"
+    },
+    {
+      "file": "May_Vol6_12b_Home_Science_Construction_and_Reconstruction_in_the_Home.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "May_Vol6_12c_Current_Topics_On_the_Watch_Tower.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol6_13_Construction_and_Reconstruction_in_the_Home.txt",
+      "action": "note",
+      "result": "INFO: File contains only table of contents entries, not the actual article content"
+    },
+    {
+      "file": "May_Vol6_14_On_the_Watch_Tower_James_H._Anderson.txt",
+      "action": "note",
+      "result": "INFO: File contains only a fragment mentioning James Kirkham, Sr. and Official Round Table"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "volume": 6,
+  "month": "April",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol6_01a_Article_The_Last_Days.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol6_01b_Article_The_Passover_and_the_Lords_Supper.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (107 chars removed)"
+    },
+    {
+      "file": "April_Vol6_07_The_Official_Round_Table_Clarissa_Smith_Williams_and_Amy_Bro.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "April_Vol6_08a_Notes_from_Field_The_Official_Round_Table.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (97 chars removed)"
+    },
+    {
+      "file": "April_Vol6_10a_Guide_Lessons_LESSON_I_Theology_and_Testimony_CHILDREN_AND_THE_BOOK_OF_MOR.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

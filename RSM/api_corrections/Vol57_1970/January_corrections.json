@@ -1,0 +1,277 @@
+{
+  "volume": 57,
+  "month": "January",
+  "year": 1970,
+  "total_files_checked": 38,
+  "files_correct": [
+    "V57_01_04_Poem_Not_Rich.txt",
+    "V57_01_06_Poem_The_Rothe.txt",
+    "V57_01_10_SpFt_The_Voss.txt",
+    "V57_01_11_Poem_Apples_Brown.txt",
+    "V57_01_13_GenFt_A_Clough.txt",
+    "V57_01_14_Poem_Sky_Madsen.txt",
+    "V57_01_15_SpFt_Binding_Scott.txt",
+    "V57_01_16_Poem_The_Schow.txt",
+    "V57_01_17_GenFt_Remembering_Esplin.txt",
+    "V57_01_18_Poem_A_Sprig_Myers.txt",
+    "V57_01_20_GenFt_Always_Murphy.txt",
+    "V57_01_22_GenFt_He_Arnold.txt",
+    "V57_01_23_GenFt_Hobby_Ferris.txt",
+    "V57_01_25_Poem_A_Sadleir.txt",
+    "V57_01_28_GenFt_Spiritual_Doxey.txt",
+    "V57_01_29_GenFt_Visiting_Smith.txt",
+    "V57_01_30_Poem_Tomorrows_Shomaker.txt",
+    "V57_01_31_GenFt_Homemaking_Taylor.txt",
+    "V57_01_32_GenFt_Social_Christensen.txt",
+    "V57_01_33_Poem_Lessons_Roberts.txt",
+    "V57_01_34_GenFt_Cultural_Clark.txt",
+    "V57_01_35_Poem_Mood.txt",
+    "V57_01_36_Poem_Full_Kay.txt",
+    "V57_01_38_Poem_Thoughts_Brown.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_01_01_SpFt_Happy.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Joseph Fielding Smith article instead of Happy New Year 1970 message",
+      "action": "replace_content",
+      "text": "As the opening year of a new decade approaches we send greetings to our beloved sisters in all the world. We rejoice with you in the blessings which flow down from heaven upon the sisters, and the blessings which attend the work of Relief Society. At the beginning of a New Year, as is the custom, we examine the prospects for the success of Relief Society activities. We pause to appraise the needs of the sisters in this exciting, wonderful dispensation with its sublime and breathtaking accomplishments. We are fully cognizant ot the wickedness and evil rampant in the world and endeavor to make Relief Society a bulwark for the sisters and for the guiding of their families in withstanding the unrighteous temptations of the world, just the same, we know the privilege of having been born into the world at this time. The daughters of God are vital to his work in these latter days. Never have the prospects been brighter for enlarged membership, greater activity by more sisters, more opportunities for spiritual and cultural advancement. Never has the need for Relief Society been more evident. The sisters need the companionship of other sisters with like ideals, the strength of a great God-given organization upon which to depend. Never has the influence of Relief Society been more widespread, more accepted by others. Never have the women of the Church had more opportunity to provide the example of righteous living, proper family relationships, happy, well-cared-for homes, and refining pursuits. Never have education materials been more abundant, more helpful for application to living. Never has there been more work to do, more opportunities for service. The lonely and benighted souls of many call to Relief Society for help. Never has there been greater need for women strong in the faithdedicated, devoted women to carry the yoke of the Lord. Look back, sisters. Let the past be the foundation for the present, the preparation for the future. Give past experience full credit for its achievements. \". . . Ye shall henceforth return no more that way.\" (Deut. 17:16.) Look up, sisters. Fasten your eyes upon Relief Society now!\" ... ye have not passed this way heretofore.\" (Jos. 3:4.) Do not let your veneration for the past rob you of fullest participation and enjoyment of Relief Society now. Relief Society is fulfilling its destiny. We are seeing the prophecies as to its growth coming to pass. May this New Year carry us farther along the way. Affectionately, General Presidency",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains publication information that should be in Misc",
+      "action": "trim_end",
+      "text": "June L. Moore, Klamath Falls, Oregon",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_03_SpFt_Responsibility_Smi.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and contains content from next article",
+      "action": "trim_end",
+      "text": "And may the Lord bless you good sisters and magnify you, and I leave my blessings with you, in the name of Jesus Christ, our Redeemer. Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_05_SpFt_The_Petersen.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "the priesthood is properly understood and honored",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_07_Fict_Jerusha_Todd.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text that appears to be from another section",
+      "action": "trim_end",
+      "text": "(to be continued)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_08_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Jerusha story instead of Woman's Sphere article",
+      "action": "note",
+      "text": "OCR gap - Woman's Sphere content not found in source OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_01_09_GenFt_Editorial_Sharp.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete and missing significant portions of the editorial",
+      "action": "note",
+      "text": "OCR gap - complete editorial text not available in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_01_12_Fict_The_Woolsey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence and garbled text",
+      "action": "trim_end",
+      "text": "And Bill looke around one to be proud of and all once nearer to becoming a grown-",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_19_GenFt_Quick_Jones.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Annie C. Esplin",
+      "action": "trim_start",
+      "text": "Quick Mixes of YourOwn",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_21_GenFt_Testimony_Kivekas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from priesthood article",
+      "action": "trim_start",
+      "text": "TESTIMONY ME ETING Anna Kivekas",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_24_GenFt_Words_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content from previous article instead of proper content",
+      "action": "replace_content",
+      "text": "A MINIATURE LOAF OF BREAD A loaf of bread was magic exposed To a young boy's watchful eyes: Hot from the oven homely composed, Evoked pleasure in anxious sighs. But the miniature loaf seemed his very own, To him, a succulent prize it was cooled and wrapped in new cellophane He guarded it saying goodbyes. When he got to his home and was readied for bed On his pillow rested the prize; Was it only a miniature loaf of bread Or a love-tokened gift, in disguise? Beulah Huish Sadleir 42",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_01_26_Fict_Heart_Bailey.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence",
+      "action": "trim_start",
+      "text": "\"My father is dying in this alien land,\" said Kim in anguish.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_27_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "trim_end",
+      "text": "a 56",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_37_GenFt_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Cultural Refinement lesson",
+      "action": "trim_start",
+      "text": "Names of Latter-day Saint women who have reached the ages of ninety or older",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "By Beauty Awed, Linnie Fisher Robinson",
+      "expected_page": 23,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Chile, My Child, Leora Larsen",
+      "expected_page": 78,
+      "status": "merged_with_another",
+      "merged_into": "V57_01_37_GenFt_Birthday.txt"
+    }
+  ],
+  "notes": "Several files have significant content bleeding issues, particularly between fiction articles and adjacent content. Some OCR gaps exist for certain articles. The extraction quality varies considerably across different sections of the magazine.",
+  "validated_corrections": [
+    {
+      "file": "V57_01_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains publication information that should be in Misc",
+      "action": "trim_end",
+      "text": "June L. Moore, Klamath Falls, Oregon",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_03_SpFt_Responsibility_Smi.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and contains content from next article",
+      "action": "trim_end",
+      "text": "And may the Lord bless you good sisters and magnify you, and I leave my blessings with you, in the name of Jesus Christ, our Redeemer. Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_05_SpFt_The_Petersen.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "the priesthood is properly understood and honored",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_07_Fict_Jerusha_Todd.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text that appears to be from another section",
+      "action": "trim_end",
+      "text": "(to be continued)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_19_GenFt_Quick_Jones.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Annie C. Esplin",
+      "action": "trim_start",
+      "text": "Quick Mixes of YourOwn",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_01_37_GenFt_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Cultural Refinement lesson",
+      "action": "trim_start",
+      "text": "Names of Latter-day Saint women who have reached the ages of ninety or older",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_01_12_Fict_The_Woolsey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence and garbled text",
+      "action": "trim_end",
+      "text": "And Bill looke around one to be proud of and all once nearer to becoming a grown-",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_21_GenFt_Testimony_Kivekas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from priesthood article",
+      "action": "trim_start",
+      "text": "TESTIMONY ME ETING Anna Kivekas",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_26_Fict_Heart_Bailey.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence",
+      "action": "trim_start",
+      "text": "\"My father is dying in this alien land,\" said Kim in anguish.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_01_27_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc",
+      "action": "trim_end",
+      "text": "a 56",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

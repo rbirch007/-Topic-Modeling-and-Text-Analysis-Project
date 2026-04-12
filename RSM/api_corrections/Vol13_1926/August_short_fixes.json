@@ -1,0 +1,40 @@
+{
+  "volume": 13,
+  "month": "August",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0243,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "August_Vol13_01_Frontispiece_Alpine_Highway,_American_Fork_Canyon_Frontispiece_QUESTIONS….txt",
+      "status": "delete",
+      "current_chars": 169,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This file appears to be a header artifact or misextraction. The PDF images show the magazine cover, table of contents, and advertisements, but no actual frontispiece article about Alpine Highway, American Fork Canyon. The table of contents lists it as just 'Frontispiece' which typically refers to an image, not a text article.",
+      "api_usage": {
+        "input_tokens": 7212,
+        "output_tokens": 179,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        445,
+        446,
+        447,
+        448
+      ]
+    }
+  ]
+}

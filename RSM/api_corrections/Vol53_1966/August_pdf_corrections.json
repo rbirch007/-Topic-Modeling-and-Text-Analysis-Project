@@ -1,0 +1,29 @@
+{
+  "volume": 53,
+  "month": "August",
+  "year": 1966,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V53_08_03_SpFt_How_to_McConkie.txt",
+      "issue_type": "bleed_end",
+      "description": "Article correctly ends with the D&C 101:77-80 scripture reference and quote",
+      "action": "trim_end",
+      "text": "This was done, he said, \"That every man may act in doctrine and principle pertaining to futurity, according to the moral agency which I have given unto him, that every man may be accountable for his own sins in the day of judgment\" (D&C 101: 77-80).",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V53_08_17_SpFt_Songs_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file is missing the introductory paragraph and jumps directly to song listings without proper context",
+      "action": "trim_start",
+      "text": "By Florence J. Madsen",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ]
+}

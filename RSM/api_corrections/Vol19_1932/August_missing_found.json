@@ -1,0 +1,138 @@
+{
+  "volume": 19,
+  "month": "August",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 7,
+  "total_searched": 7,
+  "total_cost": 0.1293,
+  "stats": {
+    "found": 1,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Believe in Yourself Bertha A. Kleinman",
+      "printed_page": 445,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Literature in the Home Elsie C. Carroll",
+      "printed_page": 447,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Trip to Bermuda Alice D. Moyle",
+      "printed_page": 470,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alice D. Moyle",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 502-505). The article should appear on page 470 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7698,
+        "output_tokens": 147,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "A Little Child Shall Lead Them I. B. McKenzie",
+      "printed_page": 472,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "I. B. McKenzie",
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 468-471) but could not locate the article 'A Little Child Shall Lead Them' by I. B. McKenzie which should appear on page 472 according to the table of contents. The provided images do not include page 472.",
+      "api_usage": {
+        "input_tokens": 7706,
+        "output_tokens": 168,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        468,
+        469,
+        470,
+        471
+      ]
+    },
+    {
+      "title": "Supt. George N. Child Called",
+      "printed_page": 485,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Notice",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 502-505). The article should appear on page 485 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7686,
+        "output_tokens": 138,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Dry Facts Refute Wet Claims",
+      "printed_page": 486,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Dry Facts Refute Wet Claims' listed on page 486 in the table of contents is not visible in any of the provided PDF page images (pages 502-505). The provided images show pages that come after page 486, so the article would appear earlier in the magazine than the pages shown.",
+      "api_usage": {
+        "input_tokens": 7686,
+        "output_tokens": 160,
+        "cost": 0.0255
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Procrastination Ella J. Coulam",
+      "printed_page": 504,
+      "status": "found",
+      "complete_text": "PROCRASTINATION\nBy Ella J. Coulam\n\nProcrastination is the thief of time,\nAnd steals away our days;\nIt robs us of our precious hours,\nAnd leads us into maze.\n\nIt whispers softly in our ear,\n\"Tomorrow will suffice;\nWhy hurry with today's work?\nTomorrow will be nice.\"\n\nBut tomorrow never comes to us\nAs we had hoped it would;\nThe work we thought to do with ease\nIs harder than we thought it could.\n\nSo let us grasp today's bright hours\nAnd use them while we may;\nFor time once lost can ne'er return—\nWe only have today.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Ella J. Coulam",
+      "confidence": "high",
+      "notes": "Found complete poem on page 504 of the PDF images. This is a short inspirational poem about the dangers of procrastination and the importance of acting today rather than postponing tasks.",
+      "api_usage": {
+        "input_tokens": 7694,
+        "output_tokens": 314,
+        "cost": 0.0278
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    }
+  ]
+}

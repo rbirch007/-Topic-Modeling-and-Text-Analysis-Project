@@ -1,0 +1,28 @@
+{
+  "volume": 55,
+  "month": "September",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_09_03_SpFt_Because_West.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with content from previous visiting teachers article and decorative symbols before the actual Red Cross article begins",
+      "action": "trim_start",
+      "text": "The Red Cross and Phoenix and Mesa Stakes (Arizona) Relief Societies Conduct Home Nurse Training Classes",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V55_09_20_GenFt_Editorial_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Suffer the Little Children story instead of the Relief Society Activities section",
+      "action": "trim_start",
+      "text": "Submissions should be addressed to the Editorial Department, Relief Society Magazine, Salt Lake City, Utah 84111. For details regarding pictures and descriptive material, see The Relief Society Magazine for January 1966, page 50. Color pictures are not used in this department. Relief Society Activities",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

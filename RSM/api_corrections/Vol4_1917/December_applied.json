@@ -1,0 +1,72 @@
+{
+  "volume": 4,
+  "month": "December",
+  "year": 1917,
+  "timestamp": "20260315_120939",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "December_Vol4_01_Article_Christmas_Alfred_Lambourne.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (624 chars added)"
+    },
+    {
+      "file": "December_Vol4_03_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "December_Vol4_06_Article_The_Close_of_the_Year.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol4_07_Article_The_Red_Cross_Conference_in_Denver_Amy_Brown_Lyman.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "December_Vol4_09a_Home_Science_Home_Science_Department.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (586 chars added)"
+    },
+    {
+      "file": "December_Vol4_09b_Guide_Lessons_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: Contains only headers with no actual lesson content"
+    },
+    {
+      "file": "December_Vol4_11_Article_December_Entertainment_Morag.txt",
+      "action": "note",
+      "result": "INFO: Contains index content instead of December Entertainment article"
+    },
+    {
+      "file": "December_Vol4_12_Poetry_There's_a_Way_Out_(Poem)_Maud_Baggarley.txt",
+      "action": "note",
+      "result": "INFO: Contains mostly index and advertisement content instead of the poem"
+    },
+    {
+      "file": "December_Vol4_13_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "action": "note",
+      "result": "INFO: Contains only index references instead of actual Current Topics article"
+    },
+    {
+      "file": "December_Vol4_14_Article_Book_Reviews.txt",
+      "action": "note",
+      "result": "INFO: Contains index content instead of Book Reviews article"
+    },
+    {
+      "file": "December_Vol4_15_Article_My_Christmas_Prayer.txt",
+      "action": "note",
+      "result": "INFO: Contains index content instead of the Christmas Prayer poem"
+    },
+    {
+      "file": "December_Vol4_17_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2207 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "volume": 5,
+  "month": "February",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0763,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Portrait of Col. Theodore Roosevelt Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 257-260) contain Guide Lessons content from what appears to be a different issue or section. No frontispiece portrait or related content about Theodore Roosevelt is visible in these pages. A frontispiece would typically be at the very beginning of the magazine issue, not in the middle sections shown.",
+      "api_usage": {
+        "input_tokens": 6906,
+        "output_tokens": 161,
+        "cost": 0.0231
+      },
+      "pdf_pages": [
+        257,
+        258,
+        259,
+        260
+      ]
+    },
+    {
+      "title": "Mother's Valentine Diana Parrish",
+      "printed_page": 78,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Diana Parrish",
+      "confidence": "high",
+      "notes": "The article 'Mother's Valentine Diana Parrish' listed on page 78 in the table of contents is not visible in the provided PDF page images (pages 69-72). The images show advertisements and other content but do not contain page 78 where this article should appear.",
+      "api_usage": {
+        "input_tokens": 6900,
+        "output_tokens": 156,
+        "cost": 0.023
+      },
+      "pdf_pages": [
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "title": "Home Science Department Janette A. Hyde",
+      "printed_page": 102,
+      "status": "found",
+      "complete_text": "HOME SCIENCE DEPARTMENT\n\nBy Janette A. Hyde.\n\nHow much good has been received from the lessons given in the Magazine depends entirely upon how much time we have devoted to the study and preparation of the same.\n\nThe main object in the outline work is to place before our women, a thoroughly scientific yet plainly worded study, in order that they may become possessed of such practical knowledge of foods as shall make them competent judges of food preparation, balanced rations, food projects, and food substitutes. If we are expected to win the war with food, we must be well-trained food soldiers, directed by the best general knowledge obtainable by study and experience.\n\nIn the studying of foods, a thorough knowledge of production is also very necessary.\n\nWe wish to emphasize the importance of milk and its by-products as a food, especially for the babe and growing child. While it is true that well developed people may use other foods to sustain life, milk is indispensable to the life of growing children. The idea that there are milk substitutes for children is a mistaken one, and should be discountenanced, as many people deceived by such statements, and through this information are giving children inferior foods with which, as they suppose, to build superior bodies. Good results do not follow improper feeding, and we find many children deprived of the most precious and righteous heritage, that of strong healthy bodies.\n\nIf we do not return to some of the old-time customs and ways of producing and living, we will find the prospects for future development much retarded. We are short in the state of Utah, 10,000 milk cows, according to increase of population and decrease in the dairy herd. The loss has many phases besides the shortage in milk supply. It means less fertilization for farm and garden, fewer calves for future mother cows, lessened meat producing sources, with an extra shortage of shoe leather; besides the hundred and one extra products which come from the dairy cow. In the face of these facts, something should be done to stimulate the desire on the part of the farmer to increase his dairy herd. Let us suppose that 10 per cent of the 40,000 Relief Society sisters, would make preparations for one extra cow to be",
+      "already_in_file": null,
+      "category": "Home_Science",
+      "author": "Janette A. Hyde",
+      "confidence": "high",
+      "notes": "Found the complete Home Science Department article by Janette A. Hyde on page 102. The text appears to be cut off at the end of the visible page.",
+      "api_usage": {
+        "input_tokens": 6904,
+        "output_tokens": 630,
+        "cost": 0.0302
+      },
+      "pdf_pages": [
+        110,
+        111,
+        112,
+        113
+      ]
+    }
+  ]
+}

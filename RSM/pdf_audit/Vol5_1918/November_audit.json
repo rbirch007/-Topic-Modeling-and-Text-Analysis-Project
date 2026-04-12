@@ -1,0 +1,316 @@
+{
+  "volume": 5,
+  "month": "November",
+  "year": 1918,
+  "total": 16,
+  "ok": 14,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "November_Vol5_00_BOARD.txt",
+      "body_len": 686,
+      "article_words": 63,
+      "words_in_ocr": 63,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_00_CONTENTS.txt",
+      "body_len": 442,
+      "article_words": 44,
+      "words_in_ocr": 44,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt",
+      "body_len": 101,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(101)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_01c_Article_Lo_the_Poor_Rich_Indian_a_a_a_a_a.txt",
+      "body_len": 32470,
+      "article_words": 1607,
+      "words_in_ocr": 1607,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(10))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_03_Article_The_Vision_Elsie_C._Carroll.txt",
+      "body_len": 1847,
+      "article_words": 172,
+      "words_in_ocr": 172,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_04_Article_Aunt_Jane's_Thanksgiving_Mrs._Parley_Nelson.txt",
+      "body_len": 17592,
+      "article_words": 1048,
+      "words_in_ocr": 1048,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_05_Article_Obesity_Raphael_S._Olson,_M._D..txt",
+      "body_len": 18655,
+      "article_words": 1035,
+      "words_in_ocr": 1035,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_06_Article_Guidance_of_Children_Lucy_Wright_Snow.txt",
+      "body_len": 11382,
+      "article_words": 737,
+      "words_in_ocr": 737,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_07a_Editorial_Patriotic_Department.txt",
+      "body_len": 1979,
+      "article_words": 213,
+      "words_in_ocr": 213,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 8342,
+      "article_words": 524,
+      "words_in_ocr": 524,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "body_len": 5673,
+      "article_words": 408,
+      "words_in_ocr": 408,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_10a_Editorial_Editorial.txt",
+      "body_len": 3854,
+      "article_words": 336,
+      "words_in_ocr": 336,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_10b_Guide_Lessons_Guide_Lessons_a.txt",
+      "body_len": 6653,
+      "article_words": 411,
+      "words_in_ocr": 411,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_10b_Guide_Lessons_Guide_Lessons_c.txt",
+      "body_len": 6466,
+      "article_words": 381,
+      "words_in_ocr": 381,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_11a_Guide_Lessons_Guide_Lessons_a_a_a.txt",
+      "body_len": 9171,
+      "article_words": 561,
+      "words_in_ocr": 561,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol5_Misc.txt",
+      "body_len": 10136,
+      "article_words": 579,
+      "words_in_ocr": 576,
+      "pct_in_ocr": 0.9948,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "cover",
+        "directory",
+        "trailing"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol5_No11_November_1918.txt",
+    "ocr_chars": 140576,
+    "ocr_unique_words": 4835,
+    "contents_xref": {
+      "entries_in_contents": 12,
+      "matched": 11,
+      "match_details": [
+        {
+          "title": "Lo, the Poor, Rich Indian Frontispiece",
+          "page": null,
+          "file": "November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lo, the Poor, Rich Indian",
+          "page": 603,
+          "file": "November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Vision Elsie C. Carroll",
+          "page": 616,
+          "file": "November_Vol5_03_Article_The_Vision_Elsie_C._Carroll.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Aunt Jane's Thanksgiving Mrs. Parley Nelson",
+          "page": 618,
+          "file": "November_Vol5_04_Article_Aunt_Jane's_Thanksgiving_Mrs._Parley_Nelson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Obesity Raphael S. Olson, M. D.",
+          "page": 625,
+          "file": "November_Vol5_05_Article_Obesity_Raphael_S._Olson,_M._D..txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guidance of Children Lucy Wright Snow",
+          "page": 632,
+          "file": "November_Vol5_06_Article_Guidance_of_Children_Lucy_Wright_Snow.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Patriotic Department Clarissa S. Williams",
+          "page": 635,
+          "file": "November_Vol5_07a_Editorial_Patriotic_Department.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 638,
+          "file": "November_Vol5_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Current Topics James H. Anderson",
+          "page": 642,
+          "file": "November_Vol5_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial",
+          "page": 645,
+          "file": "November_Vol5_07a_Editorial_Patriotic_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons",
+          "page": 647,
+          "file": "November_Vol5_10b_Guide_Lessons_Guide_Lessons_a.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Thanksgiving Mary Foster Gibbs",
+          "page": 601
+        }
+      ],
+      "extra_files": [
+        "November_Vol5_01c_Article_Lo_the_Poor_Rich_Indian_a_a_a_a_a.txt",
+        "November_Vol5_10a_Editorial_Editorial.txt",
+        "November_Vol5_10b_Guide_Lessons_Guide_Lessons_c.txt",
+        "November_Vol5_11a_Guide_Lessons_Guide_Lessons_a_a_a.txt"
+      ]
+    }
+  }
+}

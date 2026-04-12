@@ -1,0 +1,61 @@
+Ad Reclassification Log - Vols 1-29
+Run: 2026-03-18 21:20:23
+======================================================================
+RECLASSIFIED: Vol2_1915/February/February_Vol2_12_Article_The_Song_of_the_Wheat_(Music_by_Evan_Stephens,_Words_by_S._Y.txt
+  -> February_Vol2_12_Misc_Ad_The_Song_of_the_Wheat_(Music_by_Evan_Stephens,_Words_by_S._Y.txt
+  Reason: high ad ratio (50%)
+  [Vol2_1915: 1 reclassified]
+RECLASSIFIED: Vol4_1917/July/July_Vol4_19_Article_First_Winter_in_Salt_Lake_City,.txt
+  -> July_Vol4_19_Misc_Ad_First_Winter_in_Salt_Lake_City,.txt
+  Reason: high ad ratio (50%)
+RECLASSIFIED: Vol4_1917/November/November_Vol4_14d_Guide_Lessons_Lesson_IV_Home_Economics_Fourth_Week_in_December_SPIRITUAL_C_d_a_a_b.txt
+  -> November_Vol4_14d_Misc_Ad_Lessons_Lesson_IV_Home_Economics_Fourth_Week_in_December_SPIRITUAL_C_d_a_a_b.txt
+  Reason: high ad ratio (50%)
+  [Vol4_1917: 2 reclassified]
+REVERTED (false positive): Vol5_1918/July/July_Vol5_10_Current_Topics_Current_Topics_James_H._Anderson.txt
+  Was renamed to Misc_Ad but is a real Current Topics column (mentioned 'subscribe' in passing)
+  Restored to: July_Vol5_10_Current_Topics_Current_Topics_James_H._Anderson.txt
+SKIPPED (no category to replace): Vol9_1922/June/June_Vol1_08_MISC.txt (majority ad content (100%))
+SKIPPED (no category to replace): Vol9_1922/June/June_Vol1_99_ADVERTISERS.txt (majority ad content (100%))
+RECLASSIFIED: Vol15_1928/June/June_Vol15_15_Article_Pictures.txt
+  -> June_Vol15_15_Misc_Ad_Pictures.txt
+  Reason: majority ad content (67%)
+  [Vol15_1928: 1 reclassified]
+RECLASSIFIED: Vol16_1929/March/March_Vol16_12_Frontispiece_Mount_Timpanogos_from_American_Fork_Canyon_Frontispiece.txt
+  -> March_Vol16_12_Misc_Ad_Mount_Timpanogos_from_American_Fork_Canyon_Frontispiece.txt
+  Reason: tiny fragment (<100 chars)
+  [Vol16_1929: 1 reclassified]
+RECLASSIFIED: Vol17_1930/November/November_Vol17_15_Frontispiece_Charity_Frontispiece.txt
+  -> November_Vol17_15_Misc_Ad_Charity_Frontispiece.txt
+  Reason: tiny fragment (<100 chars)
+RECLASSIFIED: Vol17_1930/December/December_Vol17_14_Frontispiece_The_Madonna_with_St_Jerome_Frontispiece.txt
+  -> December_Vol17_14_Misc_Ad_The_Madonna_with_St_Jerome_Frontispiece.txt
+  Reason: tiny fragment (<100 chars)
+  [Vol17_1930: 2 reclassified]
+REVERTED (false positive): Vol18_1931/March/March_Vol18_21_Editorial_John_Q_Cannon.txt
+  Was renamed to Misc_Ad but is a real obituary editorial (mentioned "Deseret News" as context)
+  Restored to: March_Vol18_21_Editorial_John_Q_Cannon.txt
+RECLASSIFIED: Vol18_1931/October/October_Vol18_19_Editorial_A_Concrete_Suggestion.txt
+  -> October_Vol18_19_Misc_Ad_A_Concrete_Suggestion.txt
+  Reason: majority ad content (80%) - subscription drive notice
+  [Vol18_1931: 1 reclassified, 1 reverted]
+RECLASSIFIED: Vol19_1932/January/January_Vol19_28_Article_Mrs_Ida_V_Lister_and_Her_Nine_Daughters_Portrait.txt
+  -> January_Vol19_28_Misc_Ad_Mrs_Ida_V_Lister_and_Her_Nine_Daughters_Portrait.txt
+  Reason: tiny fragment (<100 chars)
+RECLASSIFIED: Vol19_1932/March/March_Vol19_27_Article_Masonic_Hall_Nauvoo.txt
+  -> March_Vol19_27_Misc_Ad_Masonic_Hall_Nauvoo.txt
+  Reason: tiny fragment (<100 chars)
+  [Vol19_1932: 2 reclassified]
+RECLASSIFIED: Vol20_1933/April/April_Vol20_23_Frontispiece_One_of_the_Tablets_of_the_Seagull_Monument_Frontispiece.txt
+  -> April_Vol20_23_Misc_Ad_One_of_the_Tablets_of_the_Seagull_Monument_Frontispiece.txt
+  Reason: tiny fragment (<100 chars)
+  [Vol20_1933: 1 reclassified]
+RECLASSIFIED: Vol22_1935/August/August_Vol22_35_Article_Magazine_Drive.txt
+  -> August_Vol22_35_Misc_Ad_Magazine_Drive.txt
+  Reason: majority ad content (54%)
+  [Vol22_1935: 1 reclassified]
+
+======================================================================
+TOTAL checked: 1044
+TOTAL reclassified: 12 (14 initially, 2 reverted as false positives)
+REVERTED: 2 (Vol5 Jul Current Topics, Vol18 Mar John Q Cannon editorial)

@@ -1,0 +1,190 @@
+{
+  "volume": 12,
+  "month": "September",
+  "year": 1925,
+  "total_merged": 3,
+  "total_splits": 9,
+  "total_cost": 0.3808,
+  "files": [
+    {
+      "source_file": "September_Vol12_08_Article_William_Jennings_Bryan.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "William Jennings Bryan",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "William Howard Taft, in the interest of",
+          "end_boundary": "will do much to brace timid belief",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The National Conference of Social Work",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "The National Council of Social Work In",
+          "end_boundary": "and the social worker of Utah stake.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Baby Wear",
+          "category": "Home_Science",
+          "author": "Vilate Elliot",
+          "start_boundary": "Baby Wear Vilate Elliot, Brigham Young University",
+          "end_boundary": "can be arranged for the neck and sleeves.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I (First",
+          "end_boundary": "essential to normal living? Mail Orders Filled",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains multiple distinct articles that were incorrectly merged. The content includes editorial pieces, educational articles, and lesson materials. The boundaries are clearly defined by topic changes and formatting differences visible in the original layout.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14569,
+      "tier": 1,
+      "pdf_pages": [
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573
+      ],
+      "api_usage": {
+        "input_tokens": 44192,
+        "output_tokens": 487,
+        "cost": 0.1399
+      }
+    },
+    {
+      "source_file": "September_Vol12_13_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Editor Abroad",
+          "category": "Article",
+          "author": "Alice Louise Reynolds",
+          "start_boundary": "The Editor Abroad By Alice Louise Reynolds MORE",
+          "end_boundary": "we are presented with a very beautiful bouquet",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Humility",
+          "category": "Poem",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Humility Our Lord has said that we should",
+          "end_boundary": "In humbleness we'll bow the knee. Elsie E.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Calories for Safety",
+          "category": "Article",
+          "author": "Jean Cox",
+          "start_boundary": "Calories for Safety Jean Cox, State Supervisor of",
+          "end_boundary": "never ending problems in the \"food game.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE EDITOR ABROAD",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains three distinct articles: a travel article about Italy by Alice L. Reynolds, a short religious poem by Elsie E. Barrett, and a nutrition article by Jean Cox. The boundaries are clear with proper titles and author attributions.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10650,
+      "tier": 1,
+      "pdf_pages": [
+        546,
+        547,
+        548
+      ],
+      "api_usage": {
+        "input_tokens": 33892,
+        "output_tokens": 418,
+        "cost": 0.1079
+      }
+    },
+    {
+      "source_file": "September_Vol12_18_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes From the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman California",
+          "end_boundary": "Mary Gibbs, Phoebe Smith, and Sarah Reynolds, board members.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I (First",
+          "end_boundary": "declared himself unable to give the interpretation by say-",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "The file contains two distinct articles: 'Notes From the Field' by Amy Brown Lyman covering Relief Society activities across various stakes and missions, and 'Guide Lessons for November' which appears to be lesson material for Relief Society classes. The Guide Lessons section is incomplete, ending mid-sentence.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13996,
+      "tier": 1,
+      "pdf_pages": [
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561,
+        562
+      ],
+      "api_usage": {
+        "input_tokens": 42487,
+        "output_tokens": 369,
+        "cost": 0.133
+      }
+    }
+  ]
+}

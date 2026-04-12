@@ -1,0 +1,27 @@
+{
+  "volume": 54,
+  "month": "October",
+  "year": 1967,
+  "timestamp": "20260314_100110",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V54_10_01_Fict_Throw_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (4897 chars)"
+    },
+    {
+      "file": "V54_10_22_Poem_Weapon_Anderson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (98 chars)"
+    },
+    {
+      "file": "V54_10_25_Poem_Burnished_Burnham.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1728 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "volume": 7,
+  "month": "April",
+  "year": 1920,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.2321,
+  "files": [
+    {
+      "source_file": "April_Vol7_01_Article_Opening_the_Gate_Beautiful_to_Women.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Opening the Gate Beautiful to Women",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Opening the Gate Beautiful to Women When the Prophet",
+          "end_boundary": "in commemoration of the hundredth anniversary of the Vision,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Sentiment",
+          "category": "Article",
+          "author": "Julia P. M. Farnsworth",
+          "start_boundary": "A SENTIMENT. Julia P. M. Farnsworth One hundred years",
+          "end_boundary": "enduring its trials but sharing its triumphs. April, 1920.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Rays of Science in the Home",
+          "category": "Article",
+          "author": "Amy Lyman Merrill",
+          "start_boundary": "THE RAYS OF SCIENCE IN THE HOME. Amy Lyman",
+          "end_boundary": "The world rolled into light. It is daybreak everywhere.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OPENING THE GATE"
+      ],
+      "notes": "This file contains three distinct articles that flow together. The main article 'Opening the Gate Beautiful to Women' is unsigned, followed by 'A Sentiment' by Julia P. M. Farnsworth, and 'The Rays of Science in the Home' by Amy Lyman Merrill. All three articles relate to the centennial of Joseph Smith's First Vision in 1820 and its impact on women's rights and opportunities.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 8135,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 34659,
+        "output_tokens": 489,
+        "cost": 0.1113
+      }
+    },
+    {
+      "source_file": "April_Vol7_12b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Genealogy and Testimony - MORE LIGHT ON BAPTISM FOR THE DEAD",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons LESSON I. Genealogy and Testimony First Week",
+          "end_boundary": "Note: Class leaders may arrange questions for this lesson.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business - TENNYSON'S QUEEN OF MAY",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Required.) Second Week",
+          "end_boundary": "among English poets in his admiration for May.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Book of Mormonâ€”Bible Testimony - Isaiah's Prophecy and the Book of Mormon",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON . Book of Mormonâ€” Bible Testimony Third Week",
+          "end_boundary": "from the Deseret Book Company, Salt Lake City.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Social Service - HEALTH (Feeding School Children)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. (Required) Social Service Fourth Week in",
+          "end_boundary": "provided, that the average child's likes",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections as indicated by the Roman numerals and clear subject divisions. The last lesson appears to be cut off mid-sentence, suggesting the file may be incomplete. Each lesson has distinct topics: genealogy/baptism for the dead, literature/Tennyson, Book of Mormon prophecy, and health/nutrition.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 18993,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37346,
+        "output_tokens": 587,
+        "cost": 0.1208
+      }
+    }
+  ]
+}

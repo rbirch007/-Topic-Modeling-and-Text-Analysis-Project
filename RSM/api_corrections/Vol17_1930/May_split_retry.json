@@ -1,0 +1,74 @@
+{
+  "volume": 17,
+  "month": "May",
+  "year": 1930,
+  "timestamp": "20260316_210706",
+  "dry_run": false,
+  "retried": 6,
+  "created": 4,
+  "failed": 6,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Tributes to Clarissa Smith Williams",
+      "new_file": "May_Vol17_01a_Article_Tributes_to_Clarissa_Smith_Williams.txt",
+      "chars": 11434,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "British National Council of Women",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "Editorial - Ten Years of Suffrage",
+      "new_file": "May_Vol17_05d_Editorial_Editorial_-_Ten_Years_of_Suffrage.txt",
+      "chars": 2650,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "i",
+      "title": "Faith of the Mothers",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "j",
+      "title": "Faith and Faithfulness Triumphant",
+      "new_file": "May_Vol17_05j_Article_Faith_and_Faithfulness_Triumphant.txt",
+      "chars": 7661,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "k",
+      "title": "Spring Time",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "l",
+      "title": "Moral Teaching Through Home Work",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "Moral Teaching Through Home Work",
+      "new_file": "May_Vol17_09a_Article_Moral_Teaching_Through_Home_Work.txt",
+      "chars": 22089,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "The Old Juniper Tree",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "The Dawn of Hope For Saint and Sinner in the Life to Come",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

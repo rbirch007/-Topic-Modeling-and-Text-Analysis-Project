@@ -1,0 +1,126 @@
+{
+  "volume": 14,
+  "month": "April",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.1232,
+  "stats": {
+    "found": 0,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Spring Days Nina W. Kerrick",
+      "printed_page": 161,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Nina W. Kerrick",
+      "confidence": "high",
+      "notes": "The article 'Spring Days' by Nina W. Kerrick listed on page 161 is not visible in any of the provided PDF page images (pages 191-194). The images show pages from later in the magazine, including 'Courage' by C.A. Boyer and 'Notes from the Field' by Amy Brown Lyman. To find this article, pages around 161 would need to be provided.",
+      "api_usage": {
+        "input_tokens": 7417,
+        "output_tokens": 187,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    },
+    {
+      "title": "To a Poplar Tree J. Collard Baker",
+      "printed_page": 170,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "J. Collard Baker",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four provided PDF page images (pages 160-163). The table of contents indicates it should be on page 170, but that page is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7433,
+        "output_tokens": 146,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    {
+      "title": "Editorial—The Clean-up and Beautification Campaign",
+      "printed_page": 174,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 191-194) but could not locate the editorial titled 'Editorial—The Clean-up and Beautification Campaign' which should appear on page 174. The provided images show pages 191-194 which contain other articles but not the missing editorial from page 174.",
+      "api_usage": {
+        "input_tokens": 7429,
+        "output_tokens": 163,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    },
+    {
+      "title": "The Modern Crusader",
+      "printed_page": 175,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 191-194) but could not locate 'The Modern Crusader' article. The article should appear on page 175 according to the table of contents, but the provided images are from pages 191-194, which is after where this article should appear.",
+      "api_usage": {
+        "input_tokens": 7405,
+        "output_tokens": 155,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    },
+    {
+      "title": "Writers and Editors' Dinner",
+      "printed_page": 176,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 191-194, but the article 'Writers and Editors' Dinner' is listed on page 176 in the table of contents. The images provided do not contain page 176, so the article cannot be found in the available material.",
+      "api_usage": {
+        "input_tokens": 7413,
+        "output_tokens": 147,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    }
+  ]
+}

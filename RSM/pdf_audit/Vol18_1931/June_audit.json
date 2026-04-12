@@ -1,0 +1,445 @@
+{
+  "volume": 18,
+  "month": "June",
+  "year": 1931,
+  "total": 23,
+  "ok": 22,
+  "flagged": 1,
+  "empty": 0,
+  "records": [
+    {
+      "file": "June_Vol18_00_BOARD.txt",
+      "body_len": 764,
+      "article_words": 75,
+      "words_in_ocr": 75,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_00_CONTENTS.txt",
+      "body_len": 977,
+      "article_words": 88,
+      "words_in_ocr": 88,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_00_Misc.txt",
+      "body_len": 9109,
+      "article_words": 558,
+      "words_in_ocr": 555,
+      "pct_in_ocr": 0.9946,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "June_Vol18_00_Misc_backup_premarker.txt",
+      "body_len": 9041,
+      "article_words": 553,
+      "words_in_ocr": 553,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_01_Article_Crusade_Against_Tobacco_Robison.txt",
+      "body_len": 2295,
+      "article_words": 177,
+      "words_in_ocr": 177,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02a_Article_Orson_F_Whitney_Apostle_Poet_Historian_Philosopher.txt",
+      "body_len": 5120,
+      "article_words": 416,
+      "words_in_ocr": 416,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02b_Article_Relief_Society_Conference_-_Officers_Meeting_Morning_Session.txt",
+      "body_len": 17336,
+      "article_words": 750,
+      "words_in_ocr": 750,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02c_Article_Reforestation_as_Bi-Centennial_Celebration_to_Honor_George_W.txt",
+      "body_len": 4893,
+      "article_words": 344,
+      "words_in_ocr": 344,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02d_Article_Legislation_in_Western_States.txt",
+      "body_len": 19634,
+      "article_words": 918,
+      "words_in_ocr": 918,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02e_Article_Officers_Meeting_-_Afternoon_Session.txt",
+      "body_len": 6331,
+      "article_words": 332,
+      "words_in_ocr": 332,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_02f_Article_Relief_Society_Conference_-_General_Sessions.txt",
+      "body_len": 102659,
+      "article_words": 2737,
+      "words_in_ocr": 2737,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_03_Article_Phillip_North_Moore_Cannon.txt",
+      "body_len": 2543,
+      "article_words": 190,
+      "words_in_ocr": 190,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_05_Article_Blue_Herons_Merrill.txt",
+      "body_len": 6597,
+      "article_words": 456,
+      "words_in_ocr": 456,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_06_Article_June_Barrett.txt",
+      "body_len": 651,
+      "article_words": 72,
+      "words_in_ocr": 72,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07a_Editorial_Editorial_President_Rey_L_Pratt.txt",
+      "body_len": 1460,
+      "article_words": 130,
+      "words_in_ocr": 130,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07b_Editorial_Antoine_Ridgeway_Ivins.txt",
+      "body_len": 1539,
+      "article_words": 130,
+      "words_in_ocr": 130,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07c_Article_A_Call_AnsweredA_Life_Changed.txt",
+      "body_len": 4069,
+      "article_words": 329,
+      "words_in_ocr": 329,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07d_Editorial_Gratitude_to_President_Hoover.txt",
+      "body_len": 1246,
+      "article_words": 105,
+      "words_in_ocr": 105,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07e_Editorial_Utah_White_House_Conference_on_Child_Health_and_Protection.txt",
+      "body_len": 791,
+      "article_words": 69,
+      "words_in_ocr": 69,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_07f_Editorial_To_Our_Mothers.txt",
+      "body_len": 738,
+      "article_words": 66,
+      "words_in_ocr": 65,
+      "pct_in_ocr": 0.9848,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "socie"
+      ]
+    },
+    {
+      "file": "June_Vol18_07g_Editorial_Tree_Planting.txt",
+      "body_len": 1001,
+      "article_words": 97,
+      "words_in_ocr": 97,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_Article03_Mail_Carrier_Meng.txt",
+      "body_len": 4283,
+      "article_words": 304,
+      "words_in_ocr": 304,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol18_Article04_Easy_money_Hoggan.txt",
+      "body_len": 12423,
+      "article_words": 811,
+      "words_in_ocr": 811,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol18_No6_June_1931.txt",
+    "ocr_chars": 207821,
+    "ocr_unique_words": 4716,
+    "contents_xref": {
+      "entries_in_contents": 19,
+      "matched": 18,
+      "match_details": [
+        {
+          "title": "Portrait of Elder Orson F. Whitney Frontispiece",
+          "page": null,
+          "file": "June_Vol18_02a_Article_Orson_F_Whitney_Apostle_Poet_Historian_Philosopher.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Crusade Against the Use of Tobacco Prest. Louise Y. Robison",
+          "page": 303,
+          "file": "June_Vol18_01_Article_Crusade_Against_Tobacco_Robison.txt",
+          "score": 0.6
+        },
+        {
+          "title": "Orson F. Whitney, Apostle, Poet, Historian, Philosopher Annie Wells Cannon",
+          "page": 305,
+          "file": "June_Vol18_02a_Article_Orson_F_Whitney_Apostle_Poet_Historian_Philosopher.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Relief Society Conference: Officers' Meeting, Morning Session",
+          "page": 307,
+          "file": "June_Vol18_02b_Article_Relief_Society_Conference_-_Officers_Meeting_Morning_Session.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Officers' Meeting, Afternoon Session",
+          "page": 320,
+          "file": "June_Vol18_02b_Article_Relief_Society_Conference_-_Officers_Meeting_Morning_Session.txt",
+          "score": 1.0
+        },
+        {
+          "title": "General Meeting, Morning Session",
+          "page": 333,
+          "file": "June_Vol18_02b_Article_Relief_Society_Conference_-_Officers_Meeting_Morning_Session.txt",
+          "score": 0.75
+        },
+        {
+          "title": "General Meeting, Afternoon Session",
+          "page": 343,
+          "file": "June_Vol18_02e_Article_Officers_Meeting_-_Afternoon_Session.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Mrs. Phillip North Moore Annie Wells Cannon",
+          "page": 353,
+          "file": "June_Vol18_03_Article_Phillip_North_Moore_Cannon.txt",
+          "score": 0.67
+        },
+        {
+          "title": "From a Mail Carrier to an Artist Curt Meng",
+          "page": 354,
+          "file": "June_Vol18_Article03_Mail_Carrier_Meng.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Easy Money Lela M. Hoggan",
+          "page": 356,
+          "file": "June_Vol18_Article04_Easy_money_Hoggan.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Blue Herons, Prairie Dogs and Men Harrison R. Merrill",
+          "page": 360,
+          "file": "June_Vol18_05_Article_Blue_Herons_Merrill.txt",
+          "score": 0.6
+        },
+        {
+          "title": "June (Poem) Elsie E. Barrett",
+          "page": 363,
+          "file": "June_Vol18_01_Article_Crusade_Against_Tobacco_Robison.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial: President Rey L. Pratt",
+          "page": 364,
+          "file": "June_Vol18_07a_Editorial_Editorial_President_Rey_L_Pratt.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Antoine Ridgeway Ivins",
+          "page": 365,
+          "file": "June_Vol18_07b_Editorial_Antoine_Ridgeway_Ivins.txt",
+          "score": 1.0
+        },
+        {
+          "title": "AS Call AnsweredA Lifes Changed.",
+          "page": 365,
+          "file": "June_Vol18_07c_Article_A_Call_AnsweredA_Life_Changed.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Utah White House Conference on Child Health and Protection",
+          "page": 367,
+          "file": "June_Vol18_07e_Editorial_Utah_White_House_Conference_on_Child_Health_and_Protection.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Gratitude to President Hoover",
+          "page": 366,
+          "file": "June_Vol18_07d_Editorial_Gratitude_to_President_Hoover.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Tree Planting",
+          "page": 368,
+          "file": "June_Vol18_07g_Editorial_Tree_Planting.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "June_Vol18_02c_Article_Reforestation_as_Bi-Centennial_Celebration_to_Honor_George_W.txt",
+        "June_Vol18_02d_Article_Legislation_in_Western_States.txt",
+        "June_Vol18_02f_Article_Relief_Society_Conference_-_General_Sessions.txt",
+        "June_Vol18_06_Article_June_Barrett.txt",
+        "June_Vol18_07f_Editorial_To_Our_Mothers.txt"
+      ]
+    }
+  }
+}

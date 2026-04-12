@@ -1,0 +1,92 @@
+{
+  "volume": 53,
+  "month": "June",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 12,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_06_01_Art_Editor_Spafford.txt",
+      "action": "note",
+      "result": "INFO: File contains only editor information, not a full article. Should be merged with table of contents or removed as standalone article."
+    },
+    {
+      "file": "V53_06_04_SpFt_Birthday_McKay.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (131 chars)"
+    },
+    {
+      "file": "V53_06_07_SpFt_James.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V53_06_08_GenFt_Editorial_Spafford.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V53_06_10_GenFt_Womans_Cannon.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_11_Fict_Wheat_Stewart.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V53_06_12_SpFt_Annual_Young.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_13_SpFt_Mexico_Noall.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_14_The Home_Festival.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1389 chars removed)"
+    },
+    {
+      "file": "V53_06_24_The Home_Home_Is.txt",
+      "action": "note",
+      "result": "INFO: File contains mixed content from multiple articles and appears to be incorrectly assembled"
+    },
+    {
+      "file": "V53_06_25_The Home_Our_Department.txt",
+      "action": "note",
+      "result": "INFO: File contains only a small fragment that should be part of the previous article"
+    },
+    {
+      "file": "V53_06_26_GenFt_Notes_Activities.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_06_33_The Home_Notes.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1 chars removed)"
+    },
+    {
+      "file": "V53_06_34_The Home_Homemaking_Cannon.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (639 chars added)"
+    }
+  ]
+}

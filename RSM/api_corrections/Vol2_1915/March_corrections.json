@@ -1,0 +1,56 @@
+{
+  "volume": 2,
+  "month": "March",
+  "year": 1915,
+  "total_files_checked": 17,
+  "files_correct": [
+    "March_Vol2_01_Article_Congratulations_Betsy_Goodwin.txt",
+    "March_Vol2_04_Article_Report_of_the_Nauvoo_Relief_Society_Eliza_R._Snow.txt",
+    "March_Vol2_05_Article_The_Genesis_of_the_Relief_Society_Maud_Baggarley.txt",
+    "March_Vol2_06_Article_The_Textile_Art_Rose_Widtsoe.txt",
+    "March_Vol2_07_Article_Dressmaking_at_Home_The_Two_Sarahs.txt",
+    "March_Vol2_08_Article_Kitchen_Kinks_Jakie_Discord.txt",
+    "March_Vol2_09_Article_Good_Health_Maud_Baggarley.txt",
+    "March_Vol2_10_Article_Circular_of_the_Relief_Society.txt",
+    "March_Vol2_11_Prince_of_Ur_Prince_of_Ur_Homespun.txt",
+    "March_Vol2_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "March_Vol2_13_Home_Science_Home_Gardening.txt",
+    "March_Vol2_14_Genealogy_Genealogy.txt",
+    "March_Vol2_15_Notes_from_Field_Notes_from_the_Field.txt",
+    "March_Vol2_16_Editorial_Editorial.txt",
+    "March_Vol2_17a_Guide_Lessons_Theology_and_Testimony_-_Lesson_II_Repentance.txt",
+    "March_Vol2_17b_Genealogy_Genealogy_-_Lesson_III_Individual_and_Family_Histories.txt",
+    "March_Vol2_17c_Home_Ethics_Home_Ethics_-_Lesson_IV_Integrity.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol2_02_Frontispiece_Frontispiece_—_Masonic_Lodge,_Nauvoo.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the entire Instructions of the Prophet article plus extensive advertisement content that should be in the Misc file",
+      "action": "replace_content",
+      "text": "MASONIC LODGE, NAUVOO, Where the Relief Society was Organized, March 17, 1842. This building was originally three stories high. The Masonic Lodge room or hall was in the third story. The original windows in the lower story were square, as if arranged for a store. The steps, now on the right side, were originally in the center, and a large double door faced them. The half circle window tops now on the lower story, were taken from the third story windows. Picture furnished by Mr. Rheimbold, Proprietor Oriental Hotel, Nauvoo, Ill.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "March_Vol2_17d_Art_Art_-_In_My_Fathers_House_Are_Many_Mansions.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, ending mid-sentence with only 'ART. \"In my'",
+      "action": "replace_content",
+      "text": "ART. \"In my Father's house are many mansions\" — -words of Christ. (\"Devotees and Their Shrine,\" pp. 20-32.) (a) Describe the architecture in the Valley in the early fifties. (b) What was Brigham Young's attitude and influence upon art? (c) Tell of the organization of the first art school in the West. Name its officers, directors and faculty. (d) Tell of the building of the great Tabernacle. How did it gets its unique form? What were the attainments of the Folsoms? (e) Read \"The Organ Builder.\" Describe the Tabernacle organ. What can you say of its musical tone? Compare it with other church organs you have heard. (f ) Tell of the life work of Ralph Ramsey. Where was the mahogany obtained with which to build the organ? Describe Ramsey's carving on the great organ.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Instruction of the Prophet",
+      "expected_page": 91,
+      "status": "merged_with_another",
+      "merged_into": "March_Vol2_02_Frontispiece_Frontispiece_—_Masonic_Lodge,_Nauvoo.txt"
+    }
+  ],
+  "notes": "The frontispiece file incorrectly contains the full Instructions of the Prophet article plus extensive advertisement content. The Instructions article should be extracted as a separate file. The Art lesson file is severely truncated and needs the complete content from the OCR.",
+  "validated_corrections": [],
+  "failed_validations": []
+}

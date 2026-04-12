@@ -1,0 +1,190 @@
+{
+  "volume": 16,
+  "month": "February",
+  "year": 1929,
+  "total_merged": 2,
+  "total_splits": 10,
+  "total_cost": 0.3194,
+  "files": [
+    {
+      "source_file": "February_Vol16_01_Frontispiece_A_Winter_Scene_on_the_Temple_Block_Frontispiece.txt",
+      "num_articles_found": 8,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Winter Grass",
+          "category": "Article",
+          "author": "Lowry Nelson",
+          "start_boundary": "Winter Grass By Lowry Nelson The",
+          "end_boundary": "the miracle of sweet green buds of spring.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Tongues in Trees",
+          "category": "Article",
+          "author": "Maud Chegwidden",
+          "start_boundary": "Tongues in Trees A Sonnet Sequence",
+          "end_boundary": "the miracle of sweet green buds of spring.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Responsibility of the State in Caring for Its Children",
+          "category": "Article",
+          "author": "Judge Hugo B. Anderson",
+          "start_boundary": "Responsibility of the State in Caring",
+          "end_boundary": "from outside comes and tells us what to do.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "A Report of the Care of the Feeble-Minded in Utah",
+          "category": "Article",
+          "author": "Utah Society for Mental Hygiene",
+          "start_boundary": "A Report of the Care of",
+          "end_boundary": "cost to our state of neglecting to train this class, is mounting rapidly.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Gifts",
+          "category": "Article",
+          "author": "Claire Stewart Boyer",
+          "start_boundary": "Gifts By Claire Stewart Boyer Once",
+          "end_boundary": "who seek?a flower, a friend, His face.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "An Appreciation of Mrs. Alpha M. Smoot",
+          "category": "Article",
+          "author": "Don B. Colton",
+          "start_boundary": "An Appreciation of Mrs. Alpha M.",
+          "end_boundary": "Two great missionaries have labored long and faithfully together. One is resting.",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Editorial—The Care of the Feeble-Minded",
+          "category": "Editorial",
+          "author": "Don B. Colton",
+          "start_boundary": "EDITORIAL The Care of the Feeble-Minded",
+          "end_boundary": "adequate and proper provision for the feeble-minded.",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Honor Banquet Tendered to President Clarissa Smith Williams",
+          "category": "Article",
+          "author": "Alpha Eldredge Smoot",
+          "start_boundary": "Honor Banquet Tendered to President Clarissa",
+          "end_boundary": "what she has done on their behalf.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RESPONSIBILITY OF THE STATE",
+        "CARE OF THE FEEBLE-MINDED",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains multiple distinct articles as indicated in the table of contents. The boundaries were identified by looking for clear article breaks, author bylines, and title formatting. Some articles like the poetry and editorial sections have clear visual separators in the original layout.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': start_boundary not found",
+        "Split 'h': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 24963,
+      "tier": 1,
+      "pdf_pages": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "api_usage": {
+        "input_tokens": 63902,
+        "output_tokens": 950,
+        "cost": 0.206
+      }
+    },
+    {
+      "source_file": "February_Vol16_12_Article_The_Storm_Amy_McClure.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Storm",
+          "category": "Poem",
+          "author": "Amy McClure",
+          "start_boundary": "The Storm Amy McClure The rain comes",
+          "end_boundary": "Ah! Will it kill this agony? The rain comes down",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April LESSON I Practical",
+          "end_boundary": "superior, and for gifted children? \"No lady can",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains a short poem by Amy McClure followed by the complete Guide Lessons for April section, which includes 4 lessons covering Practical Religion/Temperance, Work and Business/Literature, Literature (Galsworthy's Justice), and Social Service/Child Study. The Guide Lessons section is substantial and contains multiple sub-lessons but should remain as one cohesive unit as it represents the monthly guide lessons feature.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 46241,
+      "tier": 2,
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141
+      ],
+      "api_usage": {
+        "input_tokens": 35993,
+        "output_tokens": 361,
+        "cost": 0.1134
+      }
+    }
+  ]
+}

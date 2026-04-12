@@ -1,0 +1,156 @@
+{
+  "volume": 19,
+  "month": "February",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 10,
+  "total_cost": 0.128,
+  "files": [
+    {
+      "source_file": "February_Vol19_02_Article_AcrosticFebruary_Bertha_W_Pratt.txt",
+      "num_articles_found": 10,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Into Whatsoever House",
+          "category": "Article",
+          "author": "Fontella S. Calder",
+          "start_boundary": "Into Whatsoever House By Fontella S. Calder",
+          "end_boundary": "the home and the family and the Church.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Acrostic—February",
+          "category": "Poem",
+          "author": "Bertha W. Pratt",
+          "start_boundary": "Acrostic?February By Bertha W. Pratt",
+          "end_boundary": "Youth, with its dreams of tomorrow.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The White Silence of Winter",
+          "category": "Poem",
+          "author": null,
+          "start_boundary": "The White Silence of Winter The white",
+          "end_boundary": "And the world is at peace.",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "d",
+          "title": "Notes to the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes to the Field GENERAL BOARD",
+          "end_boundary": "and the spirit of the work.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "e",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field ALBERTA STAKE",
+          "end_boundary": "the work in our stake.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "f",
+          "title": "Editorial—Bicentenary of George Washington",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Editorial Bicentenary of George Washington THE",
+          "end_boundary": "the Father of his Country.",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Leisure Time",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Leisure Time THE problem of leisure",
+          "end_boundary": "the blessing of all mankind.",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Funerals",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Funerals THERE is a growing",
+          "end_boundary": "the gospel of Jesus Christ.",
+          "confidence": "high"
+        },
+        {
+          "order": "i",
+          "title": "Our Savior",
+          "category": "Poem",
+          "author": "Elsie E. Barratt",
+          "start_boundary": "Our Savior By Elsie E. Barratt",
+          "end_boundary": "And live with Him above.",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "j",
+          "title": "Lesson Department",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson Department GUIDE LESSONS FOR",
+          "end_boundary": "When Buying Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 10 separate articles/sections as indicated in the table of contents. The boundaries are clearly marked by title headers and content transitions. The final section includes lesson materials and advertisements that conclude the magazine issue.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': start_boundary not found",
+        "Split 'h': end_boundary not found",
+        "Split 'i': end_boundary not found",
+        "Split 'j': start_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 178323,
+      "tier": 3,
+      "pdf_pages": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "api_usage": {
+        "input_tokens": 36476,
+        "output_tokens": 1239,
+        "cost": 0.128
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "volume": 54,
+  "month": "October",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 15,
+  "skipped": 0,
+  "failed": 2,
+  "entries": [
+    {
+      "file": "V54_10_01_Fict_Throw_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (90 chars)"
+    },
+    {
+      "file": "V54_10_02_Art_At_Tangren.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (691 chars)"
+    },
+    {
+      "file": "V54_10_04_SpFt_Turning_Petersen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V54_10_05_Poem_Space_Sadlier.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (419 chars)"
+    },
+    {
+      "file": "V54_10_07_Poem_No_Robinson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (523 chars)"
+    },
+    {
+      "file": "V54_10_08_SpFt_The_Brown.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1108 chars removed)"
+    },
+    {
+      "file": "V54_10_13_GenFt_In_Brockbank.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6171 chars removed)"
+    },
+    {
+      "file": "V54_10_14_Poem_Seagulls_Fairbairn.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (119 chars)"
+    },
+    {
+      "file": "V54_10_15_GenFt_Notes_Programs.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (598 chars removed)"
+    },
+    {
+      "file": "V54_10_16_Fict_Then_Nielson.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V54_10_17_Poem_Since_Gabbott.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (166 chars)"
+    },
+    {
+      "file": "V54_10_18_Poem_A_Woolley.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (381 chars)"
+    },
+    {
+      "file": "V54_10_19_GenFt_The_McGhie.txt",
+      "action": "note",
+      "result": "INFO: File contains mixed recipe and other content instead of party recipes article"
+    },
+    {
+      "file": "V54_10_22_Poem_Weapon_Anderson.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V54_10_24_Fict_At_the_Miller.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (6086 chars removed)"
+    },
+    {
+      "file": "V54_10_25_Poem_Burnished_Burnham.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V54_10_26_Fict_Janet.txt",
+      "action": "note",
+      "result": "INFO: File has incorrect title - should be 'Throw Down the Gauntlet Chapter 2'"
+    },
+    {
+      "file": "V54_10_27_GenFt_Notes_Activities.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V54_10_28_Lssn_Spiritual_Doxey.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (483 chars removed)"
+    }
+  ]
+}

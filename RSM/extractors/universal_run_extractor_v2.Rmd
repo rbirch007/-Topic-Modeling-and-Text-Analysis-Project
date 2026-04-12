@@ -1,0 +1,2790 @@
+---
+title: "Relief Society Magazine — Universal Article Extractor v2"
+date: "`r Sys.Date()`"
+output:
+  html_notebook:
+    toc: true
+    toc_float: true
+    theme: flatly
+    code_folding: hide
+---
+
+```{r setup, message=FALSE, warning=FALSE}
+for (pkg in c("stringr","readr","knitr","kableExtra")) {
+  if (!requireNamespace(pkg, quietly=TRUE)) install.packages(pkg)
+}
+library(stringr); library(readr); library(knitr); library(kableExtra)
+
+# ============================================================
+# CONFIGURATION — update these paths to match your machine
+# ============================================================
+INPUT_DIRS <- c(
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/input/Vol27split",
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/input/Vol28split",
+  "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/input/Vol29split"
+)
+OUTPUT_DIR <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/output"
+
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive=TRUE)
+```
+
+```{r helpers}
+# ============================================================
+# HELPERS
+# ============================================================
+
+read_file_safe <- function(path) {
+  # Try UTF-8 first; if that fails, fall back to windows-1252.
+  # After reading, validate the string by running nchar(); if that
+  # throws an "invalid multibyte string" error the file contains
+  # non-UTF-8 bytes that slipped through, so re-read as latin1.
+  txt <- tryCatch(
+    read_file(path, locale=locale(encoding="UTF-8")),
+    error=function(e) read_file(path, locale=locale(encoding="windows-1252"))
+  )
+  ok <- tryCatch({ nchar(txt); TRUE }, error=function(e) FALSE)
+  if (!ok) {
+    txt <- read_file(path, locale=locale(encoding="latin1"))
+    cat("  NOTE: Re-read as latin1 (non-UTF-8 bytes detected)\n")
+  }
+  txt
+}
+
+safe_filename <- function(title, max_chars = 50L) {
+  clean <- str_replace_all(title, "[<>:\"/\\\\|?*,;()\\[\\]\r\n\u2014\u2013'\u2018\u2019\u201c\u201d`]", "")
+  clean <- str_replace_all(clean, "\\s+", "_")
+  clean <- str_replace_all(clean, "_+", "_")
+  clean <- str_trim(str_replace_all(clean, "^_+|_+$", ""))
+  if (nchar(clean) == 0) clean <- "untitled"
+  if (nchar(clean) > max_chars) clean <- str_sub(clean, 1, max_chars)
+  clean <- str_replace(clean, "_+$", "")  # remove trailing underscore after truncation
+  clean
+}
+
+# Build a short filename from a CONTENTS title:  title snippet + author last name.
+# E.g. "Parents What of Youth in a War-Torn World Mark K. Allen"
+#   -> "Parents_What_of_Youth_Allen"
+short_title_filename <- function(title) {
+  clean <- str_replace_all(title,
+    "[<>:\"/\\\\|?*,;()\\[\\]\r\n\u2014\u2013'\u2018\u2019\u201c\u201d`]", "")
+  clean <- str_trim(clean)
+  if (nchar(clean) == 0) return("untitled")
+
+  words <- str_split(clean, "\\s+")[[1]]
+  words <- words[nchar(words) > 0]
+  if (length(words) == 0) return("untitled")
+
+  # Try to detect author name block at end of title (2-4 Name-like words).
+  # Name-like: starts with uppercase or is a connector (de, van, etc.)
+  author_last <- ""
+  title_words <- words
+
+  if (length(words) > 3) {
+    for (n_auth in c(4L, 3L, 2L)) {
+      if (n_auth >= length(words)) next
+      cand <- tail(words, n_auth)
+      is_name <- sapply(cand, function(w)
+        str_detect(w, "^[A-Z]") ||
+        w %in% c("de","van","von","del","la","le","da","di"))
+      if (all(is_name)) {
+        author_last <- tail(cand, 1)     # last name
+        title_words <- head(words, length(words) - n_auth)
+        break
+      }
+    }
+  }
+
+  # Title snippet: first words up to ~25 chars
+  snippet_parts <- character(0)
+  n_chars <- 0L
+  for (w in title_words) {
+    if (n_chars + nchar(w) + 1L > 25L && length(snippet_parts) >= 1) break
+    snippet_parts <- c(snippet_parts, w)
+    n_chars <- n_chars + nchar(w) + 1L
+  }
+  snippet <- paste(snippet_parts, collapse = "_")
+
+  # Combine title snippet + author last name
+  result <- if (nchar(author_last) > 0 && nchar(snippet) > 0) {
+    paste0(snippet, "_", author_last)
+  } else if (nchar(snippet) > 0) {
+    snippet
+  } else {
+    paste(head(words, min(3, length(words))), collapse = "_")
+  }
+
+  # Sanitize underscores
+  result <- str_replace_all(result, "\\s+", "_")
+  result <- str_replace_all(result, "_+", "_")
+  result <- str_replace(result, "^_+|_+$", "")
+
+  # Final cap at 50 chars
+  if (nchar(result) > 50) result <- str_sub(result, 1, 50)
+  result <- str_replace(result, "_+$", "")
+  if (nchar(result) == 0) result <- "untitled"
+  result
+}
+
+get_significant_words <- function(title) {
+  stops <- c("the","a","an","of","in","on","at","to","for","and","or","but","by",
+             "its","is","are","was","were","be","been","our","her","his","my","we",
+             "it","as","with","from","that","this","not","no","out","new","all",
+             "how","what","who","when","where","why","can","may","will","shall",
+             "has","had","have","does","did","do","about","into","upon")
+  # Split on whitespace, em/en-dashes, and hyphens (including single)
+  # Also split on apostrophe-hyphen combos like "Teachers'-Seeking"
+  words <- str_split(title, "[\\s\u2014\u2013]+|\\s*-+\\s*|'-")[[1]]
+  words <- words[nchar(words) > 2]
+  words <- words[!tolower(words) %in% stops]
+  words <- str_replace(words, "[?.!,;:'\"]+$", "")
+  words[nchar(words) > 0]
+}
+
+# Snap a found title position backward to the nearest paragraph break.
+# Many article titles appear in the MIDDLE of a line (e.g., "By Author\nTitle\nText...")
+# or after running headers.  Walking back to the nearest blank line gives the
+# clean article start that includes any pre-title header / byline text.
+# Looks back up to max_back chars; returns original pos if no break found.
+snap_to_para_start <- function(text, pos, min_pos, max_back=600L) {
+  if (pos <= min_pos) return(pos)
+  lo  <- max(min_pos, pos - max_back)
+  pre <- str_sub(text, lo, pos - 1L)
+
+  # Helper: find nearby sentence end within 150 chars (for run-together OCR text)
+  find_nearby_sent_end <- function() {
+    lo_t <- max(min_pos, pos - 150L)
+    pre_t <- str_sub(text, lo_t, pos - 1L)
+    se <- str_locate_all(pre_t, "[.!?][)'\",]?\\s+")[[1]]
+    if (nrow(se) > 0L) {
+      snap_s <- lo_t + se[nrow(se), 2]
+      if (snap_s <= pos) return(snap_s)
+    }
+    NA_integer_
+  }
+
+  # First choice: find the LAST double-newline (paragraph break) in the lookback window
+  breaks <- str_locate_all(pre, "(\r?\n){2,}")[[1]]
+  if (nrow(breaks) > 0L) {
+    snap <- lo + breaks[nrow(breaks), 2]
+    if (snap < pos) {
+      if ((pos - snap) <= 200L) return(snap)
+      # Far paragraph break (>200 chars); prefer a nearby sentence end if available
+      sent_snap <- find_nearby_sent_end()
+      if (!is.na(sent_snap)) return(sent_snap)
+      return(snap)  # fallback to far paragraph break
+    }
+  }
+
+  # Second choice: single newline (common in OCR where blank lines are missing)
+  single_nl <- str_locate_all(pre, "\n")[[1]]
+  if (nrow(single_nl) > 0L) {
+    snap <- lo + single_nl[nrow(single_nl), 2]
+    if (snap < pos) {
+      if ((pos - snap) <= 200L) return(snap)
+      # Far newline (>200 chars); prefer a nearby sentence end if available
+      sent_snap <- find_nearby_sent_end()
+      if (!is.na(sent_snap)) return(sent_snap)
+      return(snap)  # fallback to far newline
+    }
+  }
+
+  # Third choice: running header end.
+  # For run-together OCR text where articles share the same line,
+  # separated only by running headers like "598 RELIEF SOCIETY MAGAZINE—SEPTEMBER 1942".
+  # Snap to just AFTER the last running header in the lookback window,
+  # so the article text starts right after the header (which clean_headers strips).
+  # Use an extended lookback (+100 chars) to catch the header's leading page number.
+  lo_h  <- max(min_pos, pos - max_back - 100L)
+  pre_h <- str_sub(text, lo_h, pos - 1L)
+  rh_pats_snap <- c(
+    "\\d{1,3}\\s+(?:Vol\\.?\\s*\\d+[^\\n]{0,30})?(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE(?:[^A-Za-z\\n]{0,5}(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)[,\\s]*\\d{4})?",
+    "(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE[^A-Za-z\\n]{0,5}(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)[,\\s]*\\d{4}"
+  )
+  for (rp in rh_pats_snap) {
+    hdrs <- str_locate_all(pre_h, regex(rp, ignore_case=FALSE))[[1]]
+    if (nrow(hdrs) > 0L) {
+      snap_h <- lo_h + hdrs[nrow(hdrs), 2]
+      if (snap_h <= pos && (pos - snap_h) <= 300L) return(snap_h)
+    }
+  }
+
+  # Fourth choice: end of previous sentence within the last 150 chars only.
+  # Handles run-together OCR text where articles flow on the same line.
+  sent_snap <- find_nearby_sent_end()
+  if (!is.na(sent_snap)) return(sent_snap)
+
+  # No good snap point found — return raw match position
+  pos
+}
+
+classify_article <- function(title) {
+  t <- tolower(title)
+  if (str_detect(t, "^editorial|editorial[\\s\u2014\u2013-]")) return("Editorial")
+  if (str_detect(t, "guide lesson"))                           return("Guide_Lessons")
+  if (str_detect(t, "notes (from|to) the field"))             return("Notes_from_Field")
+  if (str_detect(t, "home economics"))                        return("Home_Economics")
+  if (str_detect(t, "home science"))                          return("Home_Science")
+  if (str_detect(t, "current (topic|event)"))                 return("Current_Topics")
+  if (str_detect(t, "home entertain"))                        return("Home_Entertainments")
+  if (str_detect(t, "frontispiece"))                          return("Frontispiece")
+  if (str_detect(t, "book notice"))                           return("Book_Notices")
+  if (str_detect(t, "theological studies"))                   return("Lesson_Department")
+  if (str_detect(t, "eliza roxey snow|poetry contest"))       return("Poetry_Contest")
+  "Article"
+}
+
+get_metadata <- function(filename) {
+  list(
+    volume = str_extract(filename, "(?i)(?<=Vol)\\d+"),
+    number = str_extract(filename, "(?i)(?<=No)\\d+"),
+    month  = str_extract(filename, paste0(
+      "(?i)(January|February|March|April|May|June|July|",
+      "August|September|October|November|December)")),
+    year   = str_extract(filename, "\\d{4}")
+  )
+}
+```
+
+```{r find-sections}
+# ============================================================
+# FIND SECTIONS
+# Correctly locates:
+#   contents_start / contents_text — the TOC listing
+#   body_start — character position where article bodies begin
+#                (AFTER the publication-info block, never before it)
+#   board_start / board_end — the general board roster
+#   body_end — last character of article content
+#
+# The key insight: the publication-info block
+# ("Entered as second-class matter ... Phone Wasatch NNNN")
+# marks the true boundary between the front matter/CONTENTS
+# and the article body. body_start = position after this block
+# plus the following VOL marker line.
+# This prevents the CONTENTS listing from being searched for
+# article titles, which caused fragments and wrong boundaries.
+# ============================================================
+find_sections <- function(text) {
+  s   <- list()
+  len <- nchar(text)
+
+  # ---- CONTENTS keyword ----
+  # Use str_locate_all to find ALL occurrences of "CONTENTS".
+  # Pick the occurrence that has the MOST article-like lines (lines ending with
+  # 2-3 digit page numbers) in the first 500 chars. This correctly selects the
+  # actual article listing over header/section label uses of "CONTENTS".
+  # If "CONTENTS" (plural) doesn't score well (< 3 article-like lines), also
+  # try "CONTENT" (singular) — OCR sometimes drops the trailing S (e.g. Vol28 Jul).
+  cp_all <- str_locate_all(text, regex("\\bCONTENTS\\b", ignore_case=TRUE))[[1]]
+  best_start  <- if (nrow(cp_all) > 0) cp_all[1,1] else NA_integer_
+  best_count  <- 0L
+  if (nrow(cp_all) > 0) {
+    for (ci in seq_len(nrow(cp_all))) {
+      region <- str_sub(text, cp_all[ci,1], min(cp_all[ci,1] + 500L, len))
+      rlines <- str_split(region, "\n")[[1]]
+      art_count <- sum(str_detect(rlines, "\\d{2,3}\\s*$"))
+      if (art_count > best_count) {
+        best_count <- art_count
+        best_start <- cp_all[ci,1]
+      }
+    }
+  }
+  # If CONTENTS (plural) didn't score well (< 3 article-like lines), also
+  # try "CONTENT" (singular) — OCR sometimes drops the trailing S (e.g. Vol28 Jul).
+  if (best_count < 3L) {
+    cp_sing <- str_locate_all(text, regex("\\bCONTENT\\b", ignore_case=TRUE))[[1]]
+    if (nrow(cp_sing) > 0) {
+      for (ci in seq_len(nrow(cp_sing))) {
+        region <- str_sub(text, cp_sing[ci,1], min(cp_sing[ci,1] + 500L, len))
+        rlines <- str_split(region, "\n")[[1]]
+        art_count <- sum(str_detect(rlines, "\\d{2,3}\\s*$"))
+        if (art_count > best_count) {
+          best_count <- art_count
+          best_start <- cp_sing[ci,1]
+        }
+      }
+    }
+  }
+  if (!is.na(best_start)) {
+    s$contents_start <- best_start
+  } else {
+    # Fallback: some issues omit the "CONTENTS" heading entirely.
+    # Strategy 1: dot-leader TOC after Vol masthead (e.g. Vol24 May)
+    # Strategy 2: category-header TOC — "SPECIAL FEATURES" / "Special
+    #   Features" directly after Vol masthead, followed by lines ending
+    #   in 2-3 digit page numbers (e.g. Vol29 Jul)
+    # Support both Roman (Vol. XXIX) and Arabic (Vol. 29) volume numbers.
+    vol_line_m <- str_locate(text,
+      regex("Vol\\.?\\s+(?:X{0,4}[IVX]+|\\d{1,3})\\s+[A-Z]+,?\\s+\\d{4}\\s+No\\.\\s*\\d{1,2}",
+            ignore_case=TRUE))
+    if (!is.na(vol_line_m[1,1])) {
+      after_vol <- str_sub(text, vol_line_m[1,2] + 1L,
+                           min(vol_line_m[1,2] + 800L, len))
+      dot_entries <- str_count(after_vol, "\\.{3,}.*?\\d{2,3}")
+      if (dot_entries >= 3) {
+        s$contents_start <- vol_line_m[1,2] + 1L
+        cat("  NOTE: No CONTENTS heading found; using dot-leader TOC after Vol masthead\n")
+      } else {
+        # Check for category-header TOC: "SPECIAL FEATURES" etc. + page numbers
+        cat_hdr_m <- str_locate(after_vol,
+          regex("(?:SPECIAL\\s+FEATURES|GENERAL\\s+FEATURES|POETRY|FICTION|LESSONS)",
+                ignore_case=TRUE))
+        if (!is.na(cat_hdr_m[1,1])) {
+          # Verify: count lines ending with 2-3 digit page numbers
+          toc_region <- str_sub(after_vol, cat_hdr_m[1,1], nchar(after_vol))
+          pg_lines <- str_count(toc_region, "\\d{2,3}\\s*(\n|$)")
+          if (pg_lines >= 3) {
+            s$contents_start <- vol_line_m[1,2] + cat_hdr_m[1,1]
+            cat("  NOTE: No CONTENTS heading found; using category-header TOC after Vol masthead\n")
+          } else {
+            s$contents_start <- NA_integer_
+          }
+        } else {
+          s$contents_start <- NA_integer_
+        }
+      }
+    } else {
+      s$contents_start <- NA_integer_
+    }
+  }
+
+  # ---- Publication-info block ----
+  # "Entered as second-class matter ... Phone Wasatch NNNN"
+  # There may be two of these (one before CONTENTS in front ads, one at end of CONTENTS).
+  # We want the LAST one that occurs before or near the end of the CONTENTS section.
+  pub_pattern <- regex(
+    "Entered as second[- ]class matter[\\s\\S]{0,400}(?:(?:Tele)?phone\\s+Wasatch\\s+\\d+|Wasatch\\s+\\d+)",
+    ignore_case=TRUE, dotall=TRUE)
+  all_pub <- str_locate_all(text, pub_pattern)[[1]]
+
+  # Find the pub block that is associated with the CONTENTS section
+  # (closest one AT OR AFTER CONTENTS start, never before it)
+  s$pub_end <- NA_integer_
+  if (nrow(all_pub) > 0 && !is.na(s$contents_start)) {
+    # Only accept pub blocks whose START is at or after (contents_start - 200)
+    after <- all_pub[all_pub[,1] >= s$contents_start - 200, , drop=FALSE]
+    if (nrow(after) > 0) {
+      s$pub_end <- after[1, 2]
+    }
+    # Do NOT fall back to the last match overall: it may be in back-ads
+    # far from CONTENTS, which corrupts pub_end and body_start.
+  }
+
+  # Safety: pub_end must be at or after contents_start.
+  # If it landed before (e.g. front-ad block just before CONTENTS), reset to NA
+  # so the fallback loop below can find the correct marker after CONTENTS.
+  if (!is.na(s$pub_end) && !is.na(s$contents_start) &&
+      s$pub_end < s$contents_start) {
+    s$pub_end <- NA_integer_
+  }
+
+  # Fallback pub-end markers — always filtered to >= contents_start AND within 6000 chars
+  # The 6000-char window prevents back-ads occurrences from being picked up.
+  if (is.na(s$pub_end)) {
+    for (pat in c("(?:Tele)?phone\\s+Wasatch\\s+\\d+", "\\$1\\.00\\s+a\\s+[Yy]ear",
+                  "Organ\\s+of\\s+the\\s+Relief\\s+Society")) {
+      m <- str_locate_all(text, regex(pat, ignore_case=TRUE))[[1]]
+      if (nrow(m) > 0 && !is.na(s$contents_start)) {
+        after <- m[m[,1] >= s$contents_start &
+                   m[,1] <  s$contents_start + 6000L, , drop=FALSE]
+        if (nrow(after) > 0) { s$pub_end <- after[1,2]; break }
+      }
+    }
+  }
+
+  # ---- CONTENTS text ----
+  # From CONTENTS keyword to pub_end.
+  # Clamp to max 5000 chars to prevent runaway if pub_end detection fails.
+  s$contents_text <- NULL
+  if (!is.na(s$contents_start)) {
+    # Hard cap: CONTENTS section should never be more than 5000 chars
+    hard_cap <- min(s$contents_start + 5000L, len)
+    end_of_contents <- if (!is.na(s$pub_end) && s$pub_end < hard_cap) s$pub_end else hard_cap
+
+    # Additional safety: if we can find "Organ of the Relief Society" before hard_cap, use that.
+    # BUT only if the resulting CONTENTS text would be > 200 chars. Otherwise the "Organ" text
+    # is part of the masthead right before/after the CONTENTS keyword, not the subscription block.
+    organ_m <- str_locate(
+      str_sub(text, s$contents_start, hard_cap),
+      regex("Organ\\s+of\\s+the\\s+Relief\\s+Society", ignore_case=TRUE))
+    if (!is.na(organ_m[1,1])) {
+      organ_abs <- s$contents_start + organ_m[1,1] - 1L
+      if (organ_abs < end_of_contents && (organ_abs - s$contents_start) > 200L)
+        end_of_contents <- organ_abs
+    }
+
+    s$contents_end  <- end_of_contents
+    s$contents_text <- str_sub(text, s$contents_start, s$contents_end)
+
+    # If the extracted CONTENTS text is too small (< 200 chars) and there are more CONTENTS
+    # occurrences, try the LAST occurrence — the actual listing often follows a header CONTENTS.
+    if (nchar(s$contents_text) < 200 && nrow(cp_all) >= 2) {
+      for (ci in 2:nrow(cp_all)) {
+        alt_start   <- cp_all[ci, 1]
+        alt_hard    <- min(alt_start + 5000L, len)
+        alt_end     <- if (!is.na(s$pub_end) && s$pub_end > alt_start && s$pub_end < alt_hard)
+                         s$pub_end else alt_hard
+        # Check for Organ truncation
+        alt_organ_m <- str_locate(
+          str_sub(text, alt_start, alt_hard),
+          regex("Organ\\s+of\\s+the\\s+Relief\\s+Society", ignore_case=TRUE))
+        if (!is.na(alt_organ_m[1,1])) {
+          alt_organ_abs <- alt_start + alt_organ_m[1,1] - 1L
+          if (alt_organ_abs < alt_end && (alt_organ_abs - alt_start) > 200L)
+            alt_end <- alt_organ_abs
+        }
+        alt_text <- str_sub(text, alt_start, alt_end)
+        if (nchar(alt_text) > nchar(s$contents_text)) {
+          s$contents_start <- alt_start
+          s$contents_end   <- alt_end
+          s$contents_text  <- alt_text
+        }
+      }
+    }
+  } else {
+    s$contents_end <- NA_integer_
+  }
+
+  # ---- BODY START ----
+  # Find the VOL. N MONTH, YEAR No. N masthead line that separates the
+  # front-matter (subscription info, pub block) from the first article.
+  # body_start = character AFTER the end of that VOL line.
+  #
+  # Problem solved here: some split files have their CONTENTS section starting
+  # late (e.g. at char 2425), so contents_end can be as late as char 7425.
+  # If we only search AFTER contents_end, we miss the VOL marker that sits
+  # between the CONTENTS text and the first article (e.g. at char 3595).
+  # Fix: search the entire first 12,000 chars of the file for ALL occurrences
+  # of the VOL pattern, then pick the LAST one that is followed by article text
+  # (not by another pub/masthead block).  This reliably finds the final 
+  # "VOL. XVI MARCH, 1929 No. 3" line that immediately precedes the first article,
+  # even when the same line appears twice (once in the CONTENTS block, once after).
+  s$body_start <- NA_integer_
+
+  # Primary VOL pattern: requires "No. N" at the end (standard masthead format)
+  # e.g. "VOL. XVI MARCH, 1929 No. 3"
+  vol_pat <- regex(
+    "VOL\\.?\\s*(?:[IVXL]+|\\d+)\\.?[^\\n]{0,25}(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)[^\\n]{0,30}No\\.?\\s*\\d+",
+    ignore_case=TRUE)
+
+  # Fallback VOL pattern: handles OCR-corrupted "No." (e.g. "= a" instead of "No. 9")
+  # This is looser — just VOL + Roman/Arabic + Month + Year — to find the masthead line
+  # even when the issue number is garbled.
+  vol_pat_loose <- regex(
+    "VOL\\.?\\s*(?:[IVXL]+|\\d+)\\.?[^\\n]{0,25}(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)[^\\n]{0,15}(?:19|18)\\d\\d",
+    ignore_case=TRUE)
+
+  # Search across the first 30,000 chars (covers all known split-file layouts,
+  # including issues where CONTENTS starts late or the VOL marker is far from file start)
+  wide_chunk   <- str_sub(text, 1L, min(30000L, len))
+  vol_m_strict <- str_locate_all(wide_chunk, vol_pat)[[1]]
+  vol_m_loose  <- str_locate_all(wide_chunk, vol_pat_loose)[[1]]
+  # Run BOTH patterns and combine.  An early garbled-OCR masthead (e.g. "= a" instead of
+  # "No. 9") is caught by the loose pattern even when the strict pattern also matches a
+  # later, clean copy of the same line.  Combining and sorting by position then picking
+  # the FIRST match after CONTENTS correctly sets body_start to just after the masthead.
+  all_vol_m <- rbind(vol_m_strict, vol_m_loose)
+  if (nrow(all_vol_m) > 0) {
+    all_vol_m <- all_vol_m[!duplicated(all_vol_m[, 1L]), , drop=FALSE]
+    all_vol_m <- all_vol_m[order(all_vol_m[, 1L]), , drop=FALSE]
+  }
+
+  s$vol_marker_found <- FALSE   # TRUE when body_start set from a reliable VOL marker
+
+  if (nrow(all_vol_m) > 0) {
+    # Use the FIRST occurrence AFTER the CONTENTS section start.
+    # Rationale: the masthead VOL line appears in the front matter, immediately after
+    # the CONTENTS + publication block. In some issues (Sep16, Sep17) the masthead
+    # is followed by article content WITH NO NEWLINE — all in one giant text blob.
+    # Later in that blob, running-header copies of the VOL line appear (e.g. at pg edges).
+    # Using the LAST occurrence would pick a running header mid-article, setting body_start
+    # too late and skipping 3–4 early articles. Using the FIRST occurrence after CONTENTS
+    # reliably picks the masthead, placing body_start right at the article content start.
+    contents_start_for_vol <- if (!is.na(s$contents_start)) s$contents_start else 0L
+    # Filter to matches after CONTENTS start; fall back to all matches if none qualify
+    after_contents <- all_vol_m[all_vol_m[,1] > contents_start_for_vol, , drop=FALSE]
+    target_row  <- if (nrow(after_contents) > 0) 1L else 1L  # first qualifying
+    target_m    <- if (nrow(after_contents) > 0) after_contents else all_vol_m
+    vol_end_rel <- target_m[target_row, 2]
+    # Advance past the rest of that line, but cap at 300 chars.
+    # Rationale: in some OCR files the VOL masthead line runs directly into article
+    # content with no newline for thousands of characters (e.g. Sep16, Sep17).
+    # If we naively seek the next \n we skip over all those articles.
+    # Capping at 300 chars ensures body_start lands just after the masthead marker,
+    # right at the beginning of article content.
+    tail_chunk  <- str_sub(wide_chunk, vol_end_rel + 1L, vol_end_rel + 300L)
+    line_end_m  <- str_locate(tail_chunk, "\n")
+    extra       <- if (!is.na(line_end_m[1,1])) line_end_m[1,1] else 0L
+    s$body_start       <- vol_end_rel + extra
+    s$vol_marker_found <- TRUE
+  }
+
+  # Fallback: if no VOL marker found anywhere, start right after the CONTENTS block
+  if (is.na(s$body_start) || s$body_start < 1L) {
+    s$body_start <- if (!is.na(s$contents_end)) s$contents_end + 1L
+                    else if (!is.na(s$pub_end))  s$pub_end + 1L
+                    else 1L
+  }
+
+  # Guard: if body_start landed inside or before the CONTENTS/subscription block
+  # (happens when the VOL marker appears BEFORE the CONTENTS section, e.g. Sep 1942),
+  # advance past the subscription block to avoid including boilerplate in articles.
+  if (!is.na(s$contents_end) && s$body_start <= s$contents_end) {
+    # Search for "MAGAZINE CIRCULATION" marker after contents_end
+    post_end  <- min(len, s$contents_end + 2000L)
+    post_text <- str_sub(text, s$contents_end + 1L, post_end)
+    mag_circ  <- str_locate(post_text,
+                   regex("MAGAZINE\\s+CIRCULATION\\s*[\\d,]+", ignore_case=TRUE))
+    if (!is.na(mag_circ[1,1])) {
+      circ_end_abs <- s$contents_end + mag_circ[1,2]
+      tail <- str_sub(text, circ_end_abs + 1L, circ_end_abs + 50L)
+      nl   <- str_locate(tail, "\n")
+      s$body_start <- circ_end_abs + if (!is.na(nl[1,1])) nl[1,1] else 1L
+    } else {
+      s$body_start <- s$contents_end + 1L
+    }
+  }
+
+  # ---- BOARD section ----
+  # PRIMARY: Find "Motto" which uniquely identifies the actual board roster.
+  # It appears exactly once per issue, immediately before the member names.
+  # This avoids matching the credit line "PUBLISHED MONTHLY BY THE GENERAL
+  # BOARD OF RELIEF SOCIETY" which is NOT the board roster.
+  s$board_start <- NA_integer_
+  s$board_end   <- NA_integer_
+  motto_m <- str_locate(text, regex("Motto", ignore_case=FALSE))
+  if (!is.na(motto_m[1,1])) {
+    # Snap backward to find the start of the board block:
+    # Look back up to 500 chars for "THE RELIEF SOCIETY" or "THE CHURCH"
+    motto_pos <- motto_m[1,1]
+    lookback  <- str_sub(text, max(1L, motto_pos - 500L), motto_pos - 1L)
+    # Find "THE RELIEF SOCIETY" or "THE CHURCH" in the lookback
+    church_m <- str_locate_all(lookback,
+      regex("THE\\s+(?:RELIEF\\s+SOCIETY|CHURCH)\\s+OF", ignore_case=TRUE))[[1]]
+    if (nrow(church_m) > 0) {
+      # Use the LAST match (closest to Motto)
+      s$board_start <- max(1L, motto_pos - 500L) + church_m[nrow(church_m), 1] - 1L
+    } else {
+      s$board_start <- motto_pos
+    }
+    # Find the end of the board block: look forward for Editor/Manager/end markers
+    # Use multiline=TRUE so $ matches end-of-line (not end-of-string),
+    # preventing the board from swallowing editorial text that follows.
+    bc <- str_sub(text, s$board_start, min(s$board_start + 3000L, len))
+    for (ep in c("Acting\\s+Business\\s+Manager[^\\n]{0,80}",
+                 "Assistant\\s+Manager[^\\n]{0,80}",
+                 "Business\\s+Manager[^\\n]{0,80}",
+                 "Manager[^\\n]{0,40}",
+                 "Amy\\s+Brown\\s+Lyman[^\\n]{0,80}",
+                 "Room\\s+\\d+[^\\n]{0,50}(?:Bishop|Building|Utah)",
+                 "Bishop'?s?\\s+Buil", "Music\\s+Director",
+                 "\\$1\\.00\\s+a\\s+Year")) {
+      em <- str_locate_all(bc, regex(ep, ignore_case=TRUE, multiline=TRUE))[[1]]
+      if (nrow(em) > 0) { s$board_end <- s$board_start + em[nrow(em),2]; break }
+    }
+    if (is.na(s$board_end)) s$board_end <- min(s$board_start + 2000L, len)
+  } else {
+    # Fallback: try original patterns (for issues without "Motto")
+    # Only search in the front matter (before body_start) to avoid matching
+    # biographical article text like "the General Board, Mrs. Lyman..."
+    front_limit <- if (!is.na(s$body_start)) s$body_start else min(len, 10000L)
+    front_text  <- str_sub(text, 1L, front_limit)
+    board_pats <- c(
+      "PRESIDENCY\\s+AND\\s+GENERAL\\s+BOARD(?:\\s+OF(?:\\s+THE)?)?\\s+RELIEF",
+      "RELIEF\\s+SOCIETY\\s+GENERAL\\s+BOARD\\s+[A-Z]",
+      "THE\\s+GENERAL\\s+BOARD[,.]?\\s+(?:MRS\\.|Mrs\\.)"
+    )
+    for (bp in board_pats) {
+      m <- str_locate(front_text, regex(bp, ignore_case=TRUE))
+      if (!is.na(m[1,1])) { s$board_start <- m[1,1]; break }
+    }
+    if (!is.na(s$board_start)) {
+      bc <- str_sub(text, s$board_start, min(s$board_start + 3000L, len))
+      for (ep in c("Acting\\s+Business\\s+Manager[^\\n]{0,80}",
+                   "Business\\s+Manager[^\\n]{0,80}",
+                   "Room\\s+\\d+[^\\n]{0,50}(?:Bishop|Building|Utah)",
+                   "Bishop'?s?\\s+Buil", "Music\\s+Director",
+                   "\\$1\\.00\\s+a\\s+Year")) {
+        em <- str_locate_all(bc, regex(ep, ignore_case=TRUE, multiline=TRUE))[[1]]
+        if (nrow(em) > 0) { s$board_end <- s$board_start + em[nrow(em),2]; break }
+      }
+      if (is.na(s$board_end)) s$board_end <- min(s$board_start + 2000L, len)
+    }
+  }
+
+  # ---- BODY END (start of back ads) ----
+  # Search last 30% for back-ad markers
+  ads_from   <- as.integer(len * 0.70)
+  ads_chunk  <- str_sub(text, ads_from, len)
+  s$body_end <- len
+  for (ap in c("ADVERTISERS'?\\s+(?:DIRECTORY|INDEX)",
+                "INDEX\\s+TO\\s+ADVERTISERS",
+                "PATRONIZE\\s+OUR\\s+ADVERTISERS")) {
+    m <- str_locate(ads_chunk, regex(ap, ignore_case=TRUE))
+    if (!is.na(m[1,1])) { s$body_end <- ads_from + m[1,1] - 1L; break }
+  }
+
+  return(s)
+}
+```
+
+```{r parse-contents}
+# ============================================================
+# CONTENTS PARSER
+# Handles both line-by-line and single-line collapsed CONTENTS.
+# Strips dot leaders, page numbers, trailing author attributions.
+# Returns data.frame(title, page, category)
+# ============================================================
+parse_contents_section <- function(contents_text) {
+  empty <- data.frame(title=character(), page=integer(), category=character(),
+                      stringsAsFactors=FALSE)
+  if (is.null(contents_text) || nchar(str_trim(contents_text)) == 0) return(empty)
+
+  ct <- str_replace_all(contents_text, "\r\n|\r", "\n")
+  ct <- str_replace_all(ct, regex("Here is the corrected OCR.*?:\\s*",
+                                   ignore_case=TRUE), "")
+  ct <- str_replace_all(ct, "\\*\\*Page\\*\\*", "")
+
+  # --- Batch page numbers detection ---
+  # Some OCR issues place ALL page numbers on a single line at the end of CONTENTS,
+  # separated from title lines. Detect this pattern and pair numbers with titles.
+  ct_lines_raw <- str_split(ct, "\n")[[1]]
+  ct_lines_raw <- ct_lines_raw[nchar(str_trim(ct_lines_raw)) > 0]
+
+  # Look for a line that is entirely space-separated page numbers (5+ numbers)
+  batch_pg_idx <- which(str_detect(ct_lines_raw, "^\\s*\\d{1,4}(\\s+\\d{1,4}){4,}\\s*$"))
+  if (length(batch_pg_idx) > 0) {
+    batch_line <- str_trim(ct_lines_raw[batch_pg_idx[1]])
+    page_nums <- as.integer(str_extract_all(batch_line, "\\d+")[[1]])
+
+    # Collect title lines (non-skip, non-batch, non-pure-number lines)
+    skip_pat <- regex(
+      "^(CONTENTS?|ADVERTISERS?|Page\\s*$|\\*\\*|(THE\\s+)?RELIEF\\s+SOCIETY|Vol\\.?\\s*[IVXL0-9]|Organ\\s+of\\s+the|PUBLISHED|Jesus Christ)",
+      ignore_case=TRUE)
+    title_lines <- ct_lines_raw[!str_detect(ct_lines_raw, skip_pat) &
+                                !str_detect(ct_lines_raw, "^\\s*\\d{1,4}(\\s+\\d{1,4}){4,}\\s*$") &
+                                seq_along(ct_lines_raw) < batch_pg_idx[1]]
+    title_lines <- title_lines[nchar(str_trim(title_lines)) >= 2]
+
+    # Pair them up if counts are compatible
+    if (length(title_lines) > 0 && length(page_nums) >= length(title_lines)) {
+      # Re-create lines with page numbers appended
+      paired_lines <- character(length(title_lines))
+      for (j in seq_along(title_lines)) {
+        paired_lines[j] <- paste(str_trim(title_lines[j]), page_nums[j])
+      }
+      ct <- paste(paired_lines, collapse="\n")
+    }
+  }
+
+  # Normalise OCR "?" that appears as a dash replacement.
+  # Common in Vol29 (1942) where em-dashes are OCR'd as "?".
+  # Replace when "?" is between word chars, or after apostrophe/close-paren/quote
+  # (e.g., "Teachers'?Seeking", "Contest)?Title").
+  ct <- str_replace_all(ct, "(?<=[\\w'\")])\\?(?=\\w)", "\u2014")
+
+  # Normalise double-hyphens ("--") to em-dash.
+  # Common in December 1942 where OCR produces "--" instead of em-dash.
+  ct <- str_replace_all(ct, "--+", "\u2014")
+
+  # Always apply inline expansion to split embedded "NNN Title" within long lines.
+  # This covers single-line CONTENTS and partially-collapsed formats.
+  ct_exp <- str_replace_all(ct, "\\.{2,}", " ")
+  ct_exp <- str_replace_all(ct_exp, "[ \\t]{2,}", " ")
+  # Split on "page_number SPACE Capital" -- matches single-letter words too (A, I)
+  ct_exp <- str_replace_all(ct_exp, "(\\d{1,4})\\s{1,3}([A-Z\"])", "\\1\n\\2")
+  lines  <- str_split(ct_exp, "\n")[[1]]
+  lines  <- lines[nchar(str_trim(lines)) > 0]
+
+  arts <- parse_linebased(lines)
+
+  if (nrow(arts) > 0) {
+    arts <- arts[!duplicated(arts$title), ]
+
+    # Interpolate page numbers for entries with page=0 that aren't Frontispieces.
+    # Use position-based interpolation from surrounding entries with known pages.
+    for (j in seq_len(nrow(arts))) {
+      if (arts$page[j] == 0L &&
+          !str_detect(arts$title[j], regex("frontispiece", ignore_case=TRUE))) {
+        # Find nearest previous and next entries with known pages
+        prev_pg <- NA_integer_; next_pg <- NA_integer_
+        if (j > 1) {
+          prev_idx <- which(arts$page[1:(j-1)] > 0)
+          if (length(prev_idx) > 0) prev_pg <- arts$page[max(prev_idx)]
+        }
+        if (j < nrow(arts)) {
+          next_idx <- which(arts$page[(j+1):nrow(arts)] > 0)
+          if (length(next_idx) > 0) next_pg <- arts$page[j + min(next_idx)]
+        }
+        # Assign interpolated page
+        if (!is.na(prev_pg) && !is.na(next_pg)) {
+          arts$page[j] <- as.integer(round((prev_pg + next_pg) / 2))
+        } else if (!is.na(prev_pg)) {
+          arts$page[j] <- prev_pg + 1L
+        } else if (!is.na(next_pg)) {
+          arts$page[j] <- max(1L, next_pg - 1L)
+        }
+      }
+    }
+
+    arts <- arts[order(arts$page), ]
+
+    # Strip CONTENTS category prefixes from titles.
+    # Vol26+ CONTENTS uses "Special Features Title...", "Poetry Title...",
+    # "General Features Title...", "Fiction Title..." as section labels.
+    # These prefixes don't appear in the body text and block title matching.
+    cat_prefixes <- c("Special Features", "General Features",
+                      "Poetry", "Fiction", "Lessons")
+    for (j in seq_len(nrow(arts))) {
+      for (pfx in cat_prefixes) {
+        pfx_pat <- regex(paste0("^", pfx, "\\s+"), ignore_case = TRUE)
+        if (str_detect(arts$title[j], pfx_pat)) {
+          stripped <- str_trim(str_replace(arts$title[j], pfx_pat, ""))
+          if (nchar(stripped) >= 3) {
+            arts$title[j] <- stripped
+          }
+          break
+        }
+      }
+    }
+
+    # Strip physical-location prefixes from CONTENTS titles.
+    # e.g. "Back of contents — The Songster" → "The Songster"
+    #      "Inside front cover — Poem" → "Poem"
+    # These describe WHERE the piece is printed, not its title,
+    # and block find_in_window from matching the actual text.
+    loc_pat <- regex(
+      "^(?:Back\\s+of\\s+(?:contents|frontispiece|flyleaf|cover)|Inside\\s+(?:front|back)\\s+cover)\\s*[\u2014\u2013—-]+\\s*",
+      ignore_case=TRUE)
+    for (j in seq_len(nrow(arts))) {
+      if (str_detect(arts$title[j], loc_pat)) {
+        stripped <- str_trim(str_replace(arts$title[j], loc_pat, ""))
+        if (nchar(stripped) >= 3) arts$title[j] <- stripped
+      }
+    }
+
+    arts$category <- sapply(arts$title, classify_article)
+  }
+  arts
+}
+
+parse_linebased <- function(lines) {
+  arts    <- data.frame(title=character(), page=integer(), stringsAsFactors=FALSE)
+  pending <- ""
+  just_saved_page <- FALSE   # TRUE after saving a title+page entry
+  skip    <- regex(
+    "^(CONTENTS?:?|ADVERTISERS?|Page\\s*$|\\*\\*|(THE\\s+)?RELIEF\\s+SOCIETY\\s+(OF|MAGAZINE|GENERAL)|Vol\\.?\\s*[IVXL0-9]|Organ\\s+of\\s+the|PUBLISHED\\s+MONTHLY|Jesus\\s+Christ|Bishop'?s\\s+Building|Editorial\\s+and\\s+Business|Telephone\\s+Wasatch|Subscription\\s+Price|Entered\\s+as\\s+second|Stamps\\s+should|Acceptance\\s+for\\s+mailing|No\\.?\\s*$|SPECIAL\\s+FEATURES\\s*$|GENERAL\\s+FEATURES\\s*$|POETRY\\s*$|FICTION\\s*$|LESSONS\\s*$)",
+    ignore_case=TRUE)
+
+  # Detect standalone author attribution lines (e.g. "Christie Lund Coles").
+  # These appear in multi-line CONTENTS formats where author is on a separate line
+  # after the title+page line.  Matches 2-5 words, each starting with uppercase
+  # or being an initial (A., B.C.), optional honorifics (President, Dr., etc.),
+  # no trailing colon (which would indicate a section header like "Editorials:").
+  is_author_line <- function(s) {
+    if (nchar(s) > 55 || str_detect(s, ":\\s*$")) return(FALSE)
+    words <- str_split(str_trim(s), "\\s+")[[1]]
+    if (length(words) < 2 || length(words) > 5) return(FALSE)
+    # Each word must start with uppercase or be an initial like "A." "B.C."
+    # Allow small preposition/connector words (de, van, von, Jr., Sr., II, III)
+    ok <- sapply(words, function(w) {
+      str_detect(w, "^[A-Z]") ||
+      w %in% c("de", "van", "von", "del", "la", "le", "da", "di")
+    })
+    # At least 2 words must start with uppercase
+    n_upper <- sum(str_detect(words, "^[A-Z]"))
+    all(ok) && n_upper >= 2
+  }
+
+  # Strip "By Firstname [Middle] Lastname..." suffix from a CONTENTS title string.
+  # Only removes explicit "By Author" attribution — bare trailing names (without "By")
+  # are left in place. The S10 author-proximity strategy handles those cases:
+  # it extracts the last word of the title as a candidate author last name and
+  # searches for "By LastName" proximity in the body text.
+  strip_author <- function(t) {
+    t <- str_trim(str_replace(t,
+      regex("\\s+[Bb]y\\s+[A-Z][a-zA-Z.,'\u2014\u2013 -]{2,}$"), ""))
+    str_trim(t)
+  }
+
+  for (ln in lines) {
+    ln <- str_trim(ln)
+    ln <- str_trim(str_replace(ln, "^\\*+\\s*", ""))   # strip leading * OCR artifacts
+    if (nchar(ln) < 2 || str_detect(ln, skip)) next
+
+    clean <- str_trim(str_replace_all(ln, "\\s{2,}", " "))
+
+    # Special case: line contains "Frontispiece" in the MIDDLE followed by a page number
+    # e.g. "Portrait of Mrs. X Frontispiece Emily Sophia Richards 521"
+    # -> two entries: (Portrait... Frontispiece, pg=0) and (Emily Sophia Richards, pg=521)
+    front_mid <- str_match(clean,
+      "^(.+?)\\s+[Ff]rontispiece\\s+(.+?)\\s+(\\d{1,4})\\s*$")
+    if (!is.na(front_mid[1,1])) {
+      bef <- str_trim(strip_author(front_mid[1,2]))
+      aft <- str_trim(strip_author(front_mid[1,3]))
+      pg_val <- suppressWarnings(as.integer(front_mid[1,4]))
+      if (nchar(bef) >= 2)
+        arts <- rbind(arts, data.frame(title=paste(bef,"Frontispiece"),
+                                       page=0L, stringsAsFactors=FALSE))
+      if (nchar(aft) >= 2 && !is.na(pg_val) && pg_val >= 1)
+        arts <- rbind(arts, data.frame(title=aft, page=pg_val,
+                                       stringsAsFactors=FALSE))
+      pending <- ""
+      next
+    }
+
+    # Strip trailing punctuation that OCR may attach to page numbers (e.g. "645," or "58]")
+    clean <- str_replace(clean, "(\\d{1,4})[,;.\\]\\)]+\\s*$", "\\1")
+
+    # Handle page ranges like "887-890" → keep first page number only
+    clean <- str_replace(clean, "(\\d{1,4})-\\d{1,4}\\s*$", "\\1")
+
+    pg_m <- str_match(clean, "\\s+(\\d{1,4})\\s*$")
+
+    if (is.na(pg_m[1,1])) {
+      # Multi-line CONTENTS format: after a title+page entry, the next line
+      # is often the author's name (e.g. "Christie Lund Coles").
+      # Skip these author attribution lines to prevent wrong title merges.
+      if (just_saved_page && is_author_line(clean)) {
+        just_saved_page <- FALSE
+        next
+      }
+      just_saved_page <- FALSE
+
+      if (str_detect(clean, regex("Frontispiece", ignore_case=TRUE))) {
+        full <- if (nchar(pending) > 0 && nchar(pending) < 60) paste(pending, clean) else clean
+        full <- strip_author(full)
+        arts <- rbind(arts, data.frame(title=str_trim(full), page=0L,
+                                       stringsAsFactors=FALSE))
+        pending <- ""
+      } else if (nchar(clean) > 1 && !str_detect(clean, "^\\d+$")) {
+        is_continuation <- nchar(pending) > 0 && nchar(pending) < 80 &&
+          (str_detect(clean, "^[a-z]") ||
+           str_detect(clean, "^(By |by )") ||
+           str_detect(clean, "^(of |and |the |for |in |on |to |at |or |with )") ||
+           (nchar(clean) < 50 && str_detect(clean, "^[A-Z][a-z]") &&
+            !str_detect(clean, "\\d{2,3}\\s*$")))
+        if (nchar(pending) == 0) {
+          pending <- clean
+        } else if (is_continuation) {
+          pending <- paste(pending, clean)
+        } else {
+          # About to replace pending — emit previous pending as a no-page entry
+          # if it looks like a real title (>= 5 chars, has letters, not pure author)
+          old_pending <- strip_author(pending)
+          if (nchar(old_pending) >= 5 && str_detect(old_pending, "[A-Za-z]{3,}") &&
+              !str_detect(old_pending, skip)) {
+            arts <- rbind(arts, data.frame(title=str_trim(old_pending), page=0L,
+                                           stringsAsFactors=FALSE))
+          }
+          pending <- clean
+        }
+      }
+      next
+    }
+
+    pg <- suppressWarnings(as.integer(pg_m[1,2]))
+    if (is.na(pg) || pg < 1 || pg > 2000) next
+
+    title <- str_trim(str_replace(clean, "\\s+\\d{1,4}\\s*$", ""))
+    title <- strip_author(title)
+    title <- str_trim(str_replace_all(title, "\\s{2,}", " "))
+    if (nchar(title) < 2 || str_detect(title, "^\\d+$")) { pending <- ""; next }
+
+    if (nchar(pending) > 0 && nchar(pending) < 120)
+      title <- paste(pending, title)
+    pending <- ""
+    just_saved_page <- TRUE
+    arts <- rbind(arts, data.frame(title=str_trim(title), page=pg,
+                                   stringsAsFactors=FALSE))
+  }
+  # Emit any remaining pending as a no-page entry
+  if (nchar(pending) > 0) {
+    old_pending <- strip_author(pending)
+    if (nchar(old_pending) >= 5 && str_detect(old_pending, "[A-Za-z]{3,}") &&
+        !str_detect(old_pending, skip)) {
+      arts <- rbind(arts, data.frame(title=str_trim(old_pending), page=0L,
+                                     stringsAsFactors=FALSE))
+    }
+  }
+  arts
+}
+```
+
+```{r page-index}
+# ============================================================
+# PAGE INDEX
+# Maps page numbers to character positions within body text.
+# Used only to narrow search windows; not required for correctness.
+# ============================================================
+build_page_index <- function(body_text, body_offset) {
+  pages <- data.frame(page=integer(), position=integer(), stringsAsFactors=FALSE)
+
+  # Pattern 1: Standard even-page headers — "72 RELIEF SOCIETY MAGAZINE" or
+  #            "72 THE RELIEF SOCIETY MAGAZINE"
+  even_m <- str_locate_all(body_text,
+    regex("(\\d{1,3})\\s+(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?",
+          ignore_case=FALSE))[[1]]
+  if (nrow(even_m) > 0) {
+    for (i in seq_len(nrow(even_m))) {
+      chunk <- str_sub(body_text, even_m[i,1], even_m[i,2])
+      pg    <- suppressWarnings(as.integer(str_extract(chunk, "^\\d+")))
+      if (!is.na(pg) && pg >= 1 && pg <= 999)
+        pages <- rbind(pages, data.frame(page=pg,
+          position=even_m[i,1] + body_offset - 1L, stringsAsFactors=FALSE))
+    }
+  }
+
+  # Pattern 2: Vol26+ even-page headers — "124 - FEBRUARY, RELIEF SOCIETY MAGAZINE"
+  even_m2 <- str_locate_all(body_text,
+    regex("(\\d{1,3})\\s*[-\u2013\u2014]\\s*[A-Z]+,?\\s+RELIEF\\s+SOCIETY\\s+MAGAZINE",
+          ignore_case=FALSE))[[1]]
+  if (nrow(even_m2) > 0) {
+    for (i in seq_len(nrow(even_m2))) {
+      chunk <- str_sub(body_text, even_m2[i,1], even_m2[i,2])
+      pg    <- suppressWarnings(as.integer(str_extract(chunk, "^\\d+")))
+      if (!is.na(pg) && pg >= 1 && pg <= 999)
+        pages <- rbind(pages, data.frame(page=pg,
+          position=even_m2[i,1] + body_offset - 1L, stringsAsFactors=FALSE))
+    }
+  }
+
+  # Pattern 3: Vol26+ odd-page headers — "RELIEF SOCIETY MAGAZINE, FEBRUARY - 125"
+  odd_m <- str_locate_all(body_text,
+    regex("RELIEF\\s+SOCIETY\\s+MAGAZINE,?\\s+[A-Z]+\\s*[-\u2013\u2014]\\s*(\\d{1,3})",
+          ignore_case=FALSE))[[1]]
+  if (nrow(odd_m) > 0) {
+    for (i in seq_len(nrow(odd_m))) {
+      chunk <- str_sub(body_text, odd_m[i,1], odd_m[i,2])
+      pg    <- suppressWarnings(as.integer(str_extract(chunk, "\\d+$")))
+      if (!is.na(pg) && pg >= 1 && pg <= 999)
+        pages <- rbind(pages, data.frame(page=pg,
+          position=odd_m[i,1] + body_offset - 1L, stringsAsFactors=FALSE))
+    }
+  }
+
+  if (nrow(pages) > 2) {
+    keep <- rep(TRUE, nrow(pages))
+    for (i in 2:(nrow(pages)-1)) {
+      if (pages$page[i] < pages$page[i-1] - 5 ||
+          pages$page[i] > pages$page[i+1] + 5) keep[i] <- FALSE
+    }
+    pages <- pages[keep, ]
+  }
+  pages[!duplicated(pages$page), ]
+}
+
+page_to_pos <- function(pi, pg, lo, hi) {
+  if (nrow(pi)==0) return(lo)
+  ex <- pi[pi$page==pg, ]
+  if (nrow(ex)>0) return(ex$position[1])
+  bef <- pi[pi$page < pg, ]
+  aft <- pi[pi$page > pg, ]
+  CPP <- 2400L
+  if (nrow(bef)>0 && nrow(aft)>0) {
+    b <- bef[nrow(bef),]; a <- aft[1,]
+    frac <- (pg - b$page) / (a$page - b$page)
+    return(as.integer(b$position + frac*(a$position - b$position)))
+  }
+  if (nrow(bef)>0) return(as.integer(bef$position[nrow(bef)] + (pg - bef$page[nrow(bef)]) * CPP))
+  if (nrow(aft)>0) return(max(lo, as.integer(aft$position[1]  - (aft$page[1]  - pg) * CPP)))
+  lo
+}
+```
+
+```{r title-finder}
+# ============================================================
+# TITLE FINDER
+# Searches for a title string within a character window.
+# Tries six strategies in order, from exact to fuzzy.
+# Returns the absolute character position in the full text,
+# or NA if not found.
+#
+# IMPORTANT: callers always pass window = [body_start, body_end]
+# so the CONTENTS listing is never searched.
+# ============================================================
+find_in_window <- function(text, title, w_start, w_end, allow_s10 = TRUE,
+                           require_para_start = FALSE) {
+  if (w_start >= w_end || nchar(str_trim(title)) == 0) return(NA_integer_)
+  chunk <- str_sub(text, w_start, w_end)
+
+  # Normalise em-dashes, en-dashes, double-hyphens, and OCR "?" to plain hyphen
+  title <- str_replace_all(title, "\u2014|\u2013|---?", "-")
+  title <- str_replace_all(title, "(?<=[\\w'\")])\\?(?=\\w)", "-")   # OCR "?" as dash
+  # Drop Frontispiece suffix (handled separately)
+  title <- str_trim(str_replace(title,
+    regex("\\s+Frontispiece\\s*$", ignore_case=TRUE), ""))
+
+  try_pat <- function(pat) {
+    m <- tryCatch(str_locate(chunk, regex(pat, ignore_case=TRUE)),
+                  error=function(e) matrix(NA_integer_,1,2))
+    if (!is.na(m[1,1])) return(w_start + m[1,1] - 1L)
+    NA_integer_
+  }
+
+  # Variant of try_pat that requires the match to be at a paragraph/line start.
+  # Used for Strategy 11 proximity matches when no page_index is available,
+  # to prevent matching title/author words inside the body of a previous article.
+  try_pat_para <- function(pat) {
+    pos <- try_pat(pat)
+    if (is.na(pos)) return(NA_integer_)
+    # Check that the character immediately before the match is a newline or start-of-body
+    if (pos <= w_start) return(pos)   # at start of window = OK
+    preceding <- str_sub(text, max(1L, pos - 2L), pos - 1L)
+    if (str_detect(preceding, "\n")) return(pos)
+    NA_integer_   # match is inside a line, not at paragraph start → reject
+  }
+
+  esc <- function(s) str_replace_all(s, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1")
+
+  # 1. Exact match
+  pos <- try_pat(esc(title)); if (!is.na(pos)) return(pos)
+
+  # 2. Whitespace flexible
+  pos <- try_pat(str_replace_all(esc(title), "\\s+", "\\\\s+"))
+  if (!is.na(pos)) return(pos)
+
+  # 3. Dash flexible (plain - or em/en dash)
+  df  <- str_replace_all(esc(title), "[-\u2014\u2013]", "[-\u2014\u2013]+")
+  df  <- str_replace_all(df, "\\s+", "\\\\s+")
+  pos <- try_pat(df); if (!is.na(pos)) return(pos)
+
+  # 4. Drop intra-word hyphens
+  nh <- str_replace_all(title, "(?<=[a-zA-Z])-(?=[a-zA-Z])", "")
+  if (nh != title) {
+    pos <- try_pat(str_replace_all(esc(nh), "\\s+", "\\\\s+"))
+    if (!is.na(pos)) return(pos)
+  }
+
+  # 5. EDITORIAL special case
+  # Body format: "EDITORIAL\nThe Bright New Year"  (two separate lines)
+  # CONTENTS produces: "EditorialThe Bright New Year" (merged, dash stripped)
+  # Strategy: if title starts with "Editorial", search for EDITORIAL + subtitle words
+  if (str_detect(title, regex("^Editorial", ignore_case=TRUE))) {
+    subtitle <- str_trim(str_replace(title, regex("^Editorial[-: ]*", ignore_case=TRUE), ""))
+    sub_words <- str_split(subtitle, "\\s+")[[1]]
+    sub_words <- sub_words[nchar(sub_words) > 2]
+    if (length(sub_words) >= 1) {
+      # Search for EDITORIAL followed by the first significant word within ~200 chars
+      ed_pat <- paste0("EDITORIAL[\\s\\S]{0,200}\\b",
+                       esc(sub_words[1]), "\\b")
+      pos <- try_pat(ed_pat)
+      if (!is.na(pos)) return(pos)
+    }
+    # Fallback: just find EDITORIAL itself (there's usually only one per issue)
+    pos <- try_pat("EDITORIAL\\b")
+    if (!is.na(pos)) return(pos)
+  }
+
+  # 6. PORTRAIT special case
+  # Portrait pages are image-only; body may contain only the person's name as a caption.
+  # Search for the name AFTER stripping "Portrait of" / "Mrs." / "Miss" / "Dr."
+  if (str_detect(title, regex("^(?:Portrait|Frontispiece Portrait)", ignore_case=TRUE))) {
+    name <- str_replace(title, regex("^(?:Frontispiece\\s+)?Portrait\\s+of\\s+", ignore_case=TRUE), "")
+    name <- str_replace(name, regex("^(?:Mrs?|Miss|Dr)\\.?\\s+", ignore_case=TRUE), "")
+    name <- str_trim(name)
+    if (nchar(name) >= 4) {
+      pos <- try_pat(str_replace_all(esc(name), "\\s+", "\\\\s+"))
+      if (!is.na(pos)) return(pos)
+      # Try just the last name
+      last <- str_extract(name, "[A-Z][a-z]+$")
+      if (!is.na(last) && nchar(last) >= 4) {
+        pos <- try_pat(paste0("\\b", esc(last), "\\b"))
+        if (!is.na(pos)) return(pos)
+      }
+    }
+  }
+
+  # 7. Title contains em-dash subtitle: search only part BEFORE the dash
+  # e.g. "Nature in the Raw-Snake River" -> search "Nature in the Raw"
+  if (str_detect(title, "-")) {
+    before_dash <- str_trim(str_split(title, "-")[[1]][1])
+    # Strip trailing apostrophe/quote (e.g. "Visiting Teachers'" -> "Visiting Teachers")
+    before_dash <- str_replace(before_dash, "['\"]+$", "")
+    if (nchar(before_dash) >= 4 && before_dash != title) {
+      pos <- try_pat(str_replace_all(esc(before_dash), "\\s+", "\\\\s+"))
+      if (!is.na(pos)) return(pos)
+    }
+  }
+
+  # 8. Strip leading/trailing honorifics (Pres., Dr., Mrs., Mr.)
+  cleaned <- str_trim(str_replace(title,
+    regex("^(?:Pres\\.|Dr\\.|Mrs?\\.|Prof\\.)\\s+"), ""))
+  if (cleaned != title && nchar(cleaned) >= 4) {
+    pos <- try_pat(str_replace_all(esc(cleaned), "\\s+", "\\\\s+"))
+    if (!is.na(pos)) return(pos)
+  }
+
+  # 9. Significant-word proximity (most permissive, run last)
+  sigs <- get_significant_words(title)
+  if (length(sigs) >= 2) {
+    for (n in c(min(length(sigs),4), min(length(sigs),3), 2)) {
+      if (n > length(sigs)) next
+      pat <- paste(
+        sapply(sigs[seq_len(n)], function(w) paste0("\\b", esc(w), "\\b")),
+        collapse=".{0,80}")
+      pos <- try_pat(pat)
+      if (!is.na(pos)) {
+        # Check for a nearby line-start match (within 3000 chars forward).
+        # Article titles usually start on their own line; a mid-line match
+        # may be a false positive inside body text (e.g. a name list).
+        # Only prefer the line-start match if it's close — running headers
+        # further away are false positives themselves.
+        pos_ls <- try_pat(paste0("(?<=\\n)[ \\t]*", pat))
+        if (!is.na(pos_ls) && pos_ls > pos && (pos_ls - pos) <= 3000L)
+          return(pos_ls)
+        return(pos)
+      }
+    }
+  }
+
+  # 9b. Plural/singular normalization
+  # OCR CONTENTS entries sometimes differ in number from the body heading:
+  # e.g. CONTENTS has "Thoroughbreds" but body heading reads "Thoroughbred".
+  # Try dropping a trailing 's' from each significant word that ends in 's'.
+  if (length(sigs) >= 1) {
+    sigs_norm <- sapply(sigs, function(w)
+      if (str_detect(w, "s$") && nchar(w) > 4) str_sub(w, 1, nchar(w)-1L) else w)
+    if (!identical(sigs, sigs_norm)) {
+      for (n in c(min(length(sigs_norm),4), min(length(sigs_norm),3), 2)) {
+        if (n > length(sigs_norm)) next
+        pat <- paste(
+          sapply(sigs_norm[seq_len(n)], function(w) paste0("\\b", esc(w), "\\b")),
+          collapse=".{0,80}")
+        pos <- try_pat(pat)
+        if (!is.na(pos)) {
+          pos_ls <- try_pat(paste0("(?<=\\n)[ \\t]*", pat))
+          if (!is.na(pos_ls) && pos_ls > pos && (pos_ls - pos) <= 3000L)
+            return(pos_ls)
+          return(pos)
+        }
+      }
+    }
+  }
+
+  # 10. Author-name search
+  # Normally only runs when allow_s10=TRUE (narrow/wide windows), because on full-body
+  # fallback it risks false-positive matches far from the article's true position.
+  # EXCEPTION: allow S10 on full-body when the title contains an embedded author name
+  # (trailing capitalized words that look like a personal name suffix).
+  # e.g. "Love's Recompense Grace Jacobson" — body has "Love's Recompense By Mrs. Grace Jacobson"
+  # S1-S9 all fail because the title form ≠ body form. S10 finds it by author-name proximity.
+  # The plausibility guard in the caller (|pos - pg_est| ≤ tolerance) prevents far-off matches.
+  author_m_check <- str_match(title,
+    "^(.{3,40}?)\\s+([A-Z][a-zA-Z.]+(?:\\s+[A-Z][a-zA-Z.]*){1,3})$")
+  has_embedded_author <- !is.na(author_m_check[1,1])
+  if (!allow_s10 && !has_embedded_author) return(NA_integer_)
+  #
+  # Many CONTENTS entries embed the author after the title:
+  #   "One Sunrise Elsie E. Barrett"  -> title "One Sunrise" + author "Elsie E. Barrett"
+  #   "A Tribute Annie Wells Cannon"  -> title "A Tribute"   + author "Annie Wells Cannon"
+  # In the article body, the author appears on a byline: "By Elsie E. Barrett"
+  # This strategy extracts a candidate author from the trailing capitalized-name
+  # suffix of the title and searches for it (with and without "By").
+  #
+  # Guard: Portrait titles already have strategy 6 (name extraction after "Portrait of").
+  # Running strategy 10 on them confuses the portrait subject for an author byline,
+  # causing false matches when the person's name appears elsewhere in the body.
+  if (str_detect(title, regex("^Portrait", ignore_case = TRUE))) return(NA_integer_)
+  #
+  # Candidate author: 2-3 trailing words that are ALL Title-Case or UPPER (names),
+  # preceded by a single-word or short title part.
+  author_m <- str_match(title,
+    "^(.{3,40}?)\\s+([A-Z][a-zA-Z.]+(?:\\s+[A-Z][a-zA-Z.]*){1,3})$")
+  # Greedy fallback: if the lazy split puts a title word in the author group
+  # (title_part has no significant words >= 5 chars), try greedy split
+  # to prefer a longer title_part and shorter author.
+  # e.g. "Song for Morning Katherine Fernelius":
+  #   lazy:   title="Song for", author="Morning Katherine Fernelius" — BAD
+  #   greedy: title="Song for Morning", author="Katherine Fernelius" — GOOD
+  if (!is.na(author_m[1,1])) {
+    tp_check <- get_significant_words(str_trim(author_m[1,2]))
+    if (!any(nchar(tp_check) >= 5)) {
+      author_m2 <- str_match(title,
+        "^(.{3,40})\\s+([A-Z][a-zA-Z.]+(?:\\s+[A-Z][a-zA-Z.]*){1,3})$")
+      if (!is.na(author_m2[1,1])) author_m <- author_m2
+    }
+  }
+  if (!is.na(author_m[1,1])) {
+    title_part <- str_trim(author_m[1,2])   # e.g. "One Sunrise"
+    author_str <- str_trim(author_m[1,3])   # e.g. "Elsie E. Barrett"
+    last_name  <- str_extract(author_str, "[A-Za-z]+$")   # e.g. "Barrett"
+
+    # Safety guard: author_str must look like a real personal name.
+    # Require the LAST word (surname) to be >= 4 chars (rules out "Men", "Cox", "Wu").
+    # 4-char surnames like Lund, Lind, Done, Reed, Page are common in these texts.
+    is_valid_author <- !is.na(last_name) && nchar(last_name) >= 4
+
+    # Guard for 10a/10b: only search by author name when title_part has at least
+    # one significant word >= 5 chars. (Lowered from 6 to catch titles like
+    # "A Song for New Years" where "Years"=5, "Winter Grass" where "Grass"=5.)
+    tp_sigs      <- get_significant_words(title_part)
+    tp_long_sigs <- tp_sigs[nchar(tp_sigs) >= 5]
+    author_search_safe <- length(tp_long_sigs) >= 1
+
+    if (is_valid_author) {
+      # 10a. "By <full author>" in body (e.g. "By Elsie E. Barrett")
+      # After matching, verify that at least one of the first two name-words
+      # in author_str appears near the match.  This prevents false positives
+      # from a different person with the same surname (e.g. matching
+      # "By Elsie C. Carroll" when seeking "By Velma B. Carroll") while
+      # tolerating wrong splits where a title word lands in author_str
+      # (e.g. author_str = "Still Elsie E. Barrett" — "Still" is really
+      # part of the title, but "Elsie" IS near the match → accept).
+      if (author_search_safe) {
+        pos <- try_pat(paste0("[Bb]y\\s+[A-Z][a-zA-Z.]+(?:\\s+[A-Z.]+){0,2}\\s+",
+                              esc(last_name), "\\b"))
+        if (!is.na(pos)) {
+          author_names <- str_extract_all(author_str, "[A-Za-z]{3,}")[[1]]
+          author_names <- head(author_names[author_names != last_name], 2)
+          if (length(author_names) >= 1) {
+            near <- str_sub(text, max(1L, pos - 5L), min(nchar(text), pos + 120L))
+            name_found <- any(sapply(author_names, function(nm)
+              str_detect(near, regex(paste0("\\b", esc(nm), "\\b"),
+                                     ignore_case = TRUE))))
+            if (name_found) return(pos)
+            # No author name confirmed — fall through to S10b
+          } else {
+            return(pos)   # no name words to verify; accept
+          }
+        }
+      }
+
+      # 10b. Full author string (handles "Elsie E. Barrett" or "Annie Wells Cannon")
+      if (author_search_safe) {
+        pos <- try_pat(str_replace_all(esc(author_str), "\\s+", "\\\\s+"))
+        if (!is.na(pos)) return(pos)
+      }
+
+      # 10c. Just the title part — only when title_part has >= 2 sig words >= 5 chars each,
+      # or one sig word >= 8 chars.  Short/common title parts match too many places.
+      tp_long5 <- tp_sigs[nchar(tp_sigs) >= 5]
+      tp_long8 <- tp_sigs[nchar(tp_sigs) >= 8]
+      title_search_safe <- length(tp_long5) >= 2 || length(tp_long8) >= 1
+      if (title_search_safe && title_part != title) {
+        pos <- try_pat(str_replace_all(esc(title_part), "\\s+", "\\\\s+"))
+        if (!is.na(pos)) return(pos)
+      }
+
+      # 10d. Title sig word + last-name proximity (first sig word only, forward)
+      if (author_search_safe && length(tp_sigs) >= 1) {
+        pos <- try_pat(paste0("\\b", esc(tp_sigs[1]), "\\b.{0,200}\\b",
+                              esc(last_name), "\\b"))
+        if (!is.na(pos)) return(pos)
+      }
+
+      # 11. Combined title+author proximity — ALL sig words tried in both directions.
+      # This is the "title separated from author by minimal words" strategy.
+      # The article heading and byline may appear on adjacent lines:
+      #   TITLE WORDS                     ← article heading line
+      #   By Author Name                  ← byline line (already caught by 10a)
+      # OR they may appear separately in running text.
+      # Strategy 11 tries every sig word paired with the last name, forward AND reverse,
+      # with a generous gap allowance. Requires sig word >= 4 chars to reduce noise.
+      # Reverse direction (last_name before sig_word) catches cases where author
+      # attribution appears above the title (e.g. photo captions or section headers).
+      # When require_para_start=TRUE (no page_index files), the match must begin at
+      # a line/paragraph start to prevent false matches inside article body text.
+      tp_fn <- if (require_para_start) try_pat_para else try_pat
+      for (sw in tp_sigs[nchar(tp_sigs) >= 4]) {
+        # Forward: title word appears first, then author last name
+        pos <- tp_fn(paste0("\\b", esc(sw), "\\b.{0,400}\\b", esc(last_name), "\\b"))
+        if (!is.na(pos)) return(pos)
+        # Reverse: author last name appears first, then title word (within ~2 lines)
+        pos <- tp_fn(paste0("\\b", esc(last_name), "\\b.{0,120}\\b", esc(sw), "\\b"))
+        if (!is.na(pos)) return(pos)
+      }
+    }
+  }
+
+  # 12. OCR character-class substitution
+  # Replace common OCR-confused characters with character classes in the regex.
+  # Handles: l/I/1 confusion, O/0, rn/m, U/V confusion, etc.
+  ocr_title <- title
+  ocr_title <- str_replace_all(ocr_title, "l", "[lI1]")
+  ocr_title <- str_replace_all(ocr_title, "I", "[lI1]")
+  ocr_title <- str_replace_all(ocr_title, "O", "[O0]")
+  ocr_title <- str_replace_all(ocr_title, "rn", "(?:rn|m)")
+  ocr_sigs <- get_significant_words(title)
+  ocr_sigs <- ocr_sigs[nchar(ocr_sigs) >= 4]
+  if (length(ocr_sigs) >= 2) {
+    ocr_pats <- sapply(ocr_sigs[seq_len(min(3, length(ocr_sigs)))], function(w) {
+      w <- str_replace_all(w, "l", "[lI1]")
+      w <- str_replace_all(w, "I", "[lI1]")
+      w <- str_replace_all(w, "O", "[O0]")
+      paste0("\\b", w, "\\b")
+    })
+    pat <- paste(ocr_pats, collapse=".{0,120}")
+    pos <- try_pat(pat)
+    if (!is.na(pos)) return(pos)
+  }
+
+  # 13. Known recurring title matching
+  # Many issues contain recurring sections with predictable titles.
+  # When the CONTENTS OCR is garbled, try matching the known body heading.
+  known_titles <- c(
+    "Happenings", "HAPPENINGS",
+    "Notes from the Field", "NOTES FROM THE FIELD",
+    "Notes to the Field", "NOTES TO THE FIELD",
+    "Lesson Department", "LESSON DEPARTMENT",
+    "Magazine Drive", "MAGAZINE DRIVE",
+    "Guide Lessons", "GUIDE LESSONS",
+    "Book Notices", "BOOK NOTICES",
+    "Editorials?", "EDITORIALS?"
+  )
+  t_lower <- tolower(title)
+  for (kt in known_titles) {
+    # Check if the garbled title shares >=3 consecutive chars with a known title
+    kt_lower <- tolower(kt)
+    # Try direct regex match first
+    if (str_detect(t_lower, fixed(kt_lower))) {
+      pos <- try_pat(paste0("\\b", esc(kt), "\\b"))
+      if (!is.na(pos)) return(pos)
+    }
+    # Check for partial overlap (at least 4 consecutive matching chars)
+    for (start in seq_len(max(1, nchar(kt_lower) - 3))) {
+      substr_kt <- str_sub(kt_lower, start, start + 3)
+      if (str_detect(t_lower, fixed(substr_kt))) {
+        pos <- try_pat(paste0("\\b", esc(kt), "\\b"))
+        if (!is.na(pos)) return(pos)
+        break
+      }
+    }
+  }
+
+  # 14. First significant words only — when the full title fails, try just
+  # the first 2 significant words. Only runs when both words are >= 5 chars
+  # to avoid false matches from short common words. The gap between words
+  # is limited to 40 chars to match heading proximity (not body text).
+  if (length(sigs) >= 2) {
+    first2 <- sigs[seq_len(min(2, length(sigs)))]
+    if (all(nchar(first2) >= 5)) {
+      pat <- paste(sapply(first2, function(w) paste0("\\b", esc(w), "\\b")),
+                   collapse=".{0,40}")
+      pos <- try_pat(pat)
+      if (!is.na(pos)) return(pos)
+    }
+  }
+
+  NA_integer_
+}
+# Page-guided search: narrow -> wide -> full body with plausibility guard
+# Strategy 10 (author-name search) runs in all windows but full-body results
+# are validated against the page estimate to prevent false positives.
+find_article_start <- function(text, title, pg, page_index, body_start, body_end) {
+  CPP <- 2400L
+
+  # Full-body search if page index too small (no page estimate to validate against)
+  if (nrow(page_index) < 3)
+    return(find_in_window(text, title, body_start, body_end, allow_s10=TRUE))
+
+  pg_est <- page_to_pos(page_index, pg, body_start, body_end)
+
+  # Narrow (±2 pages) — S10 allowed, bounded window
+  s1 <- max(body_start, page_to_pos(page_index, max(1L,pg-2L), body_start, body_end) - CPP)
+  e1 <- min(body_end,   page_to_pos(page_index, pg+3L,         body_start, body_end) + CPP)
+  pos <- find_in_window(text, title, s1, e1, allow_s10=TRUE)
+  if (!is.na(pos)) return(pos)
+
+  # Wide (±5 pages) — S10 allowed, bounded window
+  s2 <- max(body_start, page_to_pos(page_index, max(1L,pg-5L), body_start, body_end) - CPP*2L)
+  e2 <- min(body_end,   page_to_pos(page_index, pg+6L,         body_start, body_end) + CPP*2L)
+  pos <- find_in_window(text, title, s2, e2, allow_s10=TRUE)
+  if (!is.na(pos)) return(pos)
+
+  # Full-body — S10 allowed but result validated against page estimate
+  pos_fb <- find_in_window(text, title, body_start, body_end, allow_s10=TRUE)
+  if (!is.na(pos_fb) && (is.na(pg_est) || abs(pos_fb - pg_est) <= 25000L))
+    return(pos_fb)
+  NA_integer_
+}
+```
+
+```{r header-cleaner}
+# ============================================================
+# RUNNING HEADER CLEANER
+# Removes OCR-embedded running headers from extracted article text.
+# ============================================================
+clean_headers <- function(txt) {
+  # "N RELIEF SOCIETY MAGAZINE" even-page headers
+  txt <- str_replace_all(txt,
+    regex("\\d{1,3}\\s+(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?"), " ")
+  # "RELIEF SOCIETY MAGAZINE N" reversed
+  txt <- str_replace_all(txt,
+    regex("(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?\\s+\\d{1,3}"), " ")
+  # "RELIEF SOCIETY MAGAZINE—MONTH, YEAR" running header (em-dash + month + year)
+  txt <- str_replace_all(txt,
+    regex("(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE[\u2014\u2013—-]+\\s*[A-Z]+,?\\s+\\d{4}",
+          ignore_case=TRUE), " ")
+  # "THE Relief Society Magazine Vol. N No. N" mixed-case body header
+  txt <- str_replace_all(txt,
+    regex("THE\\s+Relief\\s+Society\\s+Magazine\\s+VOL\\.?\\s+[IVXL0-9]+[^\\n]{0,40}No\\.?\\s+\\d+",
+          ignore_case=FALSE), " ")
+  # "RELIEF SOCIETY CONFERENCE NNN" running head (conference issue)
+  txt <- str_replace_all(txt,
+    regex("RELIEF\\s+SOCIETY\\s+CONFERENCE\\s+\\d{1,4}"), " ")
+  # Board roster block — full block from "THE RELIEF SOCIETY OF THE CHURCH"
+  # or "Motto" through to Editor/Manager lines
+  txt <- str_replace_all(txt,
+    regex("(?:THE\\s+(?:RELIEF\\s+SOCIETY|CHURCH)\\s+OF[\\s\\S]{0,2000}?(?:Assistant\\s+Manager|Manager|Amy\\s+Brown\\s+Lyman)[^\\n]*)",
+          dotall=TRUE, ignore_case=TRUE), " ")
+  # Also strip shorter board fragments that may remain
+  txt <- str_replace_all(txt,
+    regex("Motto[^\\n]{0,40}Charity[\\s\\S]{0,2000}?(?:Assistant\\s+Manager|Manager|Amy\\s+Brown\\s+Lyman)[^\\n]*",
+          dotall=TRUE, ignore_case=TRUE), " ")
+  txt <- str_replace_all(txt,
+    regex("(?:PRESIDENCY\\s+AND\\s+)?GENERAL\\s+BOARD[^\\n]{0,200}(?:Salt Lake City|Bishop.*?Building|Room\\s+\\d+|Music Director)",
+          dotall=TRUE, ignore_case=TRUE), " ")
+  # Collapse extra whitespace but preserve paragraph breaks
+  txt <- str_replace_all(txt, "[ \\t]{3,}", "  ")
+  str_trim(txt)
+}
+```
+
+```{r process-issue}
+# ============================================================
+# PROCESS ISSUE
+# Core function: reads one split-issue .txt file and extracts
+# one text file per article.
+#
+# ARTICLE BOUNDARY LOGIC:
+# 1. Parse CONTENTS -> list of (title, page)
+# 2. Search for each title in body_start..body_end ONLY
+#    (CONTENTS listing is explicitly excluded from search)
+# 3. Sort found positions; each article runs from its start
+#    to the next article's start (or body_end for the last)
+# 4. ALL text from body_start to body_end is accounted for:
+#    - Gaps between articles -> Misc_gap files
+#    - Text before first article -> Misc_front
+#    - Text after last article -> Misc_back
+#    No text is ever discarded.
+# 5. Articles not found in OCR text -> placeholder file
+#    stating text is absent from source.
+# ============================================================
+process_issue <- function(filepath, output_dir) {
+  filename <- basename(filepath)
+  meta     <- get_metadata(filename)
+  if (is.na(meta$month))  meta$month  <- "Unknown"
+  if (is.na(meta$volume)) meta$volume <- "XX"
+  if (is.na(meta$year))   meta$year   <- "????"
+  if (is.na(meta$number)) meta$number <- "0"
+
+  text <- read_file_safe(filepath)
+  len  <- nchar(text)
+
+  # ----------------------------------------------------------
+  # Pre-process: Insert paragraph breaks at running header positions.
+  # Some OCR files have massive run-together lines where multiple
+  # articles flow on a single line.  Running headers like
+  # "598 RELIEF SOCIETY MAGAZINE—SEPTEMBER 1942" mark page boundaries
+  # but have no surrounding newlines.  Inserting \n\n at these positions
+  # restores paragraph breaks so snap_to_para_start can find article
+  # boundaries.
+  #
+  # SELECTIVE: Only process individual lines that have 3+ running headers.
+  # Lines with fewer headers are single-article paragraphs that just
+  # happen to span a page break — inserting breaks there disrupts
+  # find_in_window position matching.
+  # ----------------------------------------------------------
+  rh_break <- paste0(
+    "(?:\\d{1,3}\\s+(?:Vol\\.?\\s*\\d+[^\\n]{0,30})?)?",
+    "(?:THE\\s+)?RELIEF\\s+SOCIETY\\s+MAGAZINE",
+    "(?:[^A-Za-z\\n]{0,5}",
+      "(?:JANUARY|FEBRUARY|MARCH|APRIL|MAY|JUNE|JULY|AUGUST|",
+      "SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER)[,\\s]*\\d{4})?"
+  )
+  rh_break_re <- regex(rh_break, ignore_case=FALSE)
+  lines_vec <- str_split(text, "\n")[[1]]
+  rh_ct <- 0L
+  for (li in seq_along(lines_vec)) {
+    if (nchar(lines_vec[li]) > 2000L && str_count(lines_vec[li], rh_break_re) >= 3L) {
+      ct_before <- str_count(lines_vec[li], rh_break_re)
+      # Insert \n\n around each header occurrence in this line
+      lines_vec[li] <- str_replace_all(lines_vec[li],
+        regex(paste0("(", rh_break, ")"), ignore_case=FALSE),
+        "\n\n\\1\n\n")
+      rh_ct <- rh_ct + ct_before
+    }
+  }
+  if (rh_ct > 0L) {
+    text <- paste(lines_vec, collapse="\n")
+    len  <- nchar(text)
+    cat("  >> Inserted", rh_ct, "header breaks in lines with 3+ running headers.\n")
+  }
+
+  cat("\n", rep("=",70), "\n", sep="")
+  cat("FILE:", filename, "\n")
+  cat("SIZE:", format(len, big.mark=","), "chars\n")
+
+  # Output folder: output/Vol16_1929/March/
+  out_folder <- file.path(output_dir,
+                          paste0("Vol", meta$volume, "_", meta$year),
+                          meta$month)
+  if (dir.exists(out_folder)) unlink(out_folder, recursive=TRUE)
+  dir.create(out_folder, showWarnings=FALSE, recursive=TRUE)
+
+  prefix <- paste0(meta$month, "_Vol", meta$volume, "_No", meta$number)
+
+  # ----------------------------------------------------------
+  # Step 1: Locate sections
+  # ----------------------------------------------------------
+  s <- find_sections(text)
+  body_start <- s$body_start
+  body_end   <- s$body_end
+
+  # Safety: ensure body_start does not overlap with contents region.
+  # EXCEPTION: if body_start was set from a reliable VOL marker (e.g. "VOL. XVI MARCH, 1929 No. 3"),
+  # trust it ONLY when it's well after the contents_start (at least 200 chars after).
+  # If the VOL marker is AT or BEFORE the contents_start, it's part of the front-matter
+  # masthead (e.g. "VOL. XXIII SEPTEMBER, 1936 No. 9" appearing right before "CONTENTS"),
+  # not the body boundary. In that case, use contents_end + 1 instead.
+  if (!is.na(s$contents_end) && !is.na(body_start) && body_start <= s$contents_end) {
+    vol_is_front_matter <- isTRUE(s$vol_marker_found) &&
+      !is.na(s$contents_start) &&
+      body_start < (s$contents_start + 200L)
+
+    if (isTRUE(s$vol_marker_found) && !vol_is_front_matter) {
+      cat("  NOTE: body_start from VOL marker (", body_start,
+          ") is before contents_end (", s$contents_end,
+          ") — trusting VOL marker (well after CONTENTS start)\n", sep="")
+      # Keep body_start as-is; the VOL marker is authoritative.
+    } else {
+      if (vol_is_front_matter) {
+        cat("  NOTE: VOL marker (", body_start, ") is in front matter (at/before CONTENTS start ",
+            s$contents_start, ") — advancing past contents_end\n", sep="")
+      } else {
+        cat("  WARNING: body_start inside CONTENTS region — advancing past contents_end\n")
+      }
+      body_start <- s$contents_end + 1L
+      s$body_start <- body_start
+    }
+  }
+
+  cat(sprintf("  CONTENTS: %s to %s\n",
+              ifelse(is.na(s$contents_start),"?",s$contents_start),
+              ifelse(is.na(s$contents_end),  "?",s$contents_end)))
+  cat(sprintf("  body_start: %s  body_end: %s\n",
+              format(body_start, big.mark=","),
+              format(body_end,   big.mark=",")))
+
+  # ----------------------------------------------------------
+  # Step 2: Save CONTENTS and BOARD files, plus a _00_Misc.txt
+  # containing ALL text from the beginning of the file up to
+  # body_start (volume header, issue number, CONTENTS listing,
+  # Board roster, etc.).  Every byte before the body is captured.
+  # ----------------------------------------------------------
+  pre_body_text <- str_trim(str_sub(text, 1L, body_start - 1L))
+  if (nchar(pre_body_text) > 0) {
+    # Trim any article text that leaked into the pre-body region.
+    # Many issues print the first article (often a poem) on the inside front cover,
+    # right after the last advertisement.  The reliable cut point is the LAST
+    # "Mention Relief Society Magazine" ad footer — article text follows that.
+    # Since the first article is already extracted correctly as a body article,
+    # trimming here avoids a duplicate in _00_Misc.txt with no data loss.
+    last_ad <- str_locate_all(pre_body_text,
+      regex("Mention Relief Society Magazine", ignore_case=TRUE))[[1]]
+    if (nrow(last_ad) > 0) {
+      cut_pos <- last_ad[nrow(last_ad), "end"]
+      pre_body_trimmed <- str_trim(str_sub(pre_body_text, 1L, cut_pos))
+    } else {
+      pre_body_trimmed <- pre_body_text
+    }
+    write_file(pre_body_trimmed,
+               file.path(out_folder, paste0(prefix, "_00_Misc.txt")))
+    trimmed_chars <- nchar(pre_body_text) - nchar(pre_body_trimmed)
+    if (trimmed_chars > 10) {
+      cat(sprintf("  Pre-body (00_Misc): %s chars (trimmed %s chars of article text already captured in body)\n",
+                  format(nchar(pre_body_trimmed), big.mark=","),
+                  format(trimmed_chars, big.mark=",")))
+    } else {
+      cat(sprintf("  Pre-body (00_Misc): %s chars\n",
+                  format(nchar(pre_body_trimmed), big.mark=",")))
+    }
+  }
+
+  if (!is.null(s$contents_text))
+    write_file(str_trim(s$contents_text),
+               file.path(out_folder, paste0(prefix, "_00_CONTENTS.txt")))
+
+  board_text <- ""
+  if (!is.na(s$board_start)) {
+    board_text <- str_trim(str_sub(text, s$board_start, s$board_end))
+    write_file(board_text,
+               file.path(out_folder, paste0(prefix, "_00_BOARD.txt")))
+    cat(sprintf("  Board: %d chars\n", nchar(board_text)))
+  }
+
+  # ----------------------------------------------------------
+  # Step 3: Parse CONTENTS
+  # ----------------------------------------------------------
+  arts <- if (!is.null(s$contents_text))
+    parse_contents_section(s$contents_text) else
+    data.frame(title=character(), page=integer(), category=character(),
+               stringsAsFactors=FALSE)
+
+  # ----------------------------------------------------------
+  # Step 3b: Fix outlier page numbers (OCR digit truncation)
+  # ----------------------------------------------------------
+  # OCR sometimes garbles the last digit of a page number, e.g. "58]" parses
+  # as page 58 instead of 581.  Detect ISOLATED pages — those with < 2
+  # neighbours within ±100 pages — and try appending a digit (0-9) to bring
+  # them into the cluster.  This avoids false-fixing legitimate low pages
+  # like pg 1-4 in January where all pages cluster together near 1-54.
+  if (nrow(arts) >= 5) {
+    valid_pgs <- arts$page[arts$page > 0]
+    if (length(valid_pgs) >= 5) {
+      pg_med <- median(valid_pgs)
+      for (i in which(arts$page > 0)) {
+        neighbors <- sum(abs(valid_pgs - arts$page[i]) <= 100) - 1L
+        if (neighbors < 2L) {
+          # Isolated page — try appending a digit
+          candidates_pg <- arts$page[i] * 10L + 0:9
+          dists <- abs(candidates_pg - pg_med)
+          best  <- candidates_pg[which.min(dists)]
+          fixed_neighbors <- sum(abs(valid_pgs - best) <= 100)
+          if (fixed_neighbors >= 3L) {
+            cat(sprintf("  PAGE FIX: '%s' pg %d -> %d (outlier corrected)\n",
+                        str_sub(arts$title[i], 1, 40), arts$page[i], best))
+            arts$page[i] <- best
+          }
+        }
+      }
+      # Re-sort by page to restore correct ordering after fixes
+      arts <- arts[order(arts$page), ]
+
+      # Step 3c: Remove entries with impossible page numbers.
+      # OCR noise from "20 Bishop's Building" address creates stray page
+      # numbers (2, 3, 20) that form a mini-cluster.  Detect a large gap
+      # (>100 pages) in the sorted page sequence: if a small group of
+      # entries (<=5) sits below the gap while the main cluster sits above,
+      # remove the small group.  Safe for Jan issues because they have no
+      # such gap (all pages are in the 1-60 range together).
+      valid_pgs  <- sort(arts$page[arts$page > 0])
+      if (length(valid_pgs) >= 5) {
+        gaps <- diff(valid_pgs)
+        big_gap_idx <- which(gaps > 100)
+        if (length(big_gap_idx) > 0) {
+          # Use the largest gap
+          largest <- big_gap_idx[which.max(gaps[big_gap_idx])]
+          below_n <- largest           # entries below the gap
+          above_n <- length(valid_pgs) - largest
+          if (below_n < above_n && below_n <= 5) {
+            cutoff <- valid_pgs[largest]
+            keep <- rep(TRUE, nrow(arts))
+            for (i in seq_len(nrow(arts))) {
+              if (arts$page[i] > 0 && arts$page[i] <= cutoff) {
+                cat(sprintf("  JUNK REMOVED: '%s' pg %d (below gap; main cluster starts pg %d)\n",
+                            str_sub(arts$title[i], 1, 50), arts$page[i],
+                            valid_pgs[largest + 1L]))
+                keep[i] <- FALSE
+              }
+            }
+            arts <- arts[keep, ]
+          }
+        }
+      }
+    }
+  }
+
+  cat(sprintf("  Articles in CONTENTS: %d\n", nrow(arts)))
+
+  if (nrow(arts) == 0) {
+    # Save full body as one Misc file — no text is lost
+    write_file(str_sub(text, body_start, body_end),
+               file.path(out_folder, paste0(prefix, "_Misc_fullbody.txt")))
+    cat("  No CONTENTS parsed. Full body saved as Misc.\n")
+    return(data.frame(file=filename, n_contents=0L, n_saved=0L,
+                      n_missed=0L, total_chars=len, stringsAsFactors=FALSE))
+  }
+
+  # ----------------------------------------------------------
+  # Step 4: Build page index (within body only, positions absolute)
+  # ----------------------------------------------------------
+  body_text  <- str_sub(text, body_start, body_end)
+  page_index <- build_page_index(body_text, body_start)
+  cat(sprintf("  Page index: %d markers (from running headers)\n", nrow(page_index)))
+
+  # Step 4b: Synthetic page index when running headers are absent
+  # Many Vol24/Vol25 issues have no running headers with page numbers (OCR
+  # stripped them), yet CONTENTS still lists articles with valid page numbers.
+  # We can interpolate page positions linearly across the body text.
+  # This enables Step 6 fallback strategies (author-near-page, caps-heading,
+  # byline-pattern) that are otherwise skipped when page_index < 3.
+  if (nrow(page_index) < 3 && nrow(arts) >= 3) {
+    valid_pgs <- arts$page[arts$page > 0]
+    if (length(valid_pgs) >= 3) {
+      pg_min <- min(valid_pgs)
+      pg_max <- max(valid_pgs)
+      pg_range <- pg_max - pg_min
+      if (pg_range > 0) {
+        body_len <- body_end - body_start + 1L
+        # Create synthetic markers at every unique CONTENTS page
+        synth_pgs <- sort(unique(valid_pgs))
+        synth_pos <- body_start +
+          as.integer((synth_pgs - pg_min) / pg_range * (body_len - 1L))
+        synth_df  <- data.frame(page = synth_pgs, position = synth_pos,
+                                stringsAsFactors = FALSE)
+        # Merge with any existing markers (existing take precedence)
+        if (nrow(page_index) > 0) {
+          synth_df <- synth_df[!synth_df$page %in% page_index$page, ]
+        }
+        page_index <- rbind(page_index, synth_df)
+        page_index <- page_index[order(page_index$page), ]
+        cat(sprintf("  Synthetic page index: %d total markers (interpolated from CONTENTS pages %d-%d)\n",
+                    nrow(page_index), pg_min, pg_max))
+      }
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 5: TWO-PASS HYBRID SEARCH
+  #
+  # PASS A — Independent search (no sequential advancement):
+  #   Each article searches its own page-windowed region of the full body,
+  #   independently of every other article. search_from is NOT advanced.
+  #   This means Strategy 10/11 false positives cannot cascade: if article [i]
+  #   gets a wrong position, it cannot push article [i+1]'s search forward.
+  #
+  # PASS B — Order validation:
+  #   The CONTENTS table defines the true article order. After all candidates
+  #   are found, enforce monotonicity: if candidate[i] <= candidate[i-1]
+  #   (i.e., this article appears to start before or at the same place as the
+  #   previous one), the candidate is a false match and is discarded.
+  #   The article then falls through to the page-estimate fallback in Step 6.
+  # ----------------------------------------------------------
+  candidates <- rep(NA_integer_, nrow(arts))   # raw finds from Pass A
+  positions  <- rep(NA_integer_, nrow(arts))   # validated positions from Pass B
+  CPP <- 2400L
+
+  # ---- Pass A: independent per-article search ----
+  for (i in seq_len(nrow(arts))) {
+    title <- arts$title[i]
+    pg    <- arts$page[i]
+    cat_i <- arts$category[i]
+
+    # Frontispiece / page-0 articles: always near start of body
+    if (cat_i == "Frontispiece" || pg <= 0L) {
+      ft <- str_trim(str_replace(title, regex("\\s+Frontispiece\\s*$",
+                                              ignore_case=TRUE), ""))
+      win_end <- min(body_end, body_start + 6000L)
+      pos <- if (nchar(ft) >= 3)
+        find_in_window(text, ft, body_start, win_end)
+      else NA_integer_
+      if (is.na(pos))
+        pos <- find_in_window(text, title, body_start, win_end)
+      if (!is.na(pos) &&
+          !(cat_i == "Frontispiece" && (pos - body_start) > 2000L)) {
+        # Distance guard: frontispiece captions live near body_start.
+        # A match >2000 chars away is a false positive in article body.
+        candidates[i] <- max(snap_to_para_start(text, pos, body_start, max_back=300L), body_start)
+      } else if (cat_i == "Frontispiece") {
+        # Image-only frontispiece OR distant false positive: leave as NA.
+        # Step 11 will search pre-body regions; otherwise logged as NIS.
+        # Do NOT fall back to body_start — that merges with the first
+        # real article and absorbs its content.
+      } else {
+        candidates[i] <- body_start   # page-0 non-frontispiece fallback
+      }
+      next
+    }
+
+    # Normal articles: narrow → wide → full-body, each bounded by page estimate.
+    # IMPORTANT: search always starts from body_start (not search_from),
+    # so articles can be found even if a previous article's position was wrong.
+    if (nrow(page_index) >= 3) {
+      pg_est <- page_to_pos(page_index, pg, body_start, body_end)
+      # Only use narrow/wide windows when page index has enough markers (>= 6)
+      # for reliable position estimates. With fewer markers, interpolation is too
+      # coarse and the window may center on the wrong occurrence of a title
+      # (e.g. in lesson previews instead of the actual article).
+      pos <- NA_integer_
+      if (nrow(page_index) >= 6) {
+        # Narrow window: pg ± 3–4 pages
+        s1 <- max(body_start,
+                  page_to_pos(page_index, max(1L, pg-3L), body_start, body_end) - CPP)
+        e1 <- min(body_end,
+                  page_to_pos(page_index, pg+4L, body_start, body_end) + CPP)
+        pos <- find_in_window(text, title, s1, e1, allow_s10=TRUE)
+        # Wide window: pg ± 6–7 pages
+        if (is.na(pos)) {
+          s2 <- max(body_start,
+                    page_to_pos(page_index, max(1L, pg-6L), body_start, body_end) - CPP*2L)
+          e2 <- min(body_end,
+                    page_to_pos(page_index, pg+7L, body_start, body_end) + CPP*2L)
+          pos <- find_in_window(text, title, s2, e2, allow_s10=TRUE)
+        }
+      }
+      # Full-body fallback: plausibility-checked against pg_est.
+      # Conference proceedings articles (Work and Business Meeting, General Session,
+      # etc.) often appear as subsection headings EARLIER in the body than their
+      # page number suggests — use a wider tolerance (50,000 chars) for those.
+      # SPECIAL CASE: When pg_est was clamped to body_end (because ALL page markers
+      # extrapolate beyond body_end), the pg_est is unreliable — it simply reflects
+      # the end of the file, not a real position estimate. For conference session
+      # headings in this situation the gap can exceed 100k chars (e.g. Jun16 where
+      # "Work and Business Meeting" is at @25816 but pg_est = body_end = 149966).
+      # In that case, skip the plausibility check entirely and use the full-body find.
+      if (is.na(pos)) {
+        pos_fb <- find_in_window(text, title, body_start, body_end, allow_s10=FALSE)
+        if (!is.na(pos_fb)) {
+          # pg_est is unreliable when:
+          #   (a) clamped to body_end  — page number extrapolates beyond the file, OR
+          #   (b) extrapolated below body_start — inverted/disordered page markers
+          # In either case the estimate is meaningless, so skip the plausibility check.
+          # pg_est is unreliable when it falls outside the body:
+          #   >= body_end : extrapolation put the estimate past the end of the file
+          #                 (covers both clamped-to-body_end AND unclamped overshoots,
+          #                  e.g. pg352 in a conference issue where the last page marker
+          #                  is pg338 → estimate = 169,222 >> body_end = 149,966)
+          #   < body_start: negative/backward extrapolation from inverted page markers
+          pg_est_is_clamped  <- !is.na(pg_est) && (pg_est >= body_end)
+          pg_est_is_negative <- !is.na(pg_est) && (pg_est < body_start)
+          pg_est_unreliable  <- pg_est_is_clamped || pg_est_is_negative
+          plausible <- is.na(pg_est) ||
+                       pg_est_unreliable  ||
+                       abs(pos_fb - pg_est) <= 25000L
+          pos <- if (plausible) pos_fb else NA_integer_
+        }
+      }
+      # S10 full-body fallback: uses author-proximity strategies (allow_s10=TRUE).
+      if (is.na(pos)) {
+        pos_fb2 <- find_in_window(text, title, body_start, body_end, allow_s10=TRUE)
+        if (!is.na(pos_fb2)) {
+          pg_est_is_clamped2  <- !is.na(pg_est) && (pg_est >= body_end)
+          pg_est_is_negative2 <- !is.na(pg_est) && (pg_est < body_start)
+          pg_est_unreliable2  <- pg_est_is_clamped2 || pg_est_is_negative2
+          plausible2 <- is.na(pg_est) ||
+                        pg_est_unreliable2 ||
+                        abs(pos_fb2 - pg_est) <= 25000L
+          pos <- if (plausible2) pos_fb2 else NA_integer_
+        }
+      }
+    } else {
+      # No page index: search full body with S10/S11.
+      pos <- find_in_window(text, title, body_start, body_end, allow_s10=TRUE)
+    }
+
+    if (!is.na(pos)) {
+      candidates[i] <- max(snap_to_para_start(text, pos, body_start), body_start)
+    }
+  }
+
+  # ---- Pass B: Enforce monotonic ordering ----
+  # Articles are already in page order from parse_contents_section().
+  # Enforce that positions increase monotonically: each article's position
+  # must be >= the previous article's accepted position.  This ensures the
+  # script processes the file from beginning to end without splicing.
+  #
+  # If a candidate position is BEFORE the previous article's position,
+  # the match is likely a false hit (e.g. a repeated word earlier in the
+  # file).  Re-search the title ONLY in the valid forward region.
+  min_allowed_pos <- body_start
+  for (i in seq_len(nrow(arts))) {
+    if (!is.na(candidates[i])) {
+      if (candidates[i] >= min_allowed_pos) {
+        # Candidate is in valid forward position — accept it
+        positions[i] <- candidates[i]
+        # "Notes from/to the Field" are catch-all sections whose positions
+        # can be unreliable (e.g., matching a generic header ahead of where
+        # the section actually begins).  Don't let them advance
+        # min_allowed_pos — this prevents cascading displacement of
+        # subsequent articles (editorial, lessons) that may appear earlier
+        # in the body text despite having higher page numbers.
+        is_notes <- str_detect(arts$title[i],
+                               regex("^Notes\\s+(from|to)\\s+the\\s+Field",
+                                     ignore_case=TRUE))
+        if (!is_notes) {
+          min_allowed_pos <- candidates[i] + 1L
+        }
+      } else {
+        # Candidate is BEFORE previous article — re-search forward only
+        pos2 <- find_in_window(text, arts$title[i], min_allowed_pos, body_end,
+                               allow_s10=TRUE)
+        if (!is.na(pos2)) {
+          fwd_jump   <- pos2 - candidates[i]
+          near_start <- candidates[i] <= (body_start + 5000L)
+          # Guard against cascade: reject reorders with large jumps, or
+          # reorders that land far from the expected page position.
+          # This prevents cascading displacement where one bad reorder
+          # pushes min_allowed_pos far forward, forcing all subsequent
+          # articles to cluster at the end of the file.
+          reject_reorder <- FALSE
+          if ((near_start && fwd_jump > 50000L) || fwd_jump > 40000L) {
+            reject_reorder <- TRUE
+            cat(sprintf("    [%02d] rejected reorder: @%d -> @%d (jump %d too large)\n",
+                        i, candidates[i], pos2, fwd_jump))
+          } else if (fwd_jump > 15000L && nrow(page_index) >= 6 &&
+                     arts$page[i] > 0) {
+            # For moderate jumps (15K-40K), also check page-estimate distance.
+            # If the reorder lands far from the page estimate, it's likely
+            # a cascade artifact rather than a correct placement.
+            pg_est_reorder <- page_to_pos(page_index, arts$page[i],
+                                          body_start, body_end)
+            if (!is.na(pg_est_reorder) &&
+                abs(pos2 - pg_est_reorder) > 35000L) {
+              reject_reorder <- TRUE
+              cat(sprintf("    [%02d] rejected reorder: @%d -> @%d (page est @%d, dist %d too far)\n",
+                          i, candidates[i], pos2, pg_est_reorder,
+                          abs(pos2 - pg_est_reorder)))
+            }
+          }
+          if (reject_reorder) {
+            # Leave positions[i] = NA for Step 6 / Step 11 fallback
+          } else {
+            positions[i] <- max(snap_to_para_start(text, pos2, min_allowed_pos), min_allowed_pos)
+            min_allowed_pos <- positions[i] + 1L
+            cat(sprintf("    [%02d] reordered: was @%d, now @%d (forward-only)\n",
+                        i, candidates[i], positions[i]))
+          }
+        }
+        # If not found forward, leave as NA for Step 6 fallback
+      }
+    }
+  }
+
+  # ---- Report found positions ----
+  for (i in seq_len(nrow(arts))) {
+    pg <- arts$page[i]
+    cat(sprintf("    [%02d] pg%3s %-48s -> %s\n", i,
+                ifelse(is.numeric(pg), as.character(as.integer(pg)), pg),
+                str_sub(arts$title[i],1,48),
+                if (!is.na(positions[i])) paste0("@", positions[i]) else "MISS"))
+  }
+
+  # ----------------------------------------------------------
+  # Step 6: Page-position fallback for remaining misses
+  # Enhanced: also try to find a "By [Author]" pattern near the
+  # estimated page position, or an ALL-CAPS heading, when the
+  # garbled CONTENTS title itself can't be matched.
+  # All positions are constrained to be:
+  #   >= min_allowed_pos (previous article's position + 1)
+  #   <  max_allowed_pos (next article's already-accepted position)
+  # This maintains monotonic ordering from beginning to end of file.
+  # ----------------------------------------------------------
+  min_allowed_pos <- body_start
+  for (i in seq_len(nrow(arts))) {
+    if (!is.na(positions[i])) {
+      min_allowed_pos <- positions[i] + 1L
+      next
+    }
+    if (arts$page[i] <= 0L || nrow(page_index) < 3) next
+    # Find the next already-accepted position (max constraint)
+    max_allowed_pos <- body_end
+    for (j in (i+1L):min(nrow(arts), i+20L)) {
+      if (j > nrow(arts)) break
+      if (!is.na(positions[j])) { max_allowed_pos <- positions[j] - 1L; break }
+    }
+    est <- page_to_pos(page_index, arts$page[i], body_start, body_end)
+    # Clamp estimate to be within [min_allowed_pos, max_allowed_pos]
+    est <- max(est, min_allowed_pos)
+    est <- min(est, max_allowed_pos)
+    if (est >= body_start && est <= max_allowed_pos) {
+      # Search backward from est, but never before min_allowed_pos
+      back_start <- max(min_allowed_pos, est - 2000L)
+      search_end <- min(max_allowed_pos, est + 500L)
+      pos_try <- find_in_window(text, arts$title[i], back_start, search_end,
+                                allow_s10=TRUE)
+      if (!is.na(pos_try) && pos_try >= min_allowed_pos && pos_try <= max_allowed_pos) {
+        positions[i] <- max(snap_to_para_start(text, pos_try, min_allowed_pos), min_allowed_pos)
+      } else {
+        # Try extracting author last name from title and searching for "By [Name]"
+        author_m_fb <- str_match(arts$title[i],
+          "^.{2,40}?\\s+([A-Z][a-zA-Z.]+(?:\\s+[A-Z][a-zA-Z.]*){1,3})$")
+        if (!is.na(author_m_fb[1,1])) {
+          fb_author <- str_trim(author_m_fb[1,2])
+          fb_last   <- str_extract(fb_author, "[A-Za-z]+$")
+          if (!is.na(fb_last) && nchar(fb_last) >= 4) {
+            fb_chunk <- str_sub(text, back_start, search_end)
+            fb_pat   <- paste0("[Bb]y\\s+[A-Z][a-zA-Z.]+(?:\\s+[A-Z.]+){0,2}\\s+",
+                               str_replace_all(fb_last, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1"),
+                               "\\b")
+            fb_m <- tryCatch(str_locate(fb_chunk, regex(fb_pat, ignore_case=FALSE)),
+                             error=function(e) matrix(NA_integer_,1,2))
+            if (!is.na(fb_m[1,1])) {
+              fb_pos <- back_start + fb_m[1,1] - 1L
+              if (fb_pos >= min_allowed_pos && fb_pos <= max_allowed_pos) {
+                positions[i] <- max(snap_to_para_start(text, fb_pos, min_allowed_pos, max_back=300L),
+                                    min_allowed_pos)
+                cat(sprintf("    [%02d] pg%3d %-48s -> @%d [author-near-page]\n",
+                            i, arts$page[i], str_sub(arts$title[i],1,48), positions[i]))
+              }
+            }
+          }
+        }
+        if (!is.na(positions[i])) {
+          min_allowed_pos <- positions[i] + 1L; next
+        }
+        # Text pattern inference
+        fb_chunk2 <- str_sub(text, back_start, search_end)
+
+        # Look for ALL-CAPS headings
+        caps_pat <- "(?<=\\n)\\s*([A-Z][A-Z ]{5,60})\\s*(?=\\n)"
+        caps_m   <- str_locate_all(fb_chunk2, regex(caps_pat))[[1]]
+        if (nrow(caps_m) > 0) {
+          for (ci in seq_len(nrow(caps_m))) {
+            caps_text <- str_sub(fb_chunk2, caps_m[ci,1], caps_m[ci,2])
+            if (!str_detect(caps_text, regex("RELIEF SOCIETY|MAGAZINE|ADVERTISERS",
+                                             ignore_case=FALSE))) {
+              fb_pos <- back_start + caps_m[ci,1] - 1L
+              if (fb_pos >= min_allowed_pos && fb_pos <= max_allowed_pos) {
+                positions[i] <- max(snap_to_para_start(text, fb_pos, min_allowed_pos, max_back=300L),
+                                    min_allowed_pos)
+                cat(sprintf("    [%02d] pg%3d %-48s -> @%d [caps-heading]\n",
+                            i, arts$page[i], str_sub(arts$title[i],1,48), positions[i]))
+                break
+              }
+            }
+          }
+          if (!is.na(positions[i])) {
+            min_allowed_pos <- positions[i] + 1L; next
+          }
+        }
+
+        # Look for "By [Name]" byline pattern
+        byline_pat <- "(?<=\\n)\\s*[Bb]y\\s+[A-Z][a-zA-Z.]+(?:\\s+[A-Z][a-zA-Z.]+){1,3}\\s*(?=\\n)"
+        byline_m   <- str_locate_all(fb_chunk2, regex(byline_pat))[[1]]
+        if (nrow(byline_m) > 0) {
+          fb_pos <- back_start + byline_m[1,1] - 1L
+          if (fb_pos >= min_allowed_pos && fb_pos <= max_allowed_pos) {
+            positions[i] <- max(snap_to_para_start(text, fb_pos, min_allowed_pos, max_back=300L),
+                                min_allowed_pos)
+            cat(sprintf("    [%02d] pg%3d %-48s -> @%d [byline-pattern]\n",
+                        i, arts$page[i], str_sub(arts$title[i],1,48), positions[i]))
+          }
+        }
+        if (!is.na(positions[i])) {
+          min_allowed_pos <- positions[i] + 1L; next
+        }
+
+        # Final fallback: snap to paragraph break, constrained to valid range
+        positions[i] <- min(
+          max(snap_to_para_start(text, est, min_allowed_pos, max_back=1000L),
+              min_allowed_pos),
+          max_allowed_pos)
+      }
+      # Update min_allowed_pos after any assignment.
+      # Use proportional advancement: advance by at least half the expected
+      # page gap to the next article.  This prevents consecutive page-est
+      # articles from clustering at sequential +1 offsets, which produces
+      # tiny/empty files for articles on adjacent pages.
+      if (!is.na(positions[i])) {
+        next_pg <- NA_integer_
+        for (j in (i + 1L):min(nrow(arts), i + 10L)) {
+          if (j > nrow(arts)) break
+          if (arts$page[j] > 0) { next_pg <- arts$page[j]; break }
+        }
+        if (!is.na(next_pg) && arts$page[i] > 0 && next_pg >= arts$page[i]) {
+          pg_diff <- max(1L, next_pg - arts$page[i])
+          min_gap <- as.integer(CPP * pg_diff / 3L)
+          min_allowed_pos <- positions[i] + max(1L, min_gap)
+        } else {
+          min_allowed_pos <- positions[i] + 1L
+        }
+      }
+      cat(sprintf("    [%02d] pg%3d %-48s -> @%d [page-est]\n",
+                  i, arts$page[i], str_sub(arts$title[i],1,48), positions[i]))
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 7: Assign boundaries
+  # Each article: start_pos to (next_start - 1), last to body_end.
+  # Missed articles (not found in OCR) get placeholder files.
+  # ----------------------------------------------------------
+
+  # Build a sorted table of found articles
+  found_idx <- which(!is.na(positions))
+  miss_idx  <- which(is.na(positions))
+
+  saved_count <- 0L
+
+  if (length(found_idx) == 0) {
+    # Nothing found — save entire body as one Misc file
+    write_file(str_sub(text, body_start, body_end),
+               file.path(out_folder, paste0(prefix, "_Misc_fullbody.txt")))
+    cat("  No article positions found. Full body saved.\n")
+    return(data.frame(file=filename, n_contents=nrow(arts), n_saved=0L,
+                      n_missed=nrow(arts), total_chars=len, stringsAsFactors=FALSE))
+  }
+
+  art_tbl <- data.frame(
+    orig_i   = found_idx,
+    position = positions[found_idx],
+    stringsAsFactors=FALSE)
+  # Positions are already in monotonic page order from Pass B enforcement.
+  # Do NOT re-sort by position — this preserves the CONTENTS ordering
+  # and prevents articles from being spliced out of order.
+
+  # ----------------------------------------------------------
+  # Step 7b: Group near-adjacent articles for merging.
+  #
+  # Articles listed separately in the CONTENTS sometimes correspond to
+  # continuous text in the OCR (e.g. Morning + Afternoon sessions,
+  # or three short companion pieces with no gap between them).
+  # When consecutive articles are within MERGE_THRESH characters of
+  # each other — including the exact-same-position case (both resolve
+  # to body_start or to the same section heading) — they are merged
+  # into ONE output file.  The file is labelled with the title of the
+  # first article in the group; all subsequent titles are appended
+  # after a " + " separator so the combined content is traceable.
+  #
+  # This replaces the old "+1 offset" disambiguation which created
+  # 1-character stub files for all but the last article at a shared
+  # position.
+  # ----------------------------------------------------------
+  MERGE_THRESH <- 10L
+
+  groups    <- list()
+  cur_grp   <- c(1L)
+  for (k in seq_len(nrow(art_tbl))) {
+    if (k == 1L) {
+      cur_grp <- c(k)
+    } else if (art_tbl$position[k] - art_tbl$position[k - 1L] <= MERGE_THRESH) {
+      cur_grp <- c(cur_grp, k)
+    } else {
+      groups[[length(groups) + 1L]] <- cur_grp
+      cur_grp <- c(k)
+    }
+  }
+  groups[[length(groups) + 1L]] <- cur_grp
+  n_groups <- length(groups)
+
+  # Compute start / end position and list of orig_i for every merged group
+  grp_start <- integer(n_groups)
+  grp_end   <- integer(n_groups)
+  grp_orig  <- vector("list", n_groups)
+  for (g in seq_len(n_groups)) {
+    rows          <- groups[[g]]
+    grp_start[g]  <- art_tbl$position[rows[1L]]
+    grp_end[g]    <- if (g < n_groups)
+                       art_tbl$position[groups[[g + 1L]][1L]] - 1L
+                     else
+                       body_end
+    grp_orig[[g]] <- art_tbl$orig_i[rows]
+  }
+
+  # ----------------------------------------------------------
+  # Step 7c: Absorb tiny article groups into the next group.
+  #
+  # When position estimation places multiple CONTENTS entries on
+  # adjacent pages (e.g. pages 149, 150, 151), the text can get
+  # fragmented into tiny slivers — some just 20-30 characters.
+  # These fragments are not usable standalone articles.
+  #
+  # Fix: if a group's text span is below TINY_THRESH characters,
+  # absorb it into the NEXT group (extend the next group backward
+  # to include the tiny group's text).  Iterate until no tiny
+  # non-last groups remain.
+  # ----------------------------------------------------------
+  TINY_THRESH <- 250L
+
+  repeat {
+    tiny_found <- FALSE
+    for (g in seq_len(length(grp_start) - 1L)) {
+      span <- grp_end[g] - grp_start[g] + 1L
+      if (span < TINY_THRESH) {
+        cat(sprintf("    Tiny group [%s] (%d chars) absorbed into next group\n",
+                    paste(grp_orig[[g]], collapse=","), span))
+        # Extend the next group backward to include this group's text
+        grp_start[g + 1L] <- grp_start[g]
+        grp_orig[[g + 1L]] <- c(grp_orig[[g]], grp_orig[[g + 1L]])
+        # Remove this group
+        grp_start <- grp_start[-(g)]
+        grp_end   <- grp_end[-(g)]
+        grp_orig  <- grp_orig[-(g)]
+        tiny_found <- TRUE
+        break   # restart scan since indices shifted
+      }
+    }
+    if (!tiny_found) break
+  }
+  n_groups <- length(grp_start)
+
+  # ----------------------------------------------------------
+  # Step 8: FRONT MATTER
+  # Everything from body_start up to the first group's start.
+  #
+  # When few page markers exist, the first found article may be
+  # positioned far into the file (via [page-est]) while the real
+  # article text starts at body_start.  A large front_matter gap
+  # (>5000 chars) almost certainly contains article content that
+  # was mismatched to later positions.  In that case, extend the
+  # first article group backward to body_start so the text stays
+  # with the article files instead of being spliced into Misc.
+  # Small gaps (<= 5000 chars) are genuine front matter (masthead,
+  # frontispiece caption, etc.) and are saved as Misc as before.
+  # ----------------------------------------------------------
+  if (grp_start[1L] > body_start) {
+    front <- clean_headers(str_sub(text, body_start, grp_start[1L] - 1L))
+    if (nchar(board_text) > 50) front <- str_replace(front, fixed(board_text), "")
+    front <- str_trim(front)
+    if (nchar(front) > 5000L) {
+      # Large gap — likely contains article text.  Extend the first
+      # article group to start at body_start so nothing is spliced off.
+      grp_start[1L] <- body_start
+      cat(sprintf("  NOTE: Large front gap (%s chars) — prepended to first article group\n",
+                  format(nchar(front), big.mark=",")))
+    } else if (nchar(front) > 0) {
+      write_file(front,
+                 file.path(out_folder, paste0(prefix, "_Misc_front_matter.txt")))
+      cat(sprintf("  Misc: front_matter saved (%s chars)\n",
+                  format(nchar(front), big.mark=",")))
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 9: SAVE EACH (MERGED) ARTICLE GROUP and GAPS between them
+  # ----------------------------------------------------------
+  for (g in seq_len(n_groups)) {
+    orig_is  <- grp_orig[[g]]
+    a_start  <- grp_start[g]
+    a_end    <- grp_end[g]
+
+    art_raw  <- str_sub(text, a_start, a_end)
+    art_text <- clean_headers(art_raw)
+    if (nchar(board_text) > 50)
+      art_text <- str_replace(art_text, fixed(board_text), "")
+    art_text <- str_trim(art_text)
+
+    # --- Strip leading continuation/conclusion markers ---
+    # When position estimation draws the article boundary slightly before
+    # the actual title, the tail of the PREVIOUS article leaks in.
+    # This tail typically ends with "(Continued on page NNN)".
+    # Example: "Their untiring efforts and (Continued on page 221) PAGE 161
+    #           The Promise Of The Gospel..."
+    # Strip EVERYTHING up to and including the continuation marker if it
+    # appears within the first 500 characters of the article text.
+    if (nchar(art_text) > 100L) {
+      leading_chunk <- str_sub(art_text, 1L, min(500L, nchar(art_text)))
+      cont_lead_m <- str_locate(leading_chunk,
+                      regex("\\(?(?:Continued|Concluded)\\s+(?:on|from)\\s+page\\s+\\d+\\)?",
+                            ignore_case = TRUE))
+      if (!is.na(cont_lead_m[1,1])) {
+        stripped_lead <- str_trim(str_sub(art_text, 1L, cont_lead_m[1,2]))
+        art_text <- str_trim(str_sub(art_text, cont_lead_m[1,2] + 1L, nchar(art_text)))
+        if (nchar(stripped_lead) > 5L) {
+          cat(sprintf("    Leading continuation stripped from [%02d]: '%s' (%d chars)\n",
+                      g, str_sub(stripped_lead, 1, 60), nchar(stripped_lead)))
+        }
+      }
+    }
+
+    # --- Truncate at "(Continued/Concluded from page NNN)" from OTHER articles ---
+    # In the physical magazine, articles are sometimes interrupted and
+    # continued on a later page.  The continuation text is then placed
+    # after an unrelated article in the OCR stream.  When we extract an
+    # article's block of text, the continuation from the OTHER article
+    # gets spliced onto the end.
+    #
+    # Detection: search for "(Continued from page NNN)" or
+    # "(Concluded from page NNN)" AFTER the first 500 characters.
+    # Articles that ARE themselves continuations will have the marker
+    # very near the start (within ~200 chars) and are left alone.
+    if (nchar(art_text) > 600L) {
+      cont_from_m <- str_locate_all(art_text,
+                       regex("\\(?(?:Continued|Concluded) from page \\d+\\)?",
+                             ignore_case = FALSE))[[1]]
+      if (nrow(cont_from_m) > 0) {
+        # Find the first occurrence after position 500
+        late_hits <- which(cont_from_m[, 1] > 500L)
+        if (length(late_hits) > 0) {
+          hit_start <- cont_from_m[late_hits[1], 1]
+          # Search backward up to 500 chars for a paragraph break or line break
+          lookback_start <- max(1L, hit_start - 500L)
+          lookback_text  <- str_sub(art_text, lookback_start, hit_start - 1L)
+
+          # Prefer paragraph break (double newline) for a clean cut
+          para_breaks <- str_locate_all(lookback_text, "\n\\s*\n")[[1]]
+          if (nrow(para_breaks) > 0) {
+            # Character before the first \n of the paragraph break
+            cut_pos <- lookback_start + para_breaks[nrow(para_breaks), 1] - 2L
+          } else {
+            # Fall back to single newline
+            newlines <- str_locate_all(lookback_text, "\n")[[1]]
+            if (nrow(newlines) > 0) {
+              cut_pos <- lookback_start + newlines[nrow(newlines), 1] - 2L
+            } else {
+              cut_pos <- hit_start - 1L
+            }
+          }
+
+          if (cut_pos > 100L && cut_pos < nchar(art_text) - 50L) {
+            stripped_cont <- str_trim(str_sub(art_text, cut_pos + 1L, nchar(art_text)))
+            art_text      <- str_trim(str_sub(art_text, 1L, cut_pos))
+            if (nchar(stripped_cont) > 5L) {
+              cont_fn <- file.path(out_folder,
+                                   paste0(prefix, "_Misc_cont_", sprintf("%02d", g), ".txt"))
+              write_file(stripped_cont, cont_fn)
+              cat(sprintf("    Continuation from other article stripped from [%02d]: %s chars -> Misc_cont_%02d\n",
+                          g, format(nchar(stripped_cont), big.mark = ","), g))
+            }
+          }
+        }
+      }
+    }
+
+    # --- Truncate at "(Continued/Concluded on page NNN)" ---
+    # When the article text ends with "(Continued on page 221)" followed
+    # by content from the NEXT article (which starts immediately after
+    # in the OCR stream), cut AFTER the marker — keep the marker as
+    # part of this article, discard everything after it.
+    if (nchar(art_text) > 600L) {
+      cont_on_m <- str_locate_all(art_text,
+                     regex("\\(?(?:Continued|Concluded)\\s+on\\s+page\\s+\\d+\\)?",
+                           ignore_case = FALSE))[[1]]
+      if (nrow(cont_on_m) > 0) {
+        late_on <- which(cont_on_m[, 1] > 500L)
+        if (length(late_on) > 0) {
+          cut_after <- cont_on_m[late_on[1], 2]
+          remaining <- nchar(art_text) - cut_after
+          if (remaining > 100L) {
+            stripped_on <- str_trim(str_sub(art_text, cut_after + 1L, nchar(art_text)))
+            art_text    <- str_trim(str_sub(art_text, 1L, cut_after))
+            if (nchar(stripped_on) > 5L) {
+              cont_fn <- file.path(out_folder,
+                                   paste0(prefix, "_Misc_cont_", sprintf("%02d", g), ".txt"))
+              # Append if file already exists from "from page" truncation
+              if (file.exists(cont_fn)) {
+                existing <- read_file(cont_fn)
+                write_file(paste0(existing, "\n\n", stripped_on), cont_fn)
+              } else {
+                write_file(stripped_on, cont_fn)
+              }
+              cat(sprintf("    Trailing '(Continued on page)' stripped from [%02d]: %s chars\n",
+                          g, format(nchar(stripped_on), big.mark = ",")))
+            }
+          }
+        }
+      }
+    }
+
+    # --- Strip trailing ads from the LAST article group ---
+    # The last group extends to body_end (== file end for Vol24-26), so
+    # back-cover ads (Beneficial Life, Deseret News Press, etc.) are
+    # swallowed into the last article's text.  Find the EARLIEST ad
+    # marker across a broad list, then cut at the preceding paragraph
+    # break to cleanly separate article from ads.
+    if (g == n_groups) {
+      ad_markers <- c(
+        # Specific ad copy / taglines (appear early in ad section)
+        "Invest\\s+Your\\s+Time\\s+in\\s+Business\\s+Education",
+        "Bind\\s+Your\\s+Relief\\s+Society\\s+Magazine",
+        "Preserve\\s+in\\s+bound\\s+volumes",
+        "FOUR\\s+WAYS\\s+BETTER",
+        "L\\.?\\s*D\\.?\\s*S\\.?\\s+TRAINING\\s+PAYS",
+        "Planning\\s+Your\\s+Future.*will\\s+explain",
+        # Advertiser names with addresses (clearly ads, not article mentions)
+        "DESERET\\s+BOOK\\s+COMPANY\\s+\\d+\\s+East",
+        "DESERET\\s+NEWS\\s+PRESS\\s+\\d+\\s+Richards",
+        "L\\.?\\s*D\\.?\\s*S\\.?\\s+BUSINESS\\s+COLLEGE\\s+\\d+\\s+North",
+        "KNIGHT.?S?\\s+SPRING\\s+CANYON\\s+COAL",
+        "BLUE\\s+BLAZE\\s+COAL",
+        "ARDEN\\s+DAIRY",
+        "BENNETT\\s+GLASS\\s+&?\\s*PAINT",
+        "FAIRBANKS.MORSE",
+        "MOUNTAIN\\s+FUEL\\s+SUPPLY",
+        "UTAH\\s+POWER\\s+&\\s+LIGHT",
+        "SALT\\s+LAKE\\s+GLASS\\s+&\\s+PAINT",
+        "SUGAR\\s+HOUSE\\s+LUMBER",
+        "CRYSTAL\\s+PALACE\\s+MARKET",
+        "PEERLESS\\s+LAUNDRY",
+        "INTERMOUNTAIN\\s+BEET\\s+SUGAR",
+        "LOCAL\\s+BEET\\s+SUGAR\\s+FOR",
+        "Z\\.?\\s*C\\.?\\s*M\\.?\\s*I\\.?\\s+Clothing\\s+Factory",
+        "Personalized\\s+Christmas\\s+Cards",
+        "DESERET\\s+MORTUARY",
+        # Ad footers and boilerplate
+        "When\\s+Buying\\s+Mention\\s+Relief\\s+Society",
+        "Mention\\s+Relief\\s+Society\\s+Magazine",
+        "THE\\s+RELIEF\\s+SOCIETY\\s+MAGAZINE\\s+MORE\\s+THAN\\s+\\d",
+        # Insurance (usually last)
+        "BENEFICIAL\\s+LIFE\\s+INSURANCE",
+        "BENEFICIAL\\s+LIFE\\s+(?:BLDG|BUILDING)",
+        "HOME\\s+OFFICE[^\\n]*SALT\\s+LAKE\\s+CITY"
+      )
+      art_len <- nchar(art_text)
+      # Search the last 50% to catch early ads
+      search_from <- as.integer(art_len * 0.50)
+      tail_text   <- str_sub(art_text, search_from, art_len)
+
+      # Find the EARLIEST ad marker across ALL patterns
+      earliest_pos <- NA_integer_
+      for (amp in ad_markers) {
+        am <- str_locate(tail_text, regex(amp, ignore_case = TRUE))
+        if (!is.na(am[1, 1])) {
+          abs_pos <- search_from + am[1, 1] - 1L
+          if (is.na(earliest_pos) || abs_pos < earliest_pos)
+            earliest_pos <- abs_pos
+        }
+      }
+
+      if (!is.na(earliest_pos) && earliest_pos > 100L) {
+        # Search backward from the ad marker to find a paragraph break
+        # (double-newline) or start-of-line, for a clean cut.
+        lookback <- str_sub(art_text,
+                            max(1L, earliest_pos - 500L), earliest_pos)
+        para_break <- str_locate_all(lookback, "\n\\s*\n")[[1]]
+        if (nrow(para_break) > 0) {
+          # Cut at the LAST paragraph break before the ad marker
+          ad_cut <- max(1L, earliest_pos - 500L) + para_break[nrow(para_break), 2]
+        } else {
+          # No paragraph break found — cut right before the marker
+          ad_cut <- earliest_pos - 1L
+        }
+
+        if (ad_cut > 100L) {
+          stripped_ads <- str_trim(str_sub(art_text, ad_cut + 1L, art_len))
+          art_text     <- str_trim(str_sub(art_text, 1L, ad_cut))
+          if (nchar(stripped_ads) > 5L) {
+            back_fn <- file.path(out_folder,
+                                 paste0(prefix, "_Misc_back_matter.txt"))
+            write_file(stripped_ads, back_fn)
+            cat(sprintf("  Trailing ads stripped from last article: %s chars -> back_matter\n",
+                        format(nchar(stripped_ads), big.mark = ",")))
+          }
+        }
+      }
+    }
+
+    # Combined title: first article's title (+ subsequent if merged)
+    primary_i     <- orig_is[1L]
+    combined_title <- paste(arts$title[orig_is], collapse = " + ")
+    display_title  <- str_sub(combined_title, 1, 60)
+
+    saved_count <- saved_count + length(orig_is)   # count articles covered, not files
+    fn <- file.path(out_folder,
+      paste0(prefix, "_", sprintf("%02d", g), "_",
+             arts$category[primary_i], "_",
+             short_title_filename(arts$title[primary_i]), ".txt"))
+    write_file(art_text, fn)
+
+    if (length(orig_is) > 1L) {
+      cat(sprintf("    Saved [%02d] %-60s %s chars  [MERGED %d articles]\n",
+                  g, display_title, format(nchar(art_text), big.mark=","),
+                  length(orig_is)))
+    } else {
+      cat(sprintf("    Saved [%02d] %-48s %s chars\n",
+                  g, str_sub(arts$title[primary_i], 1, 48),
+                  format(nchar(art_text), big.mark=",")))
+    }
+
+    # Gap to next group — save even small gaps so NO text is ever lost
+    if (g < n_groups) {
+      g_start <- grp_end[g] + 1L
+      g_end   <- grp_start[g + 1L] - 1L
+      if (g_end >= g_start) {
+        gap <- str_trim(clean_headers(str_sub(text, g_start, g_end)))
+        if (nchar(board_text) > 50) gap <- str_replace(gap, fixed(board_text), "")
+        gap <- str_trim(gap)
+        if (nchar(gap) > 5L) {
+          gfn <- file.path(out_folder,
+            paste0(prefix, "_Misc_gap_", sprintf("%02d", g), "_",
+                   sprintf("%02d", g + 1L), ".txt"))
+          write_file(gap, gfn)
+          cat(sprintf("    Misc gap [%02d]->[%02d]: %s chars\n",
+                      g, g + 1L, format(nchar(gap), big.mark=",")))
+        }
+      }
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 10: BACK MATTER
+  # Everything from the last group's end to body_end.
+  # ----------------------------------------------------------
+  last_end <- grp_end[n_groups]
+  if (last_end < body_end) {
+    back <- str_trim(clean_headers(str_sub(text, last_end + 1L, body_end)))
+    if (nchar(back) > 5L) {
+      write_file(back,
+                 file.path(out_folder, paste0(prefix, "_Misc_back_matter.txt")))
+      cat(sprintf("  Misc: back_matter saved (%s chars)\n",
+                  format(nchar(back), big.mark=",")))
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 11: Pre-body search for MISS articles, then placeholders
+  # Some CONTENTS entries refer to text in the pre-body region.
+  # If found, extract them as separate article files (not just Misc).
+  # ----------------------------------------------------------
+  true_miss_idx <- integer(0)
+  prebody_article_num <- 0L
+  if (length(miss_idx) > 0) {
+    for (mi in miss_idx) {
+      # Search pre-body regions EXCLUDING the CONTENTS listing.
+      # Region 1: before CONTENTS (e.g. cover page text, early poems)
+      # Region 2: between CONTENTS end and body start (e.g. frontispiece, ads)
+      # This prevents CONTENTS entries from being extracted as bogus articles.
+      pb_pos <- NA_integer_
+      ct_s <- if (!is.na(s$contents_start)) s$contents_start else 1L
+      ct_e <- if (!is.na(s$contents_end))   s$contents_end   else 0L
+      if (ct_s > 1L) {
+        pb_pos <- find_in_window(text, arts$title[mi], 1L, ct_s - 1L,
+                                 allow_s10=TRUE)
+      }
+      if (is.na(pb_pos) && ct_e + 1L < body_start) {
+        pb_pos <- find_in_window(text, arts$title[mi], ct_e + 1L,
+                                 body_start - 1L, allow_s10=TRUE)
+      }
+      if (!is.na(pb_pos)) {
+        # Found in pre-body — extract as separate article file
+        # Find extent: from title position to next double-newline or body_start
+        pb_region <- str_sub(text, pb_pos, body_start - 1L)
+        # Find first double-newline after initial content (skip first 20 chars)
+        end_break <- str_locate(str_sub(pb_region, 20L, nchar(pb_region)),
+                                "\n\\s*\n")
+        if (!is.na(end_break[1,1])) {
+          # Check if there's meaningful text after the break; if < 200 chars
+          # of remaining content, take it all (it's likely part of the article)
+          remaining <- nchar(pb_region) - (20L + end_break[1,2])
+          if (remaining > 200L) {
+            pb_text <- str_trim(str_sub(pb_region, 1L, 20L + end_break[1,2]))
+          } else {
+            pb_text <- str_trim(pb_region)
+          }
+        } else {
+          pb_text <- str_trim(pb_region)
+        }
+        # Only save if the text is substantial (not just a masthead line)
+        if (nchar(pb_text) > 30L && !str_detect(arts$title[mi],
+            regex("PUBLISHED\\s+MONTHLY|Bishop.s\\s+Building", ignore_case=TRUE))) {
+          prebody_article_num <- prebody_article_num + 1L
+          pb_fn <- file.path(out_folder,
+            paste0(prefix, "_00pb", sprintf("%d", prebody_article_num), "_",
+                   arts$category[mi], "_",
+                   short_title_filename(arts$title[mi]), ".txt"))
+          write_file(pb_text, pb_fn)
+          saved_count <- saved_count + 1L
+          cat(sprintf("    Saved pre-body article: '%s' (%s chars)\n",
+                      str_sub(arts$title[mi],1,50),
+                      format(nchar(pb_text), big.mark=",")))
+        } else {
+          # Masthead or tiny text — already in Misc, just count
+          saved_count <- saved_count + 1L
+          cat(sprintf("    Captured in _00_Misc: '%s' (pre-body @%d)\n",
+                      str_sub(arts$title[mi],1,50), pb_pos))
+        }
+      } else {
+        true_miss_idx <- c(true_miss_idx, mi)
+      }
+    }
+  }
+
+  if (length(true_miss_idx) > 0) {
+    for (mi in true_miss_idx) {
+      # Log to console only — no placeholder files.  The text for these
+      # articles is genuinely absent from the OCR body (Frontispiece pages,
+      # poems/pieces on un-scanned pages, or garbled OCR titles).
+      cat(sprintf("    NOT IN SOURCE: '%s' (pg %s)\n",
+                  str_sub(arts$title[mi],1,50), arts$page[mi]))
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 11b: Extract pre-body articles misplaced at body_start.
+  # When page-est clusters multiple articles at/near body_start,
+  # their actual text is often in the post-CONTENTS pre-body region
+  # (poems, cover notes, frontispiece text).  Search there and
+  # extract as separate _00pb files.
+  # ----------------------------------------------------------
+  bodystart_idx <- which(!is.na(positions) &
+                         positions >= body_start &
+                         positions <= body_start + 50L)
+  if (length(bodystart_idx) >= 2L) {
+    ct_e <- if (!is.na(s$contents_end)) s$contents_end else 0L
+    if (ct_e + 1L < body_start - 100L) {
+      pb_found <- data.frame(idx=integer(0), pos=integer(0),
+                             stringsAsFactors=FALSE)
+      for (bi in bodystart_idx) {
+        pb_pos <- find_in_window(text, arts$title[bi], ct_e + 1L,
+                                 body_start - 1L, allow_s10=TRUE)
+        if (!is.na(pb_pos)) {
+          pb_found <- rbind(pb_found, data.frame(idx=bi, pos=pb_pos))
+        }
+      }
+      if (nrow(pb_found) > 0L) {
+        pb_found <- pb_found[order(pb_found$pos), ]
+        # Deduplicate: if two matches are within 100 chars, keep earliest
+        if (nrow(pb_found) > 1L) {
+          keep <- rep(TRUE, nrow(pb_found))
+          for (k in 2:nrow(pb_found)) {
+            if (pb_found$pos[k] - pb_found$pos[k-1] < 100L) keep[k] <- FALSE
+          }
+          pb_found <- pb_found[keep, , drop=FALSE]
+        }
+        for (k in seq_len(nrow(pb_found))) {
+          start_pos <- pb_found$pos[k]
+          end_pos   <- if (k < nrow(pb_found)) pb_found$pos[k+1] - 1L
+                       else body_start - 1L
+          pb_text <- str_trim(str_sub(text, start_pos, end_pos))
+          # Strip trailing Vol./No. masthead line
+          pb_text <- str_replace(pb_text,
+            regex("\\s*Vol\\.?\\s*\\d+\\s+[A-Z]+,?\\s+\\d{4}\\s+No\\.?\\s*\\d+\\s*$",
+                  ignore_case=TRUE), "")
+          pb_text <- str_trim(pb_text)
+          ai <- pb_found$idx[k]
+          if (nchar(pb_text) > 50L &&
+              !str_detect(pb_text, regex("^\\s*PUBLISHED\\s+MONTHLY",
+                                        ignore_case=TRUE))) {
+            prebody_article_num <- prebody_article_num + 1L
+            pb_fn <- file.path(out_folder,
+              paste0(prefix, "_00pb", sprintf("%d", prebody_article_num), "_",
+                     arts$category[ai], "_",
+                     short_title_filename(arts$title[ai]), ".txt"))
+            write_file(pb_text, pb_fn)
+            saved_count <- saved_count + 1L
+            cat(sprintf("    Saved pre-body [body_start] article: '%s' (%s chars)\n",
+                        str_sub(arts$title[ai],1,50),
+                        format(nchar(pb_text), big.mark=",")))
+          }
+        }
+      }
+    }
+  }
+
+  # ----------------------------------------------------------
+  # Step 12: Scan Misc_cont files for embedded CONTENTS articles.
+  # When Fix 14/17b strips continuation text from an article group,
+  # sometimes a following article's body gets swept into the
+  # Misc_cont file.  Find these by searching for the first
+  # distinctive word of each CONTENTS title after a paragraph break.
+  # ----------------------------------------------------------
+  misc_cont_files <- sort(list.files(out_folder,
+                           pattern="_Misc_cont_\\d+\\.txt$",
+                           full.names=TRUE))
+  if (length(misc_cont_files) > 0L) {
+    common_words <- c("the", "this", "that", "with", "from", "their",
+                      "about", "what", "which", "they", "them",
+                      "chapter", "part", "page", "society", "article",
+                      "relief", "magazine", "notes", "field", "editorial",
+                      "general", "lesson", "work")
+    for (mcf in misc_cont_files) {
+      mc_text <- read_file(mcf)
+      if (nchar(mc_text) < 200L) next
+      best_match <- NULL
+      for (i in seq_len(nrow(arts))) {
+        tw <- str_split(arts$title[i], "\\s+")[[1]]
+        tw <- tw[nchar(tw) > 3L]
+        tw <- tw[!tolower(tw) %in% common_words]
+        if (length(tw) == 0L) next
+        search_word <- tw[1]
+        # Look for the distinctive word after a paragraph break (\n\n)
+        # and at least 50 chars into the file (skip continuation header)
+        m_all <- str_locate_all(mc_text,
+                   regex(paste0("\\n\\s*\\n[^\\n]*?\\b", search_word, "\\b"),
+                         ignore_case = TRUE))[[1]]
+        if (nrow(m_all) > 0L) {
+          for (r in seq_len(nrow(m_all))) {
+            if (m_all[r,1] > 50L) {
+              if (is.null(best_match) || m_all[r,1] < best_match$pos) {
+                best_match <- list(idx=i, pos=m_all[r,1], word=search_word)
+              }
+              break
+            }
+          }
+        }
+      }
+      if (!is.null(best_match)) {
+        # Advance past the \n\n whitespace to the actual article line start
+        split_pos <- best_match$pos
+        while (split_pos <= nchar(mc_text) &&
+               str_sub(mc_text, split_pos, split_pos) %in% c("\n", "\r", " ", "\t")) {
+          split_pos <- split_pos + 1L
+        }
+        pre_text <- str_trim(str_sub(mc_text, 1L, split_pos - 1L))
+        art_text_mc <- str_trim(str_sub(mc_text, split_pos, nchar(mc_text)))
+        if (nchar(art_text_mc) > 50L) {
+          ai <- best_match$idx
+          prebody_article_num <- prebody_article_num + 1L
+          art_fn <- file.path(out_folder,
+            paste0(prefix, "_00pb", sprintf("%d", prebody_article_num), "_",
+                   arts$category[ai], "_",
+                   short_title_filename(arts$title[ai]), ".txt"))
+          write_file(art_text_mc, art_fn)
+          saved_count <- saved_count + 1L
+          # Rewrite Misc_cont with only the continuation part
+          if (nchar(pre_text) > 5L) {
+            write_file(pre_text, mcf)
+          } else {
+            file.remove(mcf)
+          }
+          cat(sprintf("    Extracted from Misc_cont: '%s' (%s chars) [matched '%s']\n",
+                      str_sub(arts$title[ai],1,50),
+                      format(nchar(art_text_mc), big.mark=","),
+                      best_match$word))
+        }
+      }
+    }
+  }
+
+  n_missed <- length(true_miss_idx)
+  cat(sprintf("\n  RESULT: %d saved, %d NOT IN SOURCE, %d total in CONTENTS\n",
+              saved_count, n_missed, nrow(arts)))
+
+  data.frame(file=filename, n_contents=nrow(arts), n_saved=saved_count,
+             n_missed=n_missed, total_chars=len, stringsAsFactors=FALSE)
+}
+```
+
+```{r run, message=FALSE}
+# ============================================================
+# MAIN LOOP
+# ============================================================
+cat("Relief Society Magazine — Universal Article Extractor\n")
+cat(rep("=",70), "\n\n", sep="")
+
+all_results <- list()
+
+for (input_dir in INPUT_DIRS) {
+  if (!dir.exists(input_dir)) {
+    cat("WARNING: not found:", input_dir, "\n"); next
+  }
+  files <- sort(list.files(input_dir, pattern="\\.txt$",
+                           full.names=TRUE, recursive=FALSE))
+  cat("\n", rep("#",70), "\n", sep="")
+  cat("FOLDER:", basename(input_dir), " — ", length(files), "file(s)\n")
+  cat(rep("#",70), "\n", sep="")
+
+  for (f in files) {
+    res <- tryCatch(
+      process_issue(f, OUTPUT_DIR),
+      error=function(e) {
+        cat("ERROR:", basename(f), "—", conditionMessage(e), "\n")
+        data.frame(file=basename(f), n_contents=0L, n_saved=0L,
+                   n_missed=0L, total_chars=0L, stringsAsFactors=FALSE)
+      })
+    all_results[[length(all_results)+1]] <- res
+  }
+}
+
+results_df <- if (length(all_results)>0) do.call(rbind, all_results) else NULL
+```
+
+## Summary {.tabset}
+
+### Results Table
+
+```{r summary}
+if (!is.null(results_df) && nrow(results_df)>0) {
+  cat(sprintf("Files processed:       %d\n",   nrow(results_df)))
+  cat(sprintf("Articles in CONTENTS:  %d\n",   sum(results_df$n_contents)))
+  cat(sprintf("Articles saved:        %d\n",   sum(results_df$n_saved)))
+  cat(sprintf("Not in source (OCR):   %d\n",   sum(results_df$n_missed)))
+  cat(sprintf("Hit rate:              %.1f%%\n",
+              sum(results_df$n_saved) / max(1, sum(results_df$n_contents)) * 100))
+  cat("Output folder:", OUTPUT_DIR, "\n\n")
+
+  kable(results_df,
+        col.names=c("File","In CONTENTS","Saved","Not in Source","Total Chars"),
+        format.args=list(big.mark=",")) %>%
+    kable_styling(bootstrap_options=c("striped","hover","condensed"),
+                  full_width=FALSE) %>%
+    column_spec(4, color=ifelse(results_df$n_missed > 0, "red", "darkgreen"))
+}
+```
+
+### Notes on "Not In Source" Files
+
+When an article listed in the CONTENTS cannot be found anywhere in the body text, the script saves a `_NOT_IN_SOURCE_` placeholder file. This happens when the original print pages were not included in the digitisation/OCR — the text simply is not in the source file. These are **not extraction errors**; they reflect genuine gaps in the OCR source material.
+
+Gaps between articles are saved as `_Misc_gap_` files so that no text is ever discarded. The entire range from `body_start` to `body_end` is always fully covered.

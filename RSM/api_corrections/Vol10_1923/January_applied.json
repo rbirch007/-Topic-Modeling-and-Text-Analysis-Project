@@ -1,0 +1,57 @@
+{
+  "volume": 10,
+  "month": "January",
+  "year": 1923,
+  "timestamp": "20260315_120950",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "January_Vol10_03_Article_The_New_Year.txt",
+      "action": "append",
+      "result": "APPLIED append (25 chars added)"
+    },
+    {
+      "file": "January_Vol10_05b_Notes_from_Field_Hints_About_Mailing.txt",
+      "action": "note",
+      "result": "INFO: This file contains mailing hints but should be part of the Amy Brown Lyman article based on OCR structure"
+    },
+    {
+      "file": "January_Vol10_06_Article_Amy_Brown_Lyman_Elected_to_State_Legislature_Dr._George_W._M.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "January_Vol10_07_Article_National_Council_of_Women.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "January_Vol10_11_Conventions_Conventions_and_Conferences.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol10_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "append",
+      "result": "APPLIED append (26 chars added)"
+    },
+    {
+      "file": "January_Vol10_16_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1772 chars removed)"
+    },
+    {
+      "file": "January_Vol10_17_Editorial_Editorial,_Serving_in_a_Humble_Sphere.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "January_Vol10_18a_Guide_Lessons_Guardian_and_Ministering_Angels.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (88 chars added)"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "volume": 5,
+  "month": "September",
+  "year": 1918,
+  "timestamp": "20260315_120941",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "September_Vol5_01_Mothers_in_Israel_Mothers_in_Israel_Coral_J._Black.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol5_02_Frontispiece_Earning_Thrift_Stamps_Frontispiece_Women_Who_Have_Lighted_Pi.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (59 chars added)"
+    },
+    {
+      "file": "September_Vol5_07_Article_When_Mother_attended_Sunday_School_Clara_S._Fagergren.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (71 chars removed)"
+    },
+    {
+      "file": "September_Vol5_08_Home_Entertainments_Home_Entertainments_for_September_Morag.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2514 chars added)"
+    },
+    {
+      "file": "September_Vol5_09_Article_Home_Economic_Department_Janette_A._Hyde.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4452 chars removed)"
+    },
+    {
+      "file": "September_Vol5_10_Patriotic_Dept_Patriotic_Department_Clarissa_Smith_William.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol5_14_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (11700 chars added)"
+    },
+    {
+      "file": "September_Vol5_14_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "volume": 10,
+  "month": "March",
+  "year": 1923,
+  "total_merged": 2,
+  "total_splits": 5,
+  "total_cost": 0.2115,
+  "files": [
+    {
+      "source_file": "March_Vol10_15_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman European Mission.",
+          "end_boundary": "the audience which crowded the theatre to its capacity.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Some Firsts in Woman's Progress",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Some Firsts in Woman's Progress The first high",
+          "end_boundary": "besides many towns in our own state.\" It",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "NOTES FROM THE FIELD",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two distinct articles based on the CONTENTS listing. The first is 'Notes from the Field' by Amy Brown Lyman, which is a comprehensive report on Relief Society activities across various missions and stakes. The second is 'Some Firsts in Woman's Progress' which appears to be a collection of historical facts about women's achievements. There appears to be some content mixing or OCR issues in the middle section where 'Some Firsts' content may be embedded within other material.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 15915,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33271,
+        "output_tokens": 396,
+        "cost": 0.1058
+      }
+    },
+    {
+      "source_file": "March_Vol10_18_Article_New_Editors_for_Magazine_Appointed.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "New Editors for Magazine Appointed",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "NEW EDITORS OF MAGAZINE APPOINTED Just as the",
+          "end_boundary": "as associate editor of the Relief Society Magazine.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May - Lesson I - Heeding Counsel",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON I Theology and",
+          "end_boundary": "Discuss heeding counsel as one of heaven's highest laws.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for May - Lesson III - The Sketch Book",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IN Literature (Third Week in May) \"THe",
+          "end_boundary": "that it cloys the taste of the present generation.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains three distinct sections: a brief editorial announcement about new magazine editors, followed by two lesson sections from the Guide Lessons for May. Lesson II (Work and Business) appears to be missing or incomplete - only the header is present. The file cuts off mid-sentence in the Literature lesson discussion of Irving's works.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 14027,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32968,
+        "output_tokens": 454,
+        "cost": 0.1057
+      }
+    }
+  ]
+}

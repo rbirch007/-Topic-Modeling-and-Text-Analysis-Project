@@ -1,0 +1,28 @@
+{
+  "volume": 54,
+  "month": "June",
+  "year": 1967,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V54_06_23_Poem_Now_the_Roberts.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "The article file contains completely wrong content. It should contain the poem 'Life's Journey' by Judith Leigh-Kendall, but instead contains fragments about Dorothy J. Roberts and tortilla variations.",
+      "action": "replace_content",
+      "text": "LIFE'S JOURNEY\n\nThe path, narrow and steep, winds its way to the top of the lofty, majestic mountain. Sharp rocks, thorns, and tangled underbrush reach out, threaten to trip, to turn me aside. Sometimes I feel myself slipping backwards. I'm tired.\nI stop to get a firm foothold, to renew my strength, then I continue to climb. Wouldn't it be easier to follow the wide paved road that travels around the base of the mountain? No. I must reach the top. That is my goal.\n\nJudith Leigh-Kendall",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V54_06_06_Fict_General_Conference.txt",
+      "issue_type": "bleed_end",
+      "description": "Article bleeds into separate news briefs about Mrs. Jessie Evans Smith, Mrs. Eleanor Johnson, and Miss Lue Grosebeck which are not part of the conference editorial",
+      "action": "trim_end",
+      "text": "that we can touch the lives of others, quickening and inspiring them....",
+      "confidence": "high",
+      "page_verified": true
+    }
+  ]
+}

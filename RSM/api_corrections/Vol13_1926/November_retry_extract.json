@@ -1,0 +1,61 @@
+{
+  "volume": 13,
+  "month": "November",
+  "year": 1926,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0555,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Lessons for January",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (45-49) contain content about Relief Society activities, Guide Lessons for March (including Theology and Testimony lesson), and Work and Business topics, but do not contain the article 'Lessons for January'. The pages show March lessons and other content, but not the January lessons referenced in the table of contents.",
+      "order": "b",
+      "pdf_pages": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "source_file": "November_Vol13_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "api_usage": {
+        "input_tokens": 8542,
+        "output_tokens": 138,
+        "cost": 0.0277
+      }
+    },
+    {
+      "title": "Lesson I - Theology and Testimony - Paul",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The PDF pages show Guide Lessons for March, specifically Lesson I about 'Theology and Testimony' covering 'The Prophets of the Mosaic Dispensation' and Lesson III on Literature about Mark Twain. No lesson about Paul was found in these pages.",
+      "order": "b",
+      "pdf_pages": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "source_file": "November_Vol13_12_Article_Lessons_for_January_Ee.txt",
+      "api_usage": {
+        "input_tokens": 8570,
+        "output_tokens": 136,
+        "cost": 0.0278
+      }
+    }
+  ]
+}

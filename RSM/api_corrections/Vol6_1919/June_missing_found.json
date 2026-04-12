@@ -1,0 +1,82 @@
+{
+  "volume": 6,
+  "month": "June",
+  "year": 1919,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0775,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Verses Charles W. Penrose",
+      "printed_page": 311,
+      "status": "found",
+      "complete_text": "VERSES SUNG AT THE FUNERAL OF PRESIDENT BRIGHAM YOUNG,\n\nWords by Charles W. Penrose. Music by George Careless.\n\nDeath gathers up thick clouds of gloom\nAnd wraps the soul with anguish deep.\nGaunt sorrow sits upon the tomb,\nAnd round the grave dense shadows creep.\n\nBut faith beams down from God's fair skies\nAnd bids the clouds and shades begone.\nWe gaze with brightened, tear-dried eyes,\nAnd lo! There stands the Holy One!\n\n\"The Resurrection and the Life,\"\nWhat hope and joy that title brings!\nDeath's but a myth with horrors rife,\nAnd flees before the King of kings.\n\nThen, shall we mourn and weep today\nBecause our chief has gone to rest?\nHe slumbers not in that cold clay,\nBut lives and moves among the blest.\n\nWe lose a leading Master Mind,\nAnd spirit hosts behind the vail,\nNew strength and added wisdom find,\nTo make our mutual work prevail.\n\nHosannas greet his entrance there,\nAnd Joseph waits with words of praise,\nWhile here sit thousands bowed in prayer,\nAnd funeral notes in grief we raise.\n\nFarewell, dear Brother Brigham Young,\nGod called thee through the eternal gate,\nThy fame shall dwell on every tongue,\nAnd Saints thy worth will emulate.\n\nThy work on earth was nobly done,\nAnd peace smiles sweetly on thee now.\nThe crown celestial thou hast won,\nIn splendor waits to deck thy brow!\n\nSalt Lake City, August 30, 1877.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Charles W. Penrose",
+      "confidence": "high",
+      "notes": "Found the complete funeral verses for President Brigham Young written by Charles W. Penrose, with music by George Careless, dated August 30, 1877.",
+      "api_usage": {
+        "input_tokens": 7086,
+        "output_tokens": 572,
+        "cost": 0.0298
+      },
+      "pdf_pages": [
+        342,
+        343,
+        344,
+        345
+      ]
+    },
+    {
+      "title": "In Memory of the Martyrdom",
+      "printed_page": 312,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 339-342, but the article 'In Memory of the Martyrdom' is listed on page 312 in the table of contents. The images provided do not contain page 312, so the article cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7082,
+        "output_tokens": 146,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        339,
+        340,
+        341,
+        342
+      ]
+    },
+    {
+      "title": "The Paymaster Lucy S. Burnham",
+      "printed_page": 328,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Lucy S. Burnham",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 339-342). The article should be on page 328 according to the table of contents, but the provided images start at page 339. The images show 'June Magic' by Morag (page 340), 'Faith' by Grace Ingles Frost (page 341), and 'The House of Gifts' by Clara S. Fagergren (page 342).",
+      "api_usage": {
+        "input_tokens": 7094,
+        "output_tokens": 198,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        339,
+        340,
+        341,
+        342
+      ]
+    }
+  ]
+}

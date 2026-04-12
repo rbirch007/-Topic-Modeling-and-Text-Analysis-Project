@@ -1,0 +1,68 @@
+{
+  "volume": 7,
+  "month": "December",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.14,
+  "files": [
+    {
+      "source_file": "December_Vol7_07b_Guide_Lessons_Guide_Lesson_Suggestions_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I. Theology and Testimony - Salvation for the Living and Dead (Revelation)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lesson Suggestions LESSON I. THEOLOGY AND TESTIMONY.",
+          "end_boundary": "Do not slacken your efforts, sisters, but hold",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson II. WORK AND BUSINESS. (Second Week",
+          "end_boundary": "Lesson II. WORK AND BUSINESS. (Second Week",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III. Literature - Our L.D.S. Hymns and Their Authors",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson . LITERATURE. (Third Week in January.)",
+          "end_boundary": "Select the lines in the hymn that give",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV. Social Service - Historical Outline",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson IV. SOCIAL SERVICE. (Fourth Week in",
+          "end_boundary": "What did the peo- (Contlnued on Page",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 lesson sections as indicated by the Roman numerals. Lesson II appears to be just a header with no content. The file cuts off mid-sentence at the end, indicating it continues on another page. Each lesson covers a different subject area: Theology, Work/Business, Literature, and Social Service.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 19435,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 43755,
+        "output_tokens": 580,
+        "cost": 0.14
+      }
+    }
+  ]
+}

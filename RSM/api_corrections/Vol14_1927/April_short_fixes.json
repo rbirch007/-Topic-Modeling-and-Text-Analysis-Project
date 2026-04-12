@@ -1,0 +1,40 @@
+{
+  "volume": 14,
+  "month": "April",
+  "year": 1927,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0242,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "April_Vol14_11_Article_Home_Beautification.txt",
+      "status": "delete",
+      "current_chars": 188,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be just a caption or header fragment for an image/illustration about home beautification. The text 'OLD FENCES SHOULD BE SCREENED FROM VIEW WITH PLANT MATERIALS' and 'A SCENE FROM A WINDOW' are likely photo captions rather than a standalone article. No substantial article content is visible in the PDF pages provided.",
+      "api_usage": {
+        "input_tokens": 7236,
+        "output_tokens": 169,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    }
+  ]
+}

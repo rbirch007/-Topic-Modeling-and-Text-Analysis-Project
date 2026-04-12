@@ -1,0 +1,106 @@
+{
+  "volume": 8,
+  "month": "June",
+  "year": 1921,
+  "total_files_checked": 10,
+  "files_correct": [
+    "June_Vol8_01_Article_Death_of_President_Emmeline_B._Wells_and_Appointment_of_Pres.txt",
+    "June_Vol8_03_Article_Funeral_Services_of_President_Emmeline_B._Wells.txt",
+    "June_Vol8_04_Article_Aunt_Em_Lula_Greene_Richards.txt",
+    "June_Vol8_05_Article_Relief_Society_Annual_Report_Amy_Brown_Lyman.txt",
+    "June_Vol8_06_Article_Out_of_the_World_G._Milton_Babcock.txt",
+    "June_Vol8_09_Article_To_Mrs._Emmeline_B._Wells_Louise_Coulson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "June_Vol8_02_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the complete Editorial section and other content that should be in separate files",
+      "action": "trim_end",
+      "text": "Funeral Services of President Emmeline B. Wells",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "June_Vol8_07_Article_Lines_Grace_Ingles_Frost.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the complete poem and contains only a fragment",
+      "action": "replace_content",
+      "text": "LINES By Grace Ingles Frost. Interlacing boughs of Color, Russet, gold and crimson hue; Overhead like some rare jewel, Sky with limpid depths of blue. On a branch in wide-eyed wisdom, Sits the Sage of feather tribes, As if loath to leave for Pastures here the Warmth of Summer bides. And unto the Master Artist, My allegiance I renew,",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "June_Vol8_08_Article_The_Gospel_in_Armenia.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with text from the previous Lines article",
+      "action": "trim_start",
+      "text": "And unto the Master Artist, y allegiance J Tenew, The Gospel in Armenia",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "TWILIGHT Maud M. Cook How calm, how peaceful, in twilight, as day In silent regret to the night gives away, And stops, in passing, to shed mellow light Over all, as a last loving touch ere her flight. A light, gentle breeze just stirs the trees, And whispers so gently of comfort and ease. How calm and how peaceful, is the twilight of life, After the toil, the turmoil, and strife Have passed; and left only the peace sublime. Steals into the heart, this softening time, Tempers the sorrows, brightens the joys? It brightens the pearls, discarding alloys? Surrounding it all with love's golden rays, Covering life's twilight with life's richest rays. HE LOVES ME By Abbie R. Madisen He loves me, he loves me, This I do know, For his eyes and his lips They tell me so. He speaks not a word, Just laughs and crows, But by these very signs A mother knows.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Book Notices",
+      "expected_page": 372,
+      "status": "merged_with_another",
+      "merged_into": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt"
+    },
+    {
+      "title": "Twilight Maud M. Cook",
+      "expected_page": 373,
+      "status": "merged_with_another",
+      "merged_into": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt"
+    },
+    {
+      "title": "He Loves Me Abbie R. Madsen",
+      "expected_page": 373,
+      "status": "merged_with_another",
+      "merged_into": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt"
+    }
+  ],
+  "notes": "The General Conference article is extremely long and contains multiple sections that should be separate files. The Editorial file contains several short articles and poems that should be extracted as individual files. Some OCR errors are present but don't significantly impact content integrity.",
+  "validated_corrections": [
+    {
+      "file": "June_Vol8_08_Article_The_Gospel_in_Armenia.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with text from the previous Lines article",
+      "action": "trim_start",
+      "text": "And unto the Master Artist, y allegiance J Tenew, The Gospel in Armenia",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol8_10_Editorial_Editorial_Vital_Questions.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "TWILIGHT Maud M. Cook How calm, how peaceful, in twilight, as day In silent regret to the night gives away, And stops, in passing, to shed mellow light Over all, as a last loving touch ere her flight. A light, gentle breeze just stirs the trees, And whispers so gently of comfort and ease. How calm and how peaceful, is the twilight of life, After the toil, the turmoil, and strife Have passed; and left only the peace sublime. Steals into the heart, this softening time, Tempers the sorrows, brightens the joys? It brightens the pearls, discarding alloys? Surrounding it all with love's golden rays, Covering life's twilight with life's richest rays. HE LOVES ME By Abbie R. Madisen He loves me, he loves me, This I do know, For his eyes and his lips They tell me so. He speaks not a word, Just laughs and crows, But by these very signs A mother knows.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "June_Vol8_02_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the complete Editorial section and other content that should be in separate files",
+      "action": "trim_end",
+      "text": "Funeral Services of President Emmeline B. Wells",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

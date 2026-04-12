@@ -1,0 +1,52 @@
+{
+  "volume": 10,
+  "month": "October",
+  "year": 1923,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.105,
+  "files": [
+    {
+      "source_file": "October_Vol10_05_Article_President_Grant's_Dedicatory_Prayer.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "President Grant's Dedicatory Prayer",
+          "category": "Article",
+          "author": "Heber J. Grant",
+          "start_boundary": "President Grant's Dedicatory Prayer Following is the dedicatory prayer",
+          "end_boundary": "Jesus Christ our Redeemer. Amen and Amen.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Now is the Time",
+          "category": "Poem",
+          "author": "Annie G. Lauritzen",
+          "start_boundary": "NOW IS THE TIME Annie G. Lauritzen, Oakland,",
+          "end_boundary": "Constantly, faithfully, \"Work, think, and pray.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "PRESIDENT GRANT'S DEDICATORY PRAYER",
+        "PRESIDENT GRANTS DEDICATORY PRAYER"
+      ],
+      "notes": "The file contains President Grant's dedicatory prayer for the Alberta Temple at Cardston, followed by a poem by Annie G. Lauritzen. The prayer is the main content, with the poem appearing at the very end. Running headers with page numbers (482, 483, 484, 485, 486, 487) are embedded throughout the prayer text.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16646,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33024,
+        "output_tokens": 392,
+        "cost": 0.105
+      }
+    }
+  ]
+}

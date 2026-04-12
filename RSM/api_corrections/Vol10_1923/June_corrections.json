@@ -1,0 +1,69 @@
+{
+  "volume": 10,
+  "month": "June",
+  "year": 1923,
+  "total_files_checked": 5,
+  "files_correct": [
+    "June_Vol10_02_Article_A_Joy-Crowned_Visitor_Minnie_Iverson_Hoddapp.txt",
+    "June_Vol10_03_Article_Aloha_Garlands_Minnie_Iverson_Hoddapp.txt"
+  ],
+  "corrections": [
+    {
+      "file": "June_Vol10_01_Frontispiece_The_Sacred_Falls_of_Kaliuwaa,_Hawaii_Frontispiece.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Conference Minutes instead of frontispiece content",
+      "action": "replace_content",
+      "text": "THE SACRED FALLS oF KALIUWAA, HAWAII",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "June_Vol10_05_Editorial_Editorial,_The_Divinity_of_Jesus_Christ.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "To the Latter-day Saints there need be no darkness on this point, for in the spring of 1820, the Father and the Son appeared to the Boy-Prophet in the woods of New York, and the one, pointing to the other said, \"This is my beloved Son. Hear him!\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol10_06_Article_Teachers'_Topic_for_July.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Conference Minutes instead of Teachers' Topic content",
+      "action": "replace_content",
+      "text": "TEACHERS' TOPIC FOR JULY PATRIOTISM 1. July is the month that awakens more than ordinary feelings of patriotism. 2. Patriotism is defined as a most powerful impelling motive to action, and as a moral obligation. It embraces the thought of independence, liberty, duty; the desire to be, and to do what is right, fair, honorable, noble, true.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "June_Vol10_07_Conventions_Relief_Society_Delegates_Attend_Conventions.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Conference content instead of conventions content",
+      "action": "replace_content",
+      "text": "RELIEF SOCIETY DELEGATES ATTEND CONVENTIONS Mrs. Jennie B. Knight, counselor to President Clarissa S. Williams, and Mrs. Amy Brown Lyman, General Secretary, left for a trip to the East and South Sunday, May 13. During their absence they will attend the National Conference of. Social Work and the board meeting of the National Council of Women, as delegates. Both of these gatherings will convene at Washington, D. C. After the sessions of the conventions Mrs. Knight and Mrs. Lyman will visit some of the Relief Societies in the Eastern States and Southern States missions.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Relief Society Conference Minutes Amy Brown Lyman",
+      "expected_page": 269,
+      "status": "merged_with_another",
+      "merged_into": "June_Vol10_01_Frontispiece_The_Sacred_Falls_of_Kaliuwaa,_Hawaii_Frontispiece.txt"
+    }
+  ],
+  "notes": "Major content misalignment issues. Multiple files contain Relief Society Conference Minutes content instead of their intended articles. The conference minutes appear to be the dominant content that has been incorrectly distributed across multiple files. Advertisement content is bleeding into editorial content.",
+  "validated_corrections": [
+    {
+      "file": "June_Vol10_05_Editorial_Editorial,_The_Divinity_of_Jesus_Christ.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "To the Latter-day Saints there need be no darkness on this point, for in the spring of 1820, the Father and the Son appeared to the Boy-Prophet in the woods of New York, and the one, pointing to the other said, \"This is my beloved Son. Hear him!\"",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

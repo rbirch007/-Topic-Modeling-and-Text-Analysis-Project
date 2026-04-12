@@ -1,0 +1,112 @@
+{
+  "volume": 8,
+  "month": "July",
+  "year": 1921,
+  "total_files_checked": 12,
+  "files_correct": [
+    "July_Vol8_01_Frontispiece_President_Clarissa_Smith_Williams_Frontispiece.txt",
+    "July_Vol8_02_Article_Show_Me_the_Way_Alice_Foutz.txt",
+    "July_Vol8_03_Article_Greeting_from_the_General_Presidency_of_the_Relief_Society.txt",
+    "July_Vol8_06_Article_Out_of_the_World_Milton_G._Babcock.txt",
+    "July_Vol8_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "July_Vol8_08_Article_World_Happenings_James_H._Anderson.txt",
+    "July_Vol8_10a_Poem_With_the_Gift_of_an_Apron.txt",
+    "July_Vol8_10b_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_The_Lords_Supper.txt",
+    "July_Vol8_10c_Guide_Lessons_Lesson_II_-_Work_and_Business.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol8_05a_Article_Our_Music_Forces.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Out of the' which is the beginning of the next article",
+      "action": "trim_end",
+      "text": "Out of the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete editorial header information",
+      "action": "prepend",
+      "text": "EDITORIAL Entered as second-class matter at the Post Office, Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the complete General Board listing and magazine information that appears between editorial header and the main editorial text",
+      "action": "prepend",
+      "text": "THE GENERAL BOARD MRS. CLARISSA SMITH WILLIAMS -. - = - President MRS. JENNIE BRIMHALL KNIGHT - -: First Counselor MRS. LOUISA YATES ROBISON. - - - Second Counselor MRS. AMY BROWN LYMAN - - General Secretary and Treasurer Mrs. Emma A. Empey Mrs. Annie Wells Cannon Mrs. Julia A. F. Lund Mrs. Susa Young Gates Mrs. Lalene H. Hart Mrs. Amy Whipple Evans Mrs. Jeanette A. Hyde Mrs. Lottie Paul Baxter\" Mrs. Ethel Reynolds Smith Miss Sarah M. McLelland Mrs. Julia A. Child Mrs. Barbara Howell Richards Miss Lillian Cameron Mrs. Cora Bennion Mrs. Rosannah C. Irvine Mrs. Lizzie Thomas Edward, Music Director Miss Edna Coray, Organist RELIEF SOCIETY MAGAZINE Editor.. - - - - - - Susa Younc Gates Business Manager -: - - -: Jeanette A. Hype Assistant Manager - - - - - Amy Brown Lyman Room 29, Bishop's Building, Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_10a_Poem_With_the_Gift_of_an_Apron.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Ai Guide Lessons' which should be trimmed as it belongs to the next section",
+      "action": "trim_end",
+      "text": "Ai Guide Lessons",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_11_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "wrong_content",
+      "description": "This file contains mixed content from multiple lessons and advertisements, not a coherent single article",
+      "action": "note",
+      "text": "File appears to contain fragments from multiple guide lessons and advertisements mixed together",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Our New Presidency and General Board",
+      "expected_page": 378,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "The extraction has several issues with content bleeding between articles and one major missing article. The 'Our New Presidency and General Board' article (pages 378-401 in the OCR) is completely missing from the extracted files. The Guide Lessons file appears to be corrupted with mixed content from different sections.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol8_05a_Article_Our_Music_Forces.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Out of the' which is the beginning of the next article",
+      "action": "trim_end",
+      "text": "Out of the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete editorial header information",
+      "action": "prepend",
+      "text": "EDITORIAL Entered as second-class matter at the Post Office, Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the complete General Board listing and magazine information that appears between editorial header and the main editorial text",
+      "action": "prepend",
+      "text": "THE GENERAL BOARD MRS. CLARISSA SMITH WILLIAMS -. - = - President MRS. JENNIE BRIMHALL KNIGHT - -: First Counselor MRS. LOUISA YATES ROBISON. - - - Second Counselor MRS. AMY BROWN LYMAN - - General Secretary and Treasurer Mrs. Emma A. Empey Mrs. Annie Wells Cannon Mrs. Julia A. F. Lund Mrs. Susa Young Gates Mrs. Lalene H. Hart Mrs. Amy Whipple Evans Mrs. Jeanette A. Hyde Mrs. Lottie Paul Baxter\" Mrs. Ethel Reynolds Smith Miss Sarah M. McLelland Mrs. Julia A. Child Mrs. Barbara Howell Richards Miss Lillian Cameron Mrs. Cora Bennion Mrs. Rosannah C. Irvine Mrs. Lizzie Thomas Edward, Music Director Miss Edna Coray, Organist RELIEF SOCIETY MAGAZINE Editor.. - - - - - - Susa Younc Gates Business Manager -: - - -: Jeanette A. Hype Assistant Manager - - - - - Amy Brown Lyman Room 29, Bishop's Building, Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol8_10a_Poem_With_the_Gift_of_an_Apron.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Ai Guide Lessons' which should be trimmed as it belongs to the next section",
+      "action": "trim_end",
+      "text": "Ai Guide Lessons",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

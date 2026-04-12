@@ -1,0 +1,37 @@
+{
+  "volume": 5,
+  "month": "November",
+  "year": 1918,
+  "timestamp": "20260315_120941",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol5_01c_Article_Lo_the_Poor_Rich_Indian.txt",
+      "action": "append",
+      "result": "APPLIED append (116 chars added)"
+    },
+    {
+      "file": "November_Vol5_07a_Editorial_Patriotic_Department.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol5_07a_Editorial_Patriotic_Department.txt",
+      "action": "append",
+      "result": "APPLIED append (32 chars added)"
+    },
+    {
+      "file": "November_Vol5_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (6002 chars added)"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "volume": 3,
+  "month": "July",
+  "year": 1916,
+  "total_merged": 2,
+  "total_splits": 4,
+  "total_cost": 0.2524,
+  "files": [
+    {
+      "source_file": "July_Vol3_02_Article_Birth_Control.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Birth Control",
+          "category": "Article",
+          "author": "Multiple authors (Elders Clawson, Richards, McKay, Whitney, Smith Jr.)",
+          "start_boundary": "Birth Control. Knowing quite well the attitude",
+          "end_boundary": "Teachers have been supplied with slips and secretaries with special books to record these donations.",
+          "confidence": "high",
+          "end_match_words": 7
+        },
+        {
+          "order": "b",
+          "title": "A Priceless Golden Wedding",
+          "category": "Article",
+          "author": "Julina L. Smith",
+          "start_boundary": "A Priceless Golden Wedding. Few women are",
+          "end_boundary": "and many walls surround the laughter of children's voices.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "BIRTH CONTROL"
+      ],
+      "notes": "The file contains two distinct articles. The first is 'Birth Control' featuring statements from five church leaders on the topic. The second begins 'A Priceless Golden Wedding' about Julina L. Smith's 50th wedding anniversary. There appears to be some text cut off at the end of the second article, suggesting it may continue in another file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14262,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40675,
+        "output_tokens": 367,
+        "cost": 0.1275
+      }
+    },
+    {
+      "source_file": "July_Vol3_16b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Prevention of Disease",
+          "category": "Guide_Lessons",
+          "author": "Dr. Charles F. Wilcox",
+          "start_boundary": "GuidejiLessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "How can you prevent nearly all diseases? Fourth Week",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Teeth and Their Care",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Fourth Week in August. THE TEETH AND THEIR",
+          "end_boundary": "What is the personal care that should be",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two distinct Guide Lessons - Lesson I on Prevention of Disease and Lesson II on The Teeth and Their Care. Both are part of the Summer Health Lessons series for August 1916. The first lesson is specifically attributed to Dr. Charles F. Wilcox with a commendation note.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10856,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39847,
+        "output_tokens": 355,
+        "cost": 0.1249
+      }
+    }
+  ]
+}

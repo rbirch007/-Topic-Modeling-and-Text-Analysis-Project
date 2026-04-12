@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "October",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1256,
+  "files": [
+    {
+      "source_file": "October_Vol9_17_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I - Theology and Testimony - MIRACLES OF THE LATTER DAYS",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for December LESSON I Theology and Testimony",
+          "end_boundary": "Sacred Grove in a Latter-day Saint home?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business. SECOND WEEK",
+          "end_boundary": "LESSON II Work and Business. SECOND WEEK",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III - Literature - HYMNS WRITTEN BY WOMEN",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature. (Third Week in December)",
+          "end_boundary": "gained great popularity?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV - Social Service - LATER ADOLESCENCE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week",
+          "end_boundary": "immoral men and women in the community?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the December Guide Lessons with 4 distinct lesson sections. Lesson II appears to be just a header with no content. The file also contains additional content after the lessons including Teachers' Topic, Bible verses, poems, and advertisements that should be included with the final lesson split.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34013,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39136,
+        "output_tokens": 545,
+        "cost": 0.1256
+      }
+    }
+  ]
+}

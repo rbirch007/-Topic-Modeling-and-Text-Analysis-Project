@@ -1,0 +1,87 @@
+{
+  "volume": 55,
+  "month": "December",
+  "year": 1968,
+  "timestamp": "20260313_235309",
+  "dry_run": false,
+  "applied": 13,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_12_01_Fict_Welcome_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (126 chars)"
+    },
+    {
+      "file": "V55_12_09_Poem_Told_By_Young.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (631 chars)"
+    },
+    {
+      "file": "V55_12_11_GenFt_Editorials_Crawfor.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_12_13_Fict_A_Story_Shields.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V55_12_14_Poem_South_McBride.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (386 chars)"
+    },
+    {
+      "file": "V55_12_16_GenFt_The_Told.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_12_20_GenFt_Christmas_Dougal.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (105 chars)"
+    },
+    {
+      "file": "V55_12_21_GenFt_Christmas_Dansie.txt",
+      "action": "note",
+      "result": "INFO: File appears to be duplicate of Christmas Is for Friends content"
+    },
+    {
+      "file": "V55_12_23_GenFt_A.txt",
+      "action": "append",
+      "result": "APPLIED append (684 chars added)"
+    },
+    {
+      "file": "V55_12_24_GenFt_A_Eccles.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V55_12_27_GenFt_Look_Ones.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_12_31_Poem_First_Coles.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_12_36_Poem_Retrospect_Rothe.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V55_12_42_Poem_The_Hunter.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_12_43_Poem_The_Brown.txt",
+      "action": "append",
+      "result": "APPLIED append (36 chars added)"
+    }
+  ]
+}

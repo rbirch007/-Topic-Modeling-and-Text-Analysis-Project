@@ -1,0 +1,62 @@
+{
+  "volume": 53,
+  "month": "August",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_08_01_Frnt_Alien_Roberts.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1041 chars added)"
+    },
+    {
+      "file": "V53_08_03_SpFt_How_to_McConkie.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V53_08_04_Poem_Summer_Sabin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1392 chars removed)"
+    },
+    {
+      "file": "V53_08_05_Poem_Brief_Bailey.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (874 chars removed)"
+    },
+    {
+      "file": "V53_08_13_GenFt_Editorial_Madsen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (939 chars removed)"
+    },
+    {
+      "file": "V53_08_16_SpFt_Summer_Twiddy.txt",
+      "action": "note",
+      "result": "INFO: File starts mid-sentence with garbled OCR text"
+    },
+    {
+      "file": "V53_08_17_SpFt_Songs_Madsen.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V53_08_20_Poem_Sparks_Olsen.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1212 chars removed)"
+    },
+    {
+      "file": "V53_08_21_Poem_August_Brown.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3980 chars removed)"
+    },
+    {
+      "file": "V53_08_29_GenFt_Cultural_Clark.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (334 chars removed)"
+    }
+  ]
+}

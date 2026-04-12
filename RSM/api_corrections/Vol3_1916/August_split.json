@@ -1,0 +1,56 @@
+{
+  "volume": 3,
+  "month": "August",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1214,
+  "files": [
+    {
+      "source_file": "August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week",
+          "end_boundary": "LESSON III. Genealogy and Art. Third Week",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Surnames",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Art. Third Week",
+          "end_boundary": "Note. All genealogical committees, both ward and",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Art and Architecture - Indian Summer Landscape",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART AND ARCHITECTURE. INDIAN SUMMER LANDSCAPE,",
+          "end_boundary": "to walk a block to obtain a!",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains three lesson sections that were merged together. The first is just a header for Lesson II with no content. The second is a complete genealogy lesson on surnames. The third is an art lesson on Indian Summer landscapes that appears to be cut off mid-sentence at the end. The file seems to be missing some content and has OCR artifacts.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8459,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38271,
+        "output_tokens": 437,
+        "cost": 0.1214
+      }
+    }
+  ]
+}

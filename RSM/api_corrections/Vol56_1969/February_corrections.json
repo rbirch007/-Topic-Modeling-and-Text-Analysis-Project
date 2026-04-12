@@ -1,0 +1,147 @@
+{
+  "volume": 56,
+  "month": "February",
+  "year": 1969,
+  "total_files_checked": 38,
+  "files_correct": [
+    "V56_02_02_Poem_81_Olsen.txt",
+    "V56_02_05_Poem_Generation_Carter.txt",
+    "V56_02_11_Poem_Abraham_Gabbott.txt",
+    "V56_02_14_Poem_Waiting_Fredrickso.txt",
+    "V56_02_16_Poem_On_A_Roberts.txt",
+    "V56_02_18_Poem_More_Sabin.txt",
+    "V56_02_21_Poem_Indian_Chamberlin.txt",
+    "V56_02_23_Poem_Children_Jacobson.txt",
+    "V56_02_25_Poem_To_Be_Bills.txt",
+    "V56_02_29_Poem_Of_Man_Brown.txt",
+    "V56_02_33_Poem_Marriage.txt",
+    "V56_02_34_Poem_The_Sukys.txt",
+    "V56_02_35_Poem_The_Sadleir.txt",
+    "V56_02_36_Poem_Jacaranda_Ames.txt",
+    "V56_02_37_Poem_Spring_Robinson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_02_01_Fict_Welcome_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of actual article content",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction as it only contains placeholder text",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_02_03_Poem_Peace_Blanchard.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from Common Ground article that should be in separate file",
+      "action": "trim_end",
+      "text": "98 Gay N. Blanchard Co mmon G roun d",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_02_04_Fict_The_Lloyd.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from previous article about grandmothers meeting",
+      "action": "trim_start",
+      "text": "The Perfect Gift Rosa Lee Lloyd",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_02_08_SpFt_According_Romney.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of actual article content",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction as it only contains placeholder text",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_02_09_Poem_City_Larsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from A Day for Diddle-Daddling article",
+      "action": "trim_end",
+      "text": "Katherine F. Larsen 106",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "V56_02_22_SpFt_Diet_Association.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from Young Friend article",
+      "action": "trim_start",
+      "text": "Diet and Heart Disease The American Heart Association",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_02_30_GenFt_Visiting_Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of actual article content",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction as it only contains placeholder text",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "According to the Law of Heaven Marion G. Romney",
+      "expected_page": 84,
+      "status": "merged_with_another",
+      "merged_into": "V56_02_15_GenFt_Made-Over_Olson.txt"
+    },
+    {
+      "title": "City Watercolor Scene Katherine F. Larsen",
+      "expected_page": 106,
+      "status": "merged_with_another",
+      "merged_into": "V56_02_09_Poem_City_Larsen.txt"
+    }
+  ],
+  "notes": "Several files contain placeholder text indicating incomplete extraction. The major Romney article 'According to the Law of Heaven' appears to be merged into the Made-Over Dolls file. Multiple articles have content bleeding between them, particularly around page boundaries. The OCR quality is generally good but article boundaries need better detection.",
+  "validated_corrections": [
+    {
+      "file": "V56_02_04_Fict_The_Lloyd.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from previous article about grandmothers meeting",
+      "action": "trim_start",
+      "text": "The Perfect Gift Rosa Lee Lloyd",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_02_09_Poem_City_Larsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from A Day for Diddle-Daddling article",
+      "action": "trim_end",
+      "text": "Katherine F. Larsen 106",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "V56_02_22_SpFt_Diet_Association.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from Young Friend article",
+      "action": "trim_start",
+      "text": "Diet and Heart Disease The American Heart Association",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V56_02_03_Poem_Peace_Blanchard.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from Common Ground article that should be in separate file",
+      "action": "trim_end",
+      "text": "98 Gay N. Blanchard Co mmon G roun d",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

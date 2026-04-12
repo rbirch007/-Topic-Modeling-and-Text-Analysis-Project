@@ -1,0 +1,65 @@
+{
+  "volume": 7,
+  "month": "September",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1278,
+  "files": [
+    {
+      "source_file": "September_Vol7_14_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - More Light on Baptism for the Dead",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. LESSON II. BOOK OF MORMON—",
+          "end_boundary": "7. Who is Sir Herbert Samuels?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Book of Mormon Bible Testimony - That Day When the Book Should Come Forth",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. LESSON II. BOOK OF MORMON—",
+          "end_boundary": "7. Who is Sir Herbert Samuels?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Some of Tennyson's Minor Poems",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON . LITERATURE. (Optional) Some of Tennyson's",
+          "end_boundary": "democratic attitude towards life. GUIDE LESSONS",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Health - Personal Hygiene",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "HEALTH. PERSONAL HYGIENE. Fourth Week in September.",
+          "end_boundary": "bound volumes of the RELIEF SOCIETY MAGAZINE,",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections that were merged together. The lessons cover Theology/Testimony, Book of Mormon testimony, Literature (Tennyson), and Health/Personal Hygiene. Each lesson has its own questions section. There appears to be some OCR confusion at the beginning where Lesson I content may be mixed with Lesson II header.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 26010,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39656,
+        "output_tokens": 589,
+        "cost": 0.1278
+      }
+    }
+  ]
+}

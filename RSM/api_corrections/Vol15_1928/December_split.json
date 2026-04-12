@@ -1,0 +1,81 @@
+{
+  "volume": 15,
+  "month": "December",
+  "year": 1928,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1699,
+  "files": [
+    {
+      "source_file": "December_Vol15_19_Literature_Literature.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Practical Religion and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY 681 THE LITERATURE COURSE",
+          "end_boundary": "That impurity carries over beyond the grave.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "and that it may become a basis of discussion.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "THE LITERATURE COURSE We promised to publish,",
+          "end_boundary": "a sinner out of the saint?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "and treatment of delinquency in your community.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Guide Lessons for February, covering different subject areas: Practical Religion and Testimony, Work and Business, Literature, and Social Service. Each lesson has clear Roman numeral headings and distinct content boundaries.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 27842,
+      "tier": 1,
+      "pdf_pages": [
+        802,
+        803,
+        804,
+        805,
+        806,
+        807,
+        808,
+        809,
+        810
+      ],
+      "api_usage": {
+        "input_tokens": 54194,
+        "output_tokens": 485,
+        "cost": 0.1699
+      }
+    }
+  ]
+}

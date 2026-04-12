@@ -1,0 +1,52 @@
+{
+  "volume": 10,
+  "month": "July",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "July_Vol10_01_Frontispiece_The_Sisters,_Lydia_A._Wells,_Susan_A._Wells_Frontispiece.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (129 chars removed)"
+    },
+    {
+      "file": "July_Vol10_03_Article_Alice_L._Reynolds.txt",
+      "action": "append",
+      "result": "APPLIED append (105 chars added)"
+    },
+    {
+      "file": "July_Vol10_04a_Article_Pioneer_Sisters_of_1848.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (86 chars added)"
+    },
+    {
+      "file": "July_Vol10_04a_Article_Pioneer_Sisters_of_1848.txt",
+      "action": "append",
+      "result": "APPLIED append (39 chars added)"
+    },
+    {
+      "file": "July_Vol10_09_Article_Items_About_Women.txt",
+      "action": "append",
+      "result": "APPLIED append (3356 chars added)"
+    },
+    {
+      "file": "July_Vol10_10_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "July_Vol10_11a_Guide_Lessons_Guide_Lessons_for_September.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (14131 chars added)"
+    },
+    {
+      "file": "July_Vol10_12_Article_Pioneer_Sisters_of.txt",
+      "action": "note",
+      "result": "INFO: This appears to be a duplicate of the content already in July_Vol10_03_Article_Alice_L._Reynolds.txt"
+    }
+  ]
+}

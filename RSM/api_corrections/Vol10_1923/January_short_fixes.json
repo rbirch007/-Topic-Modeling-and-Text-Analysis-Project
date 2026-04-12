@@ -1,0 +1,40 @@
+{
+  "volume": 10,
+  "month": "January",
+  "year": 1923,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0234,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol10_18b_Guide_Lessons_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 50,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (24-27) contain the Relief Society Nurse Aids' Course article and President Williams' Mexico visit article, but do not show the Guide Lessons section that would contain this Work and Business lesson content.",
+      "api_usage": {
+        "input_tokens": 7051,
+        "output_tokens": 150,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  ]
+}

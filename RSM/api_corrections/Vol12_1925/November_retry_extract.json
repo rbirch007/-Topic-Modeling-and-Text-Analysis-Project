@@ -1,0 +1,74 @@
+{
+  "volume": 12,
+  "month": "November",
+  "year": 1925,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0567,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Diet for the School Child",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578,
+        579
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Endurance",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Josie E. Childs",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages thoroughly. Found advertisements for Sawcroft's Blue Pine Olive Oil, Bennett Glass & Paint Co., Keeley's ice cream, Southern Pacific Lines travel, The Paris Co., children's clothing, shoe repair, home building loans, Dr. Dearden, and The Reliable Mail Order House. Also found the Relief Society Magazine cover for Vol. XII November 1925 No. 11 with table of contents showing 'Endurance' by Josie E. Childs on page 592. However, the actual article text does not appear on any of the provided pages (639-643). The article would be on page 592 which is not included in these images.",
+      "order": "b",
+      "pdf_pages": [
+        639,
+        640,
+        641,
+        642,
+        643
+      ],
+      "source_file": "November_Vol12_10_Article_Golden-Rod_Elsie_Talmage_Brandley.txt",
+      "api_usage": {
+        "input_tokens": 8435,
+        "output_tokens": 228,
+        "cost": 0.0287
+      }
+    },
+    {
+      "title": "Guide Lessons for January - Lesson II: Work and Business",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The PDF images show pages 549, 550, 551, 552, and 553. These pages contain 'Notes from the Field' (page 549) and 'Guide Lessons for December' (pages 550-553). The article being sought is 'Guide Lessons for January - Lesson II: Work and Business' but these pages only show December lessons. The January lessons would appear on different pages not included in these images.",
+      "order": "b",
+      "pdf_pages": [
+        624,
+        625,
+        626,
+        627,
+        628
+      ],
+      "source_file": "November_Vol12_16_Guide_Lessons_Guide_Lessons_for_January,.txt",
+      "api_usage": {
+        "input_tokens": 8459,
+        "output_tokens": 172,
+        "cost": 0.028
+      }
+    }
+  ]
+}

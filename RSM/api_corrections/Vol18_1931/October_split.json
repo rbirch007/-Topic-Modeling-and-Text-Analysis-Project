@@ -1,0 +1,203 @@
+{
+  "volume": 18,
+  "month": "October",
+  "year": 1931,
+  "total_merged": 2,
+  "total_splits": 13,
+  "total_cost": 0.2076,
+  "files": [
+    {
+      "source_file": "October_Vol18_18_Article_Lesson_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (Tirst Week",
+          "end_boundary": "for October, 1930, page 575, problems 7-8.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This is a single comprehensive lesson department article containing multiple sections: Theology and Testimony (First Week), Work and Business (Second Week), Literature (Third Week), and Social Service (Fourth Week). All sections are part of one unified lesson department article, not separate articles.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 42000,
+      "tier": 2,
+      "pdf_pages": [
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        690,
+        691
+      ],
+      "api_usage": {
+        "input_tokens": 25369,
+        "output_tokens": 232,
+        "cost": 0.0796
+      }
+    },
+    {
+      "source_file": "October_Vol18_18_Article_My_Masterpiece_Clyde.txt",
+      "num_articles_found": 12,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Up Past the Stars to God",
+          "category": "Poem",
+          "author": "Claire Stewart Boyer",
+          "start_boundary": "Up Past the Stars to God first Poem",
+          "end_boundary": "Up past the stars to God.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Side Lights on the Book of Mormon",
+          "category": "Article",
+          "author": "John Henry Evans",
+          "start_boundary": "Side Lights on the Book of Mormon By",
+          "end_boundary": "To be Continued",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "My Baby",
+          "category": "Poem",
+          "author": "Winona F. Thomas",
+          "start_boundary": "My Baby By Winona F. Thomas I've a",
+          "end_boundary": "When he is a man.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Old Mexico",
+          "category": "Article",
+          "author": "Luacine Savage Clark",
+          "start_boundary": "Old Mexico By Luacine Savage Clark of",
+          "end_boundary": "Mexico is destined to become the playground of the world.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "The Old Teapot",
+          "category": "Article",
+          "author": "I. B. McKenzie",
+          "start_boundary": "The Old Teapot By I. B. McKenzie TL",
+          "end_boundary": "Three cheers for granny's old cracked teapot.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Death",
+          "category": "Poem",
+          "author": "Carla Wever",
+          "start_boundary": "Death Death is a path We travel",
+          "end_boundary": "Another bids us come.",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Habit Formation in Later Childhood and Youth",
+          "category": "Article",
+          "author": "Milton Bennion",
+          "start_boundary": "Habit Formation in Later Childhood and Youth",
+          "end_boundary": "the habit of visualizing before acting the possible consequences of what they do.",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Mrs. Phoebe Young Beatie",
+          "category": "Article",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "Mrs. Phoebe Young Beatie By Annie Wells",
+          "end_boundary": "and her memory will be cherished by all who knew her.",
+          "confidence": "high"
+        },
+        {
+          "order": "i",
+          "title": "Four Walls",
+          "category": "Poem",
+          "author": "Leona Bammers Gardner",
+          "start_boundary": "Four Walls By Leona Bammers Gardner Four",
+          "end_boundary": "And God walks with me there.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "j",
+          "title": "A Word to Mothers",
+          "category": "Article",
+          "author": "Ruth May Fox",
+          "start_boundary": "A Word to Mothers By Ruth May",
+          "end_boundary": "and we shall not be disappointed.",
+          "confidence": "high"
+        },
+        {
+          "order": "k",
+          "title": "Love's Vitamins",
+          "category": "Article",
+          "author": "Wilford D. Porter",
+          "start_boundary": "Love's Vitamins By Wilford D. Porter In",
+          "end_boundary": "love's vitamins in abundant measure.",
+          "confidence": "high",
+          "start_match_words": 6
+        },
+        {
+          "order": "l",
+          "title": "My Masterpiece",
+          "category": "Poem",
+          "author": "Katheryn L. Clyde",
+          "start_boundary": "My Masterpiece Third Poem to Receive Honorable",
+          "end_boundary": "Behold! Thy greatest Masterpiece!\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OLD MEXICO",
+        "HABIT FORMATION",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains multiple complete articles and poems from the October 1931 issue. The content appears to be from various pages throughout the magazine, with clear article boundaries marked by titles and author bylines. Some content appears to be incomplete or fragmented, particularly in the middle sections dealing with habit formation and other topics.",
+      "validation_issues": [
+        "Split 'h': end_boundary not found",
+        "Split 'i': end_boundary not found",
+        "Split 'j': end_boundary not found",
+        "Split 'k': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 158145,
+      "tier": 3,
+      "pdf_pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "api_usage": {
+        "input_tokens": 36309,
+        "output_tokens": 1271,
+        "cost": 0.128
+      }
+    }
+  ]
+}

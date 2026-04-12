@@ -1,0 +1,38 @@
+{
+  "volume": 15,
+  "month": "July",
+  "year": 1928,
+  "timestamp": "20260316_175718",
+  "dry_run": false,
+  "created": 2,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Robbed by Wolves",
+      "new_file": "July_Vol15_04a_Article_Robbed_by_Wolves.txt",
+      "chars": 20571,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Pioneer Memoriam",
+      "result": "SKIP: Start boundary not found: Split 'b': start_boundary not found"
+    },
+    {
+      "file": "July_Vol15_04_Article_Robbed.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol15_1928\\July\\_backups_split_20260316_175718\\July_Vol15_04_Article_Robbed.txt"
+    },
+    {
+      "split": "a",
+      "title": "Notes from the Field",
+      "new_file": "July_Vol15_21a_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 9935,
+      "result": "CREATED"
+    },
+    {
+      "file": "July_Vol15_21_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol15_1928\\July\\_backups_split_20260316_175718\\July_Vol15_21_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt"
+    }
+  ]
+}

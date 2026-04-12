@@ -1,0 +1,58 @@
+{
+  "volume": 11,
+  "month": "September",
+  "year": 1924,
+  "timestamp": "20260316_210704",
+  "dry_run": false,
+  "retried": 7,
+  "created": 2,
+  "failed": 6,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Editorial—Another Centenary—September 1824-1924",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Elizabeth Claridge McCune",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "Cache Valley",
+      "result": "RETRY_REJECTED: STUB: body only 12 chars (< 200 threshold)"
+    },
+    {
+      "split": "e",
+      "title": "School Lunches",
+      "new_file": "September_Vol11_02e_Article_School_Lunches.txt",
+      "chars": 29863,
+      "match_type": "short_window_3w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "f",
+      "title": "Etiquette",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "g",
+      "title": "The New Dentist",
+      "new_file": "September_Vol11_02g_Article_The_New_Dentist.txt",
+      "chars": 342,
+      "match_type": "short_window_3w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "k",
+      "title": "Literature",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Social Service - Problems of Behavior",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "volume": 10,
+  "month": "March",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol10_01_Frontispiece_Jane_Snyder_Richards_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol10_03_Article_Jane_Snyder_Richards.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "March_Vol10_03_Article_Jane_Snyder_Richards.txt",
+      "action": "append",
+      "result": "APPLIED append (149 chars added)"
+    },
+    {
+      "file": "March_Vol10_06_Article_Amy_Whipple.txt",
+      "action": "append",
+      "result": "APPLIED append (189 chars added)"
+    },
+    {
+      "file": "March_Vol10_11_Article_Songs_for_Relief_Society_Day.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1643 chars removed)"
+    },
+    {
+      "file": "March_Vol10_12_Article_Statewide_Clean-Up_Campaign.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "March_Vol10_19_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    }
+  ]
+}

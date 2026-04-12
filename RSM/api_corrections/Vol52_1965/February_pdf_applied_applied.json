@@ -1,0 +1,37 @@
+{
+  "volume": 52,
+  "month": "February",
+  "year": 1965,
+  "timestamp": "20260314_102519",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V52_02_05_Fict_Among_Littke.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1652 chars removed)"
+    },
+    {
+      "file": "V52_02_09_GenFt_Notes_Available.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 14% OCR coverage"
+    },
+    {
+      "file": "V52_02_30_Poem_Gifts_Bowles.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_02_33_Poem_Grandson_Coles.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    },
+    {
+      "file": "V52_02_36_Poem_Mountain_Rubin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (55 chars removed)"
+    }
+  ]
+}

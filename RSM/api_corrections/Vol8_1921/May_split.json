@@ -1,0 +1,51 @@
+{
+  "volume": 8,
+  "month": "May",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1164,
+  "files": [
+    {
+      "source_file": "May_Vol8_16_Editorial_Editorial_The_Old_Order_Changeth.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial: The Old Order Changeth",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL    RELIEF SOCIETY MAGAZINE Editor - - -.",
+          "end_boundary": "he leaves his task in the state school with",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "What Does the Church Owe Me?",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "WHAT DOES THE CHURCH OWE. ME? Women and",
+          "end_boundary": "and we be crowned with life everlasting.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "EDITORIAL",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two editorial pieces that appear consecutively in the table of contents. The first is 'Editorial: The Old Order Changeth' on page 306, and the second is 'What Does the Church Owe Me?' on page 309. Both are editorial content discussing church leadership changes and member attitudes respectively.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8687,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37065,
+        "output_tokens": 348,
+        "cost": 0.1164
+      }
+    }
+  ]
+}

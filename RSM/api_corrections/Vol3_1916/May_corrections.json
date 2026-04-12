@@ -1,0 +1,54 @@
+{
+  "volume": 3,
+  "month": "May",
+  "year": 1916,
+  "total_files_checked": 14,
+  "files_correct": [
+    "May_Vol3_02_Article_Music_Department.txt",
+    "May_Vol3_03_Plain_Gossip_Plain_Gossip_Mrs._Grundy.txt",
+    "May_Vol3_04_Article_Betty_Morgan's_Dilemma_Ruth_Moench_Bell.txt",
+    "May_Vol3_05_Home_Science_Home_Science_Department_Hyde.txt",
+    "May_Vol3_06_Prince_of_Ur_Janette_A._A_Prince_of_Ur_Homespun.txt",
+    "May_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "May_Vol3_08_Article_Goodby,_California_Congress,_Goodby.txt",
+    "May_Vol3_09_Article_Crocheted_Yoke_Isabel_Whitney_Sears.txt",
+    "May_Vol3_10_Article_The_Flowers'_Resurrection_Hazel_Washburn.txt",
+    "May_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+    "May_Vol3_12_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "May_Vol3_13a_Editorial_Editorial_Paying_the_Price.txt",
+    "May_Vol3_14a_Guide_Lessons_Guide_Lessons.txt",
+    "May_Vol3_14b_Poem_A_Voice_Calling.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol3_01_Article_Mothers_of_Our_Leaders_in_Israel_Susa_Young_Gates.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem 'Not Even Fate' which should be a separate article",
+      "action": "trim_start",
+      "text": "Mothers of Our Leaders in Israel. Susa Young Gates.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Not Even Fate Alfred Lambourne",
+      "expected_page": 241,
+      "status": "merged_with_another",
+      "merged_into": "May_Vol3_01_Article_Mothers_of_Our_Leaders_in_Israel_Susa_Young_Gates.txt"
+    }
+  ],
+  "notes": "The poem 'Not Even Fate' by Alfred Lambourne is currently merged at the beginning of the 'Mothers of Our Leaders' article file. It should be extracted as a separate article file. All other articles appear to be correctly extracted with proper boundaries.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol3_01_Article_Mothers_of_Our_Leaders_in_Israel_Susa_Young_Gates.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem 'Not Even Fate' which should be a separate article",
+      "action": "trim_start",
+      "text": "Mothers of Our Leaders in Israel. Susa Young Gates.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,148 @@
+{
+  "volume": 15,
+  "month": "March",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.1519,
+  "stats": {
+    "found": 1,
+    "not_found": 4,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "The Abduction of Pocahontas Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show advertisements and the magazine cover/contents page, but do not contain the frontispiece image or any article about 'The Abduction of Pocahontas'. A frontispiece is typically an illustration facing the title page, which would not contain extractable text content.",
+      "api_usage": {
+        "input_tokens": 7462,
+        "output_tokens": 160,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Mother's Evening Song",
+      "printed_page": 118,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "March_Vol15_02_Mother'sEveningSong_Mother'sEveningSong.txt",
+      "category": "Poem",
+      "author": "Amy M. Rice",
+      "confidence": "high",
+      "notes": "The poem 'Mother's Evening Song' by Amy M. Rice is visible in the PDF images and has already been extracted in the existing file March_Vol15_02_Mother'sEveningSong_Mother'sEveningSong.txt. It was the second poem to receive Honorable Mention in the Eliza Roxey Snow Poetry Contest.",
+      "api_usage": {
+        "input_tokens": 7424,
+        "output_tokens": 193,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Five Generations",
+      "printed_page": 127,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Five Generations' listed on page 127 in the table of contents is not visible in any of the four provided PDF page images (pages 141, 142, 143, 144). These pages contain other content including 'Unto the Least of These' and advertisements, but do not show page 127 where 'Five Generations' should appear.",
+      "api_usage": {
+        "input_tokens": 7420,
+        "output_tokens": 167,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Cyrus E. Dallin and the Indians",
+      "printed_page": 128,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 141-144, but the article 'Cyrus E. Dallin and the Indians' is listed on page 128 in the table of contents. The images provided do not contain this page, so the article cannot be extracted from the available material.",
+      "api_usage": {
+        "input_tokens": 7452,
+        "output_tokens": 154,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Now's the Time to Swat",
+      "printed_page": 134,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Now's the Time to Swat' listed on page 134 in the table of contents is not visible in any of the provided PDF page images (pages 141, 142, 143, 144). The images show advertisements and the table of contents page, but do not contain page 134 where this article should appear.",
+      "api_usage": {
+        "input_tokens": 7440,
+        "output_tokens": 164,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Zion's Mountains",
+      "printed_page": 174,
+      "status": "found",
+      "complete_text": "Zion's Mountains\nBy Nina Kerrick\n\nOh! Mountains! Oh! thou lofty peaks\nHow dear thou art to me,\nOh! let me dwell among thee here\nAs long as life shall be.\n\nAnd then, Oh! lay me at thy feet\nBeside some murmuring stream,\nWhere I can sleep, and hear thy voice,\nIn death's forgetful dream.\n\nThe rippling waves among the rocks,\nWould sing to me I know,\nBecause methinks they all would know\nThat I had loved them so.\n\nAnd then the wind would speak to me\nWhile passing o'er my tomb,\nAnd in the spring the flowers dear\nAbove my head would bloom.\n\nOh! no, I will not lonely be\nIf thou wilt let me dwell with thee\nOh, Mountains—\nThrough eternity.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Nina Kerrick",
+      "confidence": "high",
+      "notes": "Found complete poem on page 174 of the PDF images. It's a nature poem expressing love for mountains and desire to dwell among them in life and death.",
+      "api_usage": {
+        "input_tokens": 7428,
+        "output_tokens": 352,
+        "cost": 0.0276
+      },
+      "pdf_pages": [
+        198,
+        199,
+        200,
+        201
+      ]
+    }
+  ]
+}

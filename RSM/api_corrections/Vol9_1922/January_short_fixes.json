@@ -1,0 +1,62 @@
+{
+  "volume": 9,
+  "month": "January",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.051,
+  "stats": {
+    "truncated": 2,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol9_01_Article_Greeting_General_Presidency.txt",
+      "status": "truncated",
+      "current_chars": 83,
+      "complete_text": "Greeting\n\nIn this eightieth year of the Relief Society, we offer hearty congratulations, love, and sincere good wishes, to the members of the organization throughout the world, and rejoice in the great good which has been accomplished.\n\nIf the eighteen original members of the Society, who met and started the work on that memorable 17th of March, 1842, could speak, and if all those faithful workers who followed these early pioneers could speak, we feel sure that they, too, one and all, would rejoice with us in the accomplishments and labors of our great Society.\n\nOur hearts are filled with gratitude and thanksgiving to our heavenly Father, not only for his mercy, his guidance and his help, but for the success of the work itself, and for the privileges and opportunities he has given to the women of the Church of Jesus Christ of Latter-day Saints.\n\nWe are grateful and thankful to all who have contributed to the Relief Society cause; to the general, stake, and local Priesthood, who have given us guidance and loyal support; to the members of the General Board for their untiring efforts and helpful suggestions in our councils, and for their labors in visiting all the stakes in conventions and conferences, which they have recently accomplished, and which they did willingly and cheerfully; to the stake officers and board members for their unceasing labors and hearty support; to the ward officers and teachers who are in immediate charge of the real work of the organization and who make constant and daily personal sacrifice in the cause; to the devoted and faithful members themselves, the real Relief Society workers, who make the organization itself possible. We thank you one and all, and pray that God will bless and strengthen and support you at all times.\n\nAnd now, in this new year, let us go onward and upward; let us cherish the ideals and standards of the past, but let us go forward with our faces to the rising sun, with the faith and hope that the Lord will direct us and help us to fit our labors to meet the present and future needs of the organization.\n\nCLARISSA S. WILLIAMS,\nJENNIE B. KNIGHT,\nLOUISE Y. ROBISON,\nGeneral Presidency\nNational Women's Relief Society.",
+      "title": "Greeting",
+      "category": "Article",
+      "author": "General Presidency (Clarissa S. Williams, Jennie B. Knight, Louise Y. Robison)",
+      "confidence": "high",
+      "notes": "Found complete greeting message from Relief Society General Presidency on page 3 of PDF. The file was severely truncated, containing only a fragment of the table of contents instead of the actual article text.",
+      "api_usage": {
+        "input_tokens": 6382,
+        "output_tokens": 676,
+        "cost": 0.0293
+      },
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source_file": "January_Vol9_18b_Guide_Lessons_LESSON_II_Work_and_Business.txt",
+      "status": "truncated",
+      "current_chars": 50,
+      "complete_text": "LESSON II.\n\nWork and Business\n\n(Second Week in April)",
+      "title": "LESSON II. Work and Business",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the lesson header in the PDF. The file was truncated - it only contained the title but the PDF shows the complete lesson header with proper formatting and timing information.",
+      "api_usage": {
+        "input_tokens": 6383,
+        "output_tokens": 167,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        122,
+        123,
+        124,
+        125
+      ]
+    }
+  ]
+}

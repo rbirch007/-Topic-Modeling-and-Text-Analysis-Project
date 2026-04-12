@@ -1,0 +1,25 @@
+{
+  "volume": 11,
+  "month": "October",
+  "year": 1924,
+  "timestamp": "20260316_210704",
+  "dry_run": false,
+  "retried": 1,
+  "created": 1,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "d",
+      "title": "Woman's Sphere Broadens",
+      "new_file": "October_Vol11_04d_Editorial_Womans_Sphere_Broadens.txt",
+      "chars": 3750,
+      "match_type": "short_window_3w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Guide Lessons for December - Lesson IV: Social Service - Problems of Income",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

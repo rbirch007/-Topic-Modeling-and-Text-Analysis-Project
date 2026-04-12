@@ -1,0 +1,42 @@
+{
+  "volume": 2,
+  "month": "February",
+  "year": 1915,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol2_01_Article_A_Fragment_Sarah_E._H._Pearson_The_Mission_of_Saving_Grain.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (514 chars added)"
+    },
+    {
+      "file": "February_Vol2_04_Article_Wheat_Values_'.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4827 chars removed)"
+    },
+    {
+      "file": "February_Vol2_10b_Guide_Lessons_Guide_Lessons.txt",
+      "action": "append",
+      "result": "APPLIED append (3458 chars added)"
+    },
+    {
+      "file": "February_Vol2_11a_Guide_Lessons_Theology_and_Testimony_-_Lesson_II_The_Law_of_Faith.txt",
+      "action": "append",
+      "result": "APPLIED append (1774 chars added)"
+    },
+    {
+      "file": "February_Vol2_11b_Guide_Lessons_Genealogy_-_Lesson_III_The_Mission_and_Spirit_of_Elijah.txt",
+      "action": "append",
+      "result": "APPLIED append (997 chars added)"
+    },
+    {
+      "file": "February_Vol2_12_Article_The_Song_of_the_Wheat_(Music_by_Evan_Stephens,_Words_by_S._Y.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7501 chars removed)"
+    }
+  ]
+}

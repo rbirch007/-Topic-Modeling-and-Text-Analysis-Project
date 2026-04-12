@@ -1,0 +1,78 @@
+{
+  "volume": 14,
+  "month": "June",
+  "year": 1927,
+  "total_merged": 1,
+  "total_splits": 5,
+  "total_cost": 0.0618,
+  "files": [
+    {
+      "source_file": "June_Vol14_06_Article_Officers'_Meeting,_Afternoon_Session.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Officers' Meeting (Afternoon Session) - Social Service",
+          "category": "Article",
+          "author": "Mrs. Amy W. Evans",
+          "start_boundary": "Officers' Meeting (Afternoon Session) THE COURSE OF STUDY",
+          "end_boundary": "the art of living. SOCIAL SERVICE Dr.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service",
+          "category": "Article",
+          "author": "Dr. W. R, Calderwood",
+          "start_boundary": "SOCIAL SERVICE Dr. W. R, Calderwood I",
+          "end_boundary": "do it now. We do not always do",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Theology",
+          "category": "Article",
+          "author": "Dr. George H. Brimhall",
+          "start_boundary": "THEOLOGY Dr. George H. Brimhall ~ I",
+          "end_boundary": "and widen your field of information and",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literature",
+          "category": "Article",
+          "author": "Miss Alice L. Reynolds",
+          "start_boundary": "LITERATURE Miss Alice L. Reynolds, Member of",
+          "end_boundary": "discuss Edgar Lee Masters, the poet. EDGAR",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Edgar Lee Masters",
+          "category": "Article",
+          "author": "Katherine B. Palm",
+          "start_boundary": "EDGAR LEE MASTERS By Katherine B. Palm",
+          "end_boundary": "and yet again.:",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains the afternoon session of the Relief Society Conference with 5 distinct presentations/articles covering different subject areas: Social Service (2 speakers), Theology, Literature, and a detailed discussion of Edgar Lee Masters. Each section has clear speaker introductions and topic changes.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 51827,
+      "tier": 2,
+      "pdf_pages": [
+        358,
+        359,
+        360
+      ],
+      "api_usage": {
+        "input_tokens": 17554,
+        "output_tokens": 607,
+        "cost": 0.0618
+      }
+    }
+  ]
+}

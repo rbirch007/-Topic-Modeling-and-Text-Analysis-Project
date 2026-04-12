@@ -1,0 +1,63 @@
+{
+  "volume": 16,
+  "month": "February",
+  "year": 1929,
+  "timestamp": "20260316_210706",
+  "dry_run": false,
+  "retried": 7,
+  "created": 2,
+  "failed": 7,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Winter Grass",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Tongues in Trees",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "A Report of the Care of the Feeble-Minded in Utah",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "e",
+      "title": "Gifts",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "f",
+      "title": "An Appreciation of Mrs. Alpha M. Smoot",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "g",
+      "title": "Editorial—The Care of the Feeble-Minded",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "h",
+      "title": "Honor Banquet Tendered to President Clarissa Smith Williams",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "The Storm",
+      "new_file": "February_Vol16_12a_Poem_The_Storm.txt",
+      "chars": 480,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for April",
+      "new_file": "February_Vol16_12b_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "chars": 43844,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 5,
+  "month": "July",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.022,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Relief Society Work in the Missions Susa Young Gates",
+      "printed_page": 361,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Susa Young Gates",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 311-314 from what appears to be a General Conference report, not pages 350-353 or page 361 where the missing article should be located. The images contain conference proceedings and statistics but do not contain the article 'Relief Society Work in the Missions' by Susa Young Gates.",
+      "api_usage": {
+        "input_tokens": 6484,
+        "output_tokens": 170,
+        "cost": 0.022
+      },
+      "pdf_pages": [
+        350,
+        351,
+        352,
+        353
+      ]
+    }
+  ]
+}

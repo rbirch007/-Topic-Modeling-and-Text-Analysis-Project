@@ -1,0 +1,202 @@
+{
+  "volume": 19,
+  "month": "November",
+  "year": 1932,
+  "total_merged": 4,
+  "total_splits": 10,
+  "total_cost": 0.4719,
+  "files": [
+    {
+      "source_file": "November_Vol19_02_Article_Iconoclasts_Grace_Ingles_Frost.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Iconoclasts",
+          "category": "Poem",
+          "author": "Grace Ingles Frost",
+          "start_boundary": "\"Come and see me soon Mrs.",
+          "end_boundary": "His idols break and end war's",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Procrastination",
+          "category": "Article",
+          "author": "Marion Oakleigh",
+          "start_boundary": "EMILY BROWN stopped her car at",
+          "end_boundary": "Are our haunting ghosts at night.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Society is Right",
+          "category": "Article",
+          "author": "Vera L. Plant",
+          "start_boundary": "THE person who is not accepted",
+          "end_boundary": "you will have a host of",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "When the Test Comes",
+          "category": "Article",
+          "author": "Mansel H. Nelson",
+          "start_boundary": "JOHN RICHARDS stood on the corner",
+          "end_boundary": "That is the way to find",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "PROCRASTINATION",
+        "WHEN THE TEST COMES"
+      ],
+      "notes": "The file contains a poem followed by three complete short stories/articles. The boundaries are clearly marked by title headers and author bylines. The poem 'Iconoclasts' appears to be incomplete in this file, ending mid-sentence, but represents a complete section boundary.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10111,
+      "tier": 1,
+      "pdf_pages": [
+        712,
+        713,
+        714,
+        715,
+        716
+      ],
+      "api_usage": {
+        "input_tokens": 59878,
+        "output_tokens": 509,
+        "cost": 0.1873
+      }
+    },
+    {
+      "source_file": "November_Vol19_04_Article_When_the_Test_Comes_Mansel_H_Nelson.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "When the Test Comes",
+          "category": "Article",
+          "author": "Mansel H. Nelson",
+          "start_boundary": "When the Test Comes By Mansel H. Nelson JOHN",
+          "end_boundary": "try him once, and see for yourself. That is",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Save the Wild Birds",
+          "category": "Article",
+          "author": "J. H. Paul",
+          "start_boundary": "Save the Wild Birds By J. H. Paul II",
+          "end_boundary": "from sin to righteousness?by saving, not killing, the birds",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "WHEN THE TEST COMES",
+        "SAVE THE WILD BIRDS"
+      ],
+      "notes": "File contains two complete articles as indicated in the table of contents. The first article 'When the Test Comes' by Mansel H. Nelson runs from pages 629-635, and the second article 'Save the Wild Birds' by J. H. Paul begins on page 635 and continues to page 640. Clear visual separation between articles in the scanned pages.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 21636,
+      "tier": 1,
+      "pdf_pages": [
+        718,
+        719,
+        720,
+        721,
+        722,
+        723
+      ],
+      "api_usage": {
+        "input_tokens": 64022,
+        "output_tokens": 385,
+        "cost": 0.1978
+      }
+    },
+    {
+      "source_file": "November_Vol19_09_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Doctrine and Covenants - Vicarious Work for the Dead",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony DOCTRINE AND",
+          "end_boundary": "Why are they then baptized for the dead",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - The Beatitudes",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic THE BEATITUDES Aim: To enable",
+          "end_boundary": "shall be filled in the Kingdom of Heaven",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Delight of Great Books - Sir Walter Scott",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature THE DELIGHT OF GREAT BOOKS Third",
+          "end_boundary": "broad view of the genius of Sir Walter Scott",
+          "confidence": "high",
+          "start_match_words": 6
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Typical Behavior in Child Growth",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service Fourth Week in January Lesson",
+          "end_boundary": "The Problem Child at Home p 50",
+          "confidence": "high",
+          "end_match_words": 5
+        }
+      ],
+      "running_headers_to_strip": [
+        "LESSON DEPARTMENT",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains four distinct lesson sections covering different subject areas: Theology, Teachers' Topic, Literature, and Social Service. Each section has clear boundaries with subject headings and lesson numbers. The content flows from religious doctrine to educational topics to literature appreciation to child development.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 48348,
+      "tier": 2,
+      "pdf_pages": [
+        768,
+        769,
+        770,
+        771,
+        772,
+        773,
+        774,
+        775,
+        776
+      ],
+      "api_usage": {
+        "input_tokens": 26339,
+        "output_tokens": 516,
+        "cost": 0.0868
+      }
+    }
+  ]
+}

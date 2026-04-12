@@ -1,0 +1,593 @@
+{
+  "volume": 18,
+  "month": "March",
+  "year": 1931,
+  "total": 29,
+  "ok": 27,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "March_Vol18_00_CONTENTS.txt",
+      "body_len": 976,
+      "article_words": 97,
+      "words_in_ocr": 97,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_00_Misc.txt",
+      "body_len": 8242,
+      "article_words": 503,
+      "words_in_ocr": 500,
+      "pct_in_ocr": 0.994,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "March_Vol18_00_Misc_backup_premarker.txt",
+      "body_len": 8174,
+      "article_words": 497,
+      "words_in_ocr": 497,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_01_Natures_Nest_Spencer.txt",
+      "body_len": 776,
+      "article_words": 92,
+      "words_in_ocr": 92,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_02_Yosemite_National_Park.txt",
+      "body_len": 23257,
+      "article_words": 1091,
+      "words_in_ocr": 1091,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_03_Unto_Least_Thee_Clyde.txt",
+      "body_len": 858,
+      "article_words": 102,
+      "words_in_ocr": 102,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_04a_Article_The_Christening.txt",
+      "body_len": 11347,
+      "article_words": 681,
+      "words_in_ocr": 681,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_04c_Article_Our_Birthday.txt",
+      "body_len": 4471,
+      "article_words": 339,
+      "words_in_ocr": 339,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_05_Dreamer_Stone.txt",
+      "body_len": 5054,
+      "article_words": 384,
+      "words_in_ocr": 384,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_06_Our_Birthday_Robison.txt",
+      "body_len": 4485,
+      "article_words": 340,
+      "words_in_ocr": 340,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_07_Dont_Knock_Barrett.txt",
+      "body_len": 691,
+      "article_words": 82,
+      "words_in_ocr": 82,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_08_Out_Shadows_Engar.txt",
+      "body_len": 6573,
+      "article_words": 484,
+      "words_in_ocr": 484,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_09_Rummage_Sale_Stevenson.txt",
+      "body_len": 20887,
+      "article_words": 950,
+      "words_in_ocr": 950,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_10_Keeping_up_Lizzie_Merrill.txt",
+      "body_len": 3395,
+      "article_words": 296,
+      "words_in_ocr": 296,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_11_Relation_Diet_Page.txt",
+      "body_len": 14599,
+      "article_words": 749,
+      "words_in_ocr": 749,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_12_Bashful_Giant_Cottam.txt",
+      "body_len": 10478,
+      "article_words": 635,
+      "words_in_ocr": 635,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_13_Poorhouse_Pension_Paul.txt",
+      "body_len": 8530,
+      "article_words": 532,
+      "words_in_ocr": 532,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_13a_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 9042,
+      "article_words": 514,
+      "words_in_ocr": 514,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_13b_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 3375,
+      "article_words": 255,
+      "words_in_ocr": 253,
+      "pct_in_ocr": 0.9922,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "chauncey",
+        "operate"
+      ]
+    },
+    {
+      "file": "March_Vol18_13c_Editorial_Editorial_-_Our_Mother_Tongue.txt",
+      "body_len": 911,
+      "article_words": 92,
+      "words_in_ocr": 92,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_14_Editorial_Editorial.txt",
+      "body_len": 6550,
+      "article_words": 480,
+      "words_in_ocr": 480,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_15_Guide_Lessons_Department.txt",
+      "body_len": 38985,
+      "article_words": 1754,
+      "words_in_ocr": 1754,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_16_Oh_Let_Me_Alldredge.txt",
+      "body_len": 550,
+      "article_words": 56,
+      "words_in_ocr": 56,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_17_Article_Religious_Education_in_the_Family_Milton_Bennion.txt",
+      "body_len": 2429,
+      "article_words": 174,
+      "words_in_ocr": 174,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_18_Article_The_Rummage_Sale_Nora_McKay_Stevenson.txt",
+      "body_len": 2342,
+      "article_words": 200,
+      "words_in_ocr": 166,
+      "pct_in_ocr": 0.83,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "advantage",
+        "arrives",
+        "attics",
+        "bargain",
+        "brings",
+        "browser",
+        "bugbear",
+        "conjure",
+        "contributes",
+        "despite"
+      ]
+    },
+    {
+      "file": "March_Vol18_19_Article_Money_Value_Nellie_Allen_Talmage.txt",
+      "body_len": 9341,
+      "article_words": 584,
+      "words_in_ocr": 575,
+      "pct_in_ocr": 0.9846,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "beautee",
+        "bigga",
+        "ful",
+        "gooda",
+        "granstaulk",
+        "grimmer",
+        "leesten",
+        "starfe",
+        "tilt"
+      ]
+    },
+    {
+      "file": "March_Vol18_20_Editorial_Our_Anniversary_Celebration.txt",
+      "body_len": 1979,
+      "article_words": 161,
+      "words_in_ocr": 161,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_21_Editorial_John_Q_Cannon.txt",
+      "body_len": 725,
+      "article_words": 75,
+      "words_in_ocr": 75,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol18_22_Poem_O_Let_Me_Live_by_the_Roadside_Poem_Ida_R_Alldredge.txt",
+      "body_len": 544,
+      "article_words": 50,
+      "words_in_ocr": 42,
+      "pct_in_ocr": 0.84,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "beneath",
+        "blue",
+        "draws",
+        "hail",
+        "lift",
+        "loads",
+        "toiling",
+        "welcome"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol18_No3_March_1931.txt",
+    "ocr_chars": 177069,
+    "ocr_unique_words": 5116,
+    "contents_xref": {
+      "entries_in_contents": 25,
+      "matched": 21,
+      "match_details": [
+        {
+          "title": "Yosemite National Park Frontispiece",
+          "page": null,
+          "file": "March_Vol18_02_Yosemite_National_Park.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Religious Education in the Family Milton Bennion",
+          "page": 131,
+          "file": "March_Vol18_17_Article_Religious_Education_in_the_Family_Milton_Bennion.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Unto the Least of These (Poem) Merling D. Clyde",
+          "page": 138,
+          "file": "March_Vol18_03_Unto_Least_Thee_Clyde.txt",
+          "score": 0.67
+        },
+        {
+          "title": "The Dreamer (Poem Ivy Williams Stone",
+          "page": 142,
+          "file": "March_Vol18_05_Dreamer_Stone.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our Birthday President, Louise Y. Robison",
+          "page": 143,
+          "file": "March_Vol18_04c_Article_Our_Birthday.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Don't Knock (Poem) Elsie E. Barrett",
+          "page": 144,
+          "file": "March_Vol18_07_Dont_Knock_Barrett.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Out of the Shadows Alveretta S. Engar",
+          "page": 145,
+          "file": "March_Vol18_08_Out_Shadows_Engar.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Rummage Sale Nora McKay Stevenson",
+          "page": 148,
+          "file": "March_Vol18_18_Article_The_Rummage_Sale_Nora_McKay_Stevenson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Keeping Up with Lizzie's Kids Harrison R. Merrill",
+          "page": 155,
+          "file": "March_Vol18_10_Keeping_up_Lizzie_Merrill.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Lake McDonald Glacier National Park",
+          "page": 156,
+          "file": "March_Vol18_02_Yosemite_National_Park.txt",
+          "score": 0.4
+        },
+        {
+          "title": "Relation of Diet to Teeth Anna Page",
+          "page": 157,
+          "file": "March_Vol18_11_Relation_Diet_Page.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Bashful Giant",
+          "page": 161,
+          "file": "March_Vol18_12_Bashful_Giant_Cottam.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Money Value Nellie Allen Talmage",
+          "page": 162,
+          "file": "March_Vol18_19_Article_Money_Value_Nellie_Allen_Talmage.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Poor House or Pension? Dr. J. H. Paul",
+          "page": 165,
+          "file": "March_Vol18_13_Poorhouse_Pension_Paul.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 168,
+          "file": "March_Vol18_13a_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 171,
+          "file": "March_Vol18_13a_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial?Our Mother Tongue",
+          "page": 173,
+          "file": "March_Vol18_13c_Editorial_Editorial_-_Our_Mother_Tongue.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our Anniversary Celebration",
+          "page": 174,
+          "file": "March_Vol18_20_Editorial_Our_Anniversary_Celebration.txt",
+          "score": 1.0
+        },
+        {
+          "title": "John Q. Cannon",
+          "page": 174,
+          "file": "March_Vol18_21_Editorial_John_Q_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 177,
+          "file": "March_Vol18_15_Guide_Lessons_Department.txt",
+          "score": 0.5
+        },
+        {
+          "title": "O Let Me Live by the Roadside (Poem) Ida R. Alldredge",
+          "page": 188,
+          "file": "March_Vol18_22_Poem_O_Let_Me_Live_by_the_Roadside_Poem_Ida_R_Alldredge.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "In Nature's Nests (Poem) Josephine Spencer",
+          "page": 129
+        },
+        {
+          "title": "The Christening Fay Ollerton",
+          "page": 139
+        },
+        {
+          "title": "A Period of Stress and Strain",
+          "page": 174
+        },
+        {
+          "title": "The First Relief Society (Poem) Jeanette McKay Morrell",
+          "page": 175
+        }
+      ],
+      "extra_files": [
+        "March_Vol18_01_Natures_Nest_Spencer.txt",
+        "March_Vol18_04a_Article_The_Christening.txt",
+        "March_Vol18_06_Our_Birthday_Robison.txt",
+        "March_Vol18_09_Rummage_Sale_Stevenson.txt",
+        "March_Vol18_13b_Notes_from_Field_Notes_to_the_Field.txt",
+        "March_Vol18_14_Editorial_Editorial.txt",
+        "March_Vol18_16_Oh_Let_Me_Alldredge.txt"
+      ]
+    }
+  }
+}

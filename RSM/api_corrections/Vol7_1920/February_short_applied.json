@@ -1,0 +1,33 @@
+{
+  "volume": 7,
+  "month": "February",
+  "year": 1920,
+  "timestamp": "20260315_161634",
+  "dry_run": false,
+  "replaced": 1,
+  "deleted": 1,
+  "skipped": 2,
+  "entries": [
+    {
+      "file": "February_Vol7_01_Article_Emmeline_B._Wells.txt",
+      "action": "deleted",
+      "reason": "This appears to be just a biographical date line (birth and death dates for Emmeline B. Wells: Feb 29, 1828 - Feb 29, 1920). No corresponding article content found in the provided PDF pages. This is likely a header artifact or memorial notice fragment that should be deleted as it contains no substantial article content."
+    },
+    {
+      "file": "February_Vol7_02_Article_Jedediah_M._Grant.txt",
+      "action": "skip",
+      "reason": "complete"
+    },
+    {
+      "file": "February_Vol7_09e_Guide_Lessons_Guide_Lessons_b.txt",
+      "action": "replaced",
+      "old_chars": 64,
+      "new_chars": 2410
+    },
+    {
+      "file": "February_Vol7_12_Editorial_Editorial_The_Discipline_of_Fear.txt",
+      "action": "skip",
+      "reason": "not_found"
+    }
+  ]
+}

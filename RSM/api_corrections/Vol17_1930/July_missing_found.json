@@ -1,0 +1,116 @@
+{
+  "volume": 17,
+  "month": "July",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.0996,
+  "stats": {
+    "found": 0,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Glory of the West. Harrison R. Merrill",
+      "printed_page": 363,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Harrison R. Merrill",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (398-401). The table of contents indicates it should be on page 363, but that page is not included in the images provided. The images show pages from 'Notes from the Field' section and other content, but not the missing article.",
+      "api_usage": {
+        "input_tokens": 7514,
+        "output_tokens": 163,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        398,
+        399,
+        400,
+        401
+      ]
+    },
+    {
+      "title": "Admissions",
+      "printed_page": 365,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "If By Dying Arthur James Bowers",
+      "printed_page": 377,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Arthur James Bowers",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four provided PDF page images (pages 421-424). The table of contents indicates it should be on page 377, but these images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7502,
+        "output_tokens": 143,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        421,
+        422,
+        423,
+        424
+      ]
+    },
+    {
+      "title": "A Character Sketch of Helen Gibson Ellis",
+      "printed_page": 381,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from advertisements and the table of contents/cover pages, but do not contain the article text for 'A Character Sketch of Helen Gibson Ellis' which should appear on page 381. The images shown appear to be from different sections of the magazine.",
+      "api_usage": {
+        "input_tokens": 7498,
+        "output_tokens": 147,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        421,
+        422,
+        423,
+        424
+      ]
+    },
+    {
+      "title": "Carolina L. Jaks",
+      "printed_page": 388,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "West with the Ox Teams",
+      "printed_page": 402,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'West with the Ox Teams' listed on page 402 in the table of contents is not present in any of the four PDF page images provided (pages 421-424). The images show advertisements for Troy Laundry, Dr. Cannon's Soft Curd Baby Milk, and Temple and Burial Clothes, along with the magazine's table of contents page, but do not contain the missing article text.",
+      "api_usage": {
+        "input_tokens": 7490,
+        "output_tokens": 181,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        421,
+        422,
+        423,
+        424
+      ]
+    }
+  ]
+}

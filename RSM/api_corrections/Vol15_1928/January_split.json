@@ -1,0 +1,133 @@
+{
+  "volume": 15,
+  "month": "January",
+  "year": 1928,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3734,
+  "files": [
+    {
+      "source_file": "January_Vol15_07_Article_Moral_Guidance_of_Youth_Dean_Milton_Bennion.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Moral Guidance of Youth",
+          "category": "Article",
+          "author": "Dean Milton Bennion",
+          "start_boundary": "Moral Guidance of Youth (Conference Address) By Dean Milton Bennion",
+          "end_boundary": "That is our problem in dealing with young people. May God help us to do so.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "THE RELIEF SOCIETY OF THE CHURCH OF JESUS CHRIST OF LATTER-DAY SAINTS",
+          "end_boundary": "VOL. XV JANUARY, 1928 No. 1 EDITORIAL",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MORAL GUIDANCE OF YOUTH",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains the main article 'Moral Guidance of Youth' followed by the beginning of the Editorial section. The article ends with the conclusion about making virtue more attractive than vice, and the editorial section begins with the Relief Society organizational information.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 20448,
+      "tier": 1,
+      "pdf_pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "api_usage": {
+        "input_tokens": 63532,
+        "output_tokens": 466,
+        "cost": 0.1976
+      }
+    },
+    {
+      "source_file": "January_Vol15_17_Guide_Lessons_Guide_Lessons_for_March.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - The Dispensation of the Fulness of Times (Continued) - The New Scripture",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MARCH LESSON I Theology and Testimony",
+          "end_boundary": "more than wonderful, more than marvelous? GUIDE LESSONS FOR MARCH",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Teachers' Topic for March - Health in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week in March)",
+          "end_boundary": "5. Word of Wisdom. RELIEF SOCIETY MAGAZINE Literature",
+          "confidence": "high",
+          "end_match_words": 4
+        },
+        {
+          "order": "c",
+          "title": "Literature - John Masefield and Alfred Edward Housman",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in March) JOHN MASEFIELD",
+          "end_boundary": "beauty of the rhythm of the verse. GUIDE LESSONS FOR MARCH",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - The Child-Study Course - The Active Nature and Needs of Childhood",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in March)",
+          "end_boundary": "Ye verily do it to me.\" Attend the school",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains four distinct lesson sections for March, each covering different subject areas: Theology, Work/Business, Literature, and Social Service. Each lesson has clear Roman numeral headings and distinct content boundaries. The file ends with a 'Beautiful Custom' section and advertisements that appear to be part of the Social Service lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24226,
+      "tier": 1,
+      "pdf_pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "api_usage": {
+        "input_tokens": 55603,
+        "output_tokens": 598,
+        "cost": 0.1758
+      }
+    }
+  ]
+}

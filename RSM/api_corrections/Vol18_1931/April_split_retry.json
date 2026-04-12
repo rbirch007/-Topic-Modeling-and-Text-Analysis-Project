@@ -1,0 +1,57 @@
+{
+  "volume": 18,
+  "month": "April",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 2,
+  "created": 5,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Women in Organization Work",
+      "new_file": "April_Vol18_02a_Article_Women_in_Organization_Work.txt",
+      "chars": 16635,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "The Pine Valley Flood",
+      "new_file": "April_Vol18_07a_Article_The_Pine_Valley_Flood.txt",
+      "chars": 27180,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "Contentment",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Exit Back Yard, Enter Out-door Living Room",
+      "new_file": "April_Vol18_09b_Article_Exit_Back_Yard_Enter_Out-door_Living_Room.txt",
+      "chars": 6212,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "Lesson Department - Theology and Testimony",
+      "new_file": "April_Vol18_13a_Guide_Lessons_Lesson_Department_-_Theology_and_Testimony.txt",
+      "chars": 10672,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Work and Business",
+      "new_file": "April_Vol18_13b_Guide_Lessons_Work_and_Business.txt",
+      "chars": 2274,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

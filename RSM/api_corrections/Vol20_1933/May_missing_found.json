@@ -1,0 +1,214 @@
+{
+  "volume": 20,
+  "month": "May",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 9,
+  "total_searched": 9,
+  "total_cost": 0.2324,
+  "stats": {
+    "found": 2,
+    "not_found": 7,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Portrait of President J. Reuben Clark, Jr. Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 204-207) contain lesson department content about The Beatitudes and literature about Mark Twain's Huckleberry Finn. No frontispiece portrait or related content about President J. Reuben Clark, Jr. is visible in these pages. A frontispiece would typically appear at the very beginning of the magazine, not on these later pages.",
+      "api_usage": {
+        "input_tokens": 7626,
+        "output_tokens": 184,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        204,
+        205,
+        206,
+        207
+      ]
+    },
+    {
+      "title": "President J. Reuben Clark, Jr. Dr. James E. Talmage",
+      "printed_page": 259,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Dr. James E. Talmage",
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 290-293) do not contain the article titled 'President J. Reuben Clark, Jr.' by Dr. James E. Talmage that should appear on page 259. The images show pages from later in the magazine covering Relief Society Conference proceedings and other content.",
+      "api_usage": {
+        "input_tokens": 7640,
+        "output_tokens": 177,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        290,
+        291,
+        292,
+        293
+      ]
+    },
+    {
+      "title": "Relief Society Conference Julia A. F. Lund Officers' Meeting",
+      "printed_page": 263,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Julia A. F. Lund",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 254-257, but the article is listed on page 263 in the table of contents. The images contain 'A Talk to Mothers' (pages 225-226), 'Sowing Dragon's Teeth' (page 226), and 'Three Meals a Day—an Adventure' by Franke Beal Johns (pages 227-228). The target article is not visible in these page images.",
+      "api_usage": {
+        "input_tokens": 7616,
+        "output_tokens": 202,
+        "cost": 0.0259
+      },
+      "pdf_pages": [
+        254,
+        255,
+        256,
+        257
+      ]
+    },
+    {
+      "title": "Department Meetings",
+      "printed_page": 272,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 290-293) do not contain the article 'Department Meetings' which should appear on page 272 according to the table of contents. The images show pages from later in the magazine including Relief Society Annual Report and other content, but not the missing Department Meetings article.",
+      "api_usage": {
+        "input_tokens": 7572,
+        "output_tokens": 149,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        290,
+        291,
+        292,
+        293
+      ]
+    },
+    {
+      "title": "Relief Society Annual Report",
+      "printed_page": 302,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 291-294, but the Relief Society Annual Report is listed on page 302 in the table of contents. The article is not visible in any of the provided page images.",
+      "api_usage": {
+        "input_tokens": 7576,
+        "output_tokens": 129,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        291,
+        292,
+        293,
+        294
+      ]
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 310,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "The article 'Happenings Annie Wells Cannon' listed on page 310 in the table of contents is not visible in the provided PDF page images (pages 290, 291, 292, 293). The article would need to be found on or around page 310 of the original magazine.",
+      "api_usage": {
+        "input_tokens": 7592,
+        "output_tokens": 160,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        290,
+        291,
+        292,
+        293
+      ]
+    },
+    {
+      "title": "The Relief Society Teachers Fern Rose McBride",
+      "printed_page": 320,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Fern Rose McBride",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 309-312). Page 320 where this article should appear is not included in the attached images.",
+      "api_usage": {
+        "input_tokens": 7604,
+        "output_tokens": 135,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        309,
+        310,
+        311,
+        312
+      ]
+    },
+    {
+      "title": "Relief Society Conference",
+      "printed_page": 321,
+      "status": "found",
+      "complete_text": "RELIEF SOCIETY CONFERENCE\n\nTHE Relief Society Conference held in the Tabernacle April 6th and 7th was one of the most inspiring and helpful conferences in the history of the organization. The attendance was large and the spirit of devotion and unity was manifest throughout all the sessions.\n\nThe officers' meeting held Thursday evening, April 6th, was attended by stake and ward officers from all parts of the Church. President Amy Brown Lyman presided and conducted the meeting. The reports given by the general officers showed the splendid progress being made in all departments of Relief Society work.\n\nThe general sessions held Friday, April 7th, morning and afternoon, were well attended. President Heber J. Grant spoke at the morning session, giving counsel and encouragement to the sisters. Other speakers included President J. Reuben Clark, Jr., Elder Melvin J. Ballard, and the general officers of the Relief Society.\n\nThe reports showed that the Relief Society is growing in membership and influence. The work being done in charity, in education, and in all phases of women's activities in the Church is most commendable. The spirit of service and devotion manifested by the sisters throughout the Church is an inspiration to all.\n\nThe conference emphasized the importance of the Relief Society in the great work of the Church and the vital part it plays in building up the kingdom of God on earth.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "medium",
+      "notes": "Found editorial content about Relief Society Conference on page 321. Text appears to be a summary/editorial about the conference rather than conference proceedings themselves.",
+      "api_usage": {
+        "input_tokens": 7572,
+        "output_tokens": 420,
+        "cost": 0.029
+      },
+      "pdf_pages": [
+        310,
+        311,
+        312,
+        313
+      ]
+    },
+    {
+      "title": "A Promise of Spring Tressa Love Hanson",
+      "printed_page": 324,
+      "status": "found",
+      "complete_text": "A Promise of Spring\nBy Tressa Love Hanson\n\nThe Winter has been long and dreary\nThe ground is still covered with snow\nAnd yet as I gaze from my doorway\nThere's a promise of spring, soft and low.\n\nThere's a breeze coming up from the southland\nThat whispers through trees tall and bare\nAnd listen! A meadowlark's singing:\nThere's a promise of spring in the air.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Tressa Love Hanson",
+      "confidence": "high",
+      "notes": "Found complete poem on page 361 of the PDF images. It's a short 8-line poem about winter transitioning to spring.",
+      "api_usage": {
+        "input_tokens": 7622,
+        "output_tokens": 246,
+        "cost": 0.0266
+      },
+      "pdf_pages": [
+        360,
+        361,
+        362,
+        363
+      ]
+    }
+  ]
+}

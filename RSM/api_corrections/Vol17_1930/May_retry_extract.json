@@ -1,0 +1,131 @@
+{
+  "volume": 17,
+  "month": "May",
+  "year": 1930,
+  "mode": "retry_extract",
+  "total_failed": 5,
+  "total_cost": 0.0585,
+  "stats": {
+    "found": 0,
+    "not_found": 5,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Tributes to Clarissa Smith Williams",
+      "order": "a",
+      "status": "parse_error",
+      "pdf_pages": [
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "British National Council of Women",
+      "order": "a",
+      "status": "parse_error",
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280,
+        281
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Editorial - Ten Years of Suffrage",
+      "order": "d",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Faith of the Mothers",
+      "order": "i",
+      "status": "parse_error",
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280,
+        281
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Spring Time",
+      "order": "k",
+      "status": "parse_error",
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280,
+        281
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Moral Teaching Through Home Work",
+      "order": "l",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Moral Teaching Through Home Work",
+      "order": "a",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Old Juniper Tree",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Mrs. George Q. Rich",
+      "confidence": "high",
+      "notes": "Article not found in the provided PDF page images. Table of contents shows it should be on page 270, but that page is not included in the images provided (pages 277, 278, 279, 280, 281).",
+      "order": "a",
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280,
+        281
+      ],
+      "source_file": "May_Vol17_12_Article_Childs_Everyday_Problems_of_Everyday_Child_Laig_V_Hales.txt",
+      "api_usage": {
+        "input_tokens": 8479,
+        "output_tokens": 318,
+        "cost": 0.0302
+      }
+    },
+    {
+      "title": "The Dawn of Hope For Saint and Sinner in the Life to Come",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "J. H. Paul",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images. The images show pages containing advertisements (Troy Laundry, Dr. Cannon's Soft Curd Baby Milk, Temple and Burial Clothes), the magazine cover/contents page, a portrait of President Clarissa Smith Williams, and the beginning of tributes to Clarissa Smith Williams. The article by J. H. Paul that should appear on page 275 according to the table of contents is not included in these page images.",
+      "order": "d",
+      "pdf_pages": [
+        277,
+        278,
+        279,
+        280,
+        281
+      ],
+      "source_file": "May_Vol17_12_Article_Childs_Everyday_Problems_of_Everyday_Child_Laig_V_Hales.txt",
+      "api_usage": {
+        "input_tokens": 8511,
+        "output_tokens": 187,
+        "cost": 0.0283
+      }
+    }
+  ]
+}

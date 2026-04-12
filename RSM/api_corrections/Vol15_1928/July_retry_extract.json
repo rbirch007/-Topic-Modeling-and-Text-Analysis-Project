@@ -1,0 +1,38 @@
+{
+  "volume": 15,
+  "month": "July",
+  "year": 1928,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0279,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Pioneer Memoriam",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Eloise A. McClure",
+      "confidence": "high",
+      "notes": "The article 'Pioneer Memoriam' by Eloise A. McClure is not present in the provided PDF page images (pages 413-417). According to the table of contents, it should be on page 360, but the images provided show pages from a different section of the magazine featuring the Mary Leach Adams article and advertisements.",
+      "order": "b",
+      "pdf_pages": [
+        413,
+        414,
+        415,
+        416,
+        417
+      ],
+      "source_file": "July_Vol15_04_Article_Robbed.txt",
+      "api_usage": {
+        "input_tokens": 8586,
+        "output_tokens": 145,
+        "cost": 0.0279
+      }
+    }
+  ]
+}

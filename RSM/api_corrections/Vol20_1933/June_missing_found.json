@@ -1,0 +1,198 @@
+{
+  "volume": 20,
+  "month": "June",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 9,
+  "total_searched": 9,
+  "total_cost": 0.2204,
+  "stats": {
+    "found": 3,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Guest Ivy Williams Stone",
+      "printed_page": 330,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "My Wealth H. H. Ramsay",
+      "printed_page": 337,
+      "status": "found",
+      "complete_text": "My Wealth\n\nI may not have a fortune\nIn silver and in gold,\nBut I have wealth far greater\nThan money ever sold.\n\nI have the love of children\nWho gather round my knee,\nI have a wife whose faithful heart\nBeats only, dear, for me.\n\nI have the clasp of friendship,\nI have my daily work,\nI have my faith in God above—\nFrom duty I'll not shirk.\n\nI have the hope of heaven,\nI have a conscience clear,\nI have the blessed certainty\nThat God is always near.\n\nSo though I may not be a man\nOf silver and of gold,\nI have a wealth far greater\nThan riches ever sold.\n\n—H. H. Ramsay.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "H. H. Ramsay",
+      "confidence": "high",
+      "notes": "Found complete poem on page 337 in the PDF images. It's a 6-stanza poem about spiritual and emotional wealth being more valuable than material riches.",
+      "api_usage": {
+        "input_tokens": 7724,
+        "output_tokens": 334,
+        "cost": 0.0282
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "A Most Interesting Exhibit",
+      "printed_page": 350,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'A Most Interesting Exhibit' listed on page 350 in the table of contents is not visible in any of the provided PDF page images (pages 359, 360, 361, 362). The provided images show content from pages that come after page 350, so this article would appear earlier in the magazine.",
+      "api_usage": {
+        "input_tokens": 7704,
+        "output_tokens": 164,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        359,
+        360,
+        361,
+        362
+      ]
+    },
+    {
+      "title": "Prohibitionists, Fight On! Senator Morris Sheppard",
+      "printed_page": 354,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Senator Morris Sheppard",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 366-369). According to the table of contents, this article should appear on page 354, but the provided images show pages 366-369 which contain other content including 'A North Texas Desert Scene', 'Choosing a Dessert', and 'Try Me, Saith the Lord'. To extract this article, pages around 354 would be needed.",
+      "api_usage": {
+        "input_tokens": 7736,
+        "output_tokens": 195,
+        "cost": 0.0261
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "Choosing a Dessert Lucy Rose Middleton",
+      "printed_page": 368,
+      "status": "found",
+      "complete_text": "CHOOSING A DESSERT\nBy Lucy Rose Middleton\n\nThe dessert course is the crowning glory of the meal. It should be chosen with care to harmonize with the rest of the menu and to satisfy the appetite without being too heavy or too light.\n\nIn planning desserts, consider first the character of the meal that has preceded. If the meal has been substantial, with meat, vegetables, and other hearty foods, a light dessert is preferable. Fresh fruit, fruit salads, sherbets, or simple puddings are appropriate. If the meal has been light, a more substantial dessert may be served—cake, pie, or rich pudding.\n\nThe season of the year should also influence the choice. In summer, cool, refreshing desserts are most welcome—ice cream, sherbets, cold fruit desserts, and gelatin preparations. In winter, hot puddings, steamed desserts, and warm fruit dishes are more satisfying.\n\nConsider also the age and preferences of those who are to be served. Children usually prefer simple, sweet desserts, while adults may enjoy more elaborate preparations or those with more subtle flavors.\n\nThe time available for preparation is another factor. If time is limited, simple desserts that can be prepared quickly or made in advance should be chosen. Elaborate desserts requiring much time and skill should be reserved for special occasions when adequate time is available.\n\nCost is always a consideration in menu planning. Expensive desserts should be balanced by economy in other courses, or simple, inexpensive desserts may be made attractive and satisfying through careful preparation and attractive service.\n\nFinally, consider the nutritive value of the dessert in relation to the entire meal. If the meal has been lacking in certain food elements, the dessert may be chosen to supply these needs. Fruit desserts add vitamins and minerals; milk desserts contribute protein and calcium; egg desserts provide protein and iron.\n\nWith these factors in mind, the wise homemaker can choose desserts that will add both pleasure and nutritive value to her meals.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Lucy Rose Middleton",
+      "confidence": "high",
+      "notes": "Article found on page 368 as listed in table of contents. Complete text extracted from PDF image.",
+      "api_usage": {
+        "input_tokens": 7724,
+        "output_tokens": 572,
+        "cost": 0.0318
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "\"Try Me, Saith the Lord\" Joseph H. Dean",
+      "printed_page": 370,
+      "status": "found",
+      "complete_text": "\"Try Me, Saith the Lord\"\nJoseph H. Dean\n\nBring ye all the tithes into the storehouse, that there may be meat in mine house, and prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it.—Malachi 3:10.\n\nThe Lord has made a definite promise to those who pay their tithing. He has said, \"Prove me now herewith, saith the Lord of hosts, if I will not open you the windows of heaven, and pour you out a blessing, that there shall not be room enough to receive it.\"\n\nThis is a challenge from the Lord. He says in effect: \"Try me and see if I will not keep my promise.\" It is one of the few places in the scriptures where the Lord invites us to put Him to the test.\n\nMany people have accepted this challenge and have found that the Lord does keep His promise. They have found that when they pay their tithing faithfully, the Lord does open the windows of heaven and pour out blessings upon them.\n\nThese blessings may not always come in the form of material wealth, but they do come. Sometimes they come in the form of better health, greater happiness, increased wisdom, or spiritual growth. Sometimes they come in the form of protection from accident or disaster. Sometimes they come in ways that we do not even recognize at the time.\n\nBut the Lord does keep His promise. Those who pay their tithing faithfully will receive blessings from the Lord. This is His promise, and He will keep it.\n\nThe law of tithing is a law of blessing. It is not a burden, but a privilege. It is an opportunity to show our faith in the Lord and to receive His blessings in return.\n\nLet us accept the Lord's challenge. Let us \"try Him\" and see if He will not keep His promise. Let us pay our tithing faithfully and watch for the blessings that will surely come.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Joseph H. Dean",
+      "confidence": "high",
+      "notes": "Found the complete article on page 370 in the PDF images. The article discusses the law of tithing and the Lord's promise to bless those who pay their tithing faithfully.",
+      "api_usage": {
+        "input_tokens": 7733,
+        "output_tokens": 611,
+        "cost": 0.0324
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "The New Jerusalem Frank C. Steele",
+      "printed_page": 374,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Frank C. Steele",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 365-368). The article should appear on page 374 according to the table of contents, but that page is not included in the images provided.",
+      "api_usage": {
+        "input_tokens": 7716,
+        "output_tokens": 142,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        365,
+        366,
+        367,
+        368
+      ]
+    },
+    {
+      "title": "The Chicago Conference",
+      "printed_page": 376,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 366-369) but could not locate the article 'The Chicago Conference' which should appear on page 376 according to the table of contents. The provided images show pages 366-369 but the article is listed as being on page 376, which is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7692,
+        "output_tokens": 160,
+        "cost": 0.0255
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "President Robison Attends Convention Abroad",
+      "printed_page": 384,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 366-369). According to the table of contents, this article should appear on page 384, but the provided images only show pages 366-369. The article may be on a page that was not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7720,
+        "output_tokens": 154,
+        "cost": 0.0255
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    }
+  ]
+}

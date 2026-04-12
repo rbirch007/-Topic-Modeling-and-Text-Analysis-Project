@@ -1,0 +1,22 @@
+{
+  "volume": 3,
+  "month": "August",
+  "year": 1916,
+  "timestamp": "20260315_120936",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol3_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3992 chars removed)"
+    },
+    {
+      "file": "August_Vol3_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

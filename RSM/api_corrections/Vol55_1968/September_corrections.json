@@ -1,0 +1,221 @@
+{
+  "volume": 55,
+  "month": "September",
+  "year": 1968,
+  "total_files_checked": 28,
+  "files_correct": [
+    "V55_09_02_Poem_Visiting_Esplin.txt",
+    "V55_09_04_Poem_Autumn_Read.txt",
+    "V55_09_11_GenFt_A_Tippetts.txt",
+    "V55_09_12_GenFt_Chore_Anderson.txt",
+    "V55_09_13_GenFt_The_Willardson.txt",
+    "V55_09_18_Poem_Today_Littlewood.txt",
+    "V55_09_19_Poem_Woodland_Tangren.txt",
+    "V55_09_22_Poem_Faith_Gudmundson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Birthday Congratulations article instead of McKay article",
+      "action": "trim_start",
+      "text": "McKay whose voice has been lifted in many lands to proclaim the everlasting gospel",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Because They Care article at the end",
+      "action": "trim_end",
+      "text": "We are thankful for @ prophet \"to guide us in these latter days.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_09_03_SpFt_Because_West.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about visiting teachers",
+      "action": "trim_start",
+      "text": "Visiting teaching is an integral part of the Relief Society program",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_09_05_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains fiction story 'Suffer the Little Children' instead of Woman's Sphere content",
+      "action": "replace_content",
+      "text": "Mary Kraft has won for the fourth time the Dorothy Dawe Award for distinguished journalistic coverage of the home furnishings field",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_09_06_GenFt_Birthday.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains Ribbon-Worthy Work content, missing Birthday Congratulations content",
+      "action": "note",
+      "text": "Birthday Congratulations content appears to be missing from OCR",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_07_Fict_Suffer_Johnson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains If Spring Be Late content instead of Suffer the Little Children",
+      "action": "note",
+      "text": "Correct content appears in V55_09_05_GenFt_Womans_Cannon.txt file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_08_SpFt_The_Red_Olson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Dutch Treat content instead of Red Cross training content",
+      "action": "note",
+      "text": "OCR appears to have content mixed up between articles",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_09_GenFt_Ribbon-Worthy_McBr.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Dutch Treat content instead of Ribbon-Worthy Work",
+      "action": "note",
+      "text": "Correct content appears in V55_09_06_GenFt_Birthday.txt file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_10_GenFt_A_Noall.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence with continuation marker",
+      "action": "append",
+      "text": "ing another round of nature, it seems to be nothing at all, except for the picture.",
+      "confidence": "medium",
+      "validated": true
+    },
+    {
+      "file": "V55_09_14_GenFt_An_Time.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains art commentary content that belongs to Cultural Refinement section",
+      "action": "trim_end",
+      "text": "The \"Fair\" was indeed a memorable experience, richly rewarding to the Relief Society women, their families, and their guests.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_09_20_GenFt_Editorial_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Suffer the Little Children story",
+      "action": "trim_start",
+      "text": "''Trifles make perfection, but perfection is no trifle,'' Michelangelo once replied",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_09_21_GenFt_Gift_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Spiritual Living lesson content instead of Gift Cookies content",
+      "action": "note",
+      "text": "Gift Cookies content appears to be missing from OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_23_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content from following Visiting Teacher Message",
+      "action": "note",
+      "text": "Spiritual Living lesson content appears in V55_09_21_GenFt_Gift_Department.txt file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V55_09_28_Fict_If_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles instead of If Spring Be Late Chapter 6",
+      "action": "note",
+      "text": "If Spring Be Late content appears in V55_09_07_Fict_Suffer_Johnson.txt file",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "A Dutch Treat Jean Anderson Jensen",
+      "expected_page": 669,
+      "status": "merged_with_another",
+      "merged_into": "V55_09_08_SpFt_The_Red_Olson.txt"
+    },
+    {
+      "title": "Gift Cookies For All Occasions Melba S. Payne",
+      "expected_page": 684,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Significant content mixing and misplacement throughout this issue. Multiple articles contain wrong content, suggesting OCR processing errors or page boundary issues. Several articles need content swapping between files.",
+  "validated_corrections": [
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Birthday Congratulations article instead of McKay article",
+      "action": "trim_start",
+      "text": "McKay whose voice has been lifted in many lands to proclaim the everlasting gospel",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Because They Care article at the end",
+      "action": "trim_end",
+      "text": "We are thankful for @ prophet \"to guide us in these latter days.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_09_10_GenFt_A_Noall.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence with continuation marker",
+      "action": "append",
+      "text": "ing another round of nature, it seems to be nothing at all, except for the picture.",
+      "confidence": "medium",
+      "validated": true
+    },
+    {
+      "file": "V55_09_14_GenFt_An_Time.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains art commentary content that belongs to Cultural Refinement section",
+      "action": "trim_end",
+      "text": "The \"Fair\" was indeed a memorable experience, richly rewarding to the Relief Society women, their families, and their guests.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_09_03_SpFt_Because_West.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about visiting teachers",
+      "action": "trim_start",
+      "text": "Visiting teaching is an integral part of the Relief Society program",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_09_20_GenFt_Editorial_Madsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Suffer the Little Children story",
+      "action": "trim_start",
+      "text": "''Trifles make perfection, but perfection is no trifle,'' Michelangelo once replied",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

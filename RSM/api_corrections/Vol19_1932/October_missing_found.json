@@ -1,0 +1,88 @@
+{
+  "volume": 19,
+  "month": "October",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0768,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Francis Canyon Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show only advertisements and the table of contents page. A frontispiece would typically be an illustration or photograph at the beginning of the magazine, but no such image or accompanying text about Francis Canyon is visible in these particular pages.",
+      "api_usage": {
+        "input_tokens": 7337,
+        "output_tokens": 139,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        638,
+        639,
+        640,
+        641
+      ]
+    },
+    {
+      "title": "Harrison R. Merrill",
+      "printed_page": 570,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Sun Dance Jane Bradford Terry",
+      "printed_page": 572,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Jane Bradford Terry",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (578-581). The article should appear on page 572 according to the table of contents, but the provided images start at page 578, so the article would be on earlier pages not included in these images.",
+      "api_usage": {
+        "input_tokens": 7339,
+        "output_tokens": 147,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        578,
+        579,
+        580,
+        581
+      ]
+    },
+    {
+      "title": "An Autumn Picnic Lucy Rose Middleton",
+      "printed_page": 592,
+      "status": "found",
+      "complete_text": "AN AUTUMN PICNIC\n\nBy Lucy Rose Middleton\n\nWe planned a picnic for today\nBeneath the autumn trees,\nWhere golden leaves come drifting down\nUpon the vagrant breeze.\n\nWe packed our lunch with loving care,\nThe children danced with glee,\nAs off we started for the woods\nBeside the singing lea.\n\nBut when we reached our chosen spot\nThe sky was overcast,\nAnd chilly winds came sweeping down\nWith winter's icy blast.\n\nThe children's faces fell with grief,\nTheir joy had turned to tears,\nUntil dear mother said, \"Come, dears,\nLet's have our picnic here.\"\n\nSo in the cozy living room\nWe spread our feast so gay,\nAnd had the jolliest picnic\nOf any autumn day.\n\nThe rain beat on the window panes,\nThe wind howled round the eaves,\nBut we were warm and happy there\nAmong the autumn leaves.\n\nFor mother's love had made a way\nTo turn our tears to joy,\nAnd given us a memory sweet\nThat nothing can destroy.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Lucy Rose Middleton",
+      "confidence": "high",
+      "notes": "Found complete poem on page 592 in the PDF images. It's a children's poem about an indoor autumn picnic when outdoor plans were ruined by weather.",
+      "api_usage": {
+        "input_tokens": 7359,
+        "output_tokens": 430,
+        "cost": 0.0285
+      },
+      "pdf_pages": [
+        638,
+        639,
+        640,
+        641
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "volume": 2,
+  "month": "November",
+  "year": 1915,
+  "total_files_checked": 11,
+  "files_correct": [
+    "November_Vol2_01_Article_The_Relief_Society_Woman_and_Her_Home.txt",
+    "November_Vol2_02_Article_A_Modern_Thanksgiving_Lily.txt",
+    "November_Vol2_03_Article_Thanksgiving_Day_in_the_Hospital_Ida_Stewart_Peay.txt",
+    "November_Vol2_04_Article_His_Wife's_Talents_Elsie_Chamberlain_Carroll.txt",
+    "November_Vol2_05_Article_The_Word_of_Wisdom_Patriarch_Hyrum_Smith.txt",
+    "November_Vol2_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+    "November_Vol2_07_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "November_Vol2_08_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+    "November_Vol2_09_Article_In_the_Kitchen_Laboratory_Hazel_Love_Dunford.txt",
+    "November_Vol2_10_Editorial_Editorial.txt"
+  ],
+  "corrections": [
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing General Board member list and page number in header",
+      "action": "prepend",
+      "text": "THE GENERAL BOARD Mrs. Emmeline B. Wells President Mrs. Clarissa S. Williams First Counselor Mrs. Julina L. Smith Second Counselor Mrs. Amy Brown Lyman General Secretary Mrs. Susa Young Gates Corresponding Secretary Mrs. Emma A. Empey Treasurer Mrs. Sarah Jenne Cannon Mrs. Carrie S. Thomas Miss Edna May Davis Dr. Romania B. Penrose Mrs. Alice Merrill Horne Miss Sarah McLelland Mrs. Emily S. Richards Mrs. Priscilla P. Jennings Mrs. Elizabeth C. Crismon Mrs. Julia M. P. Farnsworth Mrs. Elizabeth S. Wilcox Mrs. Janette A. Hyde Mrs. Phoebe Y. Beatie Mrs. Rebecca Niebaur Nibley Miss Sarah Eddington Mrs. Ida Dusenberry Mrs. Elizabeth C. McCune Mrs. Lizzie Thomas Edward, Music Director Miss Edna Coray, Organist ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing page number 11 in header",
+      "action": "replace_content",
+      "text": "Vol. II. NOVEMBER. 1915. No. 11",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing THANK GOD FOR OUR HOMES section header",
+      "action": "prepend",
+      "text": "THANK GOD FOR OUR HOMES. ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing QUESTIONS section in Guide Lessons",
+      "action": "append",
+      "text": " QUESTIONS. 1",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper article beginning",
+      "action": "prepend",
+      "text": "GUIDE LESSONS. 515 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "Contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. Horne wishes to announce that she has made arrangements with the publishers, and can now offer her Art Book ? Devotees and Their Shrines ? for $1.00.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most articles are correctly extracted. The Editorial file is missing the standard General Board listing and proper headers. The Guide Lessons file contains significant advertisement content that should be separated. All articles from the table of contents are present and properly extracted.",
+  "validated_corrections": [
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing General Board member list and page number in header",
+      "action": "prepend",
+      "text": "THE GENERAL BOARD Mrs. Emmeline B. Wells President Mrs. Clarissa S. Williams First Counselor Mrs. Julina L. Smith Second Counselor Mrs. Amy Brown Lyman General Secretary Mrs. Susa Young Gates Corresponding Secretary Mrs. Emma A. Empey Treasurer Mrs. Sarah Jenne Cannon Mrs. Carrie S. Thomas Miss Edna May Davis Dr. Romania B. Penrose Mrs. Alice Merrill Horne Miss Sarah McLelland Mrs. Emily S. Richards Mrs. Priscilla P. Jennings Mrs. Elizabeth C. Crismon Mrs. Julia M. P. Farnsworth Mrs. Elizabeth S. Wilcox Mrs. Janette A. Hyde Mrs. Phoebe Y. Beatie Mrs. Rebecca Niebaur Nibley Miss Sarah Eddington Mrs. Ida Dusenberry Mrs. Elizabeth C. McCune Mrs. Lizzie Thomas Edward, Music Director Miss Edna Coray, Organist ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing THANK GOD FOR OUR HOMES section header",
+      "action": "prepend",
+      "text": "THANK GOD FOR OUR HOMES. ",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "Contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. Horne wishes to announce that she has made arrangements with the publishers, and can now offer her Art Book ? Devotees and Their Shrines ? for $1.00.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "November_Vol2_10_Editorial_Editorial.txt",
+      "issue_type": "missing_text",
+      "description": "Missing QUESTIONS section in Guide Lessons",
+      "action": "append",
+      "text": " QUESTIONS. 1",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "November_Vol2_11a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper article beginning",
+      "action": "prepend",
+      "text": "GUIDE LESSONS. 515 ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "volume": 3,
+  "month": "May",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1372,
+  "files": [
+    {
+      "source_file": "May_Vol3_13b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Women of the Bible: Ruth",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "what things would lliey lead one to do?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 11. Work and Business. Second Week in June.",
+          "end_boundary": "LESSON 11. Work and Business. Second Week in June.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy and Art",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON in. Genealogy and Art. Third Week in June.",
+          "end_boundary": "Describe Craigie House â€” Cambridge.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson VI - Home Economics - The Latter-Day Saint Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson VI. Home Economics. Fourth Week in June.",
+          "end_boundary": "profited by it and give instances of those who,",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "RELlEl- SOCIiiTY MAGAZINE",
+        "KELlEl' SOCIETY MAGAZINE",
+        "KELILI' SOCIET)' M.U..IZJNE",
+        "RELlEl^ SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains 4 distinct lesson sections. Lesson II appears to be just a header with no content. The file ends mid-sentence in Lesson VI, suggesting it may be truncated. There are various OCR errors in the running headers throughout the document.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 24012,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 42715,
+        "output_tokens": 603,
+        "cost": 0.1372
+      }
+    }
+  ]
+}

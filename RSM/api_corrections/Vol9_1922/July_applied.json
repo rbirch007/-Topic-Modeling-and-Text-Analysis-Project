@@ -1,0 +1,42 @@
+{
+  "volume": 9,
+  "month": "July",
+  "year": 1922,
+  "timestamp": "20260315_120949",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "July_Vol9_02_Article_Parting_(Music)_George_Careless.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "July_Vol9_03_Article_Our_Hymn_Book_Susa_Young_Gates.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (273 chars added)"
+    },
+    {
+      "file": "July_Vol9_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (8380 chars removed)"
+    },
+    {
+      "file": "July_Vol9_12a_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_I_Theology_and_Testimon.txt",
+      "action": "append",
+      "result": "APPLIED append (519 chars added)"
+    },
+    {
+      "file": "July_Vol9_13_Article_Your_Thirty_Slaves.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5391 chars removed)"
+    }
+  ]
+}

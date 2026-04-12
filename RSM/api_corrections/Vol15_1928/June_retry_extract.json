@@ -1,0 +1,60 @@
+{
+  "volume": 15,
+  "month": "June",
+  "year": 1928,
+  "mode": "retry_extract",
+  "total_failed": 4,
+  "total_cost": 0.0,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Literary Section",
+      "order": "c",
+      "status": "parse_error",
+      "pdf_pages": [
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Social Service Department",
+      "order": "d",
+      "status": "parse_error",
+      "pdf_pages": [
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "General Session (Thursday Morning)",
+      "order": "f",
+      "status": "parse_error",
+      "pdf_pages": [
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Substitution / Be With Me, Lord / June / The Great Salt Lake",
+      "order": "h",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

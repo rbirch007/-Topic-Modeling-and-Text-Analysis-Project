@@ -1,0 +1,87 @@
+{
+  "volume": 12,
+  "month": "December",
+  "year": 1925,
+  "mode": "retry_extract",
+  "total_failed": 3,
+  "total_cost": 0.0548,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "If Ye Have Faith",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Relief Society Conference",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Amy Brown Lyman",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 620-624, but they contain an article titled 'Notes From the Field' by Amy Brown Lyman, not 'Relief Society Conference'. According to the table of contents, 'Relief Society Conference' should be on page 631, which is not included in these images.",
+      "order": "c",
+      "pdf_pages": [
+        620,
+        621,
+        622,
+        623,
+        624
+      ],
+      "source_file": "December_Vol12_03_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+      "api_usage": {
+        "input_tokens": 8431,
+        "output_tokens": 135,
+        "cost": 0.0273
+      }
+    },
+    {
+      "title": "State Welfare Workers Meet",
+      "order": "d",
+      "status": "parse_error",
+      "pdf_pages": [
+        703,
+        704,
+        705,
+        706,
+        707
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for February",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The PDF pages shown contain 'Notes from the Field' by Amy Brown Lyman and 'Guide Lessons for March' but do not contain 'Guide Lessons for February'. The March lessons cover 'Theology and Testimony - The Adamic Dispensation' and 'Work and Business - Teachers' Topic for March on Consumption of Milk'.",
+      "order": "b",
+      "pdf_pages": [
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "source_file": "December_Vol12_14_Article_Tennyson,_The_Boy_and_the_Match_Annie_Pike_Greenwood.txt",
+      "api_usage": {
+        "input_tokens": 8431,
+        "output_tokens": 148,
+        "cost": 0.0275
+      }
+    }
+  ]
+}

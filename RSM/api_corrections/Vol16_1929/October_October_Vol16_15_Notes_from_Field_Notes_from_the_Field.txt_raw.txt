@@ -1,0 +1,63 @@
+Looking at this file, I can see it contains multiple distinct sections that should be split. Based on the content and structure, I can identify several separate articles/lessons:
+
+1. Notes from the Field (continuing from previous page)
+2. A poem "Sunflowers" by Kate Thomas
+3. Guide Lessons for December with multiple sub-lessons
+4. Another poem "Sunsets" by Grace Mister Frost
+5. Advertisements section
+
+Let me analyze the boundaries carefully:
+
+{
+  "source_file": "October_Vol16_15_Notes_from_Field_Notes_from_the_Field.txt",
+  "num_articles_found": 5,
+  "splits": [
+    {
+      "order": "a",
+      "title": "Notes from the Field",
+      "category": "Notes_from_Field",
+      "author": null,
+      "start_boundary": "There are 27 members of this organization, the picture",
+      "end_boundary": "Oh, truly, sunflowers know just where to grow.",
+      "confidence": "high"
+    },
+    {
+      "order": "b", 
+      "title": "Guide Lessons for December",
+      "category": "Guide_Lessons",
+      "author": null,
+      "start_boundary": "Guide Lessons for December LESSON 1 Theology and",
+      "end_boundary": "Intelligent parenthood is the only answer. QUESTIONS FOR",
+      "confidence": "high"
+    },
+    {
+      "order": "c",
+      "title": "Questions for the Further Stimulation of Thought",
+      "category": "Guide_Lessons", 
+      "author": null,
+      "start_boundary": "QUESTIONS FOR THE FURTHER STIMULATION OF THOUGHT What",
+      "end_boundary": "explains plan which will train you thoroughly at",
+      "confidence": "medium"
+    },
+    {
+      "order": "d",
+      "title": "Sunsets",
+      "category": "Article",
+      "author": "Grace Mister Frost",
+      "start_boundary": "Sunsets By Grace Mister Frost Yesterday's sun went",
+      "end_boundary": "the end of day for me! [ADVERTISEMENTS",
+      "confidence": "high"
+    },
+    {
+      "order": "e",
+      "title": "Advertisements",
+      "category": "Current_Topics",
+      "author": null,
+      "start_boundary": "[ADVERTISEMENTS SECTION] PRIVATE SECRETARY Dress well, have",
+      "end_boundary": "E. T. RALPHS, General Manager When Buying",
+      "confidence": "high"
+    }
+  ],
+  "running_headers_to_strip": ["RELIEF SOCIETY MAGAZINE", "GUIDE LESSONS FOR DECEMBER"],
+  "notes": "This file contains the end of Notes from the Field, followed by Guide Lessons for December (which is a substantial multi-lesson section), a poem, and advertisements. The Guide Lessons section contains multiple sub-lessons but should remain as one unit as it's a cohesive educational curriculum."
+}

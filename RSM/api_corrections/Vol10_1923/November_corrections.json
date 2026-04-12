@@ -1,0 +1,116 @@
+{
+  "volume": 10,
+  "month": "November",
+  "year": 1923,
+  "total_files_checked": 18,
+  "files_correct": [
+    "November_Vol10_04_Article_Louis_Pasteur_(Portrait).txt",
+    "November_Vol10_07_Poetry_Moonlight_on_the_Lake_(Poem)_Ida_R._Alldredge.txt",
+    "November_Vol10_08_Article_Ruth's_Thanksgiving_Elsie_Talmage_Brandley.txt",
+    "November_Vol10_09_Article_Nurse_Aids'_Class.txt",
+    "November_Vol10_10_Article_Old_Man_Clegg.txt",
+    "November_Vol10_11_Article_The_Reasons_for_the_Christmas_Seal.txt",
+    "November_Vol10_12_Article_Jealousy_H._L._Johnston.txt",
+    "November_Vol10_13_Article_Something_to_Think_About_Heber_J._Sears,_M._D..txt",
+    "November_Vol10_14_Article_Ten_Reasons_Why_I_Should_Subscribe_for_the_Relief_Society_Ma.txt",
+    "November_Vol10_15_Article_One_Hundred_Years_of_Teacher_Training_A._E._Winship.txt",
+    "November_Vol10_16_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt"
+  ],
+  "corrections": [
+    {
+      "file": "November_Vol10_01_Frontispiece_Harvest_Home_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the Names poem which should be a separate article",
+      "action": "trim_end",
+      "text": "THE HARVEST A Utah Bean Field THE Relief Society Magazine el, X NOVEMBER, 1923 No. 11",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol10_05_Article_Pasteur's_Contribution_to_the_Relief_of_Human_Suffering_Dr._.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Faith poem and Editorial content that should be separate",
+      "action": "trim_end",
+      "text": "We need more men who can receive and interpret the messages which God is trying to communicate to his children.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol10_17a_Notes_from_Field_Notes_From_the_Field.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete, missing significant content from the middle and end",
+      "action": "note",
+      "text": "File appears to have OCR gaps in the middle section and is missing the complete ending",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "November_Vol10_17b_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "issue_type": "wrong_content",
+      "description": "File title says 'for December' but should be 'for January' based on content",
+      "action": "note",
+      "text": "Title inconsistency - content is for January lessons but header says December",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "November_Vol10_18_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence in the middle of the Whittier lesson",
+      "action": "prepend",
+      "text": "We have now reached the period of the New England Re",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Names (Poem)",
+      "expected_page": 531,
+      "status": "merged_with_another",
+      "merged_into": "November_Vol10_01_Frontispiece_Harvest_Home_Frontispiece.txt"
+    },
+    {
+      "title": "Faith (Poem)",
+      "expected_page": 538,
+      "status": "merged_with_another",
+      "merged_into": "November_Vol10_05_Article_Pasteur's_Contribution_to_the_Relief_of_Human_Suffering_Dr._.txt"
+    },
+    {
+      "title": "Teachers' Topic for January",
+      "expected_page": 580,
+      "status": "not_in_any_file"
+    }
+  ],
+  "notes": "Several articles are merged together and need to be separated. The Guide Lessons files appear to be split incorrectly. Some content may be missing due to OCR gaps, particularly in the Notes from the Field section.",
+  "validated_corrections": [
+    {
+      "file": "November_Vol10_01_Frontispiece_Harvest_Home_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the Names poem which should be a separate article",
+      "action": "trim_end",
+      "text": "THE HARVEST A Utah Bean Field THE Relief Society Magazine el, X NOVEMBER, 1923 No. 11",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol10_05_Article_Pasteur's_Contribution_to_the_Relief_of_Human_Suffering_Dr._.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Faith poem and Editorial content that should be separate",
+      "action": "trim_end",
+      "text": "We need more men who can receive and interpret the messages which God is trying to communicate to his children.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol10_18_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence in the middle of the Whittier lesson",
+      "action": "prepend",
+      "text": "We have now reached the period of the New England Re",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

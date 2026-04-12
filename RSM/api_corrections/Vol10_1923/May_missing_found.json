@@ -1,0 +1,66 @@
+{
+  "volume": 10,
+  "month": "May",
+  "year": 1923,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0495,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Optimism Selected",
+      "printed_page": 243,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Selected",
+      "confidence": "high",
+      "notes": "The article 'Optimism Selected' listed on page 243 in the table of contents is not visible in any of the provided PDF page images (pages 255, 256, 257, 258). The article would need to be found on or around page 243 of the original magazine.",
+      "api_usage": {
+        "input_tokens": 7439,
+        "output_tokens": 151,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    },
+    {
+      "title": "Editorials 253,",
+      "printed_page": 255,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 255-258, but these pages contain advertisements (Blue Pine Olive Oil, Simons & Brinton Undertakers, Utah State National Bank, W.M. McConahay Jeweler, Utah Workshop for the Blind) rather than editorial content. The editorial content listed as being on page 255 is not visible in these advertisement pages.",
+      "api_usage": {
+        "input_tokens": 7445,
+        "output_tokens": 171,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    },
+    {
+      "title": "Guide Lessons for July",
+      "printed_page": 262,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

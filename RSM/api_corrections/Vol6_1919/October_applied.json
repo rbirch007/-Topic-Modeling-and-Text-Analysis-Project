@@ -1,0 +1,47 @@
+{
+  "volume": 6,
+  "month": "October",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol6_01_Reverend_Anna_Howard_Shaw_Frontispiece.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (9 chars removed)"
+    },
+    {
+      "file": "October_Vol6_03_The_Woman's_Relief_Society_Dr._James_E._Talmage.txt",
+      "action": "append",
+      "result": "APPLIED append (804 chars added)"
+    },
+    {
+      "file": "October_Vol6_04g_Current_Topics_On_the_Watch_Tower.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol6_15a_Notes_from_Field_The_Official_Round_Table.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (12 chars removed)"
+    },
+    {
+      "file": "October_Vol6_21_Guide_Lessons.txt",
+      "action": "note",
+      "result": "INFO: File contains mixed content from multiple sections including guide lessons and other articles"
+    }
+  ]
+}

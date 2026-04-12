@@ -1,0 +1,37 @@
+{
+  "volume": 8,
+  "month": "May",
+  "year": 1921,
+  "timestamp": "20260315_120946",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (188 chars removed)"
+    },
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (257 chars removed)"
+    },
+    {
+      "file": "May_Vol8_03_Article_Wrapped_in_Wool_Agnes_Lovendahl.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1323 chars removed)"
+    },
+    {
+      "file": "May_Vol8_04_Article_The_Mormon_Church_Against_Tobacco_Will_H._Brown.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1322 chars added)"
+    },
+    {
+      "file": "May_Vol8_16a_Editorial_Editorial_The_Old_Order_Changeth.txt",
+      "action": "append",
+      "result": "APPLIED append (58 chars added)"
+    }
+  ]
+}

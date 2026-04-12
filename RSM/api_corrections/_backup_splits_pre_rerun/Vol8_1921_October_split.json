@@ -1,0 +1,69 @@
+{
+  "volume": 8,
+  "month": "October",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1197,
+  "files": [
+    {
+      "source_file": "October_Vol8_11_Article_Excursion_Salt_Lake_Temple_workers.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Excursion of Salt Lake Temple Workers",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "The Conference of Christian Workers, recently held",
+          "end_boundary": "marking another mile-stone in the history",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for December - Lesson I - Theology and Testimony - Life after Death",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS 607 privilege of building",
+          "end_boundary": "Relief Society Magazine, Dec., 1919; Improvement Era, December, 1918.)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for December - Lesson III - Literature - Emily Hill Woodmansee",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature. (Third Week in",
+          "end_boundary": "would be glad to retain as memory gems.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for December - Lesson IV - Social Service - Juvenile Delinquency II",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service. (Fourth Week",
+          "end_boundary": "How may the failure to use a tooth brush cause stealing?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple lesson sections merged together. The first section appears to be part of an excursion article that was cut off, followed by three complete Guide Lessons for December covering Theology, Literature, and Social Service topics. The lessons are clearly delineated with Roman numeral headings and distinct subject matter changes.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16411,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37029,
+        "output_tokens": 572,
+        "cost": 0.1197
+      }
+    }
+  ]
+}

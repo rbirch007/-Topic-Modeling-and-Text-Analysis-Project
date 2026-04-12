@@ -1,0 +1,46 @@
+{
+  "volume": 5,
+  "month": "March",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1193,
+  "files": [
+    {
+      "source_file": "March_Vol5_18c_Genealogy_Guide_Lessons_-_Lesson_III_Genealogy_-_History_Beginnings_in_b.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week",
+          "end_boundary": "LESSON III. Genealogy. Third Week in April.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson III. Genealogy - History Beginnings in Europe",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "HISTORY BEGINNINGS IN EUROPE. We have considered",
+          "end_boundary": "Note. The class should have a good map",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two lesson sections merged together. The first lesson (Work and Business) appears to be incomplete with only the header present. The second lesson (Genealogy) is a complete lesson about European history beginnings with detailed content about various European tribes and peoples, ending with study questions.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 15963,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37986,
+        "output_tokens": 356,
+        "cost": 0.1193
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "volume": 14,
+  "month": "December",
+  "year": 1927,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0241,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol14_05_Article_Jaffa_Road_from_David's_Tower.txt",
+      "status": "delete",
+      "current_chars": 215,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a header artifact or misextraction. The text contains fragments of the table of contents and magazine masthead information rather than an actual article. 'Jaffa Road from David's Tower' appears in the contents listing but no corresponding article content is visible in the provided PDF pages.",
+      "api_usage": {
+        "input_tokens": 7211,
+        "output_tokens": 163,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        703,
+        704,
+        705,
+        706
+      ]
+    }
+  ]
+}

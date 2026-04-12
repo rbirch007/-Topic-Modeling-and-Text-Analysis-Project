@@ -1,0 +1,126 @@
+{
+  "volume": 2,
+  "month": "January",
+  "year": 1915,
+  "total_merged": 2,
+  "total_splits": 8,
+  "total_cost": 0.1827,
+  "files": [
+    {
+      "source_file": "January_Vol2_10_Editorial_Editorial.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . RELIEF SOCIETY MAGAZINE Editor Susa",
+          "end_boundary": "aid you wherever and whenever you may ask",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson I - Theology and Testimony - The Law of Obedience",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson I. Work and Business. First Week.",
+          "end_boundary": "the dead letter and the living oracle.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy - Salvation Universal",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Genealogy. Lesson III ? Salvation Universal.",
+          "end_boundary": "the Prophet Joseph Smith on the subject.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lessons IV and V - Home Ethics and Art",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. HOME ETHICS.",
+          "end_boundary": "Devotees and their Shrines. EDITORIAL NOTES.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the Editorial section followed by three Guide Lessons covering Theology, Genealogy, and Home Ethics/Art. The lessons are clearly delineated with Roman numerals and subject headings.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8215,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 27666,
+        "output_tokens": 499,
+        "cost": 0.0905
+      }
+    },
+    {
+      "source_file": "January_Vol2_11_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Lesson II: The Law of Obedience",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 41 it is by obedience to that",
+          "end_boundary": "the dead letter and the living oracle. Genealogy.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Lesson III: Salvation Universal",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Genealogy. Lesson III ? Salvation Universal. 1. The origin",
+          "end_boundary": "our responsibility towards our dead. Home Ethics and Art.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Ethics - Lesson IV: Ideal Human Character",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. HOME ETHICS. Lesson IV ?",
+          "end_boundary": "help in our home circle? ART. Lesson V",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Art - Lesson V: Foreword",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "ART. Lesson V ? Foreword. Fear God, and",
+          "end_boundary": "Devotees and their Shrines. EDITORIAL NOTES. In sending",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections that were merged together: Theology (Lesson II), Genealogy (Lesson III), Home Ethics (Lesson IV), and Art (Lesson V). Each lesson has clear subject matter boundaries and question sections. The content after 'EDITORIAL NOTES' appears to be magazine administrative content that should remain with the Art lesson as it's the final lesson in the sequence.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8382,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 27810,
+        "output_tokens": 588,
+        "cost": 0.0922
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "volume": 56,
+  "month": "October",
+  "year": 1969,
+  "timestamp": "20260313_235325",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V56_10_01_Fict_Heart_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1509 chars)"
+    },
+    {
+      "file": "V56_10_03_SpFt_Testimony_Brown.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V56_10_08_GenFt_From_Near_and_Far.txt",
+      "action": "note",
+      "result": "INFO: File contains poem, cover credits, and reader letters instead of From Near and Far content"
+    },
+    {
+      "file": "V56_10_09_GenFt_Womans_Cannon.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V56_10_13_GenFt_Birthday.txt",
+      "action": "note",
+      "result": "INFO: File contains fragment about father sending children to earth instead of Birthday Congratulations content"
+    },
+    {
+      "file": "V56_10_14_GenFt_Thoughts_Morley.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V56_10_16_GenFt_Casserole_Watson.txt",
+      "action": "note",
+      "result": "INFO: File contains Black Walnut Gathering content instead of Casserole Cookery"
+    },
+    {
+      "file": "V56_10_25_GenFt_Spiritual_Doxey.txt",
+      "action": "note",
+      "result": "INFO: File contains Black Walnut Gathering content instead of Spiritual Living lesson"
+    },
+    {
+      "file": "V56_10_26_GenFt_Visiting_Smith.txt",
+      "action": "note",
+      "result": "INFO: File contains Black Walnut Gathering and Make Your Own Baby's Book content instead of Visiting Teacher Message"
+    },
+    {
+      "file": "V56_10_27_GenFt_Homemaking_Taylor.txt",
+      "action": "note",
+      "result": "INFO: File contains Make Your Own Baby's Book content instead of Homemaking lesson"
+    },
+    {
+      "file": "V56_10_28_GenFt_Social_Christensen.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5107 chars removed)"
+    },
+    {
+      "file": "V56_10_29_GenFt_Notes_Activities.txt",
+      "action": "note",
+      "result": "INFO: File is nearly empty instead of containing Relief Society Activities content"
+    }
+  ]
+}

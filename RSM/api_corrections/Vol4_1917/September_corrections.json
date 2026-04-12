@@ -1,0 +1,184 @@
+{
+  "volume": 4,
+  "month": "September",
+  "year": 1917,
+  "total_files_checked": 17,
+  "files_correct": [
+    "September_Vol4_02_Frontispiece_Art_Glass_Window_in_the_Salt_Lake_Temple_Frontispiece_A_Frie.txt",
+    "September_Vol4_03_Poetry_Reclaimed._A_Poem_Coral_J._Black.txt",
+    "September_Vol4_04_Article_The_Red_Cross_Young_Gates.txt",
+    "September_Vol4_05_Article_The_Widow's_Mite_Laura_Moench_Jenkins.txt",
+    "September_Vol4_06_Article_Real_Economy_in_the_Home_Clara_Fagangren.txt",
+    "September_Vol4_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "September_Vol4_10_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "September_Vol4_11a_Editorial_Editorial.txt",
+    "September_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Theology_and_Testimony.txt",
+    "September_Vol4_11c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+    "September_Vol4_11d_Guide_Lessons_Guide_Lessons_-_Lesson_III_-_Genealogy_and_Literature.txt",
+    "September_Vol4_11e_Guide_Lessons_Guide_Lessons_-_Lesson_IV_-_Home_Economics.txt",
+    "September_Vol4_12_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "September_Vol4_01_Article_The_Relief_Society_Magazine_Owned_and_Published_by_the_Gener.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'A Friend of the Helpless Dead' article instead of the expected 'A Bouquet and a Sentiment' article",
+      "action": "replace_content",
+      "text": "A BOUQUET AND A SENTIMENT. Lula Greene Richards. This sweet, old-fashioned bouquet Of simple, quiet hue, Dear Sister Ann, because I can, I pluck today for you. Not for its costly raiment Nor for its fragrance rare, But that it draws for certain cause My thoughts with you to share. We've sung and worked in meetings, Have ranged our districts o'er, Have sowed good seeds and banished weeds For forty years and more. Your hands for work were suited, Mine never could excel, Yet willing each to learn or teach. We trust we've both done well. When differences I've settled, You've sometimes said my part Was oil to pour on feelings sore And soothe the wounded heart. Thus we have walked together With joyful piety; We love the aim, the noble name, \"Relief Society.\" Life scenes are swiftly changing, Still, ever and anon. With work and song we'll help along The good cause, on and on. And may we all be thoughtful In this broad field of ours. To find and pluck and \"for good luck\" Take time to \"scatter flowers.\"",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'HOME ENTERTAINMENTS. 507' instead of proper beginning",
+      "action": "trim_start",
+      "text": "HOME ENTERTAINMENTS. 507 dainty, ruffled and embroidered ones for afternoon wear and the big kitchen aprons needed by all home-makers.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into 'Notes from the Field' content",
+      "action": "trim_end",
+      "text": "The irregular zigzag border will fade away into the rest of the design, and will not be noticed when dry.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'Coley.' which is the end of a letter from the previous article",
+      "action": "trim_start",
+      "text": "Coley.\" NOTES FROM THE FIELD. 513 /",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_11a_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete text",
+      "action": "append",
+      "text": "September, 1823-1917.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "September_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Theology_and_Testimony.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete with 'Psalms.' instead of complete lesson content",
+      "action": "append",
+      "text": "Chapters 45-68.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "September_Vol4_11c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only headers with no actual lesson content",
+      "action": "note",
+      "text": "This appears to be just section headers - the actual lesson content may be missing from OCR or merged elsewhere",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "September_Vol4_11d_Guide_Lessons_Guide_Lessons_-_Lesson_III_-_Genealogy_and_Literature.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete mid-sentence",
+      "action": "append",
+      "text": "be brought to class to give this story first hand have this done.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_12_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete with advertisement content",
+      "action": "trim_end",
+      "text": "For further information  address Mrs. Amy B. Lyman. General Secretary. 2R Bishop's Building, Salt Lake City. Utah.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "A Bouquet and a Sentiment",
+      "expected_page": 481,
+      "status": "merged_with_another",
+      "merged_into": "September_Vol4_01_Article_The_Relief_Society_Magazine_Owned_and_Published_by_the_Gener.txt"
+    }
+  ],
+  "notes": "The extraction has several issues: 1) The first article file contains the wrong content (A Friend of the Helpless Dead instead of A Bouquet and a Sentiment), 2) Several files have content bleeding between articles, 3) Some Guide Lessons sections are incomplete or fragmented across multiple files, 4) Advertisement content appears mixed with article content in some files. The OCR quality appears good overall but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'HOME ENTERTAINMENTS. 507' instead of proper beginning",
+      "action": "trim_start",
+      "text": "HOME ENTERTAINMENTS. 507 dainty, ruffled and embroidered ones for afternoon wear and the big kitchen aprons needed by all home-makers.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into 'Notes from the Field' content",
+      "action": "trim_end",
+      "text": "The irregular zigzag border will fade away into the rest of the design, and will not be noticed when dry.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'Coley.' which is the end of a letter from the previous article",
+      "action": "trim_start",
+      "text": "Coley.\" NOTES FROM THE FIELD. 513 /",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_11d_Guide_Lessons_Guide_Lessons_-_Lesson_III_-_Genealogy_and_Literature.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete mid-sentence",
+      "action": "append",
+      "text": "be brought to class to give this story first hand have this done.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol4_12_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete with advertisement content",
+      "action": "trim_end",
+      "text": "For further information  address Mrs. Amy B. Lyman. General Secretary. 2R Bishop's Building, Salt Lake City. Utah.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "September_Vol4_11a_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete text",
+      "action": "append",
+      "text": "September, 1823-1917.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "September_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Theology_and_Testimony.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends incomplete with 'Psalms.' instead of complete lesson content",
+      "action": "append",
+      "text": "Chapters 45-68.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

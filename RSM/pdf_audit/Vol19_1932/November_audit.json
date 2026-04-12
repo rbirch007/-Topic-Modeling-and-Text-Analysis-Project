@@ -1,0 +1,373 @@
+{
+  "volume": 19,
+  "month": "November",
+  "year": 1932,
+  "total": 19,
+  "ok": 14,
+  "flagged": 5,
+  "empty": 0,
+  "records": [
+    {
+      "file": "November_Vol19_00_BOARD.txt",
+      "body_len": 81,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_00_CONTENTS.txt",
+      "body_len": 667,
+      "article_words": 71,
+      "words_in_ocr": 71,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_00_Misc.txt",
+      "body_len": 7307,
+      "article_words": 483,
+      "words_in_ocr": 480,
+      "pct_in_ocr": 0.9938,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "November_Vol19_00_Misc_backup_premarker.txt",
+      "body_len": 7239,
+      "article_words": 478,
+      "words_in_ocr": 478,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_01_Editorial_PUBLISHED_MONTHLY_BY_THE_GENERAL_BOARD_OF_RELIEF_SOCIETY_Editorial_and_Busi.txt",
+      "body_len": 679,
+      "article_words": 74,
+      "words_in_ocr": 74,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_02a_Poem_Iconoclasts.txt",
+      "body_len": 10011,
+      "article_words": 610,
+      "words_in_ocr": 610,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_03_Article_Society_is_Right_Vera_L_Plant.txt",
+      "body_len": 746,
+      "article_words": 78,
+      "words_in_ocr": 78,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_04a_Article_When_the_Test_Comes.txt",
+      "body_len": 21547,
+      "article_words": 825,
+      "words_in_ocr": 825,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_04b_Article_Save_the_Wild_Birds.txt",
+      "body_len": 2442,
+      "article_words": 204,
+      "words_in_ocr": 158,
+      "pct_in_ocr": 0.7745,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "admit",
+        "attract",
+        "basin",
+        "bathing",
+        "bell",
+        "clearing",
+        "collar",
+        "collectors",
+        "colonies",
+        "cultivation"
+      ]
+    },
+    {
+      "file": "November_Vol19_06_Article_Importance_of_Good_Nutrition_During_the_Present_Period_of_Depression_Jean_C.txt",
+      "body_len": 9971,
+      "article_words": 569,
+      "words_in_ocr": 569,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_08_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 55710,
+      "article_words": 1898,
+      "words_in_ocr": 1898,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(15))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_09a_Lesson_Theology_and_Testimony_-_Doctrine_and_Covenants_-_Vicarious.txt",
+      "body_len": 2353,
+      "article_words": 192,
+      "words_in_ocr": 192,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_09b_Lesson_Teachers_Topic_-_The_Beatitudes.txt",
+      "body_len": 2726,
+      "article_words": 189,
+      "words_in_ocr": 189,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_09c_Lesson_Literature_-_The_Delight_of_Great_Books_-_Sir_Walter_Scott.txt",
+      "body_len": 15174,
+      "article_words": 930,
+      "words_in_ocr": 930,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_09d_Lesson_Social_Service_-_Typical_Behavior_in_Child_Growth.txt",
+      "body_len": 17263,
+      "article_words": 871,
+      "words_in_ocr": 871,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3); MULTI_LESSON(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_10_Article_Silence_Verna_S_Carter.txt",
+      "body_len": 325,
+      "article_words": 36,
+      "words_in_ocr": 36,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_No11_05_Article_Save_the_Wild_Birds_J._H._Paul.txt",
+      "body_len": 8927,
+      "article_words": 653,
+      "words_in_ocr": 653,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_No11_07_Article_Happenings_Annie_Wells_Cannon.txt",
+      "body_len": 2736,
+      "article_words": 252,
+      "words_in_ocr": 252,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol19_No11_11_Article_Seasonable_Recipes_Lucy_Rose_Middleton.txt",
+      "body_len": 7092,
+      "article_words": 489,
+      "words_in_ocr": 489,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol19_No11_November_1932.txt",
+    "ocr_chars": 208638,
+    "ocr_unique_words": 5210,
+    "contents_xref": {
+      "entries_in_contents": 13,
+      "matched": 9,
+      "match_details": [
+        {
+          "title": "Society is Right Vera L. Plant",
+          "page": 628,
+          "file": "November_Vol19_03_Article_Society_is_Right_Vera_L_Plant.txt",
+          "score": 1.0
+        },
+        {
+          "title": "When the Test Comes Mansel H. Nelson",
+          "page": 629,
+          "file": "November_Vol19_04a_Article_When_the_Test_Comes.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Save the Wild Birds J. H. Paul",
+          "page": 635,
+          "file": "November_Vol19_04b_Article_Save_the_Wild_Birds.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Importance of Good Nutrition During the Present Period of Depression Jean Cox",
+          "page": 641,
+          "file": "November_Vol19_06_Article_Importance_of_Good_Nutrition_During_the_Present_Period_of_Depression_Jean_C.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 645,
+          "file": "November_Vol19_No11_07_Article_Happenings_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 646,
+          "file": "November_Vol19_08_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 674,
+          "file": "November_Vol19_09a_Lesson_Theology_and_Testimony_-_Doctrine_and_Covenants_-_Vicarious.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Silence Verna S. Carter",
+          "page": 688,
+          "file": "November_Vol19_10_Article_Silence_Verna_S_Carter.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Seasonable Recipes Lucy Rose Middleton",
+          "page": 689,
+          "file": "November_Vol19_No11_11_Article_Seasonable_Recipes_Lucy_Rose_Middleton.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "First Snowfall, Beaver Creek, Wasatch Forest Frontispiece",
+          "page": null
+        },
+        {
+          "title": "Iconoclasts Grace Ingles Frost",
+          "page": 623
+        },
+        {
+          "title": "Procrastination Marion Oakleigh",
+          "page": 625
+        },
+        {
+          "title": "Relief Society Conference",
+          "page": 647
+        }
+      ],
+      "extra_files": [
+        "November_Vol19_02a_Poem_Iconoclasts.txt",
+        "November_Vol19_09b_Lesson_Teachers_Topic_-_The_Beatitudes.txt",
+        "November_Vol19_09c_Lesson_Literature_-_The_Delight_of_Great_Books_-_Sir_Walter_Scott.txt",
+        "November_Vol19_09d_Lesson_Social_Service_-_Typical_Behavior_in_Child_Growth.txt",
+        "November_Vol19_No11_05_Article_Save_the_Wild_Birds_J._H._Paul.txt"
+      ]
+    }
+  }
+}

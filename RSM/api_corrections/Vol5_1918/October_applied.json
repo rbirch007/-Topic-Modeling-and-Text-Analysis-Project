@@ -1,0 +1,47 @@
+{
+  "volume": 5,
+  "month": "October",
+  "year": 1918,
+  "timestamp": "20260315_120941",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol5_02_Frontispiece_Stake_Presidents_Frontispiece_Our_Biographical_Number.txt",
+      "action": "append",
+      "result": "APPLIED append (1191 chars added)"
+    },
+    {
+      "file": "October_Vol5_03_Article_Lines_to_Sister_Rowena_M._Whipple_Maude_C._Oliver.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (41038 chars removed)"
+    },
+    {
+      "file": "October_Vol5_04_Article_Unusual_Mothers.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol5_10_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3305 chars removed)"
+    },
+    {
+      "file": "October_Vol5_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3302 chars added)"
+    },
+    {
+      "file": "October_Vol5_12_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (10879 chars removed)"
+    },
+    {
+      "file": "October_Vol5_13_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (10874 chars added)"
+    }
+  ]
+}

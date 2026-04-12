@@ -1,0 +1,112 @@
+{
+  "volume": 55,
+  "month": "August",
+  "year": 1968,
+  "timestamp": "20260313_235309",
+  "dry_run": false,
+  "applied": 15,
+  "skipped": 5,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_08_01_Fict_If_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (101 chars)"
+    },
+    {
+      "file": "V55_08_03_Art_From_Near_and_Far.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (149 chars)"
+    },
+    {
+      "file": "V55_08_05_Poem_Summer-Long_Myers.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (128 chars)"
+    },
+    {
+      "file": "V55_08_06_SpFt_Literary.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (576 chars removed)"
+    },
+    {
+      "file": "V55_08_07_Poem_Faith_Miner.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (85 chars removed)"
+    },
+    {
+      "file": "V55_08_14_Poem_Sun_in_Illescas.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (109 chars)"
+    },
+    {
+      "file": "V55_08_15_GenFt_The_Board.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (8780 chars removed)"
+    },
+    {
+      "file": "V55_08_16_Poem_Love_Rothe.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (114 chars)"
+    },
+    {
+      "file": "V55_08_18_Poem_Loath_Cook.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_08_19_Poem_My_Coles.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (113 chars)"
+    },
+    {
+      "file": "V55_08_25_Poem_Our_Welker.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V55_08_28_Poem_Swift_Perry.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V55_08_34_Poem_Interval_Stanley.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V55_08_37_Poem_High_Olsen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (107 chars)"
+    },
+    {
+      "file": "V55_08_39_Poem_Once_Roberts.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1455 chars removed)"
+    },
+    {
+      "file": "V55_08_40_GenFt_Bday_Congrats.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_08_41_Poem_Colors_Sadlier.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (753 chars removed)"
+    },
+    {
+      "file": "V55_08_42_Poem_Sea_Feltch.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (111 chars)"
+    },
+    {
+      "file": "V55_08_43_Poem_Reflections.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (121 chars)"
+    },
+    {
+      "file": "V55_08_44_Poem_Dew_Jennings.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (905 chars removed)"
+    }
+  ]
+}

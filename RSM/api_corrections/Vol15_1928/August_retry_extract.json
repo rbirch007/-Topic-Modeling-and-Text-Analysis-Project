@@ -1,0 +1,51 @@
+{
+  "volume": 15,
+  "month": "August",
+  "year": 1928,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0275,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Eliza R. Snow Memorial Poem",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (424-428) contain an article titled 'ROBBED BY WOLVES' which appears to be a pioneer narrative about a difficult journey with cholera outbreak and other hardships. The article 'Eliza R. Snow Memorial Poem' listed in the table of contents for page 430 is not present in these particular page images.",
+      "order": "b",
+      "pdf_pages": [
+        424,
+        425,
+        426,
+        427,
+        428
+      ],
+      "source_file": "August_Vol15_06_Article_Helping_the_Adolescent_to_Develop_a_Wholesome_Personality_El.txt",
+      "api_usage": {
+        "input_tokens": 8438,
+        "output_tokens": 146,
+        "cost": 0.0275
+      }
+    },
+    {
+      "title": "Guide Lessons for October",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        481,
+        482,
+        483,
+        484,
+        485
+      ],
+      "notes": "Could not parse API response"
+    }
+  ]
+}

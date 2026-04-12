@@ -1,0 +1,250 @@
+{
+  "volume": 57,
+  "month": "November",
+  "year": 1970,
+  "total_files_checked": 26,
+  "files_correct": [
+    "V57_11_03_Poem_The_Roberts.txt",
+    "V57_11_06_GenFt_Notice.txt",
+    "V57_11_07_GenFt_A_Woolley.txt",
+    "V57_11_10_SpFt_The_Miltenberger.txt",
+    "V57_11_17_GenFt_Visiting.txt",
+    "V57_11_18_GenFt_Visiting.txt",
+    "V57_11_19_GenFt_Homemaking_Nutriti.txt",
+    "V57_11_20_GenFt_Homemaking_Mind.txt",
+    "V57_11_21_GenFt_Social_Sense.txt",
+    "V57_11_22_GenFt_Social.txt",
+    "V57_11_23_GenFt_Cultural.txt",
+    "V57_11_24_GenFt_Cultural.txt",
+    "V57_11_25_GenFt_Birthday.txt",
+    "V57_11_26_Fict_The_Lloyd.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_11_01_Poem_Indweller_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '802 \"We Lived After the Manner of Happiness\"'",
+      "action": "trim_end",
+      "text": "Margery S. Stewart",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_02_SpFt_We_Spafford.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Starts mid-sentence with 'lived after the manner of happi-' instead of beginning with the full title",
+      "action": "prepend",
+      "text": "\"We Lived After the Manner of Happiness\" President Belle S. Spafford [Address delivered at the General Session of Relief Society Annual General Conference, September 30, 1970] ® Recorded In the Book of Morl, are words of -.. We ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_04_Poem_Christmas_Clark.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '\"No One Can Endure on Borrowed Light\"'",
+      "action": "trim_end",
+      "text": "Sadie Ollerton Clark",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_05_SpFt_No_One_Sharp.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "\"No One Can Endure on Borrowed Light\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_08_SpFt_Living_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'INTRODUCTION A regular feature'",
+      "action": "trim_end",
+      "text": "May this be so I humbly pray in the name of Jesus Christ, Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_09_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "Report and Official Instructions",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_11_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'The Secret of Blueberry Hill'",
+      "action": "trim_end",
+      "text": "Arlene S. Kirton",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_12_GenFt_Friendship_Departm.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'They presented the very inspiring'",
+      "action": "trim_end",
+      "text": "828",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_13_Poem_Deep_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '& Friendship Memories'",
+      "action": "trim_end",
+      "text": "& Linnie F. Robinson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_11_14_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "Notes From the Field Relief Society Activities",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V57_11_15_GenFt_Spiritual.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "SPIRITUAL LIVING: The Pearl of Great Price",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_16_GenFt_Spiritual.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'oa VISITING TEACHER MESSAGES'",
+      "action": "trim_end",
+      "text": "(2 Ne. 2:28.)",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files have bleeding issues where content from adjacent articles appears at the beginning or end. The OCR quality is generally good with clear text boundaries identifiable. Several files need trimming to remove content that belongs to neighboring articles. The poem 'Deep White' by Linnie F. Robinson appears to be correctly extracted but has bleeding from the next article.",
+  "validated_corrections": [
+    {
+      "file": "V57_11_01_Poem_Indweller_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '802 \"We Lived After the Manner of Happiness\"'",
+      "action": "trim_end",
+      "text": "Margery S. Stewart",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_02_SpFt_We_Spafford.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "Starts mid-sentence with 'lived after the manner of happi-' instead of beginning with the full title",
+      "action": "prepend",
+      "text": "\"We Lived After the Manner of Happiness\" President Belle S. Spafford [Address delivered at the General Session of Relief Society Annual General Conference, September 30, 1970] ® Recorded In the Book of Morl, are words of -.. We ",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_04_Poem_Christmas_Clark.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '\"No One Can Endure on Borrowed Light\"'",
+      "action": "trim_end",
+      "text": "Sadie Ollerton Clark",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_05_SpFt_No_One_Sharp.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "\"No One Can Endure on Borrowed Light\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_08_SpFt_Living_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'INTRODUCTION A regular feature'",
+      "action": "trim_end",
+      "text": "May this be so I humbly pray in the name of Jesus Christ, Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_09_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "Report and Official Instructions",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_11_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'The Secret of Blueberry Hill'",
+      "action": "trim_end",
+      "text": "Arlene S. Kirton",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_12_GenFt_Friendship_Departm.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'They presented the very inspiring'",
+      "action": "trim_end",
+      "text": "828",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_14_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "Notes From the Field Relief Society Activities",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V57_11_15_GenFt_Spiritual.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at the beginning",
+      "action": "trim_start",
+      "text": "SPIRITUAL LIVING: The Pearl of Great Price",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_11_16_GenFt_Spiritual.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with 'oa VISITING TEACHER MESSAGES'",
+      "action": "trim_end",
+      "text": "(2 Ne. 2:28.)",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_11_13_Poem_Deep_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from the next article starting with '& Friendship Memories'",
+      "action": "trim_end",
+      "text": "& Linnie F. Robinson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

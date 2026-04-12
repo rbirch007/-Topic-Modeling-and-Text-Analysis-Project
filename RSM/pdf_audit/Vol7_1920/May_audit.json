@@ -1,0 +1,282 @@
+{
+  "volume": 7,
+  "month": "May",
+  "year": 1920,
+  "total": 15,
+  "ok": 13,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "May_Vol7_00_BOARD.txt",
+      "body_len": 706,
+      "article_words": 64,
+      "words_in_ocr": 64,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_00_CONTENTS.txt",
+      "body_len": 233,
+      "article_words": 25,
+      "words_in_ocr": 25,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_01_Article_Suffrage_Won_by_the_Mothers_of_the_United_States.txt",
+      "body_len": 55701,
+      "article_words": 1979,
+      "words_in_ocr": 1979,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_02_Article_Flowers_of_Earth_and_Heaven.txt",
+      "body_len": 5717,
+      "article_words": 401,
+      "words_in_ocr": 401,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_03_Article_Beyond_Arsareth.txt",
+      "body_len": 10564,
+      "article_words": 620,
+      "words_in_ocr": 620,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_04_Article_My_Little_Span.txt",
+      "body_len": 10489,
+      "article_words": 489,
+      "words_in_ocr": 489,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_05_Article_The_Official_Round_Table.txt",
+      "body_len": 2465,
+      "article_words": 168,
+      "words_in_ocr": 168,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_06_Article_On_the_Watch_Tower.txt",
+      "body_len": 106,
+      "article_words": 12,
+      "words_in_ocr": 12,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(106)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_07a_Editorial_Editorial.txt",
+      "body_len": 9370,
+      "article_words": 594,
+      "words_in_ocr": 594,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_a.txt",
+      "body_len": 5542,
+      "article_words": 374,
+      "words_in_ocr": 374,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_b.txt",
+      "body_len": 11917,
+      "article_words": 644,
+      "words_in_ocr": 644,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_c_a_a_a.txt",
+      "body_len": 9674,
+      "article_words": 651,
+      "words_in_ocr": 651,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_d.txt",
+      "body_len": 758,
+      "article_words": 68,
+      "words_in_ocr": 68,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_08_Guide_Lessons_Guide_Lessons.txt",
+      "body_len": 9637,
+      "article_words": 589,
+      "words_in_ocr": 589,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "May_Vol7_Misc.txt",
+      "body_len": 8129,
+      "article_words": 551,
+      "words_in_ocr": 546,
+      "pct_in_ocr": 0.9909,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "content",
+        "cover",
+        "duri",
+        "trailing"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol7_No5_May_1920.txt",
+    "ocr_chars": 140841,
+    "ocr_unique_words": 4073,
+    "contents_xref": {
+      "entries_in_contents": 8,
+      "matched": 8,
+      "match_details": [
+        {
+          "title": "Suffrage Won by the Mothers of the United States",
+          "page": 251,
+          "file": "May_Vol7_01_Article_Suffrage_Won_by_the_Mothers_of_the_United_States.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Flowers of Earth and Heaven",
+          "page": 276,
+          "file": "May_Vol7_02_Article_Flowers_of_Earth_and_Heaven.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Beyond Arsareth",
+          "page": 277,
+          "file": "May_Vol7_03_Article_Beyond_Arsareth.txt",
+          "score": 1.0
+        },
+        {
+          "title": "My Little Span",
+          "page": 282,
+          "file": "May_Vol7_04_Article_My_Little_Span.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Official Round Table",
+          "page": 283,
+          "file": "May_Vol7_05_Article_The_Official_Round_Table.txt",
+          "score": 1.0
+        },
+        {
+          "title": "On the Watch Tower",
+          "page": 290,
+          "file": "May_Vol7_06_Article_On_the_Watch_Tower.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial",
+          "page": 291,
+          "file": "May_Vol7_07a_Editorial_Editorial.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons",
+          "page": 295,
+          "file": "May_Vol7_07b_Guide_Lessons_Guide_Lessons_a.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "May_Vol7_07b_Guide_Lessons_Guide_Lessons_b.txt",
+        "May_Vol7_07b_Guide_Lessons_Guide_Lessons_c_a_a_a.txt",
+        "May_Vol7_07b_Guide_Lessons_Guide_Lessons_d.txt",
+        "May_Vol7_08_Guide_Lessons_Guide_Lessons.txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "volume": 5,
+  "month": "December",
+  "year": 1918,
+  "total_files_checked": 20,
+  "files_correct": [
+    "December_Vol5_03a_Poem_We_Are_All_Gods_Children.txt",
+    "December_Vol5_03b_Article_Salvation_for_the_Living_and_the_Dead.txt",
+    "December_Vol5_05a_Article_In_Paradise.txt",
+    "December_Vol5_06_Article_A_Tear_of_Love_Annie_G._Lauritzen.txt",
+    "December_Vol5_07_Article_A_Christmas_Sonnet_L._Lula_Greene_Richards.txt",
+    "December_Vol5_08_Article_Mother's_Christmas_Story_Nephi_Anderson.txt",
+    "December_Vol5_10_Article_Shall_Christmas_Giving_be_Dispensed_with_in_Time_of_War_Lucy.txt",
+    "December_Vol5_11a_Article_Christmas_Suggestions.txt",
+    "December_Vol5_11b_Article_How_to_Stimulate_Discussion.txt",
+    "December_Vol5_15a_Editorial_Editorial.txt",
+    "December_Vol5_15b_Guide_Lessons_Guide_Lessons_-_Preview_of_Lessons_for_1919.txt",
+    "December_Vol5_15c_Guide_Lessons_Lesson_I_-_The_Advent_of_the_Prince_of_Peace.txt"
+  ],
+  "corrections": [
+    {
+      "file": "December_Vol5_01_Article_Humanity's_Song_Maud_Boggarsley.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains index content instead of the poem 'Humanity's Song'",
+      "action": "replace_content",
+      "text": "Humanity's Song By Maud Boggarsley.\nFrom the tops of the mountains, Circling all the world around, We cry unto our brothers, Whom the tie of flesh hath bound, To behold a higher vision That shall set all mankind free To dwell in peace together And in perfect unity.\nLike a sower in the gray dawn Are we toiling for our bread, While Joy with face averted Passes us with noiseless tread; For while ruthlessness doth ravage, While a hungry babe doth plead At the dry breast of its mother, We are slaves to mortal greed.\nBlood is all the same-same color, High deeds know not creed nor clime Then let us clasp hands together, And make all the earth sublime. Looking ever toward a morning When the wings of a New Day, With a bright and holy splendor, Shall shut all but love away.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "December_Vol5_04_Article_Salvation_for_the_Living_and_the_Dead_Joseph_F._Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a reference line instead of the full article",
+      "action": "note",
+      "text": "This appears to be a reference line pointing to the full article which is correctly extracted in file December_Vol5_03b_Article_Salvation_for_the_Living_and_the_Dead.txt",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol5_09_Mothers_in_Israel_Mothers_and_Grandmothers_and_Great-grandmothers_in_Israel.txt",
+      "issue_type": "trim_end",
+      "description": "File contains extra poem content that should be separate",
+      "action": "trim_end",
+      "text": "Can you imagine eight more beautiful, distinguished, and refined faces than we are presenting to you in this unique group? Consider the babies and how they grew, till this lovely sight is revealed to our view!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_11c_Current_Topics_Current_Topics.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem content that belongs elsewhere",
+      "action": "trim_start",
+      "text": "THE SPIRIT OF THE HOUR. A Christmas Lesson.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_12_Article_How_to_Stimulate_Discussion_Gweneth_W._Gibbs.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains index content instead of the article",
+      "action": "note",
+      "text": "This file contains index content. The actual article is correctly extracted in December_Vol5_11b_Article_How_to_Stimulate_Discussion.txt",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol5_13_Home_Science_Home_Science_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only index fragments instead of the Home Science Department content",
+      "action": "replace_content",
+      "text": "THE SPIRIT OF THE HOUR. A Christmas Lesson.\nEntertaining has always been one of the joys of hospitable America, and the latch string has hung out for the unannounced friend as well as for the bidden guest. If there has been a fault in hospitality, it is that many have thought of entertainment in terms of food rather than as an opportunity for interchange of experience and ideas, placing the pleasure of breaking bread together as a secondary consideration.\nThis Christmas we sit at a \"common table\" with many who for months have stood in ever lengthening bread lines and we have the chance at this greatest entertainment of the year, the celebration of the birth of peace and good will on the earth, to teach the lesson of self control and common sense to ourselves and our children.\nThe Christmas Dinner – First of all, the amount provided must be less even though we serve \"the home produced Christmas Dinner.\" Can we overeat while others starve? In time past we have shared our Christmas cheer with those who were needy. They are in greater need than ever now, so let us cut our portions in half, for our duty to the army and our allies includes our neighbors. Are they not our country? Not a scrap must be wasted or a morsel eaten for eating's sake.\nImported dainties have no place upon our table this year. Layer gelatin made with the national colors, Hooverized English Plum pudding, Italian potato, French sweetmeats with small American and Allied flags at each plate is a suggestion for an \"Allied\" Christmas dinner which will emphasize the thought that it is the spirit of the hour and not the food which counts.\nWrite cheery letters to the boys describing the Christmas table. It will sound much better to him than one of those \"we missed you so\" letters which weaken the morale and wring the hearts.\nGuests should bring their own sugar, because your allotment is meant to serve just the members of your family. It sounds inhospitable but common sense comes to our aid and reminds us that the sugar no longer belongs to us but to Uncle Sam. Let us eliminate candy from our Christmas table and send it over there. The boys crave candy as never before. What a relief to mothers and doctors, for there are annually hundreds of sick children from over indulgence in candy-eating at holiday time.\nJelly and preserves unless made with at least part sugar substitute have no place on our Christmas table. A woman was heard to say that her husband had always been accustomed to his bread and jelly at meal times and could not do without. Shall we not make the watchword of the hour \"nothing as usual.\"\nAnd so the table is spread, and cheerful, hopeful hearts are around the board and with \"Tiny Tim\" we say, \"God Bless us Everyone.\"\nThe Christmas Gift – And what of that accompaniment of the dinner, the Christmas Gift. Of course we shall have them. They give the chance for the youngster to exercise ingenuity. A little girl of twelve was given one dollar from which she obtained seven gifts. Seed saving from home gardens was a feature of the year's work. Pretty wrapped packages of seeds, plainly marked with name of seed and directions for planting would be appreciated. A steam pressure cooker would be a true conservation gift which would more than pay for itself in one year in amount of fuel saved. Gifts of toys, except to very little people should be replaced by utility articles.\nWe do not read sufficiently magazines that treat of the war. A year's subscription to the American, the Atlantic Monthly, the Century would be of double value since after reading, it can be sent to the soldier boy who covets something good to read even more than he craves candy to eat. Remember also our local magazines: Relief Society Magazine, Era, Young Woman's Journal, Juvenile.\nIf the list of gifts looks drab after the rich offerings of the past, remember that lots of fun can be put into the distribution, and again that it is the spirit of the hour and not the gift that counts.\nRECIPES.\nFrench Sweetmeat.\n1 quart of fruit butter. ¼ cup corn syrup.\nCook till thick, spread on greased plate to dry. Serve in rolls or cut rolls into ½-inch pieces. Various colors make an attractive appearance.\nLayer Gelatin (Old Glory).\nMake gelatin with juice of lemon, grapes and cherry or other red color. Fill a mould to ⅓ with red gelatin. Allow to set firmly. Add lemon also setting and finally the grape. Chill and serve whole.\nItalian Potatoes.\nBoiled potatoes riced and served with shredded green peppers.\nHooverized English Plum Pudding.\n1 cup Bread crumbs. 1 tsp. Cinnamon. 1 cup Carrots. ¼ tsp. Allspice. 1 cup Raisins or dates. ¼ tsp. Salt. 1 cup Suet. 2 tsp. Baking Powder. ½ cup Brown sugar. 1 cup Lemon-citron. 2 cups Flour. 2 Eggs.\nSteam from two to three hours.\nConservation Plum Pudding.\n1 Qt. bread crumbs. 1 package seeded raisins, mixed with 1 cup of flour and the yeast powder. 4 eggs. 1 cup Molasses, honey, or 1 cup sugar. 1 pint of milk. If sour use 1 even teaspoon soda. If sweet milk, 2 teaspoons yeast powder. Nutmeg or other spice for flavoring. 1 tablespoon peanut butter. ¼ lb. of butter.\nPudding Sauce.\nCream may be used with or without sugar. Cooked or liquid sauce should be boiled at least ½ hour, one hour is better.\n2 qts. of water. 1½ cups sugar.\nBoil slowly one hour. Add water if it evaporates, to keep the two quarts. Rub ¼ pound of butter with two tablespoons flour. Cook in syrup half-hour, flavor with one drop of mapleine, or 1 teaspoon vanilla, 1 teaspoon lemon, ¼ teaspoon nutmeg.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "December_Vol5_14_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains index content instead of Current Topics article",
+      "action": "note",
+      "text": "This file contains index content. The actual Current Topics content is correctly extracted in December_Vol5_11c_Current_Topics_Current_Topics.txt after trimming",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol5_15d_Genealogy_Lesson_III_-_How_a_Great_English_Battle_Started_Surnames_in.txt",
+      "issue_type": "trim_end",
+      "description": "File cuts off mid-sentence",
+      "action": "append",
+      "text": "nickname, his place of residence, or maybe his trade name attached to his own, so that the deeds of places might be carried on legally without confusion and mistakes of title, because many men bore the same personal names in the same parish. That is, Roger Cruickshanks' son William would be William Cruickshanks, and Roger de Bois' son William would call himself William de Bois; thus avoiding confusion in legal matters and giving themselves an added name by which to distinguish themselves and their families in the shire and in the village.\nThus it was that the Domesday Book and the Battle of Hastings started a custom in England of adding another name to the personal name and making it permanent. It might be said that a name did not become a surname until it had been borne by three generations, for men had inherited the custom of changing their names, both personal or surname very frequently for one reason or another.\nWe are told by antiquarians, historians and genealogists that the same custom of taking an added name or a surname began to prevail in Europe at about the same period, that is about the twelfth century. However, not until the thirteenth and fourteenth centuries did surnames really become permanent and fixed.\nQUESTIONS.\nWhat races settled in Great Britain? Who were the Anglo-Saxons? What is the difference between the Danes and Norsemen? Who were the Swedes? Tell the story of William the Conqueror. What can you say of Battle Abbey? Describe the Domesday Book. When and how are surnames formed? What is a surname?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_16a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous lesson",
+      "action": "trim_start",
+      "text": "LESSON IV. Home Courses. Fourth Week in January.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "General Conference of Relief Society",
+      "expected_page": 659,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files contain index content instead of actual articles. The main General Conference article (expected at page 659) is missing entirely from the extracted files. Some files have content bleeding between articles. The poem 'Humanity's Song' and several other articles need content replacement from the OCR source.",
+  "validated_corrections": [
+    {
+      "file": "December_Vol5_09_Mothers_in_Israel_Mothers_and_Grandmothers_and_Great-grandmothers_in_Israel.txt",
+      "issue_type": "trim_end",
+      "description": "File contains extra poem content that should be separate",
+      "action": "trim_end",
+      "text": "Can you imagine eight more beautiful, distinguished, and refined faces than we are presenting to you in this unique group? Consider the babies and how they grew, till this lovely sight is revealed to our view!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_11c_Current_Topics_Current_Topics.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poem content that belongs elsewhere",
+      "action": "trim_start",
+      "text": "THE SPIRIT OF THE HOUR. A Christmas Lesson.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_15d_Genealogy_Lesson_III_-_How_a_Great_English_Battle_Started_Surnames_in.txt",
+      "issue_type": "trim_end",
+      "description": "File cuts off mid-sentence",
+      "action": "append",
+      "text": "nickname, his place of residence, or maybe his trade name attached to his own, so that the deeds of places might be carried on legally without confusion and mistakes of title, because many men bore the same personal names in the same parish. That is, Roger Cruickshanks' son William would be William Cruickshanks, and Roger de Bois' son William would call himself William de Bois; thus avoiding confusion in legal matters and giving themselves an added name by which to distinguish themselves and their families in the shire and in the village.\nThus it was that the Domesday Book and the Battle of Hastings started a custom in England of adding another name to the personal name and making it permanent. It might be said that a name did not become a surname until it had been borne by three generations, for men had inherited the custom of changing their names, both personal or surname very frequently for one reason or another.\nWe are told by antiquarians, historians and genealogists that the same custom of taking an added name or a surname began to prevail in Europe at about the same period, that is about the twelfth century. However, not until the thirteenth and fourteenth centuries did surnames really become permanent and fixed.\nQUESTIONS.\nWhat races settled in Great Britain? Who were the Anglo-Saxons? What is the difference between the Danes and Norsemen? Who were the Swedes? Tell the story of William the Conqueror. What can you say of Battle Abbey? Describe the Domesday Book. When and how are surnames formed? What is a surname?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol5_16a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous lesson",
+      "action": "trim_start",
+      "text": "LESSON IV. Home Courses. Fourth Week in January.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,161 @@
+{
+  "volume": 57,
+  "month": "July",
+  "year": 1970,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V57_07_03_Art_Birthday_Smith.txt",
+    "V57_07_04_Art_Womens_Richards.txt",
+    "V57_07_05_Poem_We.txt",
+    "V57_07_08_Art_Annual.txt",
+    "V57_07_09_Fict_The_Lloyd.txt",
+    "V57_07_13_Fict_Ronnas_Wrathall.txt",
+    "V57_07_14_Poem_Smile_Olsen.txt",
+    "V57_07_16_GenFt_My_Wilson.txt",
+    "V57_07_17_GenFt_Meatless_Watson.txt",
+    "V57_07_18_GenFt_Picking_Anderson.txt",
+    "V57_07_19_Poem_You_Brown.txt",
+    "V57_07_20_Fict_Mama_Woolsey.txt",
+    "V57_07_21_GenFt_The_Wynn.txt",
+    "V57_07_23_GenFt_A_Day_Clough.txt",
+    "V57_07_26_Fict_Jerusha_Todd.txt",
+    "V57_07_27_GenFt_Notes_Activities.txt",
+    "V57_07_28_GenFt_Spiritual_Price.txt",
+    "V57_07_29_GenFt_Visiting_Agency.txt",
+    "V57_07_30_GenFt_Homemaking_You.txt",
+    "V57_07_31_GenFt_Social.txt",
+    "V57_07_32_GenFt_Cultural_Together.txt",
+    "V57_07_33_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_07_02_Poem_Watercress_Miller.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains publication information instead of the poem 'Watercress Spring'",
+      "action": "replace_content",
+      "text": "WATERCRESS SPRING ' It is here: along the sluice of ditch And river touching cliff Where sun begins.... Here, springing on the blackest waters, Green unfolds across the silent cold There, after ice has thawed - And winter birds have fled the sky. The time of seasons turns And you and I, | In glad remembering of summers past And ali the bitter-fresh of taste, Return to gather memories And sheaves of watercress. And in the mirroring water When | watch the sky's reflection In your hair. The sundown crimson sunset Colors all the dusky trees. | see the winters of the future In the cliffs, and seize The moment of my spring And count it grace. There is but little time to love And gather home This earth Before we lose our summer place. Marilyn McMeen Miller",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_07_06_Poem_Third_Jorgensen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous poem about crossing the river",
+      "action": "trim_start",
+      "text": "They race to the channel, as stiff breezes blow, Their gay sweaters sparkle in contrast to snow, The Father of Waters flows deep below; The sun peeps out and is gone in a trice. The river is frozen and covered with snow, But we walk for a mile on the blue-white ice. We crossed the river on ice and snow. From bank to bank we walked with delight. The small children keeping their sleds in tow, The Father of Waters flows deep below. On the lowa side our steps grew slow, As we started the trek to the Illinois site. A triangle of winter birds flew low, On the Mississippi we watched their flight. Sadie O. Clark PHOTOGRAPH BY PRESIDENT J. REUBEN CLARK, JR. I",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_07_07_Art_President_York.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains garbled OCR text that doesn't match the expected article about President Spafford being honored in New York",
+      "action": "note",
+      "text": "OCR quality too poor to extract meaningful content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_07_10_Poem_Cinquain_Harp.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains text about Special Citation and other content instead of the poem 'Cinquain'",
+      "action": "replace_content",
+      "text": "CINQUAIN The border North of the doorway Makes a flower bed for Grandma. She loves the plot as much as former Spacious gardens. 500 Ethel H. Harp",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_07_11_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains unrelated text instead of the Woman's Sphere article by Ramona W. Cannon",
+      "action": "note",
+      "text": "OCR gap - article content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_07_15_Poem_A_Thacker.txt",
+      "issue_type": "missing_text",
+      "description": "Poem is incomplete, cuts off mid-sentence",
+      "action": "append",
+      "text": "memory of a much-loved garden. Then came beauty The glory of God's creations Partnered with the woman's tender care and dreams and hopes 'a=. Blossomed as the rose.' Theima A. Thacker",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_07_22_Poem_Wondering_Davis.txt",
+      "issue_type": "wrong_content",
+      "description": "File only contains author name, missing the actual poem",
+      "action": "replace_content",
+      "text": "WONDERING Mother, when you were a girl, When you were just my age, Was 'lectricity invented? Were bustles all the rage? Mother, when you were a girl You had no T. V. Set! Tell me, then, did you and Daddy Dance the minuet? Louise S. Davis",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_07_24_Poem_San_Cutler.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains hobby features content after the poem",
+      "action": "trim_end",
+      "text": "Grayce E. Cutler.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_07_25_GenFt_Hobby_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains partial hobby features content but is incomplete",
+      "action": "note",
+      "text": "Content appears to be merged with other articles or incomplete",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_07_34_Art_Tq_All_Subscribers.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from other articles instead of the announcement to subscribers",
+      "action": "replace_content",
+      "text": "To All Relief Society Magazine Subscribers: a In compliance with the directive of the First Presidency, the Relief Society Magazine will discontinue publication with the December 1970 issue. In its place an adult magazine will be published by the Church. All the Relief Society lessons through May 1971 will be published in the Relief Society Magazine by the December 1970 issue. Any subscriber whose subscription expires in August, September, October, November, or December may subscribe to the remaining 1970 issues by giving to the Magazine representative 25 cents for each needed issue. Those whose subscriptions extend into 1971 will be notified later of the provisions to be made to recompense them. The General Board expresses its heartfelt thanks to Relief Society presidents and Magazine representatives particularly and to every subscriber for the loyalty shown over fifty-six years in magnificently sustaining this Magazine for the women of the Church. It has a present circulation of 298,250. The General Board bespeaks the sisters' enthusiastic support for the new adult magazine which will be published under the correlation program of the Church by the First Presidency and Quorum of the Twelve. The new magazine will contain material of particular interest to women.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 482,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files contain incorrect content due to OCR errors or content bleeding between articles. The poem 'Watercress Spring' and the announcement to subscribers were particularly affected. Some content appears to be missing from the OCR, particularly 'From Near and Far' and parts of other articles.",
+  "validated_corrections": [
+    {
+      "file": "V57_07_06_Poem_Third_Jorgensen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous poem about crossing the river",
+      "action": "trim_start",
+      "text": "They race to the channel, as stiff breezes blow, Their gay sweaters sparkle in contrast to snow, The Father of Waters flows deep below; The sun peeps out and is gone in a trice. The river is frozen and covered with snow, But we walk for a mile on the blue-white ice. We crossed the river on ice and snow. From bank to bank we walked with delight. The small children keeping their sleds in tow, The Father of Waters flows deep below. On the lowa side our steps grew slow, As we started the trek to the Illinois site. A triangle of winter birds flew low, On the Mississippi we watched their flight. Sadie O. Clark PHOTOGRAPH BY PRESIDENT J. REUBEN CLARK, JR. I",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_07_15_Poem_A_Thacker.txt",
+      "issue_type": "missing_text",
+      "description": "Poem is incomplete, cuts off mid-sentence",
+      "action": "append",
+      "text": "memory of a much-loved garden. Then came beauty The glory of God's creations Partnered with the woman's tender care and dreams and hopes 'a=. Blossomed as the rose.' Theima A. Thacker",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_07_24_Poem_San_Cutler.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains hobby features content after the poem",
+      "action": "trim_end",
+      "text": "Grayce E. Cutler.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,298 @@
+POEM QC VALIDATION REPORT
+==========================
+Generated: 2026-03-18
+Scope: Vols 1-40 poem renames and Vols 30-40 new PDF poem extractions
+
+============================================================
+EXECUTIVE SUMMARY
+============================================================
+OVERALL ASSESSMENT: CONDITIONAL PASS (Renames) / FAIL (New PDF Extractions)
+
+- Renamed poems (Vols 1-40): ~80% accuracy. Most renames are correct poems,
+  but there are notable false positives, especially in early volumes.
+- Newly extracted PDF poems (Vols 30-40): HIGH FALSE POSITIVE RATE (~57%).
+  Many files labeled as poems contain prose fiction, recipes, advertisements,
+  table-of-contents pages, and other non-poem content.
+
+============================================================
+1. RENAMED POEMS VERIFICATION (Vols 1-29: 358, Vols 30-40: 186)
+============================================================
+Sample size: 30 files across Vols 1-40
+
+PASS (24 of 30 = 80%):
+  - Vol3/Apr: "A Sonnet" by Alfred Lambourne -- correct, sonnet
+  - Vol5/Oct: "Report of Murdock Relief Society" -- verse/rhyming couplets
+  - Vol7/Jan: "Happy Glad New Year" by Lucy May Green -- correct poem
+  - Vol2/Mar: "Genesis of the Relief Society" by Maud Baggarley -- correct verse
+  - Vol8/Feb: "Baby Brother" by Abbie R. Madsen -- correct poem
+  - Vol10/Nov: "Harvest Home" by Alfred Osmond -- correct poem
+  - Vol16/Apr: "Le Printemps" by Brooks Kjartan -- correct poem
+  - Vol21/Apr: "Beloved" by Weston N. Nordgren -- correct poem
+  - Vol24/Apr: "Springtime Breezes" by Lettie B. Rich -- correct (some ad text mixed)
+  - Vol26/Apr: "Night Stillness" by William A. Forsyth -- correct poem
+  - Vol28/Apr: "The Rains Are Over" by Mrs. Marion Clegg -- correct poem
+  - Vol30/Apr: "Song of Spring" by Mabel Jones Gabbott -- correct poem
+  - Vol33/Feb: "To Elizabeth" by Olive M. Nicholes -- correct poem (title mismatch)
+  - Vol34/Apr: "Mary Magdalene" by Dorothy J. Roberts -- correct poem
+  - Vol38/Jul: "Fill Treasure" by Dorothy J. Roberts -- correct poem
+  - Vol39/Feb: "Household Hint" by Lael W. Hill -- correct, humorous verse
+  - Vol40/Jun: "June Morning" poems -- correct poems
+  - Vol32/Apr: "These Are the Things I Hold" by Roberta Bates -- correct poem
+  - Vol35/Jan: "Symphony" by Beatrice Rordame Parsons -- correct poem
+  - Vol36/Jun: "Roses Wet with Rain" by Grace Sayre -- correct poem
+  - Vol40/Sep: "September Snow" by Lael W. Hill -- correct poem
+  - Vol22/Apr: "April" by Bryce W. Anderson -- correct poem
+  - Vol25/Apr: "The Gift" by Juliaetta B. Jensen -- correct poem
+  - Vol13/Apr: "Last Page of Amy Lowell's Keats" -- correct poem
+  - Vol17/Aug: "Morning Prayer" by Bee Parsons -- correct poem
+
+FALSE POSITIVES (6 of 30 = 20%):
+  1. Vol1/Oct: V1_1914_Oct_02_Poem_Work_and_Business.txt
+     ISSUE: Lesson outline, not a poem. Contains "Ten minutes talk on Current Events."
+
+  2. Vol4/Dec: December_Vol4_15_Poem_My_Christmas_Prayer.txt
+     ISSUE: Table of contents/index page listing articles and page numbers.
+
+  3. Vol5/Aug: August_Vol5_01_Poem_Chart_of_Solomon's_Temple.txt
+     ISSUE: Description of a temple chart with labeled features (A, G, H, etc.).
+
+  4. Vol5/Dec: December_Vol5_12_Poem_How_to_Stimulate_Discussion_Gweneth_W._Gibbs.txt
+     ISSUE: Table of contents/index page listing articles and poetry.
+
+  5. Vol5/Mar: March_Vol5_17_Poem_Editorial_Keep_Your_Eye_on_the_Mark.txt
+     ISSUE: Prose editorial with masthead and board member listing.
+
+  6. Vol37/Apr: April_Vol37_01_Poem_An_Exemplar_to_All_Men_David_O_McKay.txt
+     ISSUE: Prose tribute/speech by David O. McKay about President George Albert Smith.
+
+  7. Vol39/Jan: January_Vol39_01_Poem_A_Birthday_Greeting_General_Presidency_of_Relief_Society.txt
+     ISSUE: Prose New Year's greeting letter from the General Presidency.
+
+NOTE: False positives are concentrated in early volumes (Vols 1-5) where
+the heuristic classifier had less structured content to work with, and in
+Vols 37-39 where prose pieces were mistaken for poems.
+
+============================================================
+2. NEWLY EXTRACTED PDF POEMS (Vols 30-40)
+============================================================
+Total new Poem files found (newer than rename log): 306
+Sample size: 30 files
+
+PASS (8 of 30 = 27%):
+  - Vol37/May: "Swinging" by Grace Sayre -- correct poem
+  - Vol39/Mar: "Sound" by Gene Romolo -- correct sonnet, good quality
+  - Vol40/May: "Gift Divine" -- correct poem (may be cut off at start)
+  - Vol38/Jul: "First Steps" by Clayton -- correct short poem
+  - Vol33/Feb: "To" by Haws -- correct poem
+  - Vol37/Aug: "Navajo Weaver" by Anna Prince Redd -- correct sonnet
+  - Vol36/Jul: "Embryo" by Johns -- correct poem fragment
+  - Vol39/Jun: "Alchemy" by Miner -- correct short poem
+  - Vol35/Sep: "Payment" by Meiling D. Clyde -- correct poem
+  - Vol40/Mar: "Salute" by Mabel Law Atkinson -- correct short poem
+
+FAIL - NOT POEMS (17 of 30 = 57%):
+  1. Vol38/Mar: March_Vol38_26_Poem_Beyond_This_Powell.txt
+     CONTENT: Prose fiction (dialogue about paint, chintzes, pregnancy).
+
+  2. Vol37/Jun: June_Vol37_30_Poem_Floral_Offering_Wangsgaard.txt
+     CONTENT: Table of contents page with subscription/publication info.
+
+  3. Vol36/Dec: December_Vol36_34_Poem_In_This_Be_Schow.txt
+     CONTENT: Recipes (meat loaf, scalloped potatoes for 50 persons).
+
+  4. Vol31/Jan: January_Vol31_20_Poem_To_A_Christensen.txt
+     CONTENT: Prose article about teaching methods ("Undeclared Dividends").
+
+  5. Vol33/Aug: August_Vol33_26_Poem_Self-Confidence_Larsen.txt
+     CONTENT: Table of contents page with subscription info.
+
+  6. Vol32/Jun: June_Vol32_25_Poem_A_Cooper.txt
+     CONTENT: Prose fiction (story about Tilda and Frank Robinson).
+
+  7. Vol35/Nov: November_Vol35_27_Poem_November_Coles.txt
+     CONTENT: Cooking instructions (turkey dinner preparation).
+
+  8. Vol34/Aug: August_Vol34_26_Poem_Our_Sayre.txt
+     CONTENT: Prose narrative about church historical journey/pioneer wagons.
+
+  9. Vol34/Apr: April_Vol34_31_Poem_April_Trone.txt
+     CONTENT: Prose description of a statue presentation to President Smith.
+
+  10. Vol35/Jan: January_Vol35_31_Poem_My_Nelson.txt
+      CONTENT: Prose fiction about pioneer settlers at San Juan River.
+
+  11. Vol38/Nov: November_Vol38_32_Poem_by_Ekman.txt
+      CONTENT: Art supply materials list and painting instructions.
+
+  12. Vol38/Jan: January_Vol38_40_Poem_Within_My_Sayre.txt
+      CONTENT: Music catalog/sheet music order listing.
+
+  13. Vol35/Oct: October_Vol35_24_Poem_Walk_Me.txt
+      CONTENT: Prose fiction (Thanksgiving story about a woman arriving in Salt Lake).
+
+  14. Vol34/Mar: March_Vol34_30_Poem_Patterned_the_Wangsgaard.txt
+      CONTENT: Photo caption about a chapel in Oxford, Idaho.
+
+  15. Vol39/Aug: August_Vol39_34_Poem_Remembered_Cook.txt
+      CONTENT: Prose fiction (story about a doctor named Matt and Lorna).
+
+  16. Vol36/Sep: September_Vol36_31_Poem_Blue_Woods.txt
+      CONTENT: Prose fiction fragment about girls named Sally and Penny.
+
+  17. Vol39/Jan: January_Vol39_30_Poem_A_New_Year_Lael_W_Hill_...txt
+      CONTENT: Full table of contents page with board member listing.
+
+FAIL - MIXED/CONTAMINATED (5 of 30 = 17%):
+  18. Vol40/Jul: July_Vol40_34_Poem_Release_From_Miles.txt
+      CONTENT: 2 lines of poem, then an archaeological book advertisement.
+
+  19. Vol30/Mar: March_Vol30_23_Poem_Triumph_Bailey.txt
+      CONTENT: Table of contents snippet (just a few words, no poem text).
+
+  20. Vol35/Jun: June_Vol35_33_Poem_Petals_and_Wangsgaard.txt
+      CONTENT: Advertisement for ZCMI glassware with seagull designs.
+
+  21. Vol38/Feb: February_Vol38_25_Poem_Where_Roberts.txt
+      CONTENT: Buffet dinner hosting instructions and recipes.
+
+  22. Vol39/Dec: December_Vol39_53_Poem_Emergence_Stewart.txt
+      CONTENT: Table of contents page with publication info.
+
+  23. Vol39/Feb: February_Vol39_44_Poem_Science_Kovan.txt
+      CONTENT: Prose essay about gardening, libraries, and service.
+
+  24. Vol39/Mar: March_Vol39_41_Poem_March_Hill.txt
+      CONTENT: Prose fiction about a boy named Timothy who can't read.
+
+  25. Vol37/Dec: December_Vol37_43_Poem_What_Is_Cook.txt
+      CONTENT: News column about women's organizations and achievements.
+
+  26. Vol40/Mar: March_Vol40_35_Poem_Fantasy_Lukei.txt
+      CONTENT: Table of contents fragment.
+
+  27. Vol36/Dec: December_Vol36_37_Poem_Holy_Night_Coles.txt
+      CONTENT: Theological prose about Christ's final days and ministry.
+
+  28. Vol36/Nov: November_Vol36_36_Poem_Earth_Coles.txt
+      CONTENT: Mostly prose about a volcano, with a 6-line poem at the end.
+
+  29. Vol37/May: May_Vol37_31_Poem_Without_Johns.txt
+      CONTENT: Mostly prose fiction, with a poem at the end.
+
+============================================================
+3. COLLATERAL DAMAGE CHECK - FILE COUNTS
+============================================================
+Expected baseline from session handover (only 2 values provided):
+  Vol30: expected 297, actual 298 (+1) -- OK
+  Vol31: expected 289, actual 278 (-11) -- POSSIBLE LOSS
+
+Current counts (Vols 30-40, excluding Misc/BOARD/CONTENTS):
+  Vol30: 298
+  Vol31: 278
+  Vol32: 366
+  Vol33: 386
+  Vol34: 375
+  Vol35: 409
+  Vol36: 338
+  Vol37: 427
+  Vol38: 446
+  Vol39: 430
+  Vol40: 410
+
+NOTE: Only two baseline values were provided. Vol31 shows a decrease of 11
+files compared to expected 289. This could indicate files were lost, or the
+baseline count may have been calculated differently. Needs investigation.
+
+============================================================
+4. DUPLICATE CHECK
+============================================================
+Found 4 duplicate pairs (same title by same author in same month):
+
+  1. Vol32/April: April_Vol32_01_Poem_Gold-green_Wangsgaard.txt (actual poem)
+     vs April_Vol32_26_Poem_Gold-green_Wangsgaard.txt (table of contents snippet)
+     ACTION NEEDED: Delete seq 26 (not a poem)
+
+  2. Vol32/April: April_Vol32_14_Poem_To_My_Benedict.txt (actual poem)
+     vs April_Vol32_27_Poem_To_My_Benedict.txt (prose about city finances/gardening)
+     ACTION NEEDED: Delete seq 27 (not a poem)
+
+  3. Vol35/December: December_Vol35_24_Poem_We_Bailey.txt (actual poem)
+     vs December_Vol35_34_Poem_We_Bailey.txt (prose sermon)
+     ACTION NEEDED: Delete seq 34 (not a poem)
+
+  4. Vol35/January: January_Vol35_21_Poem_My_Nelson.txt (garbled OCR)
+     vs January_Vol35_31_Poem_My_Nelson.txt (prose fiction)
+     ACTION NEEDED: Both are problematic. Seq 21 has garbled OCR mixing poem
+     with recipe text. Seq 31 is prose fiction. Neither is a clean poem file.
+
+============================================================
+5. CONTENT QUALITY SPOT-CHECK (10 actual poems from PDF extraction)
+============================================================
+Of the poems that were correctly identified as poems:
+
+GOOD QUALITY (readable, complete, no contamination):
+  - Vol39/Mar "Sound" by Gene Romolo -- complete sonnet, clean text
+  - Vol37/Aug "Navajo Weaver" by Anna Prince Redd -- complete sonnet, clean
+  - Vol33/Feb "To" by Haws -- complete, clean
+  - Vol39/Jun "Alchemy" by Miner -- complete, clean
+  - Vol35/Sep "Payment" by Meiling D. Clyde -- complete, clean
+  - Vol37/May "Swinging" by Grace Sayre -- complete, clean
+  - Vol40/Mar "Salute" by Atkinson -- complete, clean
+
+MINOR ISSUES:
+  - Vol40/May "Gift Divine" -- may be cut off at beginning (starts mid-thought)
+  - Vol38/Jul "First Steps" -- only 4 lines, possibly truncated
+  - Vol36/Jul "Embryo" -- appears to be a fragment
+
+OCR QUALITY: Generally acceptable. Spacing is over-expanded in PDF-extracted
+files (double-spaced characters) but text is readable. No garbled OCR in
+the correctly-identified poem files.
+
+============================================================
+SUMMARY OF ISSUES
+============================================================
+Total files checked: 70 (30 renamed + 30 new extractions + 10 quality checks)
+
+RENAMED POEMS (Vols 1-40):
+  - False positive rate: ~20% (6-7 of 30 sampled)
+  - Most false positives in early vols (1-5) and some in later vols
+  - Estimated total false positives across 544 renames: ~109 files
+
+NEWLY EXTRACTED PDF POEMS (Vols 30-40):
+  - False positive rate: ~57-73% (17-22 of 30 are NOT poems)
+  - Common failure modes:
+    * Table of contents pages labeled as poems
+    * Prose fiction mislabeled as poems
+    * Recipes and household instructions mislabeled
+    * Advertisements mislabeled
+    * Photo captions and news columns mislabeled
+  - Estimated problematic files out of 306 new extractions: ~175-220 files
+
+DUPLICATES: 4 pairs found in Vols 32 and 35
+
+COLLATERAL DAMAGE: Vol31 shows -11 files vs expected baseline (needs investigation)
+
+============================================================
+RECOMMENDATIONS
+============================================================
+1. URGENT: Review and clean up the ~306 newly extracted PDF poem files.
+   The majority are not poems. A targeted re-extraction with better
+   filtering is recommended rather than manual cleanup.
+
+2. Review the 7 false positive renames identified above and revert them.
+
+3. Delete the 4 duplicate files identified (keep the correct version).
+
+4. Investigate Vol31 file count discrepancy (-11 files from expected 289).
+
+5. For future extraction: the PDF poem extractor needs better content
+   validation. Key improvements:
+   - Filter out table-of-contents pages (check for page number patterns)
+   - Filter out prose fiction (check for dialogue markers, paragraph length)
+   - Filter out recipes (check for ingredient/measurement patterns)
+   - Filter out advertisements (check for price/order patterns)
+   - Require minimum verse structure signals before labeling as poem
+
+============================================================
+END OF REPORT
+============================================================

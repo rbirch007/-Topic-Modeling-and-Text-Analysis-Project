@@ -1,0 +1,32 @@
+{
+  "volume": 52,
+  "month": "July",
+  "year": 1965,
+  "timestamp": "20260314_102519",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V52_07_07_GenFt_Editorial_Crawford.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    },
+    {
+      "file": "V52_07_21_SpFt_Dont_Sabin.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - QC FAIL: only 10% OCR coverage"
+    },
+    {
+      "file": "V52_07_23_Fict_Ring_Thulin.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4091 chars added)"
+    },
+    {
+      "file": "V52_07_28_The Home_Work_In.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5569 chars removed)"
+    }
+  ]
+}

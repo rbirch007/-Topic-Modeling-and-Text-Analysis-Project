@@ -1,0 +1,45 @@
+{
+  "volume": 15,
+  "month": "August",
+  "year": 1928,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0242,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "August_Vol15_01_Frontispiece_Portrait_of_Julia_Alleman_Child_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 312,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption describing a portrait. The PDF images show advertisements and magazine contents but not the actual frontispiece portrait page, which would typically appear earlier in the magazine. The file content appears complete for what it is - a brief biographical caption about Julia Alleman Child and her connection to Martin Harris.",
+      "api_usage": {
+        "input_tokens": 7191,
+        "output_tokens": 177,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "source_file": "August_Vol15_04_Article_Conference_of_Social_Work_Genevieve_Thornton.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

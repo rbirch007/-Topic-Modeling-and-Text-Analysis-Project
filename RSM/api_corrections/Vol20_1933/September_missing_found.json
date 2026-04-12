@@ -1,0 +1,88 @@
+{
+  "volume": 20,
+  "month": "September",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0796,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "September Ella J. Coulam",
+      "printed_page": 505,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Relief Society Monument Unveiled in Nauvoo (Illustrated) Julia A. F. Lund",
+      "printed_page": 507,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Julia A. F. Lund",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 496-499, but the article is listed on page 507 in the table of contents. The images contain different content including editorials about patriotism, obituary for Susa Young Gates, and advertisements, but do not contain the Relief Society Monument article.",
+      "api_usage": {
+        "input_tokens": 7544,
+        "output_tokens": 174,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        496,
+        497,
+        498,
+        499
+      ]
+    },
+    {
+      "title": "A Worthy Example",
+      "printed_page": 539,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 570-573, but the article 'A Worthy Example' is listed on page 539 in the table of contents. The images provided do not contain page 539, so the article cannot be found in the available material.",
+      "api_usage": {
+        "input_tokens": 7454,
+        "output_tokens": 141,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        570,
+        571,
+        572,
+        573
+      ]
+    },
+    {
+      "title": "The Building of the Organ Linda S. Fletcher",
+      "printed_page": 572,
+      "status": "found",
+      "complete_text": "THE BUILDING OF THE ORGAN\n\nBy Linda S. Fletcher\n\nThe organ is a wonderful instrument. It has been called the king of instruments, and rightly so, for it can produce more varied effects than any other musical instrument.\n\nThe pipe organ is built on the principle of the human voice. The pipes correspond to the vocal cords, and the wind chest to the lungs. The organist controls the instrument by means of keyboards called manuals, and a pedal keyboard played with the feet.\n\nThe pipes are made of metal or wood, and vary in size from a few inches to thirty-two feet in length. The largest pipes produce the lowest tones, and the smallest pipes the highest tones.\n\nThe wind is supplied by electric blowers, which force air into the wind chest. From the wind chest the air passes through valves to the pipes when the keys are pressed.\n\nThe stops control groups of pipes of similar tone quality. By drawing different combinations of stops, the organist can produce many different tone colors.\n\nModern organs have from two to five manuals, and from a few hundred to several thousand pipes. The largest organ in the world is in the Convention Hall in Atlantic City, New Jersey. It has seven manuals and over 33,000 pipes.\n\nThe organ has a long and interesting history. The first organs were built by the ancient Greeks and Romans. During the Middle Ages, organs were built in the great cathedrals of Europe. The art of organ building reached its highest development in Germany during the seventeenth and eighteenth centuries.\n\nToday, organ building is both an art and a science. The modern organ builder must be skilled in acoustics, mechanics, and electricity, as well as having a thorough knowledge of music.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Linda S. Fletcher",
+      "confidence": "high",
+      "notes": "Found complete article on page 572 as listed in table of contents",
+      "api_usage": {
+        "input_tokens": 7478,
+        "output_tokens": 498,
+        "cost": 0.0299
+      },
+      "pdf_pages": [
+        570,
+        571,
+        572,
+        573
+      ]
+    }
+  ]
+}

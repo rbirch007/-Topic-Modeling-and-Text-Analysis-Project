@@ -1,0 +1,137 @@
+{
+  "volume": 7,
+  "month": "September",
+  "year": 1920,
+  "total_files_checked": 14,
+  "files_correct": [],
+  "corrections": [
+    {
+      "file": "September_Vol7_01_Article_The_Needs_of_Yesterday_Bertha_A._Kleinman.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Guide Lesson content instead of 'The Needs of Yesterday' poem",
+      "action": "replace_content",
+      "text": "THE NEEDS OF YESTERDAY. Bertha A. Kleinman. Unbowed of years nor yet of pungent sorrow, Unsmarted of doubt that probes its avid way, I yet have need of grace and a tomorrow To right the many wrongs of yesterday. The many hours I have not to filling. The wasted days of empty little wiles, The crying tasks that have not found me willing The span of cloud that needed but my smiles;  The fleeting beats of chance so easy squandered, The thousand little precious waits of time — And all the ways of quest I have not wandered, Where timid ones might cling to hands of mine. Ah me! the little zest and care expended. The meager, little, momentary zeal — To others' wrongs that might have been amended. And rasping little hurts that I could heal! O Thou who knowest every throb of sorrow. Bear still with me, for I would know the way, That somewhere in the might of Thy tomorrow, I may amend the needs of yesterday!",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "September_Vol7_02_Article_Mrs._May_Wright_Sewell.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Mrs. May Wright Sewell Mrs. Susa Young Gates. There has passed into the land of shadows one of the greatest woman would who lived in modern times, Mrs. May Wright Sewell. Born in 1844, she died July 23, 1920, at her home in Indianapolis. Her husband. Professor Theodore Lovet Sewell, was prominent in educational work until his death in 1895. Mrs. Sewell might be spoken of as the second one of that trio of peerless organizers and leaders which began with Susan B. Anthony and carried over to the present day in Mrs. Carrie Chapman Catt. Dominant, infinitely resourceful, charming in her manner, intellectual without pedantry, brilliant and witty without petty spite or sarcasm, rigorous in her devotion to duty, she was as perfect a leader as this age of woman has produced. To see her conduct a great congress of thousands of women, according to parliamentary law, without confusion, with perfect fairness to all, with a superb dignity, which was never disturbed and a lightninglike seizure of every possible side of a long and involved discussion, was an education in leadership not surpassed by any man or woman living or dead. She was one of the quartet, and pre-eminent among them, who were trained under the beneficent leadership of Susan B. Anthony: May Wright Sewell, Rachel Foster Avery, Anna Howard Shaw, and Ida Husted Harper. Strange, indeed, that the first three of these died within the year. Dr. Shaw died July 2, 1919, Mrs. Avery died October 26, 1919, and Mrs. Sewell on the 23d of July, 1920. Mrs. Harper, the famous historian, alone remains of Miss Anthony's beloved quartet of \"girls.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol7_09_Article_Care_of_Clothing.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the Care of Clothing article",
+      "action": "trim_end",
+      "text": "Daily care means longer wear.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol7_10_Article_Summary_of_Woman's_Position_in_Newly-Enfranchised_Countries.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number instead of article title",
+      "action": "trim_start",
+      "text": "Summary of Woman's Position in Newly-Enfranchised Countries",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_11_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "On the Watch Tower James H. Anderson.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_12_Article_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The Official Round Table",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_13_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Guide Lesson content that should be in separate files",
+      "action": "trim_end",
+      "text": "Rexburg, Idaho,",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Multiple files have incorrect content boundaries. The first article file contains completely wrong content (Guide Lesson instead of poem). Several files have content bleeding from adjacent articles. The Guide Lesson files appear to be duplicated and contain the same content.",
+  "validated_corrections": [
+    {
+      "file": "September_Vol7_02_Article_Mrs._May_Wright_Sewell.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Mrs. May Wright Sewell Mrs. Susa Young Gates. There has passed into the land of shadows one of the greatest woman would who lived in modern times, Mrs. May Wright Sewell. Born in 1844, she died July 23, 1920, at her home in Indianapolis. Her husband. Professor Theodore Lovet Sewell, was prominent in educational work until his death in 1895. Mrs. Sewell might be spoken of as the second one of that trio of peerless organizers and leaders which began with Susan B. Anthony and carried over to the present day in Mrs. Carrie Chapman Catt. Dominant, infinitely resourceful, charming in her manner, intellectual without pedantry, brilliant and witty without petty spite or sarcasm, rigorous in her devotion to duty, she was as perfect a leader as this age of woman has produced. To see her conduct a great congress of thousands of women, according to parliamentary law, without confusion, with perfect fairness to all, with a superb dignity, which was never disturbed and a lightninglike seizure of every possible side of a long and involved discussion, was an education in leadership not surpassed by any man or woman living or dead. She was one of the quartet, and pre-eminent among them, who were trained under the beneficent leadership of Susan B. Anthony: May Wright Sewell, Rachel Foster Avery, Anna Howard Shaw, and Ida Husted Harper. Strange, indeed, that the first three of these died within the year. Dr. Shaw died July 2, 1919, Mrs. Avery died October 26, 1919, and Mrs. Sewell on the 23d of July, 1920. Mrs. Harper, the famous historian, alone remains of Miss Anthony's beloved quartet of \"girls.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol7_09_Article_Care_of_Clothing.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content beyond the Care of Clothing article",
+      "action": "trim_end",
+      "text": "Daily care means longer wear.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "September_Vol7_10_Article_Summary_of_Woman's_Position_in_Newly-Enfranchised_Countries.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number instead of article title",
+      "action": "trim_start",
+      "text": "Summary of Woman's Position in Newly-Enfranchised Countries",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_11_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "On the Watch Tower James H. Anderson.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_12_Article_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The Official Round Table",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "September_Vol7_13_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Guide Lesson content that should be in separate files",
+      "action": "trim_end",
+      "text": "Rexburg, Idaho,",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

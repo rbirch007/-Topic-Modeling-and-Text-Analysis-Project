@@ -1,0 +1,68 @@
+{
+  "volume": 3,
+  "month": "October",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1278,
+  "files": [
+    {
+      "source_file": "October_Vol3_10b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Women of the Bible: Elizabeth and Anna",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "What kind of woman was she? Give your reasons.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in November.",
+          "end_boundary": "LESSON II. Work and Business. Second Week in November.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy and Art - Scotch and Irish Surnames, November Landscape, Architecture",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Art. Third Week in November.",
+          "end_boundary": "the place where the buildings are erected.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Home Economics - The Servant Problem",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Economics. Fourth Week in November.",
+          "end_boundary": "or invite open discussion of the points given.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the complete Guide Lessons section with 4 distinct lessons for November 1916. Lesson II appears to be just a header with no content, while the other three lessons have substantial content. The lessons cover Theology, Work/Business, Genealogy/Art, and Home Economics as indicated in the typical Relief Society Magazine structure.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 14162,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39731,
+        "output_tokens": 573,
+        "cost": 0.1278
+      }
+    }
+  ]
+}

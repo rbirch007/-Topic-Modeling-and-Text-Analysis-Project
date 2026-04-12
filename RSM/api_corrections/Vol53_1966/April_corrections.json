@@ -1,0 +1,144 @@
+{
+  "volume": 53,
+  "month": "April",
+  "year": 1966,
+  "total_files_checked": 40,
+  "files_correct": [
+    "V53_04_02_Frnt_At_the_Bailey.txt",
+    "V53_04_03_GenFt_From_Near_and_Far.txt",
+    "V53_04_06_Poem_My_McAllister.txt",
+    "V53_04_08_Poem_Lifted_Leitner.txt",
+    "V53_04_10_Poem_Suddenly_Tanner.txt",
+    "V53_04_12_GenFt_Editorial_Crawford.txt",
+    "V53_04_13_GenFt_Notes.txt",
+    "V53_04_14_Poem_He_Coles.txt",
+    "V53_04_17_Poem_Bridal_Olsen..txt",
+    "V53_04_18_Poem_No_McKey..txt",
+    "V53_04_20_The Home_Recipes_Thome.txt",
+    "V53_04_23_Poem_Prelude_Kay.txt",
+    "V53_04_24_The Home_I_Love_Wagenen.txt",
+    "V53_04_25_The Home_Make_a_Lichfield.txt",
+    "V53_04_26_The Home_I_Love_Ahlman.txt",
+    "V53_04_27_The Home_Paintings_Beautifu.txt",
+    "V53_04_28_The Home_Hill_of_Young.txt",
+    "V53_04_29_The Home_Inspiration_Park.txt",
+    "V53_04_30_The Home_Home_Larsen.txt",
+    "V53_04_31_Poem_Morning_Houston.txt",
+    "V53_04_32_The Home_No_Littke.txt",
+    "V53_04_33_Poem_Thank_Denton..txt",
+    "V53_04_35_The Home_A_Bascom.txt",
+    "V53_04_36_The Home_Full_Spencer.txt",
+    "V53_04_37_GenFt_Notes_Activities.txt",
+    "V53_04_39_Poem_My_Brown.txt",
+    "V53_04_40_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_04_01_Poem_Alpine_Roberts.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about testimony instead of the Alpine Lilies poem",
+      "action": "trim_start",
+      "text": "I know that no person can come to this position and be successful without the preparation of prayer and a sincere desire to perform this assignment in keeping with the high standards of the Relief Society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_04_01_Poem_Alpine_Roberts.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual Alpine Lilies poem text which appears at the end of the OCR",
+      "action": "replace_content",
+      "text": "ALPINE LILIES Dorothy J. Roberts As wind wakes from the autumn doorstep, Wheeling toward evening in a pirouette And southward on a threnody of wings, Leaving with a cry, but to return to a song; As moon, spring's rover, must midnight, By midnight, watch the winter field Till snow thins to cluny lace On the clods of April's hunger, And as hour on hour, must light move Up from the cycle of slumber CJ Toward the dark horizon of the dawn, And night give way to the unfettering sun, In mimic, oh, my striving year, Let lilies leap from the alpine weather As feet of frost cross glacier And soles walk the summer of sod.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_04_04_SpFt_The_Doxey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from the next fiction article",
+      "action": "trim_end",
+      "text": "In the name of Jesus Christ, Amen. 249 reasons.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_04_11_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society board member names instead of Woman's Sphere content",
+      "action": "note",
+      "text": "Content appears to be board member listing rather than the Woman's Sphere article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_04_21_The Home_How_to_Maturale.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about hope chest instead of nylon tricot sewing instructions",
+      "action": "note",
+      "text": "Content appears to be from Second Hope Chest article rather than How to Sew Nylon Tricot",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_04_34_Fict_Wheat_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence and continues into next article",
+      "action": "trim_end",
+      "text": "No. (To be continued)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V53_04_38_Lssn_Work_Poulson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "Compare prices of identical branded products in different stores.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most poetry and shorter articles extracted correctly. Main issues are with longer articles having content bleed from adjacent articles, and two articles containing completely wrong content. The OCR quality is generally good with clear article boundaries visible.",
+  "validated_corrections": [
+    {
+      "file": "V53_04_01_Poem_Alpine_Roberts.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about testimony instead of the Alpine Lilies poem",
+      "action": "trim_start",
+      "text": "I know that no person can come to this position and be successful without the preparation of prayer and a sincere desire to perform this assignment in keeping with the high standards of the Relief Society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_04_04_SpFt_The_Doxey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from the next fiction article",
+      "action": "trim_end",
+      "text": "In the name of Jesus Christ, Amen. 249 reasons.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_04_38_Lssn_Work_Poulson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "Compare prices of identical branded products in different stores.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_04_34_Fict_Wheat_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete sentence and continues into next article",
+      "action": "trim_end",
+      "text": "No. (To be continued)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

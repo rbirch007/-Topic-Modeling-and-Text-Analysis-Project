@@ -1,0 +1,122 @@
+{
+  "volume": 15,
+  "month": "July",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 7,
+  "total_searched": 7,
+  "total_cost": 0.0994,
+  "stats": {
+    "found": 0,
+    "not_found": 7,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Sagebrush A. C. Sorenson",
+      "printed_page": 354,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Robbed by Wolves E. Grant",
+      "printed_page": 357,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Women Voters Don't \"Ring\"",
+      "printed_page": 368,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Hospital",
+      "printed_page": 369,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'The Hospital' is not visible in the provided PDF page images (pages 358-361). The images show pages containing 'Robbed by Wolves', 'Pioneer Memoriam', and 'Conference Address' articles, but page 369 where 'The Hospital' should appear is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7489,
+        "output_tokens": 161,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        358,
+        359,
+        360,
+        361
+      ]
+    },
+    {
+      "title": "Hannah Christensen",
+      "printed_page": 380,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Hannah Christensen' listed on page 380 in the table of contents is not present in any of the four PDF page images provided (pages 413, 414, 415, 416). These pages contain advertisements for Troy Laundry, Bennett's Property Life Insurance, Clover Leaf Dairy, and Beneficial Life Insurance Co., but no article content.",
+      "api_usage": {
+        "input_tokens": 7497,
+        "output_tokens": 168,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        413,
+        414,
+        415,
+        416
+      ]
+    },
+    {
+      "title": "An Amazing Life History E. I. Pulsipher",
+      "printed_page": 390,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "E. I. Pulsipher",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from advertisements and the table of contents/frontispiece, but do not contain page 390 where this article should be located. The article is not visible in any of the four provided images.",
+      "api_usage": {
+        "input_tokens": 7529,
+        "output_tokens": 148,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        413,
+        414,
+        415,
+        416
+      ]
+    },
+    {
+      "title": "Elizabeth Mary Clegg Brown Louetta Brown",
+      "printed_page": 395,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Louetta Brown",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 413-416). The article should appear on page 395 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7521,
+        "output_tokens": 143,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        413,
+        414,
+        415,
+        416
+      ]
+    }
+  ]
+}

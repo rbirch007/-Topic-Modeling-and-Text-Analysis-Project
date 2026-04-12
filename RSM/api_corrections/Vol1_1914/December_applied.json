@@ -1,0 +1,57 @@
+{
+  "volume": 1,
+  "month": "December",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Dec_03a_Art_Genealogy_and_Testimony.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_Dec_03b_Art_Home_Ethics_and_Gardening_-_The_Christmas_Spirit.txt",
+      "action": "append",
+      "result": "APPLIED append (41 chars added)"
+    },
+    {
+      "file": "V1_1914_Dec_07_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Dec_08_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Dec_09_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Dec_10_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Dec_11_Art_SMITH.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Dec_12_Art_JENSEN.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Dec_13_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "volume": 20,
+  "month": "April",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.1171,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "One of the Tablets of the Seagull Monument Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "EVENTIDE AMONG THE ASPEN GROVES\n\nGlen E. Perkins.",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "Glen E. Perkins",
+      "confidence": "high",
+      "notes": "Found the frontispiece image on the first page - it's a black and white photograph of aspen trees with the caption 'EVENTIDE AMONG THE ASPEN GROVES' and photographer credit 'Glen E. Perkins.' This appears to be the frontispiece referenced in the table of contents, though the title doesn't exactly match - it's about aspen groves rather than seagull monument tablets.",
+      "api_usage": {
+        "input_tokens": 8702,
+        "output_tokens": 217,
+        "cost": 0.0294
+      },
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "title": "Easter Morning Mabel S. Harmer",
+      "printed_page": 197,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Mabel S. Harmer",
+      "confidence": "high",
+      "notes": "The article 'Easter Morning' by Mabel S. Harmer listed on page 197 in the table of contents is not visible in any of the four provided PDF page images (pages 222-225). The article would appear much earlier in the magazine, around page 197, but those pages are not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 8680,
+        "output_tokens": 172,
+        "cost": 0.0286
+      },
+      "pdf_pages": [
+        222,
+        223,
+        224,
+        225
+      ]
+    },
+    {
+      "title": "Do Not Shun the Fight Dr. Richard R. Lyman",
+      "printed_page": 199,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Dr. Richard R. Lyman",
+      "confidence": "high",
+      "notes": "Article should be on page 199 but provided PDF images only show pages 191-194. Need images of page 199 to extract this article.",
+      "api_usage": {
+        "input_tokens": 8700,
+        "output_tokens": 300,
+        "cost": 0.0306
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    },
+    {
+      "title": "To an April Day Mary Hale Woolsey",
+      "printed_page": 206,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Mary Hale Woolsey",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 222-225). The table of contents indicates it should be on page 206, but the provided images start at page 222. The article may exist on page 206 which was not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 8684,
+        "output_tokens": 160,
+        "cost": 0.0285
+      },
+      "pdf_pages": [
+        222,
+        223,
+        224,
+        225
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "volume": 17,
+  "month": "September",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1566,
+  "files": [
+    {
+      "source_file": "September_Vol17_15_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Book of Mormon - The Great War",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Bem in do- Guide Lessons For November LESSON I",
+          "end_boundary": "the Book of 'Mormon, Reynolds; The Message and Characters",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson 2 - Work and Business - Teachers' Topic for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 2 Work and Business TEACHERS' Topic FOR NOVEMBER",
+          "end_boundary": "4. Participation in Activity — social, financial, service, or",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson 3 - Literature - The Short Story: Stories of Ancient Egypt, Greece, and Rome",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR NOVEMBER Ste LESSON 3 Literature (3rd",
+          "end_boundary": "was used as the basis for conclusions drawn on",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson 4 - Social Service - Personality Study: The Psychology of Persuasion",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 4 Social Service Fourth Week in November PERSONALITY",
+          "end_boundary": "Relief Society Women",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for November Guide Lessons, covering Theology, Work and Business, Literature, and Social Service. Each lesson has clear subject matter boundaries and different instructional content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 29487,
+      "tier": 1,
+      "pdf_pages": [
+        609,
+        610,
+        611
+      ],
+      "api_usage": {
+        "input_tokens": 49368,
+        "output_tokens": 569,
+        "cost": 0.1566
+      }
+    }
+  ]
+}

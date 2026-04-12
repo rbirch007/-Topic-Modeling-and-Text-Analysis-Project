@@ -1,0 +1,47 @@
+{
+  "volume": 53,
+  "month": "October",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_10_01_Poem_A_Box_Rea.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V53_10_04_SpFt_Strength_Monson.txt",
+      "action": "append",
+      "result": "APPLIED append (211 chars added)"
+    },
+    {
+      "file": "V53_10_17_Fict_The_Franks.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (9532 chars removed)"
+    },
+    {
+      "file": "V53_10_18_Poem_My_Cook.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3151 chars removed)"
+    },
+    {
+      "file": "V53_10_19_Poem_The_Bowles.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3751 chars removed)"
+    },
+    {
+      "file": "V53_10_21_Poem_A_Coles.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3522 chars removed)"
+    },
+    {
+      "file": "V53_10_25_Fict_Tell_Me_Lloyd.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (467 chars added)"
+    }
+  ]
+}

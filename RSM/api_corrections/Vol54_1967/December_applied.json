@@ -1,0 +1,47 @@
+{
+  "volume": 54,
+  "month": "December",
+  "year": 1967,
+  "timestamp": "20260313_235012",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V54_12_01_Fict_Throw_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (689 chars)"
+    },
+    {
+      "file": "V54_12_03_Art_From_Near_and_Far.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (615 chars)"
+    },
+    {
+      "file": "V54_12_05_Poem_To_Keep_Schow.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V54_12_07_Poem_My_Hafen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V54_12_11_Fict_General_Conference.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (359 chars)"
+    },
+    {
+      "file": "V54_12_12_Poem_Three_Robinson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1131 chars removed)"
+    },
+    {
+      "file": "V54_12_13_Poem_My_Day_Kleinman.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    }
+  ]
+}

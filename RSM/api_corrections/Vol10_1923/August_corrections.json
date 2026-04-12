@@ -1,0 +1,106 @@
+{
+  "volume": 10,
+  "month": "August",
+  "year": 1923,
+  "total_files_checked": 12,
+  "files_correct": [
+    "August_Vol10_01_Frontispiece_Timpanogos_Climbed_to_the_Top_in_Winter_Frontispiece.txt",
+    "August_Vol10_02_Article_Utah_Mountains.txt",
+    "August_Vol10_03_Article_Eliza_Roxey_Snow_Memorial.txt",
+    "August_Vol10_04_Article_What_Utah_Does_for_the_Deaf_Amy_Whipple_Evans.txt",
+    "August_Vol10_05_Article_The_Value_of_a_Smile_Alta_Wellman_Cunningham.txt",
+    "August_Vol10_06_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+    "August_Vol10_08a_Notes_from_Field_Notes_From_the_Field.txt",
+    "August_Vol10_09a_Guide_Lessons_Theology_and_Testimony_-_Habits_and_Customs_in_Heaven.txt",
+    "August_Vol10_09c_Guide_Lessons_Literature_-_The_Literary_Contribution_of_New_England.txt",
+    "August_Vol10_09d_Guide_Lessons_Social_Service_-_Marriage_and_the_Social_Interests.txt"
+  ],
+  "corrections": [
+    {
+      "file": "August_Vol10_02_Article_Utah_Mountains.txt",
+      "issue_type": "missing_text",
+      "description": "Article is incomplete - missing the final sentence about few people knowing about the Alpine lake",
+      "action": "append",
+      "text": "Few people know that a tiny Alpine lake lies at the head of one of the hollows above the lower falls.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_03_Article_Eliza_Roxey_Snow_Memorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains publication header that belongs to the next article",
+      "action": "trim_end",
+      "text": "Editor's Note: Affecting the matter of memorials for past Presidents, a memorial was recently decided upon, by the General Board, for Eliza Roxey Snow. Other memorials will be considered later.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_04_Article_What_Utah_Does_for_the_Deaf_Amy_Whipple_Evans.txt",
+      "issue_type": "missing_text",
+      "description": "Article ends mid-sentence, missing the final words about Dr. Howe's quote",
+      "action": "append",
+      "text": "Howe, the great teacher of Laura Bridgman, that \"obstacles are things to be overcome.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_06_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains editorial board information that should be in a separate section",
+      "action": "trim_end",
+      "text": "Frozen Rhubarb\n1 qt. Rhubarb juice and pulp. 1c. Sugar. 1 c. Orange juice. 1 qt. Cream.\nGrated rind of 1 lemon may be added. Combine first four ingredients; freeze to mushy consistency. Add cream; finish freezing. Pack and let stand 2 hrs. before serving.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_09b_Guide_Lessons_Work_and_Business.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only the header, missing the actual lesson content",
+      "action": "note",
+      "text": "Content appears to be missing from OCR - only header present",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are incomplete articles due to OCR gaps and some bleed-through of editorial content. The Work and Business lesson appears to be missing its content entirely from the OCR source.",
+  "validated_corrections": [
+    {
+      "file": "August_Vol10_02_Article_Utah_Mountains.txt",
+      "issue_type": "missing_text",
+      "description": "Article is incomplete - missing the final sentence about few people knowing about the Alpine lake",
+      "action": "append",
+      "text": "Few people know that a tiny Alpine lake lies at the head of one of the hollows above the lower falls.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_03_Article_Eliza_Roxey_Snow_Memorial.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains publication header that belongs to the next article",
+      "action": "trim_end",
+      "text": "Editor's Note: Affecting the matter of memorials for past Presidents, a memorial was recently decided upon, by the General Board, for Eliza Roxey Snow. Other memorials will be considered later.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_04_Article_What_Utah_Does_for_the_Deaf_Amy_Whipple_Evans.txt",
+      "issue_type": "missing_text",
+      "description": "Article ends mid-sentence, missing the final words about Dr. Howe's quote",
+      "action": "append",
+      "text": "Howe, the great teacher of Laura Bridgman, that \"obstacles are things to be overcome.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol10_06_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains editorial board information that should be in a separate section",
+      "action": "trim_end",
+      "text": "Frozen Rhubarb\n1 qt. Rhubarb juice and pulp. 1c. Sugar. 1 c. Orange juice. 1 qt. Cream.\nGrated rind of 1 lemon may be added. Combine first four ingredients; freeze to mushy consistency. Add cream; finish freezing. Pack and let stand 2 hrs. before serving.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

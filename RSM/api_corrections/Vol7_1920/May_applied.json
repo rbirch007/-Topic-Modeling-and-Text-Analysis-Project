@@ -1,0 +1,42 @@
+{
+  "volume": 7,
+  "month": "May",
+  "year": 1920,
+  "timestamp": "20260315_120944",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol7_01_Article_Suffrage_Won_by_the_Mothers_of_the_United_States.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1765 chars added)"
+    },
+    {
+      "file": "May_Vol7_03_Article_Beyond_Arsareth.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2193 chars added)"
+    },
+    {
+      "file": "May_Vol7_05_Article_The_Official_Round_Table.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "May_Vol7_06_Article_On_the_Watch_Tower.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "May_Vol7_07_Editorial_Editorial.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (808 chars added)"
+    },
+    {
+      "file": "May_Vol7_08_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4786 chars removed)"
+    }
+  ]
+}

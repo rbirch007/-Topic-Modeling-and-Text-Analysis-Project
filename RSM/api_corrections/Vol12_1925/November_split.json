@@ -1,0 +1,171 @@
+{
+  "volume": 12,
+  "month": "November",
+  "year": 1925,
+  "total_merged": 3,
+  "total_splits": 7,
+  "total_cost": 0.4778,
+  "files": [
+    {
+      "source_file": "November_Vol12_04_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Editor Abroad",
+          "category": "Article",
+          "author": "Alice L. Reynolds",
+          "start_boundary": "The Editor Abroad Egypt Alice L. Reynolds A trip",
+          "end_boundary": "countless acres of sunburned sand.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Diet for the School Child",
+          "category": "Article",
+          "author": "Jean Cox",
+          "start_boundary": "Diet for the School Child By Jean Cox,",
+          "end_boundary": "made with the foods",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "THE EDITOR ABROAD",
+        "DIET FOR THE SCHOOL CHILD"
+      ],
+      "notes": "The file contains two complete articles. The first is 'The Editor Abroad' by Alice L. Reynolds about Egypt, which runs from the beginning through the description of Egypt's preserved mummies and sunburned sand. The second is 'Diet for the School Child' by Jean Cox, which begins with the title and author byline and ends mid-sentence discussing arrangements with foods, suggesting this article continues in another file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 15681,
+      "tier": 1,
+      "pdf_pages": [
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655,
+        656,
+        657
+      ],
+      "api_usage": {
+        "input_tokens": 51841,
+        "output_tokens": 360,
+        "cost": 0.1609
+      }
+    },
+    {
+      "source_file": "November_Vol12_10_Article_Golden-Rod_Elsie_Talmage_Brandley.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Golden-Rod",
+          "category": "Article",
+          "author": "Elsie Talmage Brandley",
+          "start_boundary": "Golden-Rod By Elsie Talmage Brandley. Gwen Keridan's color scheme?the",
+          "end_boundary": "if you'll let me have Golden-rod for my bridal bouquet!\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Endurance",
+          "category": "Poem",
+          "author": "Josie E. Childs",
+          "start_boundary": "Endurance Third poem to receive honorable mention in the",
+          "end_boundary": "I and Endurance safely reached The summit of the hill.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "GOLDEN-ROD",
+        "ENDURANCE"
+      ],
+      "notes": "This file contains two distinct pieces: a short story titled 'Golden-Rod' by Elsie Talmage Brandley, and a poem titled 'Endurance' by Josie E. Childs. The poem is noted as receiving honorable mention in the Eliza R. Snow Memorial Contest. The boundary between the two pieces is clear, with the poem starting immediately after the story ends.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 19898,
+      "tier": 1,
+      "pdf_pages": [
+        669,
+        670,
+        671,
+        672,
+        673,
+        674,
+        675,
+        676
+      ],
+      "api_usage": {
+        "input_tokens": 51759,
+        "output_tokens": 405,
+        "cost": 0.1614
+      }
+    },
+    {
+      "source_file": "November_Vol12_16_Guide_Lessons_Guide_Lessons_for_January,.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for January - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JANUARY 607 preference to being",
+          "end_boundary": "customs of the Jews in the home?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for January - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II \"Work and Business (Second Week",
+          "end_boundary": "who need spiritual refreshment. LESSON III Literature",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for January - Lesson III: Literature (Canadian Poets)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "(Third Week in January) CANADIAN POETS Our",
+          "end_boundary": "Till my boy comes",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains three distinct lesson sections from the Guide Lessons for January 1926. The third lesson appears to be cut off mid-sentence, ending abruptly with 'Till my boy comes' which suggests the file may be incomplete or truncated. Each lesson has a clear subject area: Theology, Work/Business, and Literature focusing on Canadian war poets.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10628,
+      "tier": 1,
+      "pdf_pages": [
+        689,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696
+      ],
+      "api_usage": {
+        "input_tokens": 49499,
+        "output_tokens": 469,
+        "cost": 0.1555
+      }
+    }
+  ]
+}

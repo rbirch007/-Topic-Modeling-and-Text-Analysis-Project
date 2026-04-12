@@ -1,0 +1,62 @@
+{
+  "volume": 8,
+  "month": "February",
+  "year": 1921,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0418,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "February_Vol8_01_Frontispiece_Sir_Phillip_Herbert_Samuels'_First_Public_Reception_in_Jerus.txt",
+      "status": "complete",
+      "current_chars": 98,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption for a photograph. The image shows Sir Phillip Herbert Samuel's first public reception in Jerusalem. This is the complete text that would appear with the frontispiece photograph.",
+      "api_usage": {
+        "input_tokens": 6235,
+        "output_tokens": 161,
+        "cost": 0.0211
+      },
+      "pdf_pages": [
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    {
+      "source_file": "February_Vol8_15b_Guide_Lessons_Guide_Lessons_for_April_b.txt",
+      "status": "not_found",
+      "current_chars": 40,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The file content mentions 'Guide Lessons for April' but the PDF pages show content about anti-tobacco campaigns and Guide Lessons for February. No April lessons content is visible in the provided pages.",
+      "api_usage": {
+        "input_tokens": 6179,
+        "output_tokens": 145,
+        "cost": 0.0207
+      },
+      "pdf_pages": [
+        45,
+        46,
+        47,
+        48
+      ]
+    }
+  ]
+}

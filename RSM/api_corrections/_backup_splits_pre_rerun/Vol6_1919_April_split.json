@@ -1,0 +1,168 @@
+{
+  "volume": 6,
+  "month": "April",
+  "year": 1919,
+  "total_merged": 4,
+  "total_splits": 9,
+  "total_cost": 0.4131,
+  "files": [
+    {
+      "source_file": "April_Vol6_01_The_Passover_and_the_Lord's_Supper_Mary_Foster_Gibbs.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Last Days",
+          "category": "Article",
+          "author": "Maud Baggarley",
+          "start_boundary": "Passover and the Lord's Supper Mary Foster Gibbs.",
+          "end_boundary": "marking an epoch in the history of this",
+          "confidence": "medium"
+        },
+        {
+          "order": "b",
+          "title": "The Passover and the Lord's Supper",
+          "category": "Article",
+          "author": "Mary Foster Gibbs",
+          "start_boundary": "people and the history of the world itself.",
+          "end_boundary": "sacred day to the Mothers of Israel.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE PASSOVER AND THE LORD'S SUPPER"
+      ],
+      "notes": "The file appears to contain two articles merged together. The first part discusses Elder Orson Hyde's mission and contains content about 'The Last Days' topic, while the main body is clearly 'The Passover and the Lord's Supper' by Mary Foster Gibbs. The transition occurs around the discussion of Orson Hyde's prayer, where the focus shifts from general commentary to the specific Passover topic.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 45237,
+      "tier": 2,
+      "api_usage": {
+        "input_tokens": 11799,
+        "output_tokens": 387,
+        "cost": 0.0412
+      }
+    },
+    {
+      "source_file": "April_Vol6_03_The_Funny-Bone_Route_Ruth_Moench_Bell.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Funny-Bone Route",
+          "category": "Article",
+          "author": "Ruth Moench Bell",
+          "start_boundary": "The Funny-Bone Route Ruth Moench Bell",
+          "end_boundary": "folding her tenderly in his arms.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE FUNNY-BONE ROUTE"
+      ],
+      "notes": "This file contains a single complete short story/article. The content after the story appears to be unrelated material about missing Woman's Exponent volumes, which seems to be a separate notice or advertisement that was included at the end of the article file.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16703,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38552,
+        "output_tokens": 247,
+        "cost": 0.1194
+      }
+    },
+    {
+      "source_file": "April_Vol6_08_On_the_Watch_Tower_James_H._Anderson.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": "Clarissa Smith Williams and Amy Brown Lyman",
+          "start_boundary": "Anderson for the Y. M. M. I. A., Wm. A.",
+          "end_boundary": "explains how American democracy came to be what it is,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "On the Watch Tower",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "ON THE WATCH TOWER The two subjects of chief",
+          "end_boundary": "that the President did make the statement referred to.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE OFFICIAL ROUND TABLE",
+        "ON THE WATCH TOWER"
+      ],
+      "notes": "This file contains two articles that were merged together. The first article 'The Official Round Table' starts partway through and continues with Relief Society organizational news and field reports. The second article 'On the Watch Tower' begins with a clear title and covers current events and political commentary from February 1919. The boundary between articles is clear where 'ON THE WATCH TOWER' appears as a standalone title.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 20463,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38934,
+        "output_tokens": 392,
+        "cost": 0.1227
+      }
+    },
+    {
+      "source_file": "April_Vol6_10_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony. CHILDREN AND THE BOOK OF MORMON",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "Read or sing the Sunday School song, \"Suffer Little Children",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in May.",
+          "end_boundary": "LESSON II. Work and Business. Second Week in May.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy. SURNAMES DERIVED FROM OFFICES AND PROFESSIONS",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy. Third Week in May. SURNAMES DERIVED",
+          "end_boundary": "What is an aristocrat? LESSON IV. Home Courses. Fourth",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Home Courses. ADOLESCENCE",
+          "category": "Home_Science",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Courses. Fourth Week in May. ADOLESCENCE.",
+          "end_boundary": "Buy to your limit ? today",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections as indicated in the table of contents. Lesson II appears to be just a header with no content. The file includes substantial advertising content at the end that should be included with Lesson IV since it continues to the end of the file.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 25853,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40449,
+        "output_tokens": 564,
+        "cost": 0.1298
+      }
+    }
+  ]
+}

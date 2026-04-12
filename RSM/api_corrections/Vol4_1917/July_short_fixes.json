@@ -1,0 +1,40 @@
+{
+  "volume": 4,
+  "month": "July",
+  "year": 1917,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0253,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol4_01_Article_Hazel_Washburn.txt",
+      "status": "truncated",
+      "current_chars": 15,
+      "complete_text": "IN MEMORY OF 1847.\n\nO come with me a little way—\n    We'll turn time's pages back again,\nAnd gaze as at a long lost scroll.\n    (Tis scarcely three-score years and ten).\n\nDost see that stretch of sage-brush land?\n    How grim, forbidding it appears;\nHow dead and changeless it stands,\n    Deserted lain, for countless years.\n\nAnd note the soil, the hard backed clay,\n    'Twas never done, 'twill never be.\n\"It can't be done,\" the doubters say,\n    Their leaders answer, \"Wait and see.\"\n\nNow look again, the scene is changed,\n    And far and near on every side\nThe valley teeming with full life\n    Where Israel's chosen ones reside.\n\nGone are those dauntless pioneers\n    Who builded better than they knew.\nTheir children reap w'th love and tears,\n    Yet, let us hope, with hearts as true.\n                                        HAZEL WASHBURN.",
+      "title": "IN MEMORY OF 1847",
+      "category": "Poem",
+      "author": "Hazel Washburn",
+      "confidence": "high",
+      "notes": "Found complete poem on page 412. The file only contained the author name, but the full poem commemorating the 1847 pioneers is visible in the PDF.",
+      "api_usage": {
+        "input_tokens": 6349,
+        "output_tokens": 415,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        409,
+        410,
+        411,
+        412
+      ]
+    }
+  ]
+}

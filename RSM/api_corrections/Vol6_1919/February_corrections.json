@@ -1,0 +1,95 @@
+{
+  "volume": 6,
+  "month": "February",
+  "year": 1919,
+  "total_files_checked": 26,
+  "files_correct": [
+    "February_Vol6_02a_Article_President_Anthon_H_Lund.txt",
+    "February_Vol6_03_President_Charles_W._Penrose_Joseph_F._Smith.txt",
+    "February_Vol6_05_Be_Ye_of_Good_Cheer_Elsie_E._Barrett.txt",
+    "February_Vol6_06_The_New_General_Superintendency_of_Sunday_Schools_William_A..txt",
+    "February_Vol6_07_The_New_General_Superintendency_of_the_Y._M._M._I._A_Moroni_.txt",
+    "February_Vol6_08_To_a_Sleeping_Child_A._B._Christenson.txt",
+    "February_Vol6_10_The_Blessedness_of_Pure_Young_Love_TO_THE_BRIDEGROOM_AND_BRI.txt",
+    "February_Vol6_11a_Article_For_Time_and_Eternity.txt",
+    "February_Vol6_12_Lines_to_a_Mother_in_Israel_Alice_Foutz.txt",
+    "February_Vol6_13_Stick_to_Your_Ideals_Elizabeth_McKay_Hill.txt",
+    "February_Vol6_14a_Notes_from_Field_The_Official_Round_Table.txt",
+    "February_Vol6_15_Construction_and_Reconstruction_in_the_Home_Jannette_A._Hyde.txt",
+    "February_Vol6_16_On_the_Watch_Tower_James_H._Anderson.txt",
+    "February_Vol6_17a_Editorial_Editorial.txt",
+    "February_Vol6_17b_Guide_Lessons_Guide_Lessons_-_Lesson_I_-_Theology_and_Testimony.txt",
+    "February_Vol6_17c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+    "February_Vol6_17d_Genealogy_Guide_Lessons_-_Lesson_III_-_Genealogy.txt",
+    "February_Vol6_17e_Home_Science_Guide_Lessons_-_Lesson_IV_-_Home_Courses.txt",
+    "February_Vol6_17f_Home_Science_Let_us_Plant_a_Garden_Eastward_from_Eden.txt"
+  ],
+  "corrections": [
+    {
+      "file": "February_Vol6_01_A_Business_Man's_Appreciation_of_President_Heber_J._Grant_Ho.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about President Grant and his Counselors",
+      "action": "trim_start",
+      "text": "President Heber J. Grant and his Counselors A BUSINESS MAN'S APPRECIATION OF PRESIDENT. HEBER J. GRANT Horace G. Whitney In compliance",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol6_04_Elder_Rudger_Clawson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes beginning of next article",
+      "action": "trim_end",
+      "text": "Elder Clawson is best esteemed by those who know him best.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol6_09a_Article_Our_Indian_Cousins.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears to be cut off at the end, missing the conclusion of the delegation speech",
+      "action": "append",
+      "text": "delegation gave them a talk about love at home with one wife, etc., and the impossibility of the love being sufficient for so many. Many more things were said with much pomp and flattery. They wished the Indians to dispense with these families of their own free will, and if not, by force. If the reader could have seen the frowns, the scorn, and the utter contempt depicted in the faces of those women and children as they listened to these unwelcome remarks! There was deep silence, and wonder what would be the answer of the Great War Chief and Lieutenant, and hero of many battles, Co mah ee yassy (The fiery wolf's young one). He had six wives and forty-two living children. I will now give his speech, in part: \"You talk like children, you who live in the holy nation under the blessing of the Great Creator. You talk with the tongues of lightning. You use the wire and the paper, and all those wonderful things the white man is able to use so cunningly as tools against us. Have you left off your reasoning powers as men, have you no home nor loved ones? If you have not, you have no business here to enlighten us with that which fills our heart with aching and despair and a more abiding hatred for our white friends. Have you so soon forgotten the first man who came and discovered this, our goodly land, who with his vessels as agile as the swan, touched our shores near the rising Sun, and he and his men bowed down before our Great Chiefs, and begged for bread, and for a resting place until he could return to his own people. Our fathers granted it, and what has been the consequences? He soon returned with many and powerful armies. The armies increased until they drove us toward the setting sun, and the end is not yet in sight. Do you pretend to say that we do not love our wives and children? They love us, let this be our answer. You may cut our throats from ear to ear, and send us over to the Great Beyond, there is room enough for all where our forefathers dwell in peace and happiness. You go! Tell the great white Chief  whether he is a man or a beast I know not  that we love our wives and children, and they love us; for them we live, and for them we die.\" Here he knelt down and kissed the earth and pulled his hair to show his reverence for the Creation of God, his love for his family, by the kiss, and his desperate and intense feeling under the strain of his present mood, by pulling his hair. His speech lasted over one hour. He told them of the Indian's disadvantages in the matter of arms, which was always in favor of the whites, and how they had taught them, the Indians, to drink whisky, and gave them horrible diseases which the Indians did not do nor have in their wars before that time, etc.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "My Work",
+      "expected_page": 63,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Some articles have content bleeding from adjacent articles, 2) The 'Our Indian Cousins' article appears to be cut off mid-narrative, 3) The 'My Work' article by Maud Baggarley is completely missing from the extracted files but appears in the OCR text. The Guide Lessons are properly separated into individual files. Advertisement content appears to be correctly separated into the gardening article file.",
+  "validated_corrections": [
+    {
+      "file": "February_Vol6_01_A_Business_Man's_Appreciation_of_President_Heber_J._Grant_Ho.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about President Grant and his Counselors",
+      "action": "trim_start",
+      "text": "President Heber J. Grant and his Counselors A BUSINESS MAN'S APPRECIATION OF PRESIDENT. HEBER J. GRANT Horace G. Whitney In compliance",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol6_04_Elder_Rudger_Clawson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes beginning of next article",
+      "action": "trim_end",
+      "text": "Elder Clawson is best esteemed by those who know him best.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol6_09a_Article_Our_Indian_Cousins.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears to be cut off at the end, missing the conclusion of the delegation speech",
+      "action": "append",
+      "text": "delegation gave them a talk about love at home with one wife, etc., and the impossibility of the love being sufficient for so many. Many more things were said with much pomp and flattery. They wished the Indians to dispense with these families of their own free will, and if not, by force. If the reader could have seen the frowns, the scorn, and the utter contempt depicted in the faces of those women and children as they listened to these unwelcome remarks! There was deep silence, and wonder what would be the answer of the Great War Chief and Lieutenant, and hero of many battles, Co mah ee yassy (The fiery wolf's young one). He had six wives and forty-two living children. I will now give his speech, in part: \"You talk like children, you who live in the holy nation under the blessing of the Great Creator. You talk with the tongues of lightning. You use the wire and the paper, and all those wonderful things the white man is able to use so cunningly as tools against us. Have you left off your reasoning powers as men, have you no home nor loved ones? If you have not, you have no business here to enlighten us with that which fills our heart with aching and despair and a more abiding hatred for our white friends. Have you so soon forgotten the first man who came and discovered this, our goodly land, who with his vessels as agile as the swan, touched our shores near the rising Sun, and he and his men bowed down before our Great Chiefs, and begged for bread, and for a resting place until he could return to his own people. Our fathers granted it, and what has been the consequences? He soon returned with many and powerful armies. The armies increased until they drove us toward the setting sun, and the end is not yet in sight. Do you pretend to say that we do not love our wives and children? They love us, let this be our answer. You may cut our throats from ear to ear, and send us over to the Great Beyond, there is room enough for all where our forefathers dwell in peace and happiness. You go! Tell the great white Chief  whether he is a man or a beast I know not  that we love our wives and children, and they love us; for them we live, and for them we die.\" Here he knelt down and kissed the earth and pulled his hair to show his reverence for the Creation of God, his love for his family, by the kiss, and his desperate and intense feeling under the strain of his present mood, by pulling his hair. His speech lasted over one hour. He told them of the Indian's disadvantages in the matter of arms, which was always in favor of the whites, and how they had taught them, the Indians, to drink whisky, and gave them horrible diseases which the Indians did not do nor have in their wars before that time, etc.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

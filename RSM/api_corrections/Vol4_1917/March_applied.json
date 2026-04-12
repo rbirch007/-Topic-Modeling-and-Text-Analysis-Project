@@ -1,0 +1,42 @@
+{
+  "volume": 4,
+  "month": "March",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol4_01_Article_The_Relief_Society_Sisters_Maud_Baggarley.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1146 chars removed)"
+    },
+    {
+      "file": "March_Vol4_03_Article_An_Interesting_Outgrowth_of_the_Relief_Society_in_Nauvoo_J._.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol4_04_Article_Home_of_Heber_C._Kimball,_Nauvoo.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (9 chars removed)"
+    },
+    {
+      "file": "March_Vol4_10_Article_The_Music_Page.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (11843 chars removed)"
+    },
+    {
+      "file": "March_Vol4_11_Article_Admiral_George_Dewey_and_Homer_Davenport_Alice_Louise_Reynol.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "March_Vol4_12_Article_The_Relief_Society_Ward_President_Annie_Wells_Cannon.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

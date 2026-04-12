@@ -1,0 +1,52 @@
+{
+  "volume": 2,
+  "month": "December",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol2_01_Article_DECEMBER,_1915._Qualyfide_to_Vote.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol2_03_Article_General_Conference_of_the_Relief_Society_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7574 chars removed)"
+    },
+    {
+      "file": "December_Vol2_04a_Current_Topics_Current_Topics.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (439 chars added)"
+    },
+    {
+      "file": "December_Vol2_04b_Home_Science_In_the_Kitchen_Laboratory.txt",
+      "action": "append",
+      "result": "APPLIED append (52 chars added)"
+    },
+    {
+      "file": "December_Vol2_06_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol2_07_Article_In_the_Kitchen_Laboratory_Hazel_Love_Dunford.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol2_08a_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7 chars removed)"
+    },
+    {
+      "file": "December_Vol2_09d_Guide_Lessons_Guide_Lessons_-_Lesson_IV_Home_Economics.txt",
+      "action": "append",
+      "result": "APPLIED append (22 chars added)"
+    }
+  ]
+}

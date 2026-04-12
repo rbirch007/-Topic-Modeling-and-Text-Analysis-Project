@@ -1,0 +1,32 @@
+{
+  "volume": 1,
+  "month": "February",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Feb_02_Art_EVERYTHING.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file instead"
+    },
+    {
+      "file": "V1_1914_Feb_20_Art_COMMUNICAT.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V1_1914_Feb_22_Art_LARKIN.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file instead"
+    },
+    {
+      "file": "V1_1914_Feb_24_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains only partial advertisement text, not a poem"
+    }
+  ]
+}

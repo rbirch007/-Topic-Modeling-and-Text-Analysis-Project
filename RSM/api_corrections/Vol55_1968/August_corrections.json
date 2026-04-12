@@ -1,0 +1,336 @@
+{
+  "volume": 55,
+  "month": "August",
+  "year": 1968,
+  "total_files_checked": 44,
+  "files_correct": [
+    "V55_08_02_Art_Bless_Stewart.txt",
+    "V55_08_04_SpFt_Latter-day_Jensen.txt",
+    "V55_08_08_SpFt_Lady_On_Webb.txt",
+    "V55_08_09_Fict_Moment_Lloyd.txt",
+    "V55_08_10_GenFt_The_Ravsten.txt",
+    "V55_08_11_GenFt_Womans_Cannon.txt",
+    "V55_08_12_GenFt_Editorial_Sharp.txt",
+    "V55_08_13_GenFt_Notes.txt",
+    "V55_08_17_Fict_Kitchen_Young.txt",
+    "V55_08_20_GenFt_A_Scott.txt",
+    "V55_08_21_GenFt_The_Condry.txt",
+    "V55_08_22_Poem_Close_Payne.txt",
+    "V55_08_23_GenFt_Three_Isaacson.txt",
+    "V55_08_24_GenFt_Extra_Kinsley.txt",
+    "V55_08_26_GenFt_Elsie_Busy.txt",
+    "V55_08_27_GenFt_Rolls_Lewis.txt",
+    "V55_08_29_GenFt_Leavening_Esplin.txt",
+    "V55_08_30_Fict_Mabel.txt",
+    "V55_08_31_GenFt_Notes_Activities.txt",
+    "V55_08_32_Lssn_Spiritual_Doxey.txt",
+    "V55_08_33_Lssn_Visiting_Smith.txt",
+    "V55_08_35_Lssn_Homemaking_Taylor.txt",
+    "V55_08_36_Lssn_Social_Christensen.txt",
+    "V55_08_38_Lssn_Cultural_Thomas.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_08_01_Fict_If_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'From Near and Far' content instead of 'If Spring Be Late' fiction",
+      "action": "replace_content",
+      "text": "This file should contain the 'If Spring Be Late' fiction content, not the 'From Near and Far' letters",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_03_Art_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File is empty and needs proper extraction",
+      "action": "replace_content",
+      "text": "Should contain the letters from readers starting with 'Mabel Harmer's story \"If Spring Be Late\"' through 'Mary Ann Adams Lowestoft, Suffolk, England'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_05_Poem_Summer-Long_Myers.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains contest rules instead of poem",
+      "action": "replace_content",
+      "text": "Should contain the poem 'Summer-Long Saturday' by Alice Brady Myers starting with 'We summer together in nature's long Saturday'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_06_SpFt_Literary.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains poem content at end",
+      "action": "trim_end",
+      "text": "SUMMER-LONG SATURDAY",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_07_Poem_Faith_Miner.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains preceding article content",
+      "action": "trim_start",
+      "text": "FAITH",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_14_Poem_Sun_in_Illescas.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains board member listing instead of poem",
+      "action": "replace_content",
+      "text": "Should contain poem 'Sun in the East' by Maria C. De Illescas starting with 'As I raise my eyes this morning'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_15_GenFt_The_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of Kitchen Money story",
+      "action": "trim_end",
+      "text": "Guatemala 587",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_16_Poem_Love_Rothe.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and needs proper extraction",
+      "action": "replace_content",
+      "text": "Should contain poem 'Love' by Ruth G. Rothe starting with 'Experts say that children must have Tender loving care'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_18_Poem_Loath_Cook.txt",
+      "issue_type": "missing_text",
+      "description": "Missing author name",
+      "action": "append",
+      "text": "Cook",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_08_19_Poem_My_Coles.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and needs proper extraction",
+      "action": "replace_content",
+      "text": "Should contain poem 'My Father's Watch' by Christie Lund Coles starting with 'I opened the ornate dresser drawer'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_25_Poem_Our_Welker.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains recipe content before poem",
+      "action": "trim_start",
+      "text": "OUR GREAT-GRANDMA",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_28_Poem_Swift_Perry.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains recipe content before poem",
+      "action": "trim_start",
+      "text": "SWIFT SHADOWS",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_34_Poem_Interval_Stanley.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains homemaking lesson content",
+      "action": "trim_end",
+      "text": "—Elena Hassell Stanley",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_37_Poem_High_Olsen.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and needs proper extraction",
+      "action": "replace_content",
+      "text": "Should contain poem 'High Link Fence' by Pearle M. Olsen starting with 'No sound is in this country square'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_39_Poem_Once_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content",
+      "action": "trim_end",
+      "text": "—Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_40_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "Missing title and beginning of birthday congratulations",
+      "action": "prepend",
+      "text": "Birthday Congratulations",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_08_41_Poem_Colors_Sadlier.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of fiction story",
+      "action": "trim_end",
+      "text": "—Beulah Huish Sadleir",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_42_Poem_Sea_Feltch.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains board resignation content instead of poem",
+      "action": "replace_content",
+      "text": "Should contain poem 'Sea Snow' by Carole Poelman Feltch starting with 'Tonight, Reflections of a tropical moon'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_43_Poem_Reflections.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains board resignation content instead of poem",
+      "action": "replace_content",
+      "text": "Should contain poem 'Reflections' by Margaret Read starting with 'At once to lighten the heart And next to ring its doom'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_08_44_Poem_Dew_Jennings.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains homemaking lesson content",
+      "action": "trim_end",
+      "text": "—Maxine R. Jennings",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Wayfarer",
+      "expected_page": 567,
+      "status": "merged_with_another",
+      "merged_into": "V55_08_04_SpFt_Latter-day_Jensen.txt"
+    }
+  ],
+  "notes": "Many poetry files have incorrect content or significant bleed from adjacent articles. Several files contain wrong content entirely and need complete re-extraction. The poetry extractions appear to have been particularly problematic in this volume.",
+  "validated_corrections": [
+    {
+      "file": "V55_08_06_SpFt_Literary.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains poem content at end",
+      "action": "trim_end",
+      "text": "SUMMER-LONG SATURDAY",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_07_Poem_Faith_Miner.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains preceding article content",
+      "action": "trim_start",
+      "text": "FAITH",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_15_GenFt_The_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of Kitchen Money story",
+      "action": "trim_end",
+      "text": "Guatemala 587",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_39_Poem_Once_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content",
+      "action": "trim_end",
+      "text": "—Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_41_Poem_Colors_Sadlier.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of fiction story",
+      "action": "trim_end",
+      "text": "—Beulah Huish Sadleir",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_08_44_Poem_Dew_Jennings.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains homemaking lesson content",
+      "action": "trim_end",
+      "text": "—Maxine R. Jennings",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_08_18_Poem_Loath_Cook.txt",
+      "issue_type": "missing_text",
+      "description": "Missing author name",
+      "action": "append",
+      "text": "Cook",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V55_08_25_Poem_Our_Welker.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains recipe content before poem",
+      "action": "trim_start",
+      "text": "OUR GREAT-GRANDMA",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_28_Poem_Swift_Perry.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains recipe content before poem",
+      "action": "trim_start",
+      "text": "SWIFT SHADOWS",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_34_Poem_Interval_Stanley.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains homemaking lesson content",
+      "action": "trim_end",
+      "text": "—Elena Hassell Stanley",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_08_40_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "Missing title and beginning of birthday congratulations",
+      "action": "prepend",
+      "text": "Birthday Congratulations",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

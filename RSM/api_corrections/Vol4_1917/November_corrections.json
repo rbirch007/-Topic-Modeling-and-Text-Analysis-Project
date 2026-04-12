@@ -1,0 +1,89 @@
+{
+  "volume": 4,
+  "month": "November",
+  "year": 1917,
+  "total_files_checked": 20,
+  "files_correct": [
+    "November_Vol4_01_Article_Your_Laugh_Margaret_Whitehead_Young.txt",
+    "November_Vol4_02_Mothers_in_Israel_Mothers_in_Israel.txt",
+    "November_Vol4_03_Article_The_Historical_Office_of_the_First_Presidency.txt",
+    "November_Vol4_04_Article_Making_a_Husband_Out_of_a_Man_Helen_Rowland.txt",
+    "November_Vol4_05_Article_Her_Prophecy_and_Its_Fulfilment_Lucy_May_Green.txt",
+    "November_Vol4_06_Article_Parents'_Problems_Lucy_Wright_Snow.txt",
+    "November_Vol4_07_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "November_Vol4_08_Home_Entertainments_Home_Entertainment_Morag.txt",
+    "November_Vol4_09_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "November_Vol4_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "November_Vol4_11a_Editorial_Editorial_Our_Thanksgiving_Debts.txt",
+    "November_Vol4_11b_Editorial_Liberty_Bonds.txt",
+    "November_Vol4_11c_Editorial_L_D_S_U_School_of_Music.txt",
+    "November_Vol4_11d_Guide_Lessons_Guide_Lessons_-_Lesson_I_Theology_and_Testimony.txt",
+    "November_Vol4_11e_Guide_Lessons_Guide_Lessons_-_Lesson_III_Genealogy_and_Literature.txt"
+  ],
+  "corrections": [
+    {
+      "file": "November_Vol4_11a_Editorial_Editorial_Our_Thanksgiving_Debts.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains General Board listing that should be in a separate file",
+      "action": "trim_start",
+      "text": "OUR THANKSGIVING DEBTS.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "November_Vol4_12_Article_Liberty_Bonds.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of Liberty Bonds article",
+      "action": "replace_content",
+      "text": "LIBERTY BONDS. The second installment of Liberty bonds. Liberty just now offered to the American people, Bonds should be patronized by those who are able and patriotic, and certainly every Latter-day Saint, both man and woman, is patriotic. The bonds have a two-fold mission, one part of which is to provide the government with money with which to prosecute this righteous war, the other to allow the burden of that war to fall rather on the shoulders of those who have means to invest than upon the poor. Were it not for these bonds our taxes would be increased so heavily that many of us who are not of the moneyed class would be forced to abandon our homes, and in many instances to suffer extreme poverty. Our Church has been most loyal in the recent Conference and will purchase a quarter of a million dollars worth of these bonds. Every man and woman who can do so witInvest in out too much personal sacrifice should Liberty follow this excellent example. If you have monBonds. cy to save, put it in a bond. It is safer than any business or other investment which can be named and the interest is as good as that offered by savings banks. The Liberty llond is a safe and patriotic investment and we recommend to all our readers who can do so to take one or more of these bonds. We would not think it wise to borrow money to invest in these bonds,nor should the special funds of this Society be used for any such purpose as they have been collected for specified uses, such as annual dues, charity, wheat, and temple work, and cannot rightly be diverted into other channels. Where a Society has money in the general fund and desires to invest such money, it is quite proper to use it for the purchase of the bom's. We trust, and indeed feel sure, that the people of Utah, and the states surrounding, as always, will prove themselves loyal and patriotic in this matter.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "November_Vol4_13_Article_L._D._S._U._School_of_Music.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of L.D.S.U. School of Music article",
+      "action": "replace_content",
+      "text": "L. D. S. U. SCHOOL OF MUSIC. The mothers of gifted musical children may not know of the new arrangement for reduced student fees now introduced into the L. D. S. University School of Music. With ten of Utah's leading musicians, lessons are being given at 75 cents and $1.00 per lesson. It is not necessary for the student to be in other classes at the L. D. S. High School as these rates are available to outside pupils and for children of any age. It is simply an arrangement for mothers of modest means to get the best teachers at moderate prices through the new music school. The artist teachers are: Emma Lucy Gates, B. Cecil Gates, Edwin P. Kimball. Florence Jepperson, Tracy Y. Cannon, Romania Hyde, Owen Sweeten, Marian Cannon. Margaret Summerhays, Irving Snow.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "November_Vol4_14_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "LESSON IV. Home Economics. Fourth Week in December. SPIRITUAL CHARACTER BUILDING IN CHILDHOOD. Introductory. Ethics is the relationship of man to man; religion is the relationship of man to his God. With this definition we pass to our discussion of this subject. Latter-day Saint mothers realize the importance of teaching their children faith and of developing the spiritual character of their children. Rut how shall it be done, when shall it be done, and by whom shall it be done? \"The time to begin training a child,\" as Oliver Wendell Holmes once remarked, \"is one hundred years before the child is born.\" which implies the necessity for righteous marriage, and wise choice, that we may give our children good spiritual beginnings. Some mothers who are not born",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are with files 12-14 which contain advertisement content instead of proper articles, and file 11a which has extra content at the beginning. File 14 appears to start mid-sentence and needs the proper beginning from the OCR.",
+  "validated_corrections": [
+    {
+      "file": "November_Vol4_14_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "LESSON IV. Home Economics. Fourth Week in December. SPIRITUAL CHARACTER BUILDING IN CHILDHOOD. Introductory. Ethics is the relationship of man to man; religion is the relationship of man to his God. With this definition we pass to our discussion of this subject. Latter-day Saint mothers realize the importance of teaching their children faith and of developing the spiritual character of their children. Rut how shall it be done, when shall it be done, and by whom shall it be done? \"The time to begin training a child,\" as Oliver Wendell Holmes once remarked, \"is one hundred years before the child is born.\" which implies the necessity for righteous marriage, and wise choice, that we may give our children good spiritual beginnings. Some mothers who are not born",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "November_Vol4_11a_Editorial_Editorial_Our_Thanksgiving_Debts.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains General Board listing that should be in a separate file",
+      "action": "trim_start",
+      "text": "OUR THANKSGIVING DEBTS.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

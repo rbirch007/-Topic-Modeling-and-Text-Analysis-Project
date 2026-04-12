@@ -1,0 +1,100 @@
+{
+  "volume": 16,
+  "month": "July",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.0844,
+  "stats": {
+    "found": 1,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Monument to Handcart Pioneers Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "MONUMENT TO HANDCART PIONEERS\nBy Torleif S. Knaphus.\nThis piece of art is in the Bureau of Information, Salt Lake City.",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "Torleif S. Knaphus",
+      "confidence": "high",
+      "notes": "Found the frontispiece description on the title page. It's a brief caption describing a sculpture by Torleif S. Knaphus located in the Bureau of Information, Salt Lake City.",
+      "api_usage": {
+        "input_tokens": 8423,
+        "output_tokens": 183,
+        "cost": 0.028
+      },
+      "pdf_pages": [
+        240,
+        241,
+        242,
+        243
+      ]
+    },
+    {
+      "title": "Handcart Trail Vesta Pierce Crawford",
+      "printed_page": 347,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Impressions of My Mother, Marinda Allen Bateman Pioneer of 1853 Julia B. Jensen",
+      "printed_page": 348,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "He Discovered South Pass Dr. William J. Snow",
+      "printed_page": 352,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Autobiography of Margaret Miller Watson De Witt",
+      "printed_page": 378,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements (Troy Laundry, R.E. Brewer Co., Temple and Burial Clothes), the magazine cover/contents page, and a frontispiece image of the Handcart Pioneers monument. None of these pages contain the article 'Autobiography of Margaret Miller Watson De Witt' which should appear on page 378 according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 8417,
+        "output_tokens": 181,
+        "cost": 0.028
+      },
+      "pdf_pages": [
+        411,
+        412,
+        413,
+        414
+      ]
+    },
+    {
+      "title": "THE Relief Society Magazine VOL. XVI JULY, 1929 No.",
+      "printed_page": 7,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Notice",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be the magazine masthead/header rather than a separate article. It's the standard title that appears on the contents page and throughout the magazine issue, not standalone content.",
+      "api_usage": {
+        "input_tokens": 8442,
+        "output_tokens": 207,
+        "cost": 0.0284
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

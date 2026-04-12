@@ -1,0 +1,72 @@
+{
+  "volume": 16,
+  "month": "December",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0478,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Madonna Claire Stewart Boyer",
+      "printed_page": 631,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Day in a Jewish Village in Russia Dr. Franklin S. Harris",
+      "printed_page": 633,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Dr. Franklin S. Harris",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 627-630, but the article is listed as being on page 633 in the table of contents. The article is not visible in any of the four provided page images, which contain other content including poems and editorials about Palestine and vacation camps in Idaho.",
+      "api_usage": {
+        "input_tokens": 7161,
+        "output_tokens": 162,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        627,
+        628,
+        629,
+        630
+      ]
+    },
+    {
+      "title": "Music in the Home of Hamlin Garland",
+      "printed_page": 639,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 629-632). The article should appear on page 639 according to the table of contents, but the provided images only show pages 629-632, which contain other content including Madonna Claire Stewart Boyer, The Holy Family, and A Day in a Jewish Village in Russia.",
+      "api_usage": {
+        "input_tokens": 7149,
+        "output_tokens": 163,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        629,
+        630,
+        631,
+        632
+      ]
+    },
+    {
+      "title": "Evergreen Elsie Talmage Brandley",
+      "printed_page": 640,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "volume": 57,
+  "month": "October",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_10_22_Poem_October_Oswald.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains wrong poem content - has 'LATE WORD' poem instead of 'OCTOBER 21st' poem",
+      "action": "replace_content",
+      "text": "[Vol57 | October 1970 | Page 757 | Poetry | October 21st, Marilyn | M. Oswald]\n[October 21st, Marilyn M. Oswald]\n\nOCTOBER 21st\n\nEyes blue, tears of pain,\nhair none, years come,\nautumn day, years wane.\nGolden sun. Loved and fed\nCrisp air, then wed.\nLeaves falling, It's nice to \"be.\"\nmother sewing, Thanks, Mom\ndau",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 2% OCR coverage"
+    },
+    {
+      "file": "V57_10_23_Poem_Late_Roberts.txt",
+      "issue_type": "bleed_start",
+      "description": "Author name is incomplete, missing 'Roberts' at the end",
+      "action": "append",
+      "text": "Roberts",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 0% OCR coverage"
+    },
+    {
+      "file": "V57_10_26_Poem_Hope_Cutler.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains completely wrong content - appears to be from a different story rather than the Hope poem",
+      "action": "replace_content",
+      "text": "HOPE\n\nSnow, deep snow everywhere,\nBut high on a limb, a robin's there.\n\n—Grayce E. Cutler",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 1% OCR coverage"
+    }
+  ]
+}

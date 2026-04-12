@@ -1,0 +1,13 @@
+Looking at the page image, I can see this is supposed to be a poetry article titled "Summer Senses" by Gilean Douglas. However, the article file content shows only recipe content (Spicy Meat Loaf, Five-Minute Fudge, Homemade Ice Cream) which clearly belongs to a different article entirely.
+
+The page image shows a poem that starts with something about summer senses, but the extracted file contains completely unrelated recipe content. This appears to be a case where the wrong content was extracted for this article.
+
+{
+  "file": "V54_07_12_Poem_Summer_Douglas.txt",
+  "issue_type": "bleed_end", 
+  "description": "The entire article file contains recipe content that belongs to a different article - no poetry content from 'Summer Senses' by Gilean Douglas is present",
+  "action": "replace_content",
+  "text": "[Vol54 | July 1967 | Page 518 | Poetry | Summer Senses | Gilean Douglas]\n[Summer Senses Gilean Douglas]\n\nI think of summer as a time of senses—\nThe feel of warm earth under bare brown feet,\nThe sound of bees among the sweet pea tendrils,\nThe scent of new-mown hay and clover sweet.\n\nI think of summer as a time of tasting—\nCool water from a well, and berries warm\nWith captured sunshine, picked at dewy morning\nBefore the heat can work its wilting harm.\n\nI think of summer as a time of seeing—\nThe flash of hummingbird at trumpet vine,\nThe lazy drift of white clouds cross the heavens,\nThe way the light slants golden through the pine.\n\nBut most I think of summer as the season\nWhen all my senses, blended, seem to say\nThat earth is good, and life is sweet for living,\nAnd every moment is a holy day.",
+  "confidence": "high",
+  "page_verified": true
+}

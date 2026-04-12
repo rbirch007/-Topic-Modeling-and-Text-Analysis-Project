@@ -1,0 +1,32 @@
+{
+  "volume": 5,
+  "month": "April",
+  "year": 1918,
+  "timestamp": "20260315_120940",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol5_01_Frontispiece_Group_of_Relief_Society_Presidents_Frontispiece_Charity_(A_P.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol5_02_Article_Our_Relief_Society_Stake_Presidents_Susa_Young_Gates.txt",
+      "action": "append",
+      "result": "APPLIED append (5242 chars added)"
+    },
+    {
+      "file": "April_Vol5_13_Article_President_Emmeline_B._Wells_Lighting_Candles_on_her_Birthday.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol5_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    }
+  ]
+}

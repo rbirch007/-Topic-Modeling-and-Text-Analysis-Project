@@ -1,0 +1,56 @@
+{
+  "volume": 8,
+  "month": "April",
+  "year": 1921,
+  "total_files_checked": 14,
+  "files_correct": [
+    "April_Vol8_01_Article_How_Can_I_Know_Bertha_A._Kleinman.txt",
+    "April_Vol8_02_Article_Opening_of_the_Chinese_Realm_for_the_Preaching_of_the_Gospel.txt",
+    "April_Vol8_03_Article_European_and_Near-East_Relief_Fund.txt",
+    "April_Vol8_04_Article_Sarah_Uses_Tact_Bessie_Van_Wagonen.txt",
+    "April_Vol8_05_Article_There_are_Times_Helen_Kimball_Orgill.txt",
+    "April_Vol8_06_Article_From_Zion_to_Jerusalem.txt",
+    "April_Vol8_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "April_Vol8_08_Article_Out_of_the_World_G._Milton_Babcock.txt",
+    "April_Vol8_09_Article_World_Happenings_James_H._Anderson.txt",
+    "April_Vol8_10_Editorial_Editorial_What_About_our_Clothes.txt",
+    "April_Vol8_11_Article_Nuts_as_Daily_Food.txt",
+    "April_Vol8_12_Article_Death_of_President_Anthon_H._Lund.txt",
+    "April_Vol8_13a_Article_Birthday_Reception_for_President_Emmeline_B_Wells.txt",
+    "April_Vol8_13b_Guide_Lessons_Guide_Lessons_for_June_-_Lesson_I_Theology_and_Testimony_Con.txt"
+  ],
+  "corrections": [
+    {
+      "file": "April_Vol8_05_Article_There_are_Times_Helen_Kimball_Orgill.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains fragment from next article at the end",
+      "action": "trim_end",
+      "text": "Little about babies.\"?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol8_14_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "issue_type": "missing_text",
+      "description": "File appears to be incomplete - missing Lessons II and III content, and contains only partial Lesson IV",
+      "action": "note",
+      "text": "File contains only Literature lesson (Lesson III) and partial Social Service lesson (Lesson IV), missing Work and Business lesson (Lesson II)",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The Guide Lessons file appears to be incomplete, containing only the Literature lesson and partial Social Service lesson, but this may reflect the OCR source limitations rather than extraction errors. One minor bleed issue found in the Helen Kimball Orgill poem.",
+  "validated_corrections": [
+    {
+      "file": "April_Vol8_05_Article_There_are_Times_Helen_Kimball_Orgill.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains fragment from next article at the end",
+      "action": "trim_end",
+      "text": "Little about babies.\"?",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

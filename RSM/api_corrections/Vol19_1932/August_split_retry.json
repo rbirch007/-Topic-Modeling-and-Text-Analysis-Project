@@ -1,0 +1,46 @@
+{
+  "volume": 19,
+  "month": "August",
+  "year": 1932,
+  "timestamp": "20260316_210708",
+  "dry_run": false,
+  "retried": 2,
+  "created": 3,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Literature in the Home",
+      "new_file": "August_Vol19_01a_Article_Literature_in_the_Home.txt",
+      "chars": 18439,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "By Grace Ye Are Saved",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "Notes to the Field",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Notes from the Field",
+      "new_file": "August_Vol19_13b_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 9338,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "Lesson Department",
+      "new_file": "August_Vol19_21a_Guide_Lessons_Lesson_Department.txt",
+      "chars": 48423,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

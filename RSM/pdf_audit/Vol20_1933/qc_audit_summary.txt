@@ -1,0 +1,71 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 20 (1933)
+===========================================================================
+
+  Total files:      357 (303 articles, 54 special)
+  OK:               343
+  Flagged:          14
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 2
+    delete: 1
+    re_extract: 11
+
+  January:
+    January_Vol20_27c_Lesson_Literature_The_Delight_of_Great_Books_-_Romeo_and_Juliet.txt | MERGED(CAPS_HEADERS(3)) | 17096 chars | re_extract
+    January_Vol20_29_Frontispiece_Eventide_Among_the_Aspen_Groves_Frontispiece.txt | AD_AS_ARTICLE(1 markers) | 49 chars | delete
+    [CONTENTS MISSING] "Elizabeth Fry, Quaker Prison Reformer Arthur L. Beeley" (p3)
+    [CONTENTS MISSING] "Chicago's 1933 World's Fair" (p13)
+
+
+  March:
+    March_Vol20_22c_Lesson_Social_Service_-_Developing_Initiative_and_Self-Reliance.txt | MERGED(MULTI_LESSON(4)) | 18714 chars | re_extract
+    [CONTENTS MISSING] "Salt Lake Temple Frontispiece" (pNone)
+
+  April:
+    April_Vol20_19d_Lesson_Social_Service_-_Maintaining_Peculiarities_and_Developing_Or.txt | MERGED(MULTI_LESSON(2)) | 12621 chars | re_extract
+    April_Vol20_23_Frontispiece_One_of_the_Tablets_of_the_Seagull_Monument_Frontispiece.txt | LOW_OCR_MATCH(43%) | SHORT(49) | 49 chars | api_fix
+    [CONTENTS MISSING] "Easter Morning Mabel S. Harmer" (p197)
+    [CONTENTS MISSING] "Do Not Shun the Fight Dr. Richard R. Lyman" (p199)
+    [CONTENTS MISSING] "To an April Day Mary Hale Woolsey" (p206)
+
+  May:
+    May_Vol20_No5_06_Article_General_Session_Afternoon.txt | MERGED(CAPS_HEADERS(11)) | 48208 chars | re_extract
+    [CONTENTS MISSING] "Portrait of President J. Reuben Clark, Jr. Frontispiece" (pNone)
+    [CONTENTS MISSING] "President J. Reuben Clark, Jr. Dr. James E. Talmage" (p259)
+
+  June:
+    June_Vol20_06a_Article_The_Importance_of_Standardization_in_County_Welfare_Work.txt | MERGED(CAPS_HEADERS(3)) | 25560 chars | re_extract
+    June_Vol20_06g_Current_Topics_Happenings.txt | LOW_OCR_MATCH(61%) | 2660 chars | api_fix
+    [CONTENTS MISSING] "Prohibitionists, Fight On! Senator Morris Sheppard" (p354)
+    [CONTENTS MISSING] "The Chicago Conference" (p376)
+
+
+  August:
+    August_Vol20_24a_Notes_from_Field_Notes_from_the_Field.txt | MERGED(CAPS_HEADERS(5)) | 13522 chars | re_extract
+    [CONTENTS MISSING] "Memories Nellie O. Parker, Emmaretta G. Brown, Irma Felt Bitner" (p466)
+    [CONTENTS MISSING] "Lifting the Veil Ann Jarvis" (p481)
+
+  September:
+    September_Vol20_18c_Lesson_Literature_-_Life_and_Literature.txt | MERGED(MULTI_LESSON(3)) | 18199 chars | re_extract
+    September_Vol20_18d_Lesson_Social_Service_-_Facts_on_Physical_Growth.txt | MERGED(CAPS_HEADERS(3); MULTI_LESSON(4)) | 63455 chars | re_extract
+    [CONTENTS MISSING] "September Ella J. Coulam" (p505)
+
+
+  November:
+    November_Vol20_03a_Article_Relief_Society_Conference.txt | MERGED(MULTI_LESSON(11)) | 85511 chars | re_extract
+    November_Vol20_19d_Lesson_Social_Service_-_Foods_and_Eating_Habits.txt | MERGED(MULTI_LESSON(2)) | 11042 chars | re_extract
+    [CONTENTS MISSING] "Indian Summer Ella J. Coulam" (p631)
+    [CONTENTS MISSING] "Unusual Visits Marba C. Jacobson" (p680)
+    [CONTENTS MISSING] "Old Grist Mill" (p684)
+
+  December:
+    December_Vol20_17d_Lesson_Social_Service_-_AffectionSex_and_Emotional_Maturity.txt | MERGED(MULTI_LESSON(3)) | 11161 chars | re_extract
+    [CONTENTS MISSING] "Sing the Blessed Christmas Songs Bryce W. Anderson" (p699)
+    [CONTENTS MISSING] "Happenings Annie Wells Cannon" (p725)
+    [CONTENTS MISSING] "Relief Society Conference Julia A. F. Lund" (p731)
+    [CONTENTS MISSING] "Candy for Christmas Lucy Rose Middleton" (p742)
+    [CONTENTS MISSING] "Lesson Department RELIEF SOCIETY MAGAZINE" (p749)
+
+===========================================================================

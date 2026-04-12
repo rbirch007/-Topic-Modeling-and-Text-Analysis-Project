@@ -1,0 +1,69 @@
+{
+  "volume": 8,
+  "month": "August",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1343,
+  "files": [
+    {
+      "source_file": "August_Vol8_15_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for October - Lesson I: Theology and Testimony (Marriage)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS; 479 Hebrews, can be learned through",
+          "end_boundary": "give a talk on the civil aspects of marriage and divorce.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for October - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week, in October)",
+          "end_boundary": "LESSON II Work and Business (Second Week, in October)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for October - Lesson III: Literature (Hymnology of the Latter-day Saints)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON ITI Literature (Third Week in October) The hymnology",
+          "end_boundary": "Explain the difference between a doctrinal hymn and a",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for October - Lesson IV: Social Service (The Purpose of Public Education)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "hymn of purely worshipful expression? 10. If you regard",
+          "end_boundary": "support each other in the character training of children?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections for October Guide Lessons. Lesson II appears to be just a header with no content. The lessons cover Theology/Marriage, Work/Business, Literature/Hymnology, and Social Service/Education. The content flows continuously but has clear subject matter divisions that match different lesson topics.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 27023,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 41767,
+        "output_tokens": 599,
+        "cost": 0.1343
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "volume": 15,
+  "month": "April",
+  "year": 1928,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0249,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 2,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "April_Vol15_12_Article_Mrs_Jeanette_A_Hyde_Visits_Utah.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "April_Vol15_14_Article_The_Abundant_Harvest_Mary_Hale_Woolsey.txt",
+      "status": "not_found",
+      "current_chars": 153,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'The Abundant Harvest' by Mary Hale Woolsey is listed in the table of contents on page 208, but the provided PDF images (pages 209-212) do not contain this article. The images show: page 209 is blank, page 210 shows 'Ere the Roses Bloom' poem, pages 211-212 are blank. The article appears to be on page 208 which is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7248,
+        "output_tokens": 211,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    }
+  ]
+}

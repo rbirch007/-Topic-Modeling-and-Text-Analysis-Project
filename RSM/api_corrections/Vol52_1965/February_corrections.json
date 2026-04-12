@@ -1,0 +1,250 @@
+{
+  "volume": 52,
+  "month": "February",
+  "year": 1965,
+  "total_files_checked": 38,
+  "files_correct": [
+    "V52_02_01_GenFt_From_Near_and_Far.txt",
+    "V52_02_06_GenFt_Womans_Cannon.txt",
+    "V52_02_07_GenFt_Editorial_Sharp.txt",
+    "V52_02_08_GenFt_In_Ivins.txt",
+    "V52_02_10_GenFt_Heart_Life.txt",
+    "V52_02_13_The Home_Birthday_Woolley.txt",
+    "V52_02_15_The Home_Recipes_Schaelling.txt",
+    "V52_02_17_The Home_Ireva_Happy.txt",
+    "V52_02_20_Lssn_Theology_Doxey.txt",
+    "V52_02_21_Poem_Cleansing_James.txt",
+    "V52_02_22_Lssn_Visiting.txt",
+    "V52_02_23_Poem_On_Wilson.txt",
+    "V52_02_24_Lssn_Work_Christensen.txt",
+    "V52_02_26_Poem_Frost-_Burnham.txt",
+    "V52_02_27_Lssn_Social_Ballif.txt",
+    "V52_02_28_Poem_Tomorrow_Chadwick.txt",
+    "V52_02_29_Poem_Gourmet_Fairbairn.txt",
+    "V52_02_31_Poem_Prayer_Smith.txt",
+    "V52_02_32_Poem_Valentine_Jacobson.txt",
+    "V52_02_37_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V52_02_02_SpFt_Oakland.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Seminary/Institute content instead of Oakland Temple dedication",
+      "action": "replace_content",
+      "text": "The Oakland Temple, at Oakland, California, was dedicated on November 17, 18, and 19, 1964. Each day two sessions were held and at each session the Dedicatory Prayer of President McKay was offered. The majestic temple stands on Temple Hill overlooking the vast blue waters of the Pacific. The fifteenth temple built by the Latterday Saints commands a view of the Golden Gate, both of the great bridges, and the ships of many nations passing in and out of the harbor. The temple has been called \"A House for Eternity,\" and the symbolic purposes of its erection have been expressed as a promise of eternal progression. ©akland Cemple Dedicated The dedication of the Oakland Temple brings to a total of five the temples which have been started and completed during the thirteen years that President David O. McKay has been President of the Church. President David O. McKay, at ninety-one, arose to \"supreme spiritual heights\" during the dedication ceremonies as he spoke of the sacred mission of the Church in these latter-days, and the privileges and responsibilities of those who enter the temples of the Lord. In the dedicatory prayer, President McKay expressed gratitude for the ancient and restored gospel and the unlimited possibilities offered for eternal growth and development. An excerpt follows: We are grateful that Thou didst send Thy Beloved Son into the world to reveal unto humanity Thine existence, and to establish on earth the way that men should go in order to come back into Thy presence as Thy sons and daughters. We are grateful that Thou didst restore the Gospel in this Dispensation by Thine own appearance, and the appearance of Thy Beloved Son to the Prophet Joseph Smith.... We are thankful for the message which he gave to the whole world that Thou dost live; that Thou dost hear and answer prayer; that Jesus Christ is the Savior of the world, and that through Him death has been conquered and the soul of man set free from death.... Now, O God, our Heavenly Eternal Father, the faithful membership of Thy Church through love for Thee and Thy children, have erected to Thee by tithes and offerings this Holy House in which shall be performed ordinances and ceremonies essential to the happiness, salvation, and exaltation of Thy children living in mortality and in the Spirit World. Accept of our offering, hallow it by Thy Holy Spirit, and protect and guard it by Thy Power. With this prayer, we dedicate our lives to the establishment of the Kingdom of God on earth for the peace of the world and to Thy Glory forever, in the name of Thy Beloved Son, Jesus Christ, Amen.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_02_04_SpFt_Mother_Matthews.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of the actual article content",
+      "action": "replace_content",
+      "text": "Mother-Do You Know? Robert J. Matthews, Editor Church of Jesus Christ of Latter-day Saints, Department of Education That the Church has a week-day religious, cultural, and social offering for your sons and daughters while they are in high school and also when they go to college? That this program now functions in practically all of the fifty States and in five foreign countries, with a total enrollment of over 111,000 students? Next year it will be even more widespread. That wonderful opportunities will come to your sons and daughters when they enroll in the program?",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_02_05_Fict_Among_Littke.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article at the end",
+      "action": "trim_end",
+      "text": "But Greg was still a day and a night away, and as for the rest of this trip she was going to relax and enjoy it — among friends.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_02_09_GenFt_Notes_Available.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poetry content instead of Notes to the Field",
+      "action": "trim_start",
+      "text": "Copies of the 1964 index for The Relief Society Magazine are available",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_02_11_Fict_Valentines_Trutton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Notes to the Field content",
+      "action": "trim_start",
+      "text": "\"OH, Mommy, Mommy, Mommy,\" Lavina called excitedly",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_02_14_Poem_Home_Roberts.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Pie content instead of Home poem",
+      "action": "replace_content",
+      "text": "Home Dorothy J. Roberts Home was morning-glory, A brook, a buttercup And overhead a star at night, Whenever my eyes looked up; A promise never broken, Like a rainbow in the sky; The scent of sun-dried linen And someone standing by. Sturdy as a temple, Unchanging as the sun, Home was manna, and Canaan When wilderness was done.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_02_16_The Home_Lace_McKenzie.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text and Winter Sun poem at the end",
+      "action": "trim_end",
+      "text": "Lovely. Doilies that are not too lacy are easier to handle",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "V52_02_25_Lssn_Literature_Thomas.txt",
+      "issue_type": "missing_text",
+      "description": "File is truncated and missing most of the literature lesson content",
+      "action": "note",
+      "text": "File needs complete re-extraction from OCR - contains only the end portion of the lesson",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_02_30_Poem_Gifts_Bowles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson department content instead of poem",
+      "action": "trim_start",
+      "text": "Gifts for Everyday Catherine B. Bowles There are corners in the heart",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V52_02_33_Poem_Grandson_Coles.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains multiple poems and advertisements before the target poem",
+      "action": "trim_start",
+      "text": "Grandson Christie Lund Coles You are the son I never had:",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V52_02_34_The Home_Hurry_Bunker.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only header, missing article content",
+      "action": "note",
+      "text": "Article content not found in OCR - may be an OCR gap",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_02_35_Poem_Death_Hill.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of poem",
+      "action": "note",
+      "text": "Poem content not found in OCR - may be an OCR gap or merged with another article",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_02_36_Poem_Mountain_Rubin.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with birthday congratulations content",
+      "action": "trim_start",
+      "text": "Mountain Children Maude Rubin Their mother moves through early morning chill",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V52_02_38_Poem_83_The_Gabbott.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains In Memoriam content instead of Oakland Temple poem",
+      "action": "replace_content",
+      "text": "Margery S. Stewart Cry across the sea, Dazzle the darkness With your holy promise, Oh, white walls of wisdom, Golden parapets of prophecy Fulfilled. Let the ships be silent, Proud or searching, Rich or hungry, Let them read what is Written here Burning in the blue air. Let them on the confused Islands meditate The bright assurance of These soaring towers. Temple of dreams... Temple of promise.. Pilgrims of eternity, Pilgrims of earth, Meet here and mingle. There is only love here There is only the tender, Light and stillness Of his Being. Shine forever, oh, temple, Stone, vision, mortar, Dream, concrete, devotion, Obedience, sacrifice, and pillar, For who is wise enough To separate dream from stone Or veil from vision.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Death of City Trees by Lael W. Hill",
+      "expected_page": 159,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Hurry by Wilma Boyle Bunker",
+      "expected_page": 159,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files contain content from adjacent articles or advertisements. The OCR appears to have some gaps, particularly around page 159. Multiple poetry files were incorrectly extracted with wrong content. The literature lesson file is severely truncated and needs complete re-extraction.",
+  "validated_corrections": [
+    {
+      "file": "V52_02_11_Fict_Valentines_Trutton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Notes to the Field content",
+      "action": "trim_start",
+      "text": "\"OH, Mommy, Mommy, Mommy,\" Lavina called excitedly",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_02_16_The Home_Lace_McKenzie.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains garbled text and Winter Sun poem at the end",
+      "action": "trim_end",
+      "text": "Lovely. Doilies that are not too lacy are easier to handle",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "V52_02_30_Poem_Gifts_Bowles.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson department content instead of poem",
+      "action": "trim_start",
+      "text": "Gifts for Everyday Catherine B. Bowles There are corners in the heart",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V52_02_33_Poem_Grandson_Coles.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains multiple poems and advertisements before the target poem",
+      "action": "trim_start",
+      "text": "Grandson Christie Lund Coles You are the son I never had:",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V52_02_36_Poem_Mountain_Rubin.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with birthday congratulations content",
+      "action": "trim_start",
+      "text": "Mountain Children Maude Rubin Their mother moves through early morning chill",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V52_02_05_Fict_Among_Littke.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article at the end",
+      "action": "trim_end",
+      "text": "But Greg was still a day and a night away, and as for the rest of this trip she was going to relax and enjoy it — among friends.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_02_09_GenFt_Notes_Available.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with poetry content instead of Notes to the Field",
+      "action": "trim_start",
+      "text": "Copies of the 1964 index for The Relief Society Magazine are available",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

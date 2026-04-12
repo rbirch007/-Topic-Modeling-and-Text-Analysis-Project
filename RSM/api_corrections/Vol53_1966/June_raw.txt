@@ -1,0 +1,135 @@
+```json
+{
+  "volume": 53,
+  "month": "June",
+  "year": 1966,
+  "total_files_checked": 41,
+  "files_correct": [
+    "V53_06_02_Frnt_My_Coles.txt",
+    "V53_06_03_GenFt_From_Near_and_Far.txt",
+    "V53_06_06_Poem_Lift_Bowles.txt",
+    "V53_06_16_Poem_Garden_Wangsgaard.txt",
+    "V53_06_17_The Home_Holiday_Bazaar.txt",
+    "V53_06_18_The Home_Kitchen.txt",
+    "V53_06_19_The Home_Colorful_Bazaar.txt",
+    "V53_06_20_The Home_German_Sansom.txt",
+    "V53_06_21_The Home_Fun_for_Willardson.txt",
+    "V53_06_22_The Home_The_Breinholt.txt",
+    "V53_06_23_The Home_The_Men.txt",
+    "V53_06_32_Poem_Summer_Gabbott.txt",
+    "V53_06_35_Poem_The_McAllister.txt",
+    "V53_06_36_Poem_To_a_Brown.txt",
+    "V53_06_37_Poem_Absolutes_Fairbair.txt",
+    "V53_06_38_Poem_Wasted_Rothe.txt",
+    "V53_06_39_Poem_My_Olsen.txt",
+    "V53_06_41_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_06_01_Art_Editor_Spafford.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only editor information, not an actual article",
+      "action": "note",
+      "text": "This appears to be masthead information rather than article content",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_04_SpFt_Birthday_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "Birthday Congratelatioas",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text",
+      "action": "trim_start",
+      "text": "405 Spanish Elder Marion G.",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "issue_type": "missing_text",
+      "description": "Missing text about Eventually in 1915",
+      "action": "prepend",
+      "text": "Eventually, ",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_07_SpFt_James.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number from previous content",
+      "action": "trim_start",
+      "text": "407 w",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_08_GenFt_Editorial_Spafford.txt",
+      "issue_type": "missing_text",
+      "description": "Missing text in middle of editorial about Volume 53 JULY 1966",
+      "action": "replace_content",
+      "text": "The sisters have been blessed individually and collectively, as they have labored in the fulfillment of the purposes set for the Society by God's chosen prophets. It was a blessed day, indeed, when, as an aid in furthering the work of this organization, the Society was given a Magazine of its own, ''to be edited, managed, and published by the General Authorities of the Society.'' This publication has served as the voice of Relief Society. It has helped to unify and standardize the work. It has served as a lesson manual for the educational courses. It has been an outlet for the literary aspirations of Latter-day Saint women. Its contents have been animated by the spirit of the gospel and its gospel teaching articles by Priesthood and Relief Society leaders have strengthened faith and built testimonies. In the Centenary of Relief Society, issued on the hundredth anniversary of Relief Society, we read, ''This Magazine belongs by right to every woman of the Church.'' While language barriers stand in the way of full realization of this at the present time, a great step forward has been made as the Magazine becomes available in Spanish for the many Spanish-speaking sisters throughout the Church. The General Board rejoices that this instrument which has proven so valuable to the English-speaking sisters and such an important factor in the strength of their Relief Societies, may now intimately touch and influence the lives of the Spanish-speaking sisters and reach into their Relief Societies as a bulwark of strength. The advent of The Relief Society Magazine in the Spanish language is a history-making event. May it bless our beloved Spanish-speaking sisters. May it bless their homes. May it bless their families. May it be a truly effective instrument in helping the Spanish-speaking Relief Societies to move forward in an even more glorious manner, is our earnest prayer. —B. S. S",
+      "confidence": "medium"
+    },
+    {
+      "file": "V53_06_10_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text",
+      "action": "trim_start",
+      "text": "413 . - —_ %",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_14_The Home_Festival.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about antique flowers",
+      "action": "trim_end",
+      "text": "437 antique VOUT plastic flowers Dorothy J. Roberts Transparencies by the author Decorative Designs from the home of Alberta H. Christensen @ "Voices of silence' — have you not admired them, too in the baroque plastic flower arrangements of the day, muted in tone, gilded and antiqued? Shades of the seventeenth century Flemish masters, and their famous pictures of floral art, are simulated in the oldworld feeling of these modern bouquets. For many of us who did not know of the special process for thus transforming the commonest, even soiled, plastic flowers and foliage, (cloth flowers cannot be used in this process), it is a joy to learn just how simple it can be. With little effort and small expense, plus the joy of creating beauty, these rich-looking home accessories can be possible for all of us by merely dipping each flower in the following manner. In a wide-mouthed can or jar or bottle, combine: 1 cup paint thinner or turpentine 1 cup clear varnish 1 tablespoon dark oak stain 1 tablespoon powdered gold (Venus, medium) Into this solution dip each flower, after bending back an inch or so on the stem end to form a small hook. Stir the mixture between each flower-dipping. Hang each flower upside-down on a line to dripdry till morning. Place papers under the line to catch the drippings. By the next day, colors will be muted by the stain and varnish, and leaves and petals veined and tipped with gold.",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_24_The Home_Home_Is.txt",
+      "issue_type": "missing_text",
+      "description": "Missing beginning of article about Elsie Meeks Simkins",
+      "action": "prepend",
+      "text": "Elsie Meeks Simkins, Circleville, Utah, finds artistic fulfillment and much happiness in her many hobbies — quilting, making pillows of intricate design, and crocheting lace which she describes as ''webby fine.'' She has given away numerous lovely articles to friends and relatives, and still has gifts on hand \"for the days to come.\" While residing in St. George one winter, she made twentysix aprons in her spare time, after attending two temple sessions daily. She cannot remember the number of quilts she has made for relatives and friends and for Relief Society bazaars. Mrs. Simkins has been active in Relief Society, having served as a visiting teacher for more than fifty-four years. She was a counselor in the first Relief Society organization in Widtsoe, Utah. Now, at the age of eighty-six, she attends Sunday School, sacrament meeting, and Relief Society. She keeps house for herself, does her own washing and ironing, takes care of her yard, and enjoys a daily walk to the Post Office. Her pioneer heritage served her well when she was called, during World War I, to direct a group of women in gathering and storing wheat. Presently, she is writing her life history to add to the records of her Grandfather Priddy Meeks, one of the best-known and most successful pioneer doctors.",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_25_The Home_Our_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from garden article and lesson department header",
+      "action": "replace_content",
+      "text": "I cannot say we have always kept our garden weed free, but by putting forth great effort and working continuously to beautify our garden, we manage to keep the flowers growing and we are able to enjoy many, many beautiful blossoms. 452",
+      "confidence": "medium"
+    },
+    {
+      "file": "V53_06_33_The Home_Notes.txt",
+      "issue_type": "missing_text",
+      "description": "Missing continuation of Celestia J. Taylor biography",
+      "action": "append",
+      "text": "Homemaking Education,\" beginning January 1967, has been a member of the General Board of Relief Society since 1962. She has served on the social science and literature committees and has often written scripts used in departmental meetings at a Relief Society annual conference. She has had poems published in The Relief Society Magazine, and her article, \"Three Women,\" featured in the May 1966 issue, recounts the courage and devotion of Sister Taylor's grandparents in the settlement of Utah County, Utah. She was born in the lovely mountain village of Alpine. She received her Bachelor of Arts and Master's degrees in English at Brigham Young University, where she is now teaching in the English department. Sister Taylor has a lovely singing voice and has studied under Florence J. Madsen. She is the wife of Lynn D. Taylor, Provo merchant, and the mother of five children, all of whom are married except the youngest son who is serving a mission in England. Sister Taylor has served as stake literature class leader and as a -ward Relief Society president. Her -charming home high on the hills east of Provo is a haven of hospitality where family and friends enjoy a spirit of loving kindness and gracious welcome. 47\\",
+      "confidence": "high"
+    },
+    {
+      "file": "V53_06_34_The Home_Homemaking_Cannon.txt",
+      "issue_type": "missing_text",
+      "description": "Missing beginning of homemaking lesson",
+      "action": "prepend",
+      "text": "HOMEMAKING — Development Through Homemaking Education Hazel S. Cannon DOES YOUR HOME HAVE A PERSONALITY? Northern Hemisphere: Second Meeting, September 1966 Southern Hemisphere: Second Meeting, February 1967 Objective: To show that through wise planning and creativity, the homemaker can fashion a home of good taste which expresses INTRODUCTION Mary Jane's home is distinctively Mary Jane. It bears her signature with charm and good taste, and is different from any other home in the ward. An interesting observation is that individuality has been achieved through a small outlay of money and a large outlay of time and creative know-how.",
+      "confidence": "high"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Contents",
+      "expected_page": 403,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Overall extraction quality is good with most articles properly separated. Main issues are incomplete beginnings/endings of some articles and missing table of contents. Several files need trimming of page numbers and bleed content from adjacent articles."
+}
+```

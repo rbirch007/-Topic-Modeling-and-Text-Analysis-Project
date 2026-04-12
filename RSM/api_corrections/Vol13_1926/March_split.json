@@ -1,0 +1,71 @@
+{
+  "volume": 13,
+  "month": "March",
+  "year": 1926,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1427,
+  "files": [
+    {
+      "source_file": "March_Vol13_19_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony: The Dispensation of the Meridian of Time Part I. The Forerunner",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MAY LESSON I Theology and Testimony.",
+          "end_boundary": "Was John blessed by his father and if so, when?",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business: Teachers' Topic - The Mother",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business TEACHERS' TOPIC (Second Week in May)",
+          "end_boundary": "attend church duties and live the laws of the gospel.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature: Joaquin Miller",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in May) JOAQUIN MILLER",
+          "end_boundary": "It can not fail to be a very useful book.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service: Physical Problems of Childhood",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in May) PHYSICAL",
+          "end_boundary": "Write us today for details.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY"
+      ],
+      "notes": "This file contains four distinct lesson sections for May, each covering a different week and subject area: Theology/Testimony, Work/Business, Literature, and Social Service. Each lesson has clear boundaries with lesson numbers and subject headings.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 33214,
+      "tier": 1,
+      "pdf_pages": [
+        178,
+        179,
+        180
+      ],
+      "api_usage": {
+        "input_tokens": 44781,
+        "output_tokens": 560,
+        "cost": 0.1427
+      }
+    }
+  ]
+}

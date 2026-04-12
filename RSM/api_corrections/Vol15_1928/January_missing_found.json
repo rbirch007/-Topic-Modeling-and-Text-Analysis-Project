@@ -1,0 +1,38 @@
+{
+  "volume": 15,
+  "month": "January",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0253,
+  "stats": {
+    "found": 1,
+    "not_found": 0,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "1928\n\n[This is an artistic frontispiece illustration showing a young woman posting or hanging a banner with \"1928\" on a tree, with an elderly bearded figure (likely Father Time) watching from behind the tree. The illustration is signed \"R.R. 1916\" at the bottom.]",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "R.R. (artist signature)",
+      "confidence": "high",
+      "notes": "Found the frontispiece illustration on page 3 of the PDF images. It's an artistic woodcut-style illustration depicting the New Year 1928, signed by artist R.R. and dated 1916.",
+      "api_usage": {
+        "input_tokens": 7413,
+        "output_tokens": 206,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "volume": 6,
+  "month": "December",
+  "year": 1919,
+  "total_files_checked": 12,
+  "files_correct": [
+    "December_Vol6_02_Vera_Grace_Ingles_Frost.txt",
+    "December_Vol6_03b_Article_Buddhist_Temples.txt",
+    "December_Vol6_04_Today_Bertha_A._Kleinman.txt",
+    "December_Vol6_06_Editorial_Our_Christmas_Testimony.txt",
+    "December_Vol6_07a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Salvation_on_the_Other_S.txt",
+    "December_Vol6_07b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+    "December_Vol6_07c_Guide_Lessons_Lesson_III_-_Book_of_Mormon_-_The_Promise_of_Peace.txt",
+    "December_Vol6_07d_Guide_Lessons_Lesson_IV_-_Social_Service_Health.txt"
+  ],
+  "corrections": [
+    {
+      "file": "December_Vol6_01a_Article_General_Relief_Society_Conference.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with unrelated text from previous content",
+      "action": "trim_start",
+      "text": "General Relief Society Conference. . . .Amy Brown Lyman",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol6_01b_Article_Beyond_Arsareth.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Beyond Arsareth. (Continued.) By Nephi Anderson I see that already I have used up quite a number of pages of my precious paper, and so I must not write so much of my experience that summer on board the ship Esken. I shall have to make that short and get to the important part of my story. I think it was in the month of June when we finished catching seals and moved up nearly to the 80 degrees to look for whales. We caught a number, and it must have been exciting sport. I was altogether too green a hand to take part in this dangerous business, but by this time I was getting some experience in handling a boat, and learning a little of other seaman duties. All this stood me well in hand, as shall presently appear. The sun was now up all the time, and there was a continuous glare of the brightest light on everything around us. Especially did the ice glisten in the sunlight until one's eyes ached to look at it. The eternal light made me long for a bit of darkness, and ofttimes I would draw the blinds of the cabin windows to induce a little natural sleep. The air was quite warm now, and it was a keen pleasure to breathe in the dry, crisp atmosphere, and to live as it seemed like living in a new, strange world. But terrible times soon came to the ship Esken, and its crew. That treacherous Polar Ocean may one day be calm and peaceful and the next be in the embrace of a howling storm. The summer was well advanced, and the ship had already gathered a good harvest, when one day the wind came from the south-west and blew with such power that ice floes, ships and all were driven northward. This was not what we wanted. Already we had been further north than any of the crew had ever before been, and it was time to be working southward. The sea had been quite open to the North and so we had sailed as far as we had wished without hindrance. But, as Captain Larsen said, we were not out on an expedition to find the Pole, so the continuous open water was no temptation to us. Yet northward we drifted. The ice behind us, packed in tight and hard, without lanes or openings. We, therefore, had to be patient until the gale blew over, when, we could no doubt pick our way back again. But day after day passed and there were no openings towards the south. Seals and whales were of minor importance now. The Captain took observations each day, but I do not now remember what the results were. I understood very little about such matters anyway, and only when I saw that the men were getting uneasy, did I know that there was any danger. The storm continued. Sometimes great clouds of snow so filled the air that we were unable to see the length of the ship. There seemed to be plenty of open water ahead of us, so there was no immediate danger from the ice. The Esken was built for the business and did not mind a few bumps from ice blocks. I believe the storm lasted for a week, and then there came a pause. At last, the wind did not blow so hard, although the sky was full of clouds. Then the anxiety deepened, for the clear water was gone and not only on the south, but on the north were vast fields of ice. The ship was surrounded by ice floes, and to add to the danger, these fields of ice were moving backward and forward, grinding against each other with deafening noise. \"Captain,\" said I one day — we were in the cabin after dinner— \"where are we?\" \"We are nearer the North Pole than any man has yet been,\" said he. \"Well, that's something,\" said I, in the cheeriest way possible, for I saw he was troubled. \"It will be, if we get home again,\" and as he said it he looked up at the portrait on the cabin wall. We were now well along in the month of July, I think. There was yet plenty of time to get back home, if only the ice would let us; but there certainly seemed to be poor prospects. The men were constantly making efforts to travel over the ice sheets with which the ship was surrounded, but they could get no distance owing to the movements of the floes. It began to be disheartening. The ice packed in firmer than ever, and at times there was considerable danger of a crush. Then a thick fog settled over everything. Another week went by; and then the Captain gathered the men into the cabin and spoke to them. He explained that the ice pressure was getting greater each day, and that there was danger of the ship's being crushed. The situation was talked over by all who wished to say anything,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol6_05a_Article_Beyond_Arsareth.txt",
+      "issue_type": "wrong_content",
+      "description": "This file contains duplicate content from the previous Beyond Arsareth file",
+      "action": "replace_content",
+      "text": "This appears to be a duplicate file that should be removed or contains different content not visible in the OCR",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "December_Vol6_07e_Guide_Lessons_Literature_Lesson_I_-_Introductory_to_Tennyson_and_Browning.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive content beyond the Literature lesson including index and advertisements",
+      "action": "trim_end",
+      "text": "Note: You can find the data in school books on literature, in encyclopedias and in his published poems.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "A Christmas Lullaby Hazel S. Washburn",
+      "expected_page": 681,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) The General Relief Society Conference file has extraneous header text, 2) The Beyond Arsareth files have issues with proper beginnings and potential duplication, 3) The Literature lesson file contains extensive index and advertisement content that should be trimmed, 4) The Christmas Lullaby article appears to be missing entirely from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "December_Vol6_01a_Article_General_Relief_Society_Conference.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with unrelated text from previous content",
+      "action": "trim_start",
+      "text": "General Relief Society Conference. . . .Amy Brown Lyman",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol6_01b_Article_Beyond_Arsareth.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Beyond Arsareth. (Continued.) By Nephi Anderson I see that already I have used up quite a number of pages of my precious paper, and so I must not write so much of my experience that summer on board the ship Esken. I shall have to make that short and get to the important part of my story. I think it was in the month of June when we finished catching seals and moved up nearly to the 80 degrees to look for whales. We caught a number, and it must have been exciting sport. I was altogether too green a hand to take part in this dangerous business, but by this time I was getting some experience in handling a boat, and learning a little of other seaman duties. All this stood me well in hand, as shall presently appear. The sun was now up all the time, and there was a continuous glare of the brightest light on everything around us. Especially did the ice glisten in the sunlight until one's eyes ached to look at it. The eternal light made me long for a bit of darkness, and ofttimes I would draw the blinds of the cabin windows to induce a little natural sleep. The air was quite warm now, and it was a keen pleasure to breathe in the dry, crisp atmosphere, and to live as it seemed like living in a new, strange world. But terrible times soon came to the ship Esken, and its crew. That treacherous Polar Ocean may one day be calm and peaceful and the next be in the embrace of a howling storm. The summer was well advanced, and the ship had already gathered a good harvest, when one day the wind came from the south-west and blew with such power that ice floes, ships and all were driven northward. This was not what we wanted. Already we had been further north than any of the crew had ever before been, and it was time to be working southward. The sea had been quite open to the North and so we had sailed as far as we had wished without hindrance. But, as Captain Larsen said, we were not out on an expedition to find the Pole, so the continuous open water was no temptation to us. Yet northward we drifted. The ice behind us, packed in tight and hard, without lanes or openings. We, therefore, had to be patient until the gale blew over, when, we could no doubt pick our way back again. But day after day passed and there were no openings towards the south. Seals and whales were of minor importance now. The Captain took observations each day, but I do not now remember what the results were. I understood very little about such matters anyway, and only when I saw that the men were getting uneasy, did I know that there was any danger. The storm continued. Sometimes great clouds of snow so filled the air that we were unable to see the length of the ship. There seemed to be plenty of open water ahead of us, so there was no immediate danger from the ice. The Esken was built for the business and did not mind a few bumps from ice blocks. I believe the storm lasted for a week, and then there came a pause. At last, the wind did not blow so hard, although the sky was full of clouds. Then the anxiety deepened, for the clear water was gone and not only on the south, but on the north were vast fields of ice. The ship was surrounded by ice floes, and to add to the danger, these fields of ice were moving backward and forward, grinding against each other with deafening noise. \"Captain,\" said I one day — we were in the cabin after dinner— \"where are we?\" \"We are nearer the North Pole than any man has yet been,\" said he. \"Well, that's something,\" said I, in the cheeriest way possible, for I saw he was troubled. \"It will be, if we get home again,\" and as he said it he looked up at the portrait on the cabin wall. We were now well along in the month of July, I think. There was yet plenty of time to get back home, if only the ice would let us; but there certainly seemed to be poor prospects. The men were constantly making efforts to travel over the ice sheets with which the ship was surrounded, but they could get no distance owing to the movements of the floes. It began to be disheartening. The ice packed in firmer than ever, and at times there was considerable danger of a crush. Then a thick fog settled over everything. Another week went by; and then the Captain gathered the men into the cabin and spoke to them. He explained that the ice pressure was getting greater each day, and that there was danger of the ship's being crushed. The situation was talked over by all who wished to say anything,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol6_07e_Guide_Lessons_Literature_Lesson_I_-_Introductory_to_Tennyson_and_Browning.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive content beyond the Literature lesson including index and advertisements",
+      "action": "trim_end",
+      "text": "Note: You can find the data in school books on literature, in encyclopedias and in his published poems.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,60 @@
+{
+  "volume": 20,
+  "month": "July",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0509,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Relief Society Exhibit of Handwork Amy W. Evans",
+      "printed_page": 393,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Amy W. Evans",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four provided PDF page images (pages 382-385). The images show poems 'My Wealth' by H.H. Ramsay and 'Spring' by M.C. Stephens, followed by 'The Importance of Standardization in County Welfare Work' by Joseph A. Geddes. The missing article should appear on page 393 according to the table of contents, but these images only cover pages 382-385.",
+      "api_usage": {
+        "input_tokens": 7636,
+        "output_tokens": 205,
+        "cost": 0.026
+      },
+      "pdf_pages": [
+        382,
+        383,
+        384,
+        385
+      ]
+    },
+    {
+      "title": "A Log Cabin Monument Rose Brown Hayes",
+      "printed_page": 411,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Rose Brown Hayes",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 434-437, but the missing article is listed on page 411 in the table of contents. The images provided do not contain the page where this article would be located.",
+      "api_usage": {
+        "input_tokens": 7620,
+        "output_tokens": 136,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        434,
+        435,
+        436,
+        437
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 5,
+  "month": "April",
+  "year": 1918,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.028,
+  "stats": {
+    "found": 1,
+    "not_found": 0,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Charity (A Poem) Grace Ingles Frost",
+      "printed_page": 185,
+      "status": "found",
+      "complete_text": "Charity.\n\nBy Grace Ingles Frost.\n\n\"Neither do I condemn thee; go and sin no more\" (John 8:11).\n\nCharity! Charity!\nNot like the Pharisees of old,\nWho close about his form did draw\nHis garment, lest perchance a fold\nShould unto him unhallowed be\nFrom contact with a fellow man\nLess fortunate than he.\n\nCharity! Charity!\nLike that which forth from lips divine\nAs precious pearls did flow,\nWhen she, that erring one, was brought,\nHer shame, her guilt to show.\nThe words, \"Let him who hath no sin\nBe first to cast a stone,\"\nAnd lo! the accusers, one by one,\nStole forth and left alone\nThe woman with her God.\nThen through the ominous silence broke\nA thought of wondrous love,\nWhich dormant good in heart awoke,\nThat such grave stigma bore,\n\"Neither do I condemn thee:\nGo and sin no more.\"\n\nInvocation.\n\nGod give us loyal hearts and brave,\nGreat souls who walk by love, afraid\nTo hurl the contemelious stone\nUpon another,\nBut ever eager, glad to save;\nFling forth the life-line wide,\nTo rescue from the storm-tossed wave\nThe sister or the brother.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Grace Ingles Frost",
+      "confidence": "high",
+      "notes": "Found the complete poem on page 185 of the PDF images. It includes the title, author, biblical quote, main poem with two stanzas, and an invocation section.",
+      "api_usage": {
+        "input_tokens": 6830,
+        "output_tokens": 501,
+        "cost": 0.028
+      },
+      "pdf_pages": [
+        205,
+        206,
+        207,
+        208
+      ]
+    }
+  ]
+}

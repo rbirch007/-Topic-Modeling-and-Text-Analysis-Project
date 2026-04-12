@@ -1,0 +1,43 @@
+{
+  "volume": 19,
+  "month": "July",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.1528,
+  "files": [
+    {
+      "source_file": "July_Vol19_21_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field North Central States",
+          "end_boundary": "Sister Signe L. Hulterstrom in December, 1931.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This is a single article containing reports from multiple missions (North Central States, Northern States, Central States, Texas, California, Arizona, Swiss-German, and Swedish missions). The entire content is one cohesive 'Notes from the Field' article with multiple subsections organized by mission areas.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 15375,
+      "tier": 1,
+      "pdf_pages": [
+        489,
+        490,
+        491
+      ],
+      "api_usage": {
+        "input_tokens": 49675,
+        "output_tokens": 250,
+        "cost": 0.1528
+      }
+    }
+  ]
+}

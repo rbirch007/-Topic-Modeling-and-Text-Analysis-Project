@@ -1,0 +1,198 @@
+{
+  "volume": 17,
+  "month": "March",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 9,
+  "total_searched": 9,
+  "total_cost": 0.1955,
+  "stats": {
+    "found": 1,
+    "not_found": 8,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Frontispiece Portrait of Eliza R. Snow",
+      "printed_page": 112,
+      "status": "found",
+      "complete_text": "PORTRAIT OF ELIZA R. SNOW\n\nSecond General President of the Relief Society\nof the Church of Jesus Christ\nof Latter-day Saints\n—Painted by John Willard Clawson.",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the frontispiece portrait caption on page 144 of the PDF images. This is a portrait caption rather than a full article, describing the painting of Eliza R. Snow by John Willard Clawson.",
+      "api_usage": {
+        "input_tokens": 7396,
+        "output_tokens": 195,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Portrait of Zina D. H. Young",
+      "printed_page": 114,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 141-144, but the Portrait of Zina D. H. Young is listed on page 114 in the table of contents. The images provided do not contain page 114, so the portrait cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7388,
+        "output_tokens": 152,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Portrait of Bathsheba W. Smith",
+      "printed_page": 116,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 141-144, but the Portrait of Bathsheba W. Smith should be on page 116 according to the table of contents. The images provided do not contain this portrait or any related text about Bathsheba W. Smith.",
+      "api_usage": {
+        "input_tokens": 7384,
+        "output_tokens": 151,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Portrait of Louise Y. Robison",
+      "printed_page": 122,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 141-144, but the Portrait of Louise Y. Robison should be on page 122 according to the table of contents. The images provided do not contain this portrait or any related content.",
+      "api_usage": {
+        "input_tokens": 7380,
+        "output_tokens": 141,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Spring is Here Bertha M. Rosevear",
+      "printed_page": 123,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Bertha M. Rosevear",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 141-144). The article should appear on page 123 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7396,
+        "output_tokens": 150,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "National Council of Women",
+      "printed_page": 129,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 141-144) do not contain the article 'National Council of Women' which should appear on page 129 according to the table of contents. The images show pages that are beyond the expected location of this article.",
+      "api_usage": {
+        "input_tokens": 7364,
+        "output_tokens": 138,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "title": "Self-Reliance Lais V. Hales",
+      "printed_page": 159,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Quest Bertha A. Kleinman",
+      "printed_page": 160,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Bertha A. Kleinman",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 141-144 which contain 'Guide Lessons for May' content about crime and delinquency statistics. Page 160 where 'The Quest' should appear is not included in these images.",
+      "api_usage": {
+        "input_tokens": 7388,
+        "output_tokens": 150,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        174,
+        175,
+        176,
+        177
+      ]
+    },
+    {
+      "title": "A Widow's Protective League Elizabeth Cannon Porter",
+      "printed_page": 163,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Elizabeth Cannon Porter",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 141-144). The article should appear on page 163 according to the table of contents, but the provided images do not contain this page.",
+      "api_usage": {
+        "input_tokens": 7392,
+        "output_tokens": 141,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    }
+  ]
+}

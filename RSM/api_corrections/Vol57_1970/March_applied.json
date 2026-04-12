@@ -1,0 +1,62 @@
+{
+  "volume": 57,
+  "month": "March",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V57_03_08_GenFt_Notes_Arts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1558 chars)"
+    },
+    {
+      "file": "V57_03_09_GenFt_Womans_Cannon.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (3233 chars)"
+    },
+    {
+      "file": "V57_03_10_SpFt_Relief_Miltenberge.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_03_11_GenFt_Twelve_Olson.txt",
+      "action": "note",
+      "result": "INFO: File contains statistical data instead of Twelve Months of Homemaking content"
+    },
+    {
+      "file": "V57_03_12_GenFt_Stitchery_Cottle.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_03_13_GenFt_Useful_Hakes.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V57_03_14_GenFt_Children.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V57_03_23_GenFt_Hobby_Department.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5883 chars removed)"
+    }
+  ]
+}

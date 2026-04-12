@@ -1,0 +1,80 @@
+{
+  "volume": 17,
+  "month": "March",
+  "year": 1930,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.0576,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Guide Lessons for May - Lesson 1: Theology and Testimony",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for May - Lesson 2: Work and Business (Teachers' Topics)",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages (141-145). Page 145 contains 'Guide Lessons for May' but only shows Lesson 1 content about 'Honesty'. The article for Lesson 2: Work and Business (Teachers' Topics) is not visible in any of the provided pages. It likely appears on a subsequent page not included in this set.",
+      "order": "c",
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "source_file": "March_Vol17_08_Article_Autumn_Josephine_M_Duncan.txt",
+      "api_usage": {
+        "input_tokens": 8576,
+        "output_tokens": 164,
+        "cost": 0.0282
+      }
+    },
+    {
+      "title": "A Parent's Desire",
+      "order": "b",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Pictures in the Fire",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Julia Collard Baker",
+      "confidence": "high",
+      "notes": "Article not found in provided PDF images. Table of contents shows it should be on page 156, but the provided images appear to be from earlier pages in the magazine (around pages 141-145 based on instruction, but actual content shows table of contents and portraits from front matter).",
+      "order": "c",
+      "pdf_pages": [
+        141,
+        142,
+        143,
+        144,
+        145
+      ],
+      "source_file": "March_Vol17_12_Article_Some_Outstanding_Incidents_in_Joseph_Smiths_Career_Carter_E_Grant.txt",
+      "api_usage": {
+        "input_tokens": 8529,
+        "output_tokens": 257,
+        "cost": 0.0294
+      }
+    }
+  ]
+}

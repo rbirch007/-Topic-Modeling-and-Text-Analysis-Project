@@ -1,0 +1,76 @@
+{
+  "volume": 16,
+  "month": "July",
+  "year": 1929,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1757,
+  "files": [
+    {
+      "source_file": "July_Vol16_10_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Autobiography of Caroline Josephine Ballantyne Farr",
+          "category": "Article",
+          "author": "Caroline Josephine Ballantyne Farr",
+          "start_boundary": "CAROLINE JOSEPHINE BALLANTYNE FARR Autobiography of Caroline Josephine",
+          "end_boundary": "praise, and majesty be His forever and ever. Amen.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Grandma's Quilts",
+          "category": "Poem",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Grandma's Quilts By Elsie E. Barrett My Grandma's",
+          "end_boundary": "For work she did while here.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Autobiography of Margaret Miller Watson De Witt",
+          "category": "Article",
+          "author": "Margaret Miller Watson De Witt",
+          "start_boundary": "MARGARET MILLER WATSON DeWITT Autobiography of Margaret Miller",
+          "end_boundary": "one of earth's chosen spirits. —Eunice I. Gardner.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "CAROLINE JOSEPHINE BALLANTYNE FARR",
+        "AUTOBIOGRAPHY OF MARGARET M. W. DeWITT"
+      ],
+      "notes": "This file contains three distinct pieces: Caroline Farr's autobiography (the main article), a short poem about quilts, and Margaret De Witt's autobiography. The boundaries are clearly marked by titles and author attributions. The file ends with an editor's note from Eunice I. Gardner about Margaret De Witt.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 19152,
+      "tier": 1,
+      "pdf_pages": [
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446
+      ],
+      "api_usage": {
+        "input_tokens": 55967,
+        "output_tokens": 519,
+        "cost": 0.1757
+      }
+    }
+  ]
+}

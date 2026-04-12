@@ -1,0 +1,148 @@
+{
+  "volume": 20,
+  "month": "June",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 9,
+  "total_cost": 0.2257,
+  "files": [
+    {
+      "source_file": "June_Vol20_06_Article_The_Importance_of_Standardization_in_County_Welfare_Work_Joseph_A_Geddes.txt",
+      "num_articles_found": 9,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Importance of Standardization in County Welfare Work",
+          "category": "Article",
+          "author": "Joseph A. Geddes",
+          "start_boundary": "The Importance of Standardization in County Welfare",
+          "end_boundary": "I shall not fail.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The \"Minichoor\"",
+          "category": "Article",
+          "author": "Ruth Partridge Richan",
+          "start_boundary": "\"The Minichoor\" To My Mother By",
+          "end_boundary": "it was my mother's.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "A Most Interesting Exhibit",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "There is no unbelief. Whoever plants",
+          "end_boundary": "these regions have made.",
+          "confidence": "medium"
+        },
+        {
+          "order": "d",
+          "title": "Be Genuine—Be Yourself—Recognize Worth of Others",
+          "category": "Article",
+          "author": "Elise B. Alder",
+          "start_boundary": "Be Genuine—Be Yourself —Recognize Worth",
+          "end_boundary": "right here today on this little earth of ours.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Mormon Lake Fringed with Yellow Pine Timber",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "MORMON LAKE FRINGED WITH YELLOW PINE",
+          "end_boundary": "Coconino National Forest of Arizona.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Prohibitionists, Fight On!",
+          "category": "Article",
+          "author": "Senator Morris Sheppard",
+          "start_boundary": "Prohibitionists, Fight On! Address of Senator",
+          "end_boundary": "Prohibitionists, fight on!",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Happenings",
+          "category": "Current_Topics",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "Happenings By Annie Wells Cannon June—Now",
+          "end_boundary": "are some of the latest books by women.",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Convention of the Woman's National Committee for Law Enforcement",
+          "category": "Article",
+          "author": "Louise Y. Robison",
+          "start_boundary": "Convention of the Woman's National Committee",
+          "end_boundary": "foundations of righteousness.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "i",
+          "title": "Happy Mothers",
+          "category": "Article",
+          "author": "Marba C. Josephson",
+          "start_boundary": "Happy Mothers By Marba C. Josephson",
+          "end_boundary": "when they are mature.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "STANDARDIZATION OF WELFARE WORK",
+        "THE \"MINICHOOR\"",
+        "CONVENTION FOR LAW ENFORCEMENT",
+        "HAPPY MOTHERS"
+      ],
+      "notes": "This file contains 9 separate articles that were incorrectly merged. The boundaries are clearly defined by title headers and author bylines. Some articles like 'A Most Interesting Exhibit' appear to be continuations or related content that may need further verification.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': start_boundary not found",
+        "Split 'h': end_boundary not found",
+        "Split 'i': start_boundary not found",
+        "Split 'i': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 25623,
+      "tier": 1,
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380
+      ],
+      "api_usage": {
+        "input_tokens": 69876,
+        "output_tokens": 1071,
+        "cost": 0.2257
+      }
+    }
+  ]
+}

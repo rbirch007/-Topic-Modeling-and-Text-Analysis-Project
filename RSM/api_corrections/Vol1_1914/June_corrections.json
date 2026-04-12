@@ -1,0 +1,126 @@
+{
+  "volume": 1,
+  "month": "June",
+  "year": 1914,
+  "total_files_checked": 13,
+  "files_correct": [
+    "V1_1914_Jun_02_Art_Genealogy.txt",
+    "V1_1914_Jun_03_Art_HomeEthics.txt",
+    "V1_1914_Jun_04_Art_HomeGarden.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Jun_01_Art_Editorial.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Editorial Insurance article but filename indicates Art Editorial - should be Editorial Insurance",
+      "action": "note",
+      "text": "Filename should reflect Editorial Insurance content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_05_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Literature lesson content, not poetry - should be categorized as Article",
+      "action": "note",
+      "text": "Content is Literature lesson, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_06_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Art and Architecture lesson content, not poetry - should be categorized as Article",
+      "action": "note",
+      "text": "Content is Art and Architecture lesson, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_07_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Notes on Relief Society Conference content, not poetry - should be categorized as Article",
+      "action": "note",
+      "text": "Content is conference notes, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_07_Poem_Poemfrom.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end that should be in Misc file",
+      "action": "trim_end",
+      "text": "Miss Eddington has long been an efficient worker on the board of the Y. L. M. I. A., and comes to us ably prepared and with a wide experience.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jun_08_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains administrative content about bulletin orders, not poetry - should be categorized as Misc",
+      "action": "note",
+      "text": "Content is administrative notice, not poetry",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_08_Poem_Poemfrom.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'Relief Society Bulletin' text in the address",
+      "action": "replace_content",
+      "text": "MONEY FOR BULLETINS AND LESSON BOOKS. All orders for Bulletins or Lesson Books, all money to be expended in this direction should be sent to the Relief Society Bulletin, Room 28 Bishop's Building.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Jun_09_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains UNDERTAKING CO., ICE CREAM, and other ad markers",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_10_Poem_TWOSTORES.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains CO-OP. FURNITURE, BURIAL CLOTHES and other ad markers",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_11_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains hotel and insurance advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jun_13_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "Contains BENEFICIAL LIFE INSURANCE company information",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are incorrectly categorized as Poetry when they contain lesson content or advertisements. Several files contain advertisement content that should be consolidated into a Misc file. The main lesson articles (Editorial Insurance, Genealogy, Home Ethics, Home Gardening, Literature, Art and Architecture, Conference Notes) are all present but need proper categorization and cleanup of advertisement bleed.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Jun_07_Poem_Poemfrom.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end that should be in Misc file",
+      "action": "trim_end",
+      "text": "Miss Eddington has long been an efficient worker on the board of the Y. L. M. I. A., and comes to us ably prepared and with a wide experience.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

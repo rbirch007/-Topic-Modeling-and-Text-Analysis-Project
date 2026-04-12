@@ -1,0 +1,19 @@
+{
+  "volume": 53,
+  "month": "May",
+  "year": 1966,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V53_05_04_SpFt_Literary.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-word with 'bmitted elsewhere' instead of beginning with the complete phrase 'nor submitted elsewhere'",
+      "action": "prepend",
+      "text": "nor su",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 0% OCR coverage"
+    }
+  ]
+}

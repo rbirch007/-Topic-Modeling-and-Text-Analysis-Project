@@ -1,0 +1,62 @@
+{
+  "volume": 4,
+  "month": "December",
+  "year": 1917,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0628,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol4_09b_Guide_Lessons_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 102,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a fragment from a table of contents or lesson index showing only lesson titles without any actual content. The PDF pages shown do not contain Guide Lessons content - they show Relief Society Magazine articles about various topics including temple construction, war news, food conservation, etc. This is likely a header artifact that should be deleted.",
+      "api_usage": {
+        "input_tokens": 6347,
+        "output_tokens": 168,
+        "cost": 0.0216
+      },
+      "pdf_pages": [
+        721,
+        722,
+        723,
+        724
+      ]
+    },
+    {
+      "source_file": "December_Vol4_13_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "status": "truncated",
+      "current_chars": 123,
+      "complete_text": "Current Topics.\nBy James H. Anderson.\n\nMANY GERMAN PAPERS in the United States have been barred from the mails here, owing to their utterances against the United States government.\n\nWHISKY MANUFACTURE by government approval was stopped by law in the United States on September 8, as was also its interstate transportation.\n\nRUSSIA has been declared a republic. It has not been determined yet that Russians will agree on any kind of government until aided by other nations.\n\nITALY achieved considerable further military success against Austria, in the direction of Trieste, during September, but the Austrian lines were not broken.\n\n\"MORMON\" SETTLERS of Mexico are to return to their homes, according to the present prospect, peaceful conditions having been restored, at least temporarily.\n\nSWEDEN has been getting into international trouble by German abuse of the privilege of sending code messages through Swedish officials in neutral nations.\n\nAIR RAIDS over England, by German aviators, took a total of nearly 200 lives during September. In one of these raids 107 persons were killed at Chatham, on the Thames.\n\nTUBERCULOSIS has increased materially in Europe since the war began, and it is not unlikely that America will suffer in a degree through its participation in the great conflict.\n\n\"THE LIBERTY MOTOR\" is the designation given to a new motor for airplanes which United States government officials say is superior to any gasoline motor heretofore known.\n\nTHE UNITED STATES had more than a million men in its military service on September 5, and since then nearly three-quarters of a million have been added by the draft law.\n\nTHE WAR TAX BILL, providing for about eight billion dollars, has been passed by Congress. The people of the United States soon will realize the meaning of heavy war taxation.\n\nFINANCIAL AID by the United States practically saved the Entente allies in the present war, according to Lord Balfour of Great Britain—a result of the German blunder in provoking \"Uncle Sam.\"\n\nFRENCH TROOPS on the western battle front in Europe had some hard battles with the Germans in September, in which the latter were pushed back at some points, but no decisive results were obtained.\n\nPOPE BENEDICT'S PEACE PROPOSAL received general approval by Austria, while Germany was in part favorable. This was to be expected, since the proposal really was to the decided advantage of the Teutons.\n\nJAPAN'S SPECIAL ENVOY to the United States, Viscount Ishii, on his visit in September, seems to have dispelled many of the \"yellow peril\" vagaries which foreshadowed Japanese invasion of the United States.\n\nGOV. JAMES E. FERGUSON, twice elected governor of Texas, has been impeached in that State for using public funds for private gain. If the rule were applied in all the States, there would be lots of removals from office.\n\nAUTO SPEEDSTERS in Salt Lake City were sent to jail for terms of one to fifteen days, in September, the court giving as a reason for jail sentences that fines did not seem to work reform among reckless chauffeurs.\n\nTHE PEACE MOVEMENT is said to be growing in Germany; but the German terms are so unacceptable to the others concerned that it seems certain the war will be carried to a military determination, which is a long way off.\n\nPRICES of certain food-stuffs, fuel, and metals have been fixed by the government at practically the market prices prevailing in August, with the view that there may be a measure of stability in the cost of living during the war.\n\nAT CARDSTON, CANADA, the temple being erected by the Latter-day Saints is so far advanced in construction that it is ready for the laying of the capstone; the time for that ceremony is to be determined by the First Presidency of the Church.\n\nARGENTINA has been brought on the verge of war with Germany through the German minister at Buenos Aires advising the sinking of Argentine vessels \"without a trace,\" and applying an opprobrious epithet to the Argentine foreign minister.\n\nFOOLISH FADS in alleged food conservation are arousing the antagonism of sensible housewives in practically every State in the Union. The RELIEF SOCIETY MAGAZINE already has given to its thousands of readers timely advice along this line.\n\nWOMAN SUFFRAGE was defeated in Massachusetts at the election in September; yet the vote in its favor was proportionately so much larger than could have been polled in the Bay State ten years ago that the equal suffrage workers are greatly encouraged.\n\nOIL PRODUCTION is being largely increased in Wyoming, owing to the discovery of new oil fields. The crop of oiled schemes to get the money of the too-trusting investor without a return therefore in kind, also is increasing, and includes the Utah field.\n\nMORE WHEAT RAISING is asked of Utah by the national food administrator. It is noted that even in the more thickly populated farming districts of the State many thousands of acres of cultivable land that might be used for the purpose lies untilled year after year.\n\nI. W. W. LITERATURE was seized on September 5 by a general raid of United States officers on the association's headquarters in the larger cities of the country. Much evidence was obtained, showing an active propaganda against the government in the present war.\n\nBRITISH TROOPS fought two of the greatest battles of the present war in September, on the Belgian and western France battle-line, forcing the Germans back a considerable distance and inflicting heavy losses on the Teutons; but the latter still are making a determined resistance.",
+      "title": "Current Topics",
+      "category": "Current_Topics",
+      "author": "James H. Anderson",
+      "confidence": "high",
+      "notes": "Found complete Current Topics article by James H. Anderson on pages 636-638. The file contained only a fragment with page numbers, but the full article is a comprehensive news summary covering various wartime and domestic topics.",
+      "api_usage": {
+        "input_tokens": 6392,
+        "output_tokens": 1469,
+        "cost": 0.0412
+      },
+      "pdf_pages": [
+        718,
+        719,
+        720,
+        721
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "volume": 7,
+  "month": "January",
+  "year": 1920,
+  "timestamp": "20260315_120943",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "January_Vol7_08_Article_The_Official_Round_Table.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (360 chars added)"
+    },
+    {
+      "file": "January_Vol7_09a_Article_On_the_Watch_Tower.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (6318 chars added)"
+    },
+    {
+      "file": "January_Vol7_09a_Article_On_the_Watch_Tower.txt",
+      "action": "append",
+      "result": "APPLIED append (34 chars added)"
+    },
+    {
+      "file": "January_Vol7_09b_Guide_Lessons_Guide_Lessons_-_Lesson_I_Genealogy_and_Testimony.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol7_10_Editorial_Editorial_The_Discipline_of_Opposition_in_this_Newest_Year_o.txt",
+      "action": "append",
+      "result": "APPLIED append (4504 chars added)"
+    }
+  ]
+}

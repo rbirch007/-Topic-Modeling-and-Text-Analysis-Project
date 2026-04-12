@@ -1,0 +1,47 @@
+{
+  "volume": 6,
+  "month": "August",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1289,
+  "files": [
+    {
+      "source_file": "August_Vol6_06d_Genealogy_Guide_Lessons_-_Lesson_III_Genealogy_-_Welsh_Surnames_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Lesson III. Genealogy - Welsh Surnames",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons - Lesson III. Genealogy -",
+          "end_boundary": "Ask a descendant of the Welsh people",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Home Courses - The Significance of Playgrounds in the Community Life",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Home Courses. THE SIGNIFICANCE OF PLAYGROUNDS",
+          "end_boundary": "adorned by health and refinement.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two distinct lesson sections: a genealogy lesson on Welsh surnames and a home course lesson on playgrounds. The genealogy lesson ends with questions, and the home course lesson begins immediately after with a clear heading change.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11403,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 41226,
+        "output_tokens": 350,
+        "cost": 0.1289
+      }
+    }
+  ]
+}

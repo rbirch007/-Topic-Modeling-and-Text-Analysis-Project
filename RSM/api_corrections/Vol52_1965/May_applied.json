@@ -1,0 +1,92 @@
+{
+  "volume": 52,
+  "month": "May",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 12,
+  "skipped": 0,
+  "failed": 2,
+  "entries": [
+    {
+      "file": "V52_05_01_Frnt_To_a_Roberts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (780 chars)"
+    },
+    {
+      "file": "V52_05_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (823 chars removed)"
+    },
+    {
+      "file": "V52_05_07_SpFt_Teaching_Walch.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_05_09_Fict_Ring_Thulin.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (347 chars added)"
+    },
+    {
+      "file": "V52_05_11_SpFt_Gifts_Young.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (61 chars added)"
+    },
+    {
+      "file": "V52_05_13_Fict_The_Judd.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (12 chars added)"
+    },
+    {
+      "file": "V52_05_17_Fict_Abide_Hansen.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V52_05_20_The Home_Desserts_Lovett.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1438 chars)"
+    },
+    {
+      "file": "V52_05_24_The Home_Quality_Tradition.txt",
+      "action": "note",
+      "result": "INFO: Contains content from The Anniversary story instead of Quality Quilts article"
+    },
+    {
+      "file": "V52_05_25_Poem_A_Jorgensen.txt",
+      "action": "note",
+      "result": "INFO: Contains story content instead of poem"
+    },
+    {
+      "file": "V52_05_26_Fict_The_Ellis.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5747 chars removed)"
+    },
+    {
+      "file": "V52_05_29_The Home_Just_Ryder.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1517 chars)"
+    },
+    {
+      "file": "V52_05_30_Poem_This_Larsen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (382 chars)"
+    },
+    {
+      "file": "V52_05_31_Poem_May_Tanner.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (195 chars)"
+    },
+    {
+      "file": "V52_05_39_Poem_A_Schow.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1472 chars removed)"
+    },
+    {
+      "file": "V52_05_40_GenFt_Bday_Congrats.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1105 chars)"
+    }
+  ]
+}

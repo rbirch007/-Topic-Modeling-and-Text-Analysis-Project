@@ -1,0 +1,291 @@
+{
+  "volume": 57,
+  "month": "December",
+  "year": 1970,
+  "total_files_checked": 41,
+  "files_correct": [
+    "V57_12_01_Poem_Discourse_Cutler.txt",
+    "V57_12_18_GenFt_Stained_Chapel.txt",
+    "V57_12_39_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_12_02_Poem_A_Night_Christense.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from next article about cover and frontispiece",
+      "action": "trim_end",
+      "text": "Alberta H. Christensen",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_03_SpFt_Mothers_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with publication info instead of article content",
+      "action": "trim_start",
+      "text": "My dear Sisters or 128 years",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_12_03_SpFt_Mothers_Smith.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Pointing Spires poem which should be separate",
+      "action": "trim_end",
+      "text": "In the name of Jesus Christ, Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_04_Poem_Pointing_Olsen.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains only author name fragment, missing poem text",
+      "action": "replace_content",
+      "text": "POINTING SPIRES Symbols of a humble faith; tapered spires Point above the lacy trees in a way To hold my eyes, and warm my heart with fires Of hope that make me want to kneel and pray. | have seen them shine above a loose cloud Rolling in like fog rising from the sod Where people live and toil, speaking aloud Their gratitude while worshipping their God. Firm pointing fills an elemental need Impelling me to lift my voice in praise. Without these symbols others may mislead Me as | grope in darkness for the ways To find a special place with doors ajar Where newer light awaits. There spires are. Pearle M. Olsen",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_12_05_SpFt_Birthday_Smith.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about instruments and sound",
+      "action": "trim_end",
+      "text": "May her birthday be one of joyful association with her loved ones, and the coming year be filled with blessings and contentment.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_06_GenFt_Reminiscing_Cox.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains content from Birthday Greetings article instead of Reminiscing",
+      "action": "note",
+      "text": "Article content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_07_GenFt_Silent_Busk.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains content from Birthday Greetings article instead of Silent Music",
+      "action": "note",
+      "text": "Article content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_09_Poem_If_I_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about Relief Society editors",
+      "action": "trim_end",
+      "text": "Peggy Tangren",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_10_GenFt_Editorial_Sharp.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains fragment from previous poem instead of Editorial content",
+      "action": "note",
+      "text": "Editorial content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_11_GenFt_Notice.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains mixed content from multiple articles instead of Notice to Subscribers",
+      "action": "note",
+      "text": "Notice to Subscribers content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_12_GenFt_On_Arrington.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains mixed content instead of On Clear Vision article",
+      "action": "note",
+      "text": "On Clear Vision content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_13_Poem_Just_So_Roberts.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains only author name fragment, missing poem text",
+      "action": "replace_content",
+      "text": "JUST SO Just so, he Stacked the whisper and the rustle Of the Parchment corn, Heaping hubbard, and banana and the Pumpkin at its side. And so, the blue mountain wore its Thin turban of snow And the sky was A turmoil of departing glory. All remain, repeating the eternals Of the ending year. Now to other hands Their yield to another hoe. Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_12_15_Fict_The_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from Spiritual Living lesson instead of ending with story",
+      "action": "trim_end",
+      "text": "*\"Bessie\" is Mrs. Elizabeth Peterson McKay of Ogden, Utah 1969 \"Mother of the Year.\"",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_12_16_GenFt_Spiritual_Christ.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from next lesson instead of ending with summary",
+      "action": "trim_end",
+      "text": "(John 17: 4-5, 8, 24; Matt. 16:16-17.)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_17_GenFt_Spiritual_Glory.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about stained glass window",
+      "action": "trim_end",
+      "text": "(continued on page 931)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_20_GenFt_Beauty.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains fragment about furniture instead of Beauty and Warmth content",
+      "action": "note",
+      "text": "Beauty and Warmth content appears to be merged with other Christmas decoration articles",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_24_GenFt_Mary.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains recipe content instead of Mary and Joseph article",
+      "action": "note",
+      "text": "Mary and Joseph content not clearly separated in OCR",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_12_40_Poem_For_His_Despain.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual poem text, only has content from following article",
+      "action": "prepend",
+      "text": "FOR HIS TOMORROWS His own boat, a cardboard box. His playroom is a deep blue sea. He catches fish (his own small socks). My best broom is a tall palm tree. But now, 'I'll help you, Mommy I'll clean the house and dust it, see!' I wouldn't have him know for worlds How much his help is hindering me. Wilma",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_41_Poem_Splendor_Bowles.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual poem text, only has content from following article",
+      "action": "prepend",
+      "text": "SPLENDOR IN THE WEST The radiant sun is setting Even as my years go by, And patterns of departing Repeat a promise on the sky. For as the hills await the dawn I see the covenant of light And wait renewal of the morning Beyond the darkness and the night.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Ending Song, Evelyn H. Hughes",
+      "expected_page": 900,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Many articles have content bleeding issues, particularly Christmas decoration articles that appear to be merged together. Several short articles like Reminiscing and Silent Music appear to have OCR gaps. The poetry extractions have significant issues with missing content or wrong content. The lesson articles are generally better extracted but have boundary issues.",
+  "validated_corrections": [
+    {
+      "file": "V57_12_02_Poem_A_Night_Christense.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from next article about cover and frontispiece",
+      "action": "trim_end",
+      "text": "Alberta H. Christensen",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_03_SpFt_Mothers_Smith.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Pointing Spires poem which should be separate",
+      "action": "trim_end",
+      "text": "In the name of Jesus Christ, Amen.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_05_SpFt_Birthday_Smith.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about instruments and sound",
+      "action": "trim_end",
+      "text": "May her birthday be one of joyful association with her loved ones, and the coming year be filled with blessings and contentment.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_09_Poem_If_I_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about Relief Society editors",
+      "action": "trim_end",
+      "text": "Peggy Tangren",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_15_Fict_The_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from Spiritual Living lesson instead of ending with story",
+      "action": "trim_end",
+      "text": "*\"Bessie\" is Mrs. Elizabeth Peterson McKay of Ogden, Utah 1969 \"Mother of the Year.\"",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_12_16_GenFt_Spiritual_Christ.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content from next lesson instead of ending with summary",
+      "action": "trim_end",
+      "text": "(John 17: 4-5, 8, 24; Matt. 16:16-17.)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_17_GenFt_Spiritual_Glory.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains unrelated content about stained glass window",
+      "action": "trim_end",
+      "text": "(continued on page 931)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_40_Poem_For_His_Despain.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual poem text, only has content from following article",
+      "action": "prepend",
+      "text": "FOR HIS TOMORROWS His own boat, a cardboard box. His playroom is a deep blue sea. He catches fish (his own small socks). My best broom is a tall palm tree. But now, 'I'll help you, Mommy I'll clean the house and dust it, see!' I wouldn't have him know for worlds How much his help is hindering me. Wilma",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_12_41_Poem_Splendor_Bowles.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual poem text, only has content from following article",
+      "action": "prepend",
+      "text": "SPLENDOR IN THE WEST The radiant sun is setting Even as my years go by, And patterns of departing Repeat a promise on the sky. For as the hills await the dawn I see the covenant of light And wait renewal of the morning Beyond the darkness and the night.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_12_03_SpFt_Mothers_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with publication info instead of article content",
+      "action": "trim_start",
+      "text": "My dear Sisters or 128 years",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "volume": 7,
+  "month": "May",
+  "year": 1920,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0193,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "May_Vol7_06_Article_On_the_Watch_Tower.txt",
+      "status": "not_found",
+      "current_chars": 106,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The file content appears to be a table of contents fragment listing multiple articles with page numbers. The PDF pages provided (279-282) show content about suffrage history but do not contain 'On the Watch Tower' article which should be on page 290 according to the TOC. The provided PDF pages do not cover the page range where this article should appear.",
+      "api_usage": {
+        "input_tokens": 5572,
+        "output_tokens": 172,
+        "cost": 0.0193
+      },
+      "pdf_pages": [
+        279,
+        280,
+        281,
+        282
+      ]
+    }
+  ]
+}

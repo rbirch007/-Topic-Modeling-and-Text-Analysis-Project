@@ -1,0 +1,280 @@
+{
+  "volume": 16,
+  "month": "December",
+  "year": 1929,
+  "total_merged": 4,
+  "total_splits": 14,
+  "total_cost": 0.6928,
+  "files": [
+    {
+      "source_file": "December_Vol16_02_Article_The_Holy_Family.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Holy Family",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "THE HOLY FAMILY BY MURILLO XVI DECEMBER,",
+          "end_boundary": "THE HOLY FAMILY BY MURILLO A Day",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "b",
+          "title": "A Day in a Jewish Village in Russia",
+          "category": "Article",
+          "author": "Franklin S. Harris",
+          "start_boundary": "A Day in a Jewish Village in",
+          "end_boundary": "poverty which is now their portion.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Music in the Home of Hamlin Garland",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Music in the Home of Hamlin",
+          "end_boundary": "South Main St., Salt Lake City.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Evergreen",
+          "category": "Article",
+          "author": "Elsie Talmage Brandley",
+          "start_boundary": "Evergreen By Elsie Talmage Brandley The",
+          "end_boundary": "ushering in the beginning of Christmas Day.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A DAY IN A JEWISH VILLAGE",
+        "EVERGREEN"
+      ],
+      "notes": "This file contains 4 articles that were merged together. The first is a very short piece about 'The Holy Family' painting, followed by the main article about a Jewish village in Russia, then a brief piece about music in Hamlin Garland's home, and finally the story 'Evergreen'. The boundaries are clear based on title formatting and content transitions.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11925,
+      "tier": 1,
+      "pdf_pages": [
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763
+      ],
+      "api_usage": {
+        "input_tokens": 57543,
+        "output_tokens": 537,
+        "cost": 0.1807
+      }
+    },
+    {
+      "source_file": "December_Vol16_06_Article_Semi-Annual_Conference_of_the_Relief_Society_Julia_A_F_Lund.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Semi-Annual Conference of the Relief Society",
+          "category": "Article",
+          "author": "Julia A. F. Lund",
+          "start_boundary": "Semi-Annual Conference of the Relief Society By Mrs. Julia A. F. Lund, General Secretary",
+          "end_boundary": "The proceedings of the conference will be continued in subsequent issues of the Magazine",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Children's Books",
+          "category": "Article",
+          "author": "Lais Vernon Hales",
+          "start_boundary": "Children's Books By Lais Vernon Hales \"No college English, no finishing school",
+          "end_boundary": "There is no child who does not care to read if the right books can be found.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "CONFERENCE OF THE RELIEF SOCIETY",
+        "CHILDREN'S BOOKS"
+      ],
+      "notes": "The file contains two distinct articles as indicated in the contents. The first is a conference report with multiple speakers and sections, and the second is an article about selecting books for children. The boundary between them is clear where the conference proceedings note ends and the Children's Books article begins.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 27097,
+      "tier": 1,
+      "pdf_pages": [
+        779,
+        780,
+        781,
+        782,
+        783,
+        784,
+        785,
+        786
+      ],
+      "api_usage": {
+        "input_tokens": 53322,
+        "output_tokens": 391,
+        "cost": 0.1658
+      }
+    },
+    {
+      "source_file": "December_Vol16_09_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for February - Lesson I - Theology and Testimony - The Good King Benjamin",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for February LESSON I Theology and Testimony",
+          "end_boundary": "What effect has indiscriminate giving (a) on the giver and (b) on",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for February - Lesson II - Work and Business - Patriotism",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY 671 LESSON II Work and Business",
+          "end_boundary": "Where the air is full of sunlight and the flag is full of",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for February - Lesson III - Literature - The Lost Commander Florence Nightingale",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY 673 LESSON III Literature (Third Week in February)",
+          "end_boundary": "or even home nursing methods. LESSON IV Social Service (Fourth Week",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for February - Lesson IV - Social Service - The Field of Social Work",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in February) THE FIELD OF",
+          "end_boundary": "Utah Power & Light Co. Efficient Public Service When Buying Mention",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains four distinct lesson sections within the Guide Lessons for February, each covering different subject areas: Theology/Testimony (Book of Mormon), Work/Business (Patriotism), Literature (Florence Nightingale biography), and Social Service (Poverty and Dependency). Each lesson has its own questions and content structure.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12384,
+      "tier": 1,
+      "pdf_pages": [
+        791,
+        792,
+        793,
+        794
+      ],
+      "api_usage": {
+        "input_tokens": 43758,
+        "output_tokens": 630,
+        "cost": 0.1407
+      }
+    },
+    {
+      "source_file": "December_Vol16_10_Article_The_Names_of_Santa_Claus.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Names of Santa Claus",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "The Names of Santa Claus As Christmas draws near, the name",
+          "end_boundary": "a Christmas gift, a diminutive of \"Christ kind.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for February - Lesson III Literature - The Lost Commander Florence Nightingale",
+          "category": "Guide_Lessons",
+          "author": "Mary Raymond Shipman Andrews",
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY 673 LESSON III Literature (Third Week",
+          "end_boundary": "home nursing methods. LESSON IV Social Service (Fourth Week",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for February - Lesson IV Social Service - The Field of Social Work",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in February) THE FIELD",
+          "end_boundary": "Are careful investigations made before pensions are granted?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Business College and Product Advertisements",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "We all want to make more money? but when do",
+          "end_boundary": "When Buying Mention Relief Society Magazine Heber J. Grant, Pres. E. T. Ralphs, Gen. Mgr.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains a short article about Santa Claus names, followed by two substantial Guide Lessons (Literature and Social Service), and ends with various business advertisements. The Guide Lessons are complete multi-page sections with questions and detailed content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 32567,
+      "tier": 1,
+      "pdf_pages": [
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282
+      ],
+      "api_usage": {
+        "input_tokens": 65614,
+        "output_tokens": 582,
+        "cost": 0.2056
+      }
+    }
+  ]
+}

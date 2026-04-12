@@ -1,0 +1,63 @@
+{
+  "volume": 11,
+  "month": "March",
+  "year": 1924,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1602,
+  "files": [
+    {
+      "source_file": "March_Vol11_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman Summit",
+          "end_boundary": "Young?Mrs. Rosannah_ C. Irvine.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON I Theology Lesson",
+          "end_boundary": "Folded close under deepening snow.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains two distinct sections: 'Notes from the Field' by Amy Brown Lyman (pages 145-150) and 'Guide Lessons for May' (pages 151-156). The Guide Lessons section contains multiple lessons (Theology, Work and Business, Literature, Social Service) and a Teachers' Topic, all under the main Guide Lessons heading.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 22657,
+      "tier": 1,
+      "pdf_pages": [
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181
+      ],
+      "api_usage": {
+        "input_tokens": 51523,
+        "output_tokens": 376,
+        "cost": 0.1602
+      }
+    }
+  ]
+}

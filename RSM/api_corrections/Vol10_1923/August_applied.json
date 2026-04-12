@@ -1,0 +1,37 @@
+{
+  "volume": 10,
+  "month": "August",
+  "year": 1923,
+  "timestamp": "20260315_120952",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol10_02_Article_Utah_Mountains.txt",
+      "action": "append",
+      "result": "APPLIED append (102 chars added)"
+    },
+    {
+      "file": "August_Vol10_03_Article_Eliza_Roxey_Snow_Memorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (52 chars removed)"
+    },
+    {
+      "file": "August_Vol10_04_Article_What_Utah_Does_for_the_Deaf_Amy_Whipple_Evans.txt",
+      "action": "append",
+      "result": "APPLIED append (86 chars added)"
+    },
+    {
+      "file": "August_Vol10_06_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (348 chars removed)"
+    },
+    {
+      "file": "August_Vol10_09b_Guide_Lessons_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File contains only the header, missing the actual lesson content"
+    }
+  ]
+}

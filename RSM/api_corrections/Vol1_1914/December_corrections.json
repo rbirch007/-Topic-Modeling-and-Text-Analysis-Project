@@ -1,0 +1,131 @@
+{
+  "volume": 1,
+  "month": "December",
+  "year": 1914,
+  "total_files_checked": 13,
+  "files_correct": [
+    "V1_1914_Dec_01_Art_Thoughts.txt",
+    "V1_1914_Dec_02_Art_Editorial.txt",
+    "V1_1914_Dec_04_Art_HomeGarden.txt",
+    "V1_1914_Dec_05_Art_Literature.txt",
+    "V1_1914_Dec_06_Art_Artand.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Dec_03a_Art_Genealogy_and_Testimony.txt",
+      "issue_type": "missing_text",
+      "description": "Article ends mid-sentence, missing 'and peace.' from the OCR",
+      "action": "append",
+      "text": "and peace.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_Dec_03b_Art_Home_Ethics_and_Gardening_-_The_Christmas_Spirit.txt",
+      "issue_type": "missing_text",
+      "description": "Article cuts off mid-sentence, missing 'and grandparents, join in its observance.'",
+      "action": "append",
+      "text": "and grandparents, join in its observance.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (6 words)"
+    },
+    {
+      "file": "V1_1914_Dec_07_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "This is not a poem but a note about genealogical lessons",
+      "action": "replace_content",
+      "text": "NOTE ON GENEALOGICAL LESSON.\nThe blanks provided by the temple are intended to be used only by persons coming to the temple to perform ordinances.\nThey should not be used as practice sheets in genealogical class work.\nThe notebooks, that can be obtained at the office of the Genealogical Society,\n60 E.\nSo.\nTemple St., furnish sufficient opportunity for the practice that may be needed to become familiar with preparation of forms for temple work.\nYours very truly.\nRECORDER.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Dec_08_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for undertaking services and bakery",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Dec_09_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for banking and ice cream services",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Dec_10_Poem_TWOSTORES.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for jewelry, furniture, and burial clothes",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Dec_11_Art_SMITH.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for grafonola and Jensen's butter",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Dec_12_Art_JENSEN.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for various businesses and services",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Dec_13_Poem_Poemfrom.txt",
+      "issue_type": "ad_content",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "note",
+      "text": "This file contains advertisement content for Beneficial Life Insurance",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Work and Business",
+      "expected_page": 5,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_Dec_02_Art_Editorial.txt"
+    }
+  ],
+  "notes": "Many files labeled as 'Poem' are actually advertisements that should be moved to a Misc file. The Work and Business lesson appears to be merged at the end of the Editorial file. Several article files end mid-sentence and need completion from the OCR text.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Dec_03b_Art_Home_Ethics_and_Gardening_-_The_Christmas_Spirit.txt",
+      "issue_type": "missing_text",
+      "description": "Article cuts off mid-sentence, missing 'and grandparents, join in its observance.'",
+      "action": "append",
+      "text": "and grandparents, join in its observance.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (6 words)"
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V1_1914_Dec_03a_Art_Genealogy_and_Testimony.txt",
+      "issue_type": "missing_text",
+      "description": "Article ends mid-sentence, missing 'and peace.' from the OCR",
+      "action": "append",
+      "text": "and peace.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

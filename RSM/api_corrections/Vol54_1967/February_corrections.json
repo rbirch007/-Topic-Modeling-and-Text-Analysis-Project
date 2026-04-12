@@ -1,0 +1,131 @@
+{
+  "volume": 54,
+  "month": "February",
+  "year": 1967,
+  "total_files_checked": 29,
+  "files_correct": [
+    "V54_02_03_Art_Gift_of_Wangsgaard.txt",
+    "V54_02_04_Art_From_Near_and_Far.txt",
+    "V54_02_09_GenFt_The_Littke.txt",
+    "V54_02_10_GenFt_Editorial.txt",
+    "V54_02_11_SpFt_Reduce_Attack.txt",
+    "V54_02_12_GenFt_Womans.txt",
+    "V54_02_13_Fict_Valentines_Yost.txt",
+    "V54_02_14_GenFt_A_Toy_Krambule.txt",
+    "V54_02_15_Fict_Conclusion_Lloyd.txt",
+    "V54_02_16_GenFt_Butter_Leigh-Kenda.txt",
+    "V54_02_18_GenFt_Flowers_Forever.txt",
+    "V54_02_19_Lssn_Spiritual_Doxey.txt",
+    "V54_02_20_Lssn_Visiting_Smith.txt",
+    "V54_02_21_Lssn_Homemaking_Taylor.txt",
+    "V54_02_22_Lssn_Social_Christensen.txt",
+    "V54_02_24_Lssn_Cultural_Clark.txt",
+    "V54_02_26_GenFt_Notes_Activities.txt",
+    "V54_02_28_Poem_Keeping_Chamberlin.txt",
+    "V54_02_29_Poem_Our_Beatie.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_02_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from January 1967 issue about 'The Role of Women in Building the Kingdom' instead of February content",
+      "action": "replace_content",
+      "text": "The Golden Chain Chapter 1 @ From the time the train left Omaha, the landscape seemed to match Nora Blake's spirits. As the train neared the mountains, however, and she saw the Rockies for the first time, looming up out of the very floor of the plains, Nora's spirits began to rise with the topography of the land.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_02_02_Fict_Tell_Me_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from January 1967 issue about home ownership instead of February content",
+      "action": "replace_content",
+      "text": "Tell Me of Love Chapter 8 (Conclusion) content from OCR starting with 'Come back here, Julie!' Cleo demanded.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_02_05_SpFt_Compassionate_Romn.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'the Relief Society is admirably positioned to render'",
+      "action": "prepend",
+      "text": "Compassionate Service in Relief Society Marion G. Romney @ It is an honor, my sisters, to be invited to address you this morning. When Sister Spafford invited me to come here I asked her to give me a memorandum suggesting matters on which I might speak. In response to this request, I received a letter from Sister Sharp who said that I might speak (1) on compassionate services of Relief Society, and (2) on services we are ready to perform as directed by the General Church Welfare Committee. I shall first direct my remarks to the second suggestion. For the past thirty years Relief Society has been, and still is, the bishop's chief auxiliary aide in implementing the Church Welfare Program. Among other things, the ward Relief Society president has been, and _ still should be, called upon to study, analyze, and report to her bishop conceming circumstances of the needy, to prepare orders on bishops' storehouses and to assist in preparing forecasts for future needs. Members of Relief Society have been, and still should be, willing to work at the call of the bishop on sewing, canning, and other welfare production projects. For many years Relief Society was given a major assignment in the field of employment, particularly with respect to women and girls. While under the present welfare organization procedures, the Relief Society is not asked to participate in employment finding and placement in industry, there is a service with respect to domestic employment in the homes of ward members which",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_02_17_GenFt_Kates_Swainston.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be duplicate content from previous article rather than Kate's Cookies recipe",
+      "action": "replace_content",
+      "text": "KATE'S COOKIES Kate Swainston 14 cup white sugar Y cup brown sugar 1 egg 1 cube butter (14 Ib.) *2 tablespoons of cream *1 tablespoon of lemon juice 1144 cup flour 14% tsp. Soda 1 tsp. Baking powder 1 tsp. Almond flavoring 14 cup rolled oats Mix ingredients together in order listed. Roll and store in refrigerator for two to four hours before baking. Slice and place on baking sheet. Bake at 400° for 12 minutes. *Three tbsp. Sour cream can be substituted.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_02_23_Poem_Winter_Brunt.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains lesson content instead of Winter poem by Fanny G. Brunt",
+      "action": "replace_content",
+      "text": "WINTER Fanny G. Brunt Everything is still, and cold, and bleak, The willows on Snake River's bank are nude, — Not a whispering breeze to break the stil Of this somber, pensive, winter solitud a The river, fringed with ice, creeps sl. A»picnic table, in that murky haze, Qn which a trusting robin meditate And sings of leafy trees, and sunny A",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_02_25_Poem_Busy_Bowles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains birthday congratulations and advertisement content after the poem",
+      "action": "trim_end",
+      "text": "He leadeth us where he has trod, Showing the pathway back to God.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_02_27_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content after birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Edith Mary Woodford Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Father Dorothy J. Roberts",
+      "expected_page": 104,
+      "status": "merged_with_another",
+      "merged_into": "V54_02_07_SpFt_The_Burton.txt"
+    }
+  ],
+  "notes": "Several files contain content from wrong issues or have significant content bleeding. The Golden Chain and Tell Me of Love files appear to contain January 1967 content instead of February content. Some poems are merged with other articles or contain extraneous content that needs trimming.",
+  "validated_corrections": [
+    {
+      "file": "V54_02_05_SpFt_Compassionate_Romn.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'the Relief Society is admirably positioned to render'",
+      "action": "prepend",
+      "text": "Compassionate Service in Relief Society Marion G. Romney @ It is an honor, my sisters, to be invited to address you this morning. When Sister Spafford invited me to come here I asked her to give me a memorandum suggesting matters on which I might speak. In response to this request, I received a letter from Sister Sharp who said that I might speak (1) on compassionate services of Relief Society, and (2) on services we are ready to perform as directed by the General Church Welfare Committee. I shall first direct my remarks to the second suggestion. For the past thirty years Relief Society has been, and still is, the bishop's chief auxiliary aide in implementing the Church Welfare Program. Among other things, the ward Relief Society president has been, and _ still should be, called upon to study, analyze, and report to her bishop conceming circumstances of the needy, to prepare orders on bishops' storehouses and to assist in preparing forecasts for future needs. Members of Relief Society have been, and still should be, willing to work at the call of the bishop on sewing, canning, and other welfare production projects. For many years Relief Society was given a major assignment in the field of employment, particularly with respect to women and girls. While under the present welfare organization procedures, the Relief Society is not asked to participate in employment finding and placement in industry, there is a service with respect to domestic employment in the homes of ward members which",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_02_25_Poem_Busy_Bowles.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains birthday congratulations and advertisement content after the poem",
+      "action": "trim_end",
+      "text": "He leadeth us where he has trod, Showing the pathway back to God.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_02_27_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content after birthday congratulations",
+      "action": "trim_end",
+      "text": "Mrs. Edith Mary Woodford Salt Lake City, Utah",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

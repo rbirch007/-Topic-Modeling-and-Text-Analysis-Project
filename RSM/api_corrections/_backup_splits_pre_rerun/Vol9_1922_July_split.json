@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "July",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1051,
+  "files": [
+    {
+      "source_file": "July_Vol9_12_Guide_Lessons_Guide_Lessons_for_September.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for September - Lesson I: Theology and Testimony - Blessings",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for September LESSON I Theology and",
+          "end_boundary": "pave the way for a desire for temple blessings.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for September - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. (Second Week in September)",
+          "end_boundary": "LESSON II. Work and Business. (Second Week in September)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for September - Lesson III: Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Literature. (Third Week in September) For Tuesday,",
+          "end_boundary": "might be used for Law Enforcement program.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for September - Lesson VII: Social Service - Moral Leadership in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON VI] Social Service (Fourth Week in September)",
+          "end_boundary": "II. Renewed Energy in Relief Society Work.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections from the September Guide Lessons. Lesson I is a full detailed lesson on Blessings, Lesson II is just a header with no content, Lesson III is a brief reference to a previously published lesson, and Lesson VII (labeled as VI] in the text) is a substantial lesson on Moral Leadership in the Home with questions and teacher topics.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 14916,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32077,
+        "output_tokens": 593,
+        "cost": 0.1051
+      }
+    }
+  ]
+}

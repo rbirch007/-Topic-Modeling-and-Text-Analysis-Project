@@ -1,0 +1,38 @@
+{
+  "volume": 4,
+  "month": "July",
+  "year": 1917,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0227,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Epistle to the Relief Society Concerning these War Times",
+      "printed_page": 363,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements and the table of contents, but do not contain the article 'Epistle to the Relief Society Concerning these War Times' which should appear on page 363. The images appear to be from the back matter/advertising section of the magazine rather than the main content pages.",
+      "api_usage": {
+        "input_tokens": 6763,
+        "output_tokens": 159,
+        "cost": 0.0227
+      },
+      "pdf_pages": [
+        409,
+        410,
+        411,
+        412
+      ]
+    }
+  ]
+}

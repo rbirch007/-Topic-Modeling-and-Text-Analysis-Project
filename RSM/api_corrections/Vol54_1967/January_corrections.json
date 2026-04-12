@@ -1,0 +1,143 @@
+{
+  "volume": 54,
+  "month": "January",
+  "year": 1967,
+  "total_files_checked": 30,
+  "files_correct": [
+    "V54_01_02_Art_From_Near_and_Far.txt",
+    "V54_01_05_SpFt_Relief_Spafford.txt",
+    "V54_01_06_SpFt_Award_Contest.txt",
+    "V54_01_07_SpFt_The_Warren.txt",
+    "V54_01_08_SpFt_To_the_Bailey.txt",
+    "V54_01_09_SpFt_Naomi_Harmer.txt",
+    "V54_01_10_SpFt_Award_Contest.txt",
+    "V54_01_11_SpFt_Who_Clawson.txt",
+    "V54_01_12_GenFt_Womans_Cannon.txt",
+    "V54_01_13_GenFt_Editorial_Sharp.txt",
+    "V54_01_17_Fict_Christmas_Miller.txt",
+    "V54_01_18_GenFt_The_Armstrong.txt",
+    "V54_01_19_GenFt_Sandwich_Bailey.txt",
+    "V54_01_20_GenFt_Agnes.txt",
+    "V54_01_21_Fict_Rosa.txt",
+    "V54_01_22_GenFt_Memorial_Activitie.txt",
+    "V54_01_23_Lssn_Spiritual_Doxey.txt",
+    "V54_01_24_Lssn_Visiting_Smith.txt",
+    "V54_01_25_Lssn_Homemaking_Taylor.txt",
+    "V54_01_26_Lssn_Social_Christensen.txt",
+    "V54_01_27_Poem_44_Douglas.txt",
+    "V54_01_28_Lssn_Cultural_Clark.txt",
+    "V54_01_29_GenFt_Bday_Congrats.txt",
+    "V54_01_30_Poem_Loves_Doxey.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_01_01_Art_A_New_Presidency.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Harold B. Lee article that should be in separate file",
+      "action": "trim_end",
+      "text": "Now that's how we get assignments from Sister Spaf- The Role of Women in Building the Kingdom ford. I thought you would be interested to know.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V54_01_03_SpFt_The_Lee.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The Role of Women in Building the Kingdom Elder Harold B. Lee Of the Council of the Twelve [Address Delivered at the Stake Board Session of the Relief Society Annual General Conference, September 29, 1966] w I would not have you think that my coming in late and not being able to hear my esteemed and beloved friend and brother, Gordon B. Hinckley of the Council of the Twelve, indicated any lack of respect. I would have wished to have been here. I know his great power of uplift; and I would have felt happy had I been here to have received it; and, also, it would relieve me of an anxiety that I might be repeating what he may have said to you already in this session. Before, or shortly after I became a member of the Council of the Twelve, I was called to the office of the President of the Church, and he said, \"We have Brother Callis and Brother Cannon who are the Advisers to the Primary, and we have been thinking we need someone near the age of the Primary children as an Adviser.\" You can imagine my anxiety when I was told about about two years ago that I was being relieved of that responsibility and was now being made an Adviser to the Relief Society. I don't know whether that has any significance or not, but at least it gave me a rather queer feeling. Before I accepted this responsibility, I gave Sister Spafford a rather negative or evasive answer. I had some other commitments that I thought might prevent my being here at this time, but after a little deliberation and a little shifting, she was called and was told that I would be able to accept the assignment. She replied, ''Well, that's fine because his name is already on the program.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_01_04_Fict_Tell_Me_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains continuation of Harold B. Lee article, not Tell Me of Love Chapter 7",
+      "action": "replace_content",
+      "text": "This file should contain Tell Me of Love Chapter 7 by Rosa Lee Lloyd starting from page 47, but the content appears to be missing from the OCR or merged elsewhere",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_01_14_GenFt_Magazines.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content that continues beyond the intended article",
+      "action": "trim_end",
+      "text": "They need expert medical care that can improve—and sometimes completely correct—almost eighty per cent of the serious conditions caused by birth defects. This is the kind of care available at more than seventy-five March of Dimes Birth Defects Centers throughout the United States. Early diagnosis and proper treatment are given—tender care for those who need it most. The child born less than perfect can be helped across the barriers of disability to find a full, pro",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_01_15_Poem_Beyond_Gabbott.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous article about bound volumes",
+      "action": "trim_start",
+      "text": "BEYOND THESE TEARS Mabel Jones Gabbott When I look back, let me remember The lovely things and beautiful we knew: The day we met, the ever-burning ember Of our love, the happy times we threw Cares to the wind and laughed together, The hours we shared each other's heart.... Remembering thus, it will not matter whether One day or two or more keep us apart; For we will know love lasts beyond these years, Beyond these lonely nights, beyond these tears.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V54_01_16_SpFt_Fight_Voss.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation text instead of proper beginning",
+      "action": "prepend",
+      "text": "Fight Birth Defects Join the March of Dimes George P. Voss Vice-President for Public Relations Love works both ways. The child born less than perfect gives his love as freely as all children do. In return, he needs the kind of love that means help and hope for his future. More than a quarter of a million babies born",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are content bleeding between articles and one file containing wrong content entirely. The Tell Me of Love Chapter 7 content appears to be correctly placed in V54_01_21_Fict_Rosa.txt rather than the file labeled for it.",
+  "validated_corrections": [
+    {
+      "file": "V54_01_03_SpFt_The_Lee.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The Role of Women in Building the Kingdom Elder Harold B. Lee Of the Council of the Twelve [Address Delivered at the Stake Board Session of the Relief Society Annual General Conference, September 29, 1966] w I would not have you think that my coming in late and not being able to hear my esteemed and beloved friend and brother, Gordon B. Hinckley of the Council of the Twelve, indicated any lack of respect. I would have wished to have been here. I know his great power of uplift; and I would have felt happy had I been here to have received it; and, also, it would relieve me of an anxiety that I might be repeating what he may have said to you already in this session. Before, or shortly after I became a member of the Council of the Twelve, I was called to the office of the President of the Church, and he said, \"We have Brother Callis and Brother Cannon who are the Advisers to the Primary, and we have been thinking we need someone near the age of the Primary children as an Adviser.\" You can imagine my anxiety when I was told about about two years ago that I was being relieved of that responsibility and was now being made an Adviser to the Relief Society. I don't know whether that has any significance or not, but at least it gave me a rather queer feeling. Before I accepted this responsibility, I gave Sister Spafford a rather negative or evasive answer. I had some other commitments that I thought might prevent my being here at this time, but after a little deliberation and a little shifting, she was called and was told that I would be able to accept the assignment. She replied, ''Well, that's fine because his name is already on the program.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_01_14_GenFt_Magazines.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content that continues beyond the intended article",
+      "action": "trim_end",
+      "text": "They need expert medical care that can improve—and sometimes completely correct—almost eighty per cent of the serious conditions caused by birth defects. This is the kind of care available at more than seventy-five March of Dimes Birth Defects Centers throughout the United States. Early diagnosis and proper treatment are given—tender care for those who need it most. The child born less than perfect can be helped across the barriers of disability to find a full, pro",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_01_15_Poem_Beyond_Gabbott.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous article about bound volumes",
+      "action": "trim_start",
+      "text": "BEYOND THESE TEARS Mabel Jones Gabbott When I look back, let me remember The lovely things and beautiful we knew: The day we met, the ever-burning ember Of our love, the happy times we threw Cares to the wind and laughed together, The hours we shared each other's heart.... Remembering thus, it will not matter whether One day or two or more keep us apart; For we will know love lasts beyond these years, Beyond these lonely nights, beyond these tears.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V54_01_16_SpFt_Fight_Voss.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation text instead of proper beginning",
+      "action": "prepend",
+      "text": "Fight Birth Defects Join the March of Dimes George P. Voss Vice-President for Public Relations Love works both ways. The child born less than perfect gives his love as freely as all children do. In return, he needs the kind of love that means help and hope for his future. More than a quarter of a million babies born",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V54_01_01_Art_A_New_Presidency.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from Harold B. Lee article that should be in separate file",
+      "action": "trim_end",
+      "text": "Now that's how we get assignments from Sister Spaf- The Role of Women in Building the Kingdom ford. I thought you would be interested to know.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

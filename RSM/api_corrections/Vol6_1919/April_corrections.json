@@ -1,0 +1,106 @@
+{
+  "volume": 6,
+  "month": "April",
+  "year": 1919,
+  "total_files_checked": 16,
+  "files_correct": [
+    "April_Vol6_02_Little_Son_Bessie_Van_Wagenen.txt",
+    "April_Vol6_03a_Article_The_Funny-Bone_Route.txt",
+    "April_Vol6_04_Our_Indian_Cousins.txt",
+    "April_Vol6_05_Planting_Trees_this_Spring.txt",
+    "April_Vol6_06_Construction_and_Reconstruction_in_the_Home._._Janette_A._Hy.txt",
+    "April_Vol6_08b_Current_Topics_On_the_Watch_Tower.txt",
+    "April_Vol6_09_Editorial.txt",
+    "April_Vol6_10b_Guide_Lessons_LESSON_II_Work_and_Business.txt",
+    "April_Vol6_10c_Genealogy_LESSON_III_Genealogy_SURNAMES_DERIVED_FROM_OFFICES_AND_PROFE.txt",
+    "April_Vol6_10d_Home_Science_LESSON_IV_Home_Courses_ADOLESCENCE.txt"
+  ],
+  "corrections": [
+    {
+      "file": "April_Vol6_01a_Article_The_Last_Days.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - starts with 'Passover and the Lord's Supper' instead of 'The Last Days' poem",
+      "action": "replace_content",
+      "text": "THE LAST DAYS. By Maud Baggarley. The spring, like dawn embodied, Trailed her robes afar; And the summer was as beautiful As a new created star; But the autumn was so marvelous That I caught my breath in awe Enraptured at the beauty and the splendor That I saw. A divine and wondrous radiance Seemed to veil the prescient skies And I pondered it, and waited, And at length my wondering eyes Saw, the while mad dreams impotent Allured and beckoned man ? God was the earth renewing in Fulfillment of his plan. Paradisiacal is the glory that is clothing Land and sea! Look about, behold the vision! Who hath eyes then let him see! ? Underwood & Underwood, New York GENERAL ALLENBY ENTERING JERUSALEM.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "April_Vol6_01b_Article_The_Passover_and_the_Lords_Supper.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "people and the history of the world itself.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_07_The_Official_Round_Table_Clarissa_Smith_Williams_and_Amy_Bro.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence and content continues in next file",
+      "action": "trim_end",
+      "text": "The committee consisted of: Edward H.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_08a_Notes_from_Field_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with continuation from previous file",
+      "action": "trim_start",
+      "text": "Anderson for the Y. M. M. I. A.,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_10a_Guide_Lessons_LESSON_I_Theology_and_Testimony_CHILDREN_AND_THE_BOOK_OF_MOR.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence at end",
+      "action": "trim_end",
+      "text": "10. Read or sing the Sunday School song, \"Suffer Little Children",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are with the first two articles being mixed up, and some files having content bleeding between them. The Official Round Table section appears to be split across two files. All advertisements are properly contained in the last file.",
+  "validated_corrections": [
+    {
+      "file": "April_Vol6_01b_Article_The_Passover_and_the_Lords_Supper.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "people and the history of the world itself.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_07_The_Official_Round_Table_Clarissa_Smith_Williams_and_Amy_Bro.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence and content continues in next file",
+      "action": "trim_end",
+      "text": "The committee consisted of: Edward H.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_08a_Notes_from_Field_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with continuation from previous file",
+      "action": "trim_start",
+      "text": "Anderson for the Y. M. M. I. A.,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol6_10a_Guide_Lessons_LESSON_I_Theology_and_Testimony_CHILDREN_AND_THE_BOOK_OF_MOR.txt",
+      "issue_type": "bleed_end",
+      "description": "File cuts off mid-sentence at end",
+      "action": "trim_end",
+      "text": "10. Read or sing the Sunday School song, \"Suffer Little Children",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,18 @@
+{
+  "volume": 53,
+  "month": "April",
+  "year": 1966,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V53_04_34_Fict_Wheat_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends with incomplete sentence that cuts off mid-word, should end at last complete sentence",
+      "action": "trim_end",
+      "text": "What had they done to him, to make him unwilling or unable to be glad at sight of an old schoolmate?",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

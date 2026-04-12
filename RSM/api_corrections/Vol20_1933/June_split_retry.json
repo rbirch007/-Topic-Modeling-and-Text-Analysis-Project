@@ -1,0 +1,55 @@
+{
+  "volume": 20,
+  "month": "June",
+  "year": 1933,
+  "timestamp": "20260316_210708",
+  "dry_run": false,
+  "retried": 8,
+  "created": 1,
+  "failed": 7,
+  "entries": [
+    {
+      "split": "b",
+      "title": "The \"Minichoor\"",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "A Most Interesting Exhibit",
+      "new_file": "June_Vol20_06c_Article_A_Most_Interesting_Exhibit.txt",
+      "chars": 6186,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Be Genuine—Be Yourself—Recognize Worth of Others",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "e",
+      "title": "Mormon Lake Fringed with Yellow Pine Timber",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "f",
+      "title": "Prohibitionists, Fight On!",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "g",
+      "title": "Happenings",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "h",
+      "title": "Convention of the Woman's National Committee for Law Enforcement",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "i",
+      "title": "Happy Mothers",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

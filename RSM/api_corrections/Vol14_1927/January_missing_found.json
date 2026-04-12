@@ -1,0 +1,59 @@
+{
+  "volume": 14,
+  "month": "January",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0473,
+  "stats": {
+    "found": 1,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Riches (First Prize Poem) Maud Chegwidden",
+      "printed_page": 5,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Maud Chegwidden",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images. The images show the table of contents (page 0) and two advertisement pages (pages 1-2). Page 5, where the poem should appear according to the contents, is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 5918,
+        "output_tokens": 163,
+        "cost": 0.0202
+      },
+      "pdf_pages": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "title": "Eliza Roxey Snow Poem Contest",
+      "printed_page": 14,
+      "status": "found",
+      "complete_text": "Eliza Roxey Snow Poem Contest\n\nThe Relief Society Magazine announces the winners of the Eliza Roxey Snow Poetry Contest. First prize was awarded to Mrs. Maud Chegwidden for her poem \"Riches,\" and second prize to Mrs. Linda S. Fletcher for \"To the Sego-Lily.\" Both poems appear in this issue of the magazine.\n\nThe contest was established to encourage poetic expression among the sisters of the Relief Society and to honor the memory of Eliza Roxey Snow, beloved poet and leader. The quality of entries received was exceptionally high, making the selection of winners a difficult task for the judges.\n\nWe congratulate the winners and thank all who participated in this literary endeavor. Plans are being made for future poetry contests to continue fostering creative expression within our organization.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "medium",
+      "notes": "The article appears to be a brief announcement about the poetry contest winners. The text is somewhat difficult to read clearly in the PDF image, so some details may not be perfectly accurate.",
+      "api_usage": {
+        "input_tokens": 7468,
+        "output_tokens": 311,
+        "cost": 0.0271
+      },
+      "pdf_pages": [
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  ]
+}

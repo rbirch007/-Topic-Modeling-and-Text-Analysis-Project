@@ -1,0 +1,50 @@
+{
+  "volume": 6,
+  "month": "February",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1082,
+  "files": [
+    {
+      "source_file": "February_Vol6_11a_Article_For_Time_and_Eternity_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "For Time and Eternity",
+          "category": "Article",
+          "author": "Lucy May Green",
+          "start_boundary": "For Time and Eternity Lucy May Green",
+          "end_boundary": "over for time and the all altar in the Lord's House they pledged thir troth eternity.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lines to a Mother in Israel",
+          "category": "Poem",
+          "author": "Alice Foutz",
+          "start_boundary": "Lines to a Mother in Israel. Alice Foutz.",
+          "end_boundary": "Dear Lord, may she with us abide.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two complete articles from the February 1919 issue. The first is a story about temple marriage by Lucy May Green, and the second is a poem by Alice Foutz. There appears to be some OCR corruption in the text, particularly near the end of the first article.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 8905,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 34360,
+        "output_tokens": 343,
+        "cost": 0.1082
+      }
+    }
+  ]
+}

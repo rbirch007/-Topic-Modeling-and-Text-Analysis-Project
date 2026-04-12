@@ -1,0 +1,42 @@
+{
+  "volume": 9,
+  "month": "December",
+  "year": 1922,
+  "timestamp": "20260315_120950",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+      "action": "note",
+      "result": "INFO: File contains only title and page number, missing article content"
+    },
+    {
+      "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+      "action": "note",
+      "result": "INFO: File contains only title and page number, missing article content"
+    },
+    {
+      "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+      "action": "note",
+      "result": "INFO: File contains only title and page number, missing article content"
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5203 chars removed)"
+    }
+  ]
+}

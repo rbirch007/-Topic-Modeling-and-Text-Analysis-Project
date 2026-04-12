@@ -1,0 +1,71 @@
+{
+  "volume": 3,
+  "month": "February",
+  "year": 1916,
+  "total_files_checked": 13,
+  "files_correct": [
+    "February_Vol3_04_Article_Temple_Hymn_Lucy_May_Green.txt",
+    "February_Vol3_05_Article_A_Testimony_Lucy_May_Green.txt",
+    "February_Vol3_06_Article_A_Prayer_Edith_McClendon.txt",
+    "February_Vol3_07_Article_My_Testimony_Concerning_Tem])le_Work_Lerona_A._Wilson._..txt",
+    "February_Vol3_08_Article_ITome_Economics_Department_Janette_A._Hyde.txt",
+    "February_Vol3_09_Article_A_Prince_of_LIr_Homespun.txt",
+    "February_Vol3_10_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "February_Vol3_11_Article_Query_Box_Hazel_Love_Dunford.txt",
+    "February_Vol3_12a_Notes_from_Field_Notes_from_the_Field.txt",
+    "February_Vol3_12b_Editorial_Efficiency_Editorial.txt",
+    "February_Vol3_12c_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "February_Vol3_01_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with article content but is missing the title 'Mothers in Israel'",
+      "action": "prepend",
+      "text": "Mothers in Israel.\n\n",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "February_Vol3_02_Genealogy_Echo_of_the_Genealogical_Congress.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Guide Lessons content instead of Echo of the Genealogical Congress article",
+      "action": "replace_content",
+      "text": "ECHO OF THE GENEALOGICAL CONGRESS. We are still in close touch with our recent Genealogical Con- gress in San Francisco, this time through the January issue of the Utah Genealogical Magazine, which contains the proceedings of Utah Geenalogical Day, at the Exposition. That was indeed an epochal day for Utah. And' we suggest to our readers that they secure this number of the Genealogical Magazine, for it is full of vitally interesting matter for us all. We have often been asked why we did not include the picture of the genial and able railroad official— — Mr. C. L. McFaul who managed the details of our excursion so successfully and delight- fully. We, therefore, present to you, with our mutual congratulations and good will, Mr. Charles L. McFaul. Mr. McFaul, the ladies of the ReHef Society! Mr. McFaul was all that other accomodat- — ing and capable railroad men are and more. There were many tiresome problems, many unlooked-for complications, much unnecessary trouble caused, which most men would have dismissed with a careless or curt word. Not so with Mr. McFaul. He was courteous and helpful under even the most trying conditions, and stimulated everyone else to be likewise, through his unfailing good humor and patience. We shall not soon forget the gentleman nor the debt of gratitude we owe him. We call particular attention to the article on the work done by the ReHef Society Extension Department in genealogy, in the Utah Genealogical Magazine, for this will be the foundation for our future historians who will turn with close interest to the gene- sis of a movement which has begun, but which will never end while time lasts, ^^'c' arc at the threshold of mighty events.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "February_Vol3_13_Editorial_EDITORIAL_Efficiency.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only partial header text instead of editorial content",
+      "action": "note",
+      "text": "File appears to be incomplete or corrupted - contains only header fragment",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Introspection Nellie Beecraft",
+      "expected_page": 61,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Missing title in Mothers in Israel article, 2) Wrong content in the Echo file (contains Guide Lessons instead), 3) Incomplete Editorial file, and 4) Missing Introspection article by Nellie Beecraft which should be on page 61 according to the table of contents.",
+  "validated_corrections": [],
+  "failed_validations": [
+    {
+      "file": "February_Vol3_01_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with article content but is missing the title 'Mothers in Israel'",
+      "action": "prepend",
+      "text": "Mothers in Israel.\n\n",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

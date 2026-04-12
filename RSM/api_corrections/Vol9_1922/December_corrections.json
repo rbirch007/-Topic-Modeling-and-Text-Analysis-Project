@@ -1,0 +1,98 @@
+{
+  "volume": 9,
+  "month": "December",
+  "year": 1922,
+  "total_files_checked": 7,
+  "files_correct": [
+    "December_Vol9_06a_Poem_The_Message_of_the_Bells.txt",
+    "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December.txt"
+  ],
+  "corrections": [
+    {
+      "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only title and page number, missing article content",
+      "action": "note",
+      "text": "Article content not found in OCR - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only title and page number, missing article content",
+      "action": "note",
+      "text": "Article content not found in OCR - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+      "issue_type": "missing_text",
+      "description": "File contains only title and page number, missing article content",
+      "action": "note",
+      "text": "Article content not found in OCR - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from The Message of the Bells poem and contains extensive advertisement content",
+      "action": "trim_start",
+      "text": "Editorial, The Christmas Spirit 651",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "X* * *",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that belongs in the Editorial file",
+      "action": "trim_end",
+      "text": "Mary, no more thy tears fall for thy Son.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Three articles appear to have OCR gaps with only titles preserved. The Editorial and Frontispiece files have significant content bleeding issues with advertisements and cross-contamination between articles. The poem and guide lessons files are correctly extracted.",
+  "validated_corrections": [
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from The Message of the Bells poem and contains extensive advertisement content",
+      "action": "trim_start",
+      "text": "Editorial, The Christmas Spirit 651",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "X* * *",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that belongs in the Editorial file",
+      "action": "trim_end",
+      "text": "Mary, no more thy tears fall for thy Son.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

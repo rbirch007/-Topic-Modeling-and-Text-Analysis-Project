@@ -1,0 +1,190 @@
+{
+  "volume": 10,
+  "month": "May",
+  "year": 1923,
+  "total_files_checked": 21,
+  "files_correct": [
+    "May_Vol10_02_Article_The_Mocking_Bird_Annie_Pike_Greenwood.txt",
+    "May_Vol10_03_Article_A_Mother's_Love_M._L._White.txt",
+    "May_Vol10_05_Article_Mother_Claire_Stewart_Boyer.txt",
+    "May_Vol10_06_Article_Mothers_Alice_Louise_Reynolds.txt",
+    "May_Vol10_08_Article_Her_Daughter's_Friend_Elsie_Talmage_Brandley.txt",
+    "May_Vol10_09_Article_Aunt_Sally's_Criticism_of_Mothers'_Day_Joseph_H._Dean.txt",
+    "May_Vol10_10_Article_Love's_Alchemy_Coral_J._Black.txt",
+    "May_Vol10_11_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+    "May_Vol10_15_Article_What_Is_a_Vitamine_Fred_W._Merrill.txt",
+    "May_Vol10_16_Article_Tobacco_Dr._Thomas_L._Martin.txt",
+    "May_Vol10_17_Article_In_Memoriam.txt",
+    "May_Vol10_18_Article_Teachers'_Topic_for_July.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol10_01_Frontispiece_The_Mother_Frontispiece.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains text from 'A Mother's Love' article instead of frontispiece content",
+      "action": "note",
+      "text": "OCR shows no frontispiece content - only table of contents and publication info",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "May_Vol10_04_Article_The_Mother,_By_James_MacNeil_Whistler_Henry_Turner_Bailey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes text from next article",
+      "action": "trim_end",
+      "text": "That is the portrait of my",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_05_Article_Mother_Claire_Stewart_Boyer.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "*\"Mother'' Claire Stewart Boyer",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_07_Article_To_Father_and_Mother_Myron_E._Crandall,_Jr..txt",
+      "issue_type": "missing_text",
+      "description": "Poem is incomplete - missing several lines",
+      "action": "append",
+      "text": "Balmy winds keep blowing To push along their load.- MOTHERS 225",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol10_12_Article_Presidents'_Day.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous content",
+      "action": "trim_start",
+      "text": "the General Board had a two-fold object",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "May_Vol10_13_Article_Aunt_Em's_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and continues from Presidents' Day",
+      "action": "trim_start",
+      "text": "The Utah Woman's Press Club entertained",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_19_Article_Mary_Schenck_Woolman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains entire Editorial section which should be separate",
+      "action": "trim_end",
+      "text": "We hope that such a conference may be arranged for during the coming season.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol10_21_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Annual Report which should be separate",
+      "action": "trim_end",
+      "text": "Her unfailing support and cheery presence will be greatly missed by the Relief Society women and by the entire conununity.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Optimism Selected",
+      "expected_page": 243,
+      "status": "merged_with_another",
+      "merged_into": "May_Vol10_13_Article_Aunt_Em's_Birthday.txt"
+    },
+    {
+      "title": "Editorials",
+      "expected_page": 253,
+      "status": "merged_with_another",
+      "merged_into": "May_Vol10_19_Article_Mary_Schenck_Woolman.txt"
+    },
+    {
+      "title": "Guide Lessons for July",
+      "expected_page": 262,
+      "status": "merged_with_another",
+      "merged_into": "May_Vol10_21_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt"
+    }
+  ],
+  "notes": "Several articles are merged together and need to be separated. The frontispiece appears to be missing from the OCR entirely. Most individual articles are correctly extracted but boundary issues exist between consecutive articles.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol10_07_Article_To_Father_and_Mother_Myron_E._Crandall,_Jr..txt",
+      "issue_type": "missing_text",
+      "description": "Poem is incomplete - missing several lines",
+      "action": "append",
+      "text": "Balmy winds keep blowing To push along their load.- MOTHERS 225",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol10_12_Article_Presidents'_Day.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous content",
+      "action": "trim_start",
+      "text": "the General Board had a two-fold object",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (3 words)"
+    },
+    {
+      "file": "May_Vol10_19_Article_Mary_Schenck_Woolman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains entire Editorial section which should be separate",
+      "action": "trim_end",
+      "text": "We hope that such a conference may be arranged for during the coming season.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol10_21_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Annual Report which should be separate",
+      "action": "trim_end",
+      "text": "Her unfailing support and cheery presence will be greatly missed by the Relief Society women and by the entire conununity.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "May_Vol10_04_Article_The_Mother,_By_James_MacNeil_Whistler_Henry_Turner_Bailey.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes text from next article",
+      "action": "trim_end",
+      "text": "That is the portrait of my",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_05_Article_Mother_Claire_Stewart_Boyer.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "*\"Mother'' Claire Stewart Boyer",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_13_Article_Aunt_Em's_Birthday.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and continues from Presidents' Day",
+      "action": "trim_start",
+      "text": "The Utah Woman's Press Club entertained",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

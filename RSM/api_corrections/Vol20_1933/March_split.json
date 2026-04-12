@@ -1,0 +1,61 @@
+{
+  "volume": 20,
+  "month": "March",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.0639,
+  "files": [
+    {
+      "source_file": "March_Vol20_22_Article_Lesson_Department.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Little Children, The Sacrament, and the Sabbath",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony Doctrine and",
+          "end_boundary": "Why do Latter-day Saints worship on Sunday instead of Saturday?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Literature - The Delight of Great Books - Huckleberry Finn",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON DEPARTMENT 183 Teachers Topic THE BEATITUDES",
+          "end_boundary": "simplicity of presentation is the best approach.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Social Service - Developing Initiative and Self-Reliance",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in May) DEVELOPING",
+          "end_boundary": "was expended by the national government.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains three distinct lesson sections: Theology/Testimony, Literature (including Teachers Topic on Beatitudes and main lesson on Huckleberry Finn), and Social Service. Each section has clear subject matter boundaries and different weekly assignments as indicated in the content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 53872,
+      "tier": 2,
+      "pdf_pages": [
+        207,
+        208,
+        209
+      ],
+      "api_usage": {
+        "input_tokens": 19088,
+        "output_tokens": 441,
+        "cost": 0.0639
+      }
+    }
+  ]
+}

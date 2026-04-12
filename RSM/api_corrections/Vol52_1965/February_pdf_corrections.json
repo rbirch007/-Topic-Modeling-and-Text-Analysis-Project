@@ -1,0 +1,61 @@
+{
+  "volume": 52,
+  "month": "February",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_02_05_Fict_Among_Littke.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains content from previous article (Seminary/Institute material from page 93) at the beginning",
+      "action": "trim_start",
+      "text": "Among Strangers\n\nLael J. Littke\n\n[PHOTOGRAPH]\n\nSecond Prize-winning Story\nAnnual Relief Society\nShort Story Contest\n\nWEARILY Janet leaned her head against the window of the train",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V52_02_09_GenFt_Notes_Available.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains wrong content - has text about Lehi's vision instead of Notes to the Field content about 1964 index availability",
+      "action": "replace_content",
+      "text": "Copies of the 1964 index for The Relief Society Magazine are available and may be ordered from the General Board of Relief Society, 76 North Main Street, Salt Lake City, Utah 84111. The price is twenty cents, including postage. Relief Society officers and members who wish to have their 1964 issues of The Relief Society Magazine bound may do so through The Deseret News Press, 33 Richards Street, Salt Lake City, Utah 84101. (See advertisement on page 156.) The Deseret News Press includes a copy of the index at no extra charge for each set of Magazines bound.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 14% OCR coverage"
+    },
+    {
+      "file": "V52_02_30_Poem_Gifts_Bowles.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains lesson department content that should be removed, poem starts with title and author",
+      "action": "trim_start",
+      "text": "Gifts for Everyday\n\nCatherine B. Bowles\n\nThere are corners in the heart",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V52_02_33_Poem_Grandson_Coles.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains multiple poems and advertisements before the target Grandson poem",
+      "action": "trim_start",
+      "text": "**Grandson**",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    },
+    {
+      "file": "V52_02_36_Poem_Mountain_Rubin.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with birthday congratulations content instead of the Mountain Children poem",
+      "action": "trim_start",
+      "text": "Niountain Children Maude Rubin Their mother moves through early morning chill",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

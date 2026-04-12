@@ -1,0 +1,126 @@
+{
+  "volume": 20,
+  "month": "March",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.1468,
+  "stats": {
+    "found": 2,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Salt Lake Temple Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (33-36) contain content from Relief Society Magazine but do not include the Salt Lake Temple Frontispiece. These pages show articles about the Children's Bureau and a message to the Relief Society by Ezra C. Dalby, along with a mountain landscape photograph. The frontispiece would typically appear at the very beginning of the magazine issue, likely on an unnumbered page before page 129.",
+      "api_usage": {
+        "input_tokens": 7545,
+        "output_tokens": 180,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "title": "Relief Society, the Premier Organization Elder Joseph F. Merrill",
+      "printed_page": 131,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Elder Joseph F. Merrill",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 146-149). The article should appear on page 131 according to the table of contents, but the provided images start at page 146, so the article would be on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7571,
+        "output_tokens": 164,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "title": "The Story of the College of Opportunity Lydia Burrows",
+      "printed_page": 147,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Lydia Burrows",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 139, 140, 141, 142). The images show pages 126-127 from the Lesson Department discussing child psychology, a poem titled 'Solitude' by Merling Clyde, and advertisements. The article should appear on page 147 according to the table of contents, but that page is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7575,
+        "output_tokens": 195,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        139,
+        140,
+        141,
+        142
+      ]
+    },
+    {
+      "title": "Prohibition",
+      "printed_page": 150,
+      "status": "found",
+      "complete_text": "Prohibition Declaration: The Board of Bishops of the Methodist Episcopal Church\n\nThe Methodist Church has no intention of retreating from our historic, age-long stand against alcohol. Our law still is \"Total abstinence for the individual, prohibition for the state.\" No moral question is ever truly settled until it is settled right. No new arguments in favor of alcohol and its traffic have been presented recently. All the substitutes proposed for prohibition have been tried during the centuries, and all have proved ineffective to curb the evils of this narcotic.\n\nModern civilization and the machine-age are antithetic to the traffic in alcohol. For humanity and genuine prosperity we must have prohibition. Prosperity can never be purchased by beer. Every dollar so secured costs commerce and the country more than its value. The need of the hungry for bread can not be satisfied by alcohol.\n\nWe call attention to the fact that the recent election did not change the Constitution or any national law. The Eighteenth Amendment is still in the Constitution and its enacting law still stands. Until laws are changed by the orderly, legal processes, public officials are under obligation to be guided by them. Governors, mayors, judges and others responsible for the enforcement of the law should remember their oath of office. They have solemnly sworn to uphold the Constitution and laws.\n\nH. LESTER SMITH, Secretary.\n\nRevenue and What it Costs\n\n\"They have been getting a lot of revenue from the sale of liquor up in Canada. You don't often hear what this revenue costs. So just for your information we are giving you the following facts:\n\n\"To collect $35,274,390 liquor revenue in ten years there was expended in British Columbia $139,725,788.\n\n\"To collect $14,872,131 liquor revenue in seven years there was expended in Alberta $84,315,108.\n\n\"To collect $13,558,683 liquor revenue in six years there was expended in Saskatchewan, $65,445,139.\n\n\"To collect $12,260,251 liquor revenue in eight years there was expended in Manitoba, $57,487,087.\n\n\"To collect $43,796,458 liquor revenue in four years, five months, there was expended in Ontario, $235,575,320.\n\n\"To collect $68,032,472 liquor revenue in ten years there was expended in Quebec $589,944,914.\n\n\"To collect $5,329,788 liquor revenue in four years there was expended in New Brunswick $16,666,844.\n\n\"To collect $774,358 liquor revenue in a little over one year there was expended in Nova Scotia, $5,602,823.—From The Voice.\"",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "H. LESTER SMITH, Secretary (for the first part)",
+      "confidence": "high",
+      "notes": "Found the complete Prohibition article on page 147 of the PDF images. It contains two sections: a declaration from the Methodist Episcopal Church Board of Bishops signed by H. Lester Smith, and a section on 'Revenue and What it Costs' with Canadian liquor revenue statistics.",
+      "api_usage": {
+        "input_tokens": 7527,
+        "output_tokens": 785,
+        "cost": 0.0344
+      },
+      "pdf_pages": [
+        145,
+        146,
+        147,
+        148
+      ]
+    },
+    {
+      "title": "The Cultivation of Flax Heber S. Cutler",
+      "printed_page": 195,
+      "status": "found",
+      "complete_text": "The Cultivation of Flax\nBy Heber S. Cutler\n\nUTAH and Idaho are admirably adapted to the cultivation of flax. The climate is such that the best varieties of seed flax and straw for fibre purposes, can be grown strong and healthy, and will compare with flax that is grown in any part of the United States or elsewhere.\n\nThe soils of Utah and Idaho are well adapted to the growing of seed flax and straw for fibre purposes It is recommended that flax be planted on the irrigated lands, as a better crop had for both flax seed and straw. All lands that will grow sugar beets, cereals, and in fact all other crops, can be used in the successful growing of flax. A dark sandy loam, free from weeds, with a minimum irrigation of three waterings will produce the best results. As a rotation crop it will follow any other crops planted in this intermountain country. Flax is especially good as a rotation crop in the eradication of nematode diseases incident to the growing of the sugar beet. Flax can be successfully raised from newly ploughed sod lands, and makes an excellent first crop to break up new land. Flax can be planted on alkali lands perhaps with better results than any other crops. The Utah Flax Products Company has already had quite a large plot planted with flax at the Utah Light and Power Plant, west of the Jordan River.\n\nPlanting flax requires only the ordinary farm equipment that is used in the growing of the cereals or beets, or any other crop of like character. The only requirement in addition to the usual farm equipment, is a finer seive in the thrashing machines To get the best results from growing flax for fibre purposes, the land must be free from weeds. The straw will not be taken commercially if there is more than 5% foreign matter in the production of straw for fibre purposes. There is no more work required in the production of flax, than there is in the production of wheat, or any other crop usually planted in Utah and Idaho.\n\nFlax is a cash crop, just as sugar beets are a cash crop. If the farmers will plant flax in 1933, and thereafter guarantee sufficient acreage, it will be a rival to the beet sugar industry, in Utah and Idaho. For the labor expended, the time required to mature the flax crop, and the general conditions incident to the growing of flax, it will bring to the farmers as much return as any other crop planted, including sugar beets. There is a cash market at home, and in California, which will consume all of the flax grown up to five thousand tons of flax seed annually. Our home cash market for the consumption of flax for seed and fibre purposes will rapidly grow as the flax meals can be used in a mixed ration profitably by the poultry industry, the dairy industry, and live stock in general. Besides, flax meal is bought by drug stores for medical purposes. There will be many other industries—22 in all—in connection with the growing of flax, if the farmers will plant flax for seed and fibre purposes.\n\nThe Utah Flax Products Company 32 South Main St., Salt Lake City, will furnish at cost a pedigreed seed flax, both wilt and rust resisting, of good quality, to all farmers who will plant flax in 1933.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Heber S. Cutler",
+      "confidence": "high",
+      "notes": "Found complete article on page 217 of the PDF images. The article discusses flax cultivation in Utah and Idaho, covering soil requirements, planting methods, and commercial opportunities.",
+      "api_usage": {
+        "input_tokens": 7597,
+        "output_tokens": 899,
+        "cost": 0.0363
+      },
+      "pdf_pages": [
+        216,
+        217,
+        218,
+        219
+      ]
+    }
+  ]
+}

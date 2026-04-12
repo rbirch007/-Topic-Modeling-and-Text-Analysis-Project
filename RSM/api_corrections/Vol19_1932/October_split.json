@@ -1,0 +1,136 @@
+{
+  "volume": 19,
+  "month": "October",
+  "year": 1932,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3321,
+  "files": [
+    {
+      "source_file": "October_Vol19_10_Notes_from_Field_Notes_from_the_Field_Prohibition.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field PAGEANT HELD IN",
+          "end_boundary": "beginning October 16. Prohibition The May third",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Prohibition",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Prohibition The May third issue of",
+          "end_boundary": "would not be greatly reduced.\" THE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains two main sections: a comprehensive 'Notes from the Field' section with reports from multiple stakes (Blackfoot, Raft River, North Sanpete, Kanab, Mount Ogden, Minidoka, Cache, Yellowstone) plus information about Radio Broadcasts, followed by a separate 'Prohibition' article discussing arguments against prohibition. The boundary occurs where 'Prohibition' begins as a new section after the radio broadcast information.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14332,
+      "tier": 1,
+      "pdf_pages": [
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279
+      ],
+      "api_usage": {
+        "input_tokens": 70485,
+        "output_tokens": 437,
+        "cost": 0.218
+      }
+    },
+    {
+      "source_file": "October_Vol19_12_Article_A_Time-Keeper_Needed.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Time-Keeper Needed",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "A Time-Keeper Needed Some people seem absolutely",
+          "end_boundary": "without a discordant note. Lesson Department",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Doctrine and Covenants - Significance and Purport",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony DOCTRINE",
+          "end_boundary": "conditions that provoked them? Teachers' Topic",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Beatitudes",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic THE BEATITUDES Aim: To",
+          "end_boundary": "endure forever. LESSON DEPARTMENT Literature",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Delight of Great Books - Faust",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON DEPARTMENT Literature (Third Week in",
+          "end_boundary": "E. T. RALPHS, General Manager",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains multiple lesson sections: an editorial piece about time-keeping, followed by three distinct lesson sections covering Doctrine and Covenants, The Beatitudes, and Goethe's Faust. The boundaries are clearly marked by section headers and topic changes.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 43049,
+      "tier": 2,
+      "pdf_pages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "api_usage": {
+        "input_tokens": 35494,
+        "output_tokens": 511,
+        "cost": 0.1141
+      }
+    }
+  ]
+}

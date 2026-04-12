@@ -1,0 +1,209 @@
+{
+  "volume": 6,
+  "month": "July",
+  "year": 1919,
+  "total_merged": 6,
+  "total_splits": 9,
+  "total_cost": 0.735,
+  "files": [
+    {
+      "source_file": "July_Vol6_02_Medical_Needs_in_the_Days_of_Moses_and_Today_Mary_Foster_Gib.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Medical Needs in the Days of Moses and Today",
+          "category": "Article",
+          "author": "Mary Foster Gibbs",
+          "start_boundary": "Medical Needs in the Days of Moses and Today Mary Foster Gibbs",
+          "end_boundary": "For my treasure is better than gold. Mrs. Parley Nelson. Rexburg, Idaho.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NEEDS IN THE DAYS OF MOSES AND TODAY"
+      ],
+      "notes": "This file contains a single article by Mary Foster Gibbs about medical needs, comparing Moses' time to modern day. The article includes extensive quotes from the Word of Wisdom and Doctrine and Covenants. It ends with a short poem titled 'RICHES' by Mrs. Parley Nelson. The file appears to be complete with no other articles merged in.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14666,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38685,
+        "output_tokens": 305,
+        "cost": 0.1206
+      }
+    },
+    {
+      "source_file": "July_Vol6_03_Gems_from_the_General_Conference.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Gems from the General Conference",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Gems from the General Conference",
+          "end_boundary": "grow them wherever they can be grown.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GEMS FROM THE GENERAL CONFERENCE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article that compiles highlights and quotes from the General Conference. The article includes speeches from various church leaders and concludes with statistical information about church activities. The running headers 'GEMS FROM THE GENERAL CONFERENCE' and 'RELIEF SOCIETY MAGAZINE' appear throughout the text as page artifacts.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 20369,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39909,
+        "output_tokens": 243,
+        "cost": 0.1234
+      }
+    },
+    {
+      "source_file": "July_Vol6_04_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Reminiscences of Margaret Gay Judd Clawson",
+          "category": "Article",
+          "author": "Margaret Gay Judd Clawson",
+          "start_boundary": "Reminiscences of Margaret Gay Judd Clawson",
+          "end_boundary": "(To he continued.)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Modesty",
+          "category": "Poem",
+          "author": null,
+          "start_boundary": "MODESTY. When every pool in Eden",
+          "end_boundary": "Some serpent ought to pass the fruit again. — Yale Record.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "MARGARET GAY JUDD CLAWSON",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains the continuation of Margaret Gay Judd Clawson's reminiscences (marked as 'Continued' at the beginning and 'To be continued' at the end) followed by a short poem titled 'Modesty' from Yale Record. The reminiscences section includes running headers with page numbers that should be stripped.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 26410,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 41506,
+        "output_tokens": 367,
+        "cost": 0.13
+      }
+    },
+    {
+      "source_file": "July_Vol6_08_An_Indian_Story.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "An Indian Story",
+          "category": "Article",
+          "author": "J. J. Galbreath",
+          "start_boundary": "An Indian Story ====================================================================== Indian Story. We present to our readers",
+          "end_boundary": "and they told the story in their own simple way. But it was impressive, and it was true.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "What Do You Know?",
+          "category": "Current_Topics",
+          "author": null,
+          "start_boundary": "WHAT DO YOU KNOW? How are you preparing for the coming season?",
+          "end_boundary": "Have you given one thought to the summer recreation? The",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "AN INDIAN STORY"
+      ],
+      "notes": "The file contains one main article 'An Indian Story' which is a narrative told by Elder J.J. Galbreath about a vision experienced by an Indian named White Calf, followed by a short section 'What Do You Know?' with questions about seasonal preparation. The running header 'RELIEF SOCIETY MAGAZINE' appears on page 406 and 408.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10274,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37585,
+        "output_tokens": 369,
+        "cost": 0.1183
+      }
+    },
+    {
+      "source_file": "July_Vol6_11_The_Official_Round_Table.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "The Official Round Table ======================================================================",
+          "end_boundary": "Charity work done in the temple names 503",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Prisoners of the Pit",
+          "category": "Poem",
+          "author": "Mabel Gardner Pancake",
+          "start_boundary": "PRISONERS OF THE PIT. Mabel Gardner Pancake.",
+          "end_boundary": "With the Father and the Son. ON THE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE OFFICIAL ROUND TABLE"
+      ],
+      "notes": "The file contains two distinct articles: a lengthy 'Official Round Table' section with news and field reports, followed by a short poem 'Prisoners of the Pit'. The poem appears to be cut off at the end with 'ON THE' which likely continues into the next article 'On the Watch Tower'.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 15309,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38749,
+        "output_tokens": 344,
+        "cost": 0.1214
+      }
+    },
+    {
+      "source_file": "July_Vol6_16_Summer_Lessons_in_Hygiene.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Summer Lessons in Hygiene",
+          "category": "Home_Science",
+          "author": null,
+          "start_boundary": "Summer Lessons in Hygiene ======================================================================",
+          "end_boundary": "A SUMMER AT THE U. A. C.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "SUMMER LESSONS IN HYGIENE"
+      ],
+      "notes": "This file contains one main article 'Summer Lessons in Hygiene' which includes multiple subsections by different doctors (Dr. Samuel H. Allen, Dr. Raphael S. Olsen) covering health topics, baby care, diet needs, and miscellaneous household tips. The file also contains extensive advertisements at the end. The content matches the table of contents entry for 'Summer Lessons in Hygiene' on page 428.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16464,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39072,
+        "output_tokens": 275,
+        "cost": 0.1213
+      }
+    }
+  ]
+}

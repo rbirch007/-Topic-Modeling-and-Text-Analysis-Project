@@ -1,0 +1,28 @@
+{
+  "volume": 15,
+  "month": "May",
+  "year": 1928,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 1,
+  "created": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Mother of an Ace",
+      "new_file": "May_Vol15_03b_Poem_Mother_of_an_Ace.txt",
+      "chars": 782,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Intellectual Responsibility of Mothers",
+      "new_file": "May_Vol15_09b_Article_Intellectual_Responsibility_of_Mothers.txt",
+      "chars": 3196,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

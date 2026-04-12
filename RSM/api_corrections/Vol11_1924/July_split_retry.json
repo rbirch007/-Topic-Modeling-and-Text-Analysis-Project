@@ -1,0 +1,43 @@
+{
+  "volume": 11,
+  "month": "July",
+  "year": 1924,
+  "timestamp": "20260316_210704",
+  "dry_run": false,
+  "retried": 3,
+  "created": 2,
+  "failed": 3,
+  "entries": [
+    {
+      "split": "b",
+      "title": "The Pioneers Builded Better than they Knew",
+      "result": "RETRY_REJECTED: STUB: body only 137 chars (< 200 threshold)"
+    },
+    {
+      "split": "b",
+      "title": "Notes from the Field",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Guide Lessons for September",
+      "new_file": "July_Vol11_11c_Guide_Lessons_Guide_Lessons_for_September.txt",
+      "chars": 6742,
+      "match_type": "short_window_4w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Teachers' Topic for September",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for September",
+      "new_file": "July_Vol11_12b_Guide_Lessons_Guide_Lessons_for_September.txt",
+      "chars": 4587,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

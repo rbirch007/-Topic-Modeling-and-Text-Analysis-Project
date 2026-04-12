@@ -1,0 +1,75 @@
+{
+  "volume": 4,
+  "month": "September",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 5,
+  "total_cost": 0.1386,
+  "files": [
+    {
+      "source_file": "September_Vol4_11_Editorial_Editorial.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . Motto Charity Never Faileth RELIEF",
+          "end_boundary": "We honor thee, the twenty-first day of",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Lesson II - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON II. Theology and Testimony.",
+          "end_boundary": "Book of Mormon. Ether, Chapters 1-15. Psalms.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons - Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 11. Work and Business. Second Week",
+          "end_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons - Lesson III - Genealogy and Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third",
+          "end_boundary": "If any pioneer mother or father can",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Guide Lessons - Lesson IV - Home Economics",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Economics Fourth Week in",
+          "end_boundary": "The first few weeks a",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains the Editorial section followed by multiple Guide Lessons (II, III, and IV). The last lesson (IV) appears to be cut off mid-sentence. The lessons cover Theology and Testimony, Work and Business, Genealogy and Literature, and Home Economics respectively.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 35912,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 43105,
+        "output_tokens": 621,
+        "cost": 0.1386
+      }
+    }
+  ]
+}

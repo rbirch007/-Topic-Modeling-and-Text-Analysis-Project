@@ -1,0 +1,40 @@
+{
+  "volume": 6,
+  "month": "July",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0217,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol6_01_Famous_Statue_of_Moses_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 179,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption. The PDF pages shown (330-333) contain Guide Lessons content, not the frontispiece. Frontispieces are typically single-page image captions at the beginning of magazines, and this file contains the complete caption text for the famous Michelangelo Moses statue.",
+      "api_usage": {
+        "input_tokens": 6383,
+        "output_tokens": 171,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        330,
+        331,
+        332,
+        333
+      ]
+    }
+  ]
+}

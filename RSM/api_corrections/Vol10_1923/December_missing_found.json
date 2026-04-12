@@ -1,0 +1,38 @@
+{
+  "volume": 10,
+  "month": "December",
+  "year": 1923,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0232,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Editorials",
+      "printed_page": 589,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 577-580, but the Editorials article is listed on page 589 in the table of contents. The needed page is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7119,
+        "output_tokens": 126,
+        "cost": 0.0232
+      },
+      "pdf_pages": [
+        577,
+        578,
+        579,
+        580
+      ]
+    }
+  ]
+}

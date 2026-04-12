@@ -1,0 +1,62 @@
+{
+  "volume": 1,
+  "month": "March",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Mar_01_Art_Relief.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Mar_02_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains magazine header information instead of poetry content"
+    },
+    {
+      "file": "V1_1914_Mar_07_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Mar_09_Art_Bulletins.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Mar_10_Art_Officers.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (553 chars removed)"
+    },
+    {
+      "file": "V1_1914_Mar_12_Art_Bookon.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (329 chars removed)"
+    },
+    {
+      "file": "V1_1914_Mar_14_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of poetry"
+    },
+    {
+      "file": "V1_1914_Mar_15_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of poetry"
+    },
+    {
+      "file": "V1_1914_Mar_16_Art_SOUTH.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of article content"
+    },
+    {
+      "file": "V1_1914_Mar_18_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of poetry"
+    }
+  ]
+}

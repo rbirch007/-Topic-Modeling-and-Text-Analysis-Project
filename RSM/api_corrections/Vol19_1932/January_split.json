@@ -1,0 +1,53 @@
+{
+  "volume": 19,
+  "month": "January",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1741,
+  "files": [
+    {
+      "source_file": "January_Vol19_07_Article_The_Social_Worker_in_the_Unemployment_Emergency_Annie_D_Palmer.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Social Worker in the Unemployment Emergency",
+          "category": "Article",
+          "author": "Annie D. Palmer",
+          "start_boundary": "The Social Worker in the Unemployment Emergency By Annie D. Palmer AMONG",
+          "end_boundary": "By the spirit with which we bring men through a crisis must we measure the success of our job.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "By My Fruits",
+          "category": "Poem",
+          "author": "Bertha A. Kleinman",
+          "start_boundary": "By My Fruits By Bertha A. Kleinman What shall it count that my",
+          "end_boundary": "Who buds with Truth the branch that is my own!",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two distinct works: a substantial article about social work during the unemployment emergency by Annie D. Palmer, followed by a short poem by Bertha A. Kleinman. The split is clear and matches the table of contents entries.",
+      "merge_type": "MULTI_AUTHOR",
+      "file_chars": 9111,
+      "tier": 1,
+      "pdf_pages": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "api_usage": {
+        "input_tokens": 56242,
+        "output_tokens": 361,
+        "cost": 0.1741
+      }
+    }
+  ]
+}

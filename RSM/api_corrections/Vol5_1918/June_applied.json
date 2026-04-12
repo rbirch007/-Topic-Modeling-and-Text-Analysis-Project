@@ -1,0 +1,52 @@
+{
+  "volume": 5,
+  "month": "June",
+  "year": 1918,
+  "timestamp": "20260315_120940",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "June_Vol5_02_Article_General_Conference_of_Relief_Society._._.Amy_Brown_Lyman.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3969 chars added)"
+    },
+    {
+      "file": "June_Vol5_02_Article_General_Conference_of_Relief_Society._._.Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "June_Vol5_03_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "June_Vol5_05_Article_Unusual_Mothers.txt",
+      "action": "append",
+      "result": "APPLIED append (3116 chars added)"
+    },
+    {
+      "file": "June_Vol5_08_Home_Science_Home_Science_Department.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "June_Vol5_14_Article_Apostle_Richard_R._Lyman_and_Family.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol5_15_Article_Little_Silver_Mother,_Song.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol5_16_Article_Music_iLttle_Silver_Mother.txt",
+      "action": "note",
+      "result": "INFO: File contains content about Harriet Attwood Silver instead of music"
+    }
+  ]
+}

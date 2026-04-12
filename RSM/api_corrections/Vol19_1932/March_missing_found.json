@@ -1,0 +1,88 @@
+{
+  "volume": 19,
+  "month": "March",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0783,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Our Ninetieth Anniversary Amy Brown Lyman",
+      "printed_page": 131,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Amy Brown Lyman",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 146-149). The article should appear on page 131 according to the table of contents, but the provided images start at page 146, so the article content is not available in these particular pages.",
+      "api_usage": {
+        "input_tokens": 7877,
+        "output_tokens": 154,
+        "cost": 0.0259
+      },
+      "pdf_pages": [
+        146,
+        147,
+        148,
+        149
+      ]
+    },
+    {
+      "title": "Masonic Hall, Nauvoo",
+      "printed_page": 159,
+      "status": "found",
+      "complete_text": "MASONIC HALL, WHERE THE RELIEF SOCIETY WAS ORGANIZED IN 1842 BY THE PROPHET JOSEPH SMITH",
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a photo caption rather than a full article. The image shows a two-story building with trees, and the caption identifies it as the Masonic Hall where the Relief Society was organized in 1842 by Prophet Joseph Smith. This is located at the bottom of page 159 in the PDF images.",
+      "api_usage": {
+        "input_tokens": 7869,
+        "output_tokens": 185,
+        "cost": 0.0264
+      },
+      "pdf_pages": [
+        179,
+        180,
+        181,
+        182
+      ]
+    },
+    {
+      "title": "It Pays to Advertise Harrison R. Merrill",
+      "printed_page": 161,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The National Council's Participation in the Century of Progress Exposition",
+      "printed_page": 179,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (173-176) but could not locate the article titled 'The National Council's Participation in the Century of Progress Exposition' which should appear on page 179 according to the table of contents. The provided images do not include page 179.",
+      "api_usage": {
+        "input_tokens": 7885,
+        "output_tokens": 158,
+        "cost": 0.026
+      },
+      "pdf_pages": [
+        173,
+        174,
+        175,
+        176
+      ]
+    }
+  ]
+}

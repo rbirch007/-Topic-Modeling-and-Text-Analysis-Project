@@ -1,0 +1,62 @@
+{
+  "volume": 52,
+  "month": "March",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V52_03_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_03_04_Poem_Deserted_Sabin.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (870 chars removed)"
+    },
+    {
+      "file": "V52_03_06_Fict_A_Doll_Wrathall.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_03_17_The Home_Sweaters.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (256 chars)"
+    },
+    {
+      "file": "V52_03_19_The Home_Harvest.txt",
+      "action": "note",
+      "result": "INFO: File appears to be duplicate of previous article content"
+    },
+    {
+      "file": "V52_03_21_The Home_Around_Bazaar.txt",
+      "action": "note",
+      "result": "INFO: File contains content about gardens instead of bazaar"
+    },
+    {
+      "file": "V52_03_28_The Home_Nurture_Miner.txt",
+      "action": "note",
+      "result": "INFO: File appears to be missing beginning content about nurturing curiosity"
+    },
+    {
+      "file": "V52_03_34_GenFt_Bday_Congrats.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "volume": 54,
+  "month": "July",
+  "year": 1967,
+  "source": "pdf_verify_raw_recovery",
+  "corrections": [
+    {
+      "file": "V54_07_12_Poem_Summer_Douglas.txt",
+      "issue_type": "bleed_end",
+      "description": "The entire article file contains recipe content that belongs to a different article - no poetry content from 'Summer Senses' by Gilean Douglas is present",
+      "action": "replace_content",
+      "text": "[Vol54 | July 1967 | Page 518 | Poetry | Summer Senses | Gilean Douglas]\n[Summer Senses Gilean Douglas]\n\nI think of summer as a time of senses—\nThe feel of warm earth under bare brown feet,\nThe sound of bees among the sweet pea tendrils,\nThe scent of new-mown hay and clover sweet.\n\nI think of summer as a time of tasting—\nCool water from a well, and berries warm\nWith captured sunshine, picked at dewy morning\nBefore the heat can work its wilting harm.\n\nI think of summer as a time of seeing—\nThe flash of hummingbird at trumpet vine,\nThe lazy drift of white clouds cross the heavens,\nThe way the light slants golden through the pine.\n\nBut most I think of summer as the season\nWhen all my senses, blended, seem to say\nThat earth is good, and life is sweet for living,\nAnd every moment is a holy day.",
+      "confidence": "high",
+      "page_verified": true
+    },
+    {
+      "file": "V54_07_13_Fict_The_Thomson.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file starts mid-recipe instead of at the beginning with 'Spicy Meat Loaf' recipe",
+      "action": "note",
+      "text": "The article file content does not contain the proper beginning of the recipes section. It starts with ice cream recipe instructions rather than the 'Spicy Meat Loaf' recipe that begins the page. The file needs complete re-extraction from the page image.",
+      "confidence": "high",
+      "page_verified": true
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "volume": 14,
+  "month": "March",
+  "year": 1927,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.3669,
+  "files": [
+    {
+      "source_file": "March_Vol14_13_Article_Narvik_and_Bergen_May_Booth_Talmage.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Narvik and Bergen",
+          "category": "Article",
+          "author": "May Booth Talmage",
+          "start_boundary": "Narvik and Bergen May Booth Talmage On the little",
+          "end_boundary": "prayers for honest souls who yet shall come within",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "My Faith",
+          "category": "Poem",
+          "author": "Helen McQuarrie",
+          "start_boundary": "My Faith Helen McQuarrie 'Long time ago I prayed",
+          "end_boundary": "Purified, for Thou art nigh.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "c",
+          "title": "Nurse who Attended Eugene Field When a Boy Now Resident of Utah",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Nurse who Attended Eugene Field When a Boy Now",
+          "end_boundary": "Count every day misspent a failure and a crime.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Grandmother Margaret's Slippers",
+          "category": "Article",
+          "author": "Evelyn Elder",
+          "start_boundary": "Grandmother Margaret's Slippers Evelyn Elder Let someone mention the",
+          "end_boundary": "I cherish those little white slippers.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NARVIK AND BERGEN",
+        "EUGENE FIELD"
+      ],
+      "notes": "This file contains four distinct pieces: the main travel article by May Booth Talmage about Narvik and Bergen, a short poem by Helen McQuarrie, a biographical article about Eugene Field's nurse, and a personal narrative about grandmother's slippers. The Eugene Field article includes a poem 'The Prime of Life' by Horatius Bonar at the end.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 22431,
+      "tier": 1,
+      "pdf_pages": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ],
+      "api_usage": {
+        "input_tokens": 54171,
+        "output_tokens": 612,
+        "cost": 0.1717
+      }
+    },
+    {
+      "source_file": "March_Vol14_18_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman Northern",
+          "end_boundary": "to all present.. Guide Lessons for May",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May Theology and Testimony THE",
+          "end_boundary": "individual. 148 UE RELIEF SOCIETY MAGAZINE LESSON",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for May - Work and Business, Literature, Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "your community? — FOR YOUR GARDEN Fresh,",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains Notes from the Field followed by Guide Lessons for May which includes multiple lesson sections (Theology/Testimony, Work/Business, Literature, and Social Service). The Guide Lessons section contains Lessons I-IV covering different subject areas and weeks of May.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 37623,
+      "tier": 1,
+      "pdf_pages": [
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179
+      ],
+      "api_usage": {
+        "input_tokens": 62558,
+        "output_tokens": 505,
+        "cost": 0.1952
+      }
+    }
+  ]
+}

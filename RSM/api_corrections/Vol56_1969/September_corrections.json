@@ -1,0 +1,170 @@
+{
+  "volume": 56,
+  "month": "September",
+  "year": 1969,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V56_09_05_Poem_Return_Powell.txt",
+    "V56_09_06_Poem_Late_Burnham.txt",
+    "V56_09_10_Poem_Farewell_Houston.txt",
+    "V56_09_21_Poem_Leaves_Sadleir.txt",
+    "V56_09_24_Poem_First_Coles.txt",
+    "V56_09_31_Poem_Courage.txt",
+    "V56_09_16_GenFt_A_Children.txt",
+    "V56_09_17_GenFt_Springtime_Stake.txt",
+    "V56_09_18_GenFt_British.txt",
+    "V56_09_19_GenFt_Cultural.txt",
+    "V56_09_22_GenFt_Nut_Oertle.txt",
+    "V56_09_25_GenFt_In_Eyring.txt",
+    "V56_09_32_GenFt_Notes_Activities.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_09_01_Fict_Heart_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Congratulations content instead of Heart Room for Home Chapter 4",
+      "action": "replace_content",
+      "text": "Heart Room for Home Chapter 4 by Alice Morrey Bailey should start with the synopsis and Rosemary being ecstatic about her letter",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_09_02_GenFt_The.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Congratulations content instead of 'The Blind Girl' commentary",
+      "action": "replace_content",
+      "text": "Should contain commentary by Floyd E. Breinholt about 'The Blind Girl' by John Everett Millais",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_09_03_GenFt_Sunday.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Congratulations content instead of 'Sunday Afternoon' commentary",
+      "action": "replace_content",
+      "text": "Should contain commentary by Floyd E. Breinholt about 'Sunday Afternoon on the Island of La Grande Jatte' by Georges Seurat",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_09_04_SpFt_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'This man said to me' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Birthday Congratulations President David O. McKay September 8, 1969 The women of the Church throughout the world, in all dominions where the stakes and missions have been organized, remember with love and gratitude the ninety-sixth birthday of President David - O. McKayprophet, seer, and revelator.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_09_07_GenFt_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Congratulations content instead of From Near and Far content",
+      "action": "replace_content",
+      "text": "Should contain From Near and Far content about Belle S. Spafford receiving honors, LaVern Parmley's appointments, etc.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_09_11_Fict_Gramps_Trutton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'en?' instead of proper story beginning",
+      "action": "trim_start",
+      "text": "en?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_09_12_SpFt_Indians_Hunter.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from Rome article instead of ending with Indians of Guatemala",
+      "action": "trim_end",
+      "text": "653 Gramps' Best Behavior",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_09_13_GenFt_Birthday.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to contain mixed content and wrong title",
+      "action": "replace_content",
+      "text": "Should contain Birthday Congratulations content properly organized",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_09_23_Fict_Alice.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with fragment 'hildren' instead of proper story beginning",
+      "action": "trim_start",
+      "text": "hildren, \\ and to countless friends and neighbors. I das a teacher and execu d still and four step-greatin the other organiza i and makes quilts. a) 4 @",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_09_26_GenFt_Hobby_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Lesson Department content instead of Hobby Features",
+      "action": "replace_content",
+      "text": "Should contain Hobby Features about Emily Olsen and Nellie Green Howard",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Rome Jean A. Jensen",
+      "expected_page": 670,
+      "status": "merged_with_another",
+      "merged_into": "V56_09_12_SpFt_Indians_Hunter.txt"
+    },
+    {
+      "title": "The Universal Language Ardean T. Loertscher",
+      "expected_page": 694,
+      "status": "merged_with_another",
+      "merged_into": "V56_09_23_Fict_Alice.txt"
+    }
+  ],
+  "notes": "Many files contain incorrect content, particularly Birthday Congratulations content appearing in multiple files that should contain different articles. Several articles appear to be merged together or have content bleeding between them. The extraction process seems to have significant issues with article boundaries and content assignment.",
+  "validated_corrections": [
+    {
+      "file": "V56_09_04_SpFt_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'This man said to me' instead of proper article beginning",
+      "action": "prepend",
+      "text": "Birthday Congratulations President David O. McKay September 8, 1969 The women of the Church throughout the world, in all dominions where the stakes and missions have been organized, remember with love and gratitude the ninety-sixth birthday of President David - O. McKayprophet, seer, and revelator.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_09_11_Fict_Gramps_Trutton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'en?' instead of proper story beginning",
+      "action": "trim_start",
+      "text": "en?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_09_23_Fict_Alice.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with fragment 'hildren' instead of proper story beginning",
+      "action": "trim_start",
+      "text": "hildren, \\ and to countless friends and neighbors. I das a teacher and execu d still and four step-greatin the other organiza i and makes quilts. a) 4 @",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V56_09_12_SpFt_Indians_Hunter.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from Rome article instead of ending with Indians of Guatemala",
+      "action": "trim_end",
+      "text": "653 Gramps' Best Behavior",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

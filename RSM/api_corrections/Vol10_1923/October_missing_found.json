@@ -1,0 +1,38 @@
+{
+  "volume": 10,
+  "month": "October",
+  "year": 1923,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0246,
+  "stats": {
+    "found": 0,
+    "not_found": 0,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "Editorials",
+      "printed_page": 491,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "October_Vol10_08b_Editorial_Editorial.txt",
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The Editorials content appears to already be extracted in the existing file October_Vol10_08b_Editorial_Editorial.txt. The PDF images provided (pages 511-514) do not contain page 491 where the Editorials would be located.",
+      "api_usage": {
+        "input_tokens": 7425,
+        "output_tokens": 153,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        511,
+        512,
+        513,
+        514
+      ]
+    }
+  ]
+}

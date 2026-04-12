@@ -1,0 +1,185 @@
+{
+  "volume": 5,
+  "month": "January",
+  "year": 1918,
+  "total_files_checked": 19,
+  "files_correct": [
+    "January_Vol5_01_Article_Old_Glory_George_H._Brimhall.txt",
+    "January_Vol5_03_Poetry_If_(A_Poem)_Mrs._Parley_Nelson.txt",
+    "January_Vol5_04_Article_Mother_Takes_Up_the_New_Year's_Burden_Diana_Parrish.txt",
+    "January_Vol5_09_Article_If_We_Could_See_the_End_Annie_D._Palmer.txt",
+    "January_Vol5_11_Article_Only_a_Volunteer.txt",
+    "January_Vol5_12_Article_Fruits_of_Endeavor_Ruth_Moench_Bell.txt",
+    "January_Vol5_13_Poetry_Trust_Yet_a_Little_While_(A_Poem)_Maud_Baggarley.txt",
+    "January_Vol5_19_Poetry_Peace_I_Leave_with_You_(A_Poem)_Lucy_May_Green.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol5_02_Frontispiece_Mrs._Zina_D._H._Young_and_Daughter,_Zina_Y._Card_Frontispiec.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article 'If' that should be in separate file",
+      "action": "trim_end",
+      "text": "To Brigham Kimball.\n\n\"IF.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_05a_Article_Mothers_in_Israel.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'There is no sweeter, tenderer spirit ever tabernacled'",
+      "action": "append",
+      "text": "in the flesh than Sister Peterson, none more unselfish, more devoted to God and his kingdom. She is a charming representative of the splendid old Scandinavian stock, an Israelite in whom there is no guile. No matter how cold the day or hot the weather, it is just right for her. She greets everyone with a smile, trusts humanity till she wins honest and fair dealing from the most careless and slothful, loves life, man, and God with all the ardor of a true follower of Christ.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_05b_Article_Where_Happiness_Is_Found.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'In undaunted faith in God and keeping His'",
+      "action": "append",
+      "text": "commandments.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol5_05c_Poem_Cecelia.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'the light upon her'",
+      "action": "append",
+      "text": "brow.\n\nAlfred Lambourne.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol5_06_Poetry_Cecelia_(A_Poem)_Alfred_Lambourne.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'Unusual Mothers' article content instead of the Cecelia poem",
+      "action": "replace_content",
+      "text": "CECELIA\n\nWith eyes downcast, demure as any saint,\nEach feature bearing some fair gift of grace,\nAll gently pure, without a selfish taint,\nSo we remember that sweet vanished face.\n\nO, short the time as we do count the years,\nAs only yesterday that past it seems,\nWhen she did neither know life's cares nor tears,\nLost in the visions of her maiden dreams.\n\nThen what a rapture in love's olden tale,\nThe spoken words that made a happy wife,\nThen golden hours within the mystic vale,\nAnd priceless jewels in the crown of life:\n\nSupernal clear that realm of peace is now,\nIn which she dwells, the light upon her brow.\n\nAlfred Lambourne.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "January_Vol5_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only end fragment from previous article instead of Notes from the Field content",
+      "action": "replace_content",
+      "text": "Notes from the Field\n\nBy Amy Brown Lyman, General Secretary.\n\nLiberty Stake.\n\nThe Liberty stake Relief Society recently held a teachers' convention and social in the Second ward meetinghouse. There were four hundred Relief Society workers in attendance. Special instructions were given to teachers on their duties, with many excellent recommendations for future work. It was suggested that the teachers make it a point in their monthly visits to discuss all topics that deal with home problems such as family budget, food problems in war times, thrift and economy in household management, family planning, etc. The home-bound work was discussed. Our readers probably are familiar with the particular work that is done in the Liberty stake in the interest of those who are unable through sickness to leave their homes. A general discussion was held and questions on the teacher's work were answered and explained. Luncheon was served from 12 to 1 o'clock, when the ward teachers were the special guests of honor. After the luncheon a concert was held.\n\nCurlew Stake.\n\nIn Curlew stake the Relief Society, Y. L. M. I. A. and Primary Associations have united for Red Cross work. A committee was appointed from each of these three boards to organize the work and as a result of the work of this committee a Red Cross auxiliary has been organized in each of the wards of the stake.\n\nAlpine Stake.\n\nOne afternoon during the month of October, the women of the Relief Societies of Pleasant Grove, Manila and Lindon put up eleven hundred quarts of fruit,  tomatoes, peaches, pears and apricots. The City Council of Pleasant Grove donated $25 and the rest of the cash expenses were met by the three Relief Societies. The fruit was donated by the townspeople, and the management of the cannery, with all the workers, gave their services. The cans of fruit were packed in cases and have been stored in the Relief Society emergency cupboard.\n\nFremont Stake.\n\nThe Fremont stake has on hand $200 worth of imperishable food stuff. This stake has recently added twelve beautiful quilts to its emergency cupboard.\n\nNorthern States Mission.\n\nWhile the Relief Societies at home have been accomplishing so much along \"preparedness\" lines the Missions have also been doing special work along these lines. In the West Iowa conference, the lady missionaries have directed and assisted the women of the Relief Society in canning and drying fruits and vegetables. In those cases where the women were not able to purchase fruits, the elders, under the direction of the conference president, collected and carried fruit from the orchards in the rural districts to these women. As a result all of the families have conserved large quantities of fruit for winter use.\n\nSt. George Stake.\n\nAccepting the invitation of the various bishops the ward Relief Society choirs furnish the singing for the fast meetings. This feature has greatly increased the attendance at the fast services.\n\nDenver, Colorado.\n\nThe Institute for Home Service given under the direction of the Bureau of Civilian Relief of the Mountain Division of the Red Cross began its work on November 5, and will continue for a period of six weeks. The Institute is limited to twenty-five students in order that field work may be efficiently given and properly supervised. The Institute is under the direction and supervision of Miss Gertrude Vaile. chairman of the Bureau of Civilian Relief. Lectures are given by Dr. Osbourne, of Boulder University, Miss Gertrude Vaile and Miss Florence W. Hutsinpillar, assistant secretary of the Bureau of Charities, of Denver. Colorado. Utah is represented at this Institute by the following women: Mrs. Amy Brown Lyman and Miss Mae Hawley, of Salt Lake City; Mrs. Cause and Miss Cora Kasius. of Ogden; Mrs. Hendrickson, of Logan, and Mrs. Palmer of Provo. The field work is given under the direction of the Bureau of Charities and the Red Cross Division Headquarters, and consists of family and institutional visiting and investigation. The object of the Institute is fully realized in the splendid instruction in methods of conducting home service work among the families of soldiers and sailors.\n\nGranite Stake.\n\nAn entertainment of a most pleasing character was given at the Granite stake tabernacle on Tuesday, October 23, by the stake and ward Relief Society officers, in honor of two retiring member? of the stake board, Mrs. Laura E. Cutler and Mrs. Emily M. Brinton, former counselors to President Leonora T. Harrington. An attractive musical program was rendered and refreshments were served. About 300 local and stake officers were in attendance, including Board members of the Cottonwood stake Relief Society.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "January_Vol5_15b_Home_Science_Home_Science_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "God bless the Utah soldier boy who wrote this.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_17a_Editorial_Editorial_The_New_Year_Relief_Society_Prayer.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'From the'",
+      "action": "append",
+      "text": "publishers, a leading Chicago newspaper obtained the poem, and from it was copied in one hundred journals and newspapers throughout the country who sent requests for the song. The song can be purchased at any music store, price 25 cents.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_18a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'so that the liquid which is made from the juice'",
+      "action": "append",
+      "text": "of the beans and the salt must keep them entirely covered.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Unusual Mothers",
+      "expected_page": 19,
+      "status": "merged_with_another",
+      "merged_into": "January_Vol5_06_Poetry_Cecelia_(A_Poem)_Alfred_Lambourne.txt"
+    },
+    {
+      "title": "A 200 Year Calendar",
+      "expected_page": 23,
+      "status": "merged_with_another",
+      "merged_into": "January_Vol5_08a_Article_A_200_Year_Calendar.txt"
+    }
+  ],
+  "notes": "Several files have content mismatches or incomplete text. The Cecelia poem and Unusual Mothers article content got swapped between files. Multiple files cut off mid-sentence and need completion. Some advertisement content bled into article files.",
+  "validated_corrections": [
+    {
+      "file": "January_Vol5_02_Frontispiece_Mrs._Zina_D._H._Young_and_Daughter,_Zina_Y._Card_Frontispiec.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article 'If' that should be in separate file",
+      "action": "trim_end",
+      "text": "To Brigham Kimball.\n\n\"IF.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_05a_Article_Mothers_in_Israel.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'There is no sweeter, tenderer spirit ever tabernacled'",
+      "action": "append",
+      "text": "in the flesh than Sister Peterson, none more unselfish, more devoted to God and his kingdom. She is a charming representative of the splendid old Scandinavian stock, an Israelite in whom there is no guile. No matter how cold the day or hot the weather, it is just right for her. She greets everyone with a smile, trusts humanity till she wins honest and fair dealing from the most careless and slothful, loves life, man, and God with all the ardor of a true follower of Christ.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_15b_Home_Science_Home_Science_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "God bless the Utah soldier boy who wrote this.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_17a_Editorial_Editorial_The_New_Year_Relief_Society_Prayer.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'From the'",
+      "action": "append",
+      "text": "publishers, a leading Chicago newspaper obtained the poem, and from it was copied in one hundred journals and newspapers throughout the country who sent requests for the song. The song can be purchased at any music store, price 25 cents.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "January_Vol5_18a_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'so that the liquid which is made from the juice'",
+      "action": "append",
+      "text": "of the beans and the salt must keep them entirely covered.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "January_Vol5_05b_Article_Where_Happiness_Is_Found.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'In undaunted faith in God and keeping His'",
+      "action": "append",
+      "text": "commandments.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "January_Vol5_05c_Poem_Cecelia.txt",
+      "issue_type": "missing_text",
+      "description": "File cuts off mid-sentence at 'the light upon her'",
+      "action": "append",
+      "text": "brow.\n\nAlfred Lambourne.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

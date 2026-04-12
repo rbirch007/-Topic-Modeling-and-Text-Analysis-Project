@@ -1,0 +1,57 @@
+{
+  "volume": 52,
+  "month": "June",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V52_06_05_SpFt_An_Peterson.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_06_07_Fict_When_Sabin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_06_10_GenFt_Womans_Cannon.txt",
+      "action": "note",
+      "result": "INFO: File contains content from Ring Around Her Heart fiction instead of Woman's Sphere article"
+    },
+    {
+      "file": "V52_06_11_Fict_Ring_Thulin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_06_15_SpFt_Thoughts_Fox.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_06_19_The Home_The_Setting.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_06_24_The Home_Food.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_06_32_Poem_Above_Chamberlin.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V52_06_33_GenFt_Bday_Congrats.txt",
+      "action": "note",
+      "result": "INFO: File appears to be missing proper header and structure for Birthday Congratulations section"
+    }
+  ]
+}

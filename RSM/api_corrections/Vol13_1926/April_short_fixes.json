@@ -1,0 +1,40 @@
+{
+  "volume": 13,
+  "month": "April",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.024,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "April_Vol13_02_Article_Portrait_of_the_late_Presidency_of_the_Primary_Association.txt",
+      "status": "delete",
+      "current_chars": 196,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be just a caption or header for a photograph/portrait that would have appeared in the magazine. The file contains only a brief descriptive line about a portrait, not an actual article with substantive content. This is a header artifact that should be deleted.",
+      "api_usage": {
+        "input_tokens": 7208,
+        "output_tokens": 160,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194
+      ]
+    }
+  ]
+}

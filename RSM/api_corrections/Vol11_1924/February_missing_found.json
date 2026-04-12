@@ -1,0 +1,60 @@
+{
+  "volume": 11,
+  "month": "February",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0492,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Eliza R. Snow Minnie Iverson Hodapp",
+      "printed_page": 59,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Minnie Iverson Hodapp",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 65-68). Since the article should appear on page 59 according to the table of contents, the required page images are not included in this set.",
+      "api_usage": {
+        "input_tokens": 7350,
+        "output_tokens": 157,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "title": "Lincoln's Widow Writes of Poverty",
+      "printed_page": 62,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 65-68). The article should appear on page 62 according to the table of contents, but the provided images start from page 65. The images show advertisements for Blue Pine Extracts, Utah Power & Light Co., Temple and Burial Clothes, Porter-Walton Company, W.M. McGonahay Jeweler, and Adult Work Shop for the Blind.",
+      "api_usage": {
+        "input_tokens": 7326,
+        "output_tokens": 187,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        65,
+        66,
+        67,
+        68
+      ]
+    }
+  ]
+}

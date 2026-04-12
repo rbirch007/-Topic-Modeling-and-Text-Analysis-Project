@@ -1,0 +1,62 @@
+{
+  "volume": 18,
+  "month": "November",
+  "year": 1931,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.0259,
+  "stats": {
+    "found": 1,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Giant Cactus Forest in Arizona",
+      "printed_page": 605,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Marking the Trail Rachel G. Taylor",
+      "printed_page": 630,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Bit of Heaven Merling D. Clyde",
+      "printed_page": 630,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "EditorialCompensation Soo Spero",
+      "printed_page": 651,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Era's New Editor",
+      "printed_page": 652,
+      "status": "found",
+      "complete_text": "THE ERA'S NEW EDITOR\n\nRichard R. Lyman has been appointed editor of the Improvement Era to succeed Elder Joseph F. Merrill who has been called to the apostleship. Elder Lyman has been associate editor of the Era for several years and is well qualified for his new responsibility. He is a graduate of the University of Utah in civil engineering, has done graduate work at Cornell University, and has served as a member of the faculty of the University of Utah. He has been a member of the Council of Twelve since 1918 and has had wide experience in Church work. The Era will continue under his direction to serve the needs of the Church membership.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found brief editorial announcement about Richard R. Lyman's appointment as new editor of the Improvement Era, replacing Joseph F. Merrill who was called to the apostleship.",
+      "api_usage": {
+        "input_tokens": 7273,
+        "output_tokens": 269,
+        "cost": 0.0259
+      },
+      "pdf_pages": [
+        698,
+        699,
+        700,
+        701
+      ]
+    }
+  ]
+}

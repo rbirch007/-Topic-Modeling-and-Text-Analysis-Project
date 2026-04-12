@@ -1,0 +1,133 @@
+{
+  "volume": 54,
+  "month": "December",
+  "year": 1967,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V54_12_02_Art_Christmas_Coles.txt",
+    "V54_12_04_SpFt_A_Brown.txt",
+    "V54_12_06_SpFt_The_Tanner.txt",
+    "V54_12_08_SpFt_Elder.txt",
+    "V54_12_09_SpFt_Hulda.txt",
+    "V54_12_10_Fict_The_Murray.txt",
+    "V54_12_14_SpFt_Christmas_Spirit.txt",
+    "V54_12_15_Fict_Womens_Cannon.txt",
+    "V54_12_16_Fict_The_Spencer.txt",
+    "V54_12_29_SpFt_Cuna_Brewerton.txt",
+    "V54_12_30_Fict_Janet.txt",
+    "V54_12_31_Poem_Cinquain_Fairbairn.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_12_01_Fict_Throw_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from a different story (Tell Me of Love) instead of Throw Down the Gauntlet Chapter 4",
+      "action": "replace_content",
+      "text": "Throw Down the Gauntlet Chapter 4 Janet W. Breeze Synopsis: Nancy Jackson, a ballet dance instructor and mother of two children, gives up her plans for opening a dance studio in her remodeled home, and accompanies her husband on a teaching assignment to the island of Truk. Upon arriving in Truk, the family finds that a quonset house is to be their home. Nancy is told by a native doctor that she will have to go to the hospital in Guam for the arrival of twin babies. M It was the first Sunday in October, but as Nancy sat on the edge of the bed, brushing Amy's hair and watching Skipper push the dining chairs into a train, it seemed more like a continuation of a very long, hot summer.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_12_03_Art_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File is empty and needs content from From Near and Far section",
+      "action": "replace_content",
+      "text": "From Near and Far Thanks for the wonderful Magazine. It truly brings all the sisters in the world together in a common bond. Our branch here in Ames sends the Magazine to our local library each month, and when the library is finished with them, we pick them up every six months. This year we are putting them to extra use and circulation by leaving them at our hospital. Since I am the only registered Latter-day Saint nurse here, I am looking for all sorts of ways to introduce the gospel to my co-workers. More and more, as a result of the Magazine, I am asked questions about the gospel. June E. Booth Ames, Iowa",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_12_05_Poem_To_Keep_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article instead of the poem",
+      "action": "trim_start",
+      "text": "A Testimony of the Work",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_07_Poem_My_Hafen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous article before the poem",
+      "action": "trim_start",
+      "text": "their Heavenly Father.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_11_Fict_General_Conference.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty and needs proper editorial content",
+      "action": "replace_content",
+      "text": "EDITORIAL The 137th Semi-Annual General Church Conference ■ The 137th Semi-Annual General Conference of the Church, held September 30th, 31st, and October 1st, 1967, was especially significant in many ways. The historic Tabernacle, wherein the sessions were held, was being remembered as a centennial structure, having housed the saints for one hundred years.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_12_12_Poem_Three_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content after the poem",
+      "action": "trim_end",
+      "text": "The farthest reach of my will. 903",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_13_Poem_My_Day_Kleinman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Christmas Lamb story",
+      "action": "trim_start",
+      "text": "The Christmas Lamb",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "London At Night Anne Reynolds",
+      "expected_page": 885,
+      "status": "merged_with_another",
+      "merged_into": "V54_12_05_Poem_To_Keep_Schow.txt"
+    }
+  ],
+  "notes": "Several files contain content bleeding from adjacent articles. The poetry files are particularly affected, with content from surrounding articles mixed in. Some files have completely wrong content or are nearly empty. The OCR quality is generally good where present, but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "V54_12_05_Poem_To_Keep_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article instead of the poem",
+      "action": "trim_start",
+      "text": "A Testimony of the Work",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_07_Poem_My_Hafen.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous article before the poem",
+      "action": "trim_start",
+      "text": "their Heavenly Father.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_12_Poem_Three_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content after the poem",
+      "action": "trim_end",
+      "text": "The farthest reach of my will. 903",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_12_13_Poem_My_Day_Kleinman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Christmas Lamb story",
+      "action": "trim_start",
+      "text": "The Christmas Lamb",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

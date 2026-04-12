@@ -1,0 +1,75 @@
+{
+  "volume": 19,
+  "month": "May",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 6,
+  "total_cost": 0.1213,
+  "files": [
+    {
+      "source_file": "May_Vol19_12_Article_Thinking_of_You_Bertha_A_Kleinman.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Conference Address - President Heber J. Grant",
+          "category": "Article",
+          "author": "President Heber J. Grant",
+          "start_boundary": "You can answer for yourselves, you can be",
+          "end_boundary": "God bless the Relief Society! MRS. NETTIE D.",
+          "confidence": "medium"
+        },
+        {
+          "order": "b",
+          "title": "Relief Society Conference Address - Mrs. Annie Wells Cannon",
+          "category": "Article",
+          "author": "Mrs. Annie Wells Cannon",
+          "start_boundary": "MRS. ANNIE WELLS CANNON Member of the General",
+          "end_boundary": "such is the organization of the Relief Society.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Relief Society Conference Address - Mrs. Nettie D. Bradford",
+          "category": "Article",
+          "author": "Mrs. Nettie D. Bradford",
+          "start_boundary": "MRS. NETTIE D. BRADFORD is good. His promises",
+          "end_boundary": "perform the labors and duties required of us.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Relief Society Conference Address - President Louise Y. Robison",
+          "category": "Article",
+          "author": "President Louise Y. Robison",
+          "start_boundary": "PRESIDENT LOUISE Y. ROBISON One hundred and two",
+          "end_boundary": "in the name of Jesus Christ. Amen.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Relief Society Conference Address - Counselor Amy Brown Lyman",
+          "category": "Article",
+          "author": "Counselor Amy Brown Lyman",
+          "start_boundary": "COUNSELOR AMY BROWN LYMAN As a great family",
+          "end_boundary": "May we make them ours! PRESIDENT HEBER",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Relief Society Conference Address - Dr. Joseph F. Merrill",
+          "category": "Article",
+          "author": "Dr. Joseph F. Merrill",
+          "start_boundary": "DR. JOSEPH F. MERRILL Possibly some of you",
+          "end_boundary": "in the name of Jesus Christ. Amen.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains multiple conference addresses from the Relief Society Conference held April 6, 1932. Each speaker's address can be treated as a separate article. The file also contains some advertisements at the end that could be stripped."
+    }
+  ]
+}

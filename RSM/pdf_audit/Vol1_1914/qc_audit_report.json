@@ -1,0 +1,2820 @@
+{
+  "volume": 1,
+  "year": 1914,
+  "generated_at": "2026-03-15T19:14:03.416687",
+  "summary": {
+    "total_files": 142,
+    "article_files": 106,
+    "special_files": 36,
+    "months_processed": 12,
+    "months_available": 12,
+    "ok": 141,
+    "flagged": 1,
+    "empty": 0,
+    "by_remediation": {
+      "re_extract": 1
+    },
+    "by_flag_type": {
+      "MERGED": 1
+    }
+  },
+  "months": {
+    "January": {
+      "total": 11,
+      "articles": 8,
+      "special": 3,
+      "ok": 11,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No1_January_1914.txt",
+      "ocr_chars": 44532,
+      "contents_xref": {
+        "entries_in_contents": 8,
+        "matched": 8,
+        "match_details": [
+          {
+            "title": "President's Address",
+            "page": 1,
+            "file": "V1_1914_Jan_01_Art_Presidents_Address.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Current Events",
+            "page": 3,
+            "file": "V1_1914_Jan_02_CurrEvents_Current_Events.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogical Department",
+            "page": 5,
+            "file": "V1_1914_Jan_03_Gen_Genealogical_Department.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Ethics",
+            "page": 7,
+            "file": "V1_1914_Jan_04_HomeEthics_Home_Ethics.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening",
+            "page": 8,
+            "file": "V1_1914_Jan_05_HomeGarden_Home_Gardening.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literary Department",
+            "page": 11,
+            "file": "V1_1914_Jan_06_Lit_Literary_Department.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Architecture and Art",
+            "page": 13,
+            "file": "V1_1914_Jan_07_Art_Architecture_and_Art.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Instructions",
+            "page": 14,
+            "file": "V1_1914_Jan_08_Instr_Instructions.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "V1_1914_Jan_00_BOARD.txt",
+          "body_len": 2004,
+          "article_words": 177,
+          "words_in_ocr": 177,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_00_CONTENTS.txt",
+          "body_len": 203,
+          "article_words": 18,
+          "words_in_ocr": 18,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_00_Misc.txt",
+          "body_len": 15330,
+          "article_words": 556,
+          "words_in_ocr": 548,
+          "pct_in_ocr": 0.9856,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "commerci",
+            "consolidated",
+            "files",
+            "front",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Jan_01_Art_Presidents_Address.txt",
+          "body_len": 5171,
+          "article_words": 340,
+          "words_in_ocr": 340,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_02_CurrEvents_Current_Events.txt",
+          "body_len": 4619,
+          "article_words": 361,
+          "words_in_ocr": 361,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_03_Gen_Genealogical_Department.txt",
+          "body_len": 5476,
+          "article_words": 341,
+          "words_in_ocr": 341,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_04_HomeEthics_Home_Ethics.txt",
+          "body_len": 1284,
+          "article_words": 108,
+          "words_in_ocr": 108,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_05_HomeGarden_Home_Gardening.txt",
+          "body_len": 5558,
+          "article_words": 405,
+          "words_in_ocr": 405,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_06_Lit_Literary_Department.txt",
+          "body_len": 7065,
+          "article_words": 485,
+          "words_in_ocr": 485,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_07_Art_Architecture_and_Art.txt",
+          "body_len": 4947,
+          "article_words": 346,
+          "words_in_ocr": 346,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jan_08_Instr_Instructions.txt",
+          "body_len": 5236,
+          "article_words": 351,
+          "words_in_ocr": 351,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "February": {
+      "total": 14,
+      "articles": 11,
+      "special": 3,
+      "ok": 14,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No2_February_1914.txt",
+      "ocr_chars": 65339,
+      "contents_xref": {
+        "entries_in_contents": 6,
+        "matched": 6,
+        "match_details": [
+          {
+            "title": "Home Ethics 6 Home Gardens",
+            "page": 7,
+            "file": "V1_1914_Feb_04_HomeEthics_Home_Ethics.txt",
+            "score": 0.75
+          },
+          {
+            "title": "Literature 12 Architecture",
+            "page": 13,
+            "file": "V1_1914_Feb_06_Lit_Literature.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Relief Society Convention",
+            "page": 14,
+            "file": "V1_1914_Feb_08_Art_Relief_Society_Convention.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Books for the Reading Course",
+            "page": 15,
+            "file": "V1_1914_Feb_09_Art_Books_for_the_Reading_Course.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society Home for Women and Girls",
+            "page": 1,
+            "file": "V1_1914_Feb_02_Art_Relief_Society_Home_for_Women_and_Girls.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Future Activities of the Society",
+            "page": 22,
+            "file": "V1_1914_Feb_10_Art_Future_Activities_of_the_Society.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Feb_01_Art_Address.txt",
+          "V1_1914_Feb_03_Gen_Genealogy.txt",
+          "V1_1914_Feb_05_HomeGarden_Home_Gardens.txt",
+          "V1_1914_Feb_07_Art_Architecture.txt",
+          "V1_1914_Feb_11_Art_CULTIVATION.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Feb_00_BOARD.txt",
+          "body_len": 1822,
+          "article_words": 168,
+          "words_in_ocr": 168,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_00_CONTENTS.txt",
+          "body_len": 259,
+          "article_words": 24,
+          "words_in_ocr": 24,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_00_Misc.txt",
+          "body_len": 18843,
+          "article_words": 880,
+          "words_in_ocr": 873,
+          "pct_in_ocr": 0.992,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "front",
+            "lak",
+            "poem"
+          ]
+        },
+        {
+          "file": "V1_1914_Feb_01_Art_Address.txt",
+          "body_len": 7303,
+          "article_words": 420,
+          "words_in_ocr": 420,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_02_Art_Relief_Society_Home_for_Women_and_Girls.txt",
+          "body_len": 13532,
+          "article_words": 705,
+          "words_in_ocr": 705,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_03_Gen_Genealogy.txt",
+          "body_len": 4503,
+          "article_words": 311,
+          "words_in_ocr": 311,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_04_HomeEthics_Home_Ethics.txt",
+          "body_len": 2348,
+          "article_words": 184,
+          "words_in_ocr": 184,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_05_HomeGarden_Home_Gardens.txt",
+          "body_len": 6056,
+          "article_words": 428,
+          "words_in_ocr": 428,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_06_Lit_Literature.txt",
+          "body_len": 1706,
+          "article_words": 141,
+          "words_in_ocr": 141,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_07_Art_Architecture.txt",
+          "body_len": 2069,
+          "article_words": 171,
+          "words_in_ocr": 171,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_08_Art_Relief_Society_Convention.txt",
+          "body_len": 1473,
+          "article_words": 112,
+          "words_in_ocr": 112,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_09_Art_Books_for_the_Reading_Course.txt",
+          "body_len": 1729,
+          "article_words": 137,
+          "words_in_ocr": 137,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_10_Art_Future_Activities_of_the_Society.txt",
+          "body_len": 3062,
+          "article_words": 208,
+          "words_in_ocr": 208,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Feb_11_Art_CULTIVATION.txt",
+          "body_len": 1422,
+          "article_words": 137,
+          "words_in_ocr": 137,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "March": {
+      "total": 14,
+      "articles": 11,
+      "special": 3,
+      "ok": 14,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No3_March_1914.txt",
+      "ocr_chars": 40628,
+      "contents_xref": {
+        "entries_in_contents": 10,
+        "matched": 10,
+        "match_details": [
+          {
+            "title": "The Saving Habit 1 Genealogy",
+            "page": 3,
+            "file": "V1_1914_Mar_01_Edit_The_Saving_Habit.txt",
+            "score": 0.67
+          },
+          {
+            "title": "Home Ethics",
+            "page": 6,
+            "file": "V1_1914_Mar_03_HomeEthics_Home_Ethics.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening",
+            "page": 7,
+            "file": "V1_1914_Mar_04_HomeGarden_Home_Gardening.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 10,
+            "file": "V1_1914_Mar_05_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Architecture",
+            "page": 11,
+            "file": "V1_1914_Mar_06_Art_Architecture.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Bulletins",
+            "page": 12,
+            "file": "V1_1914_Mar_08_Art_Bulletins.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Officers' Meeting at Conference",
+            "page": 12,
+            "file": "V1_1914_Mar_07_Art_Officers_Meeting_at_Conference.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society Convention in Genealogy",
+            "page": 13,
+            "file": "V1_1914_Mar_09_Gen_Relief_Society_Convention_in_Genealogy.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Benefit Insurance",
+            "page": 13,
+            "file": "V1_1914_Mar_10_Art_Benefit_Insurance.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Book on Art and Architecture",
+            "page": 15,
+            "file": "V1_1914_Mar_11_Art_Book_on_Art_and_Architecture.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Mar_02_Gen_Genealogy.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Mar_00_BOARD.txt",
+          "body_len": 1821,
+          "article_words": 168,
+          "words_in_ocr": 168,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_00_CONTENTS.txt",
+          "body_len": 280,
+          "article_words": 25,
+          "words_in_ocr": 25,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_00_Misc.txt",
+          "body_len": 16662,
+          "article_words": 789,
+          "words_in_ocr": 783,
+          "pct_in_ocr": 0.9924,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Mar_01_Edit_The_Saving_Habit.txt",
+          "body_len": 4968,
+          "article_words": 387,
+          "words_in_ocr": 387,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_02_Gen_Genealogy.txt",
+          "body_len": 5352,
+          "article_words": 327,
+          "words_in_ocr": 327,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_03_HomeEthics_Home_Ethics.txt",
+          "body_len": 2708,
+          "article_words": 225,
+          "words_in_ocr": 225,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_04_HomeGarden_Home_Gardening.txt",
+          "body_len": 5709,
+          "article_words": 365,
+          "words_in_ocr": 365,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_05_Lit_Literature.txt",
+          "body_len": 1256,
+          "article_words": 106,
+          "words_in_ocr": 106,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_06_Art_Architecture.txt",
+          "body_len": 2116,
+          "article_words": 171,
+          "words_in_ocr": 171,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_07_Art_Officers_Meeting_at_Conference.txt",
+          "body_len": 909,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_08_Art_Bulletins.txt",
+          "body_len": 2478,
+          "article_words": 174,
+          "words_in_ocr": 174,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_09_Gen_Relief_Society_Convention_in_Genealogy.txt",
+          "body_len": 462,
+          "article_words": 53,
+          "words_in_ocr": 53,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_10_Art_Benefit_Insurance.txt",
+          "body_len": 4922,
+          "article_words": 344,
+          "words_in_ocr": 344,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Mar_11_Art_Book_on_Art_and_Architecture.txt",
+          "body_len": 1315,
+          "article_words": 114,
+          "words_in_ocr": 114,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "April": {
+      "total": 14,
+      "articles": 11,
+      "special": 3,
+      "ok": 14,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No4_April_1914.txt",
+      "ocr_chars": 42718,
+      "contents_xref": {
+        "entries_in_contents": 9,
+        "matched": 9,
+        "match_details": [
+          {
+            "title": "Charity and Faith",
+            "page": 1,
+            "file": "V1_1914_Apr_01_Art_Charity_and_Faith.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Tithing in the Relief Society",
+            "page": 3,
+            "file": "V1_1914_Apr_02_Art_Tithing_in_the_Relief_Society.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy and Testimony",
+            "page": 5,
+            "file": "V1_1914_Apr_03_Gen_Genealogy_and_Testimony.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Ethics",
+            "page": 6,
+            "file": "V1_1914_Apr_11_HomeEthics_Home_Ethics_6.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 8,
+            "file": "V1_1914_Apr_04_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 12,
+            "file": "V1_1914_Apr_05_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art and Architecture",
+            "page": 14,
+            "file": "V1_1914_Apr_06_Art_Art_and_Architecture.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Report Blanks",
+            "page": 14,
+            "file": "V1_1914_Apr_07_Art_Report_Blanks.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The American City",
+            "page": 16,
+            "file": "V1_1914_Apr_08_Art_The_American_City.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Apr_09_Art_AUTOBIOGRAPHY_OF_BENJAMIN_FRANKLIN.txt",
+          "V1_1914_Apr_10_Art_LESSON_IV.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Apr_00_BOARD.txt",
+          "body_len": 1835,
+          "article_words": 170,
+          "words_in_ocr": 170,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_00_CONTENTS.txt",
+          "body_len": 240,
+          "article_words": 25,
+          "words_in_ocr": 25,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_00_Misc.txt",
+          "body_len": 14609,
+          "article_words": 622,
+          "words_in_ocr": 615,
+          "pct_in_ocr": 0.9887,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "front",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Apr_01_Art_Charity_and_Faith.txt",
+          "body_len": 5190,
+          "article_words": 365,
+          "words_in_ocr": 365,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_02_Art_Tithing_in_the_Relief_Society.txt",
+          "body_len": 3841,
+          "article_words": 268,
+          "words_in_ocr": 268,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_03_Gen_Genealogy_and_Testimony.txt",
+          "body_len": 4295,
+          "article_words": 280,
+          "words_in_ocr": 277,
+          "pct_in_ocr": 0.9893,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "category",
+            "sequence",
+            "title"
+          ]
+        },
+        {
+          "file": "V1_1914_Apr_04_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 5959,
+          "article_words": 433,
+          "words_in_ocr": 433,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_05_Lit_Literature.txt",
+          "body_len": 3975,
+          "article_words": 268,
+          "words_in_ocr": 268,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_06_Art_Art_and_Architecture.txt",
+          "body_len": 1583,
+          "article_words": 112,
+          "words_in_ocr": 112,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_07_Art_Report_Blanks.txt",
+          "body_len": 2663,
+          "article_words": 200,
+          "words_in_ocr": 200,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_08_Art_The_American_City.txt",
+          "body_len": 510,
+          "article_words": 50,
+          "words_in_ocr": 50,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_09_Art_AUTOBIOGRAPHY_OF_BENJAMIN_FRANKLIN.txt",
+          "body_len": 1603,
+          "article_words": 134,
+          "words_in_ocr": 134,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_10_Art_LESSON_IV.txt",
+          "body_len": 1814,
+          "article_words": 115,
+          "words_in_ocr": 115,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Apr_11_HomeEthics_Home_Ethics_6.txt",
+          "body_len": 4258,
+          "article_words": 299,
+          "words_in_ocr": 299,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "May": {
+      "total": 12,
+      "articles": 9,
+      "special": 3,
+      "ok": 12,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No5_May_1914.txt",
+      "ocr_chars": 40102,
+      "contents_xref": {
+        "entries_in_contents": 9,
+        "matched": 9,
+        "match_details": [
+          {
+            "title": "Relief Society Memories",
+            "page": 1,
+            "file": "V1_1914_May_01_Art_Relief_Society_Memories.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial Peace",
+            "page": 4,
+            "file": "V1_1914_May_02_Edit_Editorial_Peace.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy",
+            "page": 6,
+            "file": "V1_1914_May_03_Gen_Genealogy.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Ethics",
+            "page": 8,
+            "file": "V1_1914_May_04_HomeEthics_Home_Ethics.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 10,
+            "file": "V1_1914_May_05_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 13,
+            "file": "V1_1914_May_06_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art and Architecture",
+            "page": 14,
+            "file": "V1_1914_May_07_Art_Art_and_Architecture.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Music",
+            "page": 15,
+            "file": "V1_1914_May_08_Art_Music.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notices",
+            "page": 16,
+            "file": "V1_1914_May_09_Notice_Notices.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "V1_1914_May_00_BOARD.txt",
+          "body_len": 1413,
+          "article_words": 93,
+          "words_in_ocr": 93,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_00_CONTENTS.txt",
+          "body_len": 198,
+          "article_words": 21,
+          "words_in_ocr": 21,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_00_Misc.txt",
+          "body_len": 7671,
+          "article_words": 380,
+          "words_in_ocr": 374,
+          "pct_in_ocr": 0.9842,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_May_01_Art_Relief_Society_Memories.txt",
+          "body_len": 7886,
+          "article_words": 505,
+          "words_in_ocr": 505,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_02_Edit_Editorial_Peace.txt",
+          "body_len": 3691,
+          "article_words": 269,
+          "words_in_ocr": 269,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_03_Gen_Genealogy.txt",
+          "body_len": 6423,
+          "article_words": 312,
+          "words_in_ocr": 312,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_04_HomeEthics_Home_Ethics.txt",
+          "body_len": 3754,
+          "article_words": 278,
+          "words_in_ocr": 278,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_05_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 6775,
+          "article_words": 496,
+          "words_in_ocr": 496,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_06_Lit_Literature.txt",
+          "body_len": 2092,
+          "article_words": 157,
+          "words_in_ocr": 157,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_07_Art_Art_and_Architecture.txt",
+          "body_len": 1167,
+          "article_words": 111,
+          "words_in_ocr": 111,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_08_Art_Music.txt",
+          "body_len": 1354,
+          "article_words": 115,
+          "words_in_ocr": 115,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_May_09_Notice_Notices.txt",
+          "body_len": 4918,
+          "article_words": 378,
+          "words_in_ocr": 378,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "June": {
+      "total": 10,
+      "articles": 7,
+      "special": 3,
+      "ok": 10,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No6_June_1914.txt",
+      "ocr_chars": 43248,
+      "contents_xref": {
+        "entries_in_contents": 7,
+        "matched": 7,
+        "match_details": [
+          {
+            "title": "Editorial  Insurance",
+            "page": 1,
+            "file": "V1_1914_Jun_01_Edit_Editorial_Insurance.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy",
+            "page": 5,
+            "file": "V1_1914_Jun_02_Gen_Genealogy.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Ethics",
+            "page": 7,
+            "file": "V1_1914_Jun_03_HomeEthics_Home_Ethics.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 9,
+            "file": "V1_1914_Jun_04_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 12,
+            "file": "V1_1914_Jun_05_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art and Architecture",
+            "page": 13,
+            "file": "V1_1914_Jun_06_Art_Art_and_Architecture.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes on the Relief Society Conference",
+            "page": 14,
+            "file": "V1_1914_Jun_07_Art_Notes_on_the_Relief_Society_Conference.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "V1_1914_Jun_00_BOARD.txt",
+          "body_len": 3732,
+          "article_words": 259,
+          "words_in_ocr": 259,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_00_CONTENTS.txt",
+          "body_len": 195,
+          "article_words": 21,
+          "words_in_ocr": 21,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_00_Misc.txt",
+          "body_len": 8704,
+          "article_words": 552,
+          "words_in_ocr": 547,
+          "pct_in_ocr": 0.9909,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Jun_01_Edit_Editorial_Insurance.txt",
+          "body_len": 11231,
+          "article_words": 646,
+          "words_in_ocr": 646,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_02_Gen_Genealogy.txt",
+          "body_len": 3464,
+          "article_words": 223,
+          "words_in_ocr": 223,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_03_HomeEthics_Home_Ethics.txt",
+          "body_len": 4369,
+          "article_words": 271,
+          "words_in_ocr": 271,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_04_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 7672,
+          "article_words": 520,
+          "words_in_ocr": 520,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_05_Lit_Literature.txt",
+          "body_len": 1532,
+          "article_words": 129,
+          "words_in_ocr": 129,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_06_Art_Art_and_Architecture.txt",
+          "body_len": 1096,
+          "article_words": 100,
+          "words_in_ocr": 100,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jun_07_Art_Notes_on_the_Relief_Society_Conference.txt",
+          "body_len": 3694,
+          "article_words": 273,
+          "words_in_ocr": 273,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "July": {
+      "total": 9,
+      "articles": 6,
+      "special": 3,
+      "ok": 9,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No7_July_1914.txt",
+      "ocr_chars": 39227,
+      "contents_xref": {
+        "entries_in_contents": 5,
+        "matched": 5,
+        "match_details": [
+          {
+            "title": "Loyalty",
+            "page": 1,
+            "file": "V1_1914_Jul_01_Art_Loyalty.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial Success",
+            "page": 3,
+            "file": "V1_1914_Jul_02_Edit_Editorial_Success.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Health and Hygiene  Lesson II 5 Lesson III",
+            "page": 8,
+            "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+            "score": 0.8
+          },
+          {
+            "title": "Lesson IV",
+            "page": 11,
+            "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes for Officers",
+            "page": 11,
+            "file": "V1_1914_Jul_06_Art_Notes_for_Officers.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Jul_04_Art_Lesson_III.txt",
+          "V1_1914_Jul_05_Art_Lesson_IV.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Jul_00_BOARD.txt",
+          "body_len": 3734,
+          "article_words": 258,
+          "words_in_ocr": 258,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_00_CONTENTS.txt",
+          "body_len": 147,
+          "article_words": 14,
+          "words_in_ocr": 14,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_00_Misc.txt",
+          "body_len": 14395,
+          "article_words": 822,
+          "words_in_ocr": 816,
+          "pct_in_ocr": 0.9927,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Jul_01_Art_Loyalty.txt",
+          "body_len": 3749,
+          "article_words": 290,
+          "words_in_ocr": 290,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_02_Edit_Editorial_Success.txt",
+          "body_len": 5372,
+          "article_words": 323,
+          "words_in_ocr": 323,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_03_Art_Health_and_Hygiene_Lesson_II.txt",
+          "body_len": 5672,
+          "article_words": 412,
+          "words_in_ocr": 410,
+          "pct_in_ocr": 0.9951,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "category",
+            "sequence"
+          ]
+        },
+        {
+          "file": "V1_1914_Jul_04_Art_Lesson_III.txt",
+          "body_len": 5766,
+          "article_words": 405,
+          "words_in_ocr": 405,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_05_Art_Lesson_IV.txt",
+          "body_len": 1171,
+          "article_words": 100,
+          "words_in_ocr": 100,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Jul_06_Art_Notes_for_Officers.txt",
+          "body_len": 2284,
+          "article_words": 164,
+          "words_in_ocr": 164,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "August": {
+      "total": 10,
+      "articles": 7,
+      "special": 3,
+      "ok": 10,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No8_August_1914.txt",
+      "ocr_chars": 40689,
+      "contents_xref": {
+        "entries_in_contents": 7,
+        "matched": 7,
+        "match_details": [
+          {
+            "title": "Historical Gathering",
+            "page": 1,
+            "file": "V1_1914_Aug_01_Art_Historical_Gathering.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial Faith",
+            "page": 5,
+            "file": "V1_1914_Aug_02_Edit_Editorial_Faith.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Health and Hygiene  Lesson I",
+            "page": 7,
+            "file": "V1_1914_Aug_07_Art_Health_and_Hygiene_Lesson_I_7.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Lesson II",
+            "page": 9,
+            "file": "V1_1914_Aug_03_Art_Lesson_II.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Lesson III",
+            "page": 11,
+            "file": "V1_1914_Aug_04_Art_Lesson_III.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Work and Business  Lesson I",
+            "page": 13,
+            "file": "V1_1914_Aug_05_Art_Work_and_Business_Lesson_I.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Salt Lake City's Fly Campaign",
+            "page": 14,
+            "file": "V1_1914_Aug_06_Art_Salt_Lake_Citys_Fly_Campaign.txt",
+            "score": 0.8
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "V1_1914_Aug_00_BOARD.txt",
+          "body_len": 3572,
+          "article_words": 252,
+          "words_in_ocr": 252,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_00_CONTENTS.txt",
+          "body_len": 204,
+          "article_words": 19,
+          "words_in_ocr": 19,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_00_Misc.txt",
+          "body_len": 18112,
+          "article_words": 774,
+          "words_in_ocr": 767,
+          "pct_in_ocr": 0.991,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "bulle",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Aug_01_Art_Historical_Gathering.txt",
+          "body_len": 9000,
+          "article_words": 570,
+          "words_in_ocr": 570,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_02_Edit_Editorial_Faith.txt",
+          "body_len": 4685,
+          "article_words": 323,
+          "words_in_ocr": 323,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_03_Art_Lesson_II.txt",
+          "body_len": 3225,
+          "article_words": 243,
+          "words_in_ocr": 243,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_04_Art_Lesson_III.txt",
+          "body_len": 3555,
+          "article_words": 256,
+          "words_in_ocr": 256,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_05_Art_Work_and_Business_Lesson_I.txt",
+          "body_len": 218,
+          "article_words": 26,
+          "words_in_ocr": 26,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Aug_06_Art_Salt_Lake_Citys_Fly_Campaign.txt",
+          "body_len": 4944,
+          "article_words": 342,
+          "words_in_ocr": 341,
+          "pct_in_ocr": 0.9971,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "bulle"
+          ]
+        },
+        {
+          "file": "V1_1914_Aug_07_Art_Health_and_Hygiene_Lesson_I_7.txt",
+          "body_len": 6039,
+          "article_words": 424,
+          "words_in_ocr": 424,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "September": {
+      "total": 11,
+      "articles": 8,
+      "special": 3,
+      "ok": 11,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No9_September_1914.txt",
+      "ocr_chars": 46029,
+      "contents_xref": {
+        "entries_in_contents": 9,
+        "matched": 8,
+        "match_details": [
+          {
+            "title": "The Grain Question",
+            "page": 1,
+            "file": "V1_1914_Sep_01_Art_The_Grain_Question.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial War",
+            "page": 3,
+            "file": "V1_1914_Sep_02_Edit_Editorial_War.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Great American Marine Painters",
+            "page": 5,
+            "file": "V1_1914_Sep_03_Art_Great_American_Marine_Painters.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Heirship",
+            "page": 8,
+            "file": "V1_1914_Sep_04_Art_Heirship.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Ethics",
+            "page": 10,
+            "file": "V1_1914_Sep_05_HomeEthics_Home_Ethics.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening",
+            "page": 13,
+            "file": "V1_1914_Sep_06_HomeGarden_Home_Gardening.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 15,
+            "file": "V1_1914_Sep_07_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society Nurse School",
+            "page": 18,
+            "file": "V1_1914_Sep_08_Art_Relief_Society_Nurse_School.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [
+          {
+            "title": "Title Page Number:",
+            "page": null
+          }
+        ],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "V1_1914_Sep_00_BOARD.txt",
+          "body_len": 3691,
+          "article_words": 262,
+          "words_in_ocr": 262,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_00_CONTENTS.txt",
+          "body_len": 206,
+          "article_words": 24,
+          "words_in_ocr": 24,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_00_Misc.txt",
+          "body_len": 8140,
+          "article_words": 498,
+          "words_in_ocr": 491,
+          "pct_in_ocr": 0.9859,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "back",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Sep_01_Art_The_Grain_Question.txt",
+          "body_len": 4711,
+          "article_words": 342,
+          "words_in_ocr": 342,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_02_Edit_Editorial_War.txt",
+          "body_len": 5364,
+          "article_words": 390,
+          "words_in_ocr": 390,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_03_Art_Great_American_Marine_Painters.txt",
+          "body_len": 6344,
+          "article_words": 457,
+          "words_in_ocr": 457,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_04_Art_Heirship.txt",
+          "body_len": 7134,
+          "article_words": 426,
+          "words_in_ocr": 426,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_05_HomeEthics_Home_Ethics.txt",
+          "body_len": 5835,
+          "article_words": 383,
+          "words_in_ocr": 383,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_06_HomeGarden_Home_Gardening.txt",
+          "body_len": 4516,
+          "article_words": 336,
+          "words_in_ocr": 336,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_07_Lit_Literature.txt",
+          "body_len": 1858,
+          "article_words": 139,
+          "words_in_ocr": 139,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Sep_08_Art_Relief_Society_Nurse_School.txt",
+          "body_len": 1420,
+          "article_words": 120,
+          "words_in_ocr": 120,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "October": {
+      "total": 12,
+      "articles": 9,
+      "special": 3,
+      "ok": 12,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No10_October_1914.txt",
+      "ocr_chars": 40567,
+      "contents_xref": {
+        "entries_in_contents": 8,
+        "matched": 8,
+        "match_details": [
+          {
+            "title": "Editorial",
+            "page": 1,
+            "file": "V1_1914_Oct_01_Edit_Editorial.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Work and Business",
+            "page": 2,
+            "file": "V1_1914_Oct_02_Art_Work_and_Business.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy and Testimony",
+            "page": 3,
+            "file": "V1_1914_Oct_03_Gen_Genealogy_and_Testimony.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art",
+            "page": 4,
+            "file": "V1_1914_Oct_02_Art_Work_and_Business.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 8,
+            "file": "V1_1914_Oct_05_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home-Ethics",
+            "page": 9,
+            "file": "V1_1914_Oct_07_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 11,
+            "file": "V1_1914_Oct_07_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notices 13-14",
+            "page": null,
+            "file": "V1_1914_Oct_08_Notice_Notices.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Oct_04_Art_Art.txt",
+          "V1_1914_Oct_06_HomeEthics_HomeEthics.txt",
+          "V1_1914_Oct_09_Art_ANNOUNCEMENT.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Oct_00_BOARD.txt",
+          "body_len": 3733,
+          "article_words": 258,
+          "words_in_ocr": 258,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_00_CONTENTS.txt",
+          "body_len": 166,
+          "article_words": 18,
+          "words_in_ocr": 18,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_00_Misc.txt",
+          "body_len": 12124,
+          "article_words": 710,
+          "words_in_ocr": 704,
+          "pct_in_ocr": 0.9915,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Oct_01_Edit_Editorial.txt",
+          "body_len": 3454,
+          "article_words": 265,
+          "words_in_ocr": 265,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_02_Art_Work_and_Business.txt",
+          "body_len": 264,
+          "article_words": 34,
+          "words_in_ocr": 34,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_03_Gen_Genealogy_and_Testimony.txt",
+          "body_len": 3664,
+          "article_words": 157,
+          "words_in_ocr": 157,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_04_Art_Art.txt",
+          "body_len": 7857,
+          "article_words": 567,
+          "words_in_ocr": 567,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_05_Lit_Literature.txt",
+          "body_len": 1610,
+          "article_words": 102,
+          "words_in_ocr": 102,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_06_HomeEthics_HomeEthics.txt",
+          "body_len": 4943,
+          "article_words": 352,
+          "words_in_ocr": 351,
+          "pct_in_ocr": 0.9972,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "neg"
+          ]
+        },
+        {
+          "file": "V1_1914_Oct_07_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 5452,
+          "article_words": 389,
+          "words_in_ocr": 389,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_08_Notice_Notices.txt",
+          "body_len": 4946,
+          "article_words": 403,
+          "words_in_ocr": 403,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Oct_09_Art_ANNOUNCEMENT.txt",
+          "body_len": 606,
+          "article_words": 57,
+          "words_in_ocr": 57,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "November": {
+      "total": 12,
+      "articles": 9,
+      "special": 3,
+      "ok": 11,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol1_No11_November_1914.txt",
+      "ocr_chars": 43604,
+      "contents_xref": {
+        "entries_in_contents": 9,
+        "matched": 9,
+        "match_details": [
+          {
+            "title": "Remarks Pres. Emmeline B. Wells",
+            "page": 1,
+            "file": "V1_1914_Nov_09_Art_Remarks_Pres_Emmeline_B_Wells_1.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial",
+            "page": 4,
+            "file": "V1_1914_Nov_01_Edit_Editorial.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy and Testimony",
+            "page": 5,
+            "file": "V1_1914_Nov_02_Gen_Genealogy_and_Testimony.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home-Ethics",
+            "page": 6,
+            "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 6,
+            "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 8,
+            "file": "V1_1914_Nov_05_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art",
+            "page": 9,
+            "file": "V1_1914_Nov_06_Art_Art.txt",
+            "score": 1.0
+          },
+          {
+            "title": "October Conference",
+            "page": 10,
+            "file": "V1_1914_Nov_07_Art_October_Conference.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notices",
+            "page": 14,
+            "file": "V1_1914_Nov_08_Notice_Notices.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Nov_03_HomeEthics_HomeEthics.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Nov_00_BOARD.txt",
+          "body_len": 3770,
+          "article_words": 264,
+          "words_in_ocr": 264,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_00_CONTENTS.txt",
+          "body_len": 202,
+          "article_words": 22,
+          "words_in_ocr": 22,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_00_Misc.txt",
+          "body_len": 18647,
+          "article_words": 917,
+          "words_in_ocr": 911,
+          "pct_in_ocr": 0.9935,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "poem",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Nov_01_Edit_Editorial.txt",
+          "body_len": 2355,
+          "article_words": 187,
+          "words_in_ocr": 187,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_02_Gen_Genealogy_and_Testimony.txt",
+          "body_len": 4606,
+          "article_words": 312,
+          "words_in_ocr": 312,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_03_HomeEthics_HomeEthics.txt",
+          "body_len": 10730,
+          "article_words": 723,
+          "words_in_ocr": 723,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "MERGED(MULTI_LESSON(2))"
+          ],
+          "is_special": false,
+          "remediation": "re_extract",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 4356,
+          "article_words": 354,
+          "words_in_ocr": 354,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_05_Lit_Literature.txt",
+          "body_len": 4300,
+          "article_words": 308,
+          "words_in_ocr": 308,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Nov_06_Art_Art.txt",
+          "body_len": 3996,
+          "article_words": 263,
+          "words_in_ocr": 262,
+          "pct_in_ocr": 0.9962,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "arth"
+          ]
+        },
+        {
+          "file": "V1_1914_Nov_07_Art_October_Conference.txt",
+          "body_len": 4945,
+          "article_words": 358,
+          "words_in_ocr": 357,
+          "pct_in_ocr": 0.9972,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "ins"
+          ]
+        },
+        {
+          "file": "V1_1914_Nov_08_Notice_Notices.txt",
+          "body_len": 4943,
+          "article_words": 379,
+          "words_in_ocr": 378,
+          "pct_in_ocr": 0.9974,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "charit"
+          ]
+        },
+        {
+          "file": "V1_1914_Nov_09_Art_Remarks_Pres_Emmeline_B_Wells_1.txt",
+          "body_len": 9120,
+          "article_words": 549,
+          "words_in_ocr": 549,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "December": {
+      "total": 13,
+      "articles": 10,
+      "special": 3,
+      "ok": 13,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol1_No12_December_1914.txt",
+      "ocr_chars": 42413,
+      "contents_xref": {
+        "entries_in_contents": 9,
+        "matched": 9,
+        "match_details": [
+          {
+            "title": "Thoughts and Reflections",
+            "page": 1,
+            "file": "V1_1914_Dec_01_Art_Thoughts_and_Reflections.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial Star of Bethlehem",
+            "page": 3,
+            "file": "V1_1914_Dec_02_Edit_Editorial_Star_of_Bethlehem.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Work and Business",
+            "page": 5,
+            "file": "V1_1914_Dec_03_Art_Work_and_Business.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Genealogy and Testimony",
+            "page": 5,
+            "file": "V1_1914_Dec_04_Gen_Genealogy_and_Testimony.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home-Ethics",
+            "page": 7,
+            "file": "V1_1914_Dec_10_HomeEthics_Home_Ethics_and_Gardening_The_Christmas.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Gardening for Women",
+            "page": 9,
+            "file": "V1_1914_Dec_06_HomeGarden_Home_Gardening_for_Women.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Literature",
+            "page": 12,
+            "file": "V1_1914_Dec_07_Lit_Literature.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Art and Architecture",
+            "page": 14,
+            "file": "V1_1914_Dec_08_Art_Art_and_Architecture.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Note",
+            "page": 15,
+            "file": "V1_1914_Dec_09_Art_Note.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "V1_1914_Dec_05_HomeEthics_HomeEthics.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "V1_1914_Dec_00_BOARD.txt",
+          "body_len": 3407,
+          "article_words": 242,
+          "words_in_ocr": 242,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_00_CONTENTS.txt",
+          "body_len": 223,
+          "article_words": 23,
+          "words_in_ocr": 23,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_00_Misc.txt",
+          "body_len": 10964,
+          "article_words": 514,
+          "words_in_ocr": 509,
+          "pct_in_ocr": 0.9903,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "additional",
+            "advertisements",
+            "consolidated",
+            "files",
+            "separate"
+          ]
+        },
+        {
+          "file": "V1_1914_Dec_01_Art_Thoughts_and_Reflections.txt",
+          "body_len": 4698,
+          "article_words": 376,
+          "words_in_ocr": 376,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_02_Edit_Editorial_Star_of_Bethlehem.txt",
+          "body_len": 5184,
+          "article_words": 373,
+          "words_in_ocr": 373,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_03_Art_Work_and_Business.txt",
+          "body_len": 465,
+          "article_words": 42,
+          "words_in_ocr": 42,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_04_Gen_Genealogy_and_Testimony.txt",
+          "body_len": 3796,
+          "article_words": 268,
+          "words_in_ocr": 264,
+          "pct_in_ocr": 0.9851,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "article",
+            "category",
+            "sequence",
+            "title"
+          ]
+        },
+        {
+          "file": "V1_1914_Dec_05_HomeEthics_HomeEthics.txt",
+          "body_len": 4950,
+          "article_words": 417,
+          "words_in_ocr": 416,
+          "pct_in_ocr": 0.9976,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "obser"
+          ]
+        },
+        {
+          "file": "V1_1914_Dec_06_HomeGarden_Home_Gardening_for_Women.txt",
+          "body_len": 6432,
+          "article_words": 437,
+          "words_in_ocr": 437,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_07_Lit_Literature.txt",
+          "body_len": 4702,
+          "article_words": 316,
+          "words_in_ocr": 316,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_08_Art_Art_and_Architecture.txt",
+          "body_len": 2918,
+          "article_words": 245,
+          "words_in_ocr": 245,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_09_Art_Note.txt",
+          "body_len": 6528,
+          "article_words": 432,
+          "words_in_ocr": 432,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "V1_1914_Dec_10_HomeEthics_Home_Ethics_and_Gardening_The_Christmas.txt",
+          "body_len": 4931,
+          "article_words": 418,
+          "words_in_ocr": 418,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    }
+  }
+}

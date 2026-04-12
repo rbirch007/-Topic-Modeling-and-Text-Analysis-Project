@@ -1,0 +1,205 @@
+{
+  "volume": 57,
+  "month": "March",
+  "year": 1970,
+  "total_files_checked": 28,
+  "files_correct": [
+    "V57_03_01_Poem_Walk_Livingston.txt",
+    "V57_03_03_SpFt_Charity_McConkie.txt",
+    "V57_03_04_Poem_Between_Brown.txt",
+    "V57_03_05_SpFt_My_Yoke_Smith.txt",
+    "V57_03_06_SpFt_Red_Henderson.txt",
+    "V57_03_07_GenFt_Editorial_Sharp.txt",
+    "V57_03_15_GenFt_Sea_and_Noall.txt",
+    "V57_03_16_GenFt_Wall.txt",
+    "V57_03_17_GenFt_San_Pioneers.txt",
+    "V57_03_18_GenFt_The_Strang.txt",
+    "V57_03_19_GenFt_A_Wilson.txt",
+    "V57_03_20_Fict_Mamas_McKune.txt",
+    "V57_03_21_Poem_In_the_Shomaker.txt",
+    "V57_03_22_Fict_Common_Bell.txt",
+    "V57_03_24_Fict_Jerusha_Todd.txt",
+    "V57_03_25_GenFt_Notes_Activities.txt",
+    "V57_03_26_GenFt_Homemaking_Taylor.txt",
+    "V57_03_27_GenFt_Birthday.txt",
+    "V57_03_28_Poem_Easter_Robinson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with publication information that should be in a separate file",
+      "action": "trim_start",
+      "text": "Published monthly by THE GENERAL BOARD OF RELIEF SOCIETY",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and bleeds into next article",
+      "action": "trim_end",
+      "text": "Relief Society and I still receive fillment of the nm, omise Your very sister Belle Spafford, whom, with you, I admire and appreciate, has spoken of the compassionate services of this great organization. If 1 may be given guidance by the Spirit, if 1 may be given utterance, due course, to eternal reward in our Father's kingdom. As I thought and pondered what I should say today; questions like this came into my mind: what does the Relief Society mean to me? What does it mean influence and the great organization which Sister Spafford so over ably presides. Long service in a heaven-originated, a priesthood-led, and a gospel-oriented organization changes the lives of people and, providentially for me, it has changed the lives of those who are nearest and dearest to me. What it has done for them it can do and has done for great hosts of you. Now for a text, and also to set the tone for what I hope I may be guided in saying, I shall read to you a brief statement from the journal of my father in which he speaks of his mother and of my grandmother. My grandmother, Emma Somerville McConkie, was a ward Relief Society president in Moab, Utah, many years ago. At the time of this experience, she was a widow. My father writes this: Mother was president of the Moab Relief Society. J B__._[a__ nonmember who opposed the Church] had married a Mormon girl. They had several children; now they had a new baby. They were very poor and Mother was going day by day to care for the child and to take them baskets of food, etc. Mother herself was ill, and more than once was hardly able to get home after doing the work at the J BW home. One day she returned home especially tired and weary. She slept in her chair. She dreamed she was bathing a baby which she discovered was the Christ Child. She thought, Oh, what a great honor to thus serve the very Christ! As she held the baby in her lap, she was all but overcome. She thought, who else has actually held the Christ Child? Unspeakable joy filled her whole being. She was aflame with the glory of the Lord. It seemed that the very marrow in her bones would melt. Her joy was so great it awakened her. As she awoke, these words were spoken to her, \"Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto Ld me.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_08_GenFt_Notes_Arts.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Editorial article instead of Notes to the Field",
+      "action": "replace_content",
+      "text": "BOUND VOLUMES OF 1969 MAGAZINES Relief Society officers and members who wish to have their 1969 issues of The Relief Society Magazine bound may do so through The Deseret News Press, 1600 Empire Road, Salt Lake City, Utah 84104. (See advertisement in this issue of the Magazine, page 238.) The cost of binding the twelve issues in a permanent cloth binding is $3.25, leather $5.25, including the index. A limited number of 1969 Magazines are available at the offices of the General Board of Relief Society, 76 North Main Street, Salt Lake City, Utah 84111, for $2.00 for twelve issues. Copies of The Relief Society Magazine index for personal binding can be secured from the General Board office for 30¢ prepaid. Volumes bound at the Deseret News Press include a free index. Brigham Young University Second Annual Festival of Mormon Arts The Second Annual Festival of Mormon Arts will be presented for six weeks at Brigham Young University beginning March 18, and continuing through April 30. Included in the programs and displays will be past and contemporary art, ballets, choral concerts, plays, poetry symposiums, symposiums on arts, dramatic and musical productions, an opera, and concerts by the Tabernacle Choir, the opening event, and the Utah Symphony Orchestra, the concluding event. Bishops and stake presidents will be honored (an annual event at BYU) during April Conference with an assembly of drama and music. Details can be obtained by writing Dr. Lael Woodbury, Chairman, Mormon Arts Festival, Brigham Young University, Provo, Utah 84601. 180",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_03_09_GenFt_Womans_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Editorial article instead of Woman's Sphere",
+      "action": "replace_content",
+      "text": "Ramona W. Cannon Mrs. LaVern W. Parmley, General President of the Latter-day Saint Primary Association, received an \"Outstanding Citizen Award\" from Region Twelve of Boy Scouts of America in November, in Salt Lake City, Utah. She was cited for her many years of service to the youth of the region. Mrs. Parmley was the first woman ever to serve on a national scouting committee. She said that fifty thousand cub scouts are being trained in the Primary and that eighty-five per cent of the boys are being graduated from Primary as Second Class Scouts. Mrs. Frieda Ward is the capable administrator of the Spafford Memorial Children's Hospital at Jerusalem. She is the daughter of the late Bertha Spafford Vester, founder of the hospital, who also sponsored foundling homes, clinics, and soup. Kitchens. The hospital cares for Arab and Israeli children and any others in need of help. It is supported by a fundraising organization, of which noted explorer and lecturer Lowell Thomas is president. Sylvia Porter, brilliant syndicated columnist on financial matters, recently wrote five frank articles analyzing the economy of 1969 as compared to the 1929 stock market crash in the United States, followed by a world depression. No rules protected the stock-buying public in 1929, she points out. Now there are stringent protective rules. Also the self-regulatory powers of the markets and exchanges have become progressively tighter. The disciplinary powers of these self-regulatory agencies have never been tougher. Therefore, a market crash today is far less likely than in 1929. In 1969 Janet Lynn, fifteen, became the ladies Figure Skating champion. Also Diane Crump, the first girl jockey in a Hialeah horse race, came in tenth. Eight girls enrolled in the Temple University ROTC program. Vivien Kellems, seventytwo, waged a war against unfair taxes for single persons. Shirley R. Heinze and Frances V. Chaffin were the first women to be graduated from the United States Army Command School. Both served in Vietnam. For the second time in history, the president of the United Nations is a woman, Angie E. Brooks, Assistant Secretary of State for Liberia. Dr. Lois M. Jones, Kay L. Lindsay, Eileen R. McSaveny, and Terry Lee Tickhill became the first women to be given a natural science grant to study the Antarctic Regions. Mrs. Cynthia Clark Wedel was elected president of the National Council of Churches, another historic first. Miss Maxine Jones, of Provo, Utah, entered the University of Utah Medical School's Rehabilitation Center almost totally paralyzed from an automobile accident. After six months' therapy and heroic personal effort, she could move her arms freely and walk with the aid of a crutch. She expects to become completely normal and hopes to establish a foundation for more studies on nerve tissue regeneration, to help other such cases. The Center is the only \"wide team'' approach rehabilitation center between the Mississippi and the Pacific Coast. ''Wide team'' means that patients receive help, as needed, from physical, speech, OCCupational, and other kinds of therapists, and from social workers, psychologists, ~ nurses, and physicians. In this team are a number of Latter-day Saint men and women. 181",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_03_10_SpFt_Relief_Miltenberge.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Editorial article",
+      "action": "trim_start",
+      "text": "Relief Society member, be she one who leads or one who follows.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_11_GenFt_Twelve_Olson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains statistical data instead of Twelve Months of Homemaking content",
+      "action": "note",
+      "text": "This file appears to contain statistical data from the Relief Society World-Wide report rather than the expected homemaking content. The actual Twelve Months of Homemaking article may be missing from the OCR or merged elsewhere.",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_03_12_GenFt_Stitchery_Cottle.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with statistical data instead of stitchery content",
+      "action": "trim_start",
+      "text": "49 1,427 2,045 51,496 49,686 1,810 122 BRILLIANT FLOWERS FOR ADORNING A WALL Highland StakeEva A. Sipkema, President Representative design by Ina Cannon A woman's own imagination and creativeness can be used to design a lovely picture such as this. Two-thirds of a yard of velvet, polished cotton, or other attractive material could be used as background. The leaves and stems were first embroidered on the material. The flowers were made on a loom (the same type as is used to make straw flowers) in three different sizes and in blending colors. The flowers were glued onto the material. Odds and ends of yarn can be used for making the flowers. The completed design is then mounted in an appropriate frame. A SCENIC WASTEBASKET Monument Park West Stake  Orlene J. Pulsen, former President Creative Handicraft by Afton Nelson This \"travelogue wastebasket\" makes an attractive addition to any young person's room. Sister Nelson's son rode his bicycle on an extended vacation in many parts of the United States. He mailed postcards to his mother from places visited on the tour. His mother saved the pictures and covered a wastebasket with them. They were attached with a coat of good white glue, and, when thoroughly dry, three coats of shellac were sprayed on the wastebasket. Every time the son looks at the basket he remembers his enjoyable tripand the thoughtfulness of his mother. A SHADOW BOX FOR TREASURES Bountiful South Stake Ivonne J.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_03_13_GenFt_Useful_Hakes.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Rigby, President Creative Handicraft by Coy Tyson The wooden box was painted with green water-base paint and finished with six coats of clear varnish. The lid was placed upside down and decorated by means of a decoupage process. (See \"Make Your Heirlooms With Découpage,\" by Winifred D. Anderson, March 1969, page 202.) Designs may be cut from prints of colorful pictures, classical or modern, from magazine illustrations, from greeting cards, or other sources. The basic, and larger design is placed on the top of the lid, with individual motifs cut from a duplicate pattern for placing on the inside of the lid. 194 CHRISTMAS IN IDAHO FALLS STAKE Alice B. Jones, President This beautiful display illustrates a spiritual theme for Christmas and portrays the Magi, the manger scene, and Mary riding on the donkey. The family Bible presents a reminder of the scripture telling of the birth of the Christ Child. A shining wreath of pine cones, sprayed with gold, enhances the background. The tall ornament is made of four snifters glued together and attached to a glass plate with water soluble glue. Ball tree beads and gold ornaments are used for making the looped chain decorations. Nativity figurines are placed inside the snifters. The nativity scene is made with a hexagon and three triangles cut from glass, having the triangles glued to every other side of the hexagon. The edges of the triangles have gold cording glued on them and a piece of styrofoam sprayed with gold for the base of the arrangement with gold sprayed straw on top of the base. Small gold nativity figures are placed on the straw.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_14_GenFt_Children.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with financial data instead of Children Prefer Color content",
+      "action": "trim_start",
+      "text": "d by 7,298 organizations) - ----------77 7777 TT AssetsAugust 31, 1969",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_03_23_GenFt_Hobby_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from Jerusha article",
+      "action": "trim_end",
+      "text": "Sister Rodgers receives much encouragement from her many friends and her husband and three sons. To them she is an example of faith and determination. 222",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 162,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Happiness, Sylvia Neale",
+      "expected_page": 238,
+      "status": "merged_with_another",
+      "merged_into": "V57_03_26_GenFt_Homemaking_Taylor.txt"
+    }
+  ],
+  "notes": "Several files contain content from other articles due to extraction errors. The statistical data from the Relief Society World-Wide report appears to have been incorrectly split across multiple files. Some homemaking content may be missing or merged with other articles.",
+  "validated_corrections": [
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with publication information that should be in a separate file",
+      "action": "trim_start",
+      "text": "Published monthly by THE GENERAL BOARD OF RELIEF SOCIETY",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_02_SpFt_In_David.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and bleeds into next article",
+      "action": "trim_end",
+      "text": "Relief Society and I still receive fillment of the nm, omise Your very sister Belle Spafford, whom, with you, I admire and appreciate, has spoken of the compassionate services of this great organization. If 1 may be given guidance by the Spirit, if 1 may be given utterance, due course, to eternal reward in our Father's kingdom. As I thought and pondered what I should say today; questions like this came into my mind: what does the Relief Society mean to me? What does it mean influence and the great organization which Sister Spafford so over ably presides. Long service in a heaven-originated, a priesthood-led, and a gospel-oriented organization changes the lives of people and, providentially for me, it has changed the lives of those who are nearest and dearest to me. What it has done for them it can do and has done for great hosts of you. Now for a text, and also to set the tone for what I hope I may be guided in saying, I shall read to you a brief statement from the journal of my father in which he speaks of his mother and of my grandmother. My grandmother, Emma Somerville McConkie, was a ward Relief Society president in Moab, Utah, many years ago. At the time of this experience, she was a widow. My father writes this: Mother was president of the Moab Relief Society. J B__._[a__ nonmember who opposed the Church] had married a Mormon girl. They had several children; now they had a new baby. They were very poor and Mother was going day by day to care for the child and to take them baskets of food, etc. Mother herself was ill, and more than once was hardly able to get home after doing the work at the J BW home. One day she returned home especially tired and weary. She slept in her chair. She dreamed she was bathing a baby which she discovered was the Christ Child. She thought, Oh, what a great honor to thus serve the very Christ! As she held the baby in her lap, she was all but overcome. She thought, who else has actually held the Christ Child? Unspeakable joy filled her whole being. She was aflame with the glory of the Lord. It seemed that the very marrow in her bones would melt. Her joy was so great it awakened her. As she awoke, these words were spoken to her, \"Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto Ld me.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_10_SpFt_Relief_Miltenberge.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Editorial article",
+      "action": "trim_start",
+      "text": "Relief Society member, be she one who leads or one who follows.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_13_GenFt_Useful_Hakes.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Rigby, President Creative Handicraft by Coy Tyson The wooden box was painted with green water-base paint and finished with six coats of clear varnish. The lid was placed upside down and decorated by means of a decoupage process. (See \"Make Your Heirlooms With Découpage,\" by Winifred D. Anderson, March 1969, page 202.) Designs may be cut from prints of colorful pictures, classical or modern, from magazine illustrations, from greeting cards, or other sources. The basic, and larger design is placed on the top of the lid, with individual motifs cut from a duplicate pattern for placing on the inside of the lid. 194 CHRISTMAS IN IDAHO FALLS STAKE Alice B. Jones, President This beautiful display illustrates a spiritual theme for Christmas and portrays the Magi, the manger scene, and Mary riding on the donkey. The family Bible presents a reminder of the scripture telling of the birth of the Christ Child. A shining wreath of pine cones, sprayed with gold, enhances the background. The tall ornament is made of four snifters glued together and attached to a glass plate with water soluble glue. Ball tree beads and gold ornaments are used for making the looped chain decorations. Nativity figurines are placed inside the snifters. The nativity scene is made with a hexagon and three triangles cut from glass, having the triangles glued to every other side of the hexagon. The edges of the triangles have gold cording glued on them and a piece of styrofoam sprayed with gold for the base of the arrangement with gold sprayed straw on top of the base. Small gold nativity figures are placed on the straw.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_03_14_GenFt_Children.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with financial data instead of Children Prefer Color content",
+      "action": "trim_start",
+      "text": "d by 7,298 organizations) - ----------77 7777 TT AssetsAugust 31, 1969",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V57_03_23_GenFt_Hobby_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from Jerusha article",
+      "action": "trim_end",
+      "text": "Sister Rodgers receives much encouragement from her many friends and her husband and three sons. To them she is an example of faith and determination. 222",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_03_12_GenFt_Stitchery_Cottle.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with statistical data instead of stitchery content",
+      "action": "trim_start",
+      "text": "49 1,427 2,045 51,496 49,686 1,810 122 BRILLIANT FLOWERS FOR ADORNING A WALL Highland StakeEva A. Sipkema, President Representative design by Ina Cannon A woman's own imagination and creativeness can be used to design a lovely picture such as this. Two-thirds of a yard of velvet, polished cotton, or other attractive material could be used as background. The leaves and stems were first embroidered on the material. The flowers were made on a loom (the same type as is used to make straw flowers) in three different sizes and in blending colors. The flowers were glued onto the material. Odds and ends of yarn can be used for making the flowers. The completed design is then mounted in an appropriate frame. A SCENIC WASTEBASKET Monument Park West Stake  Orlene J. Pulsen, former President Creative Handicraft by Afton Nelson This \"travelogue wastebasket\" makes an attractive addition to any young person's room. Sister Nelson's son rode his bicycle on an extended vacation in many parts of the United States. He mailed postcards to his mother from places visited on the tour. His mother saved the pictures and covered a wastebasket with them. They were attached with a coat of good white glue, and, when thoroughly dry, three coats of shellac were sprayed on the wastebasket. Every time the son looks at the basket he remembers his enjoyable tripand the thoughtfulness of his mother. A SHADOW BOX FOR TREASURES Bountiful South Stake Ivonne J.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

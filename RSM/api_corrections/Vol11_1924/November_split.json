@@ -1,0 +1,137 @@
+{
+  "volume": 11,
+  "month": "November",
+  "year": 1924,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.4006,
+  "files": [
+    {
+      "source_file": "November_Vol11_05_Article_Investing_in_Love_Annie_D_Palmer.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Investing in Love",
+          "category": "Article",
+          "author": "Annie D. Palmer",
+          "start_boundary": "Investing in Love Annie D. Palmer Just a",
+          "end_boundary": "an even thousand fold. The Lord be praised.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Use of Mental Tests",
+          "category": "Article",
+          "author": "Lofter Bjarnason",
+          "start_boundary": "The Use of Mental Tests By Lofter",
+          "end_boundary": "it must be administered to children in-",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "INVESTING IN LOVE",
+        "THE USE OF MENTAL TESTS"
+      ],
+      "notes": "The file contains two complete articles. The first is a long story 'Investing in Love' by Annie D. Palmer that spans most of the content. The second article 'The Use of Mental Tests' by Lofter Bjarnason begins clearly with its own title and author byline and appears to be cut off mid-sentence at the end of the file.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 34577,
+      "tier": 1,
+      "pdf_pages": [
+        653,
+        654,
+        655,
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667
+      ],
+      "api_usage": {
+        "input_tokens": 65080,
+        "output_tokens": 360,
+        "cost": 0.2006
+      }
+    },
+    {
+      "source_file": "November_Vol11_16_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for January - Lesson I (Theology and Testimony)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JANUARY. 589 of a lover",
+          "end_boundary": "14, Discuss the statement: The oil in our lamp",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for January - Lesson II (Work and Business)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in January) Work and Business",
+          "end_boundary": "LESSON II (Second Week in January) Work and Business",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for January - Lesson III (Literature)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in January) Literature Walt Whitman",
+          "end_boundary": "has he not won out? LESSON IV (Fourth",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for January - Lesson IV (Social Service) and Teachers' Topic",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in January) Social Service",
+          "end_boundary": "let us see that they are obeyed. Every",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains the complete Guide Lessons for January with 4 distinct lesson sections: Lesson I (Theology), Lesson II (Work and Business - appears to be just a header with no content), Lesson III (Literature focusing on Walt Whitman), and Lesson IV (Social Service on family budgets plus Teachers' Topic on health). The lessons are clearly delineated by Roman numeral headings and subject matter changes.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 29233,
+      "tier": 1,
+      "pdf_pages": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75
+      ],
+      "api_usage": {
+        "input_tokens": 63663,
+        "output_tokens": 598,
+        "cost": 0.2
+      }
+    }
+  ]
+}

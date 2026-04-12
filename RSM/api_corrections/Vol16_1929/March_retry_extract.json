@@ -1,0 +1,38 @@
+{
+  "volume": 16,
+  "month": "March",
+  "year": 1929,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0314,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Guide Lessons for May - Lesson III: Literature - Joseph and His Brethren",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": "Louis N. Parker",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages thoroughly. The pages contain advertisements (Troy Laundry, R.E. Brewer Co., Utah Nursery Co.), the magazine cover/contents page, a frontispiece photo of Mount Timpanogos, and the beginning of an article about Mary E. Richmond by Amy W. Evans. The Guide Lessons for May section is not present in these particular pages, though it is listed in the table of contents as starting on page 153.",
+      "order": "c",
+      "pdf_pages": [
+        143,
+        144,
+        145,
+        146,
+        147
+      ],
+      "source_file": "March_Vol16_10_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "api_usage": {
+        "input_tokens": 9510,
+        "output_tokens": 192,
+        "cost": 0.0314
+      }
+    }
+  ]
+}

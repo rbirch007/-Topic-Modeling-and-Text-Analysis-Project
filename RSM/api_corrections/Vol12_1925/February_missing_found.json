@@ -1,0 +1,60 @@
+{
+  "volume": 12,
+  "month": "February",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.048,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Love's Romance Alfred Lambourne",
+      "printed_page": 53,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alfred Lambourne",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 63-66, but the article 'Love's Romance' by Alfred Lambourne is listed on page 53 in the table of contents. The images provided do not contain page 53, so the article cannot be extracted from these particular pages.",
+      "api_usage": {
+        "input_tokens": 7249,
+        "output_tokens": 152,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "title": "The Editor Abroad Alice Louise Reynolds",
+      "printed_page": 55,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alice Louise Reynolds",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 63-66). The article should appear on page 55 according to the table of contents, but the provided images start from page 63, so the article content is not available in these images.",
+      "api_usage": {
+        "input_tokens": 7249,
+        "output_tokens": 147,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        63,
+        64,
+        65,
+        66
+      ]
+    }
+  ]
+}

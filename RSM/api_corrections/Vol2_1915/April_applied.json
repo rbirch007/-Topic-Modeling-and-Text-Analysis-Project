@@ -1,0 +1,32 @@
+{
+  "volume": 2,
+  "month": "April",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol2_03_Article_Thanksgiving_Marie_Jensen.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol2_08_Article_The_Notes_Word_of_Wisdom_from_the_Field_Maud_Baggarley_193.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4871 chars removed)"
+    },
+    {
+      "file": "April_Vol2_09_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1264 chars removed)"
+    },
+    {
+      "file": "April_Vol2_11_Article_Music_Spring_B._Cecil_Gates.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4049 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 9,
+  "month": "June",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.039,
+  "files": [
+    {
+      "source_file": "June_Vol1_03_GENERAL_CONFERENCE.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "General Conference of Relief Society",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Vol. IX JUNE, 1922 No.6 General Conference of Relief",
+          "end_boundary": "presenting a check of $1.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GENERAL CONFERENCE OF RELIEF SOCIETY"
+      ],
+      "notes": "This file contains a single comprehensive article about the Relief Society General Conference held April 4-5, 1922. The article includes multiple sessions, reports from various stake presidents, instructions, and policy changes. Despite its length and multiple sections, it is one cohesive conference report written by Amy Brown Lyman as General Secretary.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 121513,
+      "tier": 3,
+      "api_usage": {
+        "input_tokens": 11752,
+        "output_tokens": 250,
+        "cost": 0.039
+      }
+    }
+  ]
+}

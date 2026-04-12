@@ -1,0 +1,411 @@
+{
+  "volume": 3,
+  "month": "November",
+  "year": 1916,
+  "total": 20,
+  "ok": 18,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "November_Vol3_00_BOARD.txt",
+      "body_len": 715,
+      "article_words": 66,
+      "words_in_ocr": 66,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_00_CONTENTS.txt",
+      "body_len": 556,
+      "article_words": 64,
+      "words_in_ocr": 64,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_01_Article_For_Right_Annie_D._Palmer.txt",
+      "body_len": 1399,
+      "article_words": 122,
+      "words_in_ocr": 122,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+      "body_len": 7110,
+      "article_words": 548,
+      "words_in_ocr": 548,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+      "body_len": 10251,
+      "article_words": 657,
+      "words_in_ocr": 657,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_04_Article_A_Child's_Record_Maud_Baggarley.txt",
+      "body_len": 5012,
+      "article_words": 398,
+      "words_in_ocr": 398,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_05_Article_Their_Thanksgiving_Ida_S._Peay.txt",
+      "body_len": 16563,
+      "article_words": 947,
+      "words_in_ocr": 947,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_06_Article_Fear_in_a_Little_Child_Lily_Wright_Snow.txt",
+      "body_len": 7094,
+      "article_words": 452,
+      "words_in_ocr": 452,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_08_Article_The_Cliff_Dwellers_Susa_Young_Gates.txt",
+      "body_len": 28595,
+      "article_words": 1440,
+      "words_in_ocr": 1440,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_09a_Editorial_Editorial_The_Church_Militant.txt",
+      "body_len": 3892,
+      "article_words": 299,
+      "words_in_ocr": 299,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_a_a.txt",
+      "body_len": 5906,
+      "article_words": 414,
+      "words_in_ocr": 414,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_b.txt",
+      "body_len": 4292,
+      "article_words": 313,
+      "words_in_ocr": 200,
+      "pct_in_ocr": 0.639,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(64%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "applicable",
+        "appreciation",
+        "arise",
+        "beauty",
+        "bringeth",
+        "buyeth",
+        "capability",
+        "capable",
+        "citizen",
+        "clothed"
+      ]
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_c.txt",
+      "body_len": 10660,
+      "article_words": 818,
+      "words_in_ocr": 818,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 2385,
+      "article_words": 183,
+      "words_in_ocr": 183,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "body_len": 17272,
+      "article_words": 1060,
+      "words_in_ocr": 1060,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_12_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "body_len": 5120,
+      "article_words": 402,
+      "words_in_ocr": 402,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+      "body_len": 351,
+      "article_words": 37,
+      "words_in_ocr": 37,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt",
+      "body_len": 9361,
+      "article_words": 626,
+      "words_in_ocr": 626,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol3_16_Home_Science_Home_Science_Department_Janette_A_Hyde.txt",
+      "body_len": 1714,
+      "article_words": 136,
+      "words_in_ocr": 95,
+      "pct_in_ocr": 0.6985,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(70%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "attractively",
+        "autumn",
+        "basted",
+        "centerpiece",
+        "chrysanthemums",
+        "cocktail",
+        "coffee",
+        "combination",
+        "cranberry",
+        "creamed"
+      ]
+    },
+    {
+      "file": "November_Vol3_Misc.txt",
+      "body_len": 4205,
+      "article_words": 321,
+      "words_in_ocr": 319,
+      "pct_in_ocr": 0.9938,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "directory"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol3_No11_November_1916.txt",
+    "ocr_chars": 140314,
+    "ocr_unique_words": 4868,
+    "contents_xref": {
+      "entries_in_contents": 16,
+      "matched": 14,
+      "match_details": [
+        {
+          "title": "For Right Annie D. Palmer",
+          "page": 601,
+          "file": "November_Vol3_01_Article_For_Right_Annie_D._Palmer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "War as it Was Frontispiece",
+          "page": null,
+          "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Call to Arms Edna Coray",
+          "page": 603,
+          "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+          "score": 1.0
+        },
+        {
+          "title": "How Betty Helped Elsie Chamberlain Carroll",
+          "page": 606,
+          "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Child's Record Maud Baggarley",
+          "page": 610,
+          "file": "November_Vol3_04_Article_A_Child's_Record_Maud_Baggarley.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Their Thanksgiving Ida S. Peay",
+          "page": 612,
+          "file": "November_Vol3_05_Article_Their_Thanksgiving_Ida_S._Peay.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Fear in a Little Child Lily Wright Snow",
+          "page": 619,
+          "file": "November_Vol3_06_Article_Fear_in_a_Little_Child_Lily_Wright_Snow.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Cliff Dwellers Susa Young Gates",
+          "page": 623,
+          "file": "November_Vol3_08_Article_The_Cliff_Dwellers_Susa_Young_Gates.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Home Science Department Janette A. Hyde",
+          "page": 633,
+          "file": "November_Vol3_16_Home_Science_Home_Science_Department_Janette_A_Hyde.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 635,
+          "file": "November_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Current Topics James H. Anderson",
+          "page": 639,
+          "file": "November_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mothers in Israel",
+          "page": 642,
+          "file": "November_Vol3_12_Mothers_in_Israel_Mothers_in_Israel.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial: The Church Militant",
+          "page": 648,
+          "file": "November_Vol3_09a_Editorial_Editorial_The_Church_Militant.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons",
+          "page": 650,
+          "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_a_a.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Paradise Lost",
+          "page": 622
+        },
+        {
+          "title": "Music Page",
+          "page": 647
+        }
+      ],
+      "extra_files": [
+        "November_Vol3_09b_Guide_Lessons_Guide_Lessons_b.txt",
+        "November_Vol3_09b_Guide_Lessons_Guide_Lessons_c.txt",
+        "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+        "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt"
+      ]
+    }
+  }
+}

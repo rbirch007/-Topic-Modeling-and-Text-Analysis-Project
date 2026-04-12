@@ -1,0 +1,480 @@
+{
+  "volume": 15,
+  "month": "November",
+  "year": 1928,
+  "total": 25,
+  "ok": 22,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "November_Vol15_00_BOARD.txt",
+      "body_len": 682,
+      "article_words": 67,
+      "words_in_ocr": 67,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_00_CONTENTS.txt",
+      "body_len": 963,
+      "article_words": 107,
+      "words_in_ocr": 107,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_00_Misc.txt",
+      "body_len": 1911,
+      "article_words": 183,
+      "words_in_ocr": 181,
+      "pct_in_ocr": 0.9891,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "directory"
+      ]
+    },
+    {
+      "file": "November_Vol15_01_Frontispiece_Aspens_of_Timpanogos_Frontispiece.txt",
+      "body_len": 34,
+      "article_words": 4,
+      "words_in_ocr": 4,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(34)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_02a_Poem_Disarm.txt",
+      "body_len": 1605,
+      "article_words": 151,
+      "words_in_ocr": 151,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_02b_Article_Ina_Coolbrith.txt",
+      "body_len": 8664,
+      "article_words": 611,
+      "words_in_ocr": 611,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_03_Article_Ina_Coolbrith_Kate_Thomas.txt",
+      "body_len": 3278,
+      "article_words": 288,
+      "words_in_ocr": 288,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_04_Article_Thanksgiving_Mrs_Merling_D_Clyde.txt",
+      "body_len": 3029,
+      "article_words": 294,
+      "words_in_ocr": 294,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_05_Article_Mother's_Outside_Interest_Katharine_C._McKay.txt",
+      "body_len": 19647,
+      "article_words": 989,
+      "words_in_ocr": 989,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(6))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_06_Editorial_Editorial—The_Red_Cross_to_the_Fore.txt",
+      "body_len": 1869,
+      "article_words": 174,
+      "words_in_ocr": 174,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_07_Article_Utah_Stake_Observes_Fiftieth_Anniversary.txt",
+      "body_len": 2498,
+      "article_words": 173,
+      "words_in_ocr": 173,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_08_Article_Our_Educational_World.txt",
+      "body_len": 2502,
+      "article_words": 219,
+      "words_in_ocr": 219,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_09_Article_Why_Make_a_Budget_Jean_Cox.txt",
+      "body_len": 14734,
+      "article_words": 681,
+      "words_in_ocr": 681,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_10_Article_Marilie's_Ghost_Helen_Kimball_Orgill.txt",
+      "body_len": 10777,
+      "article_words": 715,
+      "words_in_ocr": 715,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_11_Article_Gratitude_Julia_Collard_Baker.txt",
+      "body_len": 5689,
+      "article_words": 465,
+      "words_in_ocr": 465,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_12_Article_Pioneers_Lois_V_Hales.txt",
+      "body_len": 2339,
+      "article_words": 200,
+      "words_in_ocr": 200,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_13_Article_Pastoral_Carrie_Tanner.txt",
+      "body_len": 651,
+      "article_words": 76,
+      "words_in_ocr": 76,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_14a_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 8629,
+      "article_words": 499,
+      "words_in_ocr": 499,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_14b_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "body_len": 2033,
+      "article_words": 167,
+      "words_in_ocr": 167,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_15a_Guide_Lessons_Every_Day_Ethics_and_Practical_Religion.txt",
+      "body_len": 8687,
+      "article_words": 573,
+      "words_in_ocr": 573,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_16_Article_Work_and_Business.txt",
+      "body_len": 2019,
+      "article_words": 137,
+      "words_in_ocr": 137,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_17a_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "body_len": 14186,
+      "article_words": 755,
+      "words_in_ocr": 755,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_18_Article_Social_Service.txt",
+      "body_len": 6323,
+      "article_words": 450,
+      "words_in_ocr": 450,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_19_Article_Utah_Autumn_Josephine_G_Moench.txt",
+      "body_len": 3295,
+      "article_words": 274,
+      "words_in_ocr": 274,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol15_20_Article_Common_Prayer_May_E._Lillie.txt",
+      "body_len": 8229,
+      "article_words": 621,
+      "words_in_ocr": 621,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol15_No11_November_1928.txt",
+    "ocr_chars": 133221,
+    "ocr_unique_words": 4393,
+    "contents_xref": {
+      "entries_in_contents": 20,
+      "matched": 18,
+      "match_details": [
+        {
+          "title": "Aspens of Timpanogos Frontispiece",
+          "page": null,
+          "file": "November_Vol15_01_Frontispiece_Aspens_of_Timpanogos_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Ina Coolbrith Kate Thomas",
+          "page": 580,
+          "file": "November_Vol15_03_Article_Ina_Coolbrith_Kate_Thomas.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Thanksgiving Mrs. Merling D. Clyde",
+          "page": 585,
+          "file": "November_Vol15_04_Article_Thanksgiving_Mrs_Merling_D_Clyde.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mother's \"Outside\" Interest Katharine C. McKay",
+          "page": 586,
+          "file": "November_Vol15_05_Article_Mother's_Outside_Interest_Katharine_C._McKay.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—The Red Cross to the Fore",
+          "page": 595,
+          "file": "November_Vol15_06_Editorial_Editorial—The_Red_Cross_to_the_Fore.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Utah Stake Observes Fiftieth Anniversary",
+          "page": 596,
+          "file": "November_Vol15_07_Article_Utah_Stake_Observes_Fiftieth_Anniversary.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our Educational World",
+          "page": 597,
+          "file": "November_Vol15_08_Article_Our_Educational_World.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Why Make a Budget? Jean Cox",
+          "page": 598,
+          "file": "November_Vol15_09_Article_Why_Make_a_Budget_Jean_Cox.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Marilie's Ghost Helen Kimball Orgill",
+          "page": 604,
+          "file": "November_Vol15_10_Article_Marilie's_Ghost_Helen_Kimball_Orgill.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Gratitude Julia Collard Baker",
+          "page": 609,
+          "file": "November_Vol15_11_Article_Gratitude_Julia_Collard_Baker.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Pioneers Lois V. Hales",
+          "page": 610,
+          "file": "November_Vol15_12_Article_Pioneers_Lois_V_Hales.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Pastoral Carrie Tanner",
+          "page": 611,
+          "file": "November_Vol15_13_Article_Pastoral_Carrie_Tanner.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 612,
+          "file": "November_Vol15_14a_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Every Day Ethics and Practical Religion",
+          "page": 616,
+          "file": "November_Vol15_15a_Guide_Lessons_Every_Day_Ethics_and_Practical_Religion.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Work and Business",
+          "page": 617,
+          "file": "November_Vol15_16_Article_Work_and_Business.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Social Service",
+          "page": 621,
+          "file": "November_Vol15_18_Article_Social_Service.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Utah Autumn Josephine G. Moench",
+          "page": 632,
+          "file": "November_Vol15_19_Article_Utah_Autumn_Josephine_G_Moench.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Common Prayer May E. Lillie",
+          "page": 633,
+          "file": "November_Vol15_20_Article_Common_Prayer_May_E._Lillie.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Disarm Minnie Johnson Hardy",
+          "page": 579
+        },
+        {
+          "title": "Literature",
+          "page": 618
+        }
+      ],
+      "extra_files": [
+        "November_Vol15_02a_Poem_Disarm.txt",
+        "November_Vol15_02b_Article_Ina_Coolbrith.txt",
+        "November_Vol15_14b_Guide_Lessons_Guide_Lessons_for_January.txt",
+        "November_Vol15_17a_Guide_Lessons_Guide_Lessons_for_January.txt"
+      ]
+    }
+  }
+}

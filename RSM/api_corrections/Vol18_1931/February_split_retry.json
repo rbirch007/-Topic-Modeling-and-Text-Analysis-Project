@@ -1,0 +1,33 @@
+{
+  "volume": 18,
+  "month": "February",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 1,
+  "created": 2,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "c",
+      "title": "The Indian Appeal",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "The Indian in the Public Schools",
+      "new_file": "February_Vol18_04c_Article_The_Indian_in_the_Public_Schools.txt",
+      "chars": 11778,
+      "match_type": "short_window_2w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Literature - The Short Story in France",
+      "new_file": "February_Vol18_11c_Lesson_Literature_-_The_Short_Story_in_France.txt",
+      "chars": 10749,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

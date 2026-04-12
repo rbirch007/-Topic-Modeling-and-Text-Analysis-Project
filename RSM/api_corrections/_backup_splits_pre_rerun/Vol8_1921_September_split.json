@@ -1,0 +1,41 @@
+{
+  "volume": 8,
+  "month": "September",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.123,
+  "files": [
+    {
+      "source_file": "September_Vol8_17_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "py ELIZA R, SNOW » Selected A casual",
+          "end_boundary": "Utah and Inter-mountain region, also in all Missions",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a single Guide Lessons article for November with four lessons: Tithing (Theology and Testimony), Work and Business, Hymns by Eliza R. Snow (Literature), and Juvenile Delinquency (Social Service). The file appears to be cut off at the end, ending mid-sentence in what looks like an advertisement section.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16001,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39673,
+        "output_tokens": 265,
+        "cost": 0.123
+      }
+    }
+  ]
+}

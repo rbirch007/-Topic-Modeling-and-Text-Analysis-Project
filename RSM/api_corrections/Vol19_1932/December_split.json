@@ -1,0 +1,142 @@
+{
+  "volume": 19,
+  "month": "December",
+  "year": 1932,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.3007,
+  "files": [
+    {
+      "source_file": "December_Vol19_10_Article_At_Marys_Feet_Claire_Stewart_Boyer.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Dr. Romania B. Pratt Penrose",
+          "category": "Article",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "DR. ROMANIA B. PENROSE 721 trip through the Southern States",
+          "end_boundary": "how welcome must have been that sweet repose.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Mantled Tree",
+          "category": "Poem",
+          "author": "Vesta Pierce Crawford",
+          "start_boundary": "Mantled Tree —By Vesta Pierce Crawford When I saw",
+          "end_boundary": "Was locked in the white arms of solitude!",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "At Mary's Feet",
+          "category": "Article",
+          "author": "Claire Stewart Boyer",
+          "start_boundary": "At Mary's Feet By Claire Stewart Boyer KEITH MANNERS,",
+          "end_boundary": "and placed it in the precious baby's hand.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "DR. ROMANIA B. PENROSE",
+        "AT MARY'S FEET",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains the end of the Dr. Romania B. Penrose biographical article, followed by a short poem 'Mantled Tree', and then the complete story 'At Mary's Feet'. The boundaries are clear with distinct titles and author bylines separating each piece.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12525,
+      "tier": 1,
+      "pdf_pages": [
+        818,
+        819,
+        820,
+        821,
+        822,
+        823
+      ],
+      "api_usage": {
+        "input_tokens": 60451,
+        "output_tokens": 460,
+        "cost": 0.1883
+      }
+    },
+    {
+      "source_file": "December_Vol19_20_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Authority to Act in the Name of God",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (first Week",
+          "end_boundary": "should be widely held by Church members?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - The Beatitudes",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic THE BEATITUDES Aim: To enable",
+          "end_boundary": "Chapter XXVI.)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Delight of Great Books - The Ordeals of Richard Feverel",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature THE DELIGHT OF GREAT BOOKS THE",
+          "end_boundary": "Make the best use of supplementary material available.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Measuring Mental Ability",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY MAGAZINE Social Service (Fourth Week",
+          "end_boundary": "being loyal.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This is a multi-lesson file containing four distinct lesson sections: Theology and Testimony (Lesson V), Teachers' Topic on Beatitudes, Literature lesson on Richard Feverel, and Social Service lesson on Mental Ability. Each section has clear subject matter boundaries and distinct formatting.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 49842,
+      "tier": 2,
+      "pdf_pages": [
+        836,
+        837,
+        838,
+        839,
+        840,
+        841,
+        842,
+        843,
+        844,
+        845,
+        846,
+        847,
+        848,
+        849
+      ],
+      "api_usage": {
+        "input_tokens": 34868,
+        "output_tokens": 518,
+        "cost": 0.1124
+      }
+    }
+  ]
+}

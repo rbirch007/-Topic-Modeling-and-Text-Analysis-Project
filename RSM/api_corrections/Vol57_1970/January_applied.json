@@ -1,0 +1,82 @@
+{
+  "volume": 57,
+  "month": "January",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 4,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_01_01_SpFt_Happy.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2501 chars)"
+    },
+    {
+      "file": "V57_01_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (992 chars removed)"
+    },
+    {
+      "file": "V57_01_03_SpFt_Responsibility_Smi.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (180 chars removed)"
+    },
+    {
+      "file": "V57_01_05_SpFt_The_Petersen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V57_01_07_Fict_Jerusha_Todd.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1754 chars removed)"
+    },
+    {
+      "file": "V57_01_08_GenFt_Womans_Cannon.txt",
+      "action": "note",
+      "result": "INFO: File contains content from Jerusha story instead of Woman's Sphere article"
+    },
+    {
+      "file": "V57_01_09_GenFt_Editorial_Sharp.txt",
+      "action": "note",
+      "result": "INFO: File is incomplete and missing significant portions of the editorial"
+    },
+    {
+      "file": "V57_01_12_Fict_The_Woolsey.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_01_19_GenFt_Quick_Jones.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (699 chars removed)"
+    },
+    {
+      "file": "V57_01_21_GenFt_Testimony_Kivekas.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_01_24_GenFt_Words_Department.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (484 chars)"
+    },
+    {
+      "file": "V57_01_26_Fict_Heart_Bailey.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_01_27_GenFt_Notes_Activities.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V57_01_37_GenFt_Birthday.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (6148 chars removed)"
+    }
+  ]
+}

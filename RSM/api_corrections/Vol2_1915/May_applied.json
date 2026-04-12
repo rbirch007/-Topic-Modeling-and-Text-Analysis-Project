@@ -1,0 +1,37 @@
+{
+  "volume": 2,
+  "month": "May",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol2_03_Article_History_of_the_Weber_Stake_Relief_Society.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (8218 chars added)"
+    },
+    {
+      "file": "May_Vol2_04_Notes_from_Field_Notes_from_the_Field.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol2_06a_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1720 chars removed)"
+    },
+    {
+      "file": "May_Vol2_07_Article_In_the_Kitchen_Laboratory_Hazel_Love_Dunford.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "May_Vol2_12_Editorial_Editorial_Guide_Lessons.txt",
+      "action": "note",
+      "result": "INFO: File contains only a small fragment of editorial content instead of complete editorial and guide lessons"
+    }
+  ]
+}

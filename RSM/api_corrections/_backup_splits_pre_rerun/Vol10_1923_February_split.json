@@ -1,0 +1,72 @@
+{
+  "volume": 10,
+  "month": "February",
+  "year": 1923,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1086,
+  "files": [
+    {
+      "source_file": "February_Vol10_09d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_III_-_Literature_-_Washingt_c.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Card Playing",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First Week",
+          "end_boundary": "eliminating the card playing evil? LESSON II",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "in April) GUIDE LESSONS 99 LESSON",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Washington Irving",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature R (Third Week in",
+          "end_boundary": "hurtful to national life and individual character?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - The Dangers in Courtship",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth week in",
+          "end_boundary": "what more might be done by way",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four complete lesson sections for April. Lesson II appears to be incomplete or very short, containing only the header. The lessons cover Theology (Card Playing), Work and Business, Literature (Washington Irving), and Social Service (Courtship). There's also a Teachers' Topic section at the end that appears to be part of the guide lessons structure.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9959,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33349,
+        "output_tokens": 567,
+        "cost": 0.1086
+      }
+    }
+  ]
+}

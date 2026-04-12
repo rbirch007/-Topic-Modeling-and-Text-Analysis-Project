@@ -1,0 +1,62 @@
+{
+  "volume": 15,
+  "month": "January",
+  "year": 1928,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0516,
+  "stats": {
+    "truncated": 2,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol15_02_Article_Prayer_Carrie_Tanner.txt",
+      "status": "truncated",
+      "current_chars": 182,
+      "complete_text": "Prayer\n\nBy Carrie Tanner\n\nA prayer is soul-sent wish, e'en whispered still,\nBy mystic power borne through vaulted blue\nTo that bright realm where only prayers most true\nE'er reach the Majesty of sacred will.\nHe grants—or stays with purpose kind, until\nIn justice great, or mercy sweet, He heeds\nOur humble wish and heavy mortal needs\nWith gracious love, and earthly measures fill\nTo overflow. How meager the estate\nOf those who ne'er this sweetest joy doth know,\nWhose hearts clutch fast grim avarice and hate,\nDisdaining Him from whom all blessings flow.\nO prayer that gives the soul a peace divine!\nO prayer, dear privilege great, the gift is Thine!",
+      "title": "Prayer",
+      "category": "Poem",
+      "author": "Carrie Tanner",
+      "confidence": "high",
+      "notes": "Found complete poem on page 3 of the PDF. The file only contained the last two lines; this is a complete 14-line sonnet.",
+      "api_usage": {
+        "input_tokens": 7217,
+        "output_tokens": 338,
+        "cost": 0.0267
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "source_file": "January_Vol15_05_Article_Portrait_of_Grace_Ingles_Frost.txt",
+      "status": "truncated",
+      "current_chars": 155,
+      "complete_text": "Portrait of Grace Ingles Frost\n\nGrace Ingles Frost of Provo, Utah, for a poem entitled \"Compensation,\" which appears on the following page, was awarded first prize in the Eliza R. Snow Poetry Contest, conducted by the Relief Society Magazine.",
+      "title": "Portrait of Grace Ingles Frost",
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete text on page 6 of PDF. This is a brief biographical note about Grace Ingles Frost winning the poetry contest, with her poem 'Compensation' appearing on the next page.",
+      "api_usage": {
+        "input_tokens": 7219,
+        "output_tokens": 216,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  ]
+}

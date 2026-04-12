@@ -1,0 +1,214 @@
+{
+  "volume": 15,
+  "month": "November",
+  "year": 1928,
+  "total_merged": 4,
+  "total_splits": 9,
+  "total_cost": 0.5642,
+  "files": [
+    {
+      "source_file": "November_Vol15_02_Article_Disarm_Minnie_Johnson_Hardy.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Disarm",
+          "category": "Poem",
+          "author": "Minnie Johnson Hardy",
+          "start_boundary": "Disarm By Minnie Johnson Hardy Spring has come",
+          "end_boundary": "Let not our sacrifice be in vain, Peace—Disarm—Disarm.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Ina Coolbrith",
+          "category": "Article",
+          "author": "Kate Thomas",
+          "start_boundary": "Ina Coolbrith By Kate Thomas We are pleased",
+          "end_boundary": "she dwelt secure.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "INA COOLBRITH",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two distinct pieces: a poem about peace and disarmament by Minnie Johnson Hardy, followed by a biographical article about poet Ina Coolbrith by Kate Thomas. The article includes several of Coolbrith's poems as examples of her work. The split is clear and matches the table of contents entries.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10387,
+      "tier": 1,
+      "pdf_pages": [
+        690,
+        691,
+        692,
+        693
+      ],
+      "api_usage": {
+        "input_tokens": 41835,
+        "output_tokens": 349,
+        "cost": 0.1307
+      }
+    },
+    {
+      "source_file": "November_Vol15_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman Cache",
+          "end_boundary": "one group meeting at Burlington and one at Lovell.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for January",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for January LESSON I (First Week",
+          "end_boundary": "mariner's compass must constantly be adjusted by observa-",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "NOTES FROM THE FIELD",
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "Clear split between Notes from the Field (administrative updates and field reports) and Guide Lessons for January (educational curriculum). The Guide Lessons section appears to be cut off mid-sentence at the end of the file.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10764,
+      "tier": 1,
+      "pdf_pages": [
+        721,
+        722,
+        723,
+        724,
+        725,
+        726
+      ],
+      "api_usage": {
+        "input_tokens": 44939,
+        "output_tokens": 414,
+        "cost": 0.141
+      }
+    },
+    {
+      "source_file": "November_Vol15_15_Guide_Lessons_Guide_Lessons_for_January—_Every_Day_Ethics_and_Practical_Re.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Every Day Ethics and Practical Religion",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JANUARY 617 tions of the upper deep",
+          "end_boundary": "unbiased ethical judgment as to what amount we should pay",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JANUARY 621 LESSON II Work and Business",
+          "end_boundary": "under the caption of the Teachers' Topic.",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "Literature - Nowadays by George Middleton",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in January) BIOGRAPHY George Middleton",
+          "end_boundary": "Discuss any phase of this play that appeals to you",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - The Child-Study Course",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in January) THE CHILD-STUDY",
+          "end_boundary": "treating sense defects and other physical handicaps in school",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains four separate Guide Lessons for January, each clearly marked as Lesson I, II, III, and IV with distinct topics. The lessons cover ethics/religion, Relief Society work, literature analysis, and child study respectively.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8927,
+      "tier": 1,
+      "pdf_pages": [
+        726,
+        727,
+        728,
+        729,
+        730
+      ],
+      "api_usage": {
+        "input_tokens": 42791,
+        "output_tokens": 551,
+        "cost": 0.1366
+      }
+    },
+    {
+      "source_file": "November_Vol15_17_Literature_Literature.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for January",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature (Third Week in January) BIOGRAPHY George",
+          "end_boundary": "LESSON IV Social Service (Fourth Week in",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY"
+      ],
+      "notes": "This file contains a single comprehensive Guide Lessons article that includes multiple lesson sections: Literature (Third Week), Social Service (Fourth Week), and references to other lessons. The content includes biographical information about George Middleton, analysis of his play 'Nowadays', and child-study course material. The file appears to be complete as one unified guide lesson document rather than separate articles.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14329,
+      "tier": 1,
+      "pdf_pages": [
+        730,
+        731,
+        732,
+        733,
+        734,
+        735,
+        736,
+        737,
+        738
+      ],
+      "api_usage": {
+        "input_tokens": 50723,
+        "output_tokens": 248,
+        "cost": 0.1559
+      }
+    }
+  ]
+}

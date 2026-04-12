@@ -1,0 +1,192 @@
+{
+  "volume": 14,
+  "month": "October",
+  "year": 1927,
+  "total_merged": 2,
+  "total_splits": 11,
+  "total_cost": 0.3871,
+  "files": [
+    {
+      "source_file": "October_Vol14_03_Article_Two_Outstanding_Features_of_Book_of_Mormon_History_J_M_Sjo.txt",
+      "num_articles_found": 7,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Hollyhocks",
+          "category": "Poem",
+          "author": "Esse E. Barrett",
+          "start_boundary": "HOLLY HOCKS By Esse E. Barrett Dear",
+          "end_boundary": "Because to-Me You Are So Very Dear.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Two Outstanding Features of Book of Mormon History",
+          "category": "Article",
+          "author": "J. M. Sjodahl",
+          "start_boundary": "Two Outstanding Features of Book of Mormon",
+          "end_boundary": "Holmes Anniversary Volume, Washington, 1916.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Hills",
+          "category": "Poem",
+          "author": "Blanche Burr",
+          "start_boundary": "Hills By Blanche Burr Wide plains",
+          "end_boundary": "Will to the peaks draw ever nigher.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Our Inheritance",
+          "category": "Poem",
+          "author": "Minnie J. Hardy",
+          "start_boundary": "Our Inheritance. By Minnie J. Hardy",
+          "end_boundary": "Our fair Eden \"Is the Place.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "The National Conference of Social Work",
+          "category": "Article",
+          "author": "Anne D. Palmer",
+          "start_boundary": "The National Conference of Social Work",
+          "end_boundary": "Des Moines conference.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Great Salt Lake",
+          "category": "Article",
+          "author": "Glen Perrins",
+          "start_boundary": "Great Salt Lake By Glen Perrins",
+          "end_boundary": "made ready for the Saints. Wionderful",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Fall",
+          "category": "Poem",
+          "author": "Merling Dennis Clyde",
+          "start_boundary": "Fall By Merling Dennis Clyde They",
+          "end_boundary": "Through the painted days of fall.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "BOOK OF MORMON HISTORY",
+        "CONFERENCE OF SOCIAL WORKERS"
+      ],
+      "notes": "This file contains multiple articles and poems from the October 1927 issue. The content includes a mix of poetry, religious articles, and social commentary. Some articles appear to continue beyond what's shown in this file based on the table of contents.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 24477,
+      "tier": 1,
+      "pdf_pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "api_usage": {
+        "input_tokens": 60453,
+        "output_tokens": 832,
+        "cost": 0.1938
+      }
+    },
+    {
+      "source_file": "October_Vol14_14_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Second Great Commandment",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR DECEMBER \"LESSON I Theology",
+          "end_boundary": "can't be taken except into a rebellious heart. 1 Peter 3:19-22,",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Teachers' Topic for December - Civic Pride",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business: (Second Week",
+          "end_boundary": "bottles and discarded cooking utensils, etc.?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Vachel Lindsay",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in December",
+          "end_boundary": "illustrate by reading something from Lindsay's poetry. -",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Challenge of Childhood (Conclusion)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "can parents help children to learn the art of living?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains four distinct lesson sections for December, each with clear Roman numeral headings and different subject areas: Theology, Work/Business, Literature, and Social Service. Each lesson has its own questions and problems section that marks the end boundary.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 30736,
+      "tier": 1,
+      "pdf_pages": [
+        620,
+        621,
+        622,
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630,
+        631,
+        632,
+        633,
+        634
+      ],
+      "api_usage": {
+        "input_tokens": 61637,
+        "output_tokens": 560,
+        "cost": 0.1933
+      }
+    }
+  ]
+}

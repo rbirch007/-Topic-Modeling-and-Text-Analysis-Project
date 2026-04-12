@@ -1,0 +1,90 @@
+{
+  "volume": 18,
+  "month": "November",
+  "year": 1931,
+  "total_merged": 2,
+  "total_splits": 2,
+  "total_cost": 0.1752,
+  "files": [
+    {
+      "source_file": "November_Vol18_10_Article_Relief_Society_Conference_Lund.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Conference",
+          "category": "Article",
+          "author": "Julia A. F. Lund",
+          "start_boundary": "Relief Society Conference By Julia A. F. Lund, General",
+          "end_boundary": "will appear in a later issue of the Magazine.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCETY CONFERENCE"
+      ],
+      "notes": "This is a single comprehensive article covering the entire Relief Society Conference proceedings. It includes multiple speakers and sessions but is presented as one unified conference report by Julia A. F. Lund as General Secretary. The content flows continuously from the opening description through all the various speakers' presentations to the closing remarks.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 57944,
+      "tier": 2,
+      "pdf_pages": [
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752
+      ],
+      "api_usage": {
+        "input_tokens": 29630,
+        "output_tokens": 247,
+        "cost": 0.0926
+      }
+    },
+    {
+      "source_file": "November_Vol18_12_Article_Lesson_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "help us with these two things.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This is a single comprehensive lesson department article containing multiple lesson sections: Theology and Testimony, Teachers' Topic, Literature (Russia), and Social Service. All sections are part of one unified lesson department article, not separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 41467,
+      "tier": 2,
+      "pdf_pages": [
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767
+      ],
+      "api_usage": {
+        "input_tokens": 26475,
+        "output_tokens": 211,
+        "cost": 0.0826
+      }
+    }
+  ]
+}

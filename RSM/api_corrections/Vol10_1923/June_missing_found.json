@@ -1,0 +1,38 @@
+{
+  "volume": 10,
+  "month": "June",
+  "year": 1923,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.023,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Relief Society Conference Minutes Amy Brown Lyman",
+      "printed_page": 269,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Amy Brown Lyman",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 263-266, but the article is listed as starting on page 269 in the table of contents. The images do not contain the Relief Society Conference Minutes article.",
+      "api_usage": {
+        "input_tokens": 6987,
+        "output_tokens": 138,
+        "cost": 0.023
+      },
+      "pdf_pages": [
+        263,
+        264,
+        265,
+        266
+      ]
+    }
+  ]
+}

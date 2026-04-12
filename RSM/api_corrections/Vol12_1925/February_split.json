@@ -1,0 +1,65 @@
+{
+  "volume": 12,
+  "month": "February",
+  "year": 1925,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1122,
+  "files": [
+    {
+      "source_file": "February_Vol12_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman TEMPLE",
+          "end_boundary": "Mary A. Terry, two crystal candle sticks. Mrs.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April LESSON I (First Week",
+          "end_boundary": "When Buying Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains two distinct sections: 1) Notes from the Field by Amy Brown Lyman covering Relief Society activities across various stakes, and 2) Guide Lessons for April containing four weekly lessons on Theology, Work and Business, Literature (James Whitcomb Riley), and Social Service. The boundary occurs where the Notes section ends with organizational updates and the Guide Lessons section begins with 'LESSON I'.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 45102,
+      "tier": 2,
+      "pdf_pages": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "api_usage": {
+        "input_tokens": 35478,
+        "output_tokens": 384,
+        "cost": 0.1122
+      }
+    }
+  ]
+}

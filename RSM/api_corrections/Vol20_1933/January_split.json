@@ -1,0 +1,80 @@
+{
+  "volume": 20,
+  "month": "January",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1074,
+  "files": [
+    {
+      "source_file": "January_Vol20_27_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony: Coming Forth of the Book of Mormon - Lesson VI",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony: (First Week",
+          "end_boundary": "connected with the publishing of the Book of Mormon.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic: The Beatitudes",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Teachers' Topic THE BEATITUDES Aim: To enable",
+          "end_boundary": "let us develop our gifts in His work! (Heb. 13:21.)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature: The Delight of Great Books - Romeo and Juliet",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature THE DELIGHT OF GREAT BOOKS (Third",
+          "end_boundary": "Enjoy the story and find the wisdom.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service: Acquiring the Use of Speech - Lesson VI",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in March) ACQUIRING",
+          "end_boundary": "Peppard: The Correction of Speech Defects, pp. 157-8.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections for different subject areas: Theology and Testimony, Teachers' Topic (Beatitudes), Literature (Romeo and Juliet), and Social Service (Speech Development). Each section has clear subject headings and distinct content boundaries. The lessons are designed for different weeks in March and cover completely different topics and methodologies.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 48126,
+      "tier": 2,
+      "pdf_pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "api_usage": {
+        "input_tokens": 33003,
+        "output_tokens": 561,
+        "cost": 0.1074
+      }
+    }
+  ]
+}

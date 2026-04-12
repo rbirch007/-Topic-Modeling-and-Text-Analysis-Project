@@ -1,0 +1,541 @@
+{
+  "volume": 20,
+  "month": "November",
+  "year": 1933,
+  "total": 27,
+  "ok": 25,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "November_Vol20_00_BOARD.txt",
+      "body_len": 81,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_00_CONTENTS.txt",
+      "body_len": 1129,
+      "article_words": 112,
+      "words_in_ocr": 112,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_00_Misc.txt",
+      "body_len": 9152,
+      "article_words": 489,
+      "words_in_ocr": 485,
+      "pct_in_ocr": 0.9918,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "cover",
+        "directory"
+      ]
+    },
+    {
+      "file": "November_Vol20_00_Misc_backup_premarker.txt",
+      "body_len": 9084,
+      "article_words": 484,
+      "words_in_ocr": 484,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_01_Article_November_Annie_Wells_Cannon.txt",
+      "body_len": 636,
+      "article_words": 68,
+      "words_in_ocr": 68,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_02_Article_Officers_Meeting.txt",
+      "body_len": 1041,
+      "article_words": 82,
+      "words_in_ocr": 82,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_03a_Article_Relief_Society_Conference.txt",
+      "body_len": 85511,
+      "article_words": 2507,
+      "words_in_ocr": 2507,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(11))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_04_Article_Apostle_Charles_A_Callis_Joseph_Quinney_Jr.txt",
+      "body_len": 7930,
+      "article_words": 474,
+      "words_in_ocr": 474,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_05_Article_Happenings_Annie_Wells_Cannon.txt",
+      "body_len": 3430,
+      "article_words": 317,
+      "words_in_ocr": 317,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_06_Article_Reorganizations.txt",
+      "body_len": 629,
+      "article_words": 72,
+      "words_in_ocr": 72,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_07_Article_Priesthood_and_Womanhood_Leah_D_Widtsoe.txt",
+      "body_len": 16459,
+      "article_words": 809,
+      "words_in_ocr": 809,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_08_Article_Judge_Not!_Marguerite_Johnson_Griffin.txt",
+      "body_len": 12853,
+      "article_words": 667,
+      "words_in_ocr": 667,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_09_Article_Accessories_for_the_Thanksgiving_Dinner_Lucy_Rose_Middleton.txt",
+      "body_len": 4367,
+      "article_words": 283,
+      "words_in_ocr": 283,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_10_Article_Hearts_Intertwined_Minerva_V_Dutson.txt",
+      "body_len": 1569,
+      "article_words": 138,
+      "words_in_ocr": 138,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_11_Editorial_EditorialTwo_October_Conferences.txt",
+      "body_len": 1807,
+      "article_words": 155,
+      "words_in_ocr": 155,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_12_Article_Elder_B_H_Roberts_Called_Home.txt",
+      "body_len": 946,
+      "article_words": 94,
+      "words_in_ocr": 94,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_13_Article_Opening_of_Our_Season.txt",
+      "body_len": 479,
+      "article_words": 53,
+      "words_in_ocr": 53,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_14_Article_Read_the_Doctrine_and_Covenants.txt",
+      "body_len": 313,
+      "article_words": 32,
+      "words_in_ocr": 32,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_15_Article_Our_Song_Contest.txt",
+      "body_len": 373,
+      "article_words": 37,
+      "words_in_ocr": 37,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_16_Article_Changes_in_Mission_Presidents.txt",
+      "body_len": 555,
+      "article_words": 55,
+      "words_in_ocr": 55,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_17_Article_Just_As_Good_Estelle_Webb_Thomas.txt",
+      "body_len": 1978,
+      "article_words": 195,
+      "words_in_ocr": 195,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_18_Article_Lesson_Department.txt",
+      "body_len": 11579,
+      "article_words": 623,
+      "words_in_ocr": 623,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_19b_Lesson_Teachers_Topic_-_Self_Effort.txt",
+      "body_len": 2962,
+      "article_words": 219,
+      "words_in_ocr": 218,
+      "pct_in_ocr": 0.9954,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "literatu"
+      ]
+    },
+    {
+      "file": "November_Vol20_19c_Lesson_Literature_-_Life_and_Literature.txt",
+      "body_len": 22683,
+      "article_words": 1118,
+      "words_in_ocr": 1118,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_19d_Lesson_Social_Service_-_Foods_and_Eating_Habits.txt",
+      "body_len": 11042,
+      "article_words": 636,
+      "words_in_ocr": 636,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_20_Article_Sister_Amy_Brown_Lyman_Alvaretta_S_Engar.txt",
+      "body_len": 905,
+      "article_words": 101,
+      "words_in_ocr": 101,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "November_Vol20_No11_21_Article_Sweet_Are_the_Uses_of_Adversity_Vernessa_M._Nagle.txt",
+      "body_len": 6930,
+      "article_words": 520,
+      "words_in_ocr": 520,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol20_No11_November_1933.txt",
+    "ocr_chars": 206920,
+    "ocr_unique_words": 5150,
+    "contents_xref": {
+      "entries_in_contents": 26,
+      "matched": 23,
+      "match_details": [
+        {
+          "title": "Portrait of Elder Charles A. Callis Frontispiece",
+          "page": null,
+          "file": "November_Vol20_12_Article_Elder_B_H_Roberts_Called_Home.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Relief Society Conference Julia A. F. Lund",
+          "page": 633,
+          "file": "November_Vol20_03a_Article_Relief_Society_Conference.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Opening Session",
+          "page": 634,
+          "file": "November_Vol20_13_Article_Opening_of_Our_Season.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Officers' Meeting",
+          "page": 650,
+          "file": "November_Vol20_02_Article_Officers_Meeting.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Apostle Charles A. Callis Joseph Quinney, Jr.",
+          "page": 661,
+          "file": "November_Vol20_04_Article_Apostle_Charles_A_Callis_Joseph_Quinney_Jr.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 664,
+          "file": "November_Vol20_05_Article_Happenings_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Relief Society Rally Miriam Jeanne Warnick Wright",
+          "page": 665,
+          "file": "November_Vol20_03a_Article_Relief_Society_Conference.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Reorganizations",
+          "page": 665,
+          "file": "November_Vol20_06_Article_Reorganizations.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Priesthood and Womanhood Leah D. Widtsoe",
+          "page": 666,
+          "file": "November_Vol20_07_Article_Priesthood_and_Womanhood_Leah_D_Widtsoe.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"Judge Not!\" Marguerite Johnson Griffin",
+          "page": 671,
+          "file": "November_Vol20_08_Article_Judge_Not!_Marguerite_Johnson_Griffin.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Accessories for the Thanksgiving Dinner Lucy Rose Middleton",
+          "page": 675,
+          "file": "November_Vol20_09_Article_Accessories_for_the_Thanksgiving_Dinner_Lucy_Rose_Middleton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Hearts Intertwined Minerva V. Dutson",
+          "page": 676,
+          "file": "November_Vol20_10_Article_Hearts_Intertwined_Minerva_V_Dutson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "November Annie Wells Cannon",
+          "page": 677,
+          "file": "November_Vol20_01_Article_November_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Two October Conferences",
+          "page": 678,
+          "file": "November_Vol20_11_Editorial_EditorialTwo_October_Conferences.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Elder B. H. Roberts Called Home",
+          "page": 679,
+          "file": "November_Vol20_12_Article_Elder_B_H_Roberts_Called_Home.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Opening of Our Season",
+          "page": 679,
+          "file": "November_Vol20_13_Article_Opening_of_Our_Season.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Read the Doctrine and Covenants",
+          "page": 679,
+          "file": "November_Vol20_14_Article_Read_the_Doctrine_and_Covenants.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our Song Contest",
+          "page": 679,
+          "file": "November_Vol20_15_Article_Our_Song_Contest.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Changes in Mission Presidents",
+          "page": 680,
+          "file": "November_Vol20_16_Article_Changes_in_Mission_Presidents.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Just As Good Estelle Webb Thomas",
+          "page": 680,
+          "file": "November_Vol20_17_Article_Just_As_Good_Estelle_Webb_Thomas.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 681,
+          "file": "November_Vol20_18_Article_Lesson_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Sister Amy Brown Lyman Alvaretta S. Engar",
+          "page": 695,
+          "file": "November_Vol20_20_Article_Sister_Amy_Brown_Lyman_Alvaretta_S_Engar.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"Sweet Are the Uses of Adversity\" Vernessa M. Nagle",
+          "page": 697,
+          "file": "November_Vol20_No11_21_Article_Sweet_Are_the_Uses_of_Adversity_Vernessa_M._Nagle.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Indian Summer Ella J. Coulam",
+          "page": 631
+        },
+        {
+          "title": "Unusual Visits Marba C. Jacobson",
+          "page": 680
+        },
+        {
+          "title": "Old Grist Mill",
+          "page": 684
+        }
+      ],
+      "extra_files": [
+        "November_Vol20_19b_Lesson_Teachers_Topic_-_Self_Effort.txt",
+        "November_Vol20_19c_Lesson_Literature_-_Life_and_Literature.txt",
+        "November_Vol20_19d_Lesson_Social_Service_-_Foods_and_Eating_Habits.txt"
+      ]
+    }
+  }
+}

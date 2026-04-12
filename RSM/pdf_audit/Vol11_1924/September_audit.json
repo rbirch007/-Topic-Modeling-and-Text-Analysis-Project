@@ -1,0 +1,430 @@
+{
+  "volume": 11,
+  "month": "September",
+  "year": 1924,
+  "total": 21,
+  "ok": 18,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "September_Vol11_00_BOARD.txt",
+      "body_len": 630,
+      "article_words": 61,
+      "words_in_ocr": 61,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_00_CONTENTS.txt",
+      "body_len": 494,
+      "article_words": 53,
+      "words_in_ocr": 53,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_00_Misc.txt",
+      "body_len": 5923,
+      "article_words": 459,
+      "words_in_ocr": 455,
+      "pct_in_ocr": 0.9913,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory",
+        "front"
+      ]
+    },
+    {
+      "file": "September_Vol11_01_Article_The_Scent_of_the_Hyacinth_Annie_Pike_Greenwood.txt",
+      "body_len": 614,
+      "article_words": 65,
+      "words_in_ocr": 65,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_02e_Article_School_Lunches.txt",
+      "body_len": 29777,
+      "article_words": 1404,
+      "words_in_ocr": 1404,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(9))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_02f_Article_Etiquette.txt",
+      "body_len": 1713,
+      "article_words": 142,
+      "words_in_ocr": 112,
+      "pct_in_ocr": 0.7887,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "arrive",
+        "attractively",
+        "bonbons",
+        "bridge",
+        "bumping",
+        "card",
+        "coffee",
+        "consolation",
+        "correctly",
+        "customary"
+      ]
+    },
+    {
+      "file": "September_Vol11_02g_Article_The_New_Dentist.txt",
+      "body_len": 255,
+      "article_words": 25,
+      "words_in_ocr": 25,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_02k_Guide_Lessons_Literature.txt",
+      "body_len": 4919,
+      "article_words": 382,
+      "words_in_ocr": 235,
+      "pct_in_ocr": 0.6152,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(62%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "aeonian",
+        "alas",
+        "allied",
+        "andrew",
+        "angels",
+        "anounces",
+        "anyone",
+        "awaited",
+        "bees",
+        "believe"
+      ]
+    },
+    {
+      "file": "September_Vol11_03_Editorial_Editorial—Another_Centenary—September.txt",
+      "body_len": 2861,
+      "article_words": 234,
+      "words_in_ocr": 234,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_04_Article_Elizabeth_Claridge_McCune.txt",
+      "body_len": 1772,
+      "article_words": 151,
+      "words_in_ocr": 151,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_05_Article_Cache_Valley.txt",
+      "body_len": 1624,
+      "article_words": 138,
+      "words_in_ocr": 138,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_06_Article_School_Lunches_Ethel_Melville.txt",
+      "body_len": 8687,
+      "article_words": 554,
+      "words_in_ocr": 554,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_07_Article_Etiquette.txt",
+      "body_len": 16180,
+      "article_words": 911,
+      "words_in_ocr": 911,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_08_Article_The_New_Dentist_Pearl_Nelson.txt",
+      "body_len": 1301,
+      "article_words": 126,
+      "words_in_ocr": 126,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 6356,
+      "article_words": 402,
+      "words_in_ocr": 402,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_10_Article_Cheerfulness_Coral_J_Black.txt",
+      "body_len": 3585,
+      "article_words": 299,
+      "words_in_ocr": 299,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_11_Guide_Lessons_Guide_Lessons_for_November—Theology_and_Testimony.txt",
+      "body_len": 5786,
+      "article_words": 373,
+      "words_in_ocr": 373,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_12a_Guide_Lessons_Literature_-_Nathaniel_Hawthornes_Writings.txt",
+      "body_len": 11214,
+      "article_words": 757,
+      "words_in_ocr": 757,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_12b_Guide_Lessons_Social_Service_-_Problems_of_Behavior.txt",
+      "body_len": 3603,
+      "article_words": 247,
+      "words_in_ocr": 200,
+      "pct_in_ocr": 0.8097,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "abnormal",
+        "actual",
+        "aware",
+        "brothers",
+        "citizens",
+        "code",
+        "conflicts",
+        "contemplation",
+        "controlling",
+        "controls"
+      ]
+    },
+    {
+      "file": "September_Vol11_13_Article_Social_Service.txt",
+      "body_len": 2578,
+      "article_words": 205,
+      "words_in_ocr": 205,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol11_14_Article_Teachers'_Topic_for_November.txt",
+      "body_len": 9084,
+      "article_words": 624,
+      "words_in_ocr": 624,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol11_No9_September_1924.txt",
+    "ocr_chars": 101867,
+    "ocr_unique_words": 3777,
+    "contents_xref": {
+      "entries_in_contents": 14,
+      "matched": 13,
+      "match_details": [
+        {
+          "title": "The Scent of the Hyacinth Annie Pike Greenwood",
+          "page": 437,
+          "file": "September_Vol11_01_Article_The_Scent_of_the_Hyacinth_Annie_Pike_Greenwood.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Another Centenary—September 1824-1924",
+          "page": 456,
+          "file": "September_Vol11_03_Editorial_Editorial—Another_Centenary—September.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Elizabeth Claridge McCune",
+          "page": 457,
+          "file": "September_Vol11_04_Article_Elizabeth_Claridge_McCune.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Cache Valley",
+          "page": 458,
+          "file": "September_Vol11_05_Article_Cache_Valley.txt",
+          "score": 1.0
+        },
+        {
+          "title": "School Lunches Ethel Melville",
+          "page": 459,
+          "file": "September_Vol11_06_Article_School_Lunches_Ethel_Melville.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Etiquette",
+          "page": 467,
+          "file": "September_Vol11_02f_Article_Etiquette.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The New Dentist Pearl Nelson",
+          "page": 470,
+          "file": "September_Vol11_08_Article_The_New_Dentist_Pearl_Nelson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 472,
+          "file": "September_Vol11_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Cheerfulness Coral J. Black",
+          "page": 477,
+          "file": "September_Vol11_10_Article_Cheerfulness_Coral_J_Black.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for November—Theology and Testimony",
+          "page": 479,
+          "file": "September_Vol11_11_Guide_Lessons_Guide_Lessons_for_November—Theology_and_Testimony.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Literature",
+          "page": 483,
+          "file": "September_Vol11_02k_Guide_Lessons_Literature.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Social Service",
+          "page": 486,
+          "file": "September_Vol11_12b_Guide_Lessons_Social_Service_-_Problems_of_Behavior.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Teachers' Topic for November",
+          "page": 489,
+          "file": "September_Vol11_14_Article_Teachers'_Topic_for_November.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "The Mountains Shall be Laid Low Thomas L. Martin",
+          "page": 439
+        }
+      ],
+      "extra_files": [
+        "September_Vol11_02e_Article_School_Lunches.txt",
+        "September_Vol11_02g_Article_The_New_Dentist.txt",
+        "September_Vol11_07_Article_Etiquette.txt",
+        "September_Vol11_12a_Guide_Lessons_Literature_-_Nathaniel_Hawthornes_Writings.txt",
+        "September_Vol11_13_Article_Social_Service.txt"
+      ]
+    }
+  }
+}

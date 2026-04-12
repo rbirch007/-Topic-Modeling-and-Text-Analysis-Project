@@ -1,0 +1,228 @@
+{
+  "volume": 15,
+  "month": "September",
+  "year": 1928,
+  "total_merged": 4,
+  "total_splits": 9,
+  "total_cost": 0.628,
+  "files": [
+    {
+      "source_file": "September_Vol15_03_Article_Rebecca_Neibaur_Nibley_Amy_Brown_Lyman.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Rebecca Neibaur Nibley",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "REBECCA NEIBAUR NIBLEY Rebecca Neibaur Nibley By Amy Brown Lyman",
+          "end_boundary": "keen humorist, and withal a most interesting and stimulating companion and associate.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "REBECCA NEIBAUR NIBLEY"
+      ],
+      "notes": "This file contains only one article - a biographical tribute to Rebecca Neibaur Nibley by Amy Brown Lyman. The content at the end about Relief Society organization and editorial information appears to be standard magazine footer content that belongs with this article. No split is needed as this is a single complete article.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8836,
+      "tier": 1,
+      "pdf_pages": [
+        558,
+        559,
+        560
+      ],
+      "api_usage": {
+        "input_tokens": 36910,
+        "output_tokens": 285,
+        "cost": 0.115
+      }
+    },
+    {
+      "source_file": "September_Vol15_08_Article_Sarah_Elizabeth_Carmichael_Williamson_Ellen_L_Jakeman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Sarah Elizabeth Carmichael Williamson",
+          "category": "Article",
+          "author": "Ellen L. Jakeman",
+          "start_boundary": "Sarah Elizabeth Carmichael Williamson By Ellen L. Jakeman",
+          "end_boundary": "clouded pathways of the world. (Copyright applied for; all rights reserved)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Russell Sisters",
+          "category": "Article",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "The Russell Sisters By Annie Wells Cannon Among the contributors",
+          "end_boundary": "Waiting the angel's call. ?Millicent (Isabel R. Johnson).",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "SARAH E. CARMICHAEL WILLIAMSON",
+        "THE RUSSELL SISTERS"
+      ],
+      "notes": "This file contains two biographical articles about pioneer women writers. The first is a lengthy biographical piece about poet Sarah Elizabeth Carmichael Williamson, including several of her poems. The second is about the Russell Sisters, also writers and contributors to the Woman's Exponent, including samples of their poetry.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 25728,
+      "tier": 1,
+      "pdf_pages": [
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570,
+        571,
+        572,
+        573,
+        574,
+        575,
+        576
+      ],
+      "api_usage": {
+        "input_tokens": 58710,
+        "output_tokens": 381,
+        "cost": 0.1818
+      }
+    },
+    {
+      "source_file": "September_Vol15_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman",
+          "end_boundary": "has been very much appreciated by the General Board and by the. Welfare Department staff.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I Theology and Testimony",
+          "end_boundary": "Does it include any mental hygiene?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "Clear split between Notes from the Field article and Guide Lessons for November section. The Guide Lessons section contains multiple lessons (Theology and Testimony, Work and Business, Literature, Social Service) but they are all part of the same Guide Lessons feature for November.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 20451,
+      "tier": 1,
+      "pdf_pages": [
+        579,
+        580,
+        581,
+        582,
+        583,
+        584,
+        585,
+        586,
+        587,
+        588
+      ],
+      "api_usage": {
+        "input_tokens": 50428,
+        "output_tokens": 356,
+        "cost": 0.1566
+      }
+    },
+    {
+      "source_file": "September_Vol15_13_Literature_Literature.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First Week",
+          "end_boundary": "increased your interest in the \"Pearl of Great Price?\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "example is more direct than precept.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in November)",
+          "end_boundary": "father and mother reared their children?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "Does it include any mental hygiene?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains four distinct lesson sections for November, each with Roman numeral designations (I-IV) covering different subject areas: Theology, Work/Business, Literature, and Social Service. Each lesson has its own content, questions, and problems sections.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34971,
+      "tier": 1,
+      "pdf_pages": [
+        589,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        596,
+        597,
+        598,
+        599
+      ],
+      "api_usage": {
+        "input_tokens": 55802,
+        "output_tokens": 481,
+        "cost": 0.1746
+      }
+    }
+  ]
+}

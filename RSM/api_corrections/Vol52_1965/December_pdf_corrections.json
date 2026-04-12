@@ -1,0 +1,19 @@
+{
+  "volume": 52,
+  "month": "December",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_12_08_Fict_The_Smith.txt",
+      "issue_type": "bleed_end",
+      "description": "Story ends mid-sentence with corrupted text that includes content from next poem",
+      "action": "trim_end",
+      "text": "at that moment.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (3 words)"
+    }
+  ]
+}

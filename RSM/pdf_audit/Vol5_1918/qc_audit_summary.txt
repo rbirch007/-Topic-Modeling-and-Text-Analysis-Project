@@ -1,0 +1,53 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 5 (1918)
+===========================================================================
+
+  Total files:      253 (216 articles, 37 special)
+  OK:               241
+  Flagged:          12
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 2
+    manual_review: 5
+    re_extract: 5
+
+  January:
+    January_Vol5_05a_Article_Mothers_in_Israel_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(3)) | 14026 chars | re_extract
+    January_Vol5_08a_Article_A_200_Year_Calendar_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(5)) | 11803 chars | re_extract
+    [CONTENTS MISSING] "Revolutionary Patriots" (p3)
+
+  February:
+    February_Vol5_15_Editorial_Editorial_O_War,_Where_is_Our_Fear_of_Thee.txt | SHORT(11) | 11 chars | manual_review
+    February_Vol5_16a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Domestic_Life_Among_the_a_a_a_a.txt | MERGED(CAPS_HEADERS(3); MULTI_LESSON(2)) | 14489 chars | re_extract
+    February_Vol5_16b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt | SHORT(111) | 111 chars | manual_review
+    [CONTENTS MISSING] "Portrait of Col. Theodore Roosevelt Frontispiece" (pNone)
+    [CONTENTS MISSING] "Mother's Valentine Diana Parrish" (p78)
+
+
+
+
+
+
+
+  September:
+    September_Vol5_14a_Guide_Lessons_LESSON_I_THEOLOGY_AND_TESTIMONY_-_THE_LEARNING_OF_THE_PEOPLE_a_a_a_a.txt | MERGED(MULTI_LESSON(2)) | 10371 chars | re_extract
+    September_Vol5_14a_Guide_Lessons_LESSON_I_THEOLOGY_AND_TESTIMONY_-_THE_LEARNING_OF_THE_PEOPLE_a_a_a_b.txt | SHORT(35) | 35 chars | manual_review
+    September_Vol5_14b_Guide_Lessons_LESSON_II_Work_and_Business.txt | LOW_OCR_MATCH(66%) | 4794 chars | api_fix
+    [CONTENTS MISSING] "Take Time Mrs. Effie Rowley" (p542)
+
+  October:
+    October_Vol5_13b_Guide_Lessons_LESSON_II_Work_and_Business.txt | LOW_OCR_MATCH(63%) | 4794 chars | api_fix
+
+  November:
+    November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt | SHORT(101) | 101 chars | manual_review
+    November_Vol5_01c_Article_Lo_the_Poor_Rich_Indian_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(10)) | 32470 chars | re_extract
+    [CONTENTS MISSING] "Thanksgiving Mary Foster Gibbs" (p601)
+
+  December:
+    December_Vol5_04_Article_Salvation_for_the_Living_and_the_Dead_Joseph_F._Smith.txt | SHORT(98) | 98 chars | manual_review
+    [CONTENTS MISSING] "General Conference of Relief Society" (p659)
+    [CONTENTS MISSING] "We Are All God's Children Grace Ingles Frost" (p676)
+    [CONTENTS MISSING] "In Paradise Sophia Valentine" (p682)
+
+===========================================================================

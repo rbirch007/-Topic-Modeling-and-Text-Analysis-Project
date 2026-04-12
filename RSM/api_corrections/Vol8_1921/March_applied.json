@@ -1,0 +1,32 @@
+{
+  "volume": 8,
+  "month": "March",
+  "year": 1921,
+  "timestamp": "20260315_120946",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1987 chars added)"
+    },
+    {
+      "file": "March_Vol8_05_Article_The_Primary_as_First_Aid_to_Relief_Society.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "March_Vol8_06_Article_Out_of_the_World_G._Milton_Babcock.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (5115 chars removed)"
+    }
+  ]
+}

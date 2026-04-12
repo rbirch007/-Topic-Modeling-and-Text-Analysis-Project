@@ -1,0 +1,106 @@
+{
+  "volume": 7,
+  "month": "February",
+  "year": 1920,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.2411,
+  "files": [
+    {
+      "source_file": "February_Vol7_09e_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Genealogy and Testimony (Required)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons LESSON I. Genealogy and Testimony (Required)",
+          "end_boundary": "Read description of baptismal font on Nauvoo, found on page 454.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business (Required)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Required) Second Week in February.",
+          "end_boundary": "LESSON II. Work and Business (Required) Second Week in February.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Book of Mormon (Optional) - THE LAND OF JOSEPH",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON . Book of Mormon (Optional) THE LAND OF JOSEPH.",
+          "end_boundary": "Be able to give this evidence. Literature (Optional) Alfred Tennyson and the Abolition of",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Literature (Optional) - Alfred Tennyson and the Abolition of War",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature (Optional) Alfred Tennyson and the Abolition of",
+          "end_boundary": "the legend in relation to King Arthur is that he left the",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple lesson sections that were merged together. The file appears to be cut off at the end during the Literature lesson about Alfred Tennyson. LESSON II appears to be just a header with no content, suggesting it may be a placeholder or the content was not included in this extraction. The lessons progress from Genealogy/Testimony to Work/Business to Book of Mormon study to Literature study.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 13371,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37809,
+        "output_tokens": 610,
+        "cost": 0.1226
+      }
+    },
+    {
+      "source_file": "February_Vol7_10_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "On the Watch Tower",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "Oh TheWatchJowerÂ© James H. Anderson. Eastern Europe is",
+          "end_boundary": "present trend of society. MRS. CLARISSA SMITH WILLIAMS",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "MRS. AMY BROWN LYMAN President Emmeline B.",
+          "end_boundary": "greatly enjoyed from a social point of view. ,",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "WATCH TOWER",
+        "ROUND TABLE"
+      ],
+      "notes": "This file contains two distinct articles. The first is 'On the Watch Tower' by James H. Anderson, which is a current events commentary. The second is 'The Official Round Table' which contains various Relief Society organizational news and notes from the field. There are some running headers embedded in the text that should be stripped.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 13720,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37673,
+        "output_tokens": 366,
+        "cost": 0.1185
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "volume": 3,
+  "month": "March",
+  "year": 1916,
+  "total_files_checked": 13,
+  "files_correct": [
+    "March_Vol3_03_Article_My_Friend_L._Lula_Greene_Richards.txt",
+    "March_Vol3_04_Prince_of_Ur_The_Prince_of_Ur_'_Homespun.txt",
+    "March_Vol3_05_Article_Relief_Society_School_of_Obstetrics_Alice_Merrill_Horne.txt",
+    "March_Vol3_06_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "March_Vol3_07_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "March_Vol3_08_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "March_Vol3_09_Article_Query_Box_Hazel_Love_Dunford.txt",
+    "March_Vol3_11_Article_Our_Delegates_in_Washington.txt",
+    "March_Vol3_12a_Guide_Lessons_Theology_and_Testimony_-_Women_of_the_Bible_Leah_and_Rachel.txt",
+    "March_Vol3_12b_Guide_Lessons_Work_and_Business.txt",
+    "March_Vol3_12c_Guide_Lessons_Genealogy_and_Art.txt",
+    "March_Vol3_12d_Guide_Lessons_Home_Economics_-_The_Business_Side_of_Housekeeping.txt",
+    "March_Vol3_13_Article_An_Expression_of_Approval.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol3_01a_Article_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper article beginning",
+      "action": "prepend",
+      "text": "MRS. MARY FIELDING SMITH.\nSecond wife of the Patriarch Hyrum Smith. Taken from a painting owned by her son, President Joseph F. Smith.\n",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete header information",
+      "action": "prepend",
+      "text": "Entered as second-class matter at the Post Office, Salt Lake City, Utah.\n",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+      "issue_type": "missing_text",
+      "description": "Missing volume number '3' in header",
+      "action": "replace_content",
+      "text": "Vol. III. MARCH, 1916. No. 3\n\nA TESTIMONY OF THE TRUTH OF THE GOSPEL.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Female Relief Society of Nauvoo",
+      "expected_page": 121,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) The Mothers in Israel article is missing its proper beginning with the image caption, 2) The Editorial file has incomplete header information, and 3) The Female Relief Society of Nauvoo article (page 121) appears to be completely missing from the extracted files. The OCR contains this content but it was not extracted into any file.",
+  "validated_corrections": [
+    {
+      "file": "March_Vol3_01a_Article_Mothers_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper article beginning",
+      "action": "prepend",
+      "text": "MRS. MARY FIELDING SMITH.\nSecond wife of the Patriarch Hyrum Smith. Taken from a painting owned by her son, President Joseph F. Smith.\n",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete header information",
+      "action": "prepend",
+      "text": "Entered as second-class matter at the Post Office, Salt Lake City, Utah.\n",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

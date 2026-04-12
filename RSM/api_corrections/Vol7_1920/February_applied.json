@@ -1,0 +1,57 @@
+{
+  "volume": 7,
+  "month": "February",
+  "year": 1920,
+  "timestamp": "20260315_120943",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol7_01_Article_Emmeline_B._Wells.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (10 chars removed)"
+    },
+    {
+      "file": "February_Vol7_02_Article_Jedediah_M._Grant.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (35 chars removed)"
+    },
+    {
+      "file": "February_Vol7_03_Article_What_Do_We_Know_of_the_Other_Side.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (4 chars removed)"
+    },
+    {
+      "file": "February_Vol7_07_Article_Beyond_Arsareth_Nephi_Anderson.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (52 chars removed)"
+    },
+    {
+      "file": "February_Vol7_08_Article_Oh_Lad_O'Mine_Annie_Wells_Cannon.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6434 chars removed)"
+    },
+    {
+      "file": "February_Vol7_09e_Guide_Lessons_Guide_Lessons.txt",
+      "action": "append",
+      "result": "APPLIED append (357 chars added)"
+    },
+    {
+      "file": "February_Vol7_10_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4686 chars added)"
+    },
+    {
+      "file": "February_Vol7_12_Editorial_Editorial_The_Discipline_of_Fear.txt",
+      "action": "note",
+      "result": "INFO: Contains only partial header information, missing actual editorial content"
+    },
+    {
+      "file": "February_Vol7_13_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4874 chars removed)"
+    }
+  ]
+}

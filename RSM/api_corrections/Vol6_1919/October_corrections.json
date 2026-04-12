@@ -1,0 +1,156 @@
+{
+  "volume": 6,
+  "month": "October",
+  "year": 1919,
+  "total_files_checked": 35,
+  "files_correct": [
+    "October_Vol6_02a_Article_Beyond_Arsareth.txt",
+    "October_Vol6_04a_Article_A_Whiff_of_Ether.txt",
+    "October_Vol6_04b_Notes_from_Field_Relief_Society_School_of_Obstetrics_and_Nursing_1919-1920.txt",
+    "October_Vol6_05a_Article_Let_There_Be_Light.txt",
+    "October_Vol6_06_The_Supply_of_Practical_Nurses.txt",
+    "October_Vol6_07_Influenza_and_the_Coming_Season...Dr._A._Cyril_Callister.txt",
+    "October_Vol6_08_To_a_Lark_Joseph_Hunt_Stanford.txt",
+    "October_Vol6_09_Look_Your_Part_Morag.txt",
+    "October_Vol6_10_New_Book_on_Mexico.txt",
+    "October_Vol6_11_Cally_Lucy_S._Burnham.txt",
+    "October_Vol6_12_My_Prayer_Grace_Ingles_Frost.txt",
+    "October_Vol6_13_Apostrophe_to_an_Apron_Nellie_B._Foote.txt",
+    "October_Vol6_14a_Article_The_Cigarette_Evil.txt",
+    "October_Vol6_16_Construction_and_Reconstruction_in_the_Home.txt",
+    "October_Vol6_17_A_Woman's_Prayer_Mrs._Parley_Nelson.txt",
+    "October_Vol6_19_Editorial_The_League_of_Nations.txt",
+    "October_Vol6_20a_Poem_The_Peace_of_the_Morning.txt",
+    "October_Vol6_20b_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_A_Day_of_Redemption_for.txt",
+    "October_Vol6_20c_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+    "October_Vol6_20d_Guide_Lessons_Lesson_III_-_Genealogy_-_Scandinavian_Surnames.txt",
+    "October_Vol6_20e_Guide_Lessons_Lesson_IV_-_Home_Courses_-_Thrift_in_the_Home.txt"
+  ],
+  "corrections": [
+    {
+      "file": "October_Vol6_01_Reverend_Anna_Howard_Shaw_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of next article 'Beyond' which should be in the next file",
+      "action": "trim_end",
+      "text": "ANNA HOWARD SHAW SUFFRAGE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol6_03_The_Woman's_Relief_Society_Dr._James_E._Talmage.txt",
+      "issue_type": "missing_text",
+      "description": "Article is incomplete - ends mid-sentence and missing substantial content",
+      "action": "append",
+      "text": "sorely needed by our hard-pressed allies and also because the example is felt far outside the field of its immediate application. Yours, faithfully, Herbert Hoover. The death grapple of the nations could be broken with victory on the side of freedom only through the whole-souled and concerted effort of our citizenry without distinction of party, creed or sex. Woman's part has been proved to be no less essential than man's. And right gloriously has the womanhood of America been sanctified by sacrifice and unwearied effort in the common cause. \"Mormon\" women came to the fore with their sisters of the Nation, giving gladly, not alone of their wheat and gold, of their time and effort, but, to the accompaniment of heartaches and tears, their husbands, brothers and sons. Honor to the mothers of men.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol6_04g_Current_Topics_On_the_Watch_Tower.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - this appears to be from a different section, not the Watch Tower section referenced in contents",
+      "action": "replace_content",
+      "text": "Cholera was raging in Japan and China in August, with several hundred victims. Twelve fires of incendiary origin occurred in Ogden, Utah, during July and August. Belgium's king and queen are expected in New York on October 1st, on a visit to the United States. An actors' strike in the United States, in August and the early part of September, closed many theaters. Liverpool, England, was the scene of serious rioting on August 4, during the policemen's strike there. Austria received the amended peace treaty on Sept. 2, with the condition of signing within five days. Railway legislation before the American Congress includes all classes of suggestion, from conservative to extreme radical. The Alabama senate rejected the woman suffrage amendment for the second time on September 2, by a vote of 18 to 13. Jerusalem is being renovated and the holy places restored under British administration. Already the place looks like a new city. The Pacific fleet of the U. S. Navy anchored in San Francisco bay on Sept. 2, amid a monster demonstration by the people. Russian affairs in general still were in warlike turmoil at the beginning of September, with no prospect of immediate improvement.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "October_Vol6_15a_Notes_from_Field_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'OFFICIAL' but should start with 'THE OFFICIAL'",
+      "action": "prepend",
+      "text": "THE ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'WATCHTOWER' but should start with 'ON THE WATCHTOWER'",
+      "action": "prepend",
+      "text": "ON THE ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'The Women's' which appears to be start of next article",
+      "action": "trim_end",
+      "text": "Russian affairs in general still were in warlike turmoil at the beginning of September, with no prospect of immediate improvement.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol6_21_Guide_Lessons.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple sections including guide lessons and other articles",
+      "action": "note",
+      "text": "This file appears to contain content that should be distributed among other files",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "My Neighbor and I Elsie C. Carroll",
+      "expected_page": 559,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content issues including incomplete articles, wrong content, and missing articles. The Guide Lessons file appears to contain mixed content that should be redistributed. The My Neighbor and I article is completely missing from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "October_Vol6_01_Reverend_Anna_Howard_Shaw_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of next article 'Beyond' which should be in the next file",
+      "action": "trim_end",
+      "text": "ANNA HOWARD SHAW SUFFRAGE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol6_03_The_Woman's_Relief_Society_Dr._James_E._Talmage.txt",
+      "issue_type": "missing_text",
+      "description": "Article is incomplete - ends mid-sentence and missing substantial content",
+      "action": "append",
+      "text": "sorely needed by our hard-pressed allies and also because the example is felt far outside the field of its immediate application. Yours, faithfully, Herbert Hoover. The death grapple of the nations could be broken with victory on the side of freedom only through the whole-souled and concerted effort of our citizenry without distinction of party, creed or sex. Woman's part has been proved to be no less essential than man's. And right gloriously has the womanhood of America been sanctified by sacrifice and unwearied effort in the common cause. \"Mormon\" women came to the fore with their sisters of the Nation, giving gladly, not alone of their wheat and gold, of their time and effort, but, to the accompaniment of heartaches and tears, their husbands, brothers and sons. Honor to the mothers of men.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'The Women's' which appears to be start of next article",
+      "action": "trim_end",
+      "text": "Russian affairs in general still were in warlike turmoil at the beginning of September, with no prospect of immediate improvement.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "October_Vol6_15a_Notes_from_Field_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'OFFICIAL' but should start with 'THE OFFICIAL'",
+      "action": "prepend",
+      "text": "THE ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "October_Vol6_18_On_the_Watch_Tower.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'WATCHTOWER' but should start with 'ON THE WATCHTOWER'",
+      "action": "prepend",
+      "text": "ON THE ",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

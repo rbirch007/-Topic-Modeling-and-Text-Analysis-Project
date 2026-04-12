@@ -1,0 +1,56 @@
+{
+  "volume": 5,
+  "month": "August",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1199,
+  "files": [
+    {
+      "source_file": "August_Vol5_15_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial: The Return of the Jews",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . Motto Charity Never Faileth RELIEF",
+          "end_boundary": "God speed the happy day! Guide Lessons.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson I - Theology and Testimony - A People of Promise, The Jews",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "world of letters and as orators. GUIDE",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Genealogy",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business. Second Week in September.",
+          "end_boundary": "(a) One's own origin and beginnings.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains an editorial about the return of the Jews to Jerusalem, followed by two Guide Lessons. Lesson II (Work and Business) appears to be just a header with no content, while Lesson III (Genealogy) begins but is cut off mid-sentence. The file appears to be incomplete as it ends abruptly in the middle of the genealogy lesson content.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16058,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37679,
+        "output_tokens": 459,
+        "cost": 0.1199
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "volume": 3,
+  "month": "March",
+  "year": 1916,
+  "total_merged": 2,
+  "total_splits": 2,
+  "total_cost": 0.2695,
+  "files": [
+    {
+      "source_file": "March_Vol3_01a_Article_Mothers_in_Israel_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mothers in Israel",
+          "category": "Article",
+          "author": "Susa Young Gates",
+          "start_boundary": "MRS. MARY FIELDING SMITH. Second wife of the",
+          "end_boundary": "Wilford LeRoy Harris md. Margery Sumner, May 14, 1914, at Salt Lake City, Utah.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MOTHERS IN ISRAEL"
+      ],
+      "notes": "This file contains a single comprehensive article about Mary Fielding Smith and her descendants. The article includes biographical narrative, letters, genealogical information, and family trees. Despite its length and varied content sections, it is all part of one cohesive article as indicated in the table of contents.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 59590,
+      "tier": 2,
+      "pdf_pages": [
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "api_usage": {
+        "input_tokens": 36796,
+        "output_tokens": 266,
+        "cost": 0.1144
+      }
+    },
+    {
+      "source_file": "March_Vol3_12d_Guide_Lessons_Home_Economics_-_The_Business_Side_of_Housekeeping_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Home Economics: The Business Side of Housekeeping",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Economics. Fourth Week in April.",
+          "end_boundary": "Her magazine cannot be forwarded.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a single Guide Lesson on Home Economics covering the business side of housekeeping. It includes the lesson outline, detailed content about budgeting and household financial management, questions, and ends with a brief note about Mrs. Susan Leighton's address. The content matches the 'Guide Lessons' entry from the table of contents.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13384,
+      "tier": 1,
+      "pdf_pages": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198
+      ],
+      "api_usage": {
+        "input_tokens": 50346,
+        "output_tokens": 274,
+        "cost": 0.1551
+      }
+    }
+  ]
+}

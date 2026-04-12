@@ -1,0 +1,62 @@
+{
+  "volume": 8,
+  "month": "July",
+  "year": 1921,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0494,
+  "stats": {
+    "truncated": 1,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol8_01_Frontispiece_President_Clarissa_Smith_Williams_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 79,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption. The PDF pages shown are advertisements and the magazine cover, not the actual frontispiece page with President Williams' photograph. The file contains the standard caption text that would appear under her portrait.",
+      "api_usage": {
+        "input_tokens": 6114,
+        "output_tokens": 156,
+        "cost": 0.0207
+      },
+      "pdf_pages": [
+        269,
+        270,
+        271,
+        272
+      ]
+    },
+    {
+      "source_file": "July_Vol8_10c_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "status": "truncated",
+      "current_chars": 78,
+      "complete_text": "LESSON II.\n\nWork and Business.\nSEOND WEEK IN FEBRUARY.\n\nLESSON III.\n\nLiterature.\nTHIRD WEEK IN FEBRUARY.\n\nLATTER-DAY SAINTS' HYMNS.\n\nTHE SPIRIT OF GOD LIKE A FIRE IS BURNING.\n\nThis hymn has grown to be the medium of expression of the soul of the people of the Church. It was written by W. Phelps, in Kirtland, Ohio.\n\nIt was composed for the dedicatory service of the Kirtland temple. This hymn is distinguished in two ways, first, it was written for the dedication service of the first temple erected and, second, it is the first hymn composed to be used at the dedication of a temple in the latter days.\n\nThe story goes that the Prophet Joseph Smith went into the printing office where W. W. Phelps was at work. On seeing him come in, Elder Phelps presented the poem. The prophet expressed great delight with the hymn. It was later printed on pieces of white satin in which form it was used at the dedicatory service.\n\nImmediately following the prayer of dedication, which was given through revelation, this song was sung. We can scarcely conceive of a hymn being sung under more propitious circumstances, certainly its setting was little short of ideal. In the course of our lesson, we shall seek to show that the hymn was in spirit and in substance well suited to the occasion, thus making of it an \"occasional\" or specialized hymn of the very first order.\n\nFrom this introduction we proceed to a study of the first stanza, and here we wish to say that the unit of composition which is generally called the paragraph, in prose, is known as the stanza in poetry, and that a verse, technically speaking, is a line of poetry:\n\n\"The Spirit of God like a fire is burning;\nThe latter-day glory begins to come forth;\nThe visions and blessings of old are returning,\nAnd angels are coming to visit the earth.\"\n\n\"The Spirit of God like a fire is burning!\" In the early Christian Era there were those who, feeling the warmth of the Spirit of God, referred to it as a burning within, so that W.",
+      "title": "LESSON II. Work and Business. LESSON III. Literature. LATTER-DAY SAINTS' HYMNS.",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete text on page 48. The file was severely truncated, containing only the lesson headers but missing the entire hymn analysis content.",
+      "api_usage": {
+        "input_tokens": 6113,
+        "output_tokens": 693,
+        "cost": 0.0287
+      },
+      "pdf_pages": [
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ]
+}

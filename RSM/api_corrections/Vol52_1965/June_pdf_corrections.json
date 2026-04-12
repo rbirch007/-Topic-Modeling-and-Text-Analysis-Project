@@ -1,0 +1,19 @@
+{
+  "volume": 52,
+  "month": "June",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_06_32_Poem_Above_Chamberlin.txt",
+      "issue_type": "ad_content",
+      "description": "Article file contains only advertisement content instead of the actual poem text",
+      "action": "replace_content",
+      "text": "Above the Foothills\n\nEnola Chamberlin\n\nThe desert has the foothills\nThough they're not so very high.\nThe foothills have the mountains\nTo set their long sights by.\nAnd the mountains if they need it,\nHave the far wide reach of sky.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 10% OCR coverage"
+    }
+  ]
+}

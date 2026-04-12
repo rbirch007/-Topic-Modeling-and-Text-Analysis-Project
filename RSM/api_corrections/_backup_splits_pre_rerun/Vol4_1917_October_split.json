@@ -1,0 +1,58 @@
+{
+  "volume": 4,
+  "month": "October",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1358,
+  "files": [
+    {
+      "source_file": "October_Vol4_11c_Guide_Lessons_LESSON_III_Genealogy_and_Literature_Third_Week_in_November_C_a_a_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON III. Genealogy and Literature. Third Week in November. COLONIZATION FROM BABEL",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "end_boundary": "(Cite authorities in answering the above questions.)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LITERATURE Third Week in September. STORIES FROM SCRIPTURE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LITERATURE Third Week in September. STORTES FROM",
+          "end_boundary": "What Book of Mormon story do you best remember?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE DEPARTMENT"
+      ],
+      "notes": "This file contains two distinct lesson sections that were merged together. The first is a Genealogy lesson about colonization from Babel, and the second is a Literature lesson about stories from scripture. Both are part of the Guide Lessons section but cover different weeks and topics.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10642,
+      "tier": 1,
+      "pdf_pages": [
+        664,
+        665,
+        666,
+        667,
+        668
+      ],
+      "api_usage": {
+        "input_tokens": 43398,
+        "output_tokens": 375,
+        "cost": 0.1358
+      }
+    }
+  ]
+}

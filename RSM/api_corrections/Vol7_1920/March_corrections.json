@@ -1,0 +1,123 @@
+{
+  "volume": 7,
+  "month": "March",
+  "year": 1920,
+  "total_files_checked": 13,
+  "files_correct": [
+    "March_Vol7_02_Article_The_Five_General_Presidents_of_the_Relief_Society.txt",
+    "March_Vol7_03_Article_The_White_Begonia_Lucy_May_Green.txt",
+    "March_Vol7_04_Article_A_Message_to_Mothers_Ida_Smoot_Dusenberry.txt",
+    "March_Vol7_05_Article_Home_Problems_Jennette_A._Hyde.txt",
+    "March_Vol7_06_Article_My_Hero_and_Heroine_Susa_Young_Gates.txt",
+    "March_Vol7_12_Article_A_Tribute.txt",
+    "March_Vol7_13_Article_Dee_Hospital.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol7_01_Article_To_the_Female_Relief_Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about Relief Society presidents",
+      "action": "trim_end",
+      "text": ". Logan, Utah.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_07_Article_Beyond_Arsareth_Nephi_Anderson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Official Round Table article about suffrage",
+      "action": "trim_end",
+      "text": "Fifty years ago,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_08_Article_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "THE OFFICIAL ROUND TABLE\n\nWomen Will Celebrate Golden Jubilee\nMarking Fiftieth Anniversary of Suffrage in Utah.\n\nFifty years ago, on the 12th day of February, 1870, the law granting suffrage to women was passed in the Utah legislature. It is regarded as eminently fitting, therefore, that men and women of Utah memorize that day with ceremony and celebration.\n\nThe celebration was held February 12, in the Assembly Hall, on the occasion of the pas",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "March_Vol7_09_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be fragments from other articles",
+      "action": "replace_content",
+      "text": "On the Watch Tower\nJames H. Anderson.\n\nGen. John J. Pershing was given a cordial welcome on his visit to Utah, on January 16.\n\nThe Jewish population of the world in 1919 was 15,430,000. Of these, 3,100,000 are in the United States, and nearly all the others in Europe.\n\nThe fiftieth anniversary of the completion of the first railway to Salt Lake City was celebrated here on January 10.\n\nProf. Joseph J. Daynes, one of Utah's most versatile and prominent musicians, died in Salt Lake City on January 15.\n\nThe Congregational church in the United States has inaugurated a great scheme of propaganda for converts among the Indians in Mexico.\n\nInfluenza appeared in nearly every city of over 50,000 population, and in many smaller ones in the United States, the third week in January. The fatalities are not so great as in 1918.\n\nEarthquakes in Mexico, from January 3 to January 15, disturbed ten states of the southern republic, doing immense damage, and resulting in the death of at least 1,000 people.\n\nSoviet agitators to the number of 249 were deported from the United States, and reached Russia on January 16. Their leaders threaten to return to the United States at the first opportunity.\n\nThe Presbyterian church in the United States is seeking to unite the various sects under the title of the United Churches of Christ in America. Success is not assured, at least not yet.\n\nThe Uintah Basin railway articles of incorporation were filed in Utah on January 3. It is intended to build a line from Salt Lake City into eastern Utah.\n\nThe railways of the United States are to be turned back to their owners on March 1, according to proclamation of the President. Many people look for additional labor troubles following that event.\n\nEurope is at peace by treaty, but a big war duo in western Asia looms up to threaten all the Old World civilization. Truly, what the future has in store.\n\nPresident Heber J. Grant and a number of the general Church authorities intend to make a pilgrimage to the home of the Prophet Joseph Smith, near Palmyra, New York, in May next, in honor of the first heavenly vision given to the Prophet.\n\nJanuary 25 was the date set by the Presidency of the Church of Jesus Christ of Latter-day Saints as the culminating date for donations to help poor and suffering members of the Church in Switzerland and Germany. \"He that giveth to the poor lendeth to the Lord.\"\n\nMrs. Tressia Anderson Miner, a Latter-day Saint missionary to the Hawaiian Islands, died there in December. Her body was brought home to Utah for interment. She was the mother of nine children, and an exemplary Saint.\n\nDean Inge, of St. Paul's church, London, England, recently declared that \"Nothing will end social discontent but destruction of our great cities.\" The dean has acquired some fame as a far-seeing publicist, and his warning may not be lightly passed by.\n\nRichard W. Young, president of the Ensign Stake of Zion, died on December 27. He was Utah's most famous soldier, having been made a brigadier general in the United States army for his services, and was recognized in both civil and military life as one of the ablest, most amiable, and most exemplary men in the nation.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "March_Vol7_10a_Editorial_Editorial_The_Discipline_of_Obedience.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial header but missing proper beginning",
+      "action": "prepend",
+      "text": "Entered as second-class matter at the Post Office, Salt Lake City, Utah\n\nMotto — Charity Never Faileth\n\nTHE GENERAL BOARD\n\nMRS. EMMELINE B. WELLS ------ President\nMRS. CLARISSA S. WILLIAMS First Counselor\nMRS. JULIXA L. SMITH ------ Second Counselor\nMRS. AMY BRO'N LYMAN ----- General Secretary\nMRS. SUSA YOUNG GATES. - - - Recording Secretary\nMRS. EMMA A. EMPEY ------- Treasurer\n\nMrs. Sarah Jenne Cannon\nMrs. Ida S. Dusenberry\nMrs. Carrie S. Thomas\nDr. Romania B. Penrose\nMrs. Elizabeth SI Wilcox\nMiss Sarah McLelland\nMrs. Emily S. Richards\nMrs. Elizabeth C. McCune\nMrs. Janette A. Hyde\nMrs. Julia P. M. Farnsworth\nMrs Donnette Smith Kesler\nMiss Sarah Eddington\nMrs. Phoebe Y. Beatie\nMrs Elizabeth C. Crimson\nMiss Lillian Cameron\nMrs. Rebecca Niebaur Nibley\nMrs. Lizzie Thomas Edward, Music Director\nMiss Edna Coray, Organist\n\n",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_10b_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of a table",
+      "action": "append",
+      "text": "3\n\nII. Sample menus for one day, suitable for a child twelve years old:\n\nBreakfast\nPrunes 4.\nOatmeal ¾ cup.\nToast 2 slices.\nEgg 1.\nMilk 1½ cups.\nSugar 1 Tb.\nButter ½ Tb.\n\nDinner\nChopped steak 2.82 ounces.\nBaked potato 1.\nEscalloped tomatoes ¾ cup.\nBread crumbs @ slice.\nButter 1 tablespoonful.\nBread ½ slice.\nBaked apple 1.\nSugar 1 tablespoonful.\n\nAfter-school lunch\nBread 1 slice.\nButter 1 teaspoonful.\nMilk 1 cup.\n\nSupper\nBread 3 slices.\nMilk 1¼ cups.\nRice 2 tablespoonfuls.\nButter 2 teaspoonfuls.",
+      "confidence": "medium",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are content bleeding between articles and one file containing completely wrong content. The Official Round Table article appears to be split across multiple files with some content missing proper beginnings.",
+  "validated_corrections": [
+    {
+      "file": "March_Vol7_01_Article_To_the_Female_Relief_Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about Relief Society presidents",
+      "action": "trim_end",
+      "text": ". Logan, Utah.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_07_Article_Beyond_Arsareth_Nephi_Anderson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Official Round Table article about suffrage",
+      "action": "trim_end",
+      "text": "Fifty years ago,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_08_Article_The_Official_Round_Table.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "THE OFFICIAL ROUND TABLE\n\nWomen Will Celebrate Golden Jubilee\nMarking Fiftieth Anniversary of Suffrage in Utah.\n\nFifty years ago, on the 12th day of February, 1870, the law granting suffrage to women was passed in the Utah legislature. It is regarded as eminently fitting, therefore, that men and women of Utah memorize that day with ceremony and celebration.\n\nThe celebration was held February 12, in the Assembly Hall, on the occasion of the pas",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "March_Vol7_10a_Editorial_Editorial_The_Discipline_of_Obedience.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial header but missing proper beginning",
+      "action": "prepend",
+      "text": "Entered as second-class matter at the Post Office, Salt Lake City, Utah\n\nMotto — Charity Never Faileth\n\nTHE GENERAL BOARD\n\nMRS. EMMELINE B. WELLS ------ President\nMRS. CLARISSA S. WILLIAMS First Counselor\nMRS. JULIXA L. SMITH ------ Second Counselor\nMRS. AMY BRO'N LYMAN ----- General Secretary\nMRS. SUSA YOUNG GATES. - - - Recording Secretary\nMRS. EMMA A. EMPEY ------- Treasurer\n\nMrs. Sarah Jenne Cannon\nMrs. Ida S. Dusenberry\nMrs. Carrie S. Thomas\nDr. Romania B. Penrose\nMrs. Elizabeth SI Wilcox\nMiss Sarah McLelland\nMrs. Emily S. Richards\nMrs. Elizabeth C. McCune\nMrs. Janette A. Hyde\nMrs. Julia P. M. Farnsworth\nMrs Donnette Smith Kesler\nMiss Sarah Eddington\nMrs. Phoebe Y. Beatie\nMrs Elizabeth C. Crimson\nMiss Lillian Cameron\nMrs. Rebecca Niebaur Nibley\nMrs. Lizzie Thomas Edward, Music Director\nMiss Edna Coray, Organist\n\n",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol7_10b_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of a table",
+      "action": "append",
+      "text": "3\n\nII. Sample menus for one day, suitable for a child twelve years old:\n\nBreakfast\nPrunes 4.\nOatmeal ¾ cup.\nToast 2 slices.\nEgg 1.\nMilk 1½ cups.\nSugar 1 Tb.\nButter ½ Tb.\n\nDinner\nChopped steak 2.82 ounces.\nBaked potato 1.\nEscalloped tomatoes ¾ cup.\nBread crumbs @ slice.\nButter 1 tablespoonful.\nBread ½ slice.\nBaked apple 1.\nSugar 1 tablespoonful.\n\nAfter-school lunch\nBread 1 slice.\nButter 1 teaspoonful.\nMilk 1 cup.\n\nSupper\nBread 3 slices.\nMilk 1¼ cups.\nRice 2 tablespoonfuls.\nButter 2 teaspoonfuls.",
+      "confidence": "medium",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

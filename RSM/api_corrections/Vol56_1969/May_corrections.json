@@ -1,0 +1,121 @@
+{
+  "volume": 56,
+  "month": "May",
+  "year": 1969,
+  "total_files_checked": 33,
+  "files_correct": [
+    "V56_05_07_Poem_Wish_Jennings.txt",
+    "V56_05_08_Poem_This_Trimmer.txt",
+    "V56_05_19_Poem_Hameland_Clark.txt",
+    "V56_05_31_Poem_Mount_Roberts.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_05_01_Fict_Welcome_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains poem 'No Words Learned' instead of Welcome the Task Chapter 7",
+      "action": "replace_content",
+      "text": "Chapter 7 Synopsis: Jennifer Miles, a young girl of twenty-four, has taken over the management of her family home following the death of her mother. She has three young brothers, and she finds it a great challenge to be responsible for them. Steve Rey, a long-time friend of the family, and Jim Long, whom she met on a trip to Houston, Texas, now a student in Utah, are competing for her attentions. M It was February, and winter seemed to have settled in the valley permanently. It had been dark and cold for more weeks than Jennifer cared to count. For her it was a time of unexplainable depression. She could not put her finger on any one thing being wrong, but for the first time in the entire six months that she had been responsible for the family, life seemed to be at a standstill. She had resumed her studies, and had been awarded a student teaching position in Michele Bartmess as told by Annette Giles Springville. If she could attend the summer session, she would be graduated in August. The boys were behaving well and seemed well adjusted. There had been minor skirmishes and disagreements over trivial matters, but no serious disciplinary matters had arisen. Charles Miles seemed much more settled, and although his job required him to travel a great deal, he had taken an active part in home activities since the incident with Dave. Jennifer was saddened to note the lost, lonely look in his eyes, and his smile came not as readily as it once had, but he was making adjustments. Twice monthly he took a trip to Manti to do temple work, and seemed in much better spirits when he returned from such trips, yet nothing could ease his terrible",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_05_02_Poem_No_Sadleir.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains discipline article text instead of poems 'No Words Learned' and 'May Dividends'",
+      "action": "replace_content",
+      "text": "NO WORDS LEARNED The world was exceedingly small that day From cabin to river and orchard-wide And only as tall as the tallest tree, But filtered with light through the petals of May, An arm of fence and a well beside, And empty of all but a girl of three With no past history remembered long And few words learned for her baby song. Oh, there was a little girl And she had flowers in her hair And on her dress And in her shoes. The world has grown great-grandmother old And as tall as an answered prayer. (The river still runs, but is no longer young And the withered old orchard has long been sold.) Horizons have widened from joy to despair And words have been learned for a voluble tongue Since that memoried day many Mays ago But none yet for blossoms repeated in snow. Alice Morrey Bailey MAY DIVIDENDS Speak my name in whispers As new May appears: She has no lusty voice, Breathing her way Through shiny foliage And soft-fallen tears. Speak my name in whispers, Reliving pleasures In a tiny town, Child queen in fairy Dress, with lilac crown. Whisper on, as I Recall those faces Of my childhood friends; Faces young and joyful, Sighting not the promise Life extends: And I shall whisper back To youin time, Of love-filled years, Of all May's dividends. Beulah Huish Sadleir",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_05_03_SpFt_With_Miltenberger.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with discipline article text instead of 'With Singleness of Heart'",
+      "action": "trim_start",
+      "text": "If her face holds a frown, her 330 we WU WU < ts Discipline a Problem? Frances B. Barlow Associate Professor, Child Development Brigham Young University CVI body is tense, and she dresses or feeds him impatiently or with angry jerks, he senses that something is wrong. Today, more than ever, parents are confused and groping for a clear understanding of how to deal with the question of discipline. It is not strange that parents are confused. The discipline pendulum has swung between extremes. In the nineteen twenties there was a strong reaction against the repressive \"Children should be seen and not heard\" and the stern, sometimes harsh, \"Spare the rod and spoil the child\" dictates and practices of former days. It was soon recognized that such a completely authoritarian viewpoint failed to recognize the nature and needs of a growing child, and also that it was poor training for a democratic way of life. Some parents and teachers abandoned all authoritative control, permitting children to do almost anything and everything the child wanted to do. An attitude of complete permissivenessletting a child behave in any way short of actual bodily injury to himself and otherswas sometimes advocated. Children from such homes became insecure. They were forced to make decisions they were incapable of making. It seems obvious that neither an extreme authoritarianism nor an extreme permissiveness can be a sound method of bringing up a childeither for his own healthy personality development or for preparing him to be a mature, responsible citizen of a democratic, free society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_05_05_SpFt_Is_Barlow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Carlyle article text instead of discipline article",
+      "action": "trim_start",
+      "text": "Meanwhile, he continued his studies in German and began to write for magazines in Edin- 334 burgh. His first important work was the Life of Schiller, the German poet. Other works included Sartor Resartus, Burns, Past and Present, and Frederick the Great. Carlyle knew intimately the meaning of work. After he had completed the first volume of The French Revolution, in 1837, he gave it to his friend, John Stuart Mill, to read. One of Mill's servants used the manuscript to start a fire. All of Carlyle's notes had been destroyed and he struggled to reproduce his masterpiece. The rewritten book was a success and established Carlyle's genius in the literary world of his times. Well could he say, \"The wages of every noble work do yet lie in heaven.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_05_11_Poem_To_a_Coles.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of poem 'To a Grandson'",
+      "action": "replace_content",
+      "text": "TO A GRANDSON You are the son I never had, Blue-eyed and blonde of hair; You are the substance of a dream, So fair, so fair. You are the impertinent smile, The mischievous, child act; The love of outstretched arms, You are the living fact Of what we hoped, so long, could be; You are so gentle, wise. Small boy, you are my heart Stretched twice its size. Christie Lund Coles",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_05_16_Poem_A_Harding.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains author name, missing poem 'A Tribute'",
+      "action": "replace_content",
+      "text": "A TRIBUTE I'm just a visiting teacher, I heard a sister say, But, oh, how golden was the key that she had used today. It had opened doors of comfort and doors of hopefulness For lonely hearts and troubled minds and brought them happiness. A sweetly-worded message she had humbly left inside, And every home she visited seemed sweetly purified. No idle words of gossip, no ugly thought was left to scar No wonder God was pleased as he watched her from afar. So she is ''just a visiting teacher,'' how little does she know How valuable, how welcome her monthly visits grow! As she turns the key of service that fits in every lock Of every precious sister whom she visits on her block. Bernice Cheshire Harding",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_05_21_Poem_Perception_Jessen.txt",
+      "issue_type": "missing_text",
+      "description": "File only contains author name, missing poem 'Perception'",
+      "action": "replace_content",
+      "text": "PERCEPTION I walked today with my children three In the quiet land where I wished to be. I left the dishes at home in the sink, For I needed space to breathe and think. Three fragile voices sang delight In a miniature waterfall, silvery-bright, Exclaimed at leaves, falling one by one, And praised the warmth of the autumn sun. I walked today with my children three And saw things my eyes alone could not see. Grace Diane Jessen",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_05_25_Poem_My_Rothe.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains placeholder text instead of poem 'My Tapestry'",
+      "action": "replace_content",
+      "text": "MY TAPESTRY The tapestry of life I stitch Is never quite as perfect as it might be; I plan it carefully, Choosing the theme and materials, And yet, when the time of working And blending has arrived, I sometimes find myself inadequate. The task which once seemed easy May on occasions of sorrow or stress Be almost too difficult to finish; And yet, when I view it at its completion, I hope that the over-all picture Is a pleasing blend, With the mistakes of the first stitches, Corrected and almost unnoticeable In the perfection of the others. Ruth G. Rothe",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Carlyles: Thomas and Jane and Their Philosophy About Work",
+      "expected_page": 334,
+      "status": "merged_with_another",
+      "merged_into": "V56_05_04_Poem_Impressionist_Olso.txt"
+    },
+    {
+      "title": "Tree of Magic",
+      "expected_page": 363,
+      "status": "not_in_any_file"
+    }
+  ],
+  "notes": "Multiple files have content mismatches with their titles. Several poems are missing or contain wrong content. The Carlyle article appears to be merged with the Impressionist Painting poem file. Tree of Magic article is completely missing from all files.",
+  "validated_corrections": [
+    {
+      "file": "V56_05_03_SpFt_With_Miltenberger.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with discipline article text instead of 'With Singleness of Heart'",
+      "action": "trim_start",
+      "text": "If her face holds a frown, her 330 we WU WU < ts Discipline a Problem? Frances B. Barlow Associate Professor, Child Development Brigham Young University CVI body is tense, and she dresses or feeds him impatiently or with angry jerks, he senses that something is wrong. Today, more than ever, parents are confused and groping for a clear understanding of how to deal with the question of discipline. It is not strange that parents are confused. The discipline pendulum has swung between extremes. In the nineteen twenties there was a strong reaction against the repressive \"Children should be seen and not heard\" and the stern, sometimes harsh, \"Spare the rod and spoil the child\" dictates and practices of former days. It was soon recognized that such a completely authoritarian viewpoint failed to recognize the nature and needs of a growing child, and also that it was poor training for a democratic way of life. Some parents and teachers abandoned all authoritative control, permitting children to do almost anything and everything the child wanted to do. An attitude of complete permissivenessletting a child behave in any way short of actual bodily injury to himself and otherswas sometimes advocated. Children from such homes became insecure. They were forced to make decisions they were incapable of making. It seems obvious that neither an extreme authoritarianism nor an extreme permissiveness can be a sound method of bringing up a childeither for his own healthy personality development or for preparing him to be a mature, responsible citizen of a democratic, free society.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_05_05_SpFt_Is_Barlow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with Carlyle article text instead of discipline article",
+      "action": "trim_start",
+      "text": "Meanwhile, he continued his studies in German and began to write for magazines in Edin- 334 burgh. His first important work was the Life of Schiller, the German poet. Other works included Sartor Resartus, Burns, Past and Present, and Frederick the Great. Carlyle knew intimately the meaning of work. After he had completed the first volume of The French Revolution, in 1837, he gave it to his friend, John Stuart Mill, to read. One of Mill's servants used the manuscript to start a fire. All of Carlyle's notes had been destroyed and he struggled to reproduce his masterpiece. The rewritten book was a success and established Carlyle's genius in the literary world of his times. Well could he say, \"The wages of every noble work do yet lie in heaven.\"",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

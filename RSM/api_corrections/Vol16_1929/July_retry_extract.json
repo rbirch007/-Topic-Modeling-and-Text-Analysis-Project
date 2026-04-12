@@ -1,0 +1,61 @@
+{
+  "volume": 16,
+  "month": "July",
+  "year": 1929,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.0626,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Grandma's Quilts",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Elsie E. Barrett",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF page images (411-415) but could not locate the article 'Grandma's Quilts' by Elsie E. Barrett. The pages shown contain advertisements, table of contents, and articles about handcart pioneers and Marinda Allen Bateman, but not the requested poem about quilts.",
+      "order": "b",
+      "pdf_pages": [
+        411,
+        412,
+        413,
+        414,
+        415
+      ],
+      "source_file": "July_Vol16_10_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt",
+      "api_usage": {
+        "input_tokens": 9539,
+        "output_tokens": 149,
+        "cost": 0.0309
+      }
+    },
+    {
+      "title": "Autobiography of Margaret Miller Watson De Witt",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Margaret Miller Watson De Witt",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF pages. The pages shown contain: advertisements (Troy Laundry, R.E. Brewer Co., Temple and Burial Clothes), table of contents, Monument to Handcart Pioneers frontispiece, Handcart Trail poem, and the beginning of 'Impressions of My Mother, Marinda Allen Bateman'. According to the table of contents, the De Witt autobiography should be on page 378, but the provided pages appear to be from earlier in the magazine (around pages 347-350).",
+      "order": "c",
+      "pdf_pages": [
+        411,
+        412,
+        413,
+        414,
+        415
+      ],
+      "source_file": "July_Vol16_10_Article_Autobiography_of_Caroline_Josephine_Ballantyne_Farr.txt",
+      "api_usage": {
+        "input_tokens": 9551,
+        "output_tokens": 203,
+        "cost": 0.0317
+      }
+    }
+  ]
+}

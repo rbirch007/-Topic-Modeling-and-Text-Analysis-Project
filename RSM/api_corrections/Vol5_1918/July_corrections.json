@@ -1,0 +1,144 @@
+{
+  "volume": 5,
+  "month": "July",
+  "year": 1918,
+  "total_files_checked": 11,
+  "files_correct": [
+    "July_Vol5_05_Article_July_Entertainments_Morag.txt",
+    "July_Vol5_08_Article_Red_Cross_Workers_Louisa_M._Johnson.txt",
+    "July_Vol5_10_Current_Topics_Current_Topics_James_H._Anderson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol5_01_Frontispiece_Relief_Society_Mission_Presidents_Frontispiece_Relief_Societ.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains poem content that should be in Sentiments article, not frontispiece content",
+      "action": "replace_content",
+      "text": "Presidents of National Womens Relief Society in the Missions of the United States and Mexico.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "July_Vol5_02_Article_Sentiments_Emma_Schrimshaw.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article instead of the Sentiments poem",
+      "action": "trim_start",
+      "text": "Written by Emma Schrimshaw. Detroit, Mich. Presidents of National Womens Relief Society in the Missions of the United States and Mexico.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_02_Article_Sentiments_Emma_Schrimshaw.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual Sentiments poem that should start the article",
+      "action": "prepend",
+      "text": "Sentiments. I thought you sisters in the West perhaps would like to hear About the fine Relief Society that is established here. Our city, named Detroit, has many sisters striving, Who toil with might and main to make the work more thriving. Two lady missionaries us instruct, in ways and modes of living, Theology and Genealogy before our minds are bringing. From far and near the sisters come, some tiny babies bringing; With zeal we aim to make this year the best with all attending. We think and plan in various ways to help the work along, We sew, knit, crochet, hold bazaars to make the treasury strong, And, (when our country called our boys to France to fight for freedom), Helmets, sweaters, caps and socks  we felt quite sure they'd need them. All kinds of food we do conserve, such tasks we'd never shirk, We rally to our Country's needs, so we took up Red Cross work. With courage wield, bold we'll face our tasks; Truth's banner we will To those around us lend a hand, while in the mission field.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_04_Article_Unusual_Mothers.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article instead of Unusual Mothers content",
+      "action": "trim_start",
+      "text": "We will follow Jesus of Nazareth, The Light of the World.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_06_Home_Economics_Home_Economics_Department_Janette_A._Hyde.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of Home Economics Department article",
+      "action": "note",
+      "text": "File appears to contain only advertisement content, not the actual Home Economics Department article by Janette A. Hyde",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "July_Vol5_07_Patriotic_Dept_Patriotic_Department_Clarissa_S._Williams.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from next article (Red Cross Workers)",
+      "action": "trim_end",
+      "text": "Every purchaser of a Liberty loan bond performs a distinct individual service to his country and to our boys fighting in France.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "NOTES FROM THE FIELD. 413",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_11_Editorial_Editorial_In_the_Work_Not_of_the_World.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. A. C. Hansen, Boulder, Utah, has 700 lbs. of alfalfa seed at $.15 a pound; mailing expense extra.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files have content bleeding issues and one file (Home Economics) appears to contain only advertisement content instead of the actual article. The Sentiments poem is missing from its designated file and appears to be in the Frontispiece file instead.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol5_02_Article_Sentiments_Emma_Schrimshaw.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article instead of the Sentiments poem",
+      "action": "trim_start",
+      "text": "Written by Emma Schrimshaw. Detroit, Mich. Presidents of National Womens Relief Society in the Missions of the United States and Mexico.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_02_Article_Sentiments_Emma_Schrimshaw.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the actual Sentiments poem that should start the article",
+      "action": "prepend",
+      "text": "Sentiments. I thought you sisters in the West perhaps would like to hear About the fine Relief Society that is established here. Our city, named Detroit, has many sisters striving, Who toil with might and main to make the work more thriving. Two lady missionaries us instruct, in ways and modes of living, Theology and Genealogy before our minds are bringing. From far and near the sisters come, some tiny babies bringing; With zeal we aim to make this year the best with all attending. We think and plan in various ways to help the work along, We sew, knit, crochet, hold bazaars to make the treasury strong, And, (when our country called our boys to France to fight for freedom), Helmets, sweaters, caps and socks  we felt quite sure they'd need them. All kinds of food we do conserve, such tasks we'd never shirk, We rally to our Country's needs, so we took up Red Cross work. With courage wield, bold we'll face our tasks; Truth's banner we will To those around us lend a hand, while in the mission field.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_04_Article_Unusual_Mothers.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article instead of Unusual Mothers content",
+      "action": "trim_start",
+      "text": "We will follow Jesus of Nazareth, The Light of the World.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_07_Patriotic_Dept_Patriotic_Department_Clarissa_S._Williams.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with content from next article (Red Cross Workers)",
+      "action": "trim_end",
+      "text": "Every purchaser of a Liberty loan bond performs a distinct individual service to his country and to our boys fighting in France.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "NOTES FROM THE FIELD. 413",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol5_11_Editorial_Editorial_In_the_Work_Not_of_the_World.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. A. C. Hansen, Boulder, Utah, has 700 lbs. of alfalfa seed at $.15 a pound; mailing expense extra.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

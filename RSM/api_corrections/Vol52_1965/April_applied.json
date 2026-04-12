@@ -1,0 +1,82 @@
+{
+  "volume": 52,
+  "month": "April",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 10,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V52_04_09_GenFt_Womans_Cannon.txt",
+      "action": "note",
+      "result": "INFO: File contains content from Editorial article instead of Woman's Sphere"
+    },
+    {
+      "file": "V52_04_10_GenFt_Editorial_Sharp.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_04_11_GenFt_Notes_Magazine.txt",
+      "action": "note",
+      "result": "INFO: File ends mid-sentence and appears incomplete"
+    },
+    {
+      "file": "V52_04_12_SpFt_How_Gould.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1353 chars)"
+    },
+    {
+      "file": "V52_04_13_SpFt_Seek_Park.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_04_15_Fict_A_State_Littke.txt",
+      "action": "note",
+      "result": "INFO: File appears to be incomplete - cuts off mid-story"
+    },
+    {
+      "file": "V52_04_17_SpFt_The_Everett.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_04_22_The Home_Spring_Franks.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_04_23_Poem_Never_McKey.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_04_28_The Home_Homemaking_Stock.txt",
+      "action": "append",
+      "result": "APPLIED append (133 chars added)"
+    },
+    {
+      "file": "V52_04_29_The Home_Cherry-Rhubarb_Lei.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_04_30_Poem_April_Candland.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_04_34_The Home_A_Petersen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_04_42_GenFt_Bday_Congrats.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (328 chars removed)"
+    }
+  ]
+}

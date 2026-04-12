@@ -1,0 +1,18 @@
+{
+  "volume": 56,
+  "month": "October",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_10_14_GenFt_Thoughts_Morley.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues into casserole recipes section instead of ending after the thoughts on education paragraph",
+      "action": "trim_end",
+      "text": "because of the choice you made when you chose to open the door of education for your future.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

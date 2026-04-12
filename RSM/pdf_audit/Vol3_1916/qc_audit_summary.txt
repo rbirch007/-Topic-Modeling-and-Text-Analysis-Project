@@ -1,0 +1,45 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 3 (1916)
+===========================================================================
+
+  Total files:      247 (209 articles, 38 special)
+  OK:               239
+  Flagged:          8
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 3
+    manual_review: 2
+    re_extract: 3
+
+
+  February:
+    February_Vol3_13_Editorial_EDITORIAL_Efficiency.txt | SHORT(89) | 89 chars | manual_review
+
+  March:
+    March_Vol3_01a_Article_Mothers_in_Israel_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(9)) | 59612 chars | re_extract
+    March_Vol3_12d_Guide_Lessons_Home_Economics_-_The_Business_Side_of_Housekeeping_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(4); MULTI_LESSON(2)) | 13499 chars | re_extract
+
+  April:
+    April_Vol3_15d_Guide_Lessons_LESSON_IV_Home_Economics_Fourth_Week_in_May_THE_LATTER-DAY_S_a_a_a_a_a.txt | MERGED(CAPS_HEADERS(3); MULTI_LESSON(3)) | 13322 chars | re_extract
+
+
+
+
+  August:
+    August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_a.txt | SHORT(41) | 41 chars | manual_review
+    August_Vol3_11b_Guide_Lessons_Guide_Lessons_b_a_b.txt | LOW_OCR_MATCH(68%) | 1027 chars | api_fix
+    [CONTENTS MISSING] "The Two-Faced Clock Ida Stewart Peay" (p421)
+    [CONTENTS MISSING] "Current Topics James H. Anderson" (p463)
+    [CONTENTS MISSING] "The Toilers Maud Baggarley" (p467)
+
+
+
+  November:
+    November_Vol3_09b_Guide_Lessons_Guide_Lessons_b.txt | LOW_OCR_MATCH(64%) | 4292 chars | api_fix
+    November_Vol3_16_Home_Science_Home_Science_Department_Janette_A_Hyde.txt | LOW_OCR_MATCH(70%) | 1714 chars | api_fix
+    [CONTENTS MISSING] "Paradise Lost" (p622)
+    [CONTENTS MISSING] "Music Page" (p647)
+
+
+===========================================================================

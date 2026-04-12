@@ -1,0 +1,54 @@
+{
+  "volume": 6,
+  "month": "May",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1368,
+  "files": [
+    {
+      "source_file": "May_Vol6_02_Mothers_of_Our_Leaders._.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mothers of Our Leaders",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Mothers of Our Leaders. : ======================================================================",
+          "end_boundary": "great-great-grand-daughter. Golden Wedding of Mr. and Mrs. Charles W. Nibley.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Golden Wedding of Mr. and Mrs. Charles W. Nibley",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Golden Wedding of Mr. and Mrs. Charles W. Nibley. Presiding Bishop",
+          "end_boundary": "Mary Foster Gibbs. Municipal Kitchens in England During the War.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE MONTH FOR MOTHERS",
+        "MOTHERS OF OUR LEADERS",
+        "GOLDEN WEDDING"
+      ],
+      "notes": "This file contains two main articles: 'Mothers of Our Leaders' which includes testimonials from church leaders about their mothers plus Margaret Judd Clawson's autobiography, and 'Golden Wedding of Mr. and Mrs. Charles W. Nibley' which celebrates their 50th anniversary. The file shows clear transitions between articles and includes running headers that should be stripped.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 29936,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 43626,
+        "output_tokens": 397,
+        "cost": 0.1368
+      }
+    }
+  ]
+}

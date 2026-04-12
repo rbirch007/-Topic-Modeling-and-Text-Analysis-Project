@@ -1,0 +1,15 @@
+Looking at the page image, I can see that the poem "I SAW HER FACE" by Christie Lund Coles ends with the line "Toward voluptuous summer." and is followed by the author attribution "♦ Christie Lund Coles".
+
+However, examining the article file content, I can see it contains content about desert home and then transitions into completely different content about sewing ("Team, Sew!" by Helen M. Stock). This indicates the article file contains content from multiple different articles mixed together.
+
+The poem should end at "@ Enola Chamberlin" based on what I can see in the article file, as this appears to be the author attribution for the desert-related content that precedes the sewing content.
+
+{
+  "file": "V54_05_30_Poem_Desert_Chamberlin.txt",
+  "issue_type": "bleed_end", 
+  "description": "Article contains content from next article about sewing that should be removed",
+  "action": "trim_end",
+  "text": "@ Enola Chamberlin",
+  "confidence": "high",
+  "page_verified": true
+}

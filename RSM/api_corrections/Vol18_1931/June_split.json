@@ -1,0 +1,193 @@
+{
+  "volume": 18,
+  "month": "June",
+  "year": 1931,
+  "total_merged": 2,
+  "total_splits": 13,
+  "total_cost": 0.3065,
+  "files": [
+    {
+      "source_file": "June_Vol18_02_Article_Orson_Whitney_Cannon.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Orson F. Whitney, Apostle, Poet, Historian, Philosopher",
+          "category": "Article",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "Orson F. Whitney, Apostle, Poet, Historian, Philosopher By Annie Wells Cannon",
+          "end_boundary": "Who doubts but he reached the \"summit of the vaulted skies.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Relief Society Conference - Officers' Meeting, Morning Session",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Relief Society Conference Held April 2 and 3, 1931",
+          "end_boundary": "increase of $10,568.17.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Reforestation as Bi-Centennial Celebration to Honor George Washington",
+          "category": "Article",
+          "author": "Mrs. Inez K. Allen",
+          "start_boundary": "Reforestation as Bi-Centennial Celebration to Honor George Washington MRS. INEZ K. ALLEN",
+          "end_boundary": "in the name of Jesus, Amen.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Legislation in Western States",
+          "category": "Article",
+          "author": "Mrs. Ethel R. Smith",
+          "start_boundary": "Legislation in Western States Local Problems MRS. ETHEL R. SMITH",
+          "end_boundary": "sacred obligations of citizenship.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Officers' Meeting - Afternoon Session",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "OFFICERS' MEETING Afternoon Session, Thursday, April 2, 1931",
+          "end_boundary": "being, to him.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Relief Society Conference - General Sessions",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Literary Department MRS. JENNIE B. KNIGHT Chairman",
+          "end_boundary": "name of Jesus Christ. Amen,",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains multiple conference proceedings and articles that were merged together. The boundaries are clear based on title formatting and content transitions. Some running headers appear throughout that should be stripped.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 157290,
+      "tier": 3,
+      "pdf_pages": [
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373
+      ],
+      "api_usage": {
+        "input_tokens": 36114,
+        "output_tokens": 916,
+        "cost": 0.1221
+      }
+    },
+    {
+      "source_file": "June_Vol18_07_Article_Editorial.txt",
+      "num_articles_found": 7,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial: President Rey L. Pratt",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Vol. XVIII JUNE, 1931 No. 6",
+          "end_boundary": "worthy of their splendid parentage. Manager Louise Y. Robison",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Antoine Ridgeway Ivins",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL 365 Antoine Ridgeway Ivins Antoine Ridgeway",
+          "end_boundary": "added to him and his wife in their important labors.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "A Call Answered—A Life Changed",
+          "category": "Article",
+          "author": "Orson F. Whitney",
+          "start_boundary": "A Call Answered—A Life Changed With the",
+          "end_boundary": "an Apostle of the Lord Jesus Christ.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Gratitude to President Hoover",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Gratitude to President Hoover A delegation of",
+          "end_boundary": "of the Democratic national committee. EDITORIAL 367",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "e",
+          "title": "Utah White House Conference on Child Health and Protection",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Utah White House Conference on Child Health",
+          "end_boundary": "well being of the State's children.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "To Our Mothers",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "To Our Mothers The elders of",
+          "end_boundary": "laboring in the Netherlands Mission. 368 RELIEF SOCIETY MAGAZINE",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "g",
+          "title": "Tree Planting",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Conventions No Relief Society Conventions will",
+          "end_boundary": "we lovingly plant this tree.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains multiple editorial pieces and brief articles. The 'Conventions' and 'Tree Planting' sections appear to be combined in the last split as they are very brief administrative notices. The Orson F. Whitney piece is a biographical excerpt rather than a standalone article by him.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11181,
+      "tier": 1,
+      "pdf_pages": [
+        414,
+        415,
+        416,
+        417
+      ],
+      "api_usage": {
+        "input_tokens": 57539,
+        "output_tokens": 786,
+        "cost": 0.1844
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "volume": 20,
+  "month": "October",
+  "year": 1933,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1176,
+  "files": [
+    {
+      "source_file": "October_Vol20_20_Article_Lesson_Department.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Theology and Testimony - Attitude Toward Civil Law",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "How can you encourage people to read it?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Teachers' Topic - The Joy of Service",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "BUSINESS depressions and panics may sweep the",
+          "end_boundary": "fourth section of the Doctrine and Covenants.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - Life and Literature: The Roman View of Life",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Jes' keep on a-strivin' an' hope",
+          "end_boundary": "To glorify his life in you.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - The Sleep of Children",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY MAGAZINE Social Service (Fourth",
+          "end_boundary": "is, therefore, one of the serious problems",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains four distinct lesson sections from the Relief Society Magazine's Lesson Department: Theology and Testimony, Teachers' Topic, Literature, and Social Service. Each section has clear subject matter boundaries and different formatting styles. The Literature section includes substantial content about Roman literature and Shakespeare's Julius Caesar, while the Social Service section focuses on children's sleep habits.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 49653,
+      "tier": 2,
+      "pdf_pages": [
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708
+      ],
+      "api_usage": {
+        "input_tokens": 36542,
+        "output_tokens": 530,
+        "cost": 0.1176
+      }
+    }
+  ]
+}

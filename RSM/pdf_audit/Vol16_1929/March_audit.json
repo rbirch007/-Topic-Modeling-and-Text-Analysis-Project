@@ -1,0 +1,387 @@
+{
+  "volume": 16,
+  "month": "March",
+  "year": 1929,
+  "total": 19,
+  "ok": 14,
+  "flagged": 5,
+  "empty": 0,
+  "records": [
+    {
+      "file": "March_Vol16_00_BOARD.txt",
+      "body_len": 879,
+      "article_words": 78,
+      "words_in_ocr": 78,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_00_CONTENTS.txt",
+      "body_len": 5001,
+      "article_words": 359,
+      "words_in_ocr": 359,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_00_Misc.txt",
+      "body_len": 3064,
+      "article_words": 263,
+      "words_in_ocr": 260,
+      "pct_in_ocr": 0.9886,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "March_Vol16_00_Misc_backup_premarker.txt",
+      "body_len": 2996,
+      "article_words": 257,
+      "words_in_ocr": 257,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_02_Article_Spring_is_Here_Jessie_Sundwall.txt",
+      "body_len": 678,
+      "article_words": 75,
+      "words_in_ocr": 75,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_04_Article_My_Canvases_Merling_D_Clyde.txt",
+      "body_len": 332,
+      "article_words": 43,
+      "words_in_ocr": 43,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_05_Editorial_EditorialWomen_and_Peace.txt",
+      "body_len": 5178,
+      "article_words": 360,
+      "words_in_ocr": 360,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_06_Article_Women_in_the_Congress_of_the_United_States.txt",
+      "body_len": 1621,
+      "article_words": 128,
+      "words_in_ocr": 128,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_07_Article_Selma_Lagerlof_Clara_J_Fagergren.txt",
+      "body_len": 12785,
+      "article_words": 889,
+      "words_in_ocr": 889,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_08_Article_History_of_the_Emancipation_of_Women_H_C_Singer.txt",
+      "body_len": 9809,
+      "article_words": 649,
+      "words_in_ocr": 649,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_09_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 2434,
+      "article_words": 198,
+      "words_in_ocr": 198,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_10a_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_I_Practical_Religion_and_Test.txt",
+      "body_len": 10342,
+      "article_words": 650,
+      "words_in_ocr": 649,
+      "pct_in_ocr": 0.9985,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": [
+        "title"
+      ]
+    },
+    {
+      "file": "March_Vol16_10b_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_II_Work_and_Business.txt",
+      "body_len": 1129,
+      "article_words": 90,
+      "words_in_ocr": 90,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_11_Article_My_Child_Merling_D_Clyde.txt",
+      "body_len": 622,
+      "article_words": 70,
+      "words_in_ocr": 70,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_12_Frontispiece_Mount_Timpanogos_from_American_Fork_Canyon_Frontispiece.txt",
+      "body_len": 73,
+      "article_words": 9,
+      "words_in_ocr": 9,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(73)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_13_Article_Mary_E_Richmond.txt",
+      "body_len": 1903,
+      "article_words": 157,
+      "words_in_ocr": 156,
+      "pct_in_ocr": 0.9936,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "diagonsis"
+      ]
+    },
+    {
+      "file": "March_Vol16_No3_01_Article_Unwanted_Sarah_Ahlstrom_Nelson.txt",
+      "body_len": 11050,
+      "article_words": 690,
+      "words_in_ocr": 690,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(12))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_No3_03_Article_Women_Legislators_Annie_Wells_Cannon.txt",
+      "body_len": 19539,
+      "article_words": 988,
+      "words_in_ocr": 988,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol16_No3_12_Article_A_Reverie.txt",
+      "body_len": 46382,
+      "article_words": 1963,
+      "words_in_ocr": 1963,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(15); MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol16_No3_March_1929.txt",
+    "ocr_chars": 126082,
+    "ocr_unique_words": 4271,
+    "contents_xref": {
+      "entries_in_contents": 17,
+      "matched": 16,
+      "match_details": [
+        {
+          "title": "Mount Timpanogos from American Fork Canyon Frontispiece",
+          "page": null,
+          "file": "March_Vol16_12_Frontispiece_Mount_Timpanogos_from_American_Fork_Canyon_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Unwanted Sarah Ahlstrom Nelson",
+          "page": 121,
+          "file": "March_Vol16_No3_01_Article_Unwanted_Sarah_Ahlstrom_Nelson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Portrait of Miss Mary E. Richmond",
+          "page": 122,
+          "file": "March_Vol16_13_Article_Mary_E_Richmond.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Mary E. Richmond Amy W. Evans",
+          "page": 123,
+          "file": "March_Vol16_13_Article_Mary_E_Richmond.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Spring is Here Jessie Sundwall",
+          "page": 127,
+          "file": "March_Vol16_02_Article_Spring_is_Here_Jessie_Sundwall.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Women Legislators Annie Wells Cannon",
+          "page": 128,
+          "file": "March_Vol16_No3_03_Article_Women_Legislators_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "My Canvases Merling D. Clyde",
+          "page": 138,
+          "file": "March_Vol16_04_Article_My_Canvases_Merling_D_Clyde.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Women and Peace",
+          "page": 139,
+          "file": "March_Vol16_05_Editorial_EditorialWomen_and_Peace.txt",
+          "score": 0.67
+        },
+        {
+          "title": "Women in the Congress of the United States",
+          "page": 141,
+          "file": "March_Vol16_06_Article_Women_in_the_Congress_of_the_United_States.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Selma Lagerlof Clara J. Fagergren",
+          "page": 142,
+          "file": "March_Vol16_07_Article_Selma_Lagerlof_Clara_J_Fagergren.txt",
+          "score": 1.0
+        },
+        {
+          "title": "History of the Emancipation of Women H. C. Singer",
+          "page": 148,
+          "file": "March_Vol16_08_Article_History_of_the_Emancipation_of_Women_H_C_Singer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 152,
+          "file": "March_Vol16_09_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for May",
+          "page": 153,
+          "file": "March_Vol16_10a_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_I_Practical_Religion_and_Test.txt",
+          "score": 1.0
+        },
+        {
+          "title": "My Child Merling D. Clyde",
+          "page": 158,
+          "file": "March_Vol16_11_Article_My_Child_Merling_D_Clyde.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Reverie",
+          "page": 159,
+          "file": "March_Vol16_No3_12_Article_A_Reverie.txt",
+          "score": 1.0
+        },
+        {
+          "title": "VOL. XVI MARCH, 1929 NO.",
+          "page": 3,
+          "file": "March_Vol16_02_Article_Spring_is_Here_Jessie_Sundwall.txt",
+          "score": 0.67
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "March_Vol16_10b_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_II_Work_and_Business.txt"
+      ]
+    }
+  }
+}

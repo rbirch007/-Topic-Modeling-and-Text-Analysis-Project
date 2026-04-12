@@ -1,0 +1,56 @@
+Art 1 Truncation Detection - Vols 1-29
+Run: 2026-03-18 21:20:30 (revised with false positive removal)
+======================================================================
+
+CONFIRMED TRUNCATED (starts lowercase, mid-sentence):
+
+TRUNCATED: Vol5_1918/September/September_Vol5_01_Mothers_in_Israel_Mothers_in_Israel_Coral_J._Black.txt
+  Reason: starts lowercase: 'mothers in midwifery, which she understood and practiced...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol7_1920/September/September_Vol7_01_Article_The_Needs_of_Yesterday_Bertha_A._Kleinman.txt
+  Reason: starts lowercase: 'the needs and requirements of the Church. Ward clerks keep...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol7_1920/November/November_Vol7_01_Article_Page_The_Evolution_of_the_Post.txt
+  Reason: starts lowercase: 'evolution of THE EVOLUTION OF THE POST 625 mailing systems...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol8_1921/August/August_Vol8_01_Frontispiece_Mme._Curie_in_her_Laboratory_in_Paris_Frontispiece.txt
+  Reason: starts lowercase: 'you as foremost among scientists in the age of science...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol10_1923/May/May_Vol10_01_Poem_The_Mother_Frontispiece.txt
+  Reason: starts lowercase: 'the mother's love was there in all its fragrance and beauty...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol10_1923/December/December_Vol10_01_Frontispiece_Mother_and_Son_in_Role_of_Madonna_and_Child_Frontispiece.txt
+  Reason: starts lowercase: 'son, in the role of the Madonna, as presented in the pageant...'
+  00_Misc exists: NO
+
+TRUNCATED: Vol12_1925/January/January_Vol12_01_Article_The_Year_Has_Gone_Eliza_R_Snow.txt
+  Reason: starts lowercase: 'the year 1812. These purple glass windows are also...'
+  00_Misc exists: YES - January_Vol12_00_Misc.txt
+
+TRUNCATED: Vol13_1926/November/November_Vol13_01_Frontispiece_-_Typical_View_of_Green_River_Frontispiece_Susa_T._Jennings.txt
+  Reason: starts lowercase: 'view A day well spent, A day vivid with emotions...'
+  00_Misc exists: YES - November_Vol13_00_Misc.txt
+
+======================================================================
+FALSE POSITIVES REMOVED (legitimate quote-start articles/poems, NOT truncated):
+
+  Vol5_1918/October/October_Vol5_01 - Poem legitimately starts with quoted hymn title
+  Vol6_1919/January/January_Vol6_01 - Poem legitimately starts with quoted title
+  Vol9_1922/September/September_Vol9_01 - Table of contents, starts with quoted poem title
+  Vol15_1928/September/September_Vol15_01 - Article legitimately starts with quoted verse
+  Vol20_1933/January/January_Vol20_01 - Article legitimately starts with scripture quote
+  Vol22_1935/April/April_Vol22_01 - Fiction story legitimately starts with dialogue
+  Vol27_1940/April/April_Vol27_01 - Article legitimately starts with quoted garden advice
+  Vol29_1942/November/November_Vol29_01 - Poem legitimately starts with quoted line
+
+======================================================================
+TOTAL Art 1 files checked: 303
+TOTAL confirmed truncated: 8
+  With 00_Misc available: 2
+  Without 00_Misc: 6
+FALSE POSITIVES removed: 8 (legitimate quote-start content)

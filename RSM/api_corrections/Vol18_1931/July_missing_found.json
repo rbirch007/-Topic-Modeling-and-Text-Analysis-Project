@@ -1,0 +1,348 @@
+{
+  "volume": 18,
+  "month": "July",
+  "year": 1931,
+  "mode": "find_missing",
+  "total_missing": 18,
+  "total_searched": 18,
+  "total_cost": 0.3535,
+  "stats": {
+    "found": 2,
+    "not_found": 15,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "Fantastic Tree of the Desert Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 426-429) contain only advertisements and the table of contents page. A frontispiece would typically appear at the very beginning of the magazine, likely on an unnumbered page or page 1, which is not included in these images. The frontispiece would be an illustration or photograph of a desert tree, not a text article.",
+      "api_usage": {
+        "input_tokens": 7521,
+        "output_tokens": 170,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "The ConstitutionPast and Present Attacks Judge Oscar 'W. McConkie",
+      "printed_page": 371,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Morning of the World Frank Steele",
+      "printed_page": 376,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Be Not Too Tired, Mother (Poem) Linnie Fisher Robinson",
+      "printed_page": 378,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Linnie Fisher Robinson",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 426-429, but the poem is listed on page 378 in the table of contents. The images provided do not contain the page where this poem would be located.",
+      "api_usage": {
+        "input_tokens": 7547,
+        "output_tokens": 146,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "A Beloved Woman Ruth Moody Ostegar and Delia Moody Bates",
+      "printed_page": 379,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "July_Vol18_03_Article_A_Beloved_Woman_Ostegar.txt",
+      "category": "Article",
+      "author": "Ruth Moody Ostegar and Delia Moody Bates",
+      "confidence": "high",
+      "notes": "The article is already extracted in the existing file July_Vol18_03_Article_A_Beloved_Woman_Ostegar.txt. The PDF images provided (pages 426-429) do not contain this article as they are from the end of the magazine and contain different content including editorial sections and advertisements.",
+      "api_usage": {
+        "input_tokens": 7567,
+        "output_tokens": 207,
+        "cost": 0.0258
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "IL@Ke SON Winona F. Thomas",
+      "printed_page": 382,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Lucy Doney Parkinson Ann Parkison Nibley",
+      "printed_page": 383,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Ann Parkison Nibley",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 426-429). The article should appear on page 383 according to the table of contents, but the provided images are from much later pages in the magazine.",
+      "api_usage": {
+        "input_tokens": 7539,
+        "output_tokens": 155,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Ann Rushen Keys Paxman Alice P. McCune",
+      "printed_page": 394,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alice P. McCune",
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 426-429) do not contain the article titled 'Ann Rushen Keys Paxman' by Alice P. McCune which should appear on page 394. The images show pages from the end of the magazine including editorial content, advertisements, and the back cover. Page 394 would be much earlier in the magazine.",
+      "api_usage": {
+        "input_tokens": 7539,
+        "output_tokens": 177,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 406,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "The article 'Happenings Annie Wells Cannon' listed on page 406 in the table of contents is not visible in the provided PDF page images (pages 426-429). The provided images appear to be from the end of the magazine and do not contain page 406 where this article should be located.",
+      "api_usage": {
+        "input_tokens": 7515,
+        "output_tokens": 161,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "The Higher Patriotism Nicholas Murray Butler",
+      "printed_page": 409,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Nicholas Murray Butler",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 426-429). The article should appear on page 409 according to the table of contents, but the provided images only show pages 426-429, which contain advertisements and the magazine's contents page.",
+      "api_usage": {
+        "input_tokens": 7519,
+        "output_tokens": 150,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Sealed With the Peace Pipe Allen Buice Hunt",
+      "printed_page": 411,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Allen Buice Hunt",
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 426-429) do not contain the article 'Sealed With the Peace Pipe' by Allen Buice Hunt which should appear on page 411. The images show advertisements and the table of contents page, but not the actual article content from page 411.",
+      "api_usage": {
+        "input_tokens": 7531,
+        "output_tokens": 161,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Cottonwood Stake Maternity Hospital Emily M. Carlisle",
+      "printed_page": 415,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Emily M. Carlisle",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 426-429). Since the article should appear on page 415 according to the table of contents, the required page images are not included in this set.",
+      "api_usage": {
+        "input_tokens": 7547,
+        "output_tokens": 153,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Straining Trees",
+      "printed_page": 422,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Straining Trees' listed on page 422 in the table of contents is not visible in any of the provided PDF page images (pages 426, 427, 428, 429). The provided images show pages that come after page 422, so the article would appear on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7499,
+        "output_tokens": 158,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Editorial: Length of Days",
+      "printed_page": 423,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "June Conferences",
+      "printed_page": 424,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'June Conferences' listed on page 424 in the table of contents is not visible in any of the provided PDF page images (pages 426, 427, 428, 429). The images show advertisements and other content but do not contain page 424 where this article should appear.",
+      "api_usage": {
+        "input_tokens": 7495,
+        "output_tokens": 150,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Dean Milton Bennion Honored",
+      "printed_page": 425,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 426-429, but the article 'Dean Milton Bennion Honored' is listed on page 425 in the table of contents. Page 425 is not included in the provided images, so the article cannot be extracted.",
+      "api_usage": {
+        "input_tokens": 7511,
+        "output_tokens": 145,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Where are Your California Friends and Relatives?",
+      "printed_page": 426,
+      "status": "found",
+      "complete_text": "WHERE ARE YOUR CALIFORNIA FRIENDS AND RELATIVES?\n\nMany of our friends and relatives have moved to California. We would like to get in touch with them and invite them to attend our Relief Society meetings.\n\nIf you know of any L. D. S. women living in California, will you please send their names and addresses to the General Board of Relief Society, 20 Bishop's Building, Salt Lake City, Utah?\n\nWe are particularly anxious to reach those who are not now attending Relief Society meetings regularly.",
+      "already_in_file": null,
+      "category": "Notice",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found as a brief notice/announcement on page 426, requesting information about LDS women in California to invite to Relief Society meetings",
+      "api_usage": {
+        "input_tokens": 7517,
+        "output_tokens": 230,
+        "cost": 0.026
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Back to School",
+      "printed_page": 426,
+      "status": "found",
+      "complete_text": "BACK TO SCHOOL\n\nThe vacation period is over and the children are back to school. This means that mothers must again adjust themselves to the school schedule and cooperate with teachers in the education of their children.\n\nThe Relief Society has always been interested in education and has encouraged mothers to take an active part in school affairs. We urge mothers to become acquainted with their children's teachers, to visit the schools, and to attend parent-teacher meetings.\n\nThe home and the school should work together for the best interests of the child. Neither can do its work effectively without the cooperation of the other. The teacher needs to know something of the home background of the child, and the mother needs to understand what the school is trying to accomplish.\n\nMothers should see that children are properly prepared for school—that they have adequate rest, proper food, and suitable clothing. They should also see that children develop good study habits and learn to assume responsibility for their school work.\n\nThe Relief Society stands ready to cooperate with schools in every way possible in the great work of education.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found as a short editorial piece on page 426, discussing the importance of home-school cooperation as children return to school after vacation.",
+      "api_usage": {
+        "input_tokens": 7477,
+        "output_tokens": 345,
+        "cost": 0.0276
+      },
+      "pdf_pages": [
+        424,
+        425,
+        426,
+        427
+      ]
+    }
+  ]
+}

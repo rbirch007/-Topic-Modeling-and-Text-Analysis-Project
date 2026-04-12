@@ -1,0 +1,19 @@
+{
+  "volume": 55,
+  "month": "May",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_05_37_Poem_Brief_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains extensive garbled OCR text after the poem ends. The poem should end with the author attribution line.",
+      "action": "trim_end",
+      "text": "A Vesta Nickerson fepairn ~ 351",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    }
+  ]
+}

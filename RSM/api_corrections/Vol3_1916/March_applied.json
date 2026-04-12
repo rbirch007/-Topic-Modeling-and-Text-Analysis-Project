@@ -1,0 +1,27 @@
+{
+  "volume": 3,
+  "month": "March",
+  "year": 1916,
+  "timestamp": "20260315_120936",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol3_01a_Article_Mothers_in_Israel.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (135 chars added)"
+    },
+    {
+      "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (73 chars added)"
+    },
+    {
+      "file": "March_Vol3_10_Editorial_Editorial_A_Testimony_of_the_Truth_of_the_Gospel.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

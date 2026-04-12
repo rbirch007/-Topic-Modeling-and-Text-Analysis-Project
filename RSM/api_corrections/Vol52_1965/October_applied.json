@@ -1,0 +1,112 @@
+{
+  "volume": 52,
+  "month": "October",
+  "year": 1965,
+  "timestamp": "20260314_002227",
+  "dry_run": false,
+  "applied": 15,
+  "skipped": 4,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V52_10_02_SpFt_The_Dyer.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1 chars removed)"
+    },
+    {
+      "file": "V52_10_05_SpFt_My_Quintero.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_10_06_Fict_Mamas_Dunford.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_12_Fict_A_Great_Stewart.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_13_SpFt_Consider_Jones.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (590 chars removed)"
+    },
+    {
+      "file": "V52_10_14_SpFt_Relief_Hansen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_16_SpFt_Turning_Chamberlin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_10_19_Poem_Sweeping_Grimm.txt",
+      "action": "append",
+      "result": "APPLIED append (960 chars added)"
+    },
+    {
+      "file": "V52_10_20_Poem_New_Williams.txt",
+      "action": "append",
+      "result": "APPLIED append (749 chars added)"
+    },
+    {
+      "file": "V52_10_21_Poem_Housewife_Christen.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_22_Poem_Quantity_Shurtz.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_10_23_Poem_Every_Prentice.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_24_Poem_Combing_Coles.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_10_25_Poem_Gleanings.txt",
+      "action": "append",
+      "result": "APPLIED append (585 chars added)"
+    },
+    {
+      "file": "V52_10_26_Poem_Perennial_Anderson.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V52_10_27_Fict_Ring_Thulin.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_10_28_GenFt_Notes_Activities.txt",
+      "action": "append",
+      "result": "APPLIED append (603 chars added)"
+    },
+    {
+      "file": "V52_10_29_Lssn_Theology_Doxey.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_10_34_Lssn_Literature_Clark.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_10_36_Poem_Hurry_Breeze.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (851 chars removed)"
+    }
+  ]
+}

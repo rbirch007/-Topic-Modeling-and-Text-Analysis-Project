@@ -1,0 +1,27 @@
+Looking at the page image, I can see that the poem "In High Country" by Ethel Jacobson appears in a boxed section on the left side of the page. The poem begins with "The brisk, rare Crystal air".
+
+However, examining the article file content, I can see that it contains contest rules and announcements that appear elsewhere on the page, not the actual poem content. The article file should contain only the poem "In High Country" by Ethel Jacobson.
+
+Looking at the page image, the poem reads:
+
+"IN HIGH COUNTRY
+
+The brisk, rare
+Crystal air
+Of timberline is washed and dried,
+Polished, burnished till it stings
+Eyes and lungs, so close it brings
+Shimmering distant cliffs, so near
+You can see the..."
+
+Since the article file contains contest rules instead of the poem, I need to replace the entire content with the actual poem.
+
+{
+  "file": "V54_05_05_Poem_In_Jacobson.txt",
+  "issue_type": "bleed_start", 
+  "description": "Article file contains contest rules instead of the poem content - needs complete replacement with actual poem",
+  "action": "replace_content",
+  "text": "IN HIGH COUNTRY\n\nThe brisk, rare\nCrystal air\nOf timberline is washed and dried,\nPolished, burnished till it stings\nEyes and lungs, so close it brings\nShimmering distant cliffs, so near\nYou can see the\nGranite grain and crystal clear\nLake water, blue as winter sky.\n\nUp here the world\nIs cleanly furled\nIn space. The mind\nCan think, can find\nIts way through problems\nTangled, knotted\nIn the lower, thicker air.\nUp here, unspotted\nBy the world's confusion,\nThoughts can dare\nTo seek conclusion.\n\n♦ Ethel Jacobson",
+  "confidence": "high",
+  "page_verified": true
+}

@@ -1,0 +1,260 @@
+{
+  "volume": 18,
+  "month": "February",
+  "year": 1931,
+  "total_merged": 4,
+  "total_splits": 13,
+  "total_cost": 0.679,
+  "files": [
+    {
+      "source_file": "February_Vol18_03_Article_Careers_Fletcher.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Careers (A One-Act Comedy-Drama of Life and Love)",
+          "category": "Article",
+          "author": "Linda S. Fletcher",
+          "start_boundary": "Careers (A One-Act Comedy-Drama of Life and",
+          "end_boundary": "even that which he hath.\" (Curtain)",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "b",
+          "title": "The Voicing Wilds of America",
+          "category": "Poem",
+          "author": "S. T. Brimhall Foley",
+          "start_boundary": "The Voicing Wilds of America By S.",
+          "end_boundary": "Through voices low and still.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Indian Appeal",
+          "category": "Article",
+          "author": "Julia A. Farnsworth Lund",
+          "start_boundary": "The Indian Appeal Address delivered at the",
+          "end_boundary": "it is the American Indian.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "CAREERS"
+      ],
+      "notes": "This file contains three distinct articles: a one-act play 'Careers', a poem 'The Voicing Wilds of America', and an address 'The Indian Appeal'. The boundaries are clearly marked by title changes and author attributions. The play is the longest piece, taking up most of the file content.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 20675,
+      "tier": 1,
+      "pdf_pages": [
+        98,
+        99,
+        100
+      ],
+      "api_usage": {
+        "input_tokens": 54136,
+        "output_tokens": 442,
+        "cost": 0.169
+      }
+    },
+    {
+      "source_file": "February_Vol18_04_Article_Indian_Appeal_Lund.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Indian Appeal",
+          "category": "Article",
+          "author": "Julia A. Farnsworth Lund",
+          "start_boundary": "The Indian Appeal Address delivered at the Relief",
+          "end_boundary": "birth of freedom it is the American Indian.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Bronze Figure of Squaw Sachem",
+          "category": "Art",
+          "author": "C. E. Dallin",
+          "start_boundary": "Photo by Hileman MONARCH OF THE PAST",
+          "end_boundary": "Arlington, Mass., by the Misses Robbins.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Indian in the Public Schools",
+          "category": "Article",
+          "author": "Marian Gardner Nielson",
+          "start_boundary": "The Indian in the Public Schools By",
+          "end_boundary": "mission, now, to convert them.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE INDIAN APPEAL",
+        "THE INDIAN IN THE PUBLIC SCHOOL"
+      ],
+      "notes": "The file contains three distinct articles as listed in the contents. The first is a major address about Indian policy, the second is a brief art piece about a bronze sculpture, and the third is about Indian education experiments. The boundaries are clear based on titles and content transitions.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11840,
+      "tier": 1,
+      "pdf_pages": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "api_usage": {
+        "input_tokens": 55917,
+        "output_tokens": 479,
+        "cost": 0.1749
+      }
+    },
+    {
+      "source_file": "February_Vol18_06_Article_Thy_Country_Shall_Thomas.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Thy Country Shall be My Country",
+          "category": "Article",
+          "author": "Edna Harker Thomas",
+          "start_boundary": "Thy Country Shall be My Country By Edna Harker Thomas For generations",
+          "end_boundary": "Thy country shall be my country and thy people my people.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Beautiful Memory",
+          "category": "Article",
+          "author": "Glen Perrins",
+          "start_boundary": "BEAUTIFUL OGDEN CANYON A Beautiful Memory By Glen Perrins Enthralled at",
+          "end_boundary": "took away with me that day a beautiful memory.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THY COUNTRY SHALL BE MY COUNTRY",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two distinct articles. The first is a longer story about a Scottish family immigrating to Canada, and the second is a brief descriptive piece about Ogden Canyon. Both articles have clear beginnings and endings with different authors and topics.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14945,
+      "tier": 1,
+      "pdf_pages": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "api_usage": {
+        "input_tokens": 71245,
+        "output_tokens": 351,
+        "cost": 0.219
+      }
+    },
+    {
+      "source_file": "February_Vol18_11_Article_Lesson_Department.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department - Theology and Testimony",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "between the Nephites and the Lamanites.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Teachers' Topic for April",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Work and Business TEACHERS' TOPIC FOR APRIL",
+          "end_boundary": "authority, and influence.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literature - The Short Story in France",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Literature (3rd Week in April) THE SHORT",
+          "end_boundary": "where would you lay the scene?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service - Personality Study: Thinking Straight",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in April) PERSONALITY",
+          "end_boundary": "should be a continuing process throughout life.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Problems to Select From for Class Discussion",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Problems to Select From for Class Discussion",
+          "end_boundary": "clear thinking and clear expression?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains the complete Lesson Department section with multiple lesson topics for different weeks in April, plus discussion problems. The sections are clearly delineated by topic headers and week designations.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 49403,
+      "tier": 2,
+      "pdf_pages": [
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140
+      ],
+      "api_usage": {
+        "input_tokens": 35878,
+        "output_tokens": 567,
+        "cost": 0.1161
+      }
+    }
+  ]
+}

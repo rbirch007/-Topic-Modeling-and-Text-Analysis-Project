@@ -1,0 +1,47 @@
+{
+  "volume": 9,
+  "month": "October",
+  "year": 1922,
+  "timestamp": "20260315_120949",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "October_Vol9_01_Article_Mutual_Appreciation_Lula_Greene_Richards.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "October_Vol9_02_Editorial_Editorial,_The_Need_of_the_Hour.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "October_Vol9_02_Editorial_Editorial,_The_Need_of_the_Hour.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "October_Vol9_03_Article_Dallin's_Gift_of_Massassoit_to_Utah_Alice_Merrill_Horne.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (153 chars added)"
+    },
+    {
+      "file": "October_Vol9_04_Frontispiece_Cyrus_E._Dallin_Frontispiece.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "October_Vol9_16_Article_Alone_Bertha_Roberts.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3400 chars removed)"
+    },
+    {
+      "file": "October_Vol9_17b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File is incomplete - only contains header"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "volume": 6,
+  "month": "September",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.043,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "September_Vol6_06a_Article_What_Neighbors_Say.txt",
+      "status": "complete",
+      "current_chars": 191,
+      "complete_text": null,
+      "title": "WHAT NEIGHBORS SAY",
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete short satirical piece on page 514. It's a brief humorous commentary about contradictory neighborhood judgments, appearing at the bottom of the page after the main story. The file contains the complete text as it appears in the PDF.",
+      "api_usage": {
+        "input_tokens": 6364,
+        "output_tokens": 154,
+        "cost": 0.0214
+      },
+      "pdf_pages": [
+        564,
+        565,
+        566,
+        567
+      ]
+    },
+    {
+      "source_file": "September_Vol6_16b_Guide_Lessons_Guide_Lessons_-_Lesson_II_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 170,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The Guide Lessons section is not visible in the provided PDF pages. The pages shown contain poems, home construction articles, and official round table content, but do not include the Guide Lessons section that would contain Lesson II on Work and Business.",
+      "api_usage": {
+        "input_tokens": 6387,
+        "output_tokens": 165,
+        "cost": 0.0216
+      },
+      "pdf_pages": [
+        42,
+        43,
+        44,
+        45
+      ]
+    }
+  ]
+}

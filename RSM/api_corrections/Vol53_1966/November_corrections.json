@@ -1,0 +1,109 @@
+{
+  "volume": 53,
+  "month": "November",
+  "year": 1966,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V53_11_02_Frnt_The_Stewart.txt",
+    "V53_11_03_GenFt_From_Near_and_Far.txt",
+    "V53_11_05_Poem_By_Wangsgaard.txt",
+    "V53_11_06_SpFt_None_Sharp.txt",
+    "V53_11_07_SpFt_Every_Madsen.txt",
+    "V53_11_09_Poem_First_Coles.txt",
+    "V53_11_10_Poem_Coyote.txt",
+    "V53_11_11_GenFt_Editorial_Madsen.txt",
+    "V53_11_12_GenFt_Womans_Cannon.txt",
+    "V53_11_13_Poem_Shining_Kay.txt",
+    "V53_11_14_Poem_Where_Tanner.txt",
+    "V53_11_15_The Home_Make_Willardson.txt",
+    "V53_11_16_Poem_Four_Roberts.txt",
+    "V53_11_17_Poem_Going_Clarke.txt",
+    "V53_11_18_The Home_Comfort_Thulin.txt",
+    "V53_11_19_The Home_Recipe_Smith.txt",
+    "V53_11_20_Poem_Flowers_Ottesen.txt",
+    "V53_11_21_Fict_Home_Harmer.txt",
+    "V53_11_23_Fict_Tell_Me_Lloyd.txt",
+    "V53_11_24_Poem_To_Walk_Gabbott.txt",
+    "V53_11_25_GenFt_Notes.txt",
+    "V53_11_26_The Home_Spiritual_Doxey.txt",
+    "V53_11_27_The Home_Visiting.txt",
+    "V53_11_28_The Home_Homemaking_Taylor.txt",
+    "V53_11_29_The Home_Social_Christensen.txt",
+    "V53_11_30_The Home_Cultural_Clark.txt",
+    "V53_11_31_GenFt_Bday_Congrats.txt",
+    "V53_11_32_Poem_Children_Hill.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_11_01_Poem_Sea_Johnson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Belle S. Spafford's address instead of the poems 'Sea Etching' and 'Resolution'",
+      "action": "replace_content",
+      "text": "SEA ETCHING Vesta Nickerson Fairbairn The sound of waves becomes translated Into ripples, scrolled and fanned, That show the pattern of the tide Clear-etched upon the wet sea sand. RESOLUTION Estella S. Johnson Age eighty-three My hands got too tired to work on a rug, My eyes with cataracts sore, I said to a heavy quilt I was making ll never look at you more. So after my flowers got hit with the frost, I picked up my tablet and pen; They can call, they can shout, They can let the calves out, I'll never be bothered again.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_11_04_SpFt_Woman_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "President Belle S. Spafford {Address Delivered at the General Session of the Relief Society Annual General Conference, September 28, 1966] In March 1840, Elder Parley P. Pratt, exuberant with joy and gratitude over the truths revealed anew through the restored gospel, released his feelings in poetic words which were published on the first page of the initial number of the Millennial Star, and later set to music. As we, too, have rejoiced in the knowledge and_ the blessings which have come to us through modern revelation, we have sung the words penned by Elder Pratt with depth of feeling: The morning breaks, the shadows flee, Lo, Zion's standard is unfurled. The dawning of a brighter day Majestic rises on the world. Truly women should rejoice in the brighter day which dawned for womankind with the restoration. As the rays of the gospel shed their light upon the earth, the lofty position accorded woman in the gospel plan and the importance of her divinely ordained earthly mission were made clearly visible, and new vistas for development and purposeful living, under the guidance of the Priesthood, were opened to her view. In the early part of the nineteenth century, there appears to have been little consideration given to the divine nature and destiny of woman, and life for her encompassed but few of the opportunities and advantages contemplated in the gospel plan. Let us briefly review her position and circumstances. True, it is hard to arrive at a precisely clear picture which might be applied to every woman of that day. The differing economic and social circumstances, the varied conditions and cultures of her area of residence, the western movement - in America which demanded unusual adaptations in order to meet the requirements of survival—all had bearing on the life of a woman. This we know, however, her world was in large measure her home, her Church, and her neighborhood. Life for the average woman was hard, and many shackles bound her in the development of her talents and in the exercise of her abilities, as well as in the exercise of her God-ordained free agency. There were rigid barriers of law against property holding and guardianship of children. Most industries refused to employ her and those which did offered her only routine labor with long hours and low pay. The taboos of society on education and public expression, along with the prevalent superstition which held, \"the weak, feminine brain, incapable of serious thinking.\" shackled her personal development. The advantages of education were extremely limited. Colleges of higher learning did not admit her. True, women had served as teachers of a sort, but they were primary teachers instructing only in the three \"Rs.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_11_08_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from the next section",
+      "action": "trim_end",
+      "text": "THE SECOND MILE Sisters, in your love for one another, in your love for the Church, and in your love for those who need you, be unafraid to go the second mile; but measure your labors according to your strengths and your resources. Do not let your enthusiasm outrun your judgment. Let responsibilities be shared by all, and let your labors be confined to the sphere assigned to Relief Society as an auxiliary of the Church.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_11_22_The Home_Myrtle_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains incomplete content and appears to be merged with lesson department header",
+      "action": "trim_end",
+      "text": "The sheathed buds are cut from various shades of green, with slender stems, and the leaves have em-",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are with the first poem file containing wrong content, the Woman Ennobled article missing its beginning, the Report article bleeding into the next section, and one handicraft article being incomplete. The OCR quality is generally good with clear text boundaries.",
+  "validated_corrections": [
+    {
+      "file": "V53_11_04_SpFt_Woman_Spafford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "President Belle S. Spafford {Address Delivered at the General Session of the Relief Society Annual General Conference, September 28, 1966] In March 1840, Elder Parley P. Pratt, exuberant with joy and gratitude over the truths revealed anew through the restored gospel, released his feelings in poetic words which were published on the first page of the initial number of the Millennial Star, and later set to music. As we, too, have rejoiced in the knowledge and_ the blessings which have come to us through modern revelation, we have sung the words penned by Elder Pratt with depth of feeling: The morning breaks, the shadows flee, Lo, Zion's standard is unfurled. The dawning of a brighter day Majestic rises on the world. Truly women should rejoice in the brighter day which dawned for womankind with the restoration. As the rays of the gospel shed their light upon the earth, the lofty position accorded woman in the gospel plan and the importance of her divinely ordained earthly mission were made clearly visible, and new vistas for development and purposeful living, under the guidance of the Priesthood, were opened to her view. In the early part of the nineteenth century, there appears to have been little consideration given to the divine nature and destiny of woman, and life for her encompassed but few of the opportunities and advantages contemplated in the gospel plan. Let us briefly review her position and circumstances. True, it is hard to arrive at a precisely clear picture which might be applied to every woman of that day. The differing economic and social circumstances, the varied conditions and cultures of her area of residence, the western movement - in America which demanded unusual adaptations in order to meet the requirements of survival—all had bearing on the life of a woman. This we know, however, her world was in large measure her home, her Church, and her neighborhood. Life for the average woman was hard, and many shackles bound her in the development of her talents and in the exercise of her abilities, as well as in the exercise of her God-ordained free agency. There were rigid barriers of law against property holding and guardianship of children. Most industries refused to employ her and those which did offered her only routine labor with long hours and low pay. The taboos of society on education and public expression, along with the prevalent superstition which held, \"the weak, feminine brain, incapable of serious thinking.\" shackled her personal development. The advantages of education were extremely limited. Colleges of higher learning did not admit her. True, women had served as teachers of a sort, but they were primary teachers instructing only in the three \"Rs.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_11_08_SpFt_Report_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from the next section",
+      "action": "trim_end",
+      "text": "THE SECOND MILE Sisters, in your love for one another, in your love for the Church, and in your love for those who need you, be unafraid to go the second mile; but measure your labors according to your strengths and your resources. Do not let your enthusiasm outrun your judgment. Let responsibilities be shared by all, and let your labors be confined to the sphere assigned to Relief Society as an auxiliary of the Church.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_11_22_The Home_Myrtle_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains incomplete content and appears to be merged with lesson department header",
+      "action": "trim_end",
+      "text": "The sheathed buds are cut from various shades of green, with slender stems, and the leaves have em-",
+      "confidence": "medium",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "volume": 55,
+  "month": "October",
+  "year": 1968,
+  "timestamp": "20260313_235309",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_10_01_Fict_If_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (581 chars)"
+    },
+    {
+      "file": "V55_10_03_Art_From_Near_and_Far.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (646 chars)"
+    },
+    {
+      "file": "V55_10_06_Poem_Windsong_Burnham.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (647 chars)"
+    },
+    {
+      "file": "V55_10_12_Poem_The_Spencer.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (788 chars)"
+    },
+    {
+      "file": "V55_10_15_Poem_Good_Rothe.txt",
+      "action": "note",
+      "result": "INFO: File contains wrong content - has text about genealogy instead of 'Good Neighbor' poem"
+    },
+    {
+      "file": "V55_10_31_Poem_Recompense_Roberts.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (585 chars)"
+    },
+    {
+      "file": "V55_10_32_Poem_A_Class_McAllister.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (153 chars removed)"
+    }
+  ]
+}

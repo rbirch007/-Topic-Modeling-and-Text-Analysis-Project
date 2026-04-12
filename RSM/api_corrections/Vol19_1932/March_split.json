@@ -1,0 +1,83 @@
+{
+  "volume": 19,
+  "month": "March",
+  "year": 1932,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1193,
+  "files": [
+    {
+      "source_file": "March_Vol19_26_Article_Recalling_My_Edith_E_Anderson.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Her Calling",
+          "category": "Poem",
+          "author": "Edith E. Anderson",
+          "start_boundary": "Her Calling By Edith E. Anderson \"I am",
+          "end_boundary": "Must freely give service to all.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Literature - The Short Story of Today",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature (Third Week in May) THE SHORT STORY",
+          "end_boundary": "as worthy a form of art novel writing?",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "Social Service - Personality Study: Doing Things Differently",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in May) PERSONALITY STUDY:",
+          "end_boundary": "\"The first step.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Be Fair",
+          "category": "Poem",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Be Fair By Elsie E. Barrett So many",
+          "end_boundary": "The one MISUNDERSTOOD.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains a poem, two lesson sections (Literature and Social Service), and another poem, plus advertisements at the end. The lessons are clearly marked with subject headings and week designations.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 212080,
+      "tier": 3,
+      "pdf_pages": [
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221
+      ],
+      "api_usage": {
+        "input_tokens": 37053,
+        "output_tokens": 546,
+        "cost": 0.1193
+      }
+    }
+  ]
+}

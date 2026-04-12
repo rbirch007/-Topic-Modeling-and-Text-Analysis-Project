@@ -1,0 +1,61 @@
+{
+  "volume": 4,
+  "month": "April",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1111,
+  "files": [
+    {
+      "source_file": "April_Vol4_10_Article_On_the_Way_Mrs._Parley_Nelson.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "on their four hundred years of \"bondage\" to",
+          "end_boundary": "Deseret Sunday School Book Store or Deseret News.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Lesson III: Genealogy and Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business. Second Week in May. LESSON",
+          "end_boundary": "beauty as one looks through the openings",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "On the Way",
+          "category": "Poem",
+          "author": "Mrs. Parley Nelson",
+          "start_boundary": "in the bushes and sees (he sky",
+          "end_boundary": "Spring is comin'. Mrs. Parley Nelson.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains multiple Guide Lessons sections merged together, plus a short poem at the end. The first section is Lesson I on Theology covering the days of the judges. The second section includes both Lesson II (Work and Business) and Lesson III (Genealogy and Literature), with the genealogy section on nicknames and the literature section on true stories. The final section is a short spring poem by Mrs. Parley Nelson.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 15723,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 34647,
+        "output_tokens": 479,
+        "cost": 0.1111
+      }
+    }
+  ]
+}

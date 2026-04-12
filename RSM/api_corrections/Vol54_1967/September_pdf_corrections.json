@@ -1,0 +1,28 @@
+{
+  "volume": 54,
+  "month": "September",
+  "year": 1967,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V54_09_18_Fict_Luminous_McDonough.txt",
+      "issue_type": "bleed_end",
+      "description": "The article appears to be complete - it ends with step 9 of the instructions and the page number 679, which matches what is shown in the PDF image",
+      "action": "note",
+      "text": "The article file is actually complete. It ends with step 9 of the 'Helpful Hints for Success' section and includes the page number 679, which corresponds to the end of the article content on the PDF page. No text is missing.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    },
+    {
+      "file": "V54_09_26_SpFt_To_Them_Breinholt.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends with complete sentence and page number 690 is visible at bottom of page",
+      "action": "append",
+      "text": "\n\n690",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

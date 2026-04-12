@@ -1,0 +1,135 @@
+{
+  "volume": 12,
+  "month": "March",
+  "year": 1925,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3472,
+  "files": [
+    {
+      "source_file": "March_Vol12_06_Article_National_Woman's_Relief_Society_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "National Woman's Relief Society",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "National Woman's Relief Society Church of Jesus",
+          "end_boundary": "December Magazine, 1916, page 668.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Editorial—The Seventeenth of March",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL ° Entered as second-class matter",
+          "end_boundary": "selective process by",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NATIONAL WOMAN'S RELIEF SOCIETY",
+        "EDITORIAL"
+      ],
+      "notes": "The file contains a long article about the National Woman's Relief Society by Amy Brown Lyman, followed by the beginning of an editorial section. The editorial section appears to be cut off mid-sentence, ending with 'selective process by' which suggests this is part of a larger editorial that continues in another file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 21315,
+      "tier": 1,
+      "pdf_pages": [
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146
+      ],
+      "api_usage": {
+        "input_tokens": 51192,
+        "output_tokens": 343,
+        "cost": 0.1587
+      }
+    },
+    {
+      "source_file": "March_Vol12_17_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Noachian Dispensation",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MAY LESSON I (First Week",
+          "end_boundary": "Mention five memorable events of the Noachian Dispensation.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Swat the Fly",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in May) Work and",
+          "end_boundary": "let everyone work to have one.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "James Whitcomb Riley",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in May) Literature JAMES",
+          "end_boundary": "naturally turn to the land of their birth.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Problem Children",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in May) Social",
+          "end_boundary": "the preservatives of the Egyptian embalmers.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY"
+      ],
+      "notes": "This file contains four distinct lesson sections for May, each with different subject areas: Theology (Noachian Dispensation), Work and Business (Swat the Fly), Literature (James Whitcomb Riley), and Social Service (Problem Children). There is also a brief unrelated article about Egyptians using petroleum at the very end that appears to be from a different section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34778,
+      "tier": 1,
+      "pdf_pages": [
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186
+      ],
+      "api_usage": {
+        "input_tokens": 60143,
+        "output_tokens": 540,
+        "cost": 0.1885
+      }
+    }
+  ]
+}

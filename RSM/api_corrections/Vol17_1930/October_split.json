@@ -1,0 +1,79 @@
+{
+  "volume": 17,
+  "month": "October",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.2,
+  "files": [
+    {
+      "source_file": "October_Vol17_12_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for December - Lesson 1: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for December LESSON 1 Theology",
+          "end_boundary": "Moroni, Teancum. Evans—Message and Characters of",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for December - Lesson 2: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR DECEMBER 569 LESSON",
+          "end_boundary": "participating in verbal prayer. No. of meetings",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for December - Lesson 3: Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "570 RELIEF SOCIETY MAGAZINE LESSON 3 Literature",
+          "end_boundary": "Name some modern Jewish writers. LESSON 4",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for December - Lesson 4: Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 4 Social Service (4th Week in",
+          "end_boundary": "lofty things impressively, and moderate things temperately.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains 4 sequential lessons for December, all part of the Guide Lessons series. Each lesson covers a different subject area: Theology and Testimony, Work and Business, Literature, and Social Service. The lessons include detailed content, notes, questions, and references.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 34203,
+      "tier": 1,
+      "pdf_pages": [
+        671,
+        672,
+        673,
+        674,
+        675,
+        676,
+        677,
+        678
+      ],
+      "api_usage": {
+        "input_tokens": 63844,
+        "output_tokens": 563,
+        "cost": 0.2
+      }
+    }
+  ]
+}

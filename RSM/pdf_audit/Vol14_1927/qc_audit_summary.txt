@@ -1,0 +1,60 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 14 (1927)
+===========================================================================
+
+  Total files:      219 (189 articles, 30 special)
+  OK:               201
+  Flagged:          18
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 7
+    manual_review: 4
+    re_extract: 7
+
+  January:
+    January_Vol14_04_Article_Mrs_Maud_Chegwidden_(Portrait).txt | SHORT(146) | 146 chars | manual_review
+    January_Vol14_06_Article_Mrs_Linda_S_Fletcher_(Portrait).txt | SHORT(93) | 93 chars | manual_review
+    January_Vol14_18c_Guide_Lessons_Guide_Lessons_for_March_-_Lesson_III_Literature.txt | MERGED(CAPS_HEADERS(6)) | 9713 chars | re_extract
+
+  February:
+    February_Vol14_12a_Notes_from_Field_Notes_from_the_Field.txt | MERGED(CAPS_HEADERS(12)) | 14423 chars | re_extract
+
+  March:
+    March_Vol14_18c_Guide_Lessons_Guide_Lessons_for_May_-_Work_and_Business_Literature_Social.txt | MERGED(MULTI_LESSON(2)) | 15215 chars | re_extract
+    [CONTENTS MISSING] "Seventeenth of March Frontispiece" (pNone)
+
+
+
+  June:
+    June_Vol14_02_Article_Sunset_Josephine_Spencer.txt | LOW_OCR_MATCH(66%) | 546 chars | api_fix
+    June_Vol14_05_Article_Work_and_Business_Meeting.txt | LOW_OCR_MATCH(68%) | 26205 chars | api_fix
+    June_Vol14_06a_Article_Officers_Meeting_Afternoon_Session_-_Social_Service.txt | LOW_OCR_MATCH(61%) | 6325 chars | api_fix
+    June_Vol14_06b_Article_Social_Service.txt | LOW_OCR_MATCH(63%) | 16245 chars | api_fix
+    June_Vol14_06c_Article_Theology.txt | MERGED(MULTI_LESSON(2)) | 9605 chars | re_extract
+    June_Vol14_06d_Article_Literature.txt | LOW_OCR_MATCH(68%) | 4528 chars | api_fix
+    June_Vol14_06e_Article_Edgar_Lee_Masters.txt | LOW_OCR_MATCH(57%) | 14605 chars | api_fix
+    June_Vol14_07_Article_General_Session,_Morning_Meeting.txt | LOW_OCR_MATCH(59%) | 38132 chars | api_fix
+
+
+  August:
+    August_Vol14_12_Guide_Lessons_Guide_Lessons_for_October.txt | MERGED(MULTI_LESSON(3)) | 17225 chars | re_extract
+    [CONTENTS MISSING] "Bonn Prest. Anthony W. Ivins" (p384)
+
+  September:
+    September_Vol14_01_Frontispiece_The_Coming_Forth_of_the_Book_of_Mormon_Frontispiece.txt | SHORT(38) | 38 chars | manual_review
+    September_Vol14_04_Article_Items_of_Interest_Concerning_the_Book_of_Mormon.txt | SHORT(116) | 116 chars | manual_review
+    [CONTENTS MISSING] "The Greatest of All American Books" (p437)
+    [CONTENTS MISSING] "Lehi Blessing his Son Joseph (Illustrated)" (p438)
+
+  October:
+    October_Vol14_14d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Challenge_of_Childhood_Conclusi.txt | MERGED(MULTI_LESSON(2)) | 8030 chars | re_extract
+
+  November:
+    November_Vol14_14b_Guide_Lessons_Guide_Lessons_for_January.txt | MERGED(MULTI_LESSON(4)) | 35331 chars | re_extract
+    [CONTENTS MISSING] "Friendship Elsie C. Carrol" (p527)
+    [CONTENTS MISSING] "Visitors Thronged the Portals of the Arizona Temple Fay Ollerton, M. A." (p529)
+    [CONTENTS MISSING] "Woman Custom-Head Pleads Right Living" (p542)
+
+
+===========================================================================

@@ -1,0 +1,42 @@
+{
+  "volume": 56,
+  "month": "August",
+  "year": 1969,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V56_08_11_GenFt_Womans_Cannor.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (2592 chars removed)"
+    },
+    {
+      "file": "V56_08_13_GenFt_Editorial_Sharp.txt",
+      "action": "note",
+      "result": "INFO: File contains wrong content - General Board announcements instead of the editorial by Marianne C. Sharp"
+    },
+    {
+      "file": "V56_08_17_Fict_The_Applegate.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (993 chars removed)"
+    },
+    {
+      "file": "V56_08_18_GenFt_Can_We_Taylor.txt",
+      "action": "note",
+      "result": "INFO: The article file contains content from a completely different article not shown on these pages. The pages show content about family identity and a poem about Sarah, not a story about Kimberly."
+    },
+    {
+      "file": "V56_08_24_Fict_In_the_Miller.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1597 chars)"
+    },
+    {
+      "file": "V56_08_26_GenFt_Notes_Packet.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (12000 chars removed)"
+    }
+  ]
+}

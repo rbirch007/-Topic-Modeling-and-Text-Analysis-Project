@@ -1,0 +1,22 @@
+{
+  "volume": 13,
+  "month": "March",
+  "year": 1926,
+  "timestamp": "20260316_175746",
+  "dry_run": false,
+  "replaced": 0,
+  "deleted": 2,
+  "skipped": 0,
+  "entries": [
+    {
+      "file": "March_Vol13_10_Article_Joaquin_Miller_and_His_Grandson.txt",
+      "action": "deleted",
+      "reason": "This appears to be a misextracted header fragment. The PDF pages show household tips, a poem about children, a Sunday School song contest, literary lessons, and priesthood convention notes, but no article about Joaquin Miller and his grandson. This is likely a header artifact that should be deleted."
+    },
+    {
+      "file": "March_Vol13_12_Article_Lake_Scene_on_the_Miller_Estate.txt",
+      "action": "deleted",
+      "reason": "This appears to be a misextraction. The file contains only 'LAKE SCENE!' which seems to be a caption or header fragment. Looking at the table of contents, 'Lake Scene on the Miller Estate' is listed on page 133, but the provided PDF pages are 127-130, so the actual article is not visible in these images. The current file content appears to be just a caption or header artifact with no substantial article content."
+    }
+  ]
+}

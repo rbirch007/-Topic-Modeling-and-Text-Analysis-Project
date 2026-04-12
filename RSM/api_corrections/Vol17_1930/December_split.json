@@ -1,0 +1,122 @@
+{
+  "volume": 17,
+  "month": "December",
+  "year": 1930,
+  "total_merged": 2,
+  "total_splits": 5,
+  "total_cost": 0.3429,
+  "files": [
+    {
+      "source_file": "December_Vol17_08_Article_Julia_A_F_Lund.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Conference",
+          "category": "Article",
+          "author": "Julia A. F. Lund",
+          "start_boundary": "Pietomty=Glen Pemins SNOW COVERED PINES IN THE ROCKIES Relief",
+          "end_boundary": "spirit of the gospel—permeates the work.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This is a single comprehensive article about the Relief Society Conference held October 1-2, 1930. It includes multiple speakers and reports from various stake Relief Societies, but all under the umbrella of the conference proceedings. The content flows continuously from the opening conference description through various speaker presentations to the final remarks, making it one cohesive conference report rather than separate articles.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 59808,
+      "tier": 2,
+      "pdf_pages": [
+        790,
+        791,
+        792,
+        793,
+        794,
+        795,
+        796,
+        797,
+        798,
+        799,
+        800
+      ],
+      "api_usage": {
+        "input_tokens": 31854,
+        "output_tokens": 271,
+        "cost": 0.0996
+      }
+    },
+    {
+      "source_file": "December_Vol17_13_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for February - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for February LESSON I",
+          "end_boundary": "How may these be best solved, in your opinion?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for February - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business LESSON II Work and Business",
+          "end_boundary": "kindred feeling with all workers.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for February - Lesson III: Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in February)",
+          "end_boundary": "How has Morrison achieved humor in this story? (Every one will enjoy Simmons. )",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for February - Lesson IV: Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in February)",
+          "end_boundary": "or hinder our progress? Discuss fully.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains four distinct lesson sections for February Guide Lessons, covering Theology and Testimony, Work and Business, Literature, and Social Service. Each lesson has clear boundaries with Roman numeral headings and distinct subject matter.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 35740,
+      "tier": 1,
+      "pdf_pages": [
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        825,
+        826
+      ],
+      "api_usage": {
+        "input_tokens": 78416,
+        "output_tokens": 537,
+        "cost": 0.2433
+      }
+    }
+  ]
+}

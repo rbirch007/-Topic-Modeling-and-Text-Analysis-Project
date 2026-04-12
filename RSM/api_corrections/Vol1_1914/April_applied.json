@@ -1,0 +1,62 @@
+{
+  "volume": 1,
+  "month": "April",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Apr_05_Art_Literature.txt",
+      "action": "append",
+      "result": "APPLIED append (3435 chars added)"
+    },
+    {
+      "file": "V1_1914_Apr_06_Art_AUTOBIOGRA.txt",
+      "action": "note",
+      "result": "INFO: This file contains content that should be part of the Literature lesson, not a separate article"
+    },
+    {
+      "file": "V1_1914_Apr_07_Lssn_LESSON.txt",
+      "action": "note",
+      "result": "INFO: This file contains content that should be part of the Literature lesson, not a separate lesson file"
+    },
+    {
+      "file": "V1_1914_Apr_11_Art_OURADVERTI.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (139 chars removed)"
+    },
+    {
+      "file": "V1_1914_Apr_12_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Apr_15_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Apr_16_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Apr_17_Art_SAMPLES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content"
+    },
+    {
+      "file": "V1_1914_Apr_19_Art_NIBLEY.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1253 chars removed)"
+    },
+    {
+      "file": "V1_1914_Apr_21_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    }
+  ]
+}

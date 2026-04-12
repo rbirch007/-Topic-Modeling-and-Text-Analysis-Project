@@ -1,0 +1,50 @@
+{
+  "volume": 15,
+  "month": "November",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0246,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Mother's \"Outside\" Interest Katharine C. McKay",
+      "printed_page": 586,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Why Make a Budget? Jean Cox",
+      "printed_page": 598,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Common Prayer May E. Lillie",
+      "printed_page": 633,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "May E. Lillie",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 532-535 which contain content about Japanese Theatre, not page 633 where 'A Common Prayer' should be located according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7522,
+        "output_tokens": 138,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        629,
+        630,
+        631,
+        632
+      ]
+    }
+  ]
+}

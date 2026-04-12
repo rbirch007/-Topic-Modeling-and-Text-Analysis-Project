@@ -1,0 +1,57 @@
+{
+  "volume": 54,
+  "month": "June",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V54_06_01_Fict_The_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (945 chars)"
+    },
+    {
+      "file": "V54_06_03_Art_From_Near_and_Far.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1540 chars)"
+    },
+    {
+      "file": "V54_06_04_SpFt_Emma_Ashton.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V54_06_06_Fict_General_Conference.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V54_06_07_Fict_Womans_Cannon.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V54_06_11_Poem_Wren_Jacobson.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (806 chars)"
+    },
+    {
+      "file": "V54_06_16_Fict_Flower_Idaho.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V54_06_17_Fict_Helen_Quilt.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V54_06_23_Poem_Now_the_Roberts.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1401 chars removed)"
+    }
+  ]
+}

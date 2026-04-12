@@ -1,0 +1,66 @@
+{
+  "volume": 19,
+  "month": "September",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0499,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Glacier National Park Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 570-573) contain only advertisements and the table of contents page. A frontispiece would typically be an illustration or photograph at the very beginning of the magazine, likely on an unnumbered page before the contents. The images provided do not contain the frontispiece content.",
+      "api_usage": {
+        "input_tokens": 7553,
+        "output_tokens": 155,
+        "cost": 0.025
+      },
+      "pdf_pages": [
+        570,
+        571,
+        572,
+        573
+      ]
+    },
+    {
+      "title": "Gift Handkerchiefs Elsie E. Barrett",
+      "printed_page": 537,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Government a Saloon Keeper",
+      "printed_page": 562,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (pages 560-563). Page 562 contains lesson department content about children in earlier civilizations and modern developments, but no article titled 'The Government a Saloon Keeper' is visible in any of the images.",
+      "api_usage": {
+        "input_tokens": 7555,
+        "output_tokens": 147,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        560,
+        561,
+        562,
+        563
+      ]
+    }
+  ]
+}

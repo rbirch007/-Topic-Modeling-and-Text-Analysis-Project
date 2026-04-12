@@ -1,0 +1,44 @@
+{
+  "volume": 3,
+  "month": "August",
+  "year": 1916,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0227,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "The Two-Faced Clock Ida Stewart Peay",
+      "printed_page": 421,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Toilers Maud Baggarley",
+      "printed_page": 467,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "August_Vol3_11a_Poem_The_Toilers.txt",
+      "category": "Poem",
+      "author": "Maud Baggarley",
+      "confidence": "high",
+      "notes": "The article 'The Toilers' by Maud Baggarley appears to already be extracted in the existing file August_Vol3_11a_Poem_The_Toilers.txt. The content is not visible in the provided PDF images (pages 473-476), but based on the filename pattern and the fact that it's listed as already extracted, this poem has been captured.",
+      "api_usage": {
+        "input_tokens": 6550,
+        "output_tokens": 204,
+        "cost": 0.0227
+      },
+      "pdf_pages": [
+        473,
+        474,
+        475,
+        476
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "volume": 9,
+  "month": "February",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0452,
+  "stats": {
+    "truncated": 1,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "February_Vol9_02_Frontispiece_President_Charles_W._Penrose_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 102,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption. The PDF pages shown (57-60) contain Guide Lessons content and do not show the frontispiece page, which would typically be at the very beginning of the magazine. The file contains the standard frontispiece text identifying President Charles W. Penrose with his birth date and magazine issue information.",
+      "api_usage": {
+        "input_tokens": 6402,
+        "output_tokens": 180,
+        "cost": 0.0219
+      },
+      "pdf_pages": [
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "source_file": "February_Vol9_17b_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_II_-_Work_and_Business.txt",
+      "status": "truncated",
+      "current_chars": 80,
+      "complete_text": "LESSON II.\n\nWork and Business\n\nSecond Week In March.\n\nLESSON III.\n\nLiterature\n\nThird Week in March.\n\nIn our last lesson we devoted considerable space to the compositions of Professor George Careless, and of such importance are his compositions, to Latter-day Saint hymnology, that we feel fully justified in devoting a second lesson to his work.",
+      "title": "Guide Lessons for January - Lesson II - Work and Business",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete text in PDF page 54. The file was severely truncated, containing only lesson headers. The complete text shows this is part of the Guide Lessons section with brief lesson introductions.",
+      "api_usage": {
+        "input_tokens": 6404,
+        "output_tokens": 271,
+        "cost": 0.0233
+      },
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  ]
+}

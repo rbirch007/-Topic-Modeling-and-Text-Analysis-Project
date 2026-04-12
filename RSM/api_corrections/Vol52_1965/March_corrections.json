@@ -1,0 +1,192 @@
+{
+  "volume": 52,
+  "month": "March",
+  "year": 1965,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V52_03_01_Frnt_Spring_Robinson.txt",
+    "V52_03_03_SpFt_The_Manwaring.txt",
+    "V52_03_05_Poem_Strength_Wilson.txt",
+    "V52_03_07_Poem_A_Boys_Hill.txt",
+    "V52_03_08_SpFt_Teaching_Walch.txt",
+    "V52_03_09_Poem_On_the_Anderson.txt",
+    "V52_03_10_Fict_Her_Larson.txt",
+    "V52_03_11_SpFt_Through_Potts.txt",
+    "V52_03_13_SpFt_The_Red_Sarnoff.txt",
+    "V52_03_14_GenFt_Womans_Cannon.txt",
+    "V52_03_15_SpFt_Latter-day_Noall.txt",
+    "V52_03_16_Poem_Morning_Jacobson.txt",
+    "V52_03_22_The Home_The_Roberts.txt",
+    "V52_03_23_The Home_Mary_A._Quilts.txt",
+    "V52_03_24_Fict_The_Harmer.txt",
+    "V52_03_25_The Home_The_Breeze.txt",
+    "V52_03_26_Poem_Strength_Denton.txt",
+    "V52_03_27_Fict_The_Martin.txt",
+    "V52_03_29_The Home_Framed_Olsen.txt",
+    "V52_03_30_Poem_Reassurance_Bowles.txt",
+    "V52_03_31_GenFt_Notes_Activities.txt",
+    "V52_03_32_Lssn_Work_Christensen.txt",
+    "V52_03_33_Poem_Spring_Candland.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V52_03_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information that should be in a separate file",
+      "action": "trim_start",
+      "text": "; The Cover: Frontispiece: Art Layout: Linnie F. Robinson Transparency by Free Lance Photographers Guild Lithographed in Full Color by Deseret News Press Springtime Blossoms Photograph by Ward Linton for Don Knight Dick Scopes Illustrations: ~ Mary Scopes",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_04_Poem_Deserted_Sabin.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about Emarita",
+      "action": "trim_end",
+      "text": "Why did they leave it so? 166",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_06_Fict_A_Doll_Wrathall.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "s in two brown paper packages and wrote each girl's name with the stub of a pencil. Emarita stood still, shaking her head. RRosa came from the bedroom. She had combed and braided her own and her sister's hair. Now she spoke from a ten-year-old's superior wisdom. \"I know why she doesn't want to go to school, Mama. Always on this day, the girls bring their new dolls, and the boys bring toys, from Christmas, to show the class.\"' Rosa took her coat from the row of wooden pegs and shrugged into it, pulling at the sleeves, which were too short. Mrs. Gonzales leaned forward, searching Emarita's eyes. \"Ts this what the teacher said? Bring dolls?\" Emarita nodded. Two tears started down her cheeks.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with board member names that should be separate",
+      "action": "trim_start",
+      "text": "@ Hulda P. Young, 186 EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains board member names that should be separate",
+      "action": "trim_end",
+      "text": "Behold, a sower went forth to sow; And when he sowed, some seeds fell by the way side....",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_17_The Home_Sweaters.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about England travels instead of sweaters",
+      "action": "replace_content",
+      "text": "TRANSPARENCIES BY VERNON SHARP The white knitted sweaters are embroidered in floral designs of colored wool, using the lazy-daisy and other basic embroidery stitches. The red skirt in the lower picture is made of poodle cloth and embroidered with wool. 198",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_03_19_The Home_Harvest.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be duplicate of previous article content",
+      "action": "note",
+      "text": "Content needs re-extraction from OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_03_21_The Home_Around_Bazaar.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about gardens instead of bazaar",
+      "action": "note",
+      "text": "Content needs re-extraction from OCR - appears to contain garden content instead of bazaar information",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_03_28_The Home_Nurture_Miner.txt",
+      "issue_type": "missing_text",
+      "description": "File appears to be missing beginning content about nurturing curiosity",
+      "action": "note",
+      "text": "File starts mid-article and needs proper beginning content about nurturing curiosity",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_03_34_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the header 'Birthday Congratulations' and 'ONE HUNDRED ONE'",
+      "action": "prepend",
+      "text": "[Vol52 | March 1965 | Page 240 | General Feature | Birthday Congratulations | ]\n\nONE HUNDRED ONE",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Little",
+      "expected_page": 176,
+      "status": "merged_with_another",
+      "merged_into": "V52_03_08_SpFt_Teaching_Walch.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues and wrong content. The Home section articles particularly need attention as some contain completely unrelated content. The OCR quality appears good overall but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "V52_03_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information that should be in a separate file",
+      "action": "trim_start",
+      "text": "; The Cover: Frontispiece: Art Layout: Linnie F. Robinson Transparency by Free Lance Photographers Guild Lithographed in Full Color by Deseret News Press Springtime Blossoms Photograph by Ward Linton for Don Knight Dick Scopes Illustrations: ~ Mary Scopes",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_04_Poem_Deserted_Sabin.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about Emarita",
+      "action": "trim_end",
+      "text": "Why did they leave it so? 166",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_06_Fict_A_Doll_Wrathall.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "s in two brown paper packages and wrote each girl's name with the stub of a pencil. Emarita stood still, shaking her head. RRosa came from the bedroom. She had combed and braided her own and her sister's hair. Now she spoke from a ten-year-old's superior wisdom. \"I know why she doesn't want to go to school, Mama. Always on this day, the girls bring their new dolls, and the boys bring toys, from Christmas, to show the class.\"' Rosa took her coat from the row of wooden pegs and shrugged into it, pulling at the sleeves, which were too short. Mrs. Gonzales leaned forward, searching Emarita's eyes. \"Ts this what the teacher said? Bring dolls?\" Emarita nodded. Two tears started down her cheeks.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with board member names that should be separate",
+      "action": "trim_start",
+      "text": "@ Hulda P. Young, 186 EDITORIAL",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_03_12_GenFt_Editorial_Crawford.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains board member names that should be separate",
+      "action": "trim_end",
+      "text": "Behold, a sower went forth to sow; And when he sowed, some seeds fell by the way side....",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V52_03_34_GenFt_Bday_Congrats.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the header 'Birthday Congratulations' and 'ONE HUNDRED ONE'",
+      "action": "prepend",
+      "text": "[Vol52 | March 1965 | Page 240 | General Feature | Birthday Congratulations | ]\n\nONE HUNDRED ONE",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

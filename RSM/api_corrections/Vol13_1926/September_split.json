@@ -1,0 +1,227 @@
+{
+  "volume": 13,
+  "month": "September",
+  "year": 1926,
+  "total_merged": 4,
+  "total_splits": 8,
+  "total_cost": 0.7097,
+  "files": [
+    {
+      "source_file": "September_Vol13_02_Article_At_Cedar_Breaks_Kate_Thomas.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "At Cedar Breaks",
+          "category": "Poem",
+          "author": "Kate Thomas",
+          "start_boundary": "At Cedar Breaks By Kate Thomas Alone",
+          "end_boundary": "All trusting, all unworthy, Lord, I love thee!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Lost City of Nevada",
+          "category": "Article",
+          "author": "Harrison R. Merrill, Brigham Young University",
+          "start_boundary": "The Lost City of Nevada By Harrison R.",
+          "end_boundary": "THE RELIEF SOCIETY OF THE CHURCH OF JESUS CHRIST OF LATTER-DAY SAINTS",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE LOST CITY OF NEVADA"
+      ],
+      "notes": "The file contains two distinct pieces: a poem 'At Cedar Breaks' by Kate Thomas and an article 'The Lost City of Nevada' by Harrison R. Merrill. The poem is a spiritual reflection on the natural beauty of Cedar Breaks, while the article describes a visit to archaeological ruins in Nevada and includes historical context about their discovery.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14573,
+      "tier": 1,
+      "pdf_pages": [
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523
+      ],
+      "api_usage": {
+        "input_tokens": 57731,
+        "output_tokens": 367,
+        "cost": 0.1787
+      }
+    },
+    {
+      "source_file": "September_Vol13_06_Article_The_Master_Key_Minnie_Iverson_Hodapp.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Master Key",
+          "category": "Article",
+          "author": "Minnie Iverson Hodapp",
+          "start_boundary": "The Master Key By Minnie Iverson Hodapp.",
+          "end_boundary": "Was restored, I knew not why.\" The End.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Of Interest to Women",
+          "category": "Home_Science",
+          "author": "Lalene H. Hart",
+          "start_boundary": "Of Interest to Women Lalene H. Hart",
+          "end_boundary": "may be of some help another season.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE MASTER KEY"
+      ],
+      "notes": "The file contains two distinct articles. The first is a long fictional story 'The Master Key' by Minnie Iverson Hodapp about a family's conversion to Mormonism. The second is a practical advice column 'Of Interest to Women' by Lalene H. Hart about making jellies and jams. The boundary between them is clear where the first story ends with 'The End.' and the second begins with the new title and author.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 25940,
+      "tier": 1,
+      "pdf_pages": [
+        530,
+        531,
+        532,
+        533,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539,
+        540,
+        541,
+        542
+      ],
+      "api_usage": {
+        "input_tokens": 57541,
+        "output_tokens": 382,
+        "cost": 0.1784
+      }
+    },
+    {
+      "source_file": "September_Vol13_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman",
+          "end_boundary": "this energetic group of women.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Extract from the Life of Faith",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Extract from the Life of Faith",
+          "end_boundary": "held last November in Detroit.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains two distinct articles. The first is a lengthy 'Notes from the Field' report by Amy Brown Lyman covering various Relief Society activities across different stakes and missions. The second is a short poem titled 'Extract from the Life of Faith' with an editor's note. The boundary between them is clear where the first article ends with discussion of the Cottonwood Stake and the second begins with the poem title.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 16449,
+      "tier": 1,
+      "pdf_pages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549,
+        550,
+        551,
+        552,
+        553
+      ],
+      "api_usage": {
+        "input_tokens": 50333,
+        "output_tokens": 363,
+        "cost": 0.1564
+      }
+    },
+    {
+      "source_file": "September_Vol13_09_Guide_Lessons_Extract_from_the_Life_of_Faith_475_Guide_Lessons_for_Novembe.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Extract from the Life of Faith",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Extract from the Life of Faith \"I had walked",
+          "end_boundary": "held last November in Detroit.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for November",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I Theology and Testimony",
+          "end_boundary": "other symptoms of nervous or emotional strain?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains two distinct sections: a short inspirational poem/article titled 'Extract from the Life of Faith' followed by the complete 'Guide Lessons for November' which contains 4 separate lessons (Theology, Work and Business, Literature on Jean Webster, and Social Service). The Guide Lessons section is a comprehensive educational unit with multiple sub-lessons but should be kept together as one cohesive instructional piece.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 38897,
+      "tier": 1,
+      "pdf_pages": [
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327
+      ],
+      "api_usage": {
+        "input_tokens": 63555,
+        "output_tokens": 372,
+        "cost": 0.1962
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 2,
+  "month": "February",
+  "year": 1915,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0235,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Mrs. Elizabeth Ann Whitney, Miss Eliza R. Snow Mrs. Emmeline B. Wells Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 39-42) contain content from January 1914 (Vol. II No. 1) including editorial content, genesis/creation discussions, and guide lessons. No frontispiece content featuring Mrs. Elizabeth Ann Whitney, Miss Eliza R. Snow, or Mrs. Emmeline B. Wells was found in these images. The frontispiece would typically be at the very beginning of the February 1915 issue, but these pages appear to be from a different issue entirely.",
+      "api_usage": {
+        "input_tokens": 6759,
+        "output_tokens": 217,
+        "cost": 0.0235
+      },
+      "pdf_pages": [
+        39,
+        40,
+        41,
+        42
+      ]
+    }
+  ]
+}

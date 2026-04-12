@@ -1,0 +1,159 @@
+{
+  "volume": 7,
+  "month": "August",
+  "year": 1920,
+  "total_files_checked": 16,
+  "files_correct": [
+    "August_Vol7_04_Article_A_Vacation_and_a_Rag-bag,_a_story_Clara_S._Fagergren.txt",
+    "August_Vol7_05_Poetry_Temple_Work,_a_poem_Ellen_Adair.txt",
+    "August_Vol7_06_Article_A_Testimony_Elder_Peter_E._Johnson.txt",
+    "August_Vol7_09_Article_The_Coming_of_the_Sixth_Hazel_Washburn.txt",
+    "August_Vol7_10_Article_An_Unknown_Heroine.txt",
+    "August_Vol7_11_Article_Household_Hints_Janette_A._Hyde.txt"
+  ],
+  "corrections": [
+    {
+      "file": "August_Vol7_01_Article_Eulogy_to_Emmeline_B._Wells_O._F._Ursenbach.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Mrs. Dusenberry and Mrs. Hyde from the Editorial section instead of the Eulogy sonnet",
+      "action": "replace_content",
+      "text": "EULOGY TO EMMELINE B. WELLS (Sonnet) O. F. Ursenbach. How I recall, in those fond erstwhile days, A sweet kind face, my dear old mother's friend;  Though but a lad I, when she won my praise, To see her muse, blessed life with nature blend, A child with children, friend to the oppressed, Yet honored by the mightiest of men;  Few souls with like congenial powers are blessed. To deal with kings, then lowly life again. Now, snows of many winters blanche her brow;  Though ninety-two long years of mortal strife Have aged her frame, her spirit, even now, Presents each day a more majestic life. May her declining years be decked with peace, And may her soul live on and never cease.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "August_Vol7_02_Frontispiece_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the Eulogy sonnet and beginning of Class in Charities article instead of just frontispiece content",
+      "action": "trim_end",
+      "text": "UTAH STATE NATIONAL BANK, Salt Lake City",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_03_Article_Class_in_Charities_and_Relief_Work_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence in the middle of the article instead of at the beginning",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. VII. August, 1920 No. 8 Class in Charities and Relief Work Brigham Young University Summer School. Mrs. Amy Brown Lyman At the joint call of the general authorities of the Church, the Social Advisory Committee of the Church, and the General Board of Relief Society, through the stake authorities, sixty-eight Relief Society women from sixty-five stakes assembled at the Brigham Young University, in Provo, on May 31, for relief work a regular six weeks' intensive course in charities and With two other groups similarly called, for training in social and recreation leadership, and teacher-training, respectively, there were in all two hundred fifteen special students for these special courses, in addition to the regular college students, numbering two hundred. In order that the course might be completed before the great N. E. A., to be held in Salt Lake City on July 3-10, classes were held on Saturday, making a six-day school week, for five weeks. In the Relief Society Department, there were representatives from Canada, Idaho, Wyoming, Utah, Arizona, and Mexico. In this group were eight Relief Society stake presidents, five stake counsellors, eight stake secretaries, one stake treasurer, twenty-nine stake board members, four ward presidents, three ward secretaries, one ward chorister, one religion class supervisor, two Relief Society teachers, and six members. Among them were: one great grandmother, sixteen grandmothers, forty-three mothers, and ten unmarried members. There were sixteen between the age of twenty and thirty;  sixteen between thirty and forty;  twenty between forty and fifty;  thirteen between fifty and sixty, and three over sixty years of age. The course in charities and relief was given under the supervision of the Social Advisory Committee of the Church. 488 RELIEF SOCIETY MAGAZINE It was under the direct charge of the General Board of Relief Society;  with Mrs. Amy Brown Lyman, General Secretary of the Relief Society, and Mrs. Annie D. Palmer, second counsellor in the Utah stake Relief Society, and secretary of the Community Welfare Department of the Utah stake Relief Society, acting as class teachers. The course in sociology was given by Professor John C. Swenson, of the Brigham Young University. Mrs. Inez Knight Allen, president of Utah stake Relief Society, gave lectures and discussed practical relief methods that have been worked out in her stake. The object of the course was to increase the general efficiency of family work in the Relief Society with a special view of broadening and improving the charity work of this great organization. The course consisted of: Sociology, in which the fundamentals of family life were discussed, Professor Swenson;  Brief History of Charity Work;  Modern Methods of Family Rehabilitation, including a study of Normal Family Life, the Unstable Family, and definite methods of approach and procedure in family work;  a seminar, in which specific family problems were discussed;  literature of family social work in which the regularly required reading was reported and discussed;  special lecture course, including subjects related to family and community life, and the best means of overcoming existing social difficulties. These lectures were given by prominent lecturers and specialists. Visits to several institutions in the state were made by the entire class, for the purpose of studying problems of feeble mindedness, insanity, delinquency, dependency, and infirmity, with their causes and treatment. At each of these institutions lectures were given, as follows: State Industrial School, Ogden, Supt. E. S. Hinckley;  State Mental Hospital, Provo, Dr. Hyde, superintendent;  Community Clinic, Salt Lake City, Mrs. Avery;  Neighborhood House, Salt Lake City, Miss Ellen Taylor;  Salt Lake County Infirmary and Hospital, Supt. Orson Allen. A special feature of this course was the series of lectures by Edward T. Devine, of New York, who is one of the greatest American authorities on social service work. His book, \"Normal Life,\" had been a part of the required reading, and his visit to the class room gave the personal touch that emphasized and vitalized its discussions. Toward the close of the term, part of a day was set aside for special chapel exercises, when the general authorities of the Church, including the members of all of the gen",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_07_Article_Am_I_My_Husband's_Keeper_Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and continues into the Victory Dance poem",
+      "action": "trim_end",
+      "text": "\"Of all the stupid reasons \" But she followed, still",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_08_Poetry_A_Victory_Dance,_a_poem_Selected.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with the end of the previous article instead of the poem",
+      "action": "trim_start",
+      "text": "A VICTORY DANCE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_12_Poetry_The_Grail_of_the_Fields,_a_poem_Maude_Baggarley.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into On the Watchtower article content",
+      "action": "trim_end",
+      "text": "For I had looked upon the grail of the fields — The old fields, the dreary fields — transfigured and sublime!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_13_Article_On_the_Watchtower_James_H._Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with author name instead of article title",
+      "action": "prepend",
+      "text": "On the Watchtower",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "August_Vol7_15_Editorial_Editorial_Who_Pays_the_Price_A_Visitor_from_Across_the_Sea.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of the Honors section",
+      "action": "append",
+      "text": "Emmeline B. Wells as her proxy, is herself of Norwegian extraction. Her mother was born in Norway and Mrs. Dusenberry will therefore find very much of personal interest in her visit to her mother's native country. The meeting in Christiania will consider public health service, educational advancement, citizenship, juvenile courts, better films, etc., etc., in their relation to international, as well as national, needs. Mrs. Dusenberry is especially qualified to assist in these deliberations on all questions of educational interest and modern social service methods. Her excellent reasoning power, her quick perceptions and her trained intellect will add force to her oratory, while the truths she will be able to present will inform her remarks and inspire her utterances. She goes with the congratulations of the General Board and the blessings and good wishes of the members of this society. Her only daughter, Margaret, who is an accomplished musician, will accompany her mother on this trip. Mrs. Janette A. Hyde, the business manager of our \"Magazine\" and a prominent and popular member of the conservation work, done during the war, and now carried forward in the Civic Center, has been singularly honored in a national way. She was appointed by the national Republican committee, under Chairman Will H. Hays, on January 4, 1920, to act as a member of the national council of one hundred. On January 14, she was invited by the National Republican Committee to represent the Utah Republican women in a regional conference, held at Denver, January 14, 1920. Such a favorable impression was made that she was again invited to speak in Denver at the Lincoln Club, February 9, 1920. She was elected as a delegate at large in our state convention, held May 3, 1920, and was chosen as the first full delegate, of her sex, from Utah, to attend the national convention in Chicago in May. Later she was appointed as one of the assistant secretaries of the national convention and sat upon the platform with the general officers of the convention. She has been appointed as an executive national committee woman for Utah, through both the presidential Republican nominee. Governor Harding, and National Chairman Will Hays. An even greater honor was shown in placing her upon the executive committee of the committee of the whole. On July 1, she received a telegram appointing her on the notification committee to go to Marion, Ohio, the home town of Governor Harding, to formally notify him of his national appointment, July 22, 1920. While in the Chicago convention she was asked to speak at the Philadelphia Club, at the Blackstone Hotel, as the guest of the Woman's Cycle and Saddle Club. She was the guest of honor at the Arts Club in the Arts Building while at Chicago. Prior to these appointments she served as state chairman of the women of Utah for several years. The following extract from the conservative Democratic paper, the \"New York Sun,\" proves the impression made by Mrs. Hyde and her associates in the Republican convention: \"To those who have watched the evolution of women in public life without prejudice the excellent impression made on all observers by the women at the Republican convention does not come as a surprise. There were some members of that convention, however, who have not been unprejudiced, and the tributes the women won from them are worth recording. \"A most interesting event occurred in the private committee meeting held of all of the women delegates to the convention, on arriving in Chicago, presided over by Mary Garret Hays. Advanced measures were proposed and resolutions brought forward during this meeting. Suddenly Mrs. Hyde was made the subject of an attack by Mrs. Emma Bush, in connection with the resolution brought forward by this delegate denouncing \"Mormonism,\" Senator Smoot, etc., etc., and calling for an order in the convention which would prevent any \"Mormon\" from taking part therein. Miss Hay at once called upon Mrs. Hyde to answer this charge, expressing her own admiration at the same time for \"Mormon\" women and for Mrs. Hyde in particular. Instantly the delegate from Michigan was on her feet and sharply asked Mrs. Hyde a question: \"Do you believe in polygamy?\" she said. \"Yes, I most certainly do,\" replied Mrs. Hyde. There was a hubbub followed which Miss Hay again quieted. Mrs. Bush repeated her question and Mrs. Hyde repeated her reply, frankly and without reservations except the explanation that the principle is not practiced today nor has been since the issuance of the manifesto, in 1893. Mrs. Hyde countered by explaining that she supposed the gathering was a political one and not a religious one and that she did not feel called upon to inquire if any of the women believed in the signs and crosses of the Catholic faith, nor Christian Science, nor any other religion, but left every woman to worship as she pleased, feeling that a common ground for all good will be found in the principles of freedom upon which this government was founded. Mrs. Hyde's independent and frank reply won the instant admiration of all members present and she was showered with social attentions all the time she was in Chicago. \"Mrs. Hyde is an intimate friend of Senator Smoot and wife and loyally devoted to the cause of Republicanism which she so ably represents.\" Utah women, indeed \"Mormon\" women, have also been greatly honored in the appointment of Mrs. Elizabeth H. Hayward, a year and a half ago, to act as National Democratic committee women from Utah. Mrs. Hayward has long been locally famous as a suffrage leader, legislator, and publicist. She was at the San Francisco convention with our well known professor, Alice Reynolds, and both were shown great attention and courtesy. Miss Reynolds made two seconding speeches from the floor of the convention. Indeed, both parties, now and always in Utah, have been just and liberal in their treatment of women, both as individuals and as a sex. We congratulate our famous representatives and ourselves in these recent developments.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files have content bleeding issues where articles run into each other. The Eulogy file contains completely wrong content from the Editorial section. The Frontispiece file extends too far into other articles. Most other articles have correct content but need boundary adjustments.",
+  "validated_corrections": [
+    {
+      "file": "August_Vol7_02_Frontispiece_Frontispiece.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the Eulogy sonnet and beginning of Class in Charities article instead of just frontispiece content",
+      "action": "trim_end",
+      "text": "UTAH STATE NATIONAL BANK, Salt Lake City",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_03_Article_Class_in_Charities_and_Relief_Work_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence in the middle of the article instead of at the beginning",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. VII. August, 1920 No. 8 Class in Charities and Relief Work Brigham Young University Summer School. Mrs. Amy Brown Lyman At the joint call of the general authorities of the Church, the Social Advisory Committee of the Church, and the General Board of Relief Society, through the stake authorities, sixty-eight Relief Society women from sixty-five stakes assembled at the Brigham Young University, in Provo, on May 31, for relief work a regular six weeks' intensive course in charities and With two other groups similarly called, for training in social and recreation leadership, and teacher-training, respectively, there were in all two hundred fifteen special students for these special courses, in addition to the regular college students, numbering two hundred. In order that the course might be completed before the great N. E. A., to be held in Salt Lake City on July 3-10, classes were held on Saturday, making a six-day school week, for five weeks. In the Relief Society Department, there were representatives from Canada, Idaho, Wyoming, Utah, Arizona, and Mexico. In this group were eight Relief Society stake presidents, five stake counsellors, eight stake secretaries, one stake treasurer, twenty-nine stake board members, four ward presidents, three ward secretaries, one ward chorister, one religion class supervisor, two Relief Society teachers, and six members. Among them were: one great grandmother, sixteen grandmothers, forty-three mothers, and ten unmarried members. There were sixteen between the age of twenty and thirty;  sixteen between thirty and forty;  twenty between forty and fifty;  thirteen between fifty and sixty, and three over sixty years of age. The course in charities and relief was given under the supervision of the Social Advisory Committee of the Church. 488 RELIEF SOCIETY MAGAZINE It was under the direct charge of the General Board of Relief Society;  with Mrs. Amy Brown Lyman, General Secretary of the Relief Society, and Mrs. Annie D. Palmer, second counsellor in the Utah stake Relief Society, and secretary of the Community Welfare Department of the Utah stake Relief Society, acting as class teachers. The course in sociology was given by Professor John C. Swenson, of the Brigham Young University. Mrs. Inez Knight Allen, president of Utah stake Relief Society, gave lectures and discussed practical relief methods that have been worked out in her stake. The object of the course was to increase the general efficiency of family work in the Relief Society with a special view of broadening and improving the charity work of this great organization. The course consisted of: Sociology, in which the fundamentals of family life were discussed, Professor Swenson;  Brief History of Charity Work;  Modern Methods of Family Rehabilitation, including a study of Normal Family Life, the Unstable Family, and definite methods of approach and procedure in family work;  a seminar, in which specific family problems were discussed;  literature of family social work in which the regularly required reading was reported and discussed;  special lecture course, including subjects related to family and community life, and the best means of overcoming existing social difficulties. These lectures were given by prominent lecturers and specialists. Visits to several institutions in the state were made by the entire class, for the purpose of studying problems of feeble mindedness, insanity, delinquency, dependency, and infirmity, with their causes and treatment. At each of these institutions lectures were given, as follows: State Industrial School, Ogden, Supt. E. S. Hinckley;  State Mental Hospital, Provo, Dr. Hyde, superintendent;  Community Clinic, Salt Lake City, Mrs. Avery;  Neighborhood House, Salt Lake City, Miss Ellen Taylor;  Salt Lake County Infirmary and Hospital, Supt. Orson Allen. A special feature of this course was the series of lectures by Edward T. Devine, of New York, who is one of the greatest American authorities on social service work. His book, \"Normal Life,\" had been a part of the required reading, and his visit to the class room gave the personal touch that emphasized and vitalized its discussions. Toward the close of the term, part of a day was set aside for special chapel exercises, when the general authorities of the Church, including the members of all of the gen",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_07_Article_Am_I_My_Husband's_Keeper_Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and continues into the Victory Dance poem",
+      "action": "trim_end",
+      "text": "\"Of all the stupid reasons \" But she followed, still",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_08_Poetry_A_Victory_Dance,_a_poem_Selected.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with the end of the previous article instead of the poem",
+      "action": "trim_start",
+      "text": "A VICTORY DANCE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_12_Poetry_The_Grail_of_the_Fields,_a_poem_Maude_Baggarley.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into On the Watchtower article content",
+      "action": "trim_end",
+      "text": "For I had looked upon the grail of the fields — The old fields, the dreary fields — transfigured and sublime!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol7_15_Editorial_Editorial_Who_Pays_the_Price_A_Visitor_from_Across_the_Sea.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of the Honors section",
+      "action": "append",
+      "text": "Emmeline B. Wells as her proxy, is herself of Norwegian extraction. Her mother was born in Norway and Mrs. Dusenberry will therefore find very much of personal interest in her visit to her mother's native country. The meeting in Christiania will consider public health service, educational advancement, citizenship, juvenile courts, better films, etc., etc., in their relation to international, as well as national, needs. Mrs. Dusenberry is especially qualified to assist in these deliberations on all questions of educational interest and modern social service methods. Her excellent reasoning power, her quick perceptions and her trained intellect will add force to her oratory, while the truths she will be able to present will inform her remarks and inspire her utterances. She goes with the congratulations of the General Board and the blessings and good wishes of the members of this society. Her only daughter, Margaret, who is an accomplished musician, will accompany her mother on this trip. Mrs. Janette A. Hyde, the business manager of our \"Magazine\" and a prominent and popular member of the conservation work, done during the war, and now carried forward in the Civic Center, has been singularly honored in a national way. She was appointed by the national Republican committee, under Chairman Will H. Hays, on January 4, 1920, to act as a member of the national council of one hundred. On January 14, she was invited by the National Republican Committee to represent the Utah Republican women in a regional conference, held at Denver, January 14, 1920. Such a favorable impression was made that she was again invited to speak in Denver at the Lincoln Club, February 9, 1920. She was elected as a delegate at large in our state convention, held May 3, 1920, and was chosen as the first full delegate, of her sex, from Utah, to attend the national convention in Chicago in May. Later she was appointed as one of the assistant secretaries of the national convention and sat upon the platform with the general officers of the convention. She has been appointed as an executive national committee woman for Utah, through both the presidential Republican nominee. Governor Harding, and National Chairman Will Hays. An even greater honor was shown in placing her upon the executive committee of the committee of the whole. On July 1, she received a telegram appointing her on the notification committee to go to Marion, Ohio, the home town of Governor Harding, to formally notify him of his national appointment, July 22, 1920. While in the Chicago convention she was asked to speak at the Philadelphia Club, at the Blackstone Hotel, as the guest of the Woman's Cycle and Saddle Club. She was the guest of honor at the Arts Club in the Arts Building while at Chicago. Prior to these appointments she served as state chairman of the women of Utah for several years. The following extract from the conservative Democratic paper, the \"New York Sun,\" proves the impression made by Mrs. Hyde and her associates in the Republican convention: \"To those who have watched the evolution of women in public life without prejudice the excellent impression made on all observers by the women at the Republican convention does not come as a surprise. There were some members of that convention, however, who have not been unprejudiced, and the tributes the women won from them are worth recording. \"A most interesting event occurred in the private committee meeting held of all of the women delegates to the convention, on arriving in Chicago, presided over by Mary Garret Hays. Advanced measures were proposed and resolutions brought forward during this meeting. Suddenly Mrs. Hyde was made the subject of an attack by Mrs. Emma Bush, in connection with the resolution brought forward by this delegate denouncing \"Mormonism,\" Senator Smoot, etc., etc., and calling for an order in the convention which would prevent any \"Mormon\" from taking part therein. Miss Hay at once called upon Mrs. Hyde to answer this charge, expressing her own admiration at the same time for \"Mormon\" women and for Mrs. Hyde in particular. Instantly the delegate from Michigan was on her feet and sharply asked Mrs. Hyde a question: \"Do you believe in polygamy?\" she said. \"Yes, I most certainly do,\" replied Mrs. Hyde. There was a hubbub followed which Miss Hay again quieted. Mrs. Bush repeated her question and Mrs. Hyde repeated her reply, frankly and without reservations except the explanation that the principle is not practiced today nor has been since the issuance of the manifesto, in 1893. Mrs. Hyde countered by explaining that she supposed the gathering was a political one and not a religious one and that she did not feel called upon to inquire if any of the women believed in the signs and crosses of the Catholic faith, nor Christian Science, nor any other religion, but left every woman to worship as she pleased, feeling that a common ground for all good will be found in the principles of freedom upon which this government was founded. Mrs. Hyde's independent and frank reply won the instant admiration of all members present and she was showered with social attentions all the time she was in Chicago. \"Mrs. Hyde is an intimate friend of Senator Smoot and wife and loyally devoted to the cause of Republicanism which she so ably represents.\" Utah women, indeed \"Mormon\" women, have also been greatly honored in the appointment of Mrs. Elizabeth H. Hayward, a year and a half ago, to act as National Democratic committee women from Utah. Mrs. Hayward has long been locally famous as a suffrage leader, legislator, and publicist. She was at the San Francisco convention with our well known professor, Alice Reynolds, and both were shown great attention and courtesy. Miss Reynolds made two seconding speeches from the floor of the convention. Indeed, both parties, now and always in Utah, have been just and liberal in their treatment of women, both as individuals and as a sex. We congratulate our famous representatives and ourselves in these recent developments.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "August_Vol7_13_Article_On_the_Watchtower_James_H._Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with author name instead of article title",
+      "action": "prepend",
+      "text": "On the Watchtower",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

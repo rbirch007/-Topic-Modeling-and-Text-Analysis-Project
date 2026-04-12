@@ -1,0 +1,475 @@
+{
+  "volume": 16,
+  "month": "February",
+  "year": 1929,
+  "total": 23,
+  "ok": 17,
+  "flagged": 6,
+  "empty": 0,
+  "records": [
+    {
+      "file": "February_Vol16_00_BOARD.txt",
+      "body_len": 2806,
+      "article_words": 230,
+      "words_in_ocr": 230,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_00_CONTENTS.txt",
+      "body_len": 648,
+      "article_words": 66,
+      "words_in_ocr": 66,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_00_Misc.txt",
+      "body_len": 4960,
+      "article_words": 357,
+      "words_in_ocr": 354,
+      "pct_in_ocr": 0.9916,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "February_Vol16_00_Misc_backup_premarker.txt",
+      "body_len": 4892,
+      "article_words": 352,
+      "words_in_ocr": 352,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_01a_Article_Winter_Grass.txt",
+      "body_len": 358,
+      "article_words": 40,
+      "words_in_ocr": 26,
+      "pct_in_ocr": 0.65,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(65%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "aspire",
+        "fruitfulness",
+        "hue",
+        "lend",
+        "lone",
+        "lyre",
+        "sere",
+        "somber",
+        "sparse",
+        "spears"
+      ]
+    },
+    {
+      "file": "February_Vol16_01b_Article_Tongues_in_Trees.txt",
+      "body_len": 1985,
+      "article_words": 204,
+      "words_in_ocr": 132,
+      "pct_in_ocr": 0.6471,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(65%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "arms",
+        "barren",
+        "beneath",
+        "benison",
+        "bless",
+        "blown",
+        "bough",
+        "boughs",
+        "bourne",
+        "breathed"
+      ]
+    },
+    {
+      "file": "February_Vol16_01c_Article_Responsibility_of_the_State_in_Caring_for_Its_Children.txt",
+      "body_len": 24779,
+      "article_words": 855,
+      "words_in_ocr": 855,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(7))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_01d_Article_A_Report_of_the_Care_of_the_Feeble-Minded_in_Utah.txt",
+      "body_len": 8328,
+      "article_words": 504,
+      "words_in_ocr": 503,
+      "pct_in_ocr": 0.998,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": [
+        "schoolrooms"
+      ]
+    },
+    {
+      "file": "February_Vol16_01f_Article_An_Appreciation_of_Mrs_Alpha_M_Smoot.txt",
+      "body_len": 6003,
+      "article_words": 425,
+      "words_in_ocr": 424,
+      "pct_in_ocr": 0.9976,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "believed"
+      ]
+    },
+    {
+      "file": "February_Vol16_01h_Article_Honor_Banquet_Tendered_to_President_Clarissa_Smith_Williams.txt",
+      "body_len": 6985,
+      "article_words": 400,
+      "words_in_ocr": 399,
+      "pct_in_ocr": 0.9975,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "mcclelland"
+      ]
+    },
+    {
+      "file": "February_Vol16_02_Article_A_Report_of_the_Care_of_the_Feeble-Minded_in_Utah_Claire_Stewart_Boyer.txt",
+      "body_len": 9518,
+      "article_words": 598,
+      "words_in_ocr": 598,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_03_Article_An_Appreciation_of_Mrs_Alpha_M_Smoot.txt",
+      "body_len": 7576,
+      "article_words": 534,
+      "words_in_ocr": 534,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_04_Editorial_EditorialThe_Care_of_the_Feeble-Minded_Don_B_Colton.txt",
+      "body_len": 3048,
+      "article_words": 214,
+      "words_in_ocr": 214,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_05_Article_Honor_Banquet_Tendered_to_President_Clarissa_Smith_Williams_Alpha_Eldredge.txt",
+      "body_len": 10229,
+      "article_words": 559,
+      "words_in_ocr": 559,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_06_Article_Literature_Lessons.txt",
+      "body_len": 2021,
+      "article_words": 164,
+      "words_in_ocr": 164,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_07_Article_Purple_Velvet.txt",
+      "body_len": 17907,
+      "article_words": 1040,
+      "words_in_ocr": 1040,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_08_Article_Natures_Mirror.txt",
+      "body_len": 871,
+      "article_words": 101,
+      "words_in_ocr": 101,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_09_Article_Pioneers_Lois_V_Hales.txt",
+      "body_len": 5816,
+      "article_words": 460,
+      "words_in_ocr": 460,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_10_Article_Flashes_from_the_Eternal_Semaphore.txt",
+      "body_len": 2187,
+      "article_words": 184,
+      "words_in_ocr": 184,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 6785,
+      "article_words": 418,
+      "words_in_ocr": 418,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_12a_Poem_The_Storm.txt",
+      "body_len": 499,
+      "article_words": 56,
+      "words_in_ocr": 55,
+      "pct_in_ocr": 0.9821,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "rondeau"
+      ]
+    },
+    {
+      "file": "February_Vol16_12b_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "body_len": 43844,
+      "article_words": 1819,
+      "words_in_ocr": 1819,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(6))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "February_Vol16_13_Poem_Winter_Grass_Lowry_Nelson.txt",
+      "body_len": 358,
+      "article_words": 40,
+      "words_in_ocr": 26,
+      "pct_in_ocr": 0.65,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(65%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "aspire",
+        "fruitfulness",
+        "hue",
+        "lend",
+        "lone",
+        "lyre",
+        "sere",
+        "somber",
+        "sparse",
+        "spears"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol16_No2_February_1929.txt",
+    "ocr_chars": 141922,
+    "ocr_unique_words": 4137,
+    "contents_xref": {
+      "entries_in_contents": 15,
+      "matched": 14,
+      "match_details": [
+        {
+          "title": "A Winter Scene on the Temple Block Frontispiece",
+          "page": null,
+          "file": "February_Vol16_01a_Article_Winter_Grass.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Winter Grass Lowry Nelson",
+          "page": 61,
+          "file": "February_Vol16_13_Poem_Winter_Grass_Lowry_Nelson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Tongues in Trees Maud Chegwidden",
+          "page": 62,
+          "file": "February_Vol16_01b_Article_Tongues_in_Trees.txt",
+          "score": 0.6
+        },
+        {
+          "title": "Responsibility of the State in Caring for Its Children Judge Hugo B. Anderson",
+          "page": 64,
+          "file": "February_Vol16_01c_Article_Responsibility_of_the_State_in_Caring_for_Its_Children.txt",
+          "score": 0.8
+        },
+        {
+          "title": "A Report of the Care of the Feeble-Minded in Utah Claire Stewart Boyer",
+          "page": 72,
+          "file": "February_Vol16_01d_Article_A_Report_of_the_Care_of_the_Feeble-Minded_in_Utah.txt",
+          "score": 1.0
+        },
+        {
+          "title": "An Appreciation of Mrs. Alpha M. Smoot",
+          "page": 78,
+          "file": "February_Vol16_01f_Article_An_Appreciation_of_Mrs_Alpha_M_Smoot.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—The Care of the Feeble-Minded Don B. Colton",
+          "page": 81,
+          "file": "February_Vol16_04_Editorial_EditorialThe_Care_of_the_Feeble-Minded_Don_B_Colton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Honor Banquet Tendered to President Clarissa Smith Williams Alpha Eldredge Smoot",
+          "page": 84,
+          "file": "February_Vol16_01h_Article_Honor_Banquet_Tendered_to_President_Clarissa_Smith_Williams.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Literature Lessons",
+          "page": 86,
+          "file": "February_Vol16_06_Article_Literature_Lessons.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Purple Velvet",
+          "page": 87,
+          "file": "February_Vol16_07_Article_Purple_Velvet.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Nature's Mirror",
+          "page": 88,
+          "file": "February_Vol16_08_Article_Natures_Mirror.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Pioneers Lois V. Hales",
+          "page": 89,
+          "file": "February_Vol16_09_Article_Pioneers_Lois_V_Hales.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Flashes from the Eternal Semaphore",
+          "page": 92,
+          "file": "February_Vol16_10_Article_Flashes_from_the_Eternal_Semaphore.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 94,
+          "file": "February_Vol16_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "The Storm Amy McClure",
+          "page": 96
+        }
+      ],
+      "extra_files": [
+        "February_Vol16_02_Article_A_Report_of_the_Care_of_the_Feeble-Minded_in_Utah_Claire_Stewart_Boyer.txt",
+        "February_Vol16_03_Article_An_Appreciation_of_Mrs_Alpha_M_Smoot.txt",
+        "February_Vol16_05_Article_Honor_Banquet_Tendered_to_President_Clarissa_Smith_Williams_Alpha_Eldredge.txt",
+        "February_Vol16_12a_Poem_The_Storm.txt",
+        "February_Vol16_12b_Guide_Lessons_Guide_Lessons_for_April.txt"
+      ]
+    }
+  }
+}

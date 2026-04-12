@@ -1,0 +1,27 @@
+{
+  "volume": 9,
+  "month": "March",
+  "year": 1922,
+  "timestamp": "20260315_120949",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "March_Vol9_01_Article_The_Questions_Answered_Vera_Lee_Kearl.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (731 chars)"
+    },
+    {
+      "file": "March_Vol9_02_Editorial_Editorial_Prayer.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "March_Vol9_16b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File only contains header, missing the actual lesson content"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "volume": 52,
+  "month": "August",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 13,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_08_14_The Home_Home_Thomas.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_08_15_The Home_A_Luce.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_08_18_The Home_Jennette_Quilts.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4114 chars removed)"
+    },
+    {
+      "file": "V52_08_19_Fict_Ring_Thulin.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V52_08_21_Lssn_Theology_Doxey.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_08_23_Lssn_VisiCthirnig_Faint.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_08_26_Lssn_Social_Christensen.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_08_30_Poem_The_Bowles.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

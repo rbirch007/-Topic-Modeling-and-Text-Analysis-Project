@@ -1,0 +1,60 @@
+{
+  "volume": 15,
+  "month": "April",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0493,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Memorial Theatre at Stratford on Avon",
+      "printed_page": 204,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in any of the four provided PDF page images (pages 209-212). The table of contents indicates it should be on page 204, but that page is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7495,
+        "output_tokens": 138,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    },
+    {
+      "title": "The Purchasing of the Hill Cumorah",
+      "printed_page": 205,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 209-212). The table of contents indicates it should be on page 205, but the provided images start at page 209, so the article would be on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7487,
+        "output_tokens": 147,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    }
+  ]
+}

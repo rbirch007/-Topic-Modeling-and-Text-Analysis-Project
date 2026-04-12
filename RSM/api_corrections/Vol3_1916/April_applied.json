@@ -1,0 +1,32 @@
+{
+  "volume": 3,
+  "month": "April",
+  "year": 1916,
+  "timestamp": "20260315_120936",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol3_06_Article_Mary_Ann's_Family_E._C._C..txt",
+      "action": "note",
+      "result": "INFO: File title shows 'Mary Ann's Family' but OCR shows 'Sary Ann's Family'"
+    },
+    {
+      "file": "April_Vol3_09_Home_Science_Home_Science_Department_Juliette_A._Hyde.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (572 chars added)"
+    },
+    {
+      "file": "April_Vol3_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol3_14_Editorial_Editorial_The_Childless_Ones.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

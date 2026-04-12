@@ -1,0 +1,227 @@
+{
+  "volume": 12,
+  "month": "January",
+  "year": 1925,
+  "total_merged": 2,
+  "total_splits": 14,
+  "total_cost": 0.3599,
+  "files": [
+    {
+      "source_file": "January_Vol12_06_Article_Vigilant_Loyalty_to_our_Standards_of_Government_Elder_George.txt",
+      "num_articles_found": 9,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Vigilant Loyalty to our Standards of Government",
+          "category": "Article",
+          "author": "Elder George Albert Smith",
+          "start_boundary": "Vigilant Loyalty to our Standards of Government",
+          "end_boundary": "throughout the ages of eternity.\" 14 RELIEF",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Spiritual Education",
+          "category": "Article",
+          "author": "Dr. Adam S. Bennion",
+          "start_boundary": "RELIEF SOCIETY MAGAZINE beyond their years,",
+          "end_boundary": "recipe for promoting spirituality, I think",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Editorial—The Gospel as a Guide",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "SPIRITUAL EDUCATION 15 I would mix",
+          "end_boundary": "bruises and sick cattle. Mother's Milk",
+          "confidence": "medium"
+        },
+        {
+          "order": "d",
+          "title": "Mother's Milk Clinic",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Mother's Milk Clinic Milk for babies",
+          "end_boundary": "devides it eaually among all comers.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "The Editor Abroad",
+          "category": "Article",
+          "author": "Alice L. Reynolds",
+          "start_boundary": "The Editor Abroad OUR VISIT TO",
+          "end_boundary": "friendly attitude toward the state and",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "A Perfect Ending of an Imperfect Year",
+          "category": "Article",
+          "author": "Eunice Iverson Gardner",
+          "start_boundary": "A Perfect Ending of an Imperfect",
+          "end_boundary": "in their happy little home. A",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "Importance of Diet for the Expectant Mother",
+          "category": "Article",
+          "author": "Jean Cox",
+          "start_boundary": "Importance of Diet for the Expectant",
+          "end_boundary": "ash and vitamine requirements will be",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Women in the Utah Legislature",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Women in the Utah Legislature MRS.",
+          "end_boundary": "Young: Mrs. Lotta P. Baxter.",
+          "confidence": "high",
+          "start_match_words": 5
+        },
+        {
+          "order": "i",
+          "title": "Guide Lessons for March",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for March LESSON I",
+          "end_boundary": "Salt Lake City Utah Mention Relief",
+          "confidence": "high",
+          "start_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "VIGILANT LOYALTY",
+        "SPIRITUAL EDUCATION",
+        "EDITORIAL",
+        "GUIDE LESSONS FOR MARCH",
+        "DIET FOR EXPECTANT MOTHERS",
+        "PERFECT ENDING OF AN IMPERFECT DAY"
+      ],
+      "notes": "This file contains 9 separate articles that were merged together. The boundaries are clearly identifiable by title changes and author bylines. Some running headers are embedded throughout the text and should be stripped during processing.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': end_boundary not found",
+        "Split 'i': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 26827,
+      "tier": 1,
+      "pdf_pages": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "api_usage": {
+        "input_tokens": 56720,
+        "output_tokens": 1049,
+        "cost": 0.1859
+      }
+    },
+    {
+      "source_file": "January_Vol12_15_Guide_Lessons_Guide_Lessons_for_March.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Adamic Dispensation",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MARCH 41 6. The First Great",
+          "end_boundary": "death of Adam? (See Doc. And Cov., Sec. 107:53).",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Consumption of Milk",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in March) Work and Business",
+          "end_boundary": "3. Pasteurized milk considered safest.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Emily Dickinson",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in March) Literature EMILY DICKINSON",
+          "end_boundary": "Heart From Breaking,\" and \"Chartless?\"",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - The Unstable Family",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in March) Social Service The",
+          "end_boundary": "are removed from homes because of neglect?",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Supplement to October Theology Lesson and Outline of Guide Lessons for 1925",
+          "category": "Guide_Lessons",
+          "author": "George H. Brimhall",
+          "start_boundary": "Supplement to October Theology Lesson Published in August Magazine",
+          "end_boundary": "One Piece Dress, Blouse and Skirt. Like Cut.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains 4 main lesson sections (Theology, Work/Business, Literature, Social Service) plus supplementary content including a theology supplement and outline for 1925. Each lesson has distinct subject matter and question sections that clearly delineate the boundaries.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16835,
+      "tier": 1,
+      "pdf_pages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "api_usage": {
+        "input_tokens": 54293,
+        "output_tokens": 739,
+        "cost": 0.174
+      }
+    }
+  ]
+}

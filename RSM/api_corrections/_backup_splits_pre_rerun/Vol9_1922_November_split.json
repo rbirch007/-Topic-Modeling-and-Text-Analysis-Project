@@ -1,0 +1,79 @@
+{
+  "volume": 9,
+  "month": "November",
+  "year": 1922,
+  "total_merged": 2,
+  "total_splits": 3,
+  "total_cost": 0.2048,
+  "files": [
+    {
+      "source_file": "November_Vol9_04_Article_The_Temple_Block_Mission_Levi_Edgar_Young.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Temple Block Mission",
+          "category": "Article",
+          "author": "Levi Edgar Young",
+          "start_boundary": "The Temple Block Mission Levi Edgar Young The Temple",
+          "end_boundary": "upbuilding forces that lead back to the throne of God.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE TEMPLE BLOCK MISSION"
+      ],
+      "notes": "This file contains only one complete article about the Temple Block Mission. The running headers '560. RELIEF SOCIETY MAGAZINE' and 'THE TEMPLE BLOCK MISSION 561' appear embedded in the text and should be stripped. The article is complete and matches the contents listing.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10092,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32798,
+        "output_tokens": 254,
+        "cost": 0.1022
+      }
+    },
+    {
+      "source_file": "November_Vol9_18c_Guide_Lessons_LESSON_III_-_Literature_-_Colonial_Period_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON III Literature - Colonial Period",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature. _ (Third week in January)",
+          "end_boundary": "have some children dressed in Colonial costumes; it will add to the effect.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON IV Social Service - Later Adolescence",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth week in January)",
+          "end_boundary": "Give the advantages of home parties as a means of providing proper association.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two complete lesson sections from the Guide Lessons. Lesson III focuses on American Literature's Colonial Period, while Lesson IV covers Social Service topics related to Later Adolescence. Both lessons include questions and problems sections. There appears to be incomplete text at the end suggesting more content follows.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8109,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32416,
+        "output_tokens": 354,
+        "cost": 0.1026
+      }
+    }
+  ]
+}

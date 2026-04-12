@@ -1,0 +1,37 @@
+{
+  "volume": 54,
+  "month": "October",
+  "year": 1967,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V54_10_01_Fict_Throw_Chapter.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "The article file contains only a placeholder note about needing re-extraction, but the page image shows a complete story titled 'Christmas Begins With a Tree' by Marilyn McMeen Miller",
+      "action": "replace_content",
+      "text": "Christmas Begins With a Tree\n\nMarilyn McMeen Miller\n\nAfter the last string of children had skipped out into the cloak hall, gathering boots and mittens on the final strains of \"Jolly Old Saint Nicolas,\" and the tinsel and nutshells and ribbon from the party had been swept into the baskets, everything seemed to be desperately quiet. As Miss Gold fumbled into her hat and coat, she felt tears stinging her eyes. She imagined these children going to their homes and she ached to follow them. But she saw herself cramped in her musty apartment correcting notebooks —both from her own classes and from the classes of Miss Pool who had been ill for so many days.\n\nMore at Christmas than at other times, Miss Gold reflected, life had seemed to pass her by. A boy she once loved had been killed in an automobile accident. Through the years no one else had seemed to want her for his wife. Last year her mother had died, joining her father, who had passed away many years before.\n\nMiss Gold pulled on her gloves and jostled the stacks of papers under her arms. If only she had not promised Roberta Pool she would help her with the tedious notebooks. It seemed an extra burden just when her heart should be light and beating in time with \"Jingle Bells\" and \"Deck the Halls With Boughs of Holly.\"\n\nFrom the second story window of her apartment, Miss Gold saw the lights of the city sparkling far off over the hill. She stamped off her galoshes, turned up the radiator, and rubbed her hands.\n\nThere was surely some way to make Christmas possible to bear this year. Finding it was a problem. She might take in a show—she might dine at the Lantern, her favorite place to eat. But then she was tired of always going alone. There was her new ward. She recalled they were planning some kind of MIA party. But there were no single people her age. She was almost forty. No one was really interested in a wornout schoolteacher. She shuddered to realize that the years had crept up on her this way. She brushed a shock of hair from her eyes and felt the dry skin of her forehead. Suddenly, her bones felt weak and tired, and she had tears in her eyes again. And the little apartment with not a Christmas light or decorated sprig in it, whirled in her consciousness.\n\nThere must be some way she could begin! Where did other lonely people begin? There was at least one thing she could do. She could at least get a tree—even a little tree like the one her class had given to the needy family. Even if only for herself, it would help.\n\nTomorrow was the day before Christmas, and most of the trees would be gone. There would probably be one or two straggly ones left, but size or beauty did not matter. Tonight she would see how many of her reports she could get done and then tomorrow she would get a tree. And a sudden thought warmed her even in her bitterness. Perhaps she could bake some cookies and take them and the notebooks and visit Miss Pool. She did not care much for the thin, wiry teacher who was so stern, and was avoided by many of the teachers; but it was something she could do for someone who needed her. Anyway, it was a thought.\n\nAfter a light bowl of soup, Miss Gold sat grimly at her sitting room table and mechanically forced herself through the piles of words and pictures that lay before her. \"And some people think a teacher is lucky because she gets vacations,\" she muttered once, and just then the telephone rang.\n\n\"Hello, Sister Gold?\"\n\n\"Yes,\" she answered. It was someone from the ward.\n\n\"I know you don't get to come to Relief Society because you teach, but still we thought you wouldn't mind helping us out for the ward Christmas Eve night by bringing some cookies. Would you mind?\" the voice on the end of the line seemed very friendly.\n\n\"No. I'd be happy to help you.\" Miss Gold caught her own voice sounding grateful. \"I was planning to make some cookies anyway. I'll just bake extra. Come to the party?\" She hesitated. \"Well, what time does it start? I was planning to do something else. I guess I could do it first, and come to the ward later. All right. I'll bring the cookies myself.\"\n\nThis first sign of human life warmed her. At least somebody cared that much, she thought.\n\nCorrecting the notebooks was hard work. Her back ached and her hand was cramped. But this time she did not want to quit. She wanted to have a glorious Christmas Eve, knowing that Miss Pool's work, at least, was out of the way. And so, in the early hours of the morning, she finally closed the reports, laid down her red pencils, and breathed a sigh of relief. She was dead tired. But perhaps it had been worth it, even though she suspected the wiry old lady might not appreciate it.\n\nIt was a little late in the morning when Miss Gold finally awakened without her alarm. During the night there had been a little skiff of snow, but now the sun was shining. She would be able to walk to get the tree; it was",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V54_10_22_Poem_Weapon_Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains completely wrong content - shows family story and prayer poem instead of the weapon poem by Lois M. Anderson",
+      "action": "replace_content",
+      "text": "WEAPON\nLois M. Anderson\n\nLove is the only weapon to date,\nThat can silence the guns\nOf human hate!",
+      "confidence": "high",
+      "page_verified": true
+    },
+    {
+      "file": "V54_10_25_Poem_Burnished_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous article 'At the End of a Pilgrimage' that needs to be trimmed",
+      "action": "trim_start",
+      "text": "WEAPON Lois M. Anderson Love is the only weapon to date, That can silence the guns Of human hate!",
+      "confidence": "high",
+      "page_verified": true
+    }
+  ]
+}

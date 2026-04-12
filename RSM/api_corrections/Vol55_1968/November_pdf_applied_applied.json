@@ -1,0 +1,32 @@
+{
+  "volume": 55,
+  "month": "November",
+  "year": 1968,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_11_06_Poem_Cumorah_Miller.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 7% OCR coverage"
+    },
+    {
+      "file": "V55_11_16_GenFt_Notes.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1399 chars)"
+    },
+    {
+      "file": "V55_11_18_Poem_Contrasts_Terry.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 13% OCR coverage"
+    },
+    {
+      "file": "V55_11_39_Poem_Choice_Fairbairn.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (34 chars removed)"
+    }
+  ]
+}

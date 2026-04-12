@@ -1,0 +1,28 @@
+{
+  "volume": 52,
+  "month": "May",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_05_07_SpFt_Teaching_Walch.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts in middle of conversation, missing the opening about the phone ringing and setup",
+      "action": "trim_start",
+      "text": "ParENTS, could this conversation have taken place in your home?",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V52_05_17_Fict_Abide_Hansen.txt",
+      "issue_type": "bleed_end",
+      "description": "Article actually ends correctly at 'The Hunts and the Ardens' - no bleed content found",
+      "action": "note",
+      "text": "The article file correctly ends where the story concludes on page 351. The ending 'The meeting had already commenced. The Hunts and the Ardens' matches exactly what is shown in the page image.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    }
+  ]
+}

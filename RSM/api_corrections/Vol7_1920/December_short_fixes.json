@@ -1,0 +1,40 @@
+{
+  "volume": 7,
+  "month": "December",
+  "year": 1920,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0194,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol7_07b_Guide_Lessons_Guide_Lesson_Suggestions_b.txt",
+      "status": "delete",
+      "current_chars": 42,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header fragment 'Lesson II. WORK AND BUSINESS. (Second Week' with no actual content. The PDF shows this is part of the Guide Lessons section but this specific lesson content is not visible in the provided pages. This appears to be a header artifact that should be deleted.",
+      "api_usage": {
+        "input_tokens": 5605,
+        "output_tokens": 170,
+        "cost": 0.0194
+      },
+      "pdf_pages": [
+        53,
+        54,
+        55,
+        56
+      ]
+    }
+  ]
+}

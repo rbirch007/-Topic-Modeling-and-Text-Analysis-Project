@@ -1,0 +1,18 @@
+{
+  "volume": 57,
+  "month": "April",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with severely corrupted OCR text that doesn't match the readable poem content visible on the page",
+      "action": "note",
+      "text": "The article file contains heavily corrupted OCR text from the start. The page shows a poem 'Most Beautiful' by Christie Lund Coles, but the current file text is too garbled to determine the exact missing beginning portion from this image quality.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    }
+  ]
+}

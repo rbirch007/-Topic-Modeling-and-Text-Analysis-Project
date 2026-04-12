@@ -1,0 +1,32 @@
+{
+  "volume": 10,
+  "month": "June",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "June_Vol10_01_Frontispiece_The_Sacred_Falls_of_Kaliuwaa,_Hawaii_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol10_05_Editorial_Editorial,_The_Divinity_of_Jesus_Christ.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5275 chars removed)"
+    },
+    {
+      "file": "June_Vol10_06_Article_Teachers'_Topic_for_July.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol10_07_Conventions_Relief_Society_Delegates_Attend_Conventions.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

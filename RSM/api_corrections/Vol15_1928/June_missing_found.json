@@ -1,0 +1,60 @@
+{
+  "volume": 15,
+  "month": "June",
+  "year": 1928,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0501,
+  "stats": {
+    "found": 1,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Frontispiece",
+      "printed_page": null,
+      "status": "found",
+      "complete_text": "Prayer\n\nBy Carrie Tanner\n\nA prayer is soul-sent wish, e'en whispered still,\nBy mystic power borne through vaulted blue\nTo that bright realm where only prayers most true\nE'er reach the Majesty of sacred will.\nHe grants—or stays with purpose kind, until\nIn justice great, or mercy sweet, He heeds\nOur humble wish and heavy mortal needs\nWith gracious love, and earthly measures fill\nTo overflow. How meager the estate\nOf those who ne'er this sweetest joy doth know,\nWhose hearts clutch fast grim avarice and hate,\nDisdaining Him from whom all blessings flow.\nO prayer that gives the soul a peace divine!\nO prayer, dear privilege great, the gift is Thine!",
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": "Carrie Tanner",
+      "confidence": "high",
+      "notes": "Found the frontispiece poem on page 4 of the PDF images. It's a 14-line poem about prayer by Carrie Tanner.",
+      "api_usage": {
+        "input_tokens": 7223,
+        "output_tokens": 325,
+        "cost": 0.0265
+      },
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "title": "Pictures",
+      "printed_page": 350,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 345-348, but the Pictures article is listed on page 350 in the table of contents. The images do not contain page 350 where this article would be located.",
+      "api_usage": {
+        "input_tokens": 7213,
+        "output_tokens": 132,
+        "cost": 0.0236
+      },
+      "pdf_pages": [
+        345,
+        346,
+        347,
+        348
+      ]
+    }
+  ]
+}

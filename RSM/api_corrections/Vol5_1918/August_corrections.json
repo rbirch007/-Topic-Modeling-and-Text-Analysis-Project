@@ -1,0 +1,204 @@
+{
+  "volume": 5,
+  "month": "August",
+  "year": 1918,
+  "total_files_checked": 16,
+  "files_correct": [
+    "August_Vol5_04_Poetry_Little_Blue_Flowers_(Poem)_Maud_Baggarley.txt",
+    "August_Vol5_07_Article_A_Prayer_for_the_Nations_Annie_G._Lauritzen.txt",
+    "August_Vol5_08_Article_Child_Welfare_Problems_Lucy_Wright_Snow.txt",
+    "August_Vol5_09_Home_Entertainments_Home_Entertainments.txt",
+    "August_Vol5_10_Patriotic_Dept_Patriotic_Department_Clarissa_S._Williams.txt",
+    "August_Vol5_11_Home_Economics_Home_Economics_Department_Janette_A._Hyde.txt",
+    "August_Vol5_13_Current_Topics_Current_Topics_Jas._H._Anderson.txt",
+    "August_Vol5_14_Article_Unusual_Mothers.txt"
+  ],
+  "corrections": [
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with advertisement text that should be in Misc file",
+      "action": "trim_start",
+      "text": "CONSUMERS WHOLESALE GROCERY COMPANY Ogden, Utah This Faulkner Chart represents",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the beginning of the next article 'Jerusalem Restored'",
+      "action": "trim_end",
+      "text": "44, A passageway around temple for the priests.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_02_Frontispiece_The_Temple_in_Jerusalem_Frontispiece_Jerusalem_Restored_Jas..txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'The Temple in Jerusalem' article instead of frontispiece content",
+      "action": "replace_content",
+      "text": "The Temple in Jerusalem. Susa Young Gates. In connection with the wonderful developments now going forward in Jerusalem our people are intensely interested in the rebuilding of Solomon's temple. As a matter of fact no one knows at the present day the complete details of that once glorious structure. Details are given in the Bible with considerable clearness in I and II Chronicles and I Kings. But the Temple was destroyed by Nebuchadnezzar in 586 B. C., and rebuilt 70 years later through Cyrus and Darius who sent Ezra and Nehemiah to rebuild their revered temple. This was in the year B. C. 522. Again the temple was destroyed by Antiochus, about B. C. 162, and again rebuilt by Herod in a far more elaborate fashion, its completion scarcely accomplished during the Savior's life. Forty years after the Savior's crucifixion, the whole structure was destroyed by Titus, \"Not one stone left upon another.\" In later centuries the Gentile Turk built his mosque upon the sacred site, which remains to this day. Solomon's Temple crowned the highest point of Mt. Moriah and was a very small building compared with the temples in which the Latter-day Saints worship. Jerusalem itself is built upon hills, and Mt. Moriah was a hilly place across the gulch from the old city of Jerusalem where David offered sacrifices after he saw the angel of the Lord standing upon the sacred rock. This spot of ground belonged to one of the original owners of Jerusalem, an old Jebusite named Araunah who gave David the holy site over which the angel had lingered. This Jebusite chieftain not only offered David the land as a free gift but added oxen and implements with which to offer a burnt offering. David refused to accept the free gift and paid 600 shekels of gold for the ground and 50 shekels for the oxen. He built an altar to Jehovah on the rock where the angel had rested and offered burnt offerings and peace offerings and then dedicated the spot to Jehovah, for it was here he saw the angel of the Lord. The rock upon which the offering was made is considered the most holy spot in all Jerusalem and the rock is about the only remnant left of the original temple. Upon this rock in later centuries the Turks have built one of their own sacred houses named The Mosque of Omar. (See cut.) This Mosque is lavishly decorated and a view of the rock within the interior of the Mosque we also present to our readers. The rock measures 40 by 50 feet and presents an oblong, uneven surface surrounded by a railing",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "August_Vol5_05_Article_Jerusalem,_the_City_of_Cities._A_Romance_of_Today_Lula_Green.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and is missing the signature line",
+      "action": "append",
+      "text": "Ever your own, \"Little Bird Girl Who is Afraid of Cats.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_06_Article_Apostrophe_to_Jerusalem_Eliza_R._Snow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with the signature line from the previous article",
+      "action": "trim_start",
+      "text": "Apostrophe to Jerusalem.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of a number",
+      "action": "append",
+      "text": "000",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial header information that appears to be formatting",
+      "action": "trim_start",
+      "text": "THE RETURN OF THE JEWS.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Guide Lessons.' which belongs to the next section",
+      "action": "trim_end",
+      "text": "God speed the happy day!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_15c_Guide_Lessons_Lesson_III_-_Genealogy.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson titles that should be in the previous file",
+      "action": "trim_start",
+      "text": "Realizing the fact that some of our sisters have felt discouraged",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_16_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence",
+      "action": "append",
+      "text": "Amy Brown Lyman, General Secretary, 28 Bishop's Building, Salt Lake City, Utah.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Jerusalem Restored Jas. H. Anderson",
+      "expected_page": 425,
+      "status": "merged_with_another",
+      "merged_into": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues where articles are merged or split incorrectly. The frontispiece file appears to contain the wrong content entirely. Some files end mid-sentence indicating incomplete extraction. Advertisement content is mixed with article content in some files.",
+  "validated_corrections": [
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with advertisement text that should be in Misc file",
+      "action": "trim_start",
+      "text": "CONSUMERS WHOLESALE GROCERY COMPANY Ogden, Utah This Faulkner Chart represents",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the beginning of the next article 'Jerusalem Restored'",
+      "action": "trim_end",
+      "text": "44, A passageway around temple for the priests.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_05_Article_Jerusalem,_the_City_of_Cities._A_Romance_of_Today_Lula_Green.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and is missing the signature line",
+      "action": "append",
+      "text": "Ever your own, \"Little Bird Girl Who is Afraid of Cats.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_06_Article_Apostrophe_to_Jerusalem_Eliza_R._Snow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with the signature line from the previous article",
+      "action": "trim_start",
+      "text": "Apostrophe to Jerusalem.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial header information that appears to be formatting",
+      "action": "trim_start",
+      "text": "THE RETURN OF THE JEWS.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'Guide Lessons.' which belongs to the next section",
+      "action": "trim_end",
+      "text": "God speed the happy day!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_15c_Guide_Lessons_Lesson_III_-_Genealogy.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with lesson titles that should be in the previous file",
+      "action": "trim_start",
+      "text": "Realizing the fact that some of our sisters have felt discouraged",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "August_Vol5_16_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence",
+      "action": "append",
+      "text": "Amy Brown Lyman, General Secretary, 28 Bishop's Building, Salt Lake City, Utah.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "August_Vol5_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence in the middle of a number",
+      "action": "append",
+      "text": "000",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

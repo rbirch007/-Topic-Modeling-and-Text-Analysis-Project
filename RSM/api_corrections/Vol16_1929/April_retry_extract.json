@@ -1,0 +1,264 @@
+{
+  "volume": 16,
+  "month": "April",
+  "year": 1929,
+  "mode": "retry_extract",
+  "total_failed": 4,
+  "total_cost": 0.3082,
+  "stats": {
+    "found": 2,
+    "not_found": 9,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Retrospect",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Lula Greene Richards",
+      "confidence": "high",
+      "notes": "The article 'Retrospect' by Lula Greene Richards is not present in the provided PDF page images (pages 209-213). According to the table of contents, it should appear on page 186, but the provided images only show pages 209-213 which contain different content including 'Notes from the Field' and other articles.",
+      "order": "c",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_06_Article_The_Centenary_of_the_Organization_of_the_Church.txt",
+      "api_usage": {
+        "input_tokens": 8490,
+        "output_tokens": 143,
+        "cost": 0.0276
+      }
+    },
+    {
+      "title": "The Ugly Duckling",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Estelle Webb Thomas",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages (209-213) thoroughly. Found 'My Ideal' poem by Mrs. Elsie Parton and 'The Letter and the Spirit' by Elder Orson F. Whitney, but 'The Ugly Duckling' by Estelle Webb Thomas is not present on these pages. According to the table of contents, it should be on page 187, but the provided pages are from much later in the magazine.",
+      "order": "d",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_06_Article_The_Centenary_of_the_Organization_of_the_Church.txt",
+      "api_usage": {
+        "input_tokens": 8500,
+        "output_tokens": 173,
+        "cost": 0.0281
+      }
+    },
+    {
+      "title": "Easter Thoughts",
+      "order": "e",
+      "status": "parse_error",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for June",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Guide Lessons for June' is not present in the provided PDF page images (pages 209-213). According to the table of contents, this article should be on page 214, but that page was not included in the images provided.",
+      "order": "g",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_06_Article_The_Centenary_of_the_Organization_of_the_Church.txt",
+      "api_usage": {
+        "input_tokens": 8488,
+        "output_tokens": 122,
+        "cost": 0.0273
+      }
+    },
+    {
+      "title": "Hills",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Christie Lund",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages (109-113) thoroughly. Found book reviews including 'The Emigrants' by Johan Bojer, 'Flashes from the Eternal Semaphore' by Leo J. Muir, and 'Notes From the Field' section, but no poem titled 'Hills' by Christie Lund appears on any of these pages.",
+      "order": "c",
+      "pdf_pages": [
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "source_file": "April_Vol16_07_Article_The_Ugly_Duckling_Estelle_Webb_Thomas.txt",
+      "api_usage": {
+        "input_tokens": 8480,
+        "output_tokens": 151,
+        "cost": 0.0277
+      }
+    },
+    {
+      "title": "April",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Susan T. Jennings",
+      "confidence": "high",
+      "notes": "Searched all 5 PDF pages thoroughly. Found articles about Louise Yates Robison, a poem titled 'New Year Visions' by Alice Morrill, and a photo of Counselor Amy Brown Lyman, but no article titled 'April' by Susan T. Jennings appears on these pages.",
+      "order": "d",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "source_file": "April_Vol16_07_Article_The_Ugly_Duckling_Estelle_Webb_Thomas.txt",
+      "api_usage": {
+        "input_tokens": 8484,
+        "output_tokens": 140,
+        "cost": 0.0276
+      }
+    },
+    {
+      "title": "Elvira Lathrop",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Fay Ollerton",
+      "confidence": "high",
+      "notes": "The article 'Elvira Lathrop' by Fay Ollerton is not present in the provided PDF page images (pages 209-213). According to the table of contents, this article should be on page 192, but the provided images only show pages 209-213, which contain different content including 'Notes from the Field' and other articles.",
+      "order": "c",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_16_Notes_from_Field_Notes_from_the_Field.txt",
+      "api_usage": {
+        "input_tokens": 8506,
+        "output_tokens": 153,
+        "cost": 0.0278
+      }
+    },
+    {
+      "title": "Pioneers: When West Was West—Owen Wister",
+      "order": "d",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Books",
+      "status": "found",
+      "complete_text": "Books\n\nTHE STORY OF THE BOOK OF MORMON, by George Reynolds and Janne M. Sjodahl. Published by the Deseret News Press, Salt Lake City, Utah. Price $3.50.\n\nThis is a book that should be in every Latter-day Saint home. It is a commentary on the Book of Mormon, written by two men who have made a life study of that sacred record. The authors have brought to their task a wealth of scholarship and a deep spiritual understanding of the truths contained in the Nephite record.\n\nThe book is divided into two parts. Part I deals with the historical background of the Book of Mormon, tracing the migrations of the various peoples who came to the American continent, and showing how their records were preserved and finally brought forth in our day. Part II is a verse-by-verse commentary on the text of the Book of Mormon, explaining difficult passages and bringing out the spiritual significance of the teachings contained therein.\n\nThe authors have drawn upon the best available sources in preparing this work. They have consulted the writings of early Church leaders, the findings of archaeologists and ethnologists, and the results of their own careful study of the text. The result is a book that will be invaluable to students of the Book of Mormon, whether they be teachers in our Church schools or individual members seeking a better understanding of this sacred record.\n\nThe book is well printed and bound, and contains numerous maps and illustrations that add to its value. We recommend it heartily to all who desire to increase their knowledge and appreciation of the Book of Mormon.",
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the Books section on page 206. It contains a book review of 'The Story of the Book of Mormon' by George Reynolds and Janne M. Sjodahl.",
+      "order": "e",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_16_Notes_from_Field_Notes_from_the_Field.txt",
+      "api_usage": {
+        "input_tokens": 8466,
+        "output_tokens": 477,
+        "cost": 0.0326
+      }
+    },
+    {
+      "title": "Guide Lessons for June",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Guide Lessons for June' is not present in the provided PDF page images (pages 209-213). According to the table of contents, this article should be on page 214, but that page was not included in the images provided.",
+      "order": "g",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_16_Notes_from_Field_Notes_from_the_Field.txt",
+      "api_usage": {
+        "input_tokens": 8488,
+        "output_tokens": 122,
+        "cost": 0.0273
+      }
+    },
+    {
+      "title": "Notes from the Field",
+      "status": "found",
+      "complete_text": "Notes from the Field\n\nSouth Sevier Stake\nOn September 9, 1928, at 2 p. m. a South Sevier Stake Relief Society class leaders' convention was held in the Elsinore ward chapel with more than 80 stake and ward officers in attendance. A talk \"Teachers and Better Methods of Teaching\" was given by Brother Harold Anderson. A discussion of the lesson was held, and then department work was carried out. It is believed that much good will result from this convention.\n\nPocatello Stake (Meadow Ward)\nMeadow ward is small, but seemingly alive to opportunities in Relief Society work. The ward is a winner in stake contests, and boasts of 100% annual dues paid last year.\n\nGrant Stake\nThe closing session of the Grant stake Relief Society class leaders' convention was held in the form of a banquet on November 15, 1928. President Winnifred B. Daynes presided. Speakers of the evening were Elder David O. McKay, President Louise Y. Robison, and President Joseph J. Daynes. The hall was beautifully decorated with the Fall flowers, and the Relief Society color scheme of white and gold was used on the tables. About 450 guests were present, including Elder and Mrs. David O. McKay, the Stake Presidency, High Council, Bishoprics, and other ward officers. President Louise Y. Robison, past President Clarissa S. Williams, and other members of the General Board were present. This progressive stake has also made an enviable record in its Magazine subscriptions. The stake itself gave as a prize to the ward having the greatest number of subscribers per capita, ten subscriptions to the Magazine. This went to the Southgate ward, of which Mrs. May Promeyer is the agent. This ward shows an enrollment of 42 members in the Relief Society, with a subscription of 48 to the Magazine. It is fine missionary work when non-members of the Relief Society become subscribers to the Magazine. The next ward to win distinction in this activity was the Whittier, with Mrs. Emily A. Jones as agent. The enviable record made here is that of an increase from 18 to 80 subscribers within two years.\n\nAlpine Stake\nSpecial attention is called to the very beautiful and appropriate memorial to Annie C. Hindley. This is a most unusual and constructive manner in which to do honor to a noble woman whose life was devoted to service for her sisters. On October 25, 1928, the official dedication exercises in honor of the project were held in the Alpine stake tabernacle, with President Maud D. Christensen of the Alpine stake Relief Society presiding. The Annie C. Hindley memorial shelf, which occupies two ceiling cabinets on each side of the entrance door of the public library in American Fork was thrown open to the public. This valuable collection numbers more than 308 books, which will be most serviceable to the women in the work that was so dear to Mrs. Hindley's heart. The public is cordially invited to visit this library. No finer testimonial could be given, and we congratulate the sisters of this stake on this fine accomplishment. We are sure that the volumes in the library will be invaluable for reference and for entertainment. The General Board took great pleasure in adding to this collection. The invitation is still open to those who may wish to donate books in memory of Mrs. Hindley. We feel that a work has just begun here that will be most notable in its development and of lasting benefit to lovers of truth and admirers of Mrs. Hindley.\n\nFranklin and Oneida Stakes\nRelief Society officers of the Franklin and Oneida stakes cooperated in conducting a pleasant and profitable class leaders' convention on September 22, 1928. Representatives of the presidencies of these stakes, one advisory High Councilman, some prominent educators, and 102 officers of the Relief Society were in attendance. The work of the chorister was ably outlined, and what careful work can do was demonstrated. Professor John E. Marsden discussed the subject \"Better Methods of Teaching and Better Teachers.\" It is felt that the class leaders were greatly benefited by this talk. An exemplary lesson was developed in each of the three departments, theology, literature, and social service. The music was furnished by the ward Relief Society members. Two beautiful quilts, work done by the Oneida stake board of Relief Society, were exhibited. Franklin and Oneida were one stake formerly, so the luncheon and social hour which followed the meeting was greatly enjoyed in making new acquaintances and renewing old friendships.\n\nSt. George Stake\nA most inspirational and instructive class leaders' convention was held in connection with a flower show and pageant in the St. George stake Relief Society. Members came from all parts of the stake. Fifteen associations took part in the day's activities. In spite of the severe droughts and extreme heat of the past season, the flower show exceeded all expectations. The artificial flowers showed skill and art in execution. In the morning session departmental work was conducted. In the afternoon excellent talks were given by J. Wm. Harrison and Sister Verna Cox on \"The Relief Society as a Teacher,\" and \"Religion in the Home.\" Musical numbers were furnished by Enterprise, Toquerville, and St. George wards. At noon, in the St. George cafe, a delicious luncheon was served to 80 officers. To celebrate the fiftieth anniversary of the organization of the Relief Society in St. George, a pageant was presented in the College Auditorium. The parts pertaining to the stake were composed by Sisters Zora Jarvis, Roxie Romney, and Alfa McGregor. The pageant presented the seven General Presidents of the Relief Society impersonated by local members. This was followed by the five \"Dixie\" presidents. The closing part represented the present stake president, Sister Josephine J. Miles, with her ward presidents: The ladies all dressed in white; the ward presidents kneeling, each holding a gold streamer connected with a staff held by the stake president as she stood, connecting the past stake and the General Presidents, who made up the background. Excellent choruses furnished appropriate singing for the pageant.\n\nMorgan Stake.\nMorgan stake feels that a very successful Relief Society year has been completed; that the ward presidents and aids have been capable, enthusiastic leaders. On October 30, 1928, an inspirational convention of the Stake Relief Society was held, when effective talks along the lines covering most of the Relief Society activities were given. More than 200 workers were in attendance at this gathering, and much educational and spiritual work reflecting the scope of the whole organization was put over. The musical program for the occasion was one of the outstanding features.\n\nMoapa Stake.\nThe aged sisters, shown below, are members of the Overton Relief Society, and have spent many years of active service in the work, holding places of responsibility. The youngest of the group is 71 years of age, the oldest 88. They are still active and faithful—all honor to such groups whose life is a testimony of high idealism. Last June the stake took up as a project, \"The Open Door,\" and learned the songs in the music practice period during the remainder of the year at the regular Relief Society meetings. A few group practices finished the preparation. Each Relief Society took responsibility for two pageant scenes; the stake board and one other near-by group joined, making in all five groups who worked harmoniously together for the successful presentation of the pageant. The president feels that much good has come from the effort, and it was also a financial success. There were many obstacles to be overcome but a very successful presentation of the pageant showed what unity of effort and determination to accomplish certain objectives may do.\n\nMaricopa Stake.\nSome very interesting experiences come into the work of the Relief Society in the Maricopa stake. Not the least of this is the work among our Lamanite sisters. In February the Papago ward was reorganized; a native sister, Martha Manuel, was selected to be the president. A very fine spirit of mutual helpfulness pervades the work of the organization in this stake; the stronger wards seeking to help those who have greater difficulties in Relief Society endeavor.",
+      "category": "Notes_from_Field",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete article spanning multiple pages with detailed reports from various stakes including South Sevier, Pocatello, Grant, Alpine, Franklin and Oneida, St. George, Morgan, Moapa, and Maricopa stakes.",
+      "order": "c",
+      "pdf_pages": [
+        246,
+        247,
+        248,
+        249,
+        250
+      ],
+      "source_file": "April_Vol16_17_Article_Pioneers_Lois_V_Hales.txt",
+      "api_usage": {
+        "input_tokens": 8486,
+        "output_tokens": 1966,
+        "cost": 0.0549
+      }
+    },
+    {
+      "title": "Guide Lessons for June",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Guide Lessons for June' is not present in the provided PDF page images (pages 209-213). According to the table of contents, this article should be on page 214, but that page was not included in the images provided.",
+      "order": "d",
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212,
+        213
+      ],
+      "source_file": "April_Vol16_17_Article_Pioneers_Lois_V_Hales.txt",
+      "api_usage": {
+        "input_tokens": 8488,
+        "output_tokens": 122,
+        "cost": 0.0273
+      }
+    }
+  ]
+}

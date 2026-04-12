@@ -1,0 +1,62 @@
+{
+  "volume": 56,
+  "month": "July",
+  "year": 1969,
+  "timestamp": "20260313_235325",
+  "dry_run": false,
+  "applied": 9,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V56_07_01_GenFt_Social_Part.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (149 chars)"
+    },
+    {
+      "file": "V56_07_02_Fict_Heart_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (129 chars)"
+    },
+    {
+      "file": "V56_07_03_Poem_North.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (75 chars)"
+    },
+    {
+      "file": "V56_07_04_Frnt_By_Hazel.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V56_07_05_SpFt_How_I_Doxey.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (163 chars)"
+    },
+    {
+      "file": "V56_07_08_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V56_07_10_Fict_Missionaries_Ahlma.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (98 chars)"
+    },
+    {
+      "file": "V56_07_16_GenFt_A_Brace_Jones.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (73 chars)"
+    },
+    {
+      "file": "V56_07_19_Fict_Just_a_Hansen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (43 chars)"
+    },
+    {
+      "file": "V56_07_20_GenFt_Editorial_Madsen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (98 chars)"
+    }
+  ]
+}

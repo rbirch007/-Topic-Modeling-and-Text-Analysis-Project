@@ -1,0 +1,295 @@
+{
+  "volume": 53,
+  "month": "June",
+  "year": 1966,
+  "total_files_checked": 41,
+  "files_correct": [
+    "V53_06_02_Frnt_My_Coles.txt",
+    "V53_06_03_GenFt_From_Near_and_Far.txt",
+    "V53_06_06_Poem_Lift_Bowles.txt",
+    "V53_06_16_Poem_Garden_Wangsgaard.txt",
+    "V53_06_17_The Home_Holiday_Bazaar.txt",
+    "V53_06_18_The Home_Kitchen.txt",
+    "V53_06_19_The Home_Colorful_Bazaar.txt",
+    "V53_06_20_The Home_German_Sansom.txt",
+    "V53_06_21_The Home_Fun_for_Willardson.txt",
+    "V53_06_22_The Home_The_Breinholt.txt",
+    "V53_06_23_The Home_The_Men.txt",
+    "V53_06_32_Poem_Summer_Gabbott.txt",
+    "V53_06_35_Poem_The_McAllister.txt",
+    "V53_06_36_Poem_To_a_Brown.txt",
+    "V53_06_37_Poem_Absolutes_Fairbair.txt",
+    "V53_06_38_Poem_Wasted_Rothe.txt",
+    "V53_06_39_Poem_My_Olsen.txt",
+    "V53_06_41_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_06_01_Art_Editor_Spafford.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only editor information, not a full article. Should be merged with table of contents or removed as standalone article.",
+      "action": "note",
+      "text": "",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_06_04_SpFt_Birthday_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "Birthday Congratelatioas @",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text from previous content",
+      "action": "trim_start",
+      "text": "405 Spanish Elder Marion G.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "issue_type": "missing_text",
+      "description": "Missing text 'Eventually,' at beginning of paragraph about Relief Society Magazine publication",
+      "action": "replace_content",
+      "text": "Eventually, in 1915, the Relief Society, with the approval of th First Presidency, began publishing its own Relief Society Magazine",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V53_06_07_SpFt_James.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number from previous content",
+      "action": "trim_start",
+      "text": "407 w At the opening session",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_08_GenFt_Editorial_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that appears to continue beyond the article",
+      "action": "trim_end",
+      "text": "Zelma R.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_10_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text from previous content",
+      "action": "trim_start",
+      "text": "413 . - —_ % Prime Minister Indira Ghandi",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_11_Fict_Wheat_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that continues to next page",
+      "action": "trim_end",
+      "text": "(To be concluded) 419",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V53_06_12_SpFt_Annual_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "(To be concluded) 419 42] 1965 Annual Report",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_13_SpFt_Mexico_Noall.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "\\ + Ixtacihuatl 17,343' + Popocateptl Cuernavaca 17,887' » I @ Mexico City sits",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_14_The Home_Festival.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles merged together",
+      "action": "trim_end",
+      "text": "437 antique VOUT plastic flowers",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_24_The Home_Home_Is.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from multiple articles and appears to be incorrectly assembled",
+      "action": "note",
+      "text": "File contains content about Elsie Meeks Simkins, German Holiday Buffet recipes, and Our Special Garden - needs to be split into separate articles",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_06_25_The Home_Our_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a small fragment that should be part of the previous article",
+      "action": "note",
+      "text": "This content should be merged with the Our Special Garden article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_06_26_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text",
+      "action": "trim_start",
+      "text": "THE FIELD NM Relief Society Activities",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_33_The Home_Notes.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that continues to next article",
+      "action": "trim_end",
+      "text": "B® Celestia J. Taylor, author of the homemaking discussions ''Development Through",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_34_The Home_Homemaking_Cannon.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the beginning of the article including title and introduction",
+      "action": "prepend",
+      "text": "HOMEMAKING — Development Through Homemaking Education Hazel S. Cannon DOES YOUR HOME HAVE A PERSONALITY? Northern Hemisphere: Second Meeting, September 1966 Southern Hemisphere: Second Meeting, February 1967 Objective: To show that through wise planning and creativity, the homemaker can fashion a home of good taste which expresses INTRODUCTION Mary Jane's home is distinctively Mary Jane. It bears her signature with charm and good taste, and is different from any other home in the ward. An interesting observation is that individuality has been achieved through a small outlay of money and a large outlay of time and creative know-how.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Contents",
+      "expected_page": 403,
+      "status": "not_in_any_file",
+      "merged_into": ""
+    }
+  ],
+  "notes": "Several files have content bleeding issues and some articles appear to be merged incorrectly. The Home section particularly has articles that have been split or merged inappropriately. The lesson department section appears to be mostly intact but some files are missing proper beginnings or endings.",
+  "validated_corrections": [
+    {
+      "file": "V53_06_04_SpFt_Birthday_McKay.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "Birthday Congratelatioas @",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_05_SpFt_Relief_Romney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text from previous content",
+      "action": "trim_start",
+      "text": "405 Spanish Elder Marion G.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_07_SpFt_James.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number from previous content",
+      "action": "trim_start",
+      "text": "407 w At the opening session",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_08_GenFt_Editorial_Spafford.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that appears to continue beyond the article",
+      "action": "trim_end",
+      "text": "Zelma R.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_10_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and incomplete text from previous content",
+      "action": "trim_start",
+      "text": "413 . - —_ % Prime Minister Indira Ghandi",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_12_SpFt_Annual_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "(To be concluded) 419 42] 1965 Annual Report",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_13_SpFt_Mexico_Noall.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "\\ + Ixtacihuatl 17,343' + Popocateptl Cuernavaca 17,887' » I @ Mexico City sits",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_14_The Home_Festival.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles merged together",
+      "action": "trim_end",
+      "text": "437 antique VOUT plastic flowers",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_26_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text",
+      "action": "trim_start",
+      "text": "THE FIELD NM Relief Society Activities",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_33_The Home_Notes.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that continues to next article",
+      "action": "trim_end",
+      "text": "B® Celestia J. Taylor, author of the homemaking discussions ''Development Through",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_06_34_The Home_Homemaking_Cannon.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing the beginning of the article including title and introduction",
+      "action": "prepend",
+      "text": "HOMEMAKING — Development Through Homemaking Education Hazel S. Cannon DOES YOUR HOME HAVE A PERSONALITY? Northern Hemisphere: Second Meeting, September 1966 Southern Hemisphere: Second Meeting, February 1967 Objective: To show that through wise planning and creativity, the homemaker can fashion a home of good taste which expresses INTRODUCTION Mary Jane's home is distinctively Mary Jane. It bears her signature with charm and good taste, and is different from any other home in the ward. An interesting observation is that individuality has been achieved through a small outlay of money and a large outlay of time and creative know-how.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V53_06_11_Fict_Wheat_Stewart.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that continues to next page",
+      "action": "trim_end",
+      "text": "(To be concluded) 419",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

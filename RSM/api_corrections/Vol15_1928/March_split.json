@@ -1,0 +1,197 @@
+{
+  "volume": 15,
+  "month": "March",
+  "year": 1928,
+  "total_merged": 3,
+  "total_splits": 10,
+  "total_cost": 0.4611,
+  "files": [
+    {
+      "source_file": "March_Vol15_03_Article_Letter_to_President_Clarissa_S_Williams.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Letter to President Clarissa S. Williams",
+          "category": "Editorial",
+          "author": "General Board of Relief Society",
+          "start_boundary": "January 31, 1928 President Clarissa S. Williams,",
+          "end_boundary": "This letter will be recorded in the",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Book of Mormon Women and Their Work",
+          "category": "Article",
+          "author": "John Henry Evans",
+          "start_boundary": "Book of Mormon Women and Their Work",
+          "end_boundary": "valuable in that age and under those",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Five Generations",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "The above is a picture of Mrs.",
+          "end_boundary": "She also does considerable temple work.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Cyrus E. Dallin and the Indians",
+          "category": "Article",
+          "author": "Lula Greene Richards",
+          "start_boundary": "Cyrus E. Dallin and the Indians By",
+          "end_boundary": "native state of the sculptor would do",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "BOOK OF MORMON WOMEN",
+        "CYRUS E. DALLIN AND THE INDIANS"
+      ],
+      "notes": "The file contains multiple articles merged together. The 'Letter to President Clarissa S. Williams' appears to be incomplete in the merged file, ending abruptly. The 'Book of Mormon Women' article is the main substantial piece. There's a photo caption about Five Generations that appears to be a separate short article, and the Cyrus E. Dallin article begins but appears to be cut off at the end.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 15971,
+      "tier": 1,
+      "pdf_pages": [
+        150,
+        151,
+        152,
+        153
+      ],
+      "api_usage": {
+        "input_tokens": 44407,
+        "output_tokens": 566,
+        "cost": 0.1417
+      }
+    },
+    {
+      "source_file": "March_Vol15_17_Article_This_is_the_Day.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "This is the Day",
+          "category": "Poem",
+          "author": "Mrs. Ellen L. Jakeman",
+          "start_boundary": "This is the Day By Mrs. Ellen L. Jakeman",
+          "end_boundary": "This the great Day is,?God hasten the Hour!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON I Theology and Testimony",
+          "end_boundary": "etc., may be properly discussed",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY"
+      ],
+      "notes": "This file contains a poem followed by guide lessons. The poem 'This is the Day' is complete and ends with 'This the great Day is,?God hasten the Hour!' The Guide Lessons section contains multiple lessons (I, II, III, IV) covering Theology, Work and Business, Literature, and Social Service, but appears to be cut off mid-sentence in Lesson II.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10070,
+      "tier": 1,
+      "pdf_pages": [
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "api_usage": {
+        "input_tokens": 44513,
+        "output_tokens": 362,
+        "cost": 0.139
+      }
+    },
+    {
+      "source_file": "March_Vol15_18_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MAY LESSON I Theology",
+          "end_boundary": "State the fifth evident objective of this dispensation.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "LESSON II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "etc., may be properly discussed.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III - Literature (Charles G. D. Roberts)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR MAY 165 LESSON III",
+          "end_boundary": "prefer being? Why?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV - Social Service (The Child's Moral Development)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "character development is obviously faulty?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for May, each covering different subject areas: Theology, Work/Business, Literature, and Social Service. Each lesson has clear boundaries with Roman numeral headings and ends with questions. There's also a poem 'Zion's Mountains' at the very end that appears to be separate content.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 18642,
+      "tier": 1,
+      "pdf_pages": [
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200
+      ],
+      "api_usage": {
+        "input_tokens": 57436,
+        "output_tokens": 541,
+        "cost": 0.1804
+      }
+    }
+  ]
+}

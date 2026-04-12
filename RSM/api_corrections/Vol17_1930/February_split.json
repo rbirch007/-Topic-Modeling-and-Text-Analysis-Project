@@ -1,0 +1,94 @@
+{
+  "volume": 17,
+  "month": "February",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 5,
+  "total_cost": 0.1216,
+  "files": [
+    {
+      "source_file": "February_Vol17_11_Article_The_Place_of_Woman_in_the_Farm_Home_Dr_Thomas_L_Martin.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Place of Woman in the Farm Home",
+          "category": "Article",
+          "author": "Dr. Thomas L. Martin",
+          "start_boundary": "The Place of Woman in the Farm Home By Dr.",
+          "end_boundary": "Such is the farm's bright treasure? trove! ?Carlton Culmsee.",
+          "confidence": "high",
+          "end_match_words": 5
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Tintic Stake. Reports from Tintic",
+          "end_boundary": "real achievement in our history. Granite Stake: During the",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April LESSON I Theology and Testimony",
+          "end_boundary": "blindness, deafness, and even feeblemindedness?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Books for the Family",
+          "category": "Article",
+          "author": "Lais V. Hales",
+          "start_boundary": "Books for the Family By Lais V. Hales. THE",
+          "end_boundary": "digest.\" Prosperity: An Answer to Hope As a topic",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Prosperity: An Answer to Hope",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Prosperity: An Answer to Hope As a topic of",
+          "end_boundary": "plus the first four letters of the verb \"sperare,\" meaning to hope.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL",
+        "BOOK FOR THE FAMILY",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains multiple distinct sections: a main article about farm women, field notes from various stakes, comprehensive guide lessons for April covering multiple subjects (theology, work/business, literature, social service), a book review section, and a short piece on prosperity. The guide lessons section is particularly long and contains multiple sub-lessons with different topics.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 72705,
+      "tier": 2,
+      "pdf_pages": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "api_usage": {
+        "input_tokens": 37093,
+        "output_tokens": 687,
+        "cost": 0.1216
+      }
+    }
+  ]
+}

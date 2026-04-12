@@ -1,0 +1,362 @@
+QC Fix Report for Vols 30-40 - Relief Society Magazine Extraction
+Generated: 2026-03-18
+Base directory: C:\Users\birch\OneDrive - George Mason University - O365 Production\Dissertation\textanalysis\Articleextractionrfiles\OutputExtractedarticles
+
+======================================================================
+SUMMARY OF ACTIONS TAKEN
+======================================================================
+  Issue 1 - Art 1 mid-sentence starts:       56 logged for manual review, 0 auto-fixed
+  Issue 2 - Ad/garbage files reclassified:   23 files renamed (6 false positives caught and reverted)
+  Issue 3 - Poems recategorized:              4 files renamed (header said Poem, filename said Article)
+  Issue 3 - Possible poems logged:            1 logged for review
+  Issue 4 - Vol35 articles from Misc:         0 extracted (all already existed)
+  Issue 4 - Vol35 items logged:               1 logged for review
+
+NOTE: Issue 1 (Art 1 missing beginnings) requires human judgment to determine
+where in the Misc file the article begins. The boundary between masthead/TOC
+content and article content is ambiguous and varies per issue. All 56 cases
+are logged below for manual review.
+
+NOTE: 3 of the 4 poem-renamed files (Nov Vol36, Oct Vol36, Apr Vol37) have
+headers that say "Category: Poem" but their actual content is ads/garbage.
+The rename was technically correct (matching filename to header) but these
+files are also extraction errors.
+
+
+======================================================================
+ISSUE 1: Art 1 files missing their beginning (56 cases)
+======================================================================
+These _01_ files start mid-sentence, suggesting their beginning was absorbed
+into the Misc file or lost during extraction. Manual review needed to
+determine the correct split point.
+
+  Vol30 August: August_Vol30_01_Article_Reference_Americas.txt
+    Starts: "bondage; and the development, during their wanderings..."
+
+  Vol31 May: May_Vol31_01_Article_Your_Spring_and_Nicholes.txt
+    Starts: "your spring come again? I see The crocus bubbling..."
+
+  Vol34 December: December_Vol34_01_Article_Where_Chapter.txt
+    Starts: "it has not been by the wisdom and works of man alone..."
+
+  Vol34 November: November_Vol34_01_Article_Where_Chapter.txt
+    Starts: "relief of the poor, the destitute, the widow and the orphan..."
+
+  Vol34 October: October_Vol34_01_Article_Where_Chapter.txt
+    Starts: "so many other ways, Mormon women were leaders..."
+
+  Vol34 September: September_Vol34_01_Article_MAGAZINE_CIRCULATION_Vol.txt
+    Starts: "ainst Britain; the other picturing Daniel Webster..."
+
+  Vol35 April: April_Vol35_01_Article_SERIALS_Chapter.txt
+    Starts: "aving the gift of the Holy Ghost may know..."
+
+  Vol35 August: August_Vol35_01_Article_The_Russells_Did_Not_Go_Chapter.txt
+    Starts: "he Church to give us such security..."
+
+  Vol35 February: February_Vol35_01_Article_Windy_Hilltop_Chapter.txt
+    Starts: "avior explained the pattern..."
+
+  Vol35 January: January_Vol35_01_Article_Christie_Lund_Coles.txt
+    Starts: "your tender care I do not hesitate to say..."
+
+  Vol35 July: July_Vol35_01_Article_Questing_Lights_Chapter.txt
+    Starts: "on offered an opportunity for some of the enlisted men..."
+
+  Vol35 June: June_Vol35_01_Article_SERIAL_Chapter.txt
+    Starts: "ges more obvious, disarms the critical faculties..."
+
+  Vol35 March: March_Vol35_01_Article_Windy_Hilltop_Chapter.txt
+    Starts: "the medium of the great Relief Society organization..."
+
+  Vol35 May: May_Vol35_01_Article_SERIAL_Chapter.txt
+    Starts: "aws of compensation and retribution are never failing..."
+
+  Vol35 October: October_Vol35_01_Article_Beatrice_K._Ekman.txt
+    Starts: "d through succeeding years..."
+
+  Vol35 September: September_Vol35_01_Article_The_Art_of_Beautiful_Part.txt
+    Starts: "onists met to establish a government..."
+
+  Vol36 April: April_Vol36_01_Article_Some_vowed_that_he_had_Photograph.txt
+    Starts: "ly folded in the silent tomb..."
+
+  Vol36 August: August_Vol36_01_Frontispiece_Sand_and.txt
+    Starts: "elfth article of faith Says..."
+
+  Vol36 December: December_Vol36_01_Article_Layaway_for_Christmas.txt
+    Starts: "ling Orders to Relief Society..."
+
+  Vol36 February: February_Vol36_01_Article_After_a_restless_night.txt
+    Starts: "husband say such things, John..."
+
+  Vol36 July: July_Vol36_01_Frontispiece_Pioneer.txt
+    Starts: "ts singing It is their story I relive today..."
+
+  Vol36 June: June_Vol36_01_Frontispiece_Carrot_Marmalade_by.txt
+    Starts: "it is a strange thing, is it not..."
+
+  Vol36 March: March_Vol36_01_Frontispiece_Cakes_Decorated_and_AspensFrontispiece.txt
+    Starts: "it moving forward in a glorious manner."
+
+  Vol36 May: May_Vol36_01_Frontispiece_Handle_With_Gloves_by_LandFrontispiece.txt
+    Starts: "gs to flow down upon womankind..."
+
+  Vol36 November: November_Vol36_01_Frontispiece_Rain_on_NightFrontispiece.txt
+    Starts: "rsonal matters, the following interesting problem..."
+
+  Vol36 October: October_Vol36_01_Frontispiece_Time_for.txt
+    Starts: "shelters more than mere dwellings."
+
+  Vol36 September: September_Vol36_01_Frontispiece_Poplar_MagicFrontispiece.txt
+    Starts: "s well as the joy and satisfaction of accomplishment."
+
+  Vol37 April: April_Vol37_01_Frontispiece_Sharing_Your.txt
+    Starts: "y Of the First Presidency..."
+
+  Vol37 August: August_Vol37_01_Article_by_Redd.txt
+    Starts: "ng, in every possible way voicing their lack of faith..."
+
+  Vol37 December: December_Vol37_01_Article_by_Bailey.txt
+    Starts: "nt Depart in Peace..."
+
+  Vol37 February: February_Vol37_01_Article_Dark_in_the_Chapter.txt
+    Starts: "e fundamental principles upon which liberty..."
+
+  Vol37 January: January_Vol37_01_Article_Lael_W._Hill.txt
+    Starts: "because we have learned that to live the gospel..."
+
+  Vol37 March: March_Vol37_01_Article_Dark_in_the_Chapter.txt
+    Starts: "od, and to the Church which is the kingdom of God..."
+
+  Vol37 May: May_Vol37_01_Frontispiece_Songs_for.txt
+    Starts: "no greater nor more important work..."
+
+  Vol37 November: November_Vol37_01_Article_For_After_Much.txt
+    Starts: "futilism as expressed by these two men..."
+
+  Vol37 September: September_Vol37_01_Article_by_Christensen.txt
+    Starts: "f the Lord" (Eph. 6:4)."
+
+  Vol38 August: August_Vol38_01_Editorial_North_Main_Salt_Lake_Dept.txt
+    Starts: "difficult and costly than the surrender of it."
+
+  Vol38 June: June_Vol38_01_Editorial_North_Main_Salt_Lake_Dept.txt
+    Starts: "in all the establishments of the Church..."
+
+  Vol38 November: November_Vol38_01_Editorial_North_Main_Salt_Lake_Dept.txt
+    Starts: "oubled with him a great while..."
+
+  Vol38 September: September_Vol38_01_Article_by_Ekman.txt
+    Starts: "of our Constitution as the guardian..."
+
+  Vol39 December: December_Vol39_01_Article_From_Near_and_Far.txt
+    Starts: "s it comes into our home each month..."
+
+  Vol39 February: February_Vol39_01_Article_Afterglow_Illustrated.txt
+    Starts: "ogordo, New Mexico Photograph by Josef Muench..."
+
+  Vol39 January: January_Vol39_01_Frontispiece_A_New_YearFrontispiece.txt
+    Starts: "iety. The past year has been one of marked success..."
+
+  Vol39 July: July_Vol39_01_Article_Westward_in_Era.txt
+    Starts: "our ancestors was the belief in..."
+
+  Vol39 June: June_Vol39_01_Article_by_Larsen.txt
+    Starts: "rist was a wonderful man, a beautiful character..."
+
+  Vol39 March: March_Vol39_01_Article_by_Coles.txt
+    Starts: "bsent preaching the gospel..."
+
+  Vol39 November: November_Vol39_01_Article_by_Roberts.txt
+    Starts: "men would raise a total of $500,000..."
+
+  Vol39 October: October_Vol39_01_Article_Evils_and_Designs_Of_Committee.txt
+    Starts: "attitude of medical men toward the public good..."
+
+  Vol39 September: September_Vol39_01_Frontispiece_Aftermath_of.txt
+    Starts: "se are life, liberty, and the pursuit..."
+
+  Vol40 August: August_Vol40_01_Frontispiece_Western_Frontispiece.txt
+    Starts: "lies not so much in subduing..."
+
+  Vol40 February: February_Vol40_01_Frontispiece_Lehi_Wakes.txt
+    Starts: "ul people. It is far easier for us..."
+
+  Vol40 July: July_Vol40_01_Article_Boxes_@_of_Famous.txt
+    Starts: "irit of Christmas A colorful array of..."
+
+  Vol40 June: June_Vol40_01_Frontispiece_The_Father_in_FieldFrontispiece.txt
+    Starts: "ts such as Pythagoras, Louis Pasteur, Einstein..."
+
+  Vol40 March: March_Vol40_01_Article_From_Near_and_Far.txt
+    Starts: "officers and the other twenty board members..."
+
+  Vol40 November: November_Vol40_01_Article_by_Roberts.txt
+    Starts: "programs have furthered and accomplished its purposes..."
+
+  Vol40 September: September_Vol40_01_Editorial_North_Main_Salt_Lake.txt
+    Starts: "two sons and three daughters: Isabella, Williamena..."
+
+
+======================================================================
+ISSUE 2: Files reclassified as ads/misc (23 files)
+======================================================================
+Only files whose PRIMARY content was ads, extraction errors, OCR garbage,
+or tiny fragments were reclassified. Files containing real articles/poems
+with trailing ads were left intact.
+
+  January_Vol30_24_Misc_Ad_Theology_and_Testimony.txt
+    Was: Article | Reason: pure ad/boilerplate ("DESERET NEWS PRESS")
+
+  March_Vol32_25_Misc_Ad_Notes_to_the_Field.txt
+    Was: Notes from Field | Reason: pure ad ("Mention Relief Society Magazine" + insurance ad)
+
+  May_Vol32_15_Misc_Ad_The_Magazine_Honor_Roll.txt
+    Was: Article | Reason: tiny fragment (only "President")
+
+  September_Vol33_25_Misc_Ad_Annual_Report.txt
+    Was: Article | Reason: ad content (Sugar Company, postage info)
+
+  February_Vol34_20_Misc_Ad_Please_renew_once_in.txt
+    Was: Article | Reason: extraction error ("Article not found in provided PDF pages")
+
+  July_Vol34_22_Misc_Ad_Donation_Additions_to.txt
+    Was: Article | Reason: extraction error ("could not be located")
+
+  November_Vol34_29_Misc_Ad_NOVEMBER.txt
+    Was: Article | Reason: Bible ad ("KING JAMES VERSION")
+
+  November_Vol34_30_Misc_Ad_They_give_enthusiasm_Father.txt
+    Was: Article | Reason: tiny fragment ("BIBLES THE RELIEF SOCIETY MAGAZINE")
+
+  September_Vol34_26_Misc_Ad_Priscilla_L._Evans_SEPTEMBER.txt
+    Was: Article | Reason: extraction error ("ARTICLE NOT FOUND IN PROVIDED PDF IMAGES")
+
+  April_Vol35_31_Misc_Ad_Then_they_also_which_are.txt
+    Was: Article | Reason: pure ad/boilerplate ("SALT LAKE CITY RELIEF SOCIETY MAGAZINE")
+
+  June_Vol35_29_Misc_Ad_STATIONERY_STREET_FLOOR.txt
+    Was: Article | Reason: extraction error ("cannot be located in the provided PDF pages")
+
+  May_Vol35_30_Misc_Ad_MAY.txt
+    Was: Article | Reason: tiny fragment ("City 1, Utah George Albert Smith, President")
+
+  October_Vol35_22_Misc_Ad_From_Near_and_Far.txt
+    Was: Article | Reason: extraction error ("Article not found")
+
+  November_Vol36_32_Misc_Ad_Only_recently_in.txt
+    Was: Article | Reason: extraction error ("Article not found in provided PDF images")
+
+  April_Vol37_27_Misc_Ad_Notes_From_the_Field.txt
+    Was: Notes from Field | Reason: pure ad (subscription form)
+
+  July_Vol37_40_Misc_Ad_WHAT_MEMBERSHIP_MEANS_TO.txt
+    Was: Article | Reason: extraction error ("Article not found in provided PDF pages")
+
+  March_Vol37_39_Misc_Ad_PRICKLY_PEAR_BLOSSOMS.txt
+    Was: Article | Reason: extraction error ("Article content not visible")
+
+  June_Vol38_34_Misc_Ad_Manuscripts_will_not_be.txt
+    Was: Article | Reason: tiny fragment ("JULY 1951")
+
+  May_Vol39_25_Misc_Ad_Mothers_are_just_people.txt
+    Was: Article | Reason: extraction error ("Article not found")
+
+  April_Vol40_26_Misc_Ad_but_the_water_that_I.txt
+    Was: Article | Reason: extraction error ("Article not found")
+
+  June_Vol40_33_Misc_Ad_Most_political_groups.txt
+    Was: Article | Reason: tiny fragment ("Glasses.")
+
+  March_Vol40_31_Misc_Ad_Fantasy.txt
+    Was: Article | Reason: pure ad ("Deseret News Press" + appliance ad)
+
+  May_Vol40_31_Misc_Ad_Gift_Divine.txt
+    Was: Article | Reason: pure ad (ZCMI skirt advertisement)
+
+REVERTED (6 false positives caught during manual review):
+  March_Vol30_21_Article_Sleeping_Cottam.txt - contains poem "SLEEPING PUPPY" (has trailing ads)
+  June_Vol31_14_Article_Living_Parthesius.txt - contains poem "LIVING MAGIC" (has trailing ads)
+  June_Vol31_16_Article_Mark_E_Petersen_Named_Apostle.txt - real article about apostle calling
+  October_Vol35_21_Article_Articulate_Resonant_Madsen.txt - real article on singing technique
+  February_Vol37_30_Article_No_Hall.txt - contains poem about mountains by Lydia Hall
+  May_Vol40_29_Article_Silenced.txt - contains poem "Silenced" by Eva Willes Wangsgaard
+
+
+======================================================================
+ISSUE 3: Poems recategorized (4 files renamed)
+======================================================================
+Only renamed files where the internal header explicitly stated "Category: Poem"
+but the filename contained "_Article_" or "_Frontispiece_".
+
+  April_Vol33_20_Poem_Spring_Shadows_Elsie_E_Barrett.txt
+    Was: _Article_ | Header says Poem - legitimate poem
+
+  November_Vol36_31_Poem_NOVEMBER_1949_cries_on.txt
+    Was: _Article_ | Header says Poem - BUT content is actually ads ("DESERET BOOK COMPANY")
+    NOTE: This is an extraction error; content does not match header
+
+  October_Vol36_27_Poem_Brides_Illusion_for_a.txt
+    Was: _Article_ | Header says Poem - BUT content is actually ads ("DESERET BOOK COMPANY")
+    NOTE: This is an extraction error; content does not match header
+
+  April_Vol37_28_Poem_Bazaars_Mothers.txt
+    Was: _Article_ | Header says Poem - BUT content is actually subscription form/ads
+    NOTE: This is an extraction error; content does not match header
+
+LOGGED FOR REVIEW (not renamed, structure-based detection only):
+  February_Vol39_42_Article_Household_Hint_Lael_W_Hill.txt
+    Content: "A little boy's tee-shirt, worn past repair / Can still dust a table..."
+    This appears to be a light verse/poem but is categorized as Article
+
+
+======================================================================
+ISSUE 4: Vol 35 Misc files containing article content
+======================================================================
+
+  February_Vol35_Misc_cont_14.txt:
+    - TASKS poem by Christie Lund Coles: ALREADY EXTRACTED as
+      February_Vol35_21_Poem_Tasks_Christie_Lund_Coles.txt
+    - Theology Lesson 8: ALREADY EXTRACTED in existing lesson files
+
+  November_Vol35_Misc_cont_06.txt:
+    - Poetry by Emmeline B. Wells and O.F. Whitney: These are brief
+      historical quotations embedded within a "Sixty Years Ago" feature
+      column, not standalone poems. NO EXTRACTION NEEDED.
+
+  December_Vol35_Misc_cont_19.txt:
+    - "Living to Enjoy the Blessings of the Lord": ALREADY IN
+      December_Vol35_04_Article_The_Annual_General_Pickering.txt
+
+  June_Vol35_Misc_cont_26.txt:
+    - "A House By Friday" continuation: Main article exists as
+      June_Vol35_07_Article_A_House.txt and
+      June_Vol35_32_Article_A_House_By_Friday_Continued_Fay_Tarlock.txt
+    - "You Can Write a Prize Winner" continuation: Main article exists as
+      June_Vol35_05_Article_You_Can_Write_a_Winner.txt
+
+
+======================================================================
+ADDITIONAL OBSERVATIONS
+======================================================================
+
+1. The Art 1 mid-sentence issue is systemic across Vols 34-40, affecting
+   nearly every month. The extraction process appears to have consistently
+   split the first article's content between the Misc file and the Art 1 file.
+   A batch fix would require careful boundary detection in each Misc file.
+
+2. Many article files throughout Vols 30-40 contain trailing advertisement
+   text from the original magazine pages (Deseret News Press, LDS Business
+   College, Beneficial Life Insurance, ZCMI, etc.). These were not reclassified
+   because the PRIMARY content is a real article/poem. The trailing ads are
+   an artifact of the OCR/extraction picking up the full magazine page.
+
+3. Several "Article not found" extraction errors exist throughout the volumes.
+   23 were caught among the last 3 files per month; more may exist in
+   earlier sequence positions.
+
+4. Three poem-renamed files (Nov Vol36 #31, Oct Vol36 #27, Apr Vol37 #28)
+   are essentially ad/garbage files that were given incorrect "Category: Poem"
+   headers by the API extraction. These could be further reclassified as Misc
+   if desired.

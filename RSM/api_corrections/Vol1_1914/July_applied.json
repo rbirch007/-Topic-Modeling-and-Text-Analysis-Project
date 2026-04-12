@@ -1,0 +1,57 @@
+{
+  "volume": 1,
+  "month": "July",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Jul_03a_Lssn_Health_and_Hygiene_Lesson_II.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (196 chars removed)"
+    },
+    {
+      "file": "V1_1914_Jul_03c_Lssn_Health_and_Hygiene_Lesson_IV.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (108 chars removed)"
+    },
+    {
+      "file": "V1_1914_Jul_05_Art_SPECIAL.txt",
+      "action": "append",
+      "result": "APPLIED append (95 chars added)"
+    },
+    {
+      "file": "V1_1914_Jul_06_Art_WILLIAMS.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Jul_07_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This is not a poem but administrative text about bulletin orders"
+    },
+    {
+      "file": "V1_1914_Jul_08_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jul_09_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jul_10_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: Contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jul_12_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This appears to be a fragment and not a complete poem"
+    }
+  ]
+}

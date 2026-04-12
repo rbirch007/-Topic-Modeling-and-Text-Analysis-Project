@@ -1,0 +1,40 @@
+{
+  "volume": 13,
+  "month": "July",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0247,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol13_01_Frontispiece_Painting_of_Brigham_Young_by_George_Henry_Taggart_Frontispie.txt",
+      "status": "complete",
+      "current_chars": 257,
+      "complete_text": null,
+      "title": "Painting of Brigham Young",
+      "category": "Frontispiece",
+      "author": "George Henry Taggart",
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption describing a painting. The file contains the full descriptive text that would accompany the artwork on the frontispiece page. No additional article text is expected for a frontispiece.",
+      "api_usage": {
+        "input_tokens": 7351,
+        "output_tokens": 177,
+        "cost": 0.0247
+      },
+      "pdf_pages": [
+        381,
+        382,
+        383,
+        384
+      ]
+    }
+  ]
+}

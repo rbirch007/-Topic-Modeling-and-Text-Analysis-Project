@@ -1,0 +1,105 @@
+{
+  "volume": 16,
+  "month": "June",
+  "year": 1929,
+  "total_merged": 2,
+  "total_splits": 3,
+  "total_cost": 0.2852,
+  "files": [
+    {
+      "source_file": "June_Vol16_02_Article_Officers_MeetingMorning_Session.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Officers' Meeting—Morning Session",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "VOL. XVI JUNE, 1929 No. 6 Relief Society Conference",
+          "end_boundary": "what could be done to help the community.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains a single comprehensive article covering the Relief Society Conference Officers' Meeting Morning Session. It includes multiple reports and presentations within the same meeting session, but these are all part of one continuous conference proceeding rather than separate articles. The content flows from the opening remarks through various departmental reports and presentations, all under the umbrella of the morning officers' meeting.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 20642,
+      "tier": 1,
+      "pdf_pages": [
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354
+      ],
+      "api_usage": {
+        "input_tokens": 56288,
+        "output_tokens": 258,
+        "cost": 0.1727
+      }
+    },
+    {
+      "source_file": "June_Vol16_03_Article_Officers_Meeting_Afternoon_Session.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Officers Meeting Afternoon Session",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Officers' Meetings (Afternoon Session) THEOLOGICAL DEPARTMENT Mrs. Jennie B.",
+          "end_boundary": "to which all social workers are invited. CHORISTERS' AND",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Evolution of the Ugly Duckling",
+          "category": "Article",
+          "author": "Estelle Webb Thomas",
+          "start_boundary": "EVOLUTION OF THE UGLY DUCKLING Estelle Webb Thomas",
+          "end_boundary": "would not). This had all been over, years ago,",
+          "confidence": "high",
+          "start_match_words": 5
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "The file contains two distinct articles. The first is the Officers Meeting Afternoon Session which covers various departments and presentations. The second is a creative story 'Evolution of the Ugly Duckling' by Estelle Webb Thomas that appears to be incomplete, ending mid-sentence. The boundary between them is clear where the Officers Meeting content ends and the story begins with its own title and author byline.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 100881,
+      "tier": 3,
+      "pdf_pages": [
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376
+      ],
+      "api_usage": {
+        "input_tokens": 35641,
+        "output_tokens": 372,
+        "cost": 0.1125
+      }
+    }
+  ]
+}

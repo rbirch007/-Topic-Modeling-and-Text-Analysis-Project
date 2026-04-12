@@ -1,0 +1,319 @@
+{
+  "volume": 17,
+  "month": "May",
+  "year": 1930,
+  "total_merged": 4,
+  "total_splits": 18,
+  "total_cost": 0.7356,
+  "files": [
+    {
+      "source_file": "May_Vol17_01_Article_Tributes_to_Clarissa_Smith_Williams.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Tributes to Clarissa Smith Williams",
+          "category": "Article",
+          "author": "Multiple authors",
+          "start_boundary": "If we failed TRIBUTES TO CLARISSA SMITH WILLIAMS",
+          "end_boundary": "Generously she gave of her great love, and in rich measure love came back to her.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "TRIBUTES TO CLARISSA SMITH WILLIAMS"
+      ],
+      "notes": "This file contains a single article consisting of multiple tribute pieces by different authors honoring Clarissa Smith Williams. The file appears to be complete as one cohesive tribute article with multiple contributors rather than separate articles that need splitting.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11534,
+      "tier": 1,
+      "pdf_pages": [
+        283,
+        284,
+        285
+      ],
+      "api_usage": {
+        "input_tokens": 45868,
+        "output_tokens": 255,
+        "cost": 0.1414
+      }
+    },
+    {
+      "source_file": "May_Vol17_05_Article_For_the_Salvation_of_a_Nation.txt",
+      "num_articles_found": 12,
+      "splits": [
+        {
+          "order": "a",
+          "title": "British National Council of Women",
+          "category": "Current_Topics",
+          "author": null,
+          "start_boundary": "British National Council of Women FROM October 14",
+          "end_boundary": "And sunshine everywhere. For the Salvation of",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "For the Salvation of a Nation",
+          "category": "Article",
+          "author": "Arthur Gaeth",
+          "start_boundary": "For the Salvation of a Nation Women",
+          "end_boundary": "wonderful spirit and testimony. Evidence By Alberta",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Evidence",
+          "category": "Poem",
+          "author": "Alberta H. Christensen",
+          "start_boundary": "Evidence By Alberta H. Christensen Spring slipped",
+          "end_boundary": "Spring came last night—I know, I know.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Editorial - Ten Years of Suffrage",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL Ten Years of Suffrage ON Wednesday,",
+          "end_boundary": "express undying gratitude. Some Things Women Can",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Some Things Women Can Do",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Some Things Women Can Do IN the",
+          "end_boundary": "maintain the right. We are Proud of",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "We are Proud of Both of You",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "We are Proud of Both of You",
+          "end_boundary": "heart of the West. This Issue Devotes",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "This Issue Devotes Space to Work in Missions",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "This Issue Devotes Space to Work in",
+          "end_boundary": "work of various missions. Notes from the",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field Southern States Mission",
+          "end_boundary": "progress and peace.\" Faith of the Mothers",
+          "confidence": "high"
+        },
+        {
+          "order": "i",
+          "title": "Faith of the Mothers",
+          "category": "Poem",
+          "author": "Linda S. Fletcher",
+          "start_boundary": "Faith of the Mothers By Linda S.",
+          "end_boundary": "faith as those of Ammon! To her",
+          "confidence": "high"
+        },
+        {
+          "order": "j",
+          "title": "Faith and Faithfulness Triumphant",
+          "category": "Article",
+          "author": "Lula Greene Richards",
+          "start_boundary": "Faith and Faithfulness Triumphant A TRUE STORY",
+          "end_boundary": "Faithfulness.\" SPRING TIME By Camille Cole Neuffer",
+          "confidence": "high"
+        },
+        {
+          "order": "k",
+          "title": "Spring Time",
+          "category": "Poem",
+          "author": "Camille Cole Neuffer",
+          "start_boundary": "SPRING TIME By Camille Cole Neuffer Joyous",
+          "end_boundary": "spring has come to stay. Moral Training",
+          "confidence": "high"
+        },
+        {
+          "order": "l",
+          "title": "Moral Teaching Through Home Work",
+          "category": "Article",
+          "author": "Milton Bennion",
+          "start_boundary": "Moral Training Through Home Work Radio speech",
+          "end_boundary": "state and the nation depend. Push a",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "FOR THE SALVATION OF A NATION",
+        "EDITORIAL",
+        "NOTES FROM THE FIELD",
+        "MORAL TRAINING"
+      ],
+      "notes": "This file contains multiple articles that were merged together. The content includes editorial pieces, mission reports, poems, and articles. The boundaries are clearly defined by title headers and author bylines. Some content appears to be cut off at the end, suggesting this may be part of a larger document.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'h': end_boundary not found",
+        "Split 'i': start_boundary not found",
+        "Split 'i': end_boundary not found",
+        "Split 'j': start_boundary not found",
+        "Split 'j': end_boundary not found",
+        "Split 'k': start_boundary not found",
+        "Split 'k': end_boundary not found",
+        "Split 'l': start_boundary not found",
+        "Split 'l': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 31596,
+      "tier": 1,
+      "pdf_pages": [
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305
+      ],
+      "api_usage": {
+        "input_tokens": 69472,
+        "output_tokens": 1257,
+        "cost": 0.2273
+      }
+    },
+    {
+      "source_file": "May_Vol17_09_Article_Moral_Teaching_Through_Home_Work_Milton_Bennion.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Moral Teaching Through Home Work",
+          "category": "Article",
+          "author": "Milton Bennion",
+          "start_boundary": "By Milton Bennion THAT the conditions of",
+          "end_boundary": "UTAH POWER & LIGHT CO. Efficient Public Service",
+          "confidence": "high",
+          "end_match_words": 5
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "MORAL TRAINING"
+      ],
+      "notes": "This is a single complete article - a radio speech delivered over K.S.L. January 26, 1930. The Utah Power & Light Co. advertisement at the end appears to be part of the original radio speech context and is included in the article content.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 22258,
+      "tier": 1,
+      "pdf_pages": [
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204
+      ],
+      "api_usage": {
+        "input_tokens": 66803,
+        "output_tokens": 400,
+        "cost": 0.2064
+      }
+    },
+    {
+      "source_file": "May_Vol17_12_Article_Childs_Everyday_Problems_of_Everyday_Child_Laig_V_Hales.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Old Juniper Tree",
+          "category": "Poem",
+          "author": "Mrs. George Q. Rich",
+          "start_boundary": "The Old Juniper Tree By Mrs. George Q.",
+          "end_boundary": "Protected by the Government.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Thom's \"Everyday Problems of the Everyday Child\"",
+          "category": "Article",
+          "author": "Lais V. Hales",
+          "start_boundary": "Thom's \"Everyday Problems of the Everyday Child\" By",
+          "end_boundary": "Write us for full information",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "The Homeless Ones",
+          "category": "Poem",
+          "author": "Alfred Osmond",
+          "start_boundary": "The Homeless Ones By Alfred Osmond I",
+          "end_boundary": "To overwhelm the world 'neath billows of despair.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Dawn of Hope For Saint and Sinner in the Life to Come",
+          "category": "Article",
+          "author": "J. H. Paul",
+          "start_boundary": "The Dawn of Hope For Saint and",
+          "end_boundary": "She lies so far away.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EVERYDAY PROBLEMS OF THE CHILD",
+        "THE DAWN OF HOPE"
+      ],
+      "notes": "This file contains 4 distinct articles that were merged together. The boundaries are clearly marked by title formatting and author bylines. The L.D.S. Business College advertisement appears to be part of the second article section. The file ends with a short poem 'For Alice' by Kate Thomas that appears to be part of the final article.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11363,
+      "tier": 1,
+      "pdf_pages": [
+        327,
+        328,
+        329,
+        330,
+        331,
+        332
+      ],
+      "api_usage": {
+        "input_tokens": 50609,
+        "output_tokens": 578,
+        "cost": 0.1605
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "volume": 52,
+  "month": "October",
+  "year": 1965,
+  "timestamp": "20260314_102519",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V52_10_05_SpFt_My_Quintero.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - QC FAIL: only 6% OCR coverage"
+    },
+    {
+      "file": "V52_10_22_Poem_Quantity_Shurtz.txt",
+      "action": "note",
+      "result": "INFO: Article file actually starts correctly with the title - no garbled text from previous article found"
+    },
+    {
+      "file": "V52_10_26_Poem_Perennial_Anderson.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 17% OCR coverage"
+    },
+    {
+      "file": "V52_10_27_Fict_Ring_Thulin.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1700 chars removed)"
+    },
+    {
+      "file": "V52_10_29_Lssn_Theology_Doxey.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    }
+  ]
+}

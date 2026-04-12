@@ -1,0 +1,60 @@
+{
+  "volume": 14,
+  "month": "May",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.05,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Portrait of Mrs. Mary E. H. Cotterell and Babe Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 127-130 which contain advertisements for Sawcroft's Blue Pine Extracts and Olive Oil, The Relief Society Magazine table of contents for March 1927 (Vol XIV No. 3), and various other advertisements. No portrait or frontispiece of Mrs. Mary E. H. Cotterell and Babe is visible in these pages. The frontispiece would typically appear at the very beginning of the magazine issue, not in these later pages.",
+      "api_usage": {
+        "input_tokens": 7452,
+        "output_tokens": 211,
+        "cost": 0.0255
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "title": "His Mother's Sermon Ian Maclaren",
+      "printed_page": 244,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Ian Maclaren",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF images (pages 255-258). Since the table of contents indicates it should be on page 244, and the provided images are from pages 255-258, the article would be on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7410,
+        "output_tokens": 154,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    }
+  ]
+}

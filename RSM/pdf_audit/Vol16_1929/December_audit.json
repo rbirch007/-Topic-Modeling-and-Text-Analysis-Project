@@ -1,0 +1,356 @@
+{
+  "volume": 16,
+  "month": "December",
+  "year": 1929,
+  "total": 19,
+  "ok": 16,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "December_Vol16_00_BOARD.txt",
+      "body_len": 50,
+      "article_words": 7,
+      "words_in_ocr": 7,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_00_CONTENTS.txt",
+      "body_len": 485,
+      "article_words": 50,
+      "words_in_ocr": 50,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_00_Misc.txt",
+      "body_len": 11363,
+      "article_words": 704,
+      "words_in_ocr": 701,
+      "pct_in_ocr": 0.9957,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "December_Vol16_00_Misc_backup_premarker.txt",
+      "body_len": 11295,
+      "article_words": 699,
+      "words_in_ocr": 699,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_01_Frontispiece_The_Madonna_Del_Granduca_Frontispiece.txt",
+      "body_len": 288,
+      "article_words": 38,
+      "words_in_ocr": 38,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_02b_Article_A_Day_in_a_Jewish_Village_in_Russia.txt",
+      "body_len": 11756,
+      "article_words": 699,
+      "words_in_ocr": 699,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_05_Article_Vesta_Pierce_Crawford.txt",
+      "body_len": 246,
+      "article_words": 31,
+      "words_in_ocr": 31,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_06a_Article_Semi-Annual_Conference_of_the_Relief_Society.txt",
+      "body_len": 26855,
+      "article_words": 1135,
+      "words_in_ocr": 1135,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_07_Article_Childrens_Books_Lala_Vernon_Hales.txt",
+      "body_len": 6654,
+      "article_words": 482,
+      "words_in_ocr": 482,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_08_Article_Childhood_Tuberculosis_H_E_Kleinschmidt_M_D.txt",
+      "body_len": 5400,
+      "article_words": 397,
+      "words_in_ocr": 397,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_09a_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_I_-_Theology_and_Testimo.txt",
+      "body_len": 9205,
+      "article_words": 485,
+      "words_in_ocr": 485,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3); MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_09b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_II_-_Work_and_Business_-.txt",
+      "body_len": 2978,
+      "article_words": 218,
+      "words_in_ocr": 218,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_09c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_-_Literature_-_The_L.txt",
+      "body_len": 8306,
+      "article_words": 506,
+      "words_in_ocr": 506,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_10a_Article_The_Names_of_Santa_Claus.txt",
+      "body_len": 979,
+      "article_words": 87,
+      "words_in_ocr": 87,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_10b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_Literature_-_The_Los.txt",
+      "body_len": 12453,
+      "article_words": 748,
+      "words_in_ocr": 748,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_10c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_IV_Social_Service_-_The.txt",
+      "body_len": 13222,
+      "article_words": 702,
+      "words_in_ocr": 702,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_10d_Article_Business_College_and_Product_Advertisements.txt",
+      "body_len": 5701,
+      "article_words": 391,
+      "words_in_ocr": 391,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_No12_03_Article_Music_in_the_Home_of_Hamlin_Garland.txt",
+      "body_len": 2431,
+      "article_words": 208,
+      "words_in_ocr": 208,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol16_No12_04_Article_Evergreen_Elsie_Talmage_Brandley.txt",
+      "body_len": 29630,
+      "article_words": 1386,
+      "words_in_ocr": 1386,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol16_No12_December_1929.txt",
+    "ocr_chars": 140625,
+    "ocr_unique_words": 4336,
+    "contents_xref": {
+      "entries_in_contents": 12,
+      "matched": 10,
+      "match_details": [
+        {
+          "title": "The Madonna Del Granduca Frontispiece",
+          "page": null,
+          "file": "December_Vol16_01_Frontispiece_The_Madonna_Del_Granduca_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Day in a Jewish Village in Russia Dr. Franklin S. Harris",
+          "page": 633,
+          "file": "December_Vol16_02b_Article_A_Day_in_a_Jewish_Village_in_Russia.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Music in the Home of Hamlin Garland",
+          "page": 639,
+          "file": "December_Vol16_No12_03_Article_Music_in_the_Home_of_Hamlin_Garland.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Evergreen Elsie Talmage Brandley",
+          "page": 640,
+          "file": "December_Vol16_No12_04_Article_Evergreen_Elsie_Talmage_Brandley.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Vesta Pierce Crawford",
+          "page": 651,
+          "file": "December_Vol16_05_Article_Vesta_Pierce_Crawford.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Semi-Annual Conference of the Relief Society Julia A. F. Lund",
+          "page": 652,
+          "file": "December_Vol16_06a_Article_Semi-Annual_Conference_of_the_Relief_Society.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Children's Books Lala Vernon Hales",
+          "page": 660,
+          "file": "December_Vol16_07_Article_Childrens_Books_Lala_Vernon_Hales.txt",
+          "score": 0.8
+        },
+        {
+          "title": "Childhood Tuberculosis H. E. Kleinschmidt, M. D.",
+          "page": 665,
+          "file": "December_Vol16_08_Article_Childhood_Tuberculosis_H_E_Kleinschmidt_M_D.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for February",
+          "page": 667,
+          "file": "December_Vol16_09a_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_I_-_Theology_and_Testimo.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Names of Santa Claus",
+          "page": 679,
+          "file": "December_Vol16_10a_Article_The_Names_of_Santa_Claus.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Madonna Claire Stewart Boyer",
+          "page": 631
+        },
+        {
+          "title": "The Holy Family",
+          "page": 632
+        }
+      ],
+      "extra_files": [
+        "December_Vol16_09b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_II_-_Work_and_Business_-.txt",
+        "December_Vol16_09c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_-_Literature_-_The_L.txt",
+        "December_Vol16_10b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_Literature_-_The_Los.txt",
+        "December_Vol16_10c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_IV_Social_Service_-_The.txt",
+        "December_Vol16_10d_Article_Business_College_and_Product_Advertisements.txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "volume": 55,
+  "month": "July",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_07_14_Poem_Retrospect_Tanner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains entirely wrong content - has 'The Lady Who Bakes Cakes' story instead of 'Retrospect' poem",
+      "action": "replace_content",
+      "text": "RETROSPECT\n\nMemory returning\nwas like fragrance:\npine needles in the dawn;\napple blossoms\nafter sudden rain;\n\nlilacs, evening sweet.\n\nIt was like color\nseen for the first time\nin rainbow spectrums;\nin sunset's orange,\nits pink, mauve, and yellow;\n\nlike green against day's sky.\n\nAnd it was like music,\nmelodious and kind;\nfilled with new peace,\nwith wild, young rapture;\nlifted anticipation,\n\nfilled with all of knowing.\n\nIt was joy and pain,\necstasy and sorrowing,\nthis silken moment\nof memory returning.\n\n—Annie Atkin Tanner",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "volume": 3,
+  "month": "October",
+  "year": 1916,
+  "total_files_checked": 11,
+  "files_correct": [
+    "October_Vol3_01_Article_The_Future_Life_William_Cullen_Bryant.txt",
+    "October_Vol3_03_Article_A_Sure_Defense_L._Lula_Greene_Richards.txt",
+    "October_Vol3_04_Article_Notes_from_Our_Secretary_Afield_Amy_Brown_Lyman.txt",
+    "October_Vol3_05_Article_Home_Scientists_in_Convention_Janette_A._Hyde.txt",
+    "October_Vol3_06_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+    "October_Vol3_09_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "October_Vol3_10a_Editorial_Editorial_Out_of_Death_Life_is_Born.txt",
+    "October_Vol3_10b_Guide_Lessons_Guide_Lessons.txt",
+    "October_Vol3_11_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with author name from previous article instead of proper frontispiece content",
+      "action": "trim_start",
+      "text": "William Cullen Bryant MRS. IDA BOWMAN SMITH.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol3_07_Article_Semi-Annual_Relief_Society_Conference.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about President Wells in Idaho and School of Obstetrics instead of the Semi-Annual Relief Society Conference announcement",
+      "action": "replace_content",
+      "text": "SEMI-ANNUAL RELIEF SOCIETY CONFERENCE. The semi-annual conference of the Relief Society will be held on Wednesday and Thursday, October 4 and 5, 1916. Two public sessions will be held on Wednesady, in the Salt Lake Assembly Hall, commencing at 10 a. m. and 2 p. m. All who are interested in Relief Society work are invited to be in attendance at these two sessions. On Thursday, October 5. two meetings will be held for officers, in the Auditorium on the fourth floor of the Bishop's Building, at 10 a. m. and 2 p. m. Detailed problems connected with Relief Society work will be discussed. One session will be devoted to a teachers' convention.All officers and official represenlatives are expected to be in attendance at these meetings. Emmeline B. Wells, President. Clarissa S. Williams, First Counselor. JuLiNA L. Smith, Second Counselor.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "October_Vol3_08_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about servant problems instead of the Mothers in Israel autobiographical sketch",
+      "action": "replace_content",
+      "text": "Mothers in Israel, Autobiographical Sketch of Mary Ann Stearns Winters. [We continue this month the charming child-classic written by one who not only passed through the beautiful and terrible scenes in Kirtland, Nauvoo, and Winter Quarters, but who also remembered keenly her childlike impressions of those striking events. We present some pictures of the author's birth-place in Bethel, Maine, but her word pictures of conditions in Nauvoo, given in this and the following articles, scarcely need embellishment. We hope our readers will enjoy this recital with us. Editor.] returning from ENGLAND. January 1, 1843, we were on board the ship going from the mouth of the Mississippi up to New Orleans. The weather was delightful — oranges were on the trees, cotton was still in the fields. The captain of the pilot boat invited our captain, and Mr. Pratt and family, to take New Year's dinner with them on the pilot. Mother not being able to go, and the little boys and Oliver not quite recovered from the measles, Mr. Pratt, Aunt Olive and myselfwere all that could accept the invitation. — We had a fine dinner a great treat to us after being on the ship ten weeks — and a sailing vessel at that, as no steamer had ever crossed the ocean at that time. They treated us very cordially —sent nice fruits to mother and the children, with fine sliced apples with sugar and brandy. This was declined at first, but had to be taken in order not to ofifend our entertainers. Our journey up the river was a very pleasing experience. The rolling of the billows was a thing of the past and we glided smoothly — on past forests, orchards and plantations an ever-varying scene of loveliness and grandeur. The negroes were everywhere present, and I imagined the people had turned dark skinned during our absence. In a few days we arrived at New Orleans and were there treated with the same southern cordiality by the officers of the shipping company that we had received on the pilot. A steam— — boat the Goddess of Liberty was chartered and the two hundred and fifty Saints went on board, and a week later were landed at St. Louis. When we had proceeded as far as Chester, in the southern part of Illinois, our family landed there and took up our abode for the winter, as our enemies had threatened to arrest P)rother Pratt as soon as he should step on Missouri soil.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files contain incorrect content that appears to be from other articles or sections. The Mothers in Israel article content appears to be split across multiple files with some content misplaced. The Semi-Annual Relief Society Conference content is mixed with unrelated material. Overall extraction quality shows significant content misalignment issues.",
+  "validated_corrections": [
+    {
+      "file": "October_Vol3_02_Frontispiece_Mrs._Ida_Bowman_Smith_Frontispiece_Daughters_of_Zion.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with author name from previous article instead of proper frontispiece content",
+      "action": "trim_start",
+      "text": "William Cullen Bryant MRS. IDA BOWMAN SMITH.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

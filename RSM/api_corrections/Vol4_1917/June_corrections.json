@@ -1,0 +1,99 @@
+{
+  "volume": 4,
+  "month": "June",
+  "year": 1917,
+  "total_files_checked": 13,
+  "files_correct": [
+    "June_Vol4_03_Article_Another_Widowed_Mother.txt",
+    "June_Vol4_05_Article_The_Disease_Germ_in_Utah.txt",
+    "June_Vol4_06_Article_June_Entertainments_Morag.txt",
+    "June_Vol4_07_Article_Pin_Money_Suggestions_Morag.txt",
+    "June_Vol4_08_Article_Evolution_of_the_American_Flag_A._B._L..txt",
+    "June_Vol4_09_Article_Common_Sense.txt",
+    "June_Vol4_10_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "June_Vol4_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "June_Vol4_13_Guide_Lessons_Guide_Lessons.txt"
+  ],
+  "corrections": [
+    {
+      "file": "June_Vol4_01_Article_The_Star-Spangled_Banner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article bleeding in at the end",
+      "action": "trim_end",
+      "text": "Francis Scott Key.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol4_02_Article_A_Widowed_Mother_to_her_Son_Alfred_Lambourne.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing beginning of poem",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IV. No. 6 JUNE, 1917. A Widow Mother to Her Son When He Told Her He Would Enlist (A True Incident) My son, O listen to these words I speak  Nor shame is mine that tears bedew my cheek  Tho' deep the anguish in thy mother's heart, She knows that duty bids us now to part. Ah! fathomless that love a mother feels, Divine, unselfish, soul to soul it seals; My son, thou art my One, thou art my All, Yet through my love I hear our country call. A prayer for thee shall be my every breath  0 spare my",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol4_04_Article_General_Conference_of_the_Relief_Society_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains page number from previous content at the beginning",
+      "action": "trim_start",
+      "text": "General Conference of the Relief Society. Amy Brown Lyman",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol4_12_Editorial_Editorial_Our_Conference.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains header information that should be trimmed",
+      "action": "trim_start",
+      "text": "OUR CONFERENCE.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are with the first two articles where content was split incorrectly, and some files have minor header/footer bleed that needs trimming. The General Conference article is very long but appears complete and correctly extracted.",
+  "validated_corrections": [
+    {
+      "file": "June_Vol4_01_Article_The_Star-Spangled_Banner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article bleeding in at the end",
+      "action": "trim_end",
+      "text": "Francis Scott Key.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol4_02_Article_A_Widowed_Mother_to_her_Son_Alfred_Lambourne.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing beginning of poem",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IV. No. 6 JUNE, 1917. A Widow Mother to Her Son When He Told Her He Would Enlist (A True Incident) My son, O listen to these words I speak  Nor shame is mine that tears bedew my cheek  Tho' deep the anguish in thy mother's heart, She knows that duty bids us now to part. Ah! fathomless that love a mother feels, Divine, unselfish, soul to soul it seals; My son, thou art my One, thou art my All, Yet through my love I hear our country call. A prayer for thee shall be my every breath  0 spare my",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol4_04_Article_General_Conference_of_the_Relief_Society_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains page number from previous content at the beginning",
+      "action": "trim_start",
+      "text": "General Conference of the Relief Society. Amy Brown Lyman",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "June_Vol4_12_Editorial_Editorial_Our_Conference.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains header information that should be trimmed",
+      "action": "trim_start",
+      "text": "OUR CONFERENCE.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

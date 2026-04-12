@@ -1,0 +1,161 @@
+{
+  "volume": 2,
+  "month": "October",
+  "year": 1915,
+  "total_merged": 3,
+  "total_splits": 10,
+  "total_cost": 0.4661,
+  "files": [
+    {
+      "source_file": "October_Vol2_03_Article_His_Wife's_Talents_Elsie_Chamberlain_Carroll.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "His Wife's Talents",
+          "category": "Article",
+          "author": "Elsie Chamberlain Carroll",
+          "start_boundary": "His Wife's Talents. By Elsie Chamberlain Carroll. \"O, by",
+          "end_boundary": "law books in the other. (to be continued.)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "In the Kitchen Laboratory",
+          "category": "Home_Science",
+          "author": "Hazel Love Dunford",
+          "start_boundary": "In the Kitchen Laboratory. By Hazel Love Dunford. RELISHES",
+          "end_boundary": "A tablespoonful of soda to a gallon of water is the proportion.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy B. Lyman",
+          "start_boundary": "Notes from the Field. By the General Secretary, Mrs. Amy",
+          "end_boundary": "to the homes of thirty aged women and widows.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "A Prince of Ur",
+          "category": "Article",
+          "author": "Homespun",
+          "start_boundary": "A Prince of Ur. By Homespun. The long, winding stone",
+          "end_boundary": "only in the pure white linen of his tunic, while upon the flowing dark brown of his glossy hair there rested only the small skull-cap which was but a covering for the crown of his blossoming head. His noble features were regular, his nose had that full and long contour that bent as the line swept down his face to give the full benignity which his glowing brown eyes with the covert kindliness in their depths warranted. The mouth was large and firm, as befitted such a prince, and on the firm, clear-cut chin, there sat the seal of self-command. He justified the incoherent epithets of praise which were preceding the voluble visitor up the long and tiresome stairs.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HIS WIFE'S TALENTS"
+      ],
+      "notes": "The file contains 4 articles that were merged together. The 'A Prince of Ur' article appears to be cut off mid-sentence at the end of the file, suggesting this is part of a larger serialized story.",
+      "validation_issues": [
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 19823,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 48888,
+        "output_tokens": 714,
+        "cost": 0.1574
+      }
+    },
+    {
+      "source_file": "October_Vol2_06_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Prince of Ur",
+          "category": "Article",
+          "author": "Homespun",
+          "start_boundary": "A Prince of Ur. By Homespun. The long, winding stone steps,",
+          "end_boundary": "midnight air. (to be continued.) The Relief Society will hold",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Current Topics",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "Current Topics. By James H. Anderson. During the past five",
+          "end_boundary": "western land of Zion. EDITORIAL .  THE GENERAL BOARD Mrs.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A PRINCE OF UR",
+        "CURRENT TOPICS"
+      ],
+      "notes": "This file contains the continuation of 'A Prince of Ur' serialized story and the 'Current Topics' section. There's also a Relief Society conference announcement between the two main articles. The file appears to end with the beginning of the Editorial section listing the General Board members.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 25616,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 50232,
+        "output_tokens": 367,
+        "cost": 0.1562
+      }
+    },
+    {
+      "source_file": "October_Vol2_09_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. November 2, 1915. Work and Business.",
+          "end_boundary": "Read the fifty-ninth section of the Doctrine and Covenants.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Genealogy - Sources of Information",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "Genealogy. LESSON III. November 16. sources of information.",
+          "end_boundary": "should now center their efforts on instructing and helping others.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Ethics - Sympathy",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "Home Ethics and Art. LESSON November 23. ETHICS. SYMPATHY.",
+          "end_boundary": "7. How can you cultivate sympathy?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Art - Utah Artists",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART. LORUS PRATT. (a) Describe Pratt's landscape painting",
+          "end_boundary": "(g) Why do we need artists?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections: Work and Business (Lesson I), Genealogy (Lesson III), Home Ethics, and Art. The Theology lesson (Lesson II) mentioned in the header appears to be the 'Keeping the Sabbath Day Holy' content which is part of the Work and Business section. There's also a musical composition 'The Relief Society' by John M. Chamberlain that appears to be part of the Art lesson section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16572,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 47918,
+        "output_tokens": 582,
+        "cost": 0.1525
+      }
+    }
+  ]
+}

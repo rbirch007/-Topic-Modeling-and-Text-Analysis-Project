@@ -1,0 +1,209 @@
+{
+  "volume": 15,
+  "month": "June",
+  "year": 1928,
+  "total_merged": 3,
+  "total_splits": 10,
+  "total_cost": 0.5268,
+  "files": [
+    {
+      "source_file": "June_Vol15_02_Article_Relief_Society_Conference—_Officers'_Meeting_(Morning_Sessio.txt",
+      "num_articles_found": 8,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Relief Society Conference— Officers' Meeting (Morning Session)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY CONFERENCE 293 AMY BROWNLYMAN GENERAL PRESIDENCY",
+          "end_boundary": "some stakes have used wheat interest just as they saw fit.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Officers' Meeting (Afternoon Sessions)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Officers' Meeting (Afternoon Sessions) Theological and Literary Departments",
+          "end_boundary": "should occupy some time each day, for they will give such growth",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Literary Section",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Literary Section Miss Alice L. Reynolds, member of General Board, conducting",
+          "end_boundary": "Within the soul made desolate, On humble knees I bend",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Social Service Department",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Social Service Department (Bishop's Building) Counselor Jennie B. Knight, Presiding",
+          "end_boundary": "some are doing fairly well in school.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Choristers and Organists' Department",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Choristers and Organists' Department (McCune School of Music)",
+          "end_boundary": "if they were once beautiful, they are always beautiful.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "General Session (Thursday Morning)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "General Session (Thursday Morning) COUNSELOR JENNIE B. KNIGHT",
+          "end_boundary": "may the Lord help us to realize these spiritual things of life,",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "General Session (Afternoon Meeting)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "General Session (Afternoon Meeting) COUNSELOR LOUISE Y. ROBISON",
+          "end_boundary": "Be with me, Lord!",
+          "confidence": "high"
+        },
+        {
+          "order": "h",
+          "title": "Substitution / Be With Me, Lord / June / The Great Salt Lake",
+          "category": "Poem",
+          "author": "Alberta Huish Christensen / Annie Pike Greenwood / Christie Lund / Linda S. Fletcher",
+          "start_boundary": "Substitution By Alberta Huish Christensen An English-garden picture hangs",
+          "end_boundary": "There's no forgetting.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "This file contains multiple conference sessions and some poems that were merged together. The conference sessions should be separate articles as indicated in the table of contents. The final section contains multiple short poems that appear to be separate pieces but are grouped together at the end.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found",
+        "Split 'g': start_boundary not found",
+        "Split 'g': end_boundary not found",
+        "Split 'h': start_boundary not found",
+        "Split 'h': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 35656,
+      "tier": 1,
+      "pdf_pages": [
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363
+      ],
+      "api_usage": {
+        "input_tokens": 65234,
+        "output_tokens": 1273,
+        "cost": 0.2148
+      }
+    },
+    {
+      "source_file": "June_Vol15_07_Article_Choristers_and_Organists'_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Choristers and Organists' Department",
+          "category": "Article",
+          "author": "Various speakers",
+          "start_boundary": "Choristers and Organists' Department (McCune School of",
+          "end_boundary": "if they were once beautiful, they are always beautiful.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY CONFERENCE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This is a single conference department section with multiple speakers addressing chorister and organist issues. The content flows continuously as one unified meeting transcript rather than separate articles. The General Session content that appears at the end seems to be the beginning of the next section and should remain with this department section as it's part of the same conference proceedings.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 18524,
+      "tier": 1,
+      "pdf_pages": [
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383
+      ],
+      "api_usage": {
+        "input_tokens": 53804,
+        "output_tokens": 372,
+        "cost": 0.167
+      }
+    },
+    {
+      "source_file": "June_Vol15_08_Article_General_Session_(Morning).txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "General Session (Morning)",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "General Session (Thursday Morning) COUNSELOR JENNIE B. KNIGHT",
+          "end_boundary": "thy people shall be my people; thy God shall be my God.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY CONFERENCE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article covering the General Session (Morning) of the Relief Society Conference. It includes multiple speakers: Counselor Jennie B. Knight, Mrs. Pearl C. Sloan, Mrs. Florence R. Knight, Mrs. Lalene H. Hart, Mrs. Annie Wells Cannon, and Miss Sarah M. McClelland. The content flows as one continuous session report rather than separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 23528,
+      "tier": 1,
+      "pdf_pages": [
+        382,
+        383,
+        384,
+        385,
+        386
+      ],
+      "api_usage": {
+        "input_tokens": 46965,
+        "output_tokens": 275,
+        "cost": 0.145
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "volume": 9,
+  "month": "July",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0215,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "July_Vol9_12b_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_II_Work_and_Business.txt",
+      "status": "complete",
+      "current_chars": 56,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header/title that appears at the bottom of page 54. The actual lesson content for 'Work and Business' is not shown in these PDF pages - it would appear on subsequent pages not included in this set.",
+      "api_usage": {
+        "input_tokens": 6335,
+        "output_tokens": 166,
+        "cost": 0.0215
+      },
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  ]
+}

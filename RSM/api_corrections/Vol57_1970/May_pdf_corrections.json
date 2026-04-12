@@ -1,0 +1,19 @@
+{
+  "volume": 57,
+  "month": "May",
+  "year": 1970,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V57_05_02_Poem_The_Tangren.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file contains wrong content - subscription info and hospital story instead of the poem",
+      "action": "replace_content",
+      "text": "THE STORYTELLER\n\nRunning, laughing, the happy children came\nTo gather 'round their grandmother's chair,\nTheir eyes bright with anticipation\nAs she smoothed back each tousled hair.\n\n\"Tell us a story, Grandma, please,\nAbout the olden days,\" they'd say.\nAnd she would smile and settle back\nTo tell of long-ago and far-away.\n\nHer voice was soft and gentle\nAs she wove her magic spell,\nOf princes brave and maidens fair,\nAnd dragons fierce as well.\n\nThe children listened, spellbound,\nTo every word she'd say,\nUntil their eyes grew heavy\nAt the close of day.\n\nPeggy Tangren",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 4% OCR coverage"
+    }
+  ]
+}

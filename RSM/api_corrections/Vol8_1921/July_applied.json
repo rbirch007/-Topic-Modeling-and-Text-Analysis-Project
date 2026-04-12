@@ -1,0 +1,37 @@
+{
+  "volume": 8,
+  "month": "July",
+  "year": 1921,
+  "timestamp": "20260315_120947",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "July_Vol8_05a_Article_Our_Music_Forces.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (81 chars added)"
+    },
+    {
+      "file": "July_Vol8_09_Editorial_Editorial_Our_President_Emeritus,_Emmeline_B._Wells.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (827 chars added)"
+    },
+    {
+      "file": "July_Vol8_10a_Poem_With_the_Gift_of_an_Apron.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "July_Vol8_11_Guide_Lessons_Guide_Lessons.txt",
+      "action": "note",
+      "result": "INFO: This file contains mixed content from multiple lessons and advertisements, not a coherent single article"
+    }
+  ]
+}

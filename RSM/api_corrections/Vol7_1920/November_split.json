@@ -1,0 +1,51 @@
+{
+  "volume": 7,
+  "month": "November",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1166,
+  "files": [
+    {
+      "source_file": "November_Vol7_07_Article_The_Official_Round_Table.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "MRS. CLARISSA SMITH WILLIAMS MRS. AMY BROWN LYMAN Notes from",
+          "end_boundary": "was a life of giving to others the very best of all",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "On the Watch Tower",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "James H. Anderson. Turks and French continued at warfare in",
+          "end_boundary": "whose vote was questioned.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OFFICIAL ROUND TABLE",
+        "ON THE WATCHTOWER"
+      ],
+      "notes": "This file contains two distinct articles that were merged together. The first is 'The Official Round Table' which contains field reports from various Relief Society organizations. The second is 'On the Watch Tower' by James H. Anderson, which covers current events and news items from September 1920. The boundary between them is clear where Anderson's byline appears followed by international news coverage.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14451,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37007,
+        "output_tokens": 372,
+        "cost": 0.1166
+      }
+    }
+  ]
+}

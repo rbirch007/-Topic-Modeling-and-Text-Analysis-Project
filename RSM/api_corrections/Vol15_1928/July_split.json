@@ -1,0 +1,105 @@
+{
+  "volume": 15,
+  "month": "July",
+  "year": 1928,
+  "total_merged": 2,
+  "total_splits": 3,
+  "total_cost": 0.3218,
+  "files": [
+    {
+      "source_file": "July_Vol15_04_Article_Robbed.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Robbed by Wolves",
+          "category": "Article",
+          "author": "Carter E. Grant",
+          "start_boundary": "ROBBED BY WOLVES 357 trail and camping places, were",
+          "end_boundary": "earnest sad reply, 'Yes, yes, Caroline. I'll do",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Pioneer Memoriam",
+          "category": "Poem",
+          "author": "Eloise A. McClure",
+          "start_boundary": "Pioneer Memoriam By Eloise A. McClure Deep in the",
+          "end_boundary": "Heart of the Golden West.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "ROBBED BY WOLVES",
+        "PIONEER MEMORIAM"
+      ],
+      "notes": "The file contains two distinct pieces: a long narrative article 'Robbed by Wolves' by Carter E. Grant (pages 357-364) and a poem 'Pioneer Memoriam' by Eloise A. McClure (pages 364-365). The visual layout in the images confirms these are separate works, with the poem starting on page 364 after the article concludes.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 20759,
+      "tier": 1,
+      "pdf_pages": [
+        425,
+        426,
+        427
+      ],
+      "api_usage": {
+        "input_tokens": 43808,
+        "output_tokens": 376,
+        "cost": 0.1371
+      }
+    },
+    {
+      "source_file": "July_Vol15_21_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman Social",
+          "end_boundary": "DIRECT OR ROUTE REVERED $47.50 Proportionately low fares",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains only one article - 'Notes from the Field' by Amy Brown Lyman. The file appears to be cut off mid-sentence at the end with advertising content. The content includes social service items, stake reports, and teacher materials, which is typical for the Notes from the Field section.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10034,
+      "tier": 1,
+      "pdf_pages": [
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283
+      ],
+      "api_usage": {
+        "input_tokens": 60223,
+        "output_tokens": 272,
+        "cost": 0.1847
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "volume": 52,
+  "month": "October",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_10_05_SpFt_My_Quintero.txt",
+      "issue_type": "bleed_end",
+      "description": "Article is cut off mid-sentence. The text continues beyond 'I think this is the secret of' with additional content about the relationship between Indian children and foster parents.",
+      "action": "append",
+      "text": "a good relationship between the Indian child and the foster parents—talk things over, tell them whatever it is that is bothering you. The foster parents should also tell the Indian child how they feel. I am thankful for the wise advice I received from the caseworkers I have had.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 6% OCR coverage"
+    },
+    {
+      "file": "V52_10_22_Poem_Quantity_Shurtz.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file actually starts correctly with the title - no garbled text from previous article found",
+      "action": "note",
+      "text": "The article file begins properly with 'Quantity Cooking for Relief Society Functions' which matches the title shown in the page image. No trimming needed.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_10_26_Poem_Perennial_Anderson.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains completely wrong content - it has a story about Joan and Joey instead of the poem 'Perennials' by Marian Crawford Anderson",
+      "action": "replace_content",
+      "text": "Perennials\nMarian Crawford Anderson\n\nI have three flowers in my garden\nI tend with loving care,\nFor they will grow and days will come\nWhen they will not be there.\n\nThree little girls all in bloom—\nA bright bouquet to light a room.\n\nOh, I am seldom lonely anymore;\nThey bring the wide world to my door,\nAnd take me with them, hand in hand,\nInto a more enchanted land.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "QC FAIL: only 17% OCR coverage"
+    },
+    {
+      "file": "V52_10_27_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with text from previous articles, should begin with the synopsis",
+      "action": "trim_start",
+      "text": "She spends a week end with Kathy, her roommate, at the Kirk family farm and becomes interested in the family, at the hospital, Joan hears a siren and @ Joan was at the door of the emergency entrance almost as soon as the ambulance was,",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V52_10_29_Lssn_Theology_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "Article file starts with content from middle/end of lesson instead of the beginning shown in page image",
+      "action": "trim_start",
+      "text": "Elder Roy W. Doxey\n\nLesson 68—Knowledge and Events of the Future\n\n(Text: Doctrine and Covenants, Section 88:76-116)\n\nFor First Meeting, January 1966\n\nObjective: To learn the importance of missionary preparation; the place of education in the gospel; and of events of the future predicted.\n\nINTRODUCTION\n\nAmong the many great truths revealed in Section 88, known as the \"Olive Leaf,\" is the promise of seeing the Savior in his own time and in his own way, provided that the Church member will keep his mind single to God that light may dissipate darkness from mind and body (D&C 88: 67-68).",
+      "confidence": "low",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    }
+  ]
+}

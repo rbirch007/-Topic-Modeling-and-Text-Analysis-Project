@@ -1,0 +1,80 @@
+{
+  "volume": 13,
+  "month": "December",
+  "year": 1926,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1705,
+  "files": [
+    {
+      "source_file": "December_Vol13_10_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "John the Revelator",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First Week",
+          "end_boundary": "History of the Christian Church, by Schaff, vol. I.)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "Relief Society Magazine, February, 1927, \"Notes From the Field,\" Palmyra stake.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Edna St. Vincent Malay",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature LESSON III (Third Week in February)",
+          "end_boundary": "the most vital passages in it.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Martha",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week",
+          "end_boundary": "was physically very well and",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for February Guide Lessons. The last lesson (Martha) appears to be cut off mid-sentence, ending abruptly with 'was physically very well and'. Each lesson covers a different week and subject area: Theology/Testimony, Work/Business, Literature, and Social Service.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 14493,
+      "tier": 1,
+      "pdf_pages": [
+        751,
+        752,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760
+      ],
+      "api_usage": {
+        "input_tokens": 54190,
+        "output_tokens": 526,
+        "cost": 0.1705
+      }
+    }
+  ]
+}

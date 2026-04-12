@@ -1,0 +1,27 @@
+{
+  "volume": 3,
+  "month": "February",
+  "year": 1916,
+  "timestamp": "20260315_120936",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol3_01_Mothers_in_Israel_Mothers_in_Israel.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "February_Vol3_02_Genealogy_Echo_of_the_Genealogical_Congress.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol3_13_Editorial_EDITORIAL_Efficiency.txt",
+      "action": "note",
+      "result": "INFO: File contains only partial header text instead of editorial content"
+    }
+  ]
+}

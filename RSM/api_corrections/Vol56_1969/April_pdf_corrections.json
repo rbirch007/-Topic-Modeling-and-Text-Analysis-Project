@@ -1,0 +1,19 @@
+{
+  "volume": 56,
+  "month": "April",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_04_02_Frnt_Let_Me_Robinson.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues far beyond the From Near and Far section into unrelated cancer cure content",
+      "action": "trim_end",
+      "text": "Stephens, Salt Lake City, Utah",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ]
+}

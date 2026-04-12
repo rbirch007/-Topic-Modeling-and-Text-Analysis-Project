@@ -1,0 +1,335 @@
+{
+  "volume": 52,
+  "month": "August",
+  "year": 1965,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V52_08_01_Frnt_Summer_Coles.txt",
+    "V52_08_03_SpFt_Lord_McConkie.txt",
+    "V52_08_04_Poem_Farewell_Stewart.txt",
+    "V52_08_06_Fict_Letitia_Robinson.txt",
+    "V52_08_07_SpFt_The.txt",
+    "V52_08_08_SpFt_Lets_Henderson.txt",
+    "V52_08_09_Poem_The_Chamberlin.txt",
+    "V52_08_10_GenFt_Womans_Cannon.txt",
+    "V52_08_11_GenFt_Editorial_Madsen.txt",
+    "V52_08_12_GenFt_Notes_Conference.txt",
+    "V52_08_13_Poem_Have_Stacey.txt",
+    "V52_08_17_The Home_Caster_Hansen.txt",
+    "V52_08_20_GenFt_Notes_Activities.txt",
+    "V52_08_22_Poem_After-Words_Robert.txt",
+    "V52_08_24_Poem_Three-Generation_S.txt",
+    "V52_08_25_Lssn_Work_Jardine.txt",
+    "V52_08_29_Poem_Lyric_Fairbairn.txt",
+    "V52_08_32_Poem_Till_Whited.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header content that should not be included",
+      "action": "trim_start",
+      "text": "a Relief SOCISTY Magazine Volume 52 Number 8 August 1965 Lessons for November . A = = I The Cover: Frontispiece: Art Layout: lilustrations: Stmmet Aff toenoon Christie Lund Coles Transparency by Josef Muench Lithographed in Full Color by Deseret News Press Boulder Mountain, Utah, Photograph by Willard Luce Dick Scopes Mary Scopes 561",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with publication information that should not be included",
+      "action": "trim_end",
+      "text": "the Relief Society Magazine NEE Ee \n\nPublished monthly by Relief Society General Board Association. \nEditorial and Business Office:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "hers and sisters to applaud.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that belongs to next article",
+      "action": "trim_end",
+      "text": "But there was so much more to",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_08_14_The Home_Home_Thomas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and photo caption that should not be included",
+      "action": "trim_start",
+      "text": "586 Photograph by Josef M ah ' inside and out",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_15_The Home_A_Luce.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "592 THE HOME—INSIDE AND OuT 593 Quantity Cooking for Relief Society Functions (In Three Parts) Part I - Main Dishes, Casseroles, and Meats Rosa Shurtz ®@ Quantity cooking presents special problems in food handling, but improved modern processes of canning, freezing, and packing foods are great time and labor savers for inexperienced cooks. Costs of commercially prepared food are about the same as homemade when time and labor are counted. Buying good grade, ready-prepared main ingredients, experimenting with seasonings, adding fresh or home-prepared products to complete the dish, produce the good home-cooked flavor that is the main appeal of bazaars and fund-raising dinners.. Wholesale houses will sell to an organization, and there are also supply houses for restaurants, cafes, and other institutions in all large cities, where quantity purchases may be made. The butcher will usually quote restaurant prices on meats and will bone and slice the meat. Many bakers and restaurants will roast turkeys and other meats if your facilities are not adequate. Some bakers will order doughnut, cake, gingerbread, and other prepared mixes in bulk, from their own suppliers for an organization.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_18_The Home_Jennette_Quilts.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article (Ring Around Her Heart)",
+      "action": "trim_end",
+      "text": "595 Shirley Thulin Chapter 4 Synopsis: Joan Morgan, superintendent of nurses at Hillcrest Hospital, encourages Tom, a young paralyzed patient, to think of the things that he will be able to do, and to plan for his future. Joan is criticized for this attitude. The hospital administrator, Dr. Niles, appears to be a stern and withdrawn person, and Joan wonders what he is really like. Kathy, who is a niece of Dr. Niles, invites Joan to spend a week end at the family farm. ® Joan settled back in the leather seat and felt the ripple of excitement go through the atmosphere inside the bus. People going someplace, she thought, are interesting. She looked around her. Nearly everyone was_ smiling, even Kathy, though the feeling between her and Joan was still not what it had been the first day she had asked Joan to come home with her for the week end. \"Your folks know I'm coming?\" Joan asked. \"Yes, I called them yesterday. I can just see Mom. She's been cooking and cleaning all day.\" \"Oh, I hope she doesn't go to too much bother.\"' \"Don't worry, she loves it. A week-end guest keeps her going all the rest of the month. Gives her something to think about.\" \"I can't wait to meet her.\" \"I hope you won't be bored. There isn't much to do just talk, and ride horses, maybe.\" \"I']1 just love it. I've missed the farm.\" \"\"You've lived on a farm?\" \"Most of my life.\" \"I'd never have known you're so so different from the farm folks I know.\" Kathy reddened a little, as if she wished she hadn't said that, and Joan decided to pretend not to notice. Mrs. Kirk was just about as Joan had pictured her. A lot like Kathy, only taller and with the same dark eyes. There were laugh wrinkles in her face and around her eyes, and she gave Kathy a big hus as though she hadn't seen her for months instead of only a week. Mr. Kirk was brown and tall. He was friendly, too. The drive from the station to their farm took only a few moments, and they didn't get a chance to say much. Joan felt as if she'd always known these people. \"Where are the children?\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_19_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text",
+      "action": "trim_end",
+      "text": "(To be continue",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_08_21_Lssn_Theology_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Flake, stake theology class leader; Barbara Browning as Amy Brown Lyman; Glenna Cutler as Belle S. Spafford. LaVon F. Hadley, President, Boise Stake Relief Society, reports: \"At our March leadership meeting, in commemoration of the anniversary of Relief Society, stake theology leader Carol R. Flake presented these sisters during the reading of a poem 'Parade of Presidents,' written by her mother, the late Irene K. Read. Following the presentation was a brief address 'Our Heritage as Relief Society Sisters,' by President Hadley, and the song 'One Hundred Thousand Strong,' by a stake Singing Mothers group under the direction of stake chorister Julie Atkinson and stake organist Collette Howard.\" 610 no fighting on, the wrong Side ie telestia] glory. The € are th (Conferene Report, Oct ber 1913 Sons of Perdition, ( £TSes 23-24 ) Page 117) Perdi lOn is also kno as a kingdom b of \"no glory.\" THE EARTH; (Verse 24 ) The Tevelation Continues in Pointing Out that the earth has SPIRITUAL — 4n eterna] estiny as wel] aS does It requires ™ revelation Man. [t IS decre dt at the faith. To Interp et n erstand that it Would be the habitation For a withstanding they die, they of the morta] tabernacles for the also shall rise 48ain, a Spiritual body = C 88: J: e: Measure of Its Creation jt Would He Said that the body is Sown a also become 4 Celestia] kingdom, natural bo » but it is Taised g:18-20, y. In order we may full Because Paul; this gs € letter understand Position in Said that \"flesh and bloo cannot ~ eternal worlds llowing the Inherit the kingdom of od\" esurrectio » IS to be q termined verse 50), it Is beliey d by Some he I] e Y; We are Innot of our faith hat the body is structed as fol] not actually > sed from the ETave, but that it jis the spirit of That bodies ho are Celestia] man tha revived resurrect Ingdom Possegg [the earth] ed. Is true th \"fles and — it, oo ~ a fd fecttant blood\" (mo tals) cannot Inherit intent are they Sanctifieg the kingdoms assigned resurrect. Ed beings, The Tesurrection of And they Who are not Sanctified Which we Shal] Partake wil] be e I I 1 icy inherit another kingdom, even that of a:: a terrestrial] Kingdom, Or that of a substance. (P. Alippians 3:20-21;; ingdo.: Amulek Put it coming Spiritual] and j (Alma 11:45). In Man will no The Prophet Joseph Smith Was emphatic IN mainta; n. I the Tesurrection Wwe no fundamenta] Prin- 4 human System Ver goes into another jn this € World to come; J Care N to the four f heaven, yet the Particles body Was As Tesurrected beings we shal] ave perfect bodies he dis. Figurement, f the flesh Will be removed Question jg Sometime raised to Whethe not there Will be difference In the resur rection h tween the p Tson who l€s in y ung adulthood Nd the One wh e Mortality at an advanced age. The Scriptures do Not speak expressly ¢ his ques tion, but Only of th Perfecteq body (Alma 11:49. » 40:23. D&C 88:23 ) Howeve, President Joseph F mith sa In the €surrection of the dead the child th aS buried IN its Infancy il] Come up Mm the fo c hat it will evelo til it re hes the ful] Measure Of the Status f its Spirit, ale (Im to Perfection will come Testitution. But the Spirit w tinue to expand an body after + As Concerning the resurrection, I will Merely Say that al] men will come 8rave I AUGUST 1965",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_23_Lssn_VisiCthirnig_Faint.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Pendence upon his Father. He re. peatedly declare that his might Mediate] € receive no re. Works w Te perform d by the Sponse to h antic crieg or the Power of G S Spirit and Made it Sounding of her cay' horn All Clear that, «7 can of mine Own this tim Prayj mightily Self do nothi eek not nd, final] » With Ustaining Mine ow Will, but the wil] of the Strength Ich f] Into her Father hic hath sent me\" body, € crawled the roa (John 5 30 aboy er, Ospital, the 0 the da ly prob] Ms and Cares back UD to the Toad.\" The doctor of life, Sustaining Support and Teplied, « € must been With WIS€ solution \"Nn more than you.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_26_Lssn_Social_Christensen.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next lesson",
+      "action": "trim_end",
+      "text": "And in",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous lesson",
+      "action": "trim_start",
+      "text": "The selections of literature which we will consider this month all share a focus on personal choice, and the results of such choice. Problems of personal choice.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of poem and advertisements",
+      "action": "trim_end",
+      "text": "The air is so full Of sunlight and song That this is a day To cherish long. With joy in my heart, My beloved here, \"And a day like this— Oh, heaven is near! HAWAIIAN TOURS July 31, 1965 October, November 1965 WORLD'S FAIR and L. D. S. PAGEANT TOURS 16 day tour July 17—Aug. 7 22 day tour July 24—Aug. 14 Two 29 day tours July 11—Aug. 8 and July 24—Aug. 21 AUTUMN TOURS TO EUROPE Leaves September 3, 1965 WORLD'S FAIR NEW ENGLAND and CANADIAN FALL TOUR September 16, 1965 Margaret Lund Tours 3021 South 23d East P. O. Box 2065 Salt Lake City, Utah 84109 485-2444 — 262-2337 DOCTRINE AND COVENANTS Sections 88, 89, 90 (Eight Lectures) by ROY W. DOXEY Associate Professor of Religion Brigham Young University EDUCATION WEEKS 1965 Price $1.50 Available end of June from BRIGHAM YOUNG UNIVERSITY Extension Publications Provo, Utah 84601 Write for Extension Publications Catalog listing talks given at BYU by General Authorities 637 i \\ @ @ Is your family grown or mostly grown? @ Do you want to become a technically competent, contributing member of society? @ Would you be proud to serve as a registered nurse with an Associate of Arts degree? @ Are you in need of dignified, remunerative employment? > FOR COMPLETE INFORMATION WRITE OR PHONE (EVENING CLASSES IN SALT LAKE CITY BRIGHAM YOUNG UNIVERSITY COLLEGE OF NURSING Through the B. Y. U. - Salt Lake Center for Continuing Education offer a two year associate degree career in NURSING FOR MATURE WOMEN WHO ARE HIGH SCHOOL GRADUATES mw YOUNG UN, ee BYU \"\"s,. ' SALT LAKE ° CENTER FOR CONTINUING EDUCATION 200 North Main Phone 328-0325 a Lake City FIRST CLASS STARTS OCTOBER 4, 1965 J CANADIAN ROCKIES and NORTHWEST TOUR leaving August 8th PASSION PLAY TOUR leaving August 22nd LABOR DAY TOUR September 4-5-6 NEW ENGLAND, CANADIAN FALL TOUR leaving September 4th HAWAIIAN ALOHA TOUR October ROSE PARADE TOURS December Esther James Tours 460 7th Avenue Salt Lake City, Utah 84103 Phones: 363-5229 — 359-8051 SINGING MOTHERS' CHORAL ARRANGEMENTS Abide with Me—Madsen.20 Come Ye Blessed of My Father.20 Come Ye Blessed—Scott.25 Create in Me a Clean Heart.25 Eternal Life 20000..25 Eye Hath Not Seen 00 25 God of All Nature 0.000000..25 Incline Your Ear - 000000..0.0------..25 Lord Bless Thee and Keep Thee.20 Lord, God of Our Fathers.25 Lord Is My Shepherd—Ryg.20 Lord's Prayer—Robertson 25 Peace I Leave with You.20 Prayer for Our Country 25 Voice in the Wilderness.25 327 Broadway Idaho Falls, Idaho 83401 Orders shipped the same day as we receive. Catalogs supplied. 638 Tour the Holy Land This Fall Via Pan American Jet TOUR LEAVES OCTOBER 7th: Murdock Travel's annual Fall tour of the ever inspiring Holy Land provides you with 21 days of high quality, worry-free travel. You are assured of luxury travel on Pan American jet clippers and superb accommodations in the finest hotels... All at unusually low cost! The tour includes all of the Holy Land as well as places such as Istanbul, Cairo, Athens, and Rome. W. Cleon Skousen, Tour Director Mr. Skousen is a foremost LD. S. Authority on the Holy Land and the author of several successful books. Among these are: So You Want to Raise a Boy? The First Two Thousand Years, and The Third Thousand Years. WBeeteveeceoveeeeeseeeesseeaesenesceseoeseveescesvenvuvvvuevevuvueeee MURDOCK TRAVEL, INC. 14 South Main Street, Salt Lake City, Utah 84101, Phone 328-3161 PLEASE SEND ME FULL PARTICULARS ON THE FALL TOUR OF THE HOLY LAND. MURDOCK Xe le i. 5 e TRA VEL WY eee ceecee cece ceeeesState eeZip. Gu Meeaeeteoeseeeesvoseeeetseevensbe By Wielka ccc cccw sss cuiinccddecneccccccccccnccc cts ee, BEAUTIFUL Jhank You HANDY for your patronage and DURABLE your fine friendship over the years We have A sure way of keeping alive the valuable instruction of each month's Relief Society MagaALL THE NEW HANDCRAFTS: zine is in a noaneseus neune nme, be ° Mountain West''s first an inest bindery an Plastic Grapes and other printing house is prepared to bind your editions Plastic Casting Supplies into a durable volume. Feather Flowers Mail or bring the editions you wish bound to Ribbon Flowers the Deseret News Press for the finest of service. Satin Wrapped Fruit, etc. 1600 Empire Road, Salt Lake City, Utah 84104 and Phone 486-1892 ALL THE OLD FAVORITES: Cloth Cover — $3.25; Leather Cover — $5.25 Yearly Index Included Mosaics Advance payment must accompany all orders. Aluminum Trays Copper Tooling Basketry, etc. Please include postage according to table listed below if bound volumes are to be mailed. Send 25¢ for catolog and also receive a rene yea our newest book Zone 1 and 2.55 Zone 6.90 \"EGG CARTON PARTY FAVORS\" Zone 3.60 Zone 7 - 2005. Zone 4.65 Zone 8.. 1.20 Discounts to Groups Jone 5S 80 ZIM'S 240 East 2nd South Salt Lake City, Utah — 2 PESERET FREws PREssSs 639 99",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_30_Poem_The_Bowles.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content",
+      "action": "trim_end",
+      "text": "640 Timely Books From Three Great LDS Authors 1 A Rational Theology by John A. Widtsoe A Ration A leading L. D. S. Theologian and scholar of a Theol OS) former generation explores such timely topics as fom \"The Equality of Man,' 'The United Order and! \\ Tithing, 'The Brotherhood of Man,\"' and many other fundamental principles that harmonize with the knowledge and reason of man. $2.50 2 The Gospel and Man's Relationship to Deity by B. H. Roberts The author of several LDS best sellers penned this volume originally in 1888 while serving as a missionary in England. It was written for youth at the instigation of the general superintendency of the Mutual Improvement Association. It is brilliantly written and will help the reader understand basic gospel principles. $3.25 3 The Key to Theology by Parley P. Pratt In these days of intellectual confusion, a leader among Latter-day Saint literary figures of the Joseph Smith era provides guidance that is essential for our time. The author writes with the insight of a great scholar andthe inspiration of a true apostle of Christ.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with age numbers without proper header",
+      "action": "prepend",
+      "text": "[Vol52 | August 1965 | Page 640 | General Feature | Birthday Congratulations]\n\n",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content that should be separate",
+      "action": "trim_end",
+      "text": "640 Timely Books From Three Great LDS Authors 1 A Rational Theology by John A. Widtsoe A Ration A leading L. D. S. Theologian and scholar of a Theol OS) former generation explores such timely topics as fom \"The Equality of Man,' 'The United Order and! \\ Tithing, 'The Brotherhood of Man,\"' and many other fundamental principles that harmonize with the knowledge and reason of man.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "To a New Chapel, by Maureen Davies",
+      "expected_page": 571,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "The extraction has significant issues with content bleeding between articles. Many files contain portions of adjacent articles or magazine formatting elements. The OCR quality appears poor in several sections, particularly in lesson content where text is heavily garbled. Several poems listed in the table of contents appear to be embedded within other articles rather than extracted as separate files.",
+  "validated_corrections": [
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header content that should not be included",
+      "action": "trim_start",
+      "text": "a Relief SOCISTY Magazine Volume 52 Number 8 August 1965 Lessons for November . A = = I The Cover: Frontispiece: Art Layout: lilustrations: Stmmet Aff toenoon Christie Lund Coles Transparency by Josef Muench Lithographed in Full Color by Deseret News Press Boulder Mountain, Utah, Photograph by Willard Luce Dick Scopes Mary Scopes 561",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with publication information that should not be included",
+      "action": "trim_end",
+      "text": "the Relief Society Magazine NEE Ee \n\nPublished monthly by Relief Society General Board Association. \nEditorial and Business Office:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "hers and sisters to applaud.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_14_The Home_Home_Thomas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with page number and photo caption that should not be included",
+      "action": "trim_start",
+      "text": "586 Photograph by Josef M ah ' inside and out",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_15_The Home_A_Luce.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article",
+      "action": "trim_end",
+      "text": "592 THE HOME—INSIDE AND OuT 593 Quantity Cooking for Relief Society Functions (In Three Parts) Part I - Main Dishes, Casseroles, and Meats Rosa Shurtz ®@ Quantity cooking presents special problems in food handling, but improved modern processes of canning, freezing, and packing foods are great time and labor savers for inexperienced cooks. Costs of commercially prepared food are about the same as homemade when time and labor are counted. Buying good grade, ready-prepared main ingredients, experimenting with seasonings, adding fresh or home-prepared products to complete the dish, produce the good home-cooked flavor that is the main appeal of bazaars and fund-raising dinners.. Wholesale houses will sell to an organization, and there are also supply houses for restaurants, cafes, and other institutions in all large cities, where quantity purchases may be made. The butcher will usually quote restaurant prices on meats and will bone and slice the meat. Many bakers and restaurants will roast turkeys and other meats if your facilities are not adequate. Some bakers will order doughnut, cake, gingerbread, and other prepared mixes in bulk, from their own suppliers for an organization.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_18_The Home_Jennette_Quilts.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next article (Ring Around Her Heart)",
+      "action": "trim_end",
+      "text": "595 Shirley Thulin Chapter 4 Synopsis: Joan Morgan, superintendent of nurses at Hillcrest Hospital, encourages Tom, a young paralyzed patient, to think of the things that he will be able to do, and to plan for his future. Joan is criticized for this attitude. The hospital administrator, Dr. Niles, appears to be a stern and withdrawn person, and Joan wonders what he is really like. Kathy, who is a niece of Dr. Niles, invites Joan to spend a week end at the family farm. ® Joan settled back in the leather seat and felt the ripple of excitement go through the atmosphere inside the bus. People going someplace, she thought, are interesting. She looked around her. Nearly everyone was_ smiling, even Kathy, though the feeling between her and Joan was still not what it had been the first day she had asked Joan to come home with her for the week end. \"Your folks know I'm coming?\" Joan asked. \"Yes, I called them yesterday. I can just see Mom. She's been cooking and cleaning all day.\" \"Oh, I hope she doesn't go to too much bother.\"' \"Don't worry, she loves it. A week-end guest keeps her going all the rest of the month. Gives her something to think about.\" \"I can't wait to meet her.\" \"I hope you won't be bored. There isn't much to do just talk, and ride horses, maybe.\" \"I']1 just love it. I've missed the farm.\" \"\"You've lived on a farm?\" \"Most of my life.\" \"I'd never have known you're so so different from the farm folks I know.\" Kathy reddened a little, as if she wished she hadn't said that, and Joan decided to pretend not to notice. Mrs. Kirk was just about as Joan had pictured her. A lot like Kathy, only taller and with the same dark eyes. There were laugh wrinkles in her face and around her eyes, and she gave Kathy a big hus as though she hadn't seen her for months instead of only a week. Mr. Kirk was brown and tall. He was friendly, too. The drive from the station to their farm took only a few moments, and they didn't get a chance to say much. Joan felt as if she'd always known these people. \"Where are the children?\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_21_Lssn_Theology_Doxey.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Flake, stake theology class leader; Barbara Browning as Amy Brown Lyman; Glenna Cutler as Belle S. Spafford. LaVon F. Hadley, President, Boise Stake Relief Society, reports: \"At our March leadership meeting, in commemoration of the anniversary of Relief Society, stake theology leader Carol R. Flake presented these sisters during the reading of a poem 'Parade of Presidents,' written by her mother, the late Irene K. Read. Following the presentation was a brief address 'Our Heritage as Relief Society Sisters,' by President Hadley, and the song 'One Hundred Thousand Strong,' by a stake Singing Mothers group under the direction of stake chorister Julie Atkinson and stake organist Collette Howard.\" 610 no fighting on, the wrong Side ie telestia] glory. The € are th (Conferene Report, Oct ber 1913 Sons of Perdition, ( £TSes 23-24 ) Page 117) Perdi lOn is also kno as a kingdom b of \"no glory.\" THE EARTH; (Verse 24 ) The Tevelation Continues in Pointing Out that the earth has SPIRITUAL — 4n eterna] estiny as wel] aS does It requires ™ revelation Man. [t IS decre dt at the faith. To Interp et n erstand that it Would be the habitation For a withstanding they die, they of the morta] tabernacles for the also shall rise 48ain, a Spiritual body = C 88: J: e: Measure of Its Creation jt Would He Said that the body is Sown a also become 4 Celestia] kingdom, natural bo » but it is Taised g:18-20, y. In order we may full Because Paul; this gs € letter understand Position in Said that \"flesh and bloo cannot ~ eternal worlds llowing the Inherit the kingdom of od\" esurrectio » IS to be q termined verse 50), it Is beliey d by Some he I] e Y; We are Innot of our faith hat the body is structed as fol] not actually > sed from the ETave, but that it jis the spirit of That bodies ho are Celestia] man tha revived resurrect Ingdom Possegg [the earth] ed. Is true th \"fles and — it, oo ~ a fd fecttant blood\" (mo tals) cannot Inherit intent are they Sanctifieg the kingdoms assigned resurrect. Ed beings, The Tesurrection of And they Who are not Sanctified Which we Shal] Partake wil] be e I I 1 icy inherit another kingdom, even that of a:: a terrestrial] Kingdom, Or that of a substance. (P. Alippians 3:20-21;; ingdo.: Amulek Put it coming Spiritual] and j (Alma 11:45). In Man will no The Prophet Joseph Smith Was emphatic IN mainta; n. I the Tesurrection Wwe no fundamenta] Prin- 4 human System Ver goes into another jn this € World to come; J Care N to the four f heaven, yet the Particles body Was As Tesurrected beings we shal] ave perfect bodies he dis. Figurement, f the flesh Will be removed Question jg Sometime raised to Whethe not there Will be difference In the resur rection h tween the p Tson who l€s in y ung adulthood Nd the One wh e Mortality at an advanced age. The Scriptures do Not speak expressly ¢ his ques tion, but Only of th Perfecteq body (Alma 11:49. » 40:23. D&C 88:23 ) Howeve, President Joseph F mith sa In the €surrection of the dead the child th aS buried IN its Infancy il] Come up Mm the fo c hat it will evelo til it re hes the ful] Measure Of the Status f its Spirit, ale (Im to Perfection will come Testitution. But the Spirit w tinue to expand an body after + As Concerning the resurrection, I will Merely Say that al] men will come 8rave I AUGUST 1965",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_23_Lssn_VisiCthirnig_Faint.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "Pendence upon his Father. He re. peatedly declare that his might Mediate] € receive no re. Works w Te perform d by the Sponse to h antic crieg or the Power of G S Spirit and Made it Sounding of her cay' horn All Clear that, «7 can of mine Own this tim Prayj mightily Self do nothi eek not nd, final] » With Ustaining Mine ow Will, but the wil] of the Strength Ich f] Into her Father hic hath sent me\" body, € crawled the roa (John 5 30 aboy er, Ospital, the 0 the da ly prob] Ms and Cares back UD to the Toad.\" The doctor of life, Sustaining Support and Teplied, « € must been With WIS€ solution \"Nn more than you.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_26_Lssn_Social_Christensen.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of next lesson",
+      "action": "trim_end",
+      "text": "And in",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous lesson",
+      "action": "trim_start",
+      "text": "The selections of literature which we will consider this month all share a focus on personal choice, and the results of such choice. Problems of personal choice.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_28_Lssn_Literature_Thomas.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with beginning of poem and advertisements",
+      "action": "trim_end",
+      "text": "The air is so full Of sunlight and song That this is a day To cherish long. With joy in my heart, My beloved here, \"And a day like this— Oh, heaven is near! HAWAIIAN TOURS July 31, 1965 October, November 1965 WORLD'S FAIR and L. D. S. PAGEANT TOURS 16 day tour July 17—Aug. 7 22 day tour July 24—Aug. 14 Two 29 day tours July 11—Aug. 8 and July 24—Aug. 21 AUTUMN TOURS TO EUROPE Leaves September 3, 1965 WORLD'S FAIR NEW ENGLAND and CANADIAN FALL TOUR September 16, 1965 Margaret Lund Tours 3021 South 23d East P. O. Box 2065 Salt Lake City, Utah 84109 485-2444 — 262-2337 DOCTRINE AND COVENANTS Sections 88, 89, 90 (Eight Lectures) by ROY W. DOXEY Associate Professor of Religion Brigham Young University EDUCATION WEEKS 1965 Price $1.50 Available end of June from BRIGHAM YOUNG UNIVERSITY Extension Publications Provo, Utah 84601 Write for Extension Publications Catalog listing talks given at BYU by General Authorities 637 i \\ @ @ Is your family grown or mostly grown? @ Do you want to become a technically competent, contributing member of society? @ Would you be proud to serve as a registered nurse with an Associate of Arts degree? @ Are you in need of dignified, remunerative employment? > FOR COMPLETE INFORMATION WRITE OR PHONE (EVENING CLASSES IN SALT LAKE CITY BRIGHAM YOUNG UNIVERSITY COLLEGE OF NURSING Through the B. Y. U. - Salt Lake Center for Continuing Education offer a two year associate degree career in NURSING FOR MATURE WOMEN WHO ARE HIGH SCHOOL GRADUATES mw YOUNG UN, ee BYU \"\"s,. ' SALT LAKE ° CENTER FOR CONTINUING EDUCATION 200 North Main Phone 328-0325 a Lake City FIRST CLASS STARTS OCTOBER 4, 1965 J CANADIAN ROCKIES and NORTHWEST TOUR leaving August 8th PASSION PLAY TOUR leaving August 22nd LABOR DAY TOUR September 4-5-6 NEW ENGLAND, CANADIAN FALL TOUR leaving September 4th HAWAIIAN ALOHA TOUR October ROSE PARADE TOURS December Esther James Tours 460 7th Avenue Salt Lake City, Utah 84103 Phones: 363-5229 — 359-8051 SINGING MOTHERS' CHORAL ARRANGEMENTS Abide with Me—Madsen.20 Come Ye Blessed of My Father.20 Come Ye Blessed—Scott.25 Create in Me a Clean Heart.25 Eternal Life 20000..25 Eye Hath Not Seen 00 25 God of All Nature 0.000000..25 Incline Your Ear - 000000..0.0------..25 Lord Bless Thee and Keep Thee.20 Lord, God of Our Fathers.25 Lord Is My Shepherd—Ryg.20 Lord's Prayer—Robertson 25 Peace I Leave with You.20 Prayer for Our Country 25 Voice in the Wilderness.25 327 Broadway Idaho Falls, Idaho 83401 Orders shipped the same day as we receive. Catalogs supplied. 638 Tour the Holy Land This Fall Via Pan American Jet TOUR LEAVES OCTOBER 7th: Murdock Travel's annual Fall tour of the ever inspiring Holy Land provides you with 21 days of high quality, worry-free travel. You are assured of luxury travel on Pan American jet clippers and superb accommodations in the finest hotels... All at unusually low cost! The tour includes all of the Holy Land as well as places such as Istanbul, Cairo, Athens, and Rome. W. Cleon Skousen, Tour Director Mr. Skousen is a foremost LD. S. Authority on the Holy Land and the author of several successful books. Among these are: So You Want to Raise a Boy? The First Two Thousand Years, and The Third Thousand Years. WBeeteveeceoveeeeeseeeesseeaesenesceseoeseveescesvenvuvvvuevevuvueeee MURDOCK TRAVEL, INC. 14 South Main Street, Salt Lake City, Utah 84101, Phone 328-3161 PLEASE SEND ME FULL PARTICULARS ON THE FALL TOUR OF THE HOLY LAND. MURDOCK Xe le i. 5 e TRA VEL WY eee ceecee cece ceeeesState eeZip. Gu Meeaeeteoeseeeesvoseeeetseevensbe By Wielka ccc cccw sss cuiinccddecneccccccccccnccc cts ee, BEAUTIFUL Jhank You HANDY for your patronage and DURABLE your fine friendship over the years We have A sure way of keeping alive the valuable instruction of each month's Relief Society MagaALL THE NEW HANDCRAFTS: zine is in a noaneseus neune nme, be ° Mountain West''s first an inest bindery an Plastic Grapes and other printing house is prepared to bind your editions Plastic Casting Supplies into a durable volume. Feather Flowers Mail or bring the editions you wish bound to Ribbon Flowers the Deseret News Press for the finest of service. Satin Wrapped Fruit, etc. 1600 Empire Road, Salt Lake City, Utah 84104 and Phone 486-1892 ALL THE OLD FAVORITES: Cloth Cover — $3.25; Leather Cover — $5.25 Yearly Index Included Mosaics Advance payment must accompany all orders. Aluminum Trays Copper Tooling Basketry, etc. Please include postage according to table listed below if bound volumes are to be mailed. Send 25¢ for catolog and also receive a rene yea our newest book Zone 1 and 2.55 Zone 6.90 \"EGG CARTON PARTY FAVORS\" Zone 3.60 Zone 7 - 2005. Zone 4.65 Zone 8.. 1.20 Discounts to Groups Jone 5S 80 ZIM'S 240 East 2nd South Salt Lake City, Utah — 2 PESERET FREws PREssSs 639 99",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_30_Poem_The_Bowles.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content",
+      "action": "trim_end",
+      "text": "640 Timely Books From Three Great LDS Authors 1 A Rational Theology by John A. Widtsoe A Ration A leading L. D. S. Theologian and scholar of a Theol OS) former generation explores such timely topics as fom \"The Equality of Man,' 'The United Order and! \\ Tithing, 'The Brotherhood of Man,\"' and many other fundamental principles that harmonize with the knowledge and reason of man. $2.50 2 The Gospel and Man's Relationship to Deity by B. H. Roberts The author of several LDS best sellers penned this volume originally in 1888 while serving as a missionary in England. It was written for youth at the instigation of the general superintendency of the Mutual Improvement Association. It is brilliantly written and will help the reader understand basic gospel principles. $3.25 3 The Key to Theology by Parley P. Pratt In these days of intellectual confusion, a leader among Latter-day Saint literary figures of the Joseph Smith era provides guidance that is essential for our time. The author writes with the insight of a great scholar andthe inspiration of a true apostle of Christ.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with advertisement content that should be separate",
+      "action": "trim_end",
+      "text": "640 Timely Books From Three Great LDS Authors 1 A Rational Theology by John A. Widtsoe A Ration A leading L. D. S. Theologian and scholar of a Theol OS) former generation explores such timely topics as fom \"The Equality of Man,' 'The United Order and! \\ Tithing, 'The Brotherhood of Man,\"' and many other fundamental principles that harmonize with the knowledge and reason of man.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text that belongs to next article",
+      "action": "trim_end",
+      "text": "But there was so much more to",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_08_19_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text",
+      "action": "trim_end",
+      "text": "(To be continue",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V52_08_31_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with age numbers without proper header",
+      "action": "prepend",
+      "text": "[Vol52 | August 1965 | Page 640 | General Feature | Birthday Congratulations]\n\n",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "TEXT NOT FOUND IN OCR"
+    }
+  ]
+}

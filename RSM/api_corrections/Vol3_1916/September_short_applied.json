@@ -1,0 +1,28 @@
+{
+  "volume": 3,
+  "month": "September",
+  "year": 1916,
+  "timestamp": "20260315_153703",
+  "dry_run": false,
+  "replaced": 1,
+  "deleted": 2,
+  "skipped": 0,
+  "entries": [
+    {
+      "file": "September_Vol3_01_Frontispiece_Kirtland_Temple_Frontispiece_Absence_Lucy_Burnham.txt",
+      "action": "deleted",
+      "reason": "This appears to be a misextracted frontispiece caption or photo credit. The PDF pages show article content about Mary Ann Frost Stearns Pratt and birth control discussions, but no standalone article by Lucy Burnham about absence or Kirtland, New Mexico. This is likely a header artifact or photo caption that was incorrectly treated as an article."
+    },
+    {
+      "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_b.txt",
+      "action": "replaced",
+      "old_chars": 53,
+      "new_chars": 2646
+    },
+    {
+      "file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_c.txt",
+      "action": "deleted",
+      "reason": "This is just a lesson header fragment 'LESSON IV. Home Economics. Fourth' with no actual content. The PDF shows this is part of a larger Guide Lessons section but this specific fragment contains no substantive article content."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "volume": 4,
+  "month": "April",
+  "year": 1917,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.07,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Latter-day Temples",
+      "printed_page": 183,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 205-208, which contain advertisements, table of contents, and a poem to President Emmeline B. Wells. The article 'Latter-day Temples' listed on page 183 in the table of contents is not present in these page images.",
+      "api_usage": {
+        "input_tokens": 6479,
+        "output_tokens": 149,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        205,
+        206,
+        207,
+        208
+      ]
+    },
+    {
+      "title": "Our New Board Member",
+      "printed_page": 201,
+      "status": "found",
+      "complete_text": "To President Emmeline B. Wells\n\nOn Her Eighty-Ninth Birthday and Her Recovery From a Grave Illness.\n\nBy Kate Thomas.\n\nLITTLE SILVER MOTHER.\n\nLittle s'lver mother, don't you hear the call o' spring\nCoaxing you and teasing you to come out in the sun\nThat's splashing down its color on the budding crocus bed\nAnd gilding new the glad hearts of the daisies one by one?\n\nLittle silver mother, don't you hear the blackbird trill?\nIt says, \"Come out, come out, come out and play at tag with me!\"\nThe wide brown fields are greening and the ladyslipper's red,\nAnd I saw a bluebird flashing in the old bark-maple tree.\n\nLittle silver mother with your heart so full of spring,\n'Tis God has been the wondrous sun that made you garden grow,\nLife's tempests could not drown the sweet forgetmenots outspread\nBecause His warmth gold-tipped them with a never-fading glow.\n\nLittle silver mother, you're a flower of His own,\nA flower full of flowers that has made the world more fair,\nThat has made the fresh breeze sweeter by the perfumes it has shed,\nAnd your conquest is: His blessing and our prayer.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Kate Thomas",
+      "confidence": "high",
+      "notes": "Found a poem dedicated to President Emmeline B. Wells on her 89th birthday and recovery from illness. This appears to be the content for 'Our New Board Member' based on the context and page placement.",
+      "api_usage": {
+        "input_tokens": 6471,
+        "output_tokens": 475,
+        "cost": 0.0265
+      },
+      "pdf_pages": [
+        205,
+        206,
+        207,
+        208
+      ]
+    },
+    {
+      "title": "On the Way Mrs. Parley Nelson",
+      "printed_page": 227,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Mrs. Parley Nelson",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 189-192, which contain content about Latter-day Temples including the Manti Temple, Canadian Temple, and Hawaiian Temple. Page 227 where 'On the Way' should appear is not included in these images.",
+      "api_usage": {
+        "input_tokens": 6491,
+        "output_tokens": 153,
+        "cost": 0.0218
+      },
+      "pdf_pages": [
+        216,
+        217,
+        218,
+        219
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "volume": 15,
+  "month": "August",
+  "year": 1928,
+  "total": 13,
+  "ok": 10,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "August_Vol15_00_BOARD.txt",
+      "body_len": 705,
+      "article_words": 69,
+      "words_in_ocr": 69,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_00_CONTENTS.txt",
+      "body_len": 617,
+      "article_words": 68,
+      "words_in_ocr": 68,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_00_Misc.txt",
+      "body_len": 1506,
+      "article_words": 141,
+      "words_in_ocr": 137,
+      "pct_in_ocr": 0.9716,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "cover",
+        "directory"
+      ]
+    },
+    {
+      "file": "August_Vol15_01_Frontispiece_Portrait_of_Julia_Alleman_Child_Frontispiece.txt",
+      "body_len": 195,
+      "article_words": 20,
+      "words_in_ocr": 20,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(195)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_02_Article_Indian_Princess_Converted_Lucy_Wright_Snow.txt",
+      "body_len": 24432,
+      "article_words": 1143,
+      "words_in_ocr": 1143,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_04_Article_Conference_of_Social_Work_Genevieve_Thornton.txt",
+      "body_len": 198,
+      "article_words": 19,
+      "words_in_ocr": 19,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(198)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_05_Editorial_Editorial—Honor_Fund_for_President_Williams.txt",
+      "body_len": 7296,
+      "article_words": 446,
+      "words_in_ocr": 446,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_06a_Article_Helping_the_Adolescent_to_Develop_a_Wholesome_Personality.txt",
+      "body_len": 22940,
+      "article_words": 979,
+      "words_in_ocr": 979,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_07_Poetry_Eliza_R_Snow_Memorial_Poem.txt",
+      "body_len": 1986,
+      "article_words": 143,
+      "words_in_ocr": 143,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_08a_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 15807,
+      "article_words": 725,
+      "words_in_ocr": 724,
+      "pct_in_ocr": 0.9986,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "title"
+      ]
+    },
+    {
+      "file": "August_Vol15_08b_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "body_len": 21239,
+      "article_words": 1193,
+      "words_in_ocr": 1193,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(6); MULTI_LESSON(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_09a_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "body_len": 31240,
+      "article_words": 1589,
+      "words_in_ocr": 1589,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "August_Vol15_10_Article_The.txt",
+      "body_len": 9331,
+      "article_words": 607,
+      "words_in_ocr": 607,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol15_No8_August_1928.txt",
+    "ocr_chars": 137329,
+    "ocr_unique_words": 4096,
+    "contents_xref": {
+      "entries_in_contents": 9,
+      "matched": 8,
+      "match_details": [
+        {
+          "title": "Portrait of Julia Alleman Child Frontispiece",
+          "page": null,
+          "file": "August_Vol15_01_Frontispiece_Portrait_of_Julia_Alleman_Child_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Indian Princess Converted Lucy Wright Snow",
+          "page": 409,
+          "file": "August_Vol15_02_Article_Indian_Princess_Converted_Lucy_Wright_Snow.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The 1928 Conference of Social Work Genevieve Thornton",
+          "page": 411,
+          "file": "August_Vol15_04_Article_Conference_of_Social_Work_Genevieve_Thornton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Honor Fund for President Williams",
+          "page": 418,
+          "file": "August_Vol15_05_Editorial_Editorial—Honor_Fund_for_President_Williams.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Helping the Adolescent to Develop a Wholesome Personality Elna Miller",
+          "page": 423,
+          "file": "August_Vol15_06a_Article_Helping_the_Adolescent_to_Develop_a_Wholesome_Personality.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Eliza R. Snow Memorial Poem",
+          "page": 430,
+          "file": "August_Vol15_07_Poetry_Eliza_R_Snow_Memorial_Poem.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 433,
+          "file": "August_Vol15_08a_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for October",
+          "page": 441,
+          "file": "August_Vol15_08b_Guide_Lessons_Guide_Lessons_for_October.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Let This Be Heaven Harrison R. Merrill",
+          "page": 410
+        }
+      ],
+      "extra_files": [
+        "August_Vol15_09a_Guide_Lessons_Guide_Lessons_for_October.txt",
+        "August_Vol15_10_Article_The.txt"
+      ]
+    }
+  }
+}

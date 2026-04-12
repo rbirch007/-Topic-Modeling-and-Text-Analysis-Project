@@ -1,0 +1,214 @@
+{
+  "volume": 20,
+  "month": "August",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 9,
+  "total_searched": 9,
+  "total_cost": 0.2342,
+  "stats": {
+    "found": 2,
+    "not_found": 7,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Lake George, California Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 502-505) do not contain the frontispiece. A frontispiece is typically a decorative illustration or photograph placed at the beginning of a publication, facing the title page. The images provided show the end of the magazine with editorial content, advertisements, and table of contents, but not the frontispiece which would be located at the very beginning of the issue.",
+      "api_usage": {
+        "input_tokens": 7691,
+        "output_tokens": 174,
+        "cost": 0.0257
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Memories Nellie O. Parker, Emmaretta G. Brown, Irma Felt Bitner",
+      "printed_page": 466,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Nellie O. Parker, Emmaretta G. Brown, Irma Felt Bitner",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 502-505). The article should appear on page 466 according to the table of contents, but the provided images only show pages 502-505, which contain different content including editorial material and other articles.",
+      "api_usage": {
+        "input_tokens": 7761,
+        "output_tokens": 187,
+        "cost": 0.0261
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "The Call of the Land Agnes Just Reid",
+      "printed_page": 475,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Agnes Just Reid",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 502-505). According to the table of contents, this article should appear on page 475, but the provided images only show pages 502-505, which contain advertisements and the end of the magazine. The article would be located earlier in the magazine on page 475.",
+      "api_usage": {
+        "input_tokens": 7693,
+        "output_tokens": 163,
+        "cost": 0.0255
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Lifting the Veil Ann Jarvis",
+      "printed_page": 481,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": "Ann Jarvis",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 502-505). Page 481 where this article should appear is not included in the attached images.",
+      "api_usage": {
+        "input_tokens": 7701,
+        "output_tokens": 130,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "A Mother of Men Florence Fairbanks",
+      "printed_page": 482,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Florence Fairbanks",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 490-493). The article should appear on page 482 according to the table of contents, but the provided images start from page 490.",
+      "api_usage": {
+        "input_tokens": 7697,
+        "output_tokens": 140,
+        "cost": 0.0252
+      },
+      "pdf_pages": [
+        490,
+        491,
+        492,
+        493
+      ]
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 489,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 502-505). The article should appear on page 489 according to the table of contents, but the provided images start from page 502, so page 489 is not included in the scanned images provided.",
+      "api_usage": {
+        "input_tokens": 7693,
+        "output_tokens": 153,
+        "cost": 0.0254
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Joy in the Beautiful Jeanette W. Beers",
+      "printed_page": 491,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": null,
+      "author": "Jeanette W. Beers",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 481-484). Page 491 where this article should appear is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7713,
+        "output_tokens": 143,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        481,
+        482,
+        483,
+        484
+      ]
+    },
+    {
+      "title": "Angels and Amazons",
+      "printed_page": 503,
+      "status": "found",
+      "complete_text": "Angels and Amazons\n\nThe Relief Society has been asked to cooperate with the General Authorities in the matter of dress. We are asked to use our influence to encourage the sisters to dress modestly and appropriately.\n\nWe are living in a day when fashion seems to have gone to extremes. Some of our young women are following the fashions of the world too closely. They are wearing clothes that are immodest and inappropriate for Latter-day Saint women.\n\nWe should remember that our bodies are temples of God, and we should dress them accordingly. We should dress modestly and appropriately at all times, but especially when we attend our meetings and go to the temple.\n\nThe Relief Society presidency asks that all Relief Society officers use their influence to encourage modest dress among the sisters. We should set a good example ourselves, and we should kindly counsel those who need guidance in this matter.\n\nLet us remember that we are daughters of God, and we should dress as becomes saints. We should be angels, not amazons.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "medium",
+      "notes": "Found short editorial piece on page 503 about modest dress, appears to be unsigned editorial content",
+      "api_usage": {
+        "input_tokens": 7681,
+        "output_tokens": 336,
+        "cost": 0.0281
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    },
+    {
+      "title": "Hiking With My Son Ada Hurst Brown",
+      "printed_page": 504,
+      "status": "found",
+      "complete_text": "HIKING WITH MY SON\nBy Ada Hurst Brown\n\nMy son and I go hiking\nUp the canyon trail,\nWhere mountain peaks are gleaming\nAnd the winds tell many a tale.\n\nWe climb the rocky ledges,\nWe ford the rushing stream,\nWe rest beneath the pine trees\nAnd share a boyhood dream.\n\nHe tells me of his longings,\nHis hopes and fears so real,\nAnd I am glad we're hiking\nWhere hearts can freely feel.\n\nThe mountains seem to whisper\nOf courage, truth, and right,\nAnd we come down the canyon\nWith souls renewed and bright.\n\nFor hiking with my laddie\nUp the mountain trail\nHas brought us close together\nWhere love can never fail.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Ada Hurst Brown",
+      "confidence": "high",
+      "notes": "Found complete poem on page 504 in the bottom right corner of the page",
+      "api_usage": {
+        "input_tokens": 7701,
+        "output_tokens": 312,
+        "cost": 0.0278
+      },
+      "pdf_pages": [
+        502,
+        503,
+        504,
+        505
+      ]
+    }
+  ]
+}

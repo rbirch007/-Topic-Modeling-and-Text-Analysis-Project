@@ -1,0 +1,144 @@
+{
+  "volume": 6,
+  "month": "March",
+  "year": 1919,
+  "total_files_checked": 20,
+  "files_correct": [
+    "March_Vol6_01b_Poem_Babe_of_Mine.txt",
+    "March_Vol6_02a_Article_Our_Indian_Cousins.txt",
+    "March_Vol6_04_The_Inner_Light_Lucy_May_Green.txt",
+    "March_Vol6_07_The_Years_Grace_Ingles_Frost.txt",
+    "March_Vol6_08_Let's_Make_a_Garden_Morag.txt",
+    "March_Vol6_09_Suggestions_for_Anniversary_Day.txt",
+    "March_Vol6_10a_Notes_from_Field_The_Official_Round_Table.txt",
+    "March_Vol6_11_Construction_and_Reconstruction_in_the_Home._._Janette_A._Hy.txt",
+    "March_Vol6_12_On_the_Watch_Tower_James_H._Anderson.txt",
+    "March_Vol6_13_Editorial.txt",
+    "March_Vol6_14a_Guide_Lessons_LESSON_I_Theology_and_Testimony_First_Week_in_April_THE_SOCI.txt",
+    "March_Vol6_14b_Guide_Lessons_LESSON_II_Work_and_Business_SECOND_WEEK_IN_APRIL.txt",
+    "March_Vol6_14c_Guide_Lessons_LESSON_III_Genealogy_Third_Week_in_April_PEOPLE_SURNAMED_THE.txt",
+    "March_Vol6_14d_Guide_Lessons_LESSON_4_Home_Courses_Fourth_Week_in_April_THE_INTELLIGENT_O.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol6_01a_Article_Story_of_the_Organization_of_the_Relief_Society.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header instead of article title",
+      "action": "trim_start",
+      "text": "Relief Society Magazine Vol. VI. MARCH, 1919. No. 3.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_03a_Article_Bending_the_Twig.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'The'",
+      "action": "trim_end",
+      "text": "She would go and talk it over with Mandy. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_05_Two_Faith-Promoting_Incidents_Annie_G._Lauritzen.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'At the'",
+      "action": "trim_end",
+      "text": "Sisters, have you a printed family book? If so, take this advice from a friend. At the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_06_At_the_Temple_Gates_Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'The'",
+      "action": "trim_end",
+      "text": "for he was true to principle, to bride and to his God. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_11_Construction_and_Reconstruction_in_the_Home._._Janette_A._Hy.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'ON THE'",
+      "action": "trim_end",
+      "text": "the rug having all its original freshness. ON THE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_14d_Guide_Lessons_LESSON_4_Home_Courses_Fourth_Week_in_April_THE_INTELLIGENT_O.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'Z. C.'",
+      "action": "trim_end",
+      "text": "6. Give some observations you have made bearing on the subject of this lesson. Z. C.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "In the Prison Houses",
+      "expected_page": 125,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. Several files have incomplete endings where they cut off mid-sentence or mid-word, likely due to page breaks in the OCR. One article 'In the Prison Houses' by Mazel Gardner Pancake is completely missing from the extracted files but appears in the table of contents.",
+  "validated_corrections": [
+    {
+      "file": "March_Vol6_01a_Article_Story_of_the_Organization_of_the_Relief_Society.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header instead of article title",
+      "action": "trim_start",
+      "text": "Relief Society Magazine Vol. VI. MARCH, 1919. No. 3.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_03a_Article_Bending_the_Twig.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'The'",
+      "action": "trim_end",
+      "text": "She would go and talk it over with Mandy. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_05_Two_Faith-Promoting_Incidents_Annie_G._Lauritzen.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'At the'",
+      "action": "trim_end",
+      "text": "Sisters, have you a printed family book? If so, take this advice from a friend. At the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_06_At_the_Temple_Gates_Mary_Foster_Gibbs.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'The'",
+      "action": "trim_end",
+      "text": "for he was true to principle, to bride and to his God. The",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_11_Construction_and_Reconstruction_in_the_Home._._Janette_A._Hy.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'ON THE'",
+      "action": "trim_end",
+      "text": "the rug having all its original freshness. ON THE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol6_14d_Guide_Lessons_LESSON_4_Home_Courses_Fourth_Week_in_April_THE_INTELLIGENT_O.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete word 'Z. C.'",
+      "action": "trim_end",
+      "text": "6. Give some observations you have made bearing on the subject of this lesson. Z. C.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

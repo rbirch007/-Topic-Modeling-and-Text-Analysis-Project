@@ -1,0 +1,365 @@
+{
+  "volume": 56,
+  "month": "August",
+  "year": 1969,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V56_08_04_Poem_Mountain_Fairbairn.txt",
+    "V56_08_06_Poem_Roadside_Larsen.txt",
+    "V56_08_07_Poem_Sarah.txt",
+    "V56_08_09_Poem_Service.txt",
+    "V56_08_15_Poem_Six_of_Jennings.txt",
+    "V56_08_16_Poem_Patch_Loomis.txt",
+    "V56_08_19_Poem_Building_Clough.txt",
+    "V56_08_21_Poem_Night_Read.txt",
+    "V56_08_23_Poem_Dandelion_Wrathall.txt",
+    "V56_08_25_Poem_Stay.txt",
+    "V56_08_32_Poem_At_the_Saxton.txt",
+    "V56_08_33_Poem_Bright_Shomaker.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_08_01_GenFt_Social_Part.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be from beginning of magazine with Climate for Lilies poem and From Near and Far section, not Social Relations",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Social Relations Restraint Road to Freedom, Part 2",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_02_Fict_Heart_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only the beginning poem content, not the Heart Room for Home Chapter 3 fiction",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Heart Room for Home Chapter 3",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_03_Poem_Climate_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content beyond the poem including From Near and Far section",
+      "action": "trim_end",
+      "text": "Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_05_SpFt_The_Law_Richards.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Literary Contest Announcements content instead of The Law of Tithing by LeGrand Richards",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for The Law of Tithing by LeGrand Richards",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_08_GenFt_Birthday.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. Agnes Ellen Ambler Young Coalville, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_10_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains Climate for Lilies poem content at beginning",
+      "action": "trim_start",
+      "text": "I have read the serial",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_11_GenFt_Womans_Cannor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Can We Afford Not to be Happy article at beginning",
+      "action": "trim_start",
+      "text": "Lilly Peter, a past-seventy poet",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_12_SpFt_Literary_Bradshaw.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Editorial content instead of Literary Contest Announcements and Identity Who You Are",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Literary Contest Announcements 1969 and Identity Who You Are by Lillian Y. Bradshaw",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_13_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains General Board listing that belongs elsewhere",
+      "action": "trim_end",
+      "text": "M. C. S.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_14_GenFt_Irene_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Notes to the Field content that should be separate",
+      "action": "trim_end",
+      "text": "Relief Society will continue to be an enjoyment and a fulfilling part of her life.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_17_Fict_The_Applegate.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at beginning",
+      "action": "trim_start",
+      "text": "The sounds of the radio banged into Cally's ears",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_18_GenFt_Can_We_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous fiction at beginning",
+      "action": "trim_start",
+      "text": "Happiness is an abstract quality difficult to define",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_20_GenFt_Hobby_Asay.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of the Hobby Feature article",
+      "action": "prepend",
+      "text": "Summer picnics can be great fun, whether you and your family take to the canyon, the woods, or the beach, or whether you prefer just to relax and enjoy a cookout in your own back yard. What could be more satisfying on a warm summer day than a delicious thirst-quenching cold drink or a slice of cooled melon? But how to keep the melons and the drinks cold is the question. For this practical purpose, and for aesthetic appeal, as well, the washtub in the picture was painted and decorated. Such colorful tubs, when not in use for keeping foods cold, can serve, also, as containers for special arrangements of flowers and greenery for enhancing the attractiveness of the outdoor rest and recreation area. The project of decorating washtubs proved to be one of the most exciting and rewarding homemaking projects sponsored by the Relief Society sisters of the Parley's Sixth Ward, Salt Lake City, Utah. Even those with no acknowledged creativity found real satisfaction in wielding a paint brush with such delightful results. Originality was the key word. White, black or red paint was used to cover the tubs, with a variety of colors and designs used for trim. Sisters with some artistic talent painted original, free-hand designs, such as the one shown in the picture. The more timid ones used decals, stencils, or tracings.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_22_GenFt_A_Watson.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains recipe content that belongs in different article",
+      "action": "trim_end",
+      "text": "Fill the decorated tub with favorite drinks, fruit juice, milk, homemade rootbeer, lemonade, or melons. Pack with ice, and a large part of the picnic preparations have been completed.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_24_Fict_In_the_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Heart Room for Home at beginning",
+      "action": "trim_start",
+      "text": "The breeze skimming the wisteria below my window brought the sound of laughter into my room.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_26_GenFt_Notes_Packet.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Relief Society Activities content that should be separate",
+      "action": "trim_end",
+      "text": "A teaching aid packet is available for the cultural refinement class leaders. It will contain four full color reproductions of famous art masterpieces (printed in the June and September 1969 color sections of the Magazines) to be used with cultural refinement lessons 2, 3, 5, and 6, as designated. It will also contain a 12'' 33% rpm record of the musical selections to be used with cultural refinement lessons, 1, 4, and 7. The kit is available from the Deseret Book Company, 44 East South Temple, Salt Lake City, Utah 84110, or at the Deseret Book Company branches in Ogden, Utah the Cottonwood Mall in Salt Lake City, Utah, or Orange California, at a cost of $3.50 plus 30 cents postage for third class mailing. Overseas should be sent by international money order, plus air mail charges, approximate weight 1 Ib. (See advertisement page 637.)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_27_GenFt_Recipes_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Spiritual Living lesson content instead of Recipes From the Past",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Recipes From the Past a Box Full of Memories by Betty Mazzacano",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_28_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Heart Room for Home content instead of Spiritual Living lesson",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Spiritual Living Events Associated With the Second Coming of Christ by Roy W. Doxey",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_29_GenFt_Visiting_Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Heart Room for Home content instead of Visiting Teacher Message",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Visiting Teacher Message The Power of Example by Alice Colton Smith",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_30_GenFt_Homemaking_Taylor.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Heart Room for Home content instead of Homemaking lesson",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Homemaking lesson by Celestia J. Taylor",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_31_GenFt_Alberta.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Cultural Refinement lesson content instead of Social Relations lesson by Alberta H. Christensen",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Social Relations Restraint Road to Freedom, Part 2 by Alberta H. Christensen",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_08_34_GenFt_Notes_Activities.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Birthday Congratulations and advertisement content instead of Relief Society Activities",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction for Notes From the Field Relief Society Activities",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "To Beauty by Margaret B. Jorgensen",
+      "expected_page": 569,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Mayola R. Miltenberger Appointed Acting Secretary-Treasurer",
+      "expected_page": 582,
+      "status": "merged_with_another",
+      "merged_into": "V56_08_13_GenFt_Editorial_Sharp.txt"
+    },
+    {
+      "title": "Cultural Refinement The Role of Education by Bruce B. Clark",
+      "expected_page": 631,
+      "status": "merged_with_another",
+      "merged_into": "V56_08_31_GenFt_Alberta.txt"
+    }
+  ],
+  "notes": "Major extraction issues found. Many files contain wrong content entirely, suggesting systematic problems with article boundary detection. Multiple lesson department articles are mixed up or contain wrong content. Several files have content bleeding from adjacent articles. The extraction appears to have significant problems with article boundaries and content assignment.",
+  "validated_corrections": [
+    {
+      "file": "V56_08_03_Poem_Climate_Roberts.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains content beyond the poem including From Near and Far section",
+      "action": "trim_end",
+      "text": "Dorothy J. Roberts",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_08_GenFt_Birthday.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Mrs. Agnes Ellen Ambler Young Coalville, Utah",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_10_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains Climate for Lilies poem content at beginning",
+      "action": "trim_start",
+      "text": "I have read the serial",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_14_GenFt_Irene_Board.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Notes to the Field content that should be separate",
+      "action": "trim_end",
+      "text": "Relief Society will continue to be an enjoyment and a fulfilling part of her life.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_20_GenFt_Hobby_Asay.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning of the Hobby Feature article",
+      "action": "prepend",
+      "text": "Summer picnics can be great fun, whether you and your family take to the canyon, the woods, or the beach, or whether you prefer just to relax and enjoy a cookout in your own back yard. What could be more satisfying on a warm summer day than a delicious thirst-quenching cold drink or a slice of cooled melon? But how to keep the melons and the drinks cold is the question. For this practical purpose, and for aesthetic appeal, as well, the washtub in the picture was painted and decorated. Such colorful tubs, when not in use for keeping foods cold, can serve, also, as containers for special arrangements of flowers and greenery for enhancing the attractiveness of the outdoor rest and recreation area. The project of decorating washtubs proved to be one of the most exciting and rewarding homemaking projects sponsored by the Relief Society sisters of the Parley's Sixth Ward, Salt Lake City, Utah. Even those with no acknowledged creativity found real satisfaction in wielding a paint brush with such delightful results. Originality was the key word. White, black or red paint was used to cover the tubs, with a variety of colors and designs used for trim. Sisters with some artistic talent painted original, free-hand designs, such as the one shown in the picture. The more timid ones used decals, stencils, or tracings.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_08_22_GenFt_A_Watson.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains recipe content that belongs in different article",
+      "action": "trim_end",
+      "text": "Fill the decorated tub with favorite drinks, fruit juice, milk, homemade rootbeer, lemonade, or melons. Pack with ice, and a large part of the picnic preparations have been completed.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V56_08_11_GenFt_Womans_Cannor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Can We Afford Not to be Happy article at beginning",
+      "action": "trim_start",
+      "text": "Lilly Peter, a past-seventy poet",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_13_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains General Board listing that belongs elsewhere",
+      "action": "trim_end",
+      "text": "M. C. S.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_17_Fict_The_Applegate.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article at beginning",
+      "action": "trim_start",
+      "text": "The sounds of the radio banged into Cally's ears",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_18_GenFt_Can_We_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous fiction at beginning",
+      "action": "trim_start",
+      "text": "Happiness is an abstract quality difficult to define",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_24_Fict_In_the_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Heart Room for Home at beginning",
+      "action": "trim_start",
+      "text": "The breeze skimming the wisteria below my window brought the sound of laughter into my room.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_08_26_GenFt_Notes_Packet.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains Relief Society Activities content that should be separate",
+      "action": "trim_end",
+      "text": "A teaching aid packet is available for the cultural refinement class leaders. It will contain four full color reproductions of famous art masterpieces (printed in the June and September 1969 color sections of the Magazines) to be used with cultural refinement lessons 2, 3, 5, and 6, as designated. It will also contain a 12'' 33% rpm record of the musical selections to be used with cultural refinement lessons, 1, 4, and 7. The kit is available from the Deseret Book Company, 44 East South Temple, Salt Lake City, Utah 84110, or at the Deseret Book Company branches in Ogden, Utah the Cottonwood Mall in Salt Lake City, Utah, or Orange California, at a cost of $3.50 plus 30 cents postage for third class mailing. Overseas should be sent by international money order, plus air mail charges, approximate weight 1 Ib. (See advertisement page 637.)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

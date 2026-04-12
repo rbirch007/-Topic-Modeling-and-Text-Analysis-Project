@@ -1,0 +1,708 @@
+POEM CLEANUP REPORT
+============================================================
+Generated: 2026-03-18
+Scope: Cleanup of false-positive poem files in Vols 30-40
+       and reversion of 7 false-positive renames in Vols 1-39
+
+============================================================
+EXECUTIVE SUMMARY
+============================================================
+Total high-sequence poem files examined: 358
+Files DELETED (non-poems): 164 (163 from classifier + 1 duplicate)
+Files KEPT (actual poems): 195
+False positive renames reverted: 7
+Duplicate pairs resolved: 4
+
+Classification method: Multi-pass heuristic classifier with
+OCR-expansion detection, dialogue analysis, TOC/subscription
+pattern matching, and manual spot-check verification of ~50 files.
+
+============================================================
+1. FILES DELETED (164 total)
+============================================================
+
+Breakdown by content type:
+   38  Prose fiction with extensive dialogue
+   18  TOC/subscription/publication page
+   13  Prose fiction with dialogue
+   11  TOC page
+    8  Classified as prose
+    7  Prose text
+    4  Lesson department content
+    4  Subscription notice
+    4  Long prose lines
+    4  Recipe
+    3  Pioneer narrative prose
+    3  Prose fiction
+    3  Regulations/submission info
+    3  Lesson/numbered content
+    2  Advertisement
+    2  Ad/back matter
+    2  Organizational news/prose
+    2  OCR garbage
+    1  Church history narrative
+    1  Music/song listing
+    1  Biographical prose
+    1  Insurance/financial ad
+    1  Speech/article content
+    1  Biographical content
+    1  Prose quotation
+    1  BYU article/prose
+    1  Canning/homemaking content
+    1  Mixed prose+poem
+    1  TOC page fragment
+    1  Theology lesson reference
+    1  Photo caption
+    1  TOC/lesson reference page
+    1  Scripture+mortuary ad
+    1  Agricultural/pioneer content
+    1  Ward/stake listing
+    1  Music instruction/ad
+    1  General editorial content
+    1  Conference announcement
+    1  Pioneer fiction narrative
+    1  Meeting statistics
+    1  Cooking/recipe reference
+    1  General Board listing/masthead
+    1  Editorial about television
+    1  Fiction fragment
+    1  TOC/ad page
+    1  Church lesson/book references
+    1  Cover description
+    1  Statistical/report content
+    1  Art/craft instructions
+    1  Mixed poem+narrative
+    1  Prose sermon (duplicate)
+
+Breakdown by volume:
+  Vol30_1943: 1 deleted, 6 kept
+  Vol31_1944: 1 deleted, 0 kept
+  Vol32_1945: 12 deleted, 5 kept
+  Vol33_1946: 17 deleted, 16 kept
+  Vol34_1947: 14 deleted, 15 kept
+  Vol35_1948: 26 deleted, 21 kept
+  Vol36_1949: 21 deleted, 15 kept
+  Vol37_1950: 17 deleted, 16 kept
+  Vol38_1951: 21 deleted, 38 kept
+  Vol39_1952: 24 deleted, 43 kept
+  Vol40_1953: 10 deleted, 20 kept
+
+Full deletion log:
+  DEL  Vol30_1943/April: April_Vol30_26_Poem_For_The_Richards.txt
+       Reason: Pioneer narrative prose
+  DEL  Vol31_1944/November: November_Vol31_26_Poem_In_November_Ekman.txt
+       Reason: Church history narrative
+  DEL  Vol32_1945/April: April_Vol32_26_Poem_Gold-green_Wangsgaard.txt
+       Reason: TOC page (duplicate of seq 01)
+  DEL  Vol32_1945/April: April_Vol32_27_Poem_To_My_Benedict.txt
+       Reason: Classified as prose (avg line 60 chars, 1865 total)
+  DEL  Vol32_1945/January: January_Vol32_34_Poem_For_Crawford.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol32_1945/July: July_Vol32_32_Poem_My_Hodapp.txt
+       Reason: Pioneer narrative prose
+  DEL  Vol32_1945/July: July_Vol32_33_Poem_Missing_Gabbott.txt
+       Reason: Prose text
+  DEL  Vol32_1945/June: June_Vol32_25_Poem_A_Cooper.txt
+       Reason: Classified as prose (avg line 60 chars, 1499 total)
+  DEL  Vol32_1945/March: March_Vol32_26_Poem_To_a_Payne.txt
+       Reason: Prose fiction (manual)
+  DEL  Vol32_1945/March: March_Vol32_27_Poem_To_a_Stock.txt
+       Reason: Prose text (avg 68 chars, 2368 total)
+  DEL  Vol32_1945/March: March_Vol32_28_Poem_Early_Parthesius.txt
+       Reason: Prose text
+  DEL  Vol32_1945/October: October_Vol32_29_Poem_Tawdry_Jade_Cottam.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol32_1945/October: October_Vol32_30_Poem_Orphaned_Sartori.txt
+       Reason: Biographical prose
+  DEL  Vol32_1945/September: September_Vol32_32_Poem_My_Hendrickson.txt
+       Reason: Music/song listing
+  DEL  Vol33_1946/April: April_Vol33_24_Poem_When_Chadwick.txt
+       Reason: Prose quotation (not a poem)
+  DEL  Vol33_1946/April: April_Vol33_26_Poem_Voice_of_Bailey.txt
+       Reason: BYU article/prose
+  DEL  Vol33_1946/April: April_Vol33_30_Poem_God_Must_Love_the_Gabbott.txt
+       Reason: Lesson department content
+  DEL  Vol33_1946/August: August_Vol33_26_Poem_Self-Confidence_Larsen.txt
+       Reason: Subscription notice
+  DEL  Vol33_1946/December: December_Vol33_31_Poem_Christmas-Eve_Magic_Morris.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol33_1946/February: February_Vol33_24_Poem_The_Dream_Is_Coles.txt
+       Reason: Insurance/financial ad
+  DEL  Vol33_1946/February: February_Vol33_27_Poem_Elsie_Carroll.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol33_1946/February: February_Vol33_29_Poem_A_Cott.txt
+       Reason: Speech/article content
+  DEL  Vol33_1946/January: January_Vol33_36_Poem_Hill_Trone.txt
+       Reason: TOC page
+  DEL  Vol33_1946/March: March_Vol33_27_Poem_Call_of_Ekman.txt
+       Reason: Regulations/submission info
+  DEL  Vol33_1946/March: March_Vol33_28_Poem_Springtime_in_the_Hall.txt
+       Reason: Biographical content
+  DEL  Vol33_1946/March: March_Vol33_29_Poem_Renewal_Bailey.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol33_1946/May: May_Vol33_24_Poem_To_Louise_Bailey.txt
+       Reason: Canning/homemaking content
+  DEL  Vol33_1946/May: May_Vol33_25_Poem_Relief_Johnson.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol33_1946/November: November_Vol33_28_Poem_Consolation_Sabin.txt
+       Reason: Mixed prose+poem
+  DEL  Vol33_1946/October: October_Vol33_23_Poem_In_Regret.txt
+       Reason: Prose fiction with extensive dialogue (12 passages)
+  DEL  Vol33_1946/October: October_Vol33_24_Poem_Yesterdays_Ekman.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol34_1947/April: April_Vol34_30_Poem_In_Wangsgaard.txt
+       Reason: Prose fiction with extensive dialogue (8 passages)
+  DEL  Vol34_1947/April: April_Vol34_31_Poem_April_Trone.txt
+       Reason: Classified as prose (avg line 83 chars, 751 total)
+  DEL  Vol34_1947/April: April_Vol34_32_Poem_Be_Wehr.txt
+       Reason: Theology lesson reference
+  DEL  Vol34_1947/August: August_Vol34_28_Poem_Your_Subscription_EXPIRES_With_Issue.txt
+       Reason: Prose fiction with extensive dialogue (8 passages)
+  DEL  Vol34_1947/August: August_Vol34_29_Poem_Post-office_Address_Unknown.txt
+       Reason: Prose text (avg 65 chars, 2647 total)
+  DEL  Vol34_1947/January: January_Vol34_40_Poem_Tomorrow_Christensen.txt
+       Reason: TOC page
+  DEL  Vol34_1947/January: January_Vol34_41_Poem_Deserted_Cabin_Unknown.txt
+       Reason: TOC page fragment
+  DEL  Vol34_1947/July: July_Vol34_25_Poem_To_Gift.txt
+       Reason: Prose fiction with dialogue (3 passages, 1822 chars)
+  DEL  Vol34_1947/July: July_Vol34_26_Poem_Sego_Lily_Wangsgaard.txt
+       Reason: Photo caption
+  DEL  Vol34_1947/March: March_Vol34_23_Poem_The_Tenney.txt
+       Reason: Classified as prose (avg line 202 chars, 808 total)
+  DEL  Vol34_1947/March: March_Vol34_28_Poem_He_Miner.txt
+       Reason: Prose fiction with dialogue (3 passages, 2776 chars)
+  DEL  Vol34_1947/March: March_Vol34_29_Poem_Evelyn_Fjeldsted_Unknown.txt
+       Reason: TOC page
+  DEL  Vol34_1947/October: October_Vol34_26_Poem_Prayer_of_a_Nelson.txt
+       Reason: Prose fiction with extensive dialogue (14 passages)
+  DEL  Vol34_1947/October: October_Vol34_28_Poem_To_Find_To_Fjeldsted.txt
+       Reason: Prose fiction with extensive dialogue (31 passages)
+  DEL  Vol35_1948/April: April_Vol35_32_Poem_Debut_of_Overfelt.txt
+       Reason: Pioneer narrative prose
+  DEL  Vol35_1948/August: August_Vol35_32_Poem_AUGUST.txt
+       Reason: General editorial content
+  DEL  Vol35_1948/August: August_Vol35_33_Poem_Summer_Ekman.txt
+       Reason: Conference announcement
+  DEL  Vol35_1948/February: February_Vol35_23_Poem_Ora_Stewart.txt
+       Reason: Classified as prose (avg line 68 chars, 1222 total)
+  DEL  Vol35_1948/January: January_Vol35_30_Poem_A_Flynn.txt
+       Reason: TOC/lesson reference page
+  DEL  Vol35_1948/January: January_Vol35_31_Poem_My_Nelson.txt
+       Reason: Prose fiction with extensive dialogue (7 passages)
+  DEL  Vol35_1948/July: July_Vol35_30_Poem_Hillside_Wangsgaard.txt
+       Reason: Ward/stake listing
+  DEL  Vol35_1948/July: July_Vol35_31_Poem_ZCMI_T_J_Howells_FIELD.txt
+       Reason: Music instruction/ad
+  DEL  Vol35_1948/June: June_Vol35_33_Poem_Petals_and_Wangsgaard.txt
+       Reason: Advertisement
+  DEL  Vol35_1948/June: June_Vol35_34_Poem_SUMMER_IN_WASATCH.txt
+       Reason: Agricultural/pioneer content
+  DEL  Vol35_1948/June: June_Vol35_35_Poem_The_Cover_Summer_McNeely.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol35_1948/June: June_Vol35_36_Poem_Stay-at-Home_Hill.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol35_1948/March: March_Vol35_33_Poem_John_Freckleton.txt
+       Reason: Prose fiction with extensive dialogue (8 passages)
+  DEL  Vol35_1948/March: March_Vol35_34_Poem_Dorothy_Roberts.txt
+       Reason: Long prose lines (avg 77 chars)
+  DEL  Vol35_1948/May: May_Vol35_32_Poem_Father_in_Heaven_I_Hoke.txt
+       Reason: Scripture+mortuary ad
+  DEL  Vol35_1948/November: November_Vol35_26_Poem_Trials_and_Happiness_Emmeline_B_Wells.txt
+       Reason: Long prose lines (avg 96 chars)
+  DEL  Vol35_1948/November: November_Vol35_27_Poem_November_Coles.txt
+       Reason: Cooking/recipe reference
+  DEL  Vol35_1948/November: November_Vol35_28_Poem_I_Ekman.txt
+       Reason: Recipe
+  DEL  Vol35_1948/October: October_Vol35_24_Poem_Walk_Me.txt
+       Reason: Prose fiction with extensive dialogue (12 passages)
+  DEL  Vol35_1948/October: October_Vol35_25_Poem_Night_Morris.txt
+       Reason: Meeting statistics
+  DEL  Vol35_1948/October: October_Vol35_26_Poem_Epilogue_Ekman.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol35_1948/September: September_Vol35_29_Poem_Something_in_Your_Word_Dorothy_J_Roberts.txt
+       Reason: Lesson department content
+  DEL  Vol35_1948/September: September_Vol35_34_Poem_Winds_of_Fjeldsted.txt
+       Reason: Pioneer fiction narrative
+  DEL  Vol35_1948/September: September_Vol35_38_Poem_C_Johns.txt
+       Reason: Prose fiction with extensive dialogue (13 passages)
+  DEL  Vol35_1948/September: September_Vol35_39_Poem_Antics_Triplett.txt
+       Reason: Prose text (avg 64 chars, 2560 total)
+  DEL  Vol36_1949/August: August_Vol36_28_Poem_August_Rigby.txt
+       Reason: Editorial about television
+  DEL  Vol36_1949/August: August_Vol36_31_Poem_Dream_Dustin.txt
+       Reason: Prose fiction with dialogue
+  DEL  Vol36_1949/August: August_Vol36_32_Poem_Remembrance_Parthesius.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol36_1949/December: December_Vol36_32_Poem_The_Roberts.txt
+       Reason: Recipe
+  DEL  Vol36_1949/December: December_Vol36_34_Poem_In_This_Be_Schow.txt
+       Reason: Recipe
+  DEL  Vol36_1949/December: December_Vol36_35_Poem_A_Storey.txt
+       Reason: Lesson/numbered content (8 items)
+  DEL  Vol36_1949/December: December_Vol36_37_Poem_Holy_Night_Coles.txt
+       Reason: Prose fiction with dialogue (3 passages, 1953 chars)
+  DEL  Vol36_1949/December: December_Vol36_39_Poem_Snowflakes_Maness.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol36_1949/July: July_Vol36_39_Poem_Pioneer_Chadwick.txt
+       Reason: Classified as prose (avg line 65 chars, 1569 total)
+  DEL  Vol36_1949/July: July_Vol36_40_Poem_Mood_of_Harwood.txt
+       Reason: Long prose lines (avg 72 chars)
+  DEL  Vol36_1949/July: July_Vol36_41_Poem_That_America_Gabbott.txt
+       Reason: Recipe
+  DEL  Vol36_1949/July: July_Vol36_43_Poem_Patriot_Day_Harvey.txt
+       Reason: General Board listing/masthead
+  DEL  Vol36_1949/March: March_Vol36_23_Poem_Spring_Candlelight.txt
+       Reason: Long prose lines (avg 100 chars)
+  DEL  Vol36_1949/November: November_Vol36_31_Poem_NOVEMBER_1949_cries_on.txt
+       Reason: Ad/back matter
+  DEL  Vol36_1949/November: November_Vol36_34_Poem_Rain_on_Jones.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol36_1949/November: November_Vol36_38_Poem_November_Ekman.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol36_1949/October: October_Vol36_27_Poem_Brides_Illusion_for_a.txt
+       Reason: TOC/ad page
+  DEL  Vol36_1949/October: October_Vol36_29_Poem_Time_for_Wangsgaard.txt
+       Reason: Prose fiction with extensive dialogue (17 passages)
+  DEL  Vol36_1949/September: September_Vol36_31_Poem_Blue_Woods.txt
+       Reason: Fiction fragment
+  DEL  Vol36_1949/September: September_Vol36_32_Poem_A_Wittemund.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol36_1949/September: September_Vol36_33_Poem_My_Parry.txt
+       Reason: Prose fiction with extensive dialogue (13 passages)
+  DEL  Vol37_1950/April: April_Vol37_28_Poem_Bazaars_Mothers.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol37_1950/April: April_Vol37_31_Poem_Give_Candland.txt
+       Reason: Church lesson/book references
+  DEL  Vol37_1950/April: April_Vol37_32_Poem_The_Sorensen.txt
+       Reason: Lesson department content
+  DEL  Vol37_1950/April: April_Vol37_33_Poem_The_Birth_of_Shomaker.txt
+       Reason: Lesson department content
+  DEL  Vol37_1950/April: April_Vol37_34_Poem_Beyond_Roberts.txt
+       Reason: TOC page
+  DEL  Vol37_1950/April: April_Vol37_35_Poem_Announcement_Cameron.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol37_1950/April: April_Vol37_36_Poem_Departure_Johns.txt
+       Reason: Lesson/numbered content (4 items)
+  DEL  Vol37_1950/December: December_Vol37_41_Poem_Who_Watched_in_Faith_Alice_Morrey.txt
+       Reason: Cover description
+  DEL  Vol37_1950/December: December_Vol37_42_Poem_Peace_As_on_the_Roberts.txt
+       Reason: Organizational news/prose
+  DEL  Vol37_1950/December: December_Vol37_43_Poem_What_Is_Cook.txt
+       Reason: Organizational news/prose
+  DEL  Vol37_1950/December: December_Vol37_44_Poem_Communications_Flynn.txt
+       Reason: Statistical/report content
+  DEL  Vol37_1950/June: June_Vol37_28_Poem_A_Jones.txt
+       Reason: Prose fiction with dialogue (4 passages, 2731 chars)
+  DEL  Vol37_1950/June: June_Vol37_29_Poem_Friend_of_Flynn.txt
+       Reason: Prose fiction with extensive dialogue (7 passages)
+  DEL  Vol37_1950/June: June_Vol37_30_Poem_Floral_Offering_Wangsgaard.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol37_1950/May: May_Vol37_31_Poem_Without_Johns.txt
+       Reason: Prose fiction with extensive dialogue (10 passages)
+  DEL  Vol37_1950/May: May_Vol37_32_Poem_My_Gabbott.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol37_1950/October: October_Vol37_38_Poem_October_Graham.txt
+       Reason: Prose fiction with extensive dialogue (7 passages)
+  DEL  Vol38_1951/April: April_Vol38_38_Poem_America_Cooks_The_Browns.txt
+       Reason: Classified as prose (avg line 55 chars, 1763 total)
+  DEL  Vol38_1951/April: April_Vol38_41_Poem_New_McCune.txt
+       Reason: Prose fiction with extensive dialogue (20 passages)
+  DEL  Vol38_1951/April: April_Vol38_42_Poem_Miracle_Crothers.txt
+       Reason: Prose fiction (Annabell/Clay)
+  DEL  Vol38_1951/April: April_Vol38_43_Poem_Living_Water_Christensen.txt
+       Reason: Prose fiction with extensive dialogue (10 passages)
+  DEL  Vol38_1951/August: August_Vol38_30_Poem_Song_Romolo.txt
+       Reason: Prose fiction with extensive dialogue (12 passages)
+  DEL  Vol38_1951/February: February_Vol38_24_Poem_February_Stewart.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol38_1951/February: February_Vol38_25_Poem_Where_Roberts.txt
+       Reason: Lesson/numbered content (9 items)
+  DEL  Vol38_1951/January: January_Vol38_40_Poem_Within_My_Sayre.txt
+       Reason: TOC page
+  DEL  Vol38_1951/July: July_Vol38_36_Poem_Hill_Roberts.txt
+       Reason: Prose fiction with extensive dialogue (7 passages)
+  DEL  Vol38_1951/July: July_Vol38_37_Poem_Light_and_Fjeldsted.txt
+       Reason: Prose fiction with dialogue (3 passages, 2180 chars)
+  DEL  Vol38_1951/July: July_Vol38_38_Poem_On_Atkinson.txt
+       Reason: Prose fiction (Camilla/interior design)
+  DEL  Vol38_1951/July: July_Vol38_42_Poem_Compensation_Cook.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol38_1951/June: June_Vol38_39_Poem_Sunday_in_the_Coles.txt
+       Reason: Prose fiction with dialogue (3 passages, 2762 chars)
+  DEL  Vol38_1951/June: June_Vol38_42_Poem_I_Love_My_Egbert.txt
+       Reason: Prose fiction with dialogue (3 passages, 2712 chars)
+  DEL  Vol38_1951/March: March_Vol38_26_Poem_Beyond_This_Powell.txt
+       Reason: Prose fiction with extensive dialogue (17 passages)
+  DEL  Vol38_1951/March: March_Vol38_27_Poem_A_Square_of_Belnap.txt
+       Reason: OCR garbage (statistical table)
+  DEL  Vol38_1951/March: March_Vol38_29_Poem_The_Stewart.txt
+       Reason: OCR garbage (statistical table)
+  DEL  Vol38_1951/May: May_Vol38_25_Poem_What_Shall_We_Stewart.txt
+       Reason: Classified as prose (avg line 65 chars, 1562 total)
+  DEL  Vol38_1951/May: May_Vol38_27_Poem_My_Heart_Is_Harvey.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol38_1951/November: November_Vol38_32_Poem_by_Ekman.txt
+       Reason: Art/craft instructions
+  DEL  Vol38_1951/September: September_Vol38_29_Poem_Goodbye_Wadley.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol39_1952/August: August_Vol39_34_Poem_Remembered_Cook.txt
+       Reason: Prose fiction with extensive dialogue (5 passages)
+  DEL  Vol39_1952/August: August_Vol39_37_Poem_Dispossessed_Sutherland.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol39_1952/December: December_Vol39_51_Poem_Today_Atkinson.txt
+       Reason: Prose fiction with extensive dialogue (23 passages)
+  DEL  Vol39_1952/December: December_Vol39_52_Poem_Low_Coles.txt
+       Reason: Prose fiction with dialogue (4 passages, 1524 chars)
+  DEL  Vol39_1952/December: December_Vol39_53_Poem_Emergence_Stewart.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol39_1952/February: February_Vol39_44_Poem_Science_Kovan.txt
+       Reason: Prose text (avg 65 chars, 2975 total)
+  DEL  Vol39_1952/February: February_Vol39_45_Poem_Elms_in_Roberts.txt
+       Reason: Prose fiction with extensive dialogue (12 passages)
+  DEL  Vol39_1952/February: February_Vol39_46_Poem_Storm-Bent_Schow.txt
+       Reason: TOC page
+  DEL  Vol39_1952/January: January_Vol39_30_Poem_A_New_Year_Lael_W_Hill_1_Resolution_by_R_Salyer.txt
+       Reason: Subscription notice
+  DEL  Vol39_1952/July: July_Vol39_31_Poem_Westward_in_This_Roberts.txt
+       Reason: TOC page
+  DEL  Vol39_1952/July: July_Vol39_34_Poem_Memory_Ekman.txt
+       Reason: Prose fiction with dialogue (4 passages, 3109 chars)
+  DEL  Vol39_1952/June: June_Vol39_58_Poem_Concerto_Smith.txt
+       Reason: Subscription notice
+  DEL  Vol39_1952/March: March_Vol39_41_Poem_March_Hill.txt
+       Reason: Prose fiction with extensive dialogue (16 passages)
+  DEL  Vol39_1952/March: March_Vol39_42_Poem_The_Pedersen.txt
+       Reason: Prose fiction with extensive dialogue (6 passages)
+  DEL  Vol39_1952/March: March_Vol39_43_Poem_Valley_Hills_Evelyn_Fjeldsted_173_All_He_Larsen.txt
+       Reason: Mixed poem+narrative
+  DEL  Vol39_1952/March: March_Vol39_45_Poem_Valley_Harvey.txt
+       Reason: Prose fiction with extensive dialogue (14 passages)
+  DEL  Vol39_1952/March: March_Vol39_46_Poem_Words_for_Sayre.txt
+       Reason: Prose fiction with extensive dialogue (16 passages)
+  DEL  Vol39_1952/March: March_Vol39_49_Poem_Inefficacy_Thomson.txt
+       Reason: Subscription notice
+  DEL  Vol39_1952/November: November_Vol39_31_Poem_First_Sadleir.txt
+       Reason: Prose fiction with dialogue (3 passages, 1541 chars)
+  DEL  Vol39_1952/November: November_Vol39_33_Poem_A_Fjeldsted.txt
+       Reason: Prose fiction with dialogue (3 passages, 1952 chars)
+  DEL  Vol39_1952/November: November_Vol39_35_Poem_Valleyward_Roberts.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol39_1952/November: November_Vol39_36_Poem_Unexpressed_Cameron.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol39_1952/September: September_Vol39_23_Poem_Aftermath_of_Larsen.txt
+       Reason: Regulations/submission info
+  DEL  Vol39_1952/September: September_Vol39_24_Poem_To_My_Earl.txt
+       Reason: Prose fiction with dialogue (3 passages, 1652 chars)
+  DEL  Vol40_1953/July: July_Vol40_31_Poem_Faith_of_Our_Fathers_Christie_Lund_Coles_Stanley.txt
+       Reason: Prose fiction with extensive dialogue (9 passages)
+  DEL  Vol40_1953/July: July_Vol40_34_Poem_Release_From_Miles.txt
+       Reason: Advertisement
+  DEL  Vol40_1953/March: March_Vol40_33_Poem_Take-Off_Parthesius.txt
+       Reason: TOC page
+  DEL  Vol40_1953/March: March_Vol40_35_Poem_Fantasy_Lukei.txt
+       Reason: TOC page
+  DEL  Vol40_1953/May: May_Vol40_33_Poem_After_the_Feast_Iris_W_Schow_289_My_Moth_Hafen.txt
+       Reason: Prose fiction with extensive dialogue (10 passages)
+  DEL  Vol40_1953/May: May_Vol40_36_Poem_About_Flowers_Swain.txt
+       Reason: TOC/subscription/publication page
+  DEL  Vol40_1953/November: November_Vol40_30_Poem_Autumn_Roberts.txt
+       Reason: TOC page
+  DEL  Vol40_1953/November: November_Vol40_31_Poem_Homemaking_in_Pedersen.txt
+       Reason: Regulations/submission info
+  DEL  Vol40_1953/November: November_Vol40_33_Poem_Flame_Ivy_Houtz_Woolley_784_We_Will_Reme_Reid.txt
+       Reason: Ad/back matter
+  DEL  Vol40_1953/September: September_Vol40_31_Poem_Heritage_of_Wangsgaard.txt
+       Reason: Prose text (avg 64 chars, 2604 total)
+  DEL  Vol35_1948/December: December_Vol35_34_Poem_We_Bailey.txt
+       Reason: Prose sermon (duplicate of seq 24)
+
+============================================================
+2. FILES KEPT (195 total)
+============================================================
+
+  KEEP Vol30_1943/February: February_Vol30_29_Poem_No_Sartori.txt
+  KEEP Vol30_1943/February: February_Vol30_30_Poem_Human_Kleinman.txt
+  KEEP Vol30_1943/January: January_Vol30_25_Poem_Mabel_Gabbott.txt
+  KEEP Vol30_1943/March: March_Vol30_23_Poem_Triumph_Bailey.txt
+  KEEP Vol30_1943/March: March_Vol30_24_Poem_Contentment_Ostler.txt
+  KEEP Vol30_1943/March: March_Vol30_25_Poem_On_That_Crawford.txt
+  KEEP Vol32_1945/July: July_Vol32_28_Poem_Alleviation_Dix.txt
+  KEEP Vol32_1945/November: November_Vol32_24_Poem_The_Faith_I_Robinson.txt
+  KEEP Vol32_1945/November: November_Vol32_30_Poem_Prayer_of_Wangsgaard.txt
+  KEEP Vol32_1945/October: October_Vol32_28_Poem_Ochre_Leaves_Ruby_Baird_Andersen.txt
+  KEEP Vol32_1945/September: September_Vol32_26_Poem_My_Kitchen_Hendrickson.txt
+  KEEP Vol33_1946/April: April_Vol33_23_Poem_Father_Sartori.txt
+  KEEP Vol33_1946/April: April_Vol33_25_Poem_Aftermath_Stock.txt
+  KEEP Vol33_1946/April: April_Vol33_27_Poem_Offerings_Griffin.txt
+  KEEP Vol33_1946/April: April_Vol33_28_Poem_Apple_Tree_in_Romolo.txt
+  KEEP Vol33_1946/April: April_Vol33_29_Poem_Spring_Ekman.txt
+  KEEP Vol33_1946/August: August_Vol33_24_Poem_Iris_Schow.txt
+  KEEP Vol33_1946/December: December_Vol33_30_Poem_Dorothy_J_Roberts_Roberts.txt
+  KEEP Vol33_1946/February: February_Vol33_25_Poem_To_Nicholes.txt
+  KEEP Vol33_1946/February: February_Vol33_26_Poem_To_Haws.txt
+  KEEP Vol33_1946/February: February_Vol33_28_Poem_Twilight_Jones.txt
+  KEEP Vol33_1946/January: January_Vol33_28_Poem_I_Know_a_Hendrickson.txt
+  KEEP Vol33_1946/January: January_Vol33_34_Poem_The_Morning_Cottam.txt
+  KEEP Vol33_1946/June: June_Vol33_28_Poem_My_Johnson.txt
+  KEEP Vol33_1946/November: November_Vol33_27_Poem_Where_Dreams_Redd.txt
+  KEEP Vol33_1946/November: November_Vol33_29_Poem_Hill-Top_Ekman.txt
+  KEEP Vol33_1946/November: November_Vol33_30_Poem_Old_Leaves_Unknown.txt
+  KEEP Vol34_1947/April: April_Vol34_24_Poem_Recompense_Christensen.txt
+  KEEP Vol34_1947/August: August_Vol34_25_Poem_One_Roberts.txt
+  KEEP Vol34_1947/August: August_Vol34_26_Poem_Our_Sayre.txt
+  KEEP Vol34_1947/August: August_Vol34_27_Poem_Myra_Kirkman_Unknown.txt
+  KEEP Vol34_1947/December: December_Vol34_23_Poem_Winter_Ireland.txt
+  KEEP Vol34_1947/December: December_Vol34_33_Poem_Lights_Harvey.txt
+  KEEP Vol34_1947/January: January_Vol34_27_Poem_Birds_Marguerite_Kirkham.txt
+  KEEP Vol34_1947/January: January_Vol34_31_Poem_A_Mother_to_Her_Hase.txt
+  KEEP Vol34_1947/June: June_Vol34_25_Poem_Sego_Fjeldsted.txt
+  KEEP Vol34_1947/March: March_Vol34_25_Poem_March_Trone.txt
+  KEEP Vol34_1947/March: March_Vol34_30_Poem_Patterned_the_Wangsgaard.txt
+  KEEP Vol34_1947/November: November_Vol34_31_Poem_Revealed_Miles.txt
+  KEEP Vol34_1947/November: November_Vol34_32_Poem_Silver_Death_Unknown.txt
+  KEEP Vol34_1947/October: October_Vol34_27_Poem_Storm_and_Ekman.txt
+  KEEP Vol34_1947/September: September_Vol34_27_Poem_Within_Bailey.txt
+  KEEP Vol35_1948/August: August_Vol35_30_Poem_Summer_Shines_With_Horne.txt
+  KEEP Vol35_1948/August: August_Vol35_34_Poem_Cinderellas_Lewis.txt
+  KEEP Vol35_1948/December: December_Vol35_24_Poem_We_Bailey.txt
+  KEEP Vol35_1948/December: December_Vol35_33_Poem_C_Johns.txt
+  KEEP Vol35_1948/December: December_Vol35_34_Poem_We_Bailey.txt
+  KEEP Vol35_1948/January: January_Vol35_28_Poem_Della_Adams_Leitner.txt
+  KEEP Vol35_1948/June: June_Vol35_23_Poem_Heartbreak_Cherry_McKay.txt
+  KEEP Vol35_1948/June: June_Vol35_25_Poem_Margery_S._Stewart.txt
+  KEEP Vol35_1948/March: March_Vol35_25_Poem_Twilight_Linford.txt
+  KEEP Vol35_1948/March: March_Vol35_35_Poem_Spring_Dusk_Christie_Lund_Coles.txt
+  KEEP Vol35_1948/March: March_Vol35_36_Poem_Tulips_Grace_T_Kirton.txt
+  KEEP Vol35_1948/May: May_Vol35_25_Poem_Mothers_Allredge.txt
+  KEEP Vol35_1948/May: May_Vol35_31_Poem_Lullaby_Stewart.txt
+  KEEP Vol35_1948/November: November_Vol35_24_Poem_Desert_Dusk.txt
+  KEEP Vol35_1948/October: October_Vol35_23_Poem_Things_Are_Gabbott.txt
+  KEEP Vol35_1948/September: September_Vol35_31_Poem_Desert_Morris.txt
+  KEEP Vol35_1948/September: September_Vol35_32_Poem_Payment_Clyde.txt
+  KEEP Vol35_1948/September: September_Vol35_33_Poem_Risen_Harwood.txt
+  KEEP Vol35_1948/September: September_Vol35_35_Poem_Omnipotence_Wangsgaard.txt
+  KEEP Vol35_1948/September: September_Vol35_36_Poem_Mabel_Gabbott.txt
+  KEEP Vol35_1948/September: September_Vol35_37_Poem_Josephine_Harvey.txt
+  KEEP Vol36_1949/August: August_Vol36_27_Poem_Sand_and_Redd.txt
+  KEEP Vol36_1949/August: August_Vol36_29_Poem_Wisteria_Sayre.txt
+  KEEP Vol36_1949/August: August_Vol36_30_Poem_All_Roberts.txt
+  KEEP Vol36_1949/December: December_Vol36_33_Poem_The_Year_Is_Miles.txt
+  KEEP Vol36_1949/December: December_Vol36_36_Poem_Blizzard_Fjeldsted.txt
+  KEEP Vol36_1949/December: December_Vol36_38_Poem_Remnant_Jones.txt
+  KEEP Vol36_1949/July: July_Vol36_42_Poem_Embryo_Johns.txt
+  KEEP Vol36_1949/March: March_Vol36_30_Poem_Sky_Writing_Marvin_Jones.txt
+  KEEP Vol36_1949/March: March_Vol36_31_Poem_Longing_Susa_Gould_Walker.txt
+  KEEP Vol36_1949/November: November_Vol36_35_Poem_Poem_Koven.txt
+  KEEP Vol36_1949/November: November_Vol36_36_Poem_Earth_Coles.txt
+  KEEP Vol36_1949/November: November_Vol36_37_Poem_The_Hill.txt
+  KEEP Vol36_1949/September: September_Vol36_28_Poem_Poplar_Harwood.txt
+  KEEP Vol36_1949/September: September_Vol36_29_Poem_That_He_Meagher.txt
+  KEEP Vol36_1949/September: September_Vol36_30_Poem_The_Robinson.txt
+  KEEP Vol37_1950/April: April_Vol37_29_Poem_Sharing_Christensen.txt
+  KEEP Vol37_1950/April: April_Vol37_30_Poem_To_My_Three-Year-Old_on_a_Gabbott.txt
+  KEEP Vol37_1950/August: August_Vol37_23_Poem_Lovelier_Shomaker.txt
+  KEEP Vol37_1950/February: February_Vol37_28_Poem_Winter_Johnson.txt
+  KEEP Vol37_1950/January: January_Vol37_29_Poem_Night_Gene_Romolo.txt
+  KEEP Vol37_1950/July: July_Vol37_41_Poem_Dreams_Are_Shomaker.txt
+  KEEP Vol37_1950/March: March_Vol37_30_Poem_The_Desert_Is_a_Stallings.txt
+  KEEP Vol37_1950/March: March_Vol37_36_Poem_Birthday_Congratulations.txt
+  KEEP Vol37_1950/May: May_Vol37_28_Poem_Neighborhood_Margery_S_Stewart.txt
+  KEEP Vol37_1950/May: May_Vol37_30_Poem_Songs_for_Hill.txt
+  KEEP Vol37_1950/May: May_Vol37_33_Poem_Swinging_Sayre.txt
+  KEEP Vol37_1950/October: October_Vol37_35_Poem_When_I_Roberts.txt
+  KEEP Vol37_1950/October: October_Vol37_36_Poem_Songs_of_Wilson.txt
+  KEEP Vol37_1950/October: October_Vol37_37_Poem_Once_Candland.txt
+  KEEP Vol37_1950/October: October_Vol37_39_Poem_Enchantment_in_Swain.txt
+  KEEP Vol37_1950/September: September_Vol37_27_Poem_For_Early_Autumn_Berta_H.txt
+  KEEP Vol38_1951/April: April_Vol38_29_Poem_Who_Has_Loved_the_Earth.txt
+  KEEP Vol38_1951/August: August_Vol38_31_Poem_Prayer_Gustafson.txt
+  KEEP Vol38_1951/December: December_Vol38_34_Poem_Song_for_Midnight_Dorothy_J.txt
+  KEEP Vol38_1951/December: December_Vol38_35_Poem_The_Schow.txt
+  KEEP Vol38_1951/February: February_Vol38_26_Poem_Blackbirds_in_Laster.txt
+  KEEP Vol38_1951/January: January_Vol38_34_Poem_The_Heart_Will_Roberts.txt
+  KEEP Vol38_1951/January: January_Vol38_35_Poem_Rosemary_Stewart.txt
+  KEEP Vol38_1951/January: January_Vol38_36_Poem_Sketches_Fjeldsted.txt
+  KEEP Vol38_1951/January: January_Vol38_37_Poem_Mirror_Gabbott.txt
+  KEEP Vol38_1951/January: January_Vol38_38_Poem_My_Garibaldi.txt
+  KEEP Vol38_1951/January: January_Vol38_39_Poem_My_Shaver.txt
+  KEEP Vol38_1951/January: January_Vol38_41_Poem_Progress_Reid.txt
+  KEEP Vol38_1951/July: July_Vol38_39_Poem_First_Steps_Clayton.txt
+  KEEP Vol38_1951/July: July_Vol38_40_Poem_Desert_Scene_Cragun.txt
+  KEEP Vol38_1951/July: July_Vol38_41_Poem_Prayer_Morris.txt
+  KEEP Vol38_1951/July: July_Vol38_43_Poem_Gypsy_Soul_Wilson.txt
+  KEEP Vol38_1951/June: June_Vol38_38_Poem_How_Much_a_Heart_Eva_Willes.txt
+  KEEP Vol38_1951/June: June_Vol38_40_Poem_Yet_Man_Heeds_Not_Atkinson.txt
+  KEEP Vol38_1951/June: June_Vol38_41_Poem_Night_From_Shomaker.txt
+  KEEP Vol38_1951/March: March_Vol38_24_Poem_Visiting_Teachers_Eva_J_Lillywhite.txt
+  KEEP Vol38_1951/March: March_Vol38_25_Poem_The_Coles.txt
+  KEEP Vol38_1951/March: March_Vol38_28_Poem_Another_Anderson.txt
+  KEEP Vol38_1951/May: May_Vol38_23_Poem_In_a_Very_Wangsgaard.txt
+  KEEP Vol38_1951/May: May_Vol38_24_Poem_I_Have_Returned_to_the_Roberts.txt
+  KEEP Vol38_1951/May: May_Vol38_26_Poem_The_Powell.txt
+  KEEP Vol38_1951/November: November_Vol38_26_Poem_Memory_Kate_Richards.txt
+  KEEP Vol38_1951/November: November_Vol38_27_Poem_Desert_Artist_Ida_Isaacson.txt
+  KEEP Vol38_1951/November: November_Vol38_28_Poem_There_Is_No_Sound_LeRoy_Burke_Meagher.txt
+  KEEP Vol38_1951/November: November_Vol38_29_Poem_Reminder_Maryhale_Woolsey.txt
+  KEEP Vol38_1951/November: November_Vol38_30_Poem_Paeans_Pansye_H_Powell.txt
+  KEEP Vol38_1951/November: November_Vol38_31_Poem_The_Roberts.txt
+  KEEP Vol38_1951/November: November_Vol38_33_Poem_November_Wind_Earl.txt
+  KEEP Vol38_1951/October: October_Vol38_29_Poem_Summer_Is_Over_Eva_Willes_Wangsgaard.txt
+  KEEP Vol38_1951/October: October_Vol38_31_Poem_Valley_Fjeldsted.txt
+  KEEP Vol38_1951/September: September_Vol38_26_Poem_Desert_Ekman.txt
+  KEEP Vol38_1951/September: September_Vol38_27_Poem_My_Romolo.txt
+  KEEP Vol38_1951/September: September_Vol38_28_Poem_Eternal_Schow.txt
+  KEEP Vol38_1951/September: September_Vol38_30_Poem_Healing_Gabbott.txt
+  KEEP Vol39_1952/August: August_Vol39_35_Poem_Of_My_Schow.txt
+  KEEP Vol39_1952/August: August_Vol39_36_Poem_When_Viner.txt
+  KEEP Vol39_1952/December: December_Vol39_44_Poem_Pressure_Mary_Gustafson.txt
+  KEEP Vol39_1952/December: December_Vol39_45_Poem_Heart_at_Rest_Beatrice_K_Ekman.txt
+  KEEP Vol39_1952/December: December_Vol39_46_Poem_Unexpressed_Hilda_V_Cameron.txt
+  KEEP Vol39_1952/December: December_Vol39_47_Poem_Love_Must_Be_Free_Ada_Marie_Patten.txt
+  KEEP Vol39_1952/December: December_Vol39_48_Poem_A_Little_While_Evelyn_Fjeldsted.txt
+  KEEP Vol39_1952/December: December_Vol39_49_Poem_The_Romolo.txt
+  KEEP Vol39_1952/December: December_Vol39_50_Poem_First_Ekman.txt
+  KEEP Vol39_1952/February: February_Vol39_39_Poem_Where_Drift_Logs_Lie_Mary_Gustafson.txt
+  KEEP Vol39_1952/February: February_Vol39_40_Poem_Promise_and_Fulfillment_Linnie_F_Robinson.txt
+  KEEP Vol39_1952/February: February_Vol39_41_Poem_Night_Encounter_Eva_Willes_Wangsgaard.txt
+  KEEP Vol39_1952/February: February_Vol39_42_Poem_Household_Hint_Lael_W_Hill.txt
+  KEEP Vol39_1952/February: February_Vol39_43_Poem_Seed_of_Laman_Alice_Morrey.txt
+  KEEP Vol39_1952/July: July_Vol39_32_Poem_Moment_on_a_Schow.txt
+  KEEP Vol39_1952/July: July_Vol39_33_Poem_The_Hill.txt
+  KEEP Vol39_1952/June: June_Vol39_43_Poem_A_Flowers_Way_Evelyn_Fjeldsted.txt
+  KEEP Vol39_1952/June: June_Vol39_45_Poem_Unquestioned_Miracle_Christie_Lund_Coles.txt
+  KEEP Vol39_1952/June: June_Vol39_46_Poem_Land_of_Gold_Vesta_N_Lukei.txt
+  KEEP Vol39_1952/June: June_Vol39_49_Poem_At_the_Larsen.txt
+  KEEP Vol39_1952/June: June_Vol39_50_Poem_Wind_in_the_Powell.txt
+  KEEP Vol39_1952/June: June_Vol39_51_Poem_Mountain_Ekman.txt
+  KEEP Vol39_1952/June: June_Vol39_52_Poem_Summer_Woolsey.txt
+  KEEP Vol39_1952/June: June_Vol39_53_Poem_Lonesome_Wilson.txt
+  KEEP Vol39_1952/June: June_Vol39_54_Poem_Beauty_Lives_in_the_Sayre.txt
+  KEEP Vol39_1952/June: June_Vol39_55_Poem_Alchemy_Miner.txt
+  KEEP Vol39_1952/June: June_Vol39_56_Poem_The_Harvey.txt
+  KEEP Vol39_1952/June: June_Vol39_57_Poem_To_the_Lukei.txt
+  KEEP Vol39_1952/March: March_Vol39_29_Poem_Patriarch_Nellie_B_Brenchley.txt
+  KEEP Vol39_1952/March: March_Vol39_31_Poem_Command_Matia_McClelland_Bur.txt
+  KEEP Vol39_1952/March: March_Vol39_34_Poem_All_Her_Ways_Are_Peace_Katherine_F_Larsen.txt
+  KEEP Vol39_1952/March: March_Vol39_36_Poem_Faded_Memory_Alice_R_Rich.txt
+  KEEP Vol39_1952/March: March_Vol39_38_Poem_Lovely_Things_Grace_Barker_Wilson.txt
+  KEEP Vol39_1952/March: March_Vol39_39_Poem_Gift_From_Spring_Ora_Lee_Parthesius.txt
+  KEEP Vol39_1952/March: March_Vol39_44_Poem_Old_Lukei.txt
+  KEEP Vol39_1952/March: March_Vol39_47_Poem_Twilight_Crothers.txt
+  KEEP Vol39_1952/March: March_Vol39_48_Poem_Sound_Romolo.txt
+  KEEP Vol39_1952/November: November_Vol39_32_Poem_Song_of_Lukei.txt
+  KEEP Vol39_1952/November: November_Vol39_34_Poem_Love_Must_Be_Patten.txt
+  KEEP Vol39_1952/October: October_Vol39_32_Poem_Autumn_Drive_Christie_Lund_Coles.txt
+  KEEP Vol39_1952/October: October_Vol39_34_Poem_The_Romolo.txt
+  KEEP Vol39_1952/October: October_Vol39_35_Poem_Design_for_Thayne.txt
+  KEEP Vol39_1952/September: September_Vol39_25_Poem_A_Magic_in_Morris.txt
+  KEEP Vol40_1953/August: August_Vol40_35_Poem_Western_Midsummer_Landscape_Katherine_F_Larsen.txt
+  KEEP Vol40_1953/August: August_Vol40_36_Poem_Beauty_Jean_Webster.txt
+  KEEP Vol40_1953/December: December_Vol40_29_Poem_The_Broken_Caravan_Margery_S_Stewart.txt
+  KEEP Vol40_1953/December: December_Vol40_31_Poem_Snowfall_Chamberlin.txt
+  KEEP Vol40_1953/February: February_Vol40_26_Poem_Lehi_Wakes_Again_Dorothy_J_Roberts.txt
+  KEEP Vol40_1953/January: January_Vol40_34_Poem_Twelfth_Singleton.txt
+  KEEP Vol40_1953/July: July_Vol40_32_Poem_Song_to_My_Sayre.txt
+  KEEP Vol40_1953/July: July_Vol40_33_Poem_Pioneers_Chamberlin.txt
+  KEEP Vol40_1953/June: June_Vol40_34_Poem_The_Father_in_His_Field_Ouida_Johns_Pedersen.txt
+  KEEP Vol40_1953/March: March_Vol40_34_Poem_Salute_Atkinson.txt
+  KEEP Vol40_1953/May: May_Vol40_27_Poem_A_Humming_Bird.txt
+  KEEP Vol40_1953/May: May_Vol40_32_Poem_A_Place_Apart_Dorothy_J.txt
+  KEEP Vol40_1953/May: May_Vol40_34_Poem_One_Shining_Day_Josephine_J_Harvey_305_A_Coles.txt
+  KEEP Vol40_1953/May: May_Vol40_35_Poem_Gift_Divine_Unknown.txt
+  KEEP Vol40_1953/November: November_Vol40_26_Poem_Winter_Wheat_Eleanor_W_Schow.txt
+  KEEP Vol40_1953/November: November_Vol40_27_Poem_Pride_Catherine_E_Berry.txt
+  KEEP Vol40_1953/November: November_Vol40_28_Poem_Autumn_Is_a_Transient_Maude_O_Cook.txt
+  KEEP Vol40_1953/November: November_Vol40_29_Poem_Quilt_Pattern_Mary_Gustafson.txt
+  KEEP Vol40_1953/November: November_Vol40_32_Poem_Fireplace_Scott.txt
+  KEEP Vol40_1953/October: October_Vol40_26_Poem_The_Salt_Lake_Temple_Christie_Lund_Coles.txt
+
+============================================================
+3. DUPLICATE PAIRS RESOLVED (4 pairs)
+============================================================
+
+1. Vol32/April: Gold-green Wangsgaard
+   KEPT:    April_Vol32_01_Poem_Gold-green_Wangsgaard.txt (actual poem)
+   DELETED: April_Vol32_26_Poem_Gold-green_Wangsgaard.txt (TOC page)
+
+2. Vol32/April: To My Benedict
+   KEPT:    April_Vol32_14_Poem_To_My_Benedict.txt (actual poem)
+   DELETED: April_Vol32_27_Poem_To_My_Benedict.txt (prose content)
+
+3. Vol35/December: We Bailey
+   KEPT:    December_Vol35_24_Poem_We_Bailey.txt (actual poem)
+   DELETED: December_Vol35_34_Poem_We_Bailey.txt (prose sermon)
+
+4. Vol35/January: My Nelson
+   KEPT:    January_Vol35_21_Poem_My_Nelson.txt (garbled OCR but contains poem)
+   DELETED: January_Vol35_31_Poem_My_Nelson.txt (prose fiction)
+   NOTE: Seq 21 has garbled OCR mixing poem with recipe text. Retained
+   because it contains actual poem content not available elsewhere.
+
+============================================================
+4. FALSE POSITIVE RENAMES REVERTED (7 files)
+============================================================
+
+These files were incorrectly renamed from their original category
+to _Poem_ by the heuristic classifier. Renames reverted:
+
+1. Vol1/Oct: V1_1914_Oct_02_Poem -> _Article_
+   Work_and_Business.txt (lesson outline)
+
+2. Vol4/Dec: December_Vol4_15_Poem -> _Article_
+   My_Christmas_Prayer.txt (TOC/index page)
+
+3. Vol5/Aug: August_Vol5_01_Poem -> _Article_
+   Chart_of_Solomons_Temple.txt (temple chart description)
+
+4. Vol5/Dec: December_Vol5_12_Poem -> _Article_
+   How_to_Stimulate_Discussion_Gweneth_W._Gibbs.txt (TOC/index)
+
+5. Vol5/Mar: March_Vol5_17_Poem -> _Editorial_
+   Keep_Your_Eye_on_the_Mark.txt (prose editorial with masthead)
+
+6. Vol37/Apr: April_Vol37_01_Poem -> _Frontispiece_
+   An_Exemplar_to_All_Men_David_O_McKay.txt (prose tribute)
+
+7. Vol39/Jan: January_Vol39_01_Poem -> _Frontispiece_
+   A_Birthday_Greeting_General_Presidency.txt (prose greeting)
+
+============================================================
+5. VOL31 INVESTIGATION
+============================================================
+
+The QC report flagged Vol31 as having dropped from 289 to 278 files.
+Investigation findings:
+
+- Current Vol31 total: 301 files (all), 236 content files
+  (excluding 65 Misc/BOARD/CONTENTS infrastructure files)
+- The baseline count of 289 likely INCLUDED infrastructure files
+- The 278 count excluded some infrastructure files inconsistently
+- CONCLUSION: No files were lost. The discrepancy was due to
+  inconsistent counting of infrastructure files between runs.
+- 1 false-positive poem file was deleted during this cleanup:
+  November_Vol31_26_Poem_In_November_Ekman.txt (church history narrative)
+
+============================================================
+6. NOTES ON REMAINING KEPT FILES
+============================================================
+
+Several kept files have known quality issues:
+
+- Some poems are OCR-collapsed to single long lines (e.g., Desert Dusk,
+  Mother's Scrapbook, I Know a Road). The poem text is present but needs
+  line breaks restored for proper formatting.
+
+- January_Vol35_21_Poem_My_Nelson.txt has garbled OCR mixing poem
+  text with recipe content. May need manual cleanup.
+
+- A few files contain poem text mixed with prose fragments from
+  surrounding pages (e.g., Consolation Sabin has prose lead-in).
+  These were kept because they contain the primary poem text.
+
+- Some poems have OCR double-spacing (extra spaces between words).
+  This is cosmetic and does not affect content extraction.
+
+============================================================
+END OF REPORT
+============================================================

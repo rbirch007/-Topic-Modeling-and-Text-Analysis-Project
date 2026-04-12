@@ -1,0 +1,136 @@
+{
+  "volume": 16,
+  "month": "September",
+  "year": 1929,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.3127,
+  "files": [
+    {
+      "source_file": "September_Vol16_15_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "The call to both heavy duties was most cheerfully",
+          "end_boundary": "her name did not appear with the poem, as its author.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for November - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I Theology and Testimony",
+          "end_boundary": "as the best thought? (b) as the best \"Phrasing?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for November - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IT Work and Business TEACHERS' TOPIC FOR NOVEMBER",
+          "end_boundary": "of what the future man is to be.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains three distinct sections: a Notes from the Field section with obituaries and corrections, followed by two Guide Lessons for November (Lesson I on Theology and Testimony covering the Book of Mormon, and Lesson II on Work and Business covering Obedience). The boundaries are clear based on content changes and formatting.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 14051,
+      "tier": 1,
+      "pdf_pages": [
+        587,
+        588,
+        589,
+        590,
+        591,
+        592,
+        593,
+        594
+      ],
+      "api_usage": {
+        "input_tokens": 48654,
+        "output_tokens": 523,
+        "cost": 0.1538
+      }
+    },
+    {
+      "source_file": "September_Vol16_16_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for November - Lesson I Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "\"We must begin not with the adults whose",
+          "end_boundary": "the Hebrew Scriptures mentioned? LESSON IT Work and",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for November - Lesson II Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IT Work and Business TEACHERS' TOPIC FOR",
+          "end_boundary": "building of a noble character. BIOGRAPHIES FOR LITERARY",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for November - Lesson III Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "BIOGRAPHIES FOR LITERARY LESSONS Biographies to be studied",
+          "end_boundary": "that woman to be.\" LESSON IV Social Service",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for November - Lesson IV Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in November)",
+          "end_boundary": "schools of your community? Uncontrollable Curiosity By Owen",
+          "confidence": "high",
+          "end_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR NOVEMBER"
+      ],
+      "notes": "This file contains four distinct lesson sections for November Guide Lessons, covering Theology, Work and Business, Literature, and Social Service. Each lesson has clear boundaries and distinct subject matter. The lessons are sequential and comprehensive, forming a complete monthly curriculum.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 27713,
+      "tier": 1,
+      "pdf_pages": [
+        600,
+        601,
+        602,
+        603,
+        604,
+        605,
+        606
+      ],
+      "api_usage": {
+        "input_tokens": 50205,
+        "output_tokens": 551,
+        "cost": 0.1589
+      }
+    }
+  ]
+}

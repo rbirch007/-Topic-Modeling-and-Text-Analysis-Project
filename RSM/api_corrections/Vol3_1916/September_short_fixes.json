@@ -1,0 +1,82 @@
+{
+  "volume": 3,
+  "month": "September",
+  "year": 1916,
+  "mode": "fix_short",
+  "total_short": 3,
+  "total_cost": 0.0779,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 2,
+    "not_found": 0
+  },
+  "files": [
+    {
+      "source_file": "September_Vol3_01_Frontispiece_Kirtland_Temple_Frontispiece_Absence_Lucy_Burnham.txt",
+      "status": "delete",
+      "current_chars": 35,
+      "complete_text": null,
+      "title": null,
+      "category": "Notice",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a misextracted frontispiece caption or photo credit. The PDF pages show article content about Mary Ann Frost Stearns Pratt and birth control discussions, but no standalone article by Lucy Burnham about absence or Kirtland, New Mexico. This is likely a header artifact or photo caption that was incorrectly treated as an article.",
+      "api_usage": {
+        "input_tokens": 6355,
+        "output_tokens": 190,
+        "cost": 0.0219
+      },
+      "pdf_pages": [
+        484,
+        485,
+        486,
+        487
+      ]
+    },
+    {
+      "source_file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_b.txt",
+      "status": "truncated",
+      "current_chars": 53,
+      "complete_text": "LESSON II.\n\nWork and Business.\n\nSECOND WEEK IN FEBRUARY.\n\nTHE DIGNITY OF LABOR.\n\nReferences: Gen. 2:15; 3:19; Ex. 20:9; 31:1-11; Neh. 4:6; Prov. 6:6-11; 10:4, 5; 12:11, 24; 13:4; 14:23; 18:9; 20:4; 21:25; 22:29; 24:30-34; 27:23-27; 31:10-31; Eccl. 3:13; 5:12; 9:10; Matt. 20:1-16; Luke 10:7; John 5:17; Acts 18:3; 20:34, 35; I Cor. 4:12; Eph. 4:28; I Thess. 4:11; II Thess. 3:10-12; I Tim. 5:8.\n\nWork is not a curse, but a blessing. It was instituted in Eden before the fall. \"And the Lord God took the man, and put him into the garden of Eden to dress it and to keep it.\" (Gen. 2:15.) After the fall, work became toilsome, but it was not then first imposed. \"In the sweat of thy face shalt thou eat bread.\" (Gen. 3:19.) The curse was not work, but the sweat and toil that must accompany work in a world where thorns and thistles grow.\n\nWork is honorable. No honest work is degrading. The man who works with his hands is as honorable as he who works with his brain. \"Seest thou a man diligent in his business? he shall stand before kings.\" (Prov. 22:29.) Paul was not ashamed to work with his hands. \"Yea, ye yourselves know, that these hands have ministered unto my necessities, and to them that were with me.\" (Acts 20:34.) Jesus was a carpenter. (Mark 6:3.)\n\nWork is necessary. \"If any would not work, neither should he eat.\" (II Thess. 3:10.) This is God's law. Society cannot afford to support the idle. Every man should contribute his share to the world's work.\n\nWork is beneficial. It develops character. It teaches patience, perseverance, self-reliance. It gives satisfaction and happiness. \"The sleep of a laboring man is sweet.\" (Eccl. 5:12.) Idleness is the mother of vice.\n\nWork should be done well. \"Whatsoever thy hand findeth to do, do it with thy might.\" (Eccl. 9:10.) Half-hearted work is poor work. The man who does his work well, whatever it may be, will succeed.\n\nWork should be done honestly. \"Let him labor, working with his hands the thing which is good.\" (Eph. 4:28.) Dishonest work is not work at all, but theft.\n\nWork should be done cheerfully. \"I have showed you all things, how that so laboring ye ought to support the weak, and to remember the words of the Lord Jesus, how he said, It is more blessed to give than to receive.\" (Acts 20:35.)\n\nQUESTIONS.\n\nWhen was work first instituted?\nWhat was the curse pronounced after the fall?\nIs any honest work degrading?\nWhat does Paul say about working with the hands?\nWhat was Christ's trade?\nWhat is God's law about work and eating?\nWhat are some of the benefits of work?\nHow should work be done?\nWhat kind of work should we avoid?\nWhat spirit should characterize our work?",
+      "title": "Work and Business",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete Lesson II on Work and Business in the PDF. The file only contained the header, but the full lesson with biblical references, discussion, and questions is visible in the PDF.",
+      "api_usage": {
+        "input_tokens": 6329,
+        "output_tokens": 1053,
+        "cost": 0.0348
+      },
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54
+      ]
+    },
+    {
+      "source_file": "September_Vol3_12b_Guide_Lessons_Guide_Lessons_c_c.txt",
+      "status": "delete",
+      "current_chars": 33,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header fragment 'LESSON IV. Home Economics. Fourth' with no actual content. The PDF shows this is part of a larger Guide Lessons section but this specific fragment contains no substantive article content.",
+      "api_usage": {
+        "input_tokens": 6328,
+        "output_tokens": 151,
+        "cost": 0.0212
+      },
+      "pdf_pages": [
+        51,
+        52,
+        53,
+        54
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "volume": 8,
+  "month": "May",
+  "year": 1921,
+  "total_files_checked": 18,
+  "files_correct": [
+    "May_Vol8_02_Poetry_Chaplet_of_Mother_and_Grandmother_Verse.txt",
+    "May_Vol8_05_Article_The_Plan_of_Mesa_Temple.txt",
+    "May_Vol8_06_Article_Out_of_the_World_G._Milton_Babcock.txt",
+    "May_Vol8_07_Article_Her_Testimony_Zella_A._Johnson.txt",
+    "May_Vol8_08_Article_About_Tobacco.txt",
+    "May_Vol8_09_Article_The_Atonement_John_G._McQuarrie.txt",
+    "May_Vol8_10_Article_Belated_Joys_Alveretta_Engar.txt",
+    "May_Vol8_11_Article_From_Zion_to_Jerusalem.txt",
+    "May_Vol8_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "May_Vol8_14_Article_Criminal_Impropriety.txt",
+    "May_Vol8_15_Article_A_Resurrection_Grace_Ingles_Frost.txt",
+    "May_Vol8_17_Article_What_Does_the_Church_Owe_Me.txt",
+    "May_Vol8_18_Article_Entertainment_Department_Morag.txt"
+  ],
+  "corrections": [
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with text from previous article about Mrs. Whitney and children",
+      "action": "trim_start",
+      "text": "MOTHERHOOD",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains magazine header information that should be in misc",
+      "action": "trim_end",
+      "text": "C. Byron Whitney.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_03_Article_Wrapped_in_Wool_Agnes_Lovendahl.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of next article about Mormon Church Against Tobacco",
+      "action": "trim_end",
+      "text": "Why, it's really living again!\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_04_Article_The_Mormon_Church_Against_Tobacco_Will_H._Brown.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing the beginning of the article",
+      "action": "prepend",
+      "text": "THE MORMON CHURCH AGAINST TOBACCO We are told by Will H. Brown, superintendent Press Bureau No-Tobacco League, Los Angeles, that: \"The slogan of every auxiliary organization of the 'Mormon,' or Latter-day Saints Church, is: \"We stand for the non-use and the non-sale of tobacco.\" That the fight is already bearing fruit is seen in the large number of \"Mormon\" store-keepers who are refusing to longer carry the weed in stock in any form. Here is a sample of reports being received at headquarters in Salt Lake City, in ever-increasing numbers—this from Jesse M. Smith, superintendent Y. M. M. I. A. Of the Snowflake stake in Arizona: \"Since December first the sale of tobacco has stopped in all towns in this stake, with the exception of three. Two of these _have only a very small population of our people.\" Here is an instance showing how many users of tobacco look-at the situation, reported by Lorenzo Toulson, manager of the Union Mercantile Co., Smithfield, Utah, which firm has discontinued the sale of tobacco: \"I have had many tell me they wish that they could not buy it anywhere, then they would quit using it.\" How Cowley, Wyoming, disposed of tobacco is told in this Associate Press dispatch of January 25th: \"Smoking and chewing of tobacco has been banned here. The action resulted from a campaign started by",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_16a_Editorial_Editorial_The_Old_Order_Changeth.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and is incomplete",
+      "action": "append",
+      "text": "the hearty good will of all his co-workers and associates.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Reorganization of the General Board of the Relief Society",
+      "expected_page": 296,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Motherhood article has extraneous content at beginning and end, 2) Wrapped in Wool bleeds into the tobacco article, 3) The Mormon Church Against Tobacco article is missing its beginning, 4) Editorial is incomplete, and 5) One article about Relief Society reorganization is completely missing from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with text from previous article about Mrs. Whitney and children",
+      "action": "trim_start",
+      "text": "MOTHERHOOD",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_01_Article_Motherhood_C._Byron_Whitney.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains magazine header information that should be in misc",
+      "action": "trim_end",
+      "text": "C. Byron Whitney.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_03_Article_Wrapped_in_Wool_Agnes_Lovendahl.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of next article about Mormon Church Against Tobacco",
+      "action": "trim_end",
+      "text": "Why, it's really living again!\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_04_Article_The_Mormon_Church_Against_Tobacco_Will_H._Brown.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence, missing the beginning of the article",
+      "action": "prepend",
+      "text": "THE MORMON CHURCH AGAINST TOBACCO We are told by Will H. Brown, superintendent Press Bureau No-Tobacco League, Los Angeles, that: \"The slogan of every auxiliary organization of the 'Mormon,' or Latter-day Saints Church, is: \"We stand for the non-use and the non-sale of tobacco.\" That the fight is already bearing fruit is seen in the large number of \"Mormon\" store-keepers who are refusing to longer carry the weed in stock in any form. Here is a sample of reports being received at headquarters in Salt Lake City, in ever-increasing numbers—this from Jesse M. Smith, superintendent Y. M. M. I. A. Of the Snowflake stake in Arizona: \"Since December first the sale of tobacco has stopped in all towns in this stake, with the exception of three. Two of these _have only a very small population of our people.\" Here is an instance showing how many users of tobacco look-at the situation, reported by Lorenzo Toulson, manager of the Union Mercantile Co., Smithfield, Utah, which firm has discontinued the sale of tobacco: \"I have had many tell me they wish that they could not buy it anywhere, then they would quit using it.\" How Cowley, Wyoming, disposed of tobacco is told in this Associate Press dispatch of January 25th: \"Smoking and chewing of tobacco has been banned here. The action resulted from a campaign started by",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "May_Vol8_16a_Editorial_Editorial_The_Old_Order_Changeth.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and is incomplete",
+      "action": "append",
+      "text": "the hearty good will of all his co-workers and associates.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,215 @@
+{
+  "volume": 54,
+  "month": "April",
+  "year": 1967,
+  "total_files_checked": 45,
+  "files_correct": [
+    "V54_04_02_Art_Inviolate_Hill.txt",
+    "V54_04_03_Art_From_Near_and_Far.txt",
+    "V54_04_05_Poem_Unsaid_Sabin.txt",
+    "V54_04_06_SpFt_Leanor_Society.txt",
+    "V54_04_10_Poem_Spring_Coles.txt",
+    "V54_04_12_SpFt_We_All_Ballard.txt",
+    "V54_04_13_GenFt_Womans_Cannon.txt",
+    "V54_04_15_SpFt_Cancers_Skutt.txt",
+    "V54_04_17_Poem_Across_Tangren.txt",
+    "V54_04_18_GenFt_The_Bascom.txt",
+    "V54_04_20_SpFt_Lake_Gabbott.txt",
+    "V54_04_23_GenFt_Into_Bond.txt",
+    "V54_04_24_GenFt_Morning_Bunker.txt",
+    "V54_04_28_Poem_Pattern_Young.txt",
+    "V54_04_29_GenFt_The_Openshaw.txt",
+    "V54_04_30_Poem_Childs_Jacobson.txt",
+    "V54_04_31_GenFt_Sense_Armstrong.txt",
+    "V54_04_35_GenFt_Flowers.txt",
+    "V54_04_38_Lssn_Summer_Jorgensen.txt",
+    "V54_04_39_Poem_Guide_Bowles.txt",
+    "V54_04_42_Poem_Hills_Roberts.txt",
+    "V54_04_44_Poem_The_Gowing.txt",
+    "V54_04_45_Poem_Reflections.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_04_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Centennial Memorial content instead of The Golden Chain Chapter 3",
+      "action": "note",
+      "text": "File contains wrong article - appears to be from January 1967 issue about Relief Society Centennial Memorial",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V54_04_04_SpFt_Correlation_Monson.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "Elder Thomas S. Monson of the Council of the Twelve [Address Delivered at the Officers Meeting of the Relief Society Annual General Conference, September 28, 1966] @ When the Savior walked the dusty pathways of towns and villages which we now reverently call the Holy Land and taught his disciples by beautiful Galilee, he often spoke in parables, in language the people best understood. Frequently he referred to home building in relationship to the lives of those who listened. He declared: \"... Every... House divided against itself shall not stand\" (Matt. 12:25). And then, in this dispensation, he cautioned: \"Behold, mine house is a house of order, saith the Lord God, and not a house of confusion\" (D&C 132:8). At Kirtland he said, \"Organize yourselves; prepare every needful thing; and establish a house, even a house of prayer, a house of fasting, a house of faith, a house of learning, a house of glory, a house of order, a house of God\" (D&C 88:119). Today the blueprint for building such a house is the Correlation Program of the Church. 244 In every quarterly conference during 1966, the executive leadership of each stake heard President McKay describe the very aim and purpose of correlation as he quoted the words of the apostle Paul: \"And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers; For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ: Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fulness of Christ\" (Eph. 4:11- 13). To assist the women of the Church to attain this very goal, members of the Adult Committee of the Correlation Program, men and women of faith, of experience, of wisdom, and called of God by inspiration, have, with the members of the General Relief Society Presidency and members of your General Board, met together, fasted together, prayed together, studied together, planned together, and diligently worked together in the preparation of your courses of study and the development of every aspect of your excellent program. Knowing the strength of President Spafford and her co-workers, we expected full and _ wholehearted cooperation. Our expectations were more than fully realized. Indeed, the successful pattern for such cooperative effort has provided the guide for other auxiliary organizations to similarly proceed. We look backward with pride. We look forward with confidence. We know the results of such teamwork will be blessings in abundance for the women in the kingdom of God. May I enumerate but a few of the blessings correlation brings: BLESSING NUMBER ONE— The Blessing of Purpose: Correlation brings more fully to proper perspective the overriding objective for each of us to strive to become the sons and daughters of our Heavenly Father. We learn to do the right things for the right reasons and to \"walk uprightly before the Lord.\" To achieve this end, the curricula in which women of the Church are involved present the principles of the gospel in such a way as to bring personal meaning to the individual, that she might be motivated to apply these gospel principles in her own life. This blessing of proper purpose is as a beacon light to guide our footsteps along the pathway to eternal life.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_07_SpFt_Reba_O._Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Forgotten Necessity fiction story at the end",
+      "action": "trim_end",
+      "text": "The members of Relief Society, wherever they will be privileged to meet and associate with Sister Carling, will be blessed through her faith and enthusiasm and her buoyant personality. She comes to her new appointment with the love and admiration of many friends and a host of fellow workers in Relief Society, and in the Church.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_16_Fict_The_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with fragment about Mrs. Maysprite without proper beginning",
+      "action": "prepend",
+      "text": "@ The other night we were discussing a story someone wrote about the man who was the only Mister in a town where all the other adults were called Brother or Sister. It took me back to the Verona of my childhood, where there were no Misters at all, only Brothers. And I recalled that there had been one Mrs. In Verona — Mrs. Maysprite,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_21_Poem_Wind_Sadleir.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing most of the poem content",
+      "action": "replace_content",
+      "text": "WIND LULLABY Beulah Huish Sadleir Sing to me, spring, With your sun in the sky, A smooth April sonnet Or wind lullaby. Sing of the tulips, Some bowing their heads, Blossoms air-branching And dainty flowered beds. Sing to me, April, While I keep a. Tryst With lavender lilacs In gentle rain mist. Sing of the nesting birds, Make love your theme, Now all is awakened From winter's long dream.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_04_22_Poem_My_Stevens.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content - has Wind Lullaby instead of My Hands",
+      "action": "replace_content",
+      "text": "MY HANDS Sadie J. Stevens I've just been thinking, and without a doubt, My hands are something to brag about. Not that they're Pretty, but where would I be Without these two hands here in front of me? There's so much they can do, and seldom complain; I can use them and wash and use them again. They never wear out and don't ask much care, And if I ever need them, they're always there. Bless these two hands. Sometimes I need four, But, if!'m willing, they're able— And who could ask more?",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_04_25_GenFt_On_Solury.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from other articles at the end",
+      "action": "trim_end",
+      "text": "Memories of childhood flash into reality; they recall home—the first shelter, and dreams of hope.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_26_Poem_A_Visit_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content from preceding article instead of the poem",
+      "action": "replace_content",
+      "text": "A VISIT HOME Alda L. Brown Go, my pig-tailed darlings, And gather sunbeams from the morn... Go find the country meadows That wait your sandaled feet! Did you know we have baby chicks And kittens in the barn? Things here are all so different From your crowded city street.... Go ride your Grandpa's pony! Climb the trees your Mommy climbed! Send a ship far sailing Way down the meadow stream....! Will show you sky-blue robin's eggs In nests all feather-lined.... And broad warm rocks beside the brook Where you can lie and dream.... Your Mom and! Will chat awhile— And get the day's work done..",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_04_32_Poem_To_My_Cushing.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains duplicate content from preceding article instead of the poem",
+      "action": "replace_content",
+      "text": "TO MY DANISH GRANDMOTHER Julene J. Cushing This has always puzzled me— Just how much is a ''pinch''? These recipes of dear Grandma's Surely are no cinch. A \"snip\" of this, a 'dab' of that, A \"tump'' of something else, Then \"beat it for a little while,'' Or, ''stir until it melts.\" I have to be a wizard to Decipher what she meant By all these strange proportions In her cookbook, worn and bent. \"How much nutmeg in the doughnuts?\" Grandma wouldn't flinch As she said, with twinkling eyes, \"Oh; just about a pinch.\" There must have been in her wise head A measuring device That told her just how much to use Of sugar, salt, and spice.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_04_33_GenFt_Recipes_Molenaar.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the Danish Grandmother poem at the end",
+      "action": "trim_end",
+      "text": "Sauce: 1 tin mushroom soup, 14 pint water, Worcestershire sauce, tomato sauce. Heat together.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_34_Poem_Going_Olsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Danish Grandmother poem",
+      "action": "trim_start",
+      "text": "GOING UNAWARE Pearle M. Olsen Too often they go on ahead, alone, Without knowing.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_04_40_Poem_And_We_Robinson.txt",
+      "issue_type": "missing_text",
+      "description": "File is missing most of the poem content",
+      "action": "replace_content",
+      "text": "AND WE GO WALKING THERE Linnie Fisher Robinson How shall we count the harvest yet to come From words that we speak now as men sow grain; Where grow no common plants for shallow plow, This is a treasured field for sun and rain. For in this plot there springs the whole of life— Our kingdom, if a kingdom yet shall be, Our counterparts to learn, love, act, or die By all we are and all we help them see. Oh, gardeners, the artifice is known That men be found upon this land of stone; The bursting blooms that shake our hearts today Are bounded by an hour and pass away; More swift the leaving—these our treasure Before our tasks are done by God's measure.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Beyond the Farthest Rift",
+      "expected_page": 247,
+      "status": "merged_with_another",
+      "merged_into": "V54_04_05_Poem_Unsaid_Sabin.txt"
+    },
+    {
+      "title": "Birthday Congratulations",
+      "expected_page": 320,
+      "status": "merged_with_another",
+      "merged_into": "V54_04_41_GenFt_Bday_Congrats.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues, wrong content, or missing text. The Golden Chain Chapter 3 file contains completely wrong content from a different issue. Multiple poems are missing content or have wrong content. Some files have content from adjacent articles bleeding in at start or end.",
+  "validated_corrections": [
+    {
+      "file": "V54_04_04_SpFt_Correlation_Monson.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "Elder Thomas S. Monson of the Council of the Twelve [Address Delivered at the Officers Meeting of the Relief Society Annual General Conference, September 28, 1966] @ When the Savior walked the dusty pathways of towns and villages which we now reverently call the Holy Land and taught his disciples by beautiful Galilee, he often spoke in parables, in language the people best understood. Frequently he referred to home building in relationship to the lives of those who listened. He declared: \"... Every... House divided against itself shall not stand\" (Matt. 12:25). And then, in this dispensation, he cautioned: \"Behold, mine house is a house of order, saith the Lord God, and not a house of confusion\" (D&C 132:8). At Kirtland he said, \"Organize yourselves; prepare every needful thing; and establish a house, even a house of prayer, a house of fasting, a house of faith, a house of learning, a house of glory, a house of order, a house of God\" (D&C 88:119). Today the blueprint for building such a house is the Correlation Program of the Church. 244 In every quarterly conference during 1966, the executive leadership of each stake heard President McKay describe the very aim and purpose of correlation as he quoted the words of the apostle Paul: \"And he gave some, apostles; and some, prophets; and some, evangelists; and some, pastors and teachers; For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ: Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fulness of Christ\" (Eph. 4:11- 13). To assist the women of the Church to attain this very goal, members of the Adult Committee of the Correlation Program, men and women of faith, of experience, of wisdom, and called of God by inspiration, have, with the members of the General Relief Society Presidency and members of your General Board, met together, fasted together, prayed together, studied together, planned together, and diligently worked together in the preparation of your courses of study and the development of every aspect of your excellent program. Knowing the strength of President Spafford and her co-workers, we expected full and _ wholehearted cooperation. Our expectations were more than fully realized. Indeed, the successful pattern for such cooperative effort has provided the guide for other auxiliary organizations to similarly proceed. We look backward with pride. We look forward with confidence. We know the results of such teamwork will be blessings in abundance for the women in the kingdom of God. May I enumerate but a few of the blessings correlation brings: BLESSING NUMBER ONE— The Blessing of Purpose: Correlation brings more fully to proper perspective the overriding objective for each of us to strive to become the sons and daughters of our Heavenly Father. We learn to do the right things for the right reasons and to \"walk uprightly before the Lord.\" To achieve this end, the curricula in which women of the Church are involved present the principles of the gospel in such a way as to bring personal meaning to the individual, that she might be motivated to apply these gospel principles in her own life. This blessing of proper purpose is as a beacon light to guide our footsteps along the pathway to eternal life.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_07_SpFt_Reba_O._Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from The Forgotten Necessity fiction story at the end",
+      "action": "trim_end",
+      "text": "The members of Relief Society, wherever they will be privileged to meet and associate with Sister Carling, will be blessed through her faith and enthusiasm and her buoyant personality. She comes to her new appointment with the love and admiration of many friends and a host of fellow workers in Relief Society, and in the Church.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_16_Fict_The_Schow.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with fragment about Mrs. Maysprite without proper beginning",
+      "action": "prepend",
+      "text": "@ The other night we were discussing a story someone wrote about the man who was the only Mister in a town where all the other adults were called Brother or Sister. It took me back to the Verona of my childhood, where there were no Misters at all, only Brothers. And I recalled that there had been one Mrs. In Verona — Mrs. Maysprite,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_25_GenFt_On_Solury.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from other articles at the end",
+      "action": "trim_end",
+      "text": "Memories of childhood flash into reality; they recall home—the first shelter, and dreams of hope.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_33_GenFt_Recipes_Molenaar.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the Danish Grandmother poem at the end",
+      "action": "trim_end",
+      "text": "Sauce: 1 tin mushroom soup, 14 pint water, Worcestershire sauce, tomato sauce. Heat together.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_04_34_Poem_Going_Olsen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from Danish Grandmother poem",
+      "action": "trim_start",
+      "text": "GOING UNAWARE Pearle M. Olsen Too often they go on ahead, alone, Without knowing.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    }
+  ],
+  "failed_validations": []
+}

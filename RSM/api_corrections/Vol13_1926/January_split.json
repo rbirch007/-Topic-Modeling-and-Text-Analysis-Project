@@ -1,0 +1,133 @@
+{
+  "volume": 13,
+  "month": "January",
+  "year": 1926,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3332,
+  "files": [
+    {
+      "source_file": "January_Vol13_16_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman",
+          "end_boundary": "From \"The Song of the Mystic.\" ?Father Ryan.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for March",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for March LESSON I Theology and",
+          "end_boundary": "How many of the thirty nine books of",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "The file contains two distinct articles: 'Notes from the Field' by Amy Brown Lyman which includes priesthood conventions information and field reports, followed by 'Guide Lessons for March' which contains theological lessons. The split is clear based on the major section headings and content changes.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 15913,
+      "tier": 1,
+      "pdf_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "api_usage": {
+        "input_tokens": 51531,
+        "output_tokens": 356,
+        "cost": 0.1599
+      }
+    },
+    {
+      "source_file": "January_Vol13_17_Guide_Lessons_Guide_Lessons_for_March.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Prophets of the Mosaic Dispensation",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First Week",
+          "end_boundary": "of the Old Testament are named after prophets?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business - Teacher's Topic for March - Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business TEACHER'S TOPIC FOR MARCH",
+          "end_boundary": "to give to those they visit.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Mark Twain Lesson II",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in March)",
+          "end_boundary": "from his more serious writings.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Child Welfare Physical Problems",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "not effective treatment?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MARCH"
+      ],
+      "notes": "This file contains four distinct lesson sections for March: Lesson I (Theology), Work and Business topic, Lesson III (Literature on Mark Twain), and Lesson IV (Social Service on Child Welfare). Each lesson has its own questions and problems section. The lessons are clearly delineated with Roman numeral headings and subject matter changes.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 31506,
+      "tier": 1,
+      "pdf_pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "api_usage": {
+        "input_tokens": 55009,
+        "output_tokens": 551,
+        "cost": 0.1733
+      }
+    }
+  ]
+}

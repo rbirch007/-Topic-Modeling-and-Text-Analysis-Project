@@ -1,0 +1,25 @@
+{
+  "volume": 18,
+  "month": "September",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 1,
+  "created": 1,
+  "failed": 1,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Habit Training in Infancy and Early Childhood",
+      "new_file": "September_Vol18_02b_Article_Habit_Training_in_Infancy_and_Early_Childhood.txt",
+      "chars": 26504,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Keeping Up With Sonny",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    }
+  ]
+}

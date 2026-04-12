@@ -1,0 +1,45 @@
+{
+  "volume": 5,
+  "month": "November",
+  "year": 1918,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0211,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "November_Vol5_01a_Art_Lo_the_Poor_Rich_Indian_Frontispiece.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "November_Vol5_10b_Guide_Lessons_Guide_Lessons_b.txt",
+      "status": "delete",
+      "current_chars": 54,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a lesson header fragment. The PDF shows this as a section heading within the larger Guide Lessons article, not a standalone article. The actual content for Lesson II appears to be missing from the provided PDF pages.",
+      "api_usage": {
+        "input_tokens": 6284,
+        "output_tokens": 148,
+        "cost": 0.0211
+      },
+      "pdf_pages": [
+        49,
+        50,
+        51,
+        52
+      ]
+    }
+  ]
+}

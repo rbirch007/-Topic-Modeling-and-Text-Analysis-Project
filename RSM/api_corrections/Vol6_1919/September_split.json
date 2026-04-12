@@ -1,0 +1,62 @@
+{
+  "volume": 6,
+  "month": "September",
+  "year": 1919,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1217,
+  "files": [
+    {
+      "source_file": "September_Vol6_01_General_Church_Offices_Frontispiece.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "General Church Offices Frontispiece",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "General Church Offices Frontispiece ======================================================================",
+          "end_boundary": "They sleep! And peaceful is their rest,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Records of Our Dead",
+          "category": "Article",
+          "author": "Lula Greene Richards",
+          "start_boundary": "THE RECORDS OF OUR DEAD. By Lula Greene Richards.",
+          "end_boundary": "And still in other books record The saving covenant anew.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Remarks Made at the Relief Society General Conference",
+          "category": "Article",
+          "author": "President Heber J. Grant",
+          "start_boundary": "Remarks Made at the Relief Society General Conference. June 3, 1919",
+          "end_boundary": "I see, my sisters, that the time has passed. God bless you. Amen.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "REMARKS BY PRESIDENT HEBER J. GRANT"
+      ],
+      "notes": "This file contains the frontispiece image reference, a poem about genealogy/records of the dead, and President Grant's conference address. The frontispiece section appears to be incomplete or corrupted, starting mid-sentence with content from President Grant's talk.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14912,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38272,
+        "output_tokens": 458,
+        "cost": 0.1217
+      }
+    }
+  ]
+}

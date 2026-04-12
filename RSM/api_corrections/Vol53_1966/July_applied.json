@@ -1,0 +1,37 @@
+{
+  "volume": 53,
+  "month": "July",
+  "year": 1966,
+  "timestamp": "20260313_232239",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V53_07_01_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V53_07_06_SpFt_The_Ashton.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V53_07_16_Poem_Reverie_Tangren.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3207 chars removed)"
+    },
+    {
+      "file": "V53_07_31_The Home_Unfinished_Departm.txt",
+      "action": "note",
+      "result": "INFO: Filename indicates 'Lesson Department' but content is 'Unfinished Business' article"
+    },
+    {
+      "file": "V53_07_33_Poem_Summertime_Green.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2585 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "September",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1199,
+  "files": [
+    {
+      "source_file": "September_Vol9_14_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I - Theology and Testimony - MIRACLES—PART II—THE MIRACLES OF THE SAVIOR",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for November LESSON I Theology and Testimony",
+          "end_boundary": "Tell how to study miracles. LESSON II",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II N ows N Work and Business.",
+          "end_boundary": "Work and Business. {Second Week in November) LESSON III",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III - Literature - ROCK OF AGES",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature. (Third Week in November) \"ROCK OF AGES\"",
+          "end_boundary": "Of whom was she speaking when she asked this question? \"I",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV - Social Service - THE PROBLEM OF DISCIPLINE IN EARLY ADOLESCENCE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "500 - RELIEF SOCIETY MAGAZINE LESSON IV Social Service",
+          "end_boundary": "Scowcrott MADE IT!",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the complete Guide Lessons for November with 4 distinct lessons: Theology/Testimony (Miracles), Work/Business (very brief), Literature (Rock of Ages hymn analysis), and Social Service (adolescent discipline). The file also includes extensive advertisements at the end which are part of the original magazine format.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 26315,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37037,
+        "output_tokens": 589,
+        "cost": 0.1199
+      }
+    }
+  ]
+}

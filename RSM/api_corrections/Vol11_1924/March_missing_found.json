@@ -1,0 +1,60 @@
+{
+  "volume": 11,
+  "month": "March",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0475,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Alice Louise Reynolds",
+      "printed_page": 115,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 129-132) do not contain the article 'Alice Louise Reynolds' which should appear on page 115 according to the table of contents. The images show pages that are beyond where this article should be located.",
+      "api_usage": {
+        "input_tokens": 7225,
+        "output_tokens": 136,
+        "cost": 0.0237
+      },
+      "pdf_pages": [
+        129,
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "title": "Laura Gardner",
+      "printed_page": 118,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 129, 130, 131, and 132, but the article 'Laura Gardner' is listed on page 118 in the table of contents. The images provided do not contain page 118, so the article cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7221,
+        "output_tokens": 145,
+        "cost": 0.0238
+      },
+      "pdf_pages": [
+        129,
+        130,
+        131,
+        132
+      ]
+    }
+  ]
+}

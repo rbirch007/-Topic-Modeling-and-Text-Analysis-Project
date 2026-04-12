@@ -1,0 +1,57 @@
+{
+  "volume": 1,
+  "month": "November",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Nov_04_Art_LD.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Nov_09_Art_October.txt",
+      "action": "note",
+      "result": "INFO: Missing 'the Relief Society Magazine' in the text about the new magazine"
+    },
+    {
+      "file": "V1_1914_Nov_09_Art_October.txt",
+      "action": "note",
+      "result": "INFO: Missing 'RELIEF SOCIETY MAGAZINE' in communications section"
+    },
+    {
+      "file": "V1_1914_Nov_11_Art_OURADVERTI.txt",
+      "action": "note",
+      "result": "INFO: Missing 'THE RELIEF SOCIETY BULLETIN' in the committee attribution"
+    },
+    {
+      "file": "V1_1914_Nov_11_Art_OURADVERTI.txt",
+      "action": "note",
+      "result": "INFO: Missing 'RELIEF SOCIETY BULLETIN' in the page number line"
+    },
+    {
+      "file": "V1_1914_Nov_12_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry, and has incorrect title"
+    },
+    {
+      "file": "V1_1914_Nov_13_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry, and has incorrect title"
+    },
+    {
+      "file": "V1_1914_Nov_14_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_Nov_15_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry, and has incorrect title"
+    }
+  ]
+}

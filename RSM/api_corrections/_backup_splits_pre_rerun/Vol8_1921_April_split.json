@@ -1,0 +1,67 @@
+{
+  "volume": 8,
+  "month": "April",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1453,
+  "files": [
+    {
+      "source_file": "April_Vol8_13b_Guide_Lessons_Guide_Lessons_for_June_-_Lesson_I_Theology_and_Testimony_Con_a_a_a.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for June - Lesson I Theology and Testimony (Confirmation)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for June LESSON I Theology and",
+          "end_boundary": "Pearl of Great Price, page 98. LESSON II.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for June - Lesson II Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business (Second Week in June) LESSON",
+          "end_boundary": "June) LESSON III Literature Up! Awake, Ve",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for June - Lesson III Literature and Lesson IV Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature Up! Awake, Ve Defenders of Zion",
+          "end_boundary": "What vocations are especially suitable to women?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains multiple Guide Lessons for June. Lesson I is a complete theology lesson on Confirmation. Lesson II appears to be just a title/header for Work and Business. Lesson III (Literature) and Lesson IV (Social Service/Vocational Education) are combined in the final split as they flow together in the text without clear separation.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 17590,
+      "tier": 1,
+      "pdf_pages": [
+        257,
+        258,
+        259
+      ],
+      "api_usage": {
+        "input_tokens": 45924,
+        "output_tokens": 502,
+        "cost": 0.1453
+      }
+    }
+  ]
+}

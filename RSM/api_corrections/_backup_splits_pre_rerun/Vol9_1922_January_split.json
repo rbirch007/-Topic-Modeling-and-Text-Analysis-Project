@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "January",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1281,
+  "files": [
+    {
+      "source_file": "January_Vol9_18_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON 1. Theology and Testimony - MEMORABLE PRAYERS",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for January LESSON 1. Theology and Testimony",
+          "end_boundary": "What doctrine concerning church elections is taught in the prayer recorded in Acts 1:24?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business Second Week In March.",
+          "end_boundary": "LESSON II. Work and Business Second Week In March.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Literature - George Careless Compositions",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON ITI. Literature Third Week in March. In our last lesson",
+          "end_boundary": "Material may be found in Volume I Church Biographical Encyclopedia,",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV. Social Service - PHYSICAL EFFICIENCY AND THE HOME",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Social Service Fourth Week in March. PHYSICAL EFFICIENCY",
+          "end_boundary": "An ounce of prevention is better than a pound of cure.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections for the Guide Lessons department. Lesson II appears to be just a header with no content. The file also contains additional content after the lessons including a Teacher's Topic, poem, advertisements, and other magazine content that should remain with the Guide Lessons section as supporting material.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 21309,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39851,
+        "output_tokens": 570,
+        "cost": 0.1281
+      }
+    }
+  ]
+}

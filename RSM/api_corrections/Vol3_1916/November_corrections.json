@@ -1,0 +1,117 @@
+{
+  "volume": 3,
+  "month": "November",
+  "year": 1916,
+  "total_files_checked": 15,
+  "files_correct": [
+    "November_Vol3_01_Article_For_Right_Annie_D._Palmer.txt",
+    "November_Vol3_04_Article_A_Child's_Record_Maud_Baggarley.txt",
+    "November_Vol3_05_Article_Their_Thanksgiving_Ida_S._Peay.txt",
+    "November_Vol3_06_Article_Fear_in_a_Little_Child_Lily_Wright_Snow.txt",
+    "November_Vol3_08_Article_The_Cliff_Dwellers_Susa_Young_Gates.txt",
+    "November_Vol3_09a_Editorial_Editorial_The_Church_Militant.txt",
+    "November_Vol3_10_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "November_Vol3_11_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "November_Vol3_12_Mothers_in_Israel_Mothers_in_Israel.txt"
+  ],
+  "corrections": [
+    {
+      "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from next article",
+      "action": "trim_end",
+      "text": "Devotedly, Paul.\"",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "How Betty Helped.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "? ? ?",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "November_Vol3_14_Editorial_Editorial_The_Church_Militant.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only editorial board listing, not the actual editorial content",
+      "action": "replace_content",
+      "text": "THE CHURCH MILITANT. Preparedness We hear a great deal about preparedness today, a Tenet of The Church militant is always in favor of prethe Church. paredness. And who can deny that the Church of Christ is always the Church Militant. Life is motion, activity, growth, expansion. Death is stagnation, inaction, passivity, contraction. All growth is aggressive. If the individual, the nation, the Church, would grow and develop there must be activity, aggressiveness, preparedness. The Savior drove out the money-changers with a stinging whip. He forgave His enemies, and He was called the Prince of Peace but He ? Himself said He came not to bring peace, but a sword. He knew that peace was possible, to the individual and to the nation, only through struggle, strife of forces, and the final achievement of righteousness. When the Prophet Joseph Smith was with us, one of his proudest titles was General of the Nauvoo Legion. Brigham Young sent a corps of brave soldier boys out into the mountain fastnesses to protect his people and their homes, in 1857. He charged them to shed no blood except in self-defense, and summed up the situation in these pregnant words: \"Boys, say your prayers, and keep your powder dry.\" ; The cry of peace, peace, sounds throughout the Peace, Peace, world, when war is raging everywhere. We Where There want peace, we strive to put our individual is no Peace., selves in harmony with divine and human law, so that we can be at peace. Our nation is at peace, but why should anyone want to go to war with us? We are too far away from Europe, too near the Mexicans. But we should be prepared, and well prepared, too, to guard our country's honor and the lives of her people. We want honorable peace but not peace at any price. When a burglar enters your bedroom, you'll We Must be be mighty glad if your husband has a pistol Prepared, handy and uses it, if necessary, to protect you and your home. If you live in a quarrelsome neighborhood, and your husband has occasion to go out on the street while there is a melee in progress, you will be glad your husband has means of defense, and be sure the quarreling neighbors will know if he has it, and will avoid attacking him as he passes by. No true woman enjoys association with cowardly men. She despises white-livered, mealy-mouthed apologizers, who not only turn their third cheek for assaults, but make doormats of themselves for their assailants. We ? want peace but the conditions must be right before we can ever expect to achieve peace. ? This nation is at peace not because any certain man or set of ? men have arranged it that way but because of our isolation, our youth, because we \"spanked\" Spain in the Cuban war, and set her down so hard that the rattling of her teeth resounded all over ? Europe but above all, because the Lord so wills it. Moreover, Latter-day Saints ought to know why this nation is not at war. Read your Book of Mormon. Well, war is not the worst calamity. Death, a What if War glorious, honorable death, is far more to be preShould Come? ferred than an ignoble, impure, pusillanimous life. People talk about death as if it were the grave of all hope, all effort, all growth. We know better. Death is an open door to a better life. ? Many men men whose morals are corrupt and whose bodies are disease-ridden? would be far better dead than alive. Such men should not be permitted to propagate their species. And if good, true men die on the battlefield, their end will be more glorious than their beginning. Let us. as Latter-day Saint women, pray and hope for honorable peace, but dread dishonor, stultification, inaction, slothfulness, vanity, all lusts of the flesh, and the abominations of the world, for ourselves and for our sons. Let us achieve action, progress, fulfilment of prophecy, expansion, and cultivate the aggressiveness of the gospel of truth and righteousness. !",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "? ? ?",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Paradise Lost",
+      "expected_page": 622,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The main issues are: 1) Some files contain advertisement content that should be moved to Misc file, 2) One editorial file contains only the board listing instead of the actual editorial content, 3) Some boundary issues between articles, and 4) One article (Paradise Lost) appears to be missing entirely from the extraction.",
+  "validated_corrections": [
+    {
+      "file": "November_Vol3_03_Article_How_Betty_Helped_Elsie_Chamberlain_Carroll.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "How Betty Helped.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "November_Vol3_15_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "? ? ?",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "November_Vol3_02_Frontispiece_War_as_it_Was_Frontispiece_A_Call_to_Arms_Edna_Coray.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from next article",
+      "action": "trim_end",
+      "text": "Devotedly, Paul.\"",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "? ? ?",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

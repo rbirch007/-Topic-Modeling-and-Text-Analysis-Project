@@ -1,0 +1,101 @@
+{
+  "volume": 8,
+  "month": "March",
+  "year": 1921,
+  "total_files_checked": 15,
+  "files_correct": [
+    "March_Vol8_01_Frontispiece_Mrs._Zina_D._Young_Frontispiece.txt",
+    "March_Vol8_02_Article_Return_Journey_Susan_Teal_Perry.txt",
+    "March_Vol8_04_Article_Our_Anniversary_Lula_L._Greene_Richards.txt",
+    "March_Vol8_07_Article_Anniversary_Program_Morag.txt",
+    "March_Vol8_08_Article_World_Happenings_James_H._Anderson.txt",
+    "March_Vol8_09_Notes_from_Field_Notes_from_the_Field.txt",
+    "March_Vol8_10_Editorial_Editorial_If_I_were_a_Relief_Society_Teacher.txt",
+    "March_Vol8_11a_Guide_Lessons_Theology_and_Testimony_-_Salvation_for_the_Living_and_Dead_B.txt",
+    "March_Vol8_11b_Guide_Lessons_Work_and_Business.txt",
+    "March_Vol8_11c_Guide_Lessons_Literature_-_Emmeline_B_Wells_Poems.txt",
+    "March_Vol8_11d_Guide_Lessons_Social_Service_-_Child_Labor.txt"
+  ],
+  "corrections": [
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with incomplete text from previous article",
+      "action": "trim_start",
+      "text": "Centennial of President Zina D. Huntington Young The recent one hundredth anniversary",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning portion of the article including committee details",
+      "action": "prepend",
+      "text": "the General Board are as follows: Mrs. Jeanette A. Hyde, chairman, Elizabeth C. Crismon, Rebecca N. Nibley, Mrs. Julia P. M. Farnsworth, Mrs. Donetta Smith Kesler. The above mentioned persons were associated with Mrs. Zina Young Williams Card, Colonel Willard Young, Mrs. Maria Y. Dougall, and Mrs. Phebe Y. Beatie, in the details of the evenings entertainment. The entertainment was given in the General Board Headquarters on the evening of January 31, 1921, and was a charming affair from beginning to end. The music was as follows: Lizzie Thomas Edward, solo, \"O My Father.\" Moroni J. Thomas, Mrs. Joseph Wood, Agnes O. Thomas, Sam Winter, quartet, sang, \"I am a pilgrim,\" in the most ex-. Quisite style and voice. Relief Society Choir, directed by Lizzie Thomas Edward, sang, \"I need thee every hour,\" and \"The resurrection day.\" Colonel Willard Young had charge of the program as master of ceremonies. The first speaker was President Zina D. H. Young's only daughter, Mrs. Zina Y. W. Card. She related many interesting incidents in the lives of her own mother and her grandfather's and grandmother's history. She told of the coming of one of the three Nephites to visit the Huntington family, just about the time the Prophet Joseph translated the Book of Mormon. She 130 RELIEF SOCIETY MAGAZINE. Described, in vivid language, the pioneer home life of grandfather Wm. Huntington, in their New England home, and related the conversion of the family through the Martyr-Patriarch Hyrum Smith. She referred to her mother's first marriage, and the two noble sons born of that union, Zebulon and Chariton Jacobs, and then told other interesting facts concerning her mother's removal to Nauvoo, and subsequent life. Mrs. Maria Y. Dougall and Mrs. Phebe Beattie, both eulogized the life and character of their sainted step-mother, in touching and moving words. Sister Jeanette A. Hyde followed with a brief but comprehensive sketch of the life and labors of President Zina D. H. Young. Siste",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol8_05_Article_The_Primary_as_First_Aid_to_Relief_Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article starting with 'Out of the World'",
+      "action": "trim_end",
+      "text": "Missionary class comes in and sings \"The Army of the Living God,\" led by small boy.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "March_Vol8_06_Article_Out_of_the_World_G._Milton_Babcock.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Primary article",
+      "action": "trim_start",
+      "text": "Out of the World III. G. Milton Babcock.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are with the Centennial article missing its beginning and some bleed between the Primary and Out of the World articles. The Guide Lessons appear to be properly separated into their component parts.",
+  "validated_corrections": [
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with incomplete text from previous article",
+      "action": "trim_start",
+      "text": "Centennial of President Zina D. Huntington Young The recent one hundredth anniversary",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol8_03_Article_Centennial_of_President_Zina_D._Huntington_Young.txt",
+      "issue_type": "missing_text",
+      "description": "Missing the beginning portion of the article including committee details",
+      "action": "prepend",
+      "text": "the General Board are as follows: Mrs. Jeanette A. Hyde, chairman, Elizabeth C. Crismon, Rebecca N. Nibley, Mrs. Julia P. M. Farnsworth, Mrs. Donetta Smith Kesler. The above mentioned persons were associated with Mrs. Zina Young Williams Card, Colonel Willard Young, Mrs. Maria Y. Dougall, and Mrs. Phebe Y. Beatie, in the details of the evenings entertainment. The entertainment was given in the General Board Headquarters on the evening of January 31, 1921, and was a charming affair from beginning to end. The music was as follows: Lizzie Thomas Edward, solo, \"O My Father.\" Moroni J. Thomas, Mrs. Joseph Wood, Agnes O. Thomas, Sam Winter, quartet, sang, \"I am a pilgrim,\" in the most ex-. Quisite style and voice. Relief Society Choir, directed by Lizzie Thomas Edward, sang, \"I need thee every hour,\" and \"The resurrection day.\" Colonel Willard Young had charge of the program as master of ceremonies. The first speaker was President Zina D. H. Young's only daughter, Mrs. Zina Y. W. Card. She related many interesting incidents in the lives of her own mother and her grandfather's and grandmother's history. She told of the coming of one of the three Nephites to visit the Huntington family, just about the time the Prophet Joseph translated the Book of Mormon. She 130 RELIEF SOCIETY MAGAZINE. Described, in vivid language, the pioneer home life of grandfather Wm. Huntington, in their New England home, and related the conversion of the family through the Martyr-Patriarch Hyrum Smith. She referred to her mother's first marriage, and the two noble sons born of that union, Zebulon and Chariton Jacobs, and then told other interesting facts concerning her mother's removal to Nauvoo, and subsequent life. Mrs. Maria Y. Dougall and Mrs. Phebe Beattie, both eulogized the life and character of their sainted step-mother, in touching and moving words. Sister Jeanette A. Hyde followed with a brief but comprehensive sketch of the life and labors of President Zina D. H. Young. Siste",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "March_Vol8_06_Article_Out_of_the_World_G._Milton_Babcock.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous Primary article",
+      "action": "trim_start",
+      "text": "Out of the World III. G. Milton Babcock.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "March_Vol8_05_Article_The_Primary_as_First_Aid_to_Relief_Society.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article starting with 'Out of the World'",
+      "action": "trim_end",
+      "text": "Missionary class comes in and sings \"The Army of the Living God,\" led by small boy.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

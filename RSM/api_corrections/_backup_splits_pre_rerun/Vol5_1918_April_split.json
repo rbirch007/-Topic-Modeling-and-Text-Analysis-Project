@@ -1,0 +1,57 @@
+{
+  "volume": 5,
+  "month": "April",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1252,
+  "files": [
+    {
+      "source_file": "April_Vol5_16_Editorial_Editorial_Democracy_Must_be_Made_Safe_for_the_World.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Democracy Must be Made Safe for the World",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "DEMOCRACY MUST BE AL\\DE SAFE FOR THE WORLD. Much attention has",
+          "end_boundary": "address all such letters to the Editor? Guide Lessons.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Land of Promise",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I. Theology and Testimony. First Week in May. BOOK",
+          "end_boundary": "divine precepts. GUIDE LESSONS. 237 LESSON TI. Work and Business.",
+          "confidence": "high",
+          "end_match_words": 4
+        },
+        {
+          "order": "c",
+          "title": "Where the Races Settled in Europe",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON in. Genealogy. Third Week in May. f WHERE THE",
+          "end_boundary": "where he became one of the most famous of English kings.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the Editorial section followed by two Guide Lessons - one on Book of Mormon (Theology) and one on Genealogy. The file appears to cut off mid-sentence in the genealogy lesson about Canute going to England. There should be additional lessons (Work and Business, Home Economics) based on the table of contents, but they are not present in this file.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 18146,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39332,
+        "output_tokens": 481,
+        "cost": 0.1252
+      }
+    }
+  ]
+}

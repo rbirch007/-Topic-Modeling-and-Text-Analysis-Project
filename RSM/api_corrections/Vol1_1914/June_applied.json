@@ -1,0 +1,67 @@
+{
+  "volume": 1,
+  "month": "June",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Jun_01_Art_Editorial.txt",
+      "action": "note",
+      "result": "INFO: File contains Editorial Insurance article but filename indicates Art Editorial - should be Editorial Insurance"
+    },
+    {
+      "file": "V1_1914_Jun_05_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains Literature lesson content, not poetry - should be categorized as Article"
+    },
+    {
+      "file": "V1_1914_Jun_06_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains Art and Architecture lesson content, not poetry - should be categorized as Article"
+    },
+    {
+      "file": "V1_1914_Jun_07_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains Notes on Relief Society Conference content, not poetry - should be categorized as Article"
+    },
+    {
+      "file": "V1_1914_Jun_07_Poem_Poemfrom.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (392 chars removed)"
+    },
+    {
+      "file": "V1_1914_Jun_08_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains administrative content about bulletin orders, not poetry - should be categorized as Misc"
+    },
+    {
+      "file": "V1_1914_Jun_08_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Jun_09_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jun_10_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jun_11_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_Jun_13_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    }
+  ]
+}

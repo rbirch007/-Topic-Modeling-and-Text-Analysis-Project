@@ -1,0 +1,37 @@
+{
+  "volume": 10,
+  "month": "November",
+  "year": 1923,
+  "timestamp": "20260315_120952",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol10_01_Frontispiece_Harvest_Home_Frontispiece.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (596 chars removed)"
+    },
+    {
+      "file": "November_Vol10_05_Article_Pasteur's_Contribution_to_the_Relief_of_Human_Suffering_Dr._.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7104 chars removed)"
+    },
+    {
+      "file": "November_Vol10_17a_Notes_from_Field_Notes_From_the_Field.txt",
+      "action": "note",
+      "result": "INFO: File is incomplete, missing significant content from the middle and end"
+    },
+    {
+      "file": "November_Vol10_17b_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "action": "note",
+      "result": "INFO: File title says 'for December' but should be 'for January' based on content"
+    },
+    {
+      "file": "November_Vol10_18_Guide_Lessons_Guide_Lessons_for_January.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (52 chars added)"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "volume": 5,
+  "month": "December",
+  "year": 1918,
+  "timestamp": "20260315_120941",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol5_01_Article_Humanity's_Song_Maud_Boggarsley.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol5_04_Article_Salvation_for_the_Living_and_the_Dead_Joseph_F._Smith.txt",
+      "action": "note",
+      "result": "INFO: File contains only a reference line instead of the full article"
+    },
+    {
+      "file": "December_Vol5_09_Mothers_in_Israel_Mothers_and_Grandmothers_and_Great-grandmothers_in_Israel.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1095 chars removed)"
+    },
+    {
+      "file": "December_Vol5_11c_Current_Topics_Current_Topics.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (784 chars removed)"
+    },
+    {
+      "file": "December_Vol5_12_Article_How_to_Stimulate_Discussion_Gweneth_W._Gibbs.txt",
+      "action": "note",
+      "result": "INFO: File contains index content instead of the article"
+    },
+    {
+      "file": "December_Vol5_13_Home_Science_Home_Science_Department.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol5_14_Current_Topics_Current_Topics_James_H._Anderson.txt",
+      "action": "note",
+      "result": "INFO: File contains index content instead of Current Topics article"
+    },
+    {
+      "file": "December_Vol5_15d_Genealogy_Lesson_III_-_How_a_Great_English_Battle_Started_Surnames_in.txt",
+      "action": "append",
+      "result": "APPLIED append (1546 chars added)"
+    },
+    {
+      "file": "December_Vol5_16a_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1547 chars removed)"
+    }
+  ]
+}

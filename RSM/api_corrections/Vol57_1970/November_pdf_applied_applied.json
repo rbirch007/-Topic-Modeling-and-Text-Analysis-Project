@@ -1,0 +1,27 @@
+{
+  "volume": 57,
+  "month": "November",
+  "year": 1970,
+  "timestamp": "20260314_102521",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V57_11_01_Poem_Indweller_Stewart.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V57_11_05_SpFt_No_One_Sharp.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (2697 chars removed)"
+    },
+    {
+      "file": "V57_11_13_Poem_Deep_Robinson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1435 chars removed)"
+    }
+  ]
+}

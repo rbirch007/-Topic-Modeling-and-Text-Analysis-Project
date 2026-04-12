@@ -1,0 +1,1144 @@
+---
+title: "Relief Society Magazine Vol. 9 - Article Extractor v4"
+output:
+  html_notebook:
+    toc: true
+    toc_float: true
+---
+
+# 1. Configuration
+
+```{r setup, message=FALSE}
+library(stringr)
+library(readr)
+library(knitr)
+
+INPUT_DIR  <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/input/Vol9split"
+OUTPUT_DIR <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Articleextractionrfiles/output_v4"
+
+if (!dir.exists(OUTPUT_DIR)) dir.create(OUTPUT_DIR, recursive = TRUE)
+
+# We want ALL text — no minimum article size filtering
+# These are only used for diagnostic warnings, not for dropping articles
+WARN_TINY_CHARS  <- 30   # warn if article is under 30 chars
+WARN_LARGE_CHARS <- 50000 # warn if article is over 50k chars
+
+# Average chars per page (estimated from data; ~2400 bytes per page)
+AVG_CHARS_PER_PAGE <- 2400
+```
+
+# 2. Known Article Categories
+
+```{r known-categories}
+KNOWN_CATEGORIES <- list(
+  list(name = "Editorial",
+       body_patterns = c("EDITORIAL[S]?\\b", "EDITORIAL THOUGHTS"),
+       search_region = "back_half"),
+  list(name = "Guide Lessons",
+       body_patterns = c("GUIDE LESSONS?\\b", "LESSON OUTLINES?"),
+       search_region = "back_third"),
+  list(name = "Notes from the Field",
+       body_patterns = c("NOTES FROM THE FIELD", "Notes from the Field"),
+       search_region = "any"),
+  list(name = "Home Economics",
+       body_patterns = c("HOME ECONOMICS? DEPARTMENT", "HOME ECONOMICS\\b"),
+       search_region = "any"),
+  list(name = "Home Science",
+       body_patterns = c("HOME SCIENCE DEPARTMENT", "HOME SCIENCE\\b"),
+       search_region = "any"),
+  list(name = "Current Topics",
+       body_patterns = c("CURRENT TOPICS\\b"),
+       search_region = "any"),
+  list(name = "Home Entertainments",
+       body_patterns = c("HOME ENTERTAINMENTS?\\b"),
+       search_region = "any")
+)
+```
+
+# 3. Helper Functions
+
+```{r helpers}
+get_metadata <- function(filename) {
+  list(
+    volume = str_extract(filename, "(?<=Vol)\\d+"),
+    issue  = str_extract(filename, "(?<=No)\\d+"),
+    month  = str_extract(filename, "(January|February|March|April|May|June|July|August|September|October|November|December)"),
+    year   = str_extract(filename, "\\d{4}")
+  )
+}
+
+read_file_safe <- function(filepath) {
+  text <- tryCatch(
+    read_file(filepath, locale = locale(encoding = "UTF-8")),
+    error = function(e) read_file(filepath, locale = locale(encoding = "windows-1252"))
+  )
+  iconv(text, from = "UTF-8", to = "UTF-8", sub = "")
+}
+
+safe_filename <- function(title, max_len = 60) {
+  clean <- str_replace_all(title, '[<>:"/\\\\|?*]', '')
+  clean <- str_replace_all(clean, '\\s+', '_')
+  clean <- str_replace_all(clean, '_+', '_')
+  clean <- str_replace(clean, '^_|_$', '')
+  if (nchar(clean) > max_len) clean <- str_sub(clean, 1, max_len)
+  if (nchar(clean) == 0) clean <- "untitled"
+  return(clean)
+}
+
+get_significant_words <- function(title) {
+  stop_words <- c("the","a","an","of","in","on","at","to","for","and","or",
+                  "but","by","its","is","are","was","were","be","been","our",
+                  "her","his","my","we","it","as","with","from","that","this",
+                  "not","no","out","new","all","how","what","who","when","where",
+                  "why","can","may","will","shall","has","had","have","does",
+                  "did","do","about","into")
+  words <- str_split(title, "[\\s\u2014\u2013]+|\\s*-{2,}\\s*")[[1]]
+  words <- words[nchar(words) > 2]
+  words <- words[!tolower(words) %in% stop_words]
+  words <- str_replace(words, "[?.!,;:]+$", "")
+  words <- words[nchar(words) > 0]
+  return(words)
+}
+
+classify_article <- function(title) {
+  t <- tolower(title)
+  if (str_detect(t, "^editorial"))              return("Editorial")
+  if (str_detect(t, "guide lesson"))            return("Guide_Lessons")
+  if (str_detect(t, "notes from the field"))    return("Notes_from_Field")
+  if (str_detect(t, "home economics"))          return("Home_Economics")
+  if (str_detect(t, "home science"))            return("Home_Science")
+  if (str_detect(t, "current (topic|event)"))   return("Current_Topics")
+  if (str_detect(t, "home entertain"))          return("Home_Entertainments")
+  if (str_detect(t, "frontispiece"))            return("Frontispiece")
+  if (str_detect(t, "teachers?.topic"))         return("Teachers_Topics")
+  if (str_detect(t, "book notice"))             return("Book_Notices")
+  if (str_detect(t, "conventions? and conf"))   return("Conventions")
+  if (str_detect(t, "relief society report"))   return("RS_Reports")
+  return("Article")
+}
+```
+
+# 4. Page Index Builder
+
+Scans text for running page headers and builds a sorted map of page_number -> char_position.
+This is the key innovation: we can locate any page boundary in the OCR text.
+
+```{r page-index}
+build_page_index <- function(text) {
+  # Even-page headers: "N RELIEF SOCIETY MAGAZINE"
+  even_matches <- str_locate_all(text,
+    regex("(\\d{1,3})\\s+RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?", ignore_case = FALSE))[[1]]
+
+  even_pages <- data.frame(page = integer(), position = integer(),
+                           type = character(), stringsAsFactors = FALSE)
+  if (nrow(even_matches) > 0) {
+    for (i in 1:nrow(even_matches)) {
+      chunk <- str_sub(text, even_matches[i, 1], even_matches[i, 2])
+      pg <- as.integer(str_extract(chunk, "^\\d+"))
+      if (!is.na(pg) && pg >= 1 && pg <= 999) {
+        even_pages <- rbind(even_pages, data.frame(
+          page = pg, position = even_matches[i, 1],
+          type = "even_header", stringsAsFactors = FALSE))
+      }
+    }
+  }
+
+  # Odd-page headers: "TITLE IN CAPS N" or "TITLE IN CAPS - N" or "TITLE | N"
+  # These are ALL CAPS words followed by a 1-3 digit number
+  odd_matches <- str_locate_all(text,
+    regex("([A-Z][A-Z '\\-,]{3,40})\\s*[-|]?\\s*(\\d{1,3})(?=\\s)", ignore_case = FALSE))[[1]]
+
+  odd_pages <- data.frame(page = integer(), position = integer(),
+                          type = character(), stringsAsFactors = FALSE)
+  if (nrow(odd_matches) > 0) {
+    for (i in 1:nrow(odd_matches)) {
+      chunk <- str_sub(text, odd_matches[i, 1], odd_matches[i, 2])
+      pg <- as.integer(str_extract(chunk, "\\d{1,3}$"))
+      if (!is.na(pg) && pg >= 1 && pg <= 999) {
+        # Filter: the number must be odd and the preceding text must be ALL CAPS
+        title_part <- str_trim(str_replace(chunk, "\\s*[-|]?\\s*\\d{1,3}$", ""))
+        # Must be at least 4 ALL CAPS chars
+        if (nchar(title_part) >= 4 && str_detect(title_part, "^[A-Z '\\-,]+$")) {
+          # Reject if it's a year (e.g., "JANUARY 1922")
+          if (pg > 700) next
+          odd_pages <- rbind(odd_pages, data.frame(
+            page = pg, position = odd_matches[i, 1],
+            type = "odd_header", stringsAsFactors = FALSE))
+        }
+      }
+    }
+  }
+
+  # Combine and sort
+  page_index <- rbind(even_pages, odd_pages)
+  if (nrow(page_index) == 0) return(page_index)
+
+  page_index <- page_index[order(page_index$position), ]
+
+  # Validate: page numbers should be monotonically increasing (with tolerance)
+  # Remove outliers that break the sequence badly
+  if (nrow(page_index) > 2) {
+    keep <- rep(TRUE, nrow(page_index))
+    for (i in 2:(nrow(page_index) - 1)) {
+      prev_pg <- page_index$page[max(1, i - 1)]
+      next_pg <- page_index$page[min(nrow(page_index), i + 1)]
+      curr_pg <- page_index$page[i]
+      # If current page breaks monotonic order by more than 5 pages, mark as suspect
+      if (curr_pg < prev_pg - 5 || curr_pg > next_pg + 5) {
+        keep[i] <- FALSE
+      }
+    }
+    page_index <- page_index[keep, ]
+  }
+
+  # Deduplicate: if same page appears multiple times, keep the first occurrence
+  page_index <- page_index[!duplicated(page_index$page), ]
+
+  return(page_index)
+}
+
+# Given a page number, find the byte position in text
+# Returns the position of the nearest page marker, or interpolates
+page_to_position <- function(page_index, target_page, body_start, body_end) {
+  if (nrow(page_index) == 0) return(body_start)
+
+  # Exact match
+  exact <- page_index[page_index$page == target_page, ]
+  if (nrow(exact) > 0) return(exact$position[1])
+
+  # Bracket: find pages just before and after
+  before <- page_index[page_index$page < target_page, ]
+  after  <- page_index[page_index$page > target_page, ]
+
+  if (nrow(before) > 0 && nrow(after) > 0) {
+    b <- before[nrow(before), ]  # closest before
+    a <- after[1, ]              # closest after
+    # Linear interpolation
+    frac <- (target_page - b$page) / (a$page - b$page)
+    return(as.integer(b$position + frac * (a$position - b$position)))
+  } else if (nrow(before) > 0) {
+    b <- before[nrow(before), ]
+    return(as.integer(b$position + (target_page - b$page) * AVG_CHARS_PER_PAGE))
+  } else if (nrow(after) > 0) {
+    a <- after[1, ]
+    return(max(body_start, as.integer(a$position - (a$page - target_page) * AVG_CHARS_PER_PAGE)))
+  }
+
+  return(body_start)
+}
+```
+
+# 5. CONTENTS Parser
+
+```{r contents-parser}
+parse_contents_section <- function(contents_text) {
+  contents_text <- str_replace_all(contents_text, "\r\n", "\n")
+  contents_text <- str_replace_all(contents_text, "\r", "\n")
+
+  # If very few newlines, try to add them
+  if (str_count(contents_text, "\n") < 5) {
+    contents_text <- str_replace(contents_text,
+      "(CONTENTS\\s+[A-Z]+,?\\s+\\d{4})", "\\1\n")
+    contents_text <- str_replace_all(contents_text,
+      "(\\d{1,4})\\s+((?:\"|\u201C)?[A-Z])", "\\1\n\\2")
+    contents_text <- str_replace_all(contents_text,
+      "\\s+(ADVERTISERS)", "\n\\1")
+  }
+
+  articles <- data.frame(title = character(), page = integer(),
+                         stringsAsFactors = FALSE)
+  lines <- str_split(contents_text, "\n")[[1]]
+  lines <- lines[nchar(str_trim(lines)) > 0]
+  lines_with_pagenum <- sum(str_detect(lines, "\\d+\\s*$"))
+
+  if (lines_with_pagenum >= 3 && length(lines) > 3) {
+    articles <- parse_contents_linebased(lines)
+  } else {
+    articles <- parse_contents_inline(contents_text)
+  }
+
+  if (nrow(articles) > 0) {
+    articles <- articles[!duplicated(articles$title), ]
+    articles <- articles[order(articles$page), ]
+    articles$category <- sapply(articles$title, classify_article)
+  }
+  return(articles)
+}
+
+parse_contents_linebased <- function(lines) {
+  articles <- data.frame(title = character(), page = integer(),
+                         stringsAsFactors = FALSE)
+  pending_title <- ""
+
+  for (line in lines) {
+    line <- str_trim(line)
+    if (nchar(line) < 3) next
+    if (str_detect(line, "(?i)^CONTENTS?\\b")) next
+    if (str_detect(line, "(?i)^ADVERTISERS?\\b")) next
+    if (str_detect(line, "(?i)^ADVERTISEMENT\\b")) next
+    if (str_detect(line, "(?i)^Page$")) next
+
+    page_match <- str_match(line, "\\s+(\\d{1,4})\\s*$")
+    if (is.na(page_match[1, 1])) {
+      clean_line <- str_replace_all(line, "\\.{2,}", " ")
+      clean_line <- str_trim(clean_line)
+      if (nchar(clean_line) < 2 || str_detect(clean_line, "^\\d+$")) next
+      if (str_detect(clean_line, "(?i)Frontispiece")) {
+        if (nchar(pending_title) > 0) {
+          clean_line <- paste(pending_title, clean_line)
+          pending_title <- ""
+        }
+        articles <- rbind(articles, data.frame(title = clean_line, page = 0L,
+                                               stringsAsFactors = FALSE))
+        next
+      }
+      pending_title <- clean_line
+      next
+    }
+
+    page_num <- as.integer(page_match[1, 2])
+    if (is.na(page_num) || page_num < 1 || page_num > 2000) next
+
+    title <- str_trim(str_replace(line, "\\s+\\d{1,4}\\s*$", ""))
+    title <- str_replace_all(title, "\\.{2,}", " ")
+    title <- str_replace_all(title, "\\s{2,}", " ")
+    title <- str_trim(title)
+    if (nchar(title) < 2) next
+    if (str_detect(title, "^\\d+$")) next
+
+    if (nchar(pending_title) > 0) {
+      title <- paste(pending_title, title)
+      pending_title <- ""
+    }
+    articles <- rbind(articles, data.frame(title = title, page = page_num,
+                                           stringsAsFactors = FALSE))
+  }
+  return(articles)
+}
+
+parse_contents_inline <- function(text) {
+  articles <- data.frame(title = character(), page = integer(),
+                         stringsAsFactors = FALSE)
+  text <- str_replace_all(text, "\\s+", " ")
+  page_locs <- str_locate_all(text, "[,\\s]\\s*(\\d{1,4})(?:\\s|$)")[[1]]
+  if (nrow(page_locs) == 0) return(articles)
+
+  for (i in 1:nrow(page_locs)) {
+    page_start <- page_locs[i, 1]
+    page_end   <- page_locs[i, 2]
+    page_str   <- str_trim(str_sub(text, page_start, page_end))
+    page_str   <- str_replace(page_str, "^,\\s*", "")
+    page_num   <- as.integer(page_str)
+    if (is.na(page_num) || page_num < 1 || page_num > 2000) next
+
+    if (i == 1) { entry_start <- 1 } else { entry_start <- page_locs[i - 1, 2] + 1 }
+    entry_text <- str_trim(str_sub(text, entry_start, page_start - 1))
+    entry_text <- str_replace_all(entry_text, "\\.{2,}", " ")
+    entry_text <- str_trim(entry_text)
+    if (nchar(entry_text) < 2) next
+    if (str_detect(entry_text, "(?i)^CONTENTS")) next
+
+    if (str_detect(entry_text, "(?i)Frontispiece")) {
+      articles <- rbind(articles, data.frame(title = entry_text, page = 0L,
+                                             stringsAsFactors = FALSE))
+      next
+    }
+
+    articles <- rbind(articles, data.frame(title = entry_text, page = page_num,
+                                           stringsAsFactors = FALSE))
+  }
+  return(articles)
+}
+```
+
+# 6. Section Finder
+
+Finds CONTENTS, body marker, board roster, and back ads.
+
+```{r sections}
+find_sections <- function(text) {
+  sections <- list()
+  total_len <- nchar(text)
+
+  # CONTENTS
+  contents_patterns <- c(
+    "CONTENTS?\\s*[\u2014\u2013-]+\\s*[A-Z]",
+    "CONTENTS?[:.;,]?\\s*(?:[A-Z]+,?\\s+\\d{4}\\.?)?\\s*\n",
+    "CONTENTS?[:.;,]?\\s+[A-Z]",
+    "CONTENTS?[:.;,]\\s"
+  )
+  sections$contents_start <- NA
+  for (pat in contents_patterns) {
+    m <- str_locate(text, regex(pat, ignore_case = FALSE))
+    if (!is.na(m[1, 1])) { sections$contents_start <- m[1, 1]; break }
+  }
+  if (is.na(sections$contents_start)) {
+    for (pat in contents_patterns) {
+      m <- str_locate(text, regex(pat, ignore_case = TRUE))
+      if (!is.na(m[1, 1])) { sections$contents_start <- m[1, 1]; break }
+    }
+  }
+
+  # CONTENTS end: find ADVERTISERS or ADVERTISEMENT or PUBLICATION
+  sections$contents_end <- NA
+  if (!is.na(sections$contents_start)) {
+    search <- str_sub(text, sections$contents_start, min(sections$contents_start + 5000, total_len))
+    end_markers <- c("ADVERTISERS", "ADVERTISEMENT\\b", "PUBLICATION INFORMATION",
+                     "Entered as second-class")
+    sections$contents_end <- nchar(search) + sections$contents_start - 1
+    for (marker in end_markers) {
+      m <- str_locate(search, regex(marker, ignore_case = TRUE))
+      if (!is.na(m[1, 1]) && m[1, 1] > 10) {
+        candidate <- sections$contents_start + m[1, 1] - 2
+        if (candidate < sections$contents_end) sections$contents_end <- candidate
+      }
+    }
+    sections$contents_text <- str_sub(text, sections$contents_start, sections$contents_end)
+  }
+
+  # Body marker: "THE Relief Society Magazine Vol"
+  body_pattern <- "THE\\s+Relief\\s+Society\\s+Magazine\\s+Vol\\.?\\s+[IVX0-9]+"
+  body_matches <- str_locate_all(text, regex(body_pattern, ignore_case = FALSE))[[1]]
+  sections$body_marker_pos <- NA
+  if (nrow(body_matches) > 0) {
+    # Take the first one that's past the CONTENTS
+    for (mi in 1:nrow(body_matches)) {
+      if (is.na(sections$contents_end) || body_matches[mi, 1] > sections$contents_end) {
+        sections$body_marker_pos <- body_matches[mi, 1]
+        sections$body_marker_end <- body_matches[mi, 2]
+        # Extend to include "No. N."
+        after <- str_sub(text, body_matches[mi, 2] + 1, min(body_matches[mi, 2] + 60, total_len))
+        no_match <- str_locate(after, regex("No\\.\\s*\\d+\\.?"))
+        if (!is.na(no_match[1, 1])) {
+          sections$body_marker_end <- body_matches[mi, 2] + no_match[1, 2]
+        }
+        break
+      }
+    }
+  }
+
+  # First even-page running header: a reliable body-start indicator
+  first_header <- str_locate(text, regex("\\d{1,3}\\s+RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?",
+                                         ignore_case = FALSE))
+  sections$first_header_pos <- if (!is.na(first_header[1, 1])) first_header[1, 1] else NA
+
+  # Board roster
+  board_patterns <- c("THE GENERAL BOARD[,.]?\\s+Mrs\\.",
+                      "GENERAL BOARD\\s+OF\\s+THE\\s+RELIEF")
+  sections$board_start <- NA
+  sections$board_end <- NA
+  for (pat in board_patterns) {
+    m <- str_locate(text, regex(pat, ignore_case = TRUE))
+    if (!is.na(m[1, 1])) { sections$board_start <- m[1, 1]; break }
+  }
+  if (!is.na(sections$board_start)) {
+    board_search <- str_sub(text, sections$board_start,
+                            min(sections$board_start + 3000, total_len))
+    board_end_markers <- c("Organist\\b", "Bishop'?s\\s+B[ul]i?lding",
+                           "Salt Lake City,?\\s+Utah", "Room\\s+\\d+.*?Utah")
+    for (em in board_end_markers) {
+      em_match <- str_locate_all(board_search, regex(em, ignore_case = TRUE))[[1]]
+      if (nrow(em_match) > 0) {
+        sections$board_end <- sections$board_start + em_match[nrow(em_match), 2]
+        break
+      }
+    }
+    if (is.na(sections$board_end)) {
+      sections$board_end <- min(sections$board_start + 1500, total_len)
+    }
+  }
+
+  # Back ads: search last 30% for ad markers
+  search_start_ads <- as.integer(total_len * 0.7)
+  search_text_ads <- str_sub(text, search_start_ads, total_len)
+  sections$ads_start <- total_len
+
+  ads_patterns <- c("ADVERTISERS'?\\s+DIRECTORY", "INDEX TO ADVERTISERS",
+                    "PATRONIZE OUR ADVERTISERS")
+  for (pat in ads_patterns) {
+    m <- str_locate(search_text_ads, regex(pat, ignore_case = TRUE))
+    if (!is.na(m[1, 1])) {
+      sections$ads_start <- search_start_ads + m[1, 1] - 1
+      break
+    }
+  }
+
+  return(sections)
+}
+```
+
+# 7. Title Finder (Page-Index Guided)
+
+Uses the page index to narrow the search window, then does multi-strategy matching.
+
+```{r title-finder}
+find_title_in_window <- function(text, title, window_start, window_end) {
+  # Returns position (integer) or NA
+  if (window_start >= window_end) return(NA_integer_)
+  search_text <- str_sub(text, window_start, window_end)
+
+  # Clean title: normalize dashes and remove "Frontispiece" suffix
+  search_title <- title
+  search_title <- str_replace(search_title, "\\s+Frontispiece\\s*$", "")
+  search_title <- str_replace_all(search_title, "\u2014|\u2013|---?", "-")
+
+  # Strategy 1: Exact match
+  escaped <- str_replace_all(search_title, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1")
+  m <- tryCatch(str_locate(search_text, regex(escaped, ignore_case = TRUE)),
+                error = function(e) matrix(NA, 1, 2))
+  if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+
+  # Strategy 1b: Dash/hyphen-flexible (any dash type matches any other)
+  # Normalize: replace all dashes/hyphens in the title with a flexible pattern
+  # that matches any combination of dashes, em-dashes, en-dashes
+  dash_re <- "[-\u2014\u2013]+"
+  dash_flex <- str_replace_all(search_title, "[\u2014\u2013]|--?-?", "DASHPLACEHOLDER")
+  dash_flex <- str_replace_all(dash_flex, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1")
+  dash_flex <- str_replace_all(dash_flex, "DASHPLACEHOLDER", dash_re)
+  dash_flex <- str_replace_all(dash_flex, "\\s+", "\\\\s+")
+  m <- tryCatch(str_locate(search_text, regex(dash_flex, ignore_case = TRUE)),
+                error = function(e) matrix(NA, 1, 2))
+  if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+
+  # Strategy 2: Whitespace-flexible
+  flex <- str_replace_all(escaped, "\\s+|\\\\s\\+", "\\\\s+")
+  m <- tryCatch(str_locate(search_text, regex(flex, ignore_case = TRUE)),
+                error = function(e) matrix(NA, 1, 2))
+  if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+
+  # Strategy 2b: Remove hyphens from compound words (Grand-daughter -> Granddaughter)
+  no_hyphen <- str_replace_all(search_title, "(?<=[a-zA-Z])-(?=[a-zA-Z])", "")
+  if (no_hyphen != search_title) {
+    esc <- str_replace_all(no_hyphen, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1")
+    esc <- str_replace_all(esc, "\\s+", "\\\\s+")
+    m <- tryCatch(str_locate(search_text, regex(esc, ignore_case = TRUE)),
+                  error = function(e) matrix(NA, 1, 2))
+    if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+  }
+
+  # Strategy 3: Strip probable author from end (last 1-4 capitalized words)
+  title_words <- str_split(search_title, "\\s+")[[1]]
+  if (length(title_words) >= 4) {
+    for (drop in 1:min(4, length(title_words) - 2)) {
+      shorter <- paste(title_words[1:(length(title_words) - drop)], collapse = " ")
+      if (nchar(shorter) < 3) break
+      dropped <- title_words[(length(title_words) - drop + 1):length(title_words)]
+      cap_ratio <- sum(str_detect(dropped, "^[A-Z]")) / length(dropped)
+      if (cap_ratio < 0.5) next  # not author-like
+      esc <- str_replace_all(shorter, "([.?*+^$\\[\\]\\\\(){}|])", "\\\\\\1")
+      esc <- str_replace_all(esc, "\\s+", "\\\\s+")
+      esc <- str_replace_all(esc, "\\\\-", "[-\u2014\u2013]+")
+      m <- tryCatch(str_locate(search_text, regex(esc, ignore_case = TRUE)),
+                    error = function(e) matrix(NA, 1, 2))
+      if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+    }
+  }
+
+  # Strategy 4: First N significant words (proximity search)
+  sig_words <- get_significant_words(search_title)
+  if (length(sig_words) >= 2) {
+    for (n_words in c(min(length(sig_words), 4), min(length(sig_words), 3), 2)) {
+      if (n_words > length(sig_words)) next
+      pattern_words <- paste(sapply(sig_words[1:n_words], function(w) {
+        ew <- str_replace_all(w, "([.?*+^$\\[\\]\\\\(){}|-])", "\\\\\\1")
+        paste0("\\b", ew, "\\b")
+      }), collapse = ".{0,40}")
+      m <- tryCatch(str_locate(search_text, regex(pattern_words, ignore_case = TRUE)),
+                    error = function(e) matrix(NA, 1, 2))
+      if (!is.na(m[1, 1])) return(window_start + m[1, 1] - 1L)
+    }
+  }
+
+  return(NA_integer_)
+}
+
+# Find article start using page index to narrow search
+find_article_start <- function(text, title, target_page, page_index,
+                                body_start, body_end) {
+  # If page index is empty or very sparse, go straight to full-body search
+  if (nrow(page_index) < 3) {
+    return(find_title_in_window(text, title, body_start, body_end))
+  }
+
+  # Compute search window from page index
+  # Search from 2 pages before target to 3 pages after (generous)
+  win_start_page <- max(1, target_page - 2)
+  win_end_page   <- target_page + 3
+
+  win_start <- page_to_position(page_index, win_start_page, body_start, body_end)
+  win_end   <- page_to_position(page_index, win_end_page, body_start, body_end)
+  # Add generous padding (1 full page worth)
+  win_start <- max(body_start, win_start - AVG_CHARS_PER_PAGE)
+  win_end   <- min(body_end, win_end + AVG_CHARS_PER_PAGE)
+
+  # Search in this window
+  pos <- find_title_in_window(text, title, win_start, win_end)
+  if (!is.na(pos)) return(pos)
+
+  # Widen: search 5 pages each direction
+  wide_start <- page_to_position(page_index, max(1, target_page - 5), body_start, body_end)
+  wide_end   <- page_to_position(page_index, target_page + 6, body_start, body_end)
+  wide_start <- max(body_start, wide_start - AVG_CHARS_PER_PAGE * 2)
+  wide_end   <- min(body_end, wide_end + AVG_CHARS_PER_PAGE * 2)
+
+  pos <- find_title_in_window(text, title, wide_start, wide_end)
+  if (!is.na(pos)) return(pos)
+
+  # Last resort: search full body
+  pos <- find_title_in_window(text, title, body_start, body_end)
+  if (!is.na(pos)) return(pos)
+
+  # Ultimate fallback: search ENTIRE text (including pre-body zone)
+  # Some articles listed in CONTENTS with page numbers are actually
+  # placed before the body marker in the OCR file
+  pos <- find_title_in_window(text, title, 1L, nchar(text))
+  return(pos)
+}
+
+# Search for known-category articles using body text patterns (e.g., EDITORIAL)
+find_category_in_body <- function(text, title, category, body_start, body_end) {
+  for (cat_info in KNOWN_CATEGORIES) {
+    if (tolower(cat_info$name) != tolower(category)) next
+
+    search_start <- body_start
+    search_end   <- body_end
+    if (cat_info$search_region == "back_half") {
+      search_start <- as.integer(body_start + (body_end - body_start) * 0.4)
+    } else if (cat_info$search_region == "back_third") {
+      search_start <- as.integer(body_start + (body_end - body_start) * 0.6)
+    }
+
+    for (pat in cat_info$body_patterns) {
+      m <- str_locate_all(str_sub(text, search_start, search_end),
+                          regex(pat, ignore_case = FALSE))[[1]]
+      if (nrow(m) > 0) {
+        # Return the first match position (absolute)
+        return(search_start + m[1, 1] - 1L)
+      }
+    }
+  }
+  return(NA_integer_)
+}
+```
+
+# 8. Running Header Cleaner
+
+```{r header-cleaner}
+clean_running_headers <- function(article_text) {
+  # Body markers: "THE Relief Society Magazine Vol. IX. MONTH, 1922 No. N."
+  article_text <- str_replace_all(article_text,
+    regex("THE\\s+Relief\\s+Society\\s+Magazine\\s+Vol\\..*?No\\.\\s*\\d+\\.?",
+          ignore_case = TRUE), " ")
+
+  # Even-page headers: "N RELIEF SOCIETY MAGAZINE."
+  article_text <- str_replace_all(article_text,
+    regex("\\d{1,3}\\s+RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?", ignore_case = FALSE), " ")
+
+  # Reverse: "RELIEF SOCIETY MAGAZINE. N"
+  article_text <- str_replace_all(article_text,
+    regex("RELIEF\\s+SOCIETY\\s+MAGAZINE\\.?\\s+\\d{1,3}", ignore_case = FALSE), " ")
+
+  # Odd-page running headers: "TITLE IN ALL CAPS N" or "TITLE IN CAPS - N"
+  # Match: 4+ ALL CAPS chars, optional separator, 1-3 digit number
+  article_text <- str_replace_all(article_text,
+    regex("(?<=\\s)([A-Z][A-Z '\\-,]{3,40})\\s*[-|]?\\s*(\\d{1,3})(?=\\s)",
+          ignore_case = FALSE), " ")
+
+  # "Entered as second-class matter" boilerplate
+  article_text <- str_replace_all(article_text,
+    regex("Entered as second[- ]class matter.*?(?:Salt Lake City,?\\s*Utah|Utah\\.)",
+          dotall = TRUE, ignore_case = TRUE), " ")
+
+  # Masthead motto
+  article_text <- str_replace_all(article_text,
+    regex("Motto\\s*[\u2014\u2013-]+\\s*Charity Never Faileth\\.?",
+          ignore_case = TRUE), " ")
+
+  # General Board roster (if accidentally included)
+  article_text <- str_replace_all(article_text,
+    regex("THE GENERAL BOARD[,.]?\\s+Mrs\\..*?(?:Salt Lake City|Bishop.*?Building|Room\\s+\\d+)",
+          dotall = TRUE, ignore_case = TRUE), " ")
+
+  # Clean up excess spaces
+  article_text <- str_replace_all(article_text, "\\s{3,}", "  ")
+  article_text <- trimws(article_text)
+  return(article_text)
+}
+```
+
+# 9. Core Processing Function
+
+```{r process-issue}
+process_issue <- function(filepath, output_dir) {
+  filename <- basename(filepath)
+  metadata <- get_metadata(filename)
+
+  text <- read_file_safe(filepath)
+  total_chars <- nchar(text)
+
+  cat("\n", rep("=", 70), "\n", sep = "")
+  cat("Processing:", filename, "\n")
+  cat("Chars:", format(total_chars, big.mark = ","), "\n")
+  cat(rep("=", 70), "\n", sep = "")
+
+  # Output directory — force year to 1922 for Vol9 (March filename has typo: 1822)
+  fixed_year <- if (!is.null(metadata$year) && metadata$year == "1822") "1922" else metadata$year
+  vol_year_folder <- paste0("Vol", metadata$volume, "_", fixed_year)
+  month_folder <- file.path(output_dir, vol_year_folder, metadata$month)
+  if (dir.exists(month_folder)) {
+    unlink(month_folder, recursive = TRUE)
+  }
+  dir.create(month_folder, showWarnings = FALSE, recursive = TRUE)
+
+  # Also create Misc subfolder
+  misc_folder <- file.path(month_folder, "Misc")
+  dir.create(misc_folder, showWarnings = FALSE, recursive = TRUE)
+
+  prefix <- paste0(metadata$month, "_Vol", metadata$volume)
+
+  # ==========================================
+  # STEP 1: Find sections
+  # ==========================================
+  sections <- find_sections(text)
+
+  # ==========================================
+  # STEP 2: Build page index
+  # ==========================================
+  page_index <- build_page_index(text)
+  cat(sprintf("  Page index: %d markers found", nrow(page_index)))
+  if (nrow(page_index) > 0) {
+    cat(sprintf(" (pages %d-%d)\n", min(page_index$page), max(page_index$page)))
+  } else {
+    cat("\n")
+  }
+
+  # ==========================================
+  # STEP 3: Save BOARD file
+  # ==========================================
+  board_text <- ""
+  if (!is.na(sections$board_start)) {
+    board_text <- str_trim(str_sub(text, sections$board_start, sections$board_end))
+    write_file(board_text,
+               file.path(month_folder, paste0(prefix, "_00_BOARD.txt")))
+    cat("  Board saved\n")
+  }
+
+  # ==========================================
+  # STEP 4: Parse CONTENTS
+  # ==========================================
+  articles <- NULL
+  if (!is.null(sections$contents_text)) {
+    write_file(str_trim(sections$contents_text),
+               file.path(month_folder, paste0(prefix, "_00_CONTENTS.txt")))
+    articles <- parse_contents_section(sections$contents_text)
+    if (!is.null(articles) && nrow(articles) > 0) {
+      cat("  Contents:", nrow(articles), "articles listed\n")
+    }
+  }
+
+  if (is.null(articles) || nrow(articles) == 0) {
+    cat("  No CONTENTS found. Saving full text as Misc.\n")
+    write_file(text, file.path(misc_folder, paste0(prefix, "_Misc_full.txt")))
+    return(data.frame(file = filename, n_contents = 0, n_saved = 0,
+                      n_missed = 0, total_chars = total_chars,
+                      stringsAsFactors = FALSE))
+  }
+
+  # ==========================================
+  # STEP 5: Determine body boundaries
+  # ==========================================
+  # Smart body_start: use earliest reliable indicator of article content
+  # Priority: 1) first even-page running header (most reliable)
+  #           2) body marker (if present and not abnormally late)
+  #           3) end of CONTENTS/ads section
+  #           4) fallback to position 1
+
+  body_end <- total_chars
+  if (!is.null(sections$ads_start) && sections$ads_start < total_chars) {
+    body_end <- sections$ads_start - 1
+  }
+
+  # Determine the earliest reasonable body start from the front matter end
+  front_matter_end <- 1L
+  if (!is.na(sections$contents_end)) {
+    front_matter_end <- sections$contents_end + 1L
+  }
+
+  # Check if body marker is present and reasonable
+  body_marker_reasonable <- FALSE
+  if (!is.na(sections$body_marker_pos)) {
+    # Body marker is "reasonable" if it's in the first 40% of the file
+    # (April's marker is at 70%, which means it's misplaced)
+    marker_pct <- sections$body_marker_pos / total_chars
+    body_marker_reasonable <- (marker_pct < 0.40)
+  }
+
+  # Choose body_start
+  if (body_marker_reasonable) {
+    # Body marker is early enough to be the true start
+    body_start <- sections$body_marker_end + 1L
+    cat(sprintf("  Body marker at %.0f%% -> body_start = %d\n",
+                sections$body_marker_pos / total_chars * 100, body_start))
+  } else if (!is.na(sections$first_header_pos)) {
+    # Use first running header (back up a bit to catch content before it)
+    body_start <- max(front_matter_end, sections$first_header_pos - AVG_CHARS_PER_PAGE)
+    cat(sprintf("  First header at %d -> body_start = %d (header-based)\n",
+                sections$first_header_pos, body_start))
+    if (!is.na(sections$body_marker_pos)) {
+      cat(sprintf("  (Body marker at pos %d / %.0f%% was too late, ignored for body_start)\n",
+                  sections$body_marker_pos, sections$body_marker_pos / total_chars * 100))
+    }
+  } else {
+    body_start <- front_matter_end
+    cat(sprintf("  No body marker or headers -> body_start = %d (after front matter)\n",
+                body_start))
+  }
+
+  cat(sprintf("  Body: %d to %d (%dk chars)\n",
+              body_start, body_end, as.integer((body_end - body_start) / 1000)))
+
+  # ==========================================
+  # STEP 6: Find all article start positions
+  # ==========================================
+  # Determine page range for this issue
+  pages_with_num <- articles$page[articles$page > 0]
+  min_page <- if (length(pages_with_num) > 0) min(pages_with_num) else 1
+  max_page <- if (length(pages_with_num) > 0) max(pages_with_num) else 60
+
+  # Pre-body zone: everything between CONTENTS end and body_start
+  # (for Frontispiece, Greeting, and other pre-body articles)
+  pre_body_start <- max(1L, if (!is.na(sections$contents_end)) sections$contents_end + 1L else 1L)
+  # The pre-body zone ends at body_start, but also search a bit into the body
+  # in case the article straddles the boundary
+  pre_body_end <- min(total_chars, body_start + AVG_CHARS_PER_PAGE * 2)
+
+  positions <- rep(NA_integer_, nrow(articles))
+
+  for (i in 1:nrow(articles)) {
+    title <- articles$title[i]
+    page  <- articles$page[i]
+    category <- articles$category[i]
+
+    # --- Frontispiece: special handling ---
+    if (category == "Frontispiece") {
+      clean_title <- str_replace(title, "\\s+Frontispiece\\s*$", "")
+      if (nchar(clean_title) >= 3) {
+        # Search pre-body zone first, then full text
+        pos <- find_title_in_window(text, clean_title, pre_body_start, pre_body_end)
+        if (is.na(pos)) pos <- find_title_in_window(text, clean_title, 1L, body_end)
+        if (!is.na(pos)) {
+          positions[i] <- pos
+        } else {
+          positions[i] <- pre_body_start
+        }
+      } else {
+        positions[i] <- pre_body_start
+      }
+      cat(sprintf("    [%02d] %-45s @ %6d [Frontispiece]\n",
+                  i, str_sub(title, 1, 45), positions[i]))
+      next
+    }
+
+    # --- Page 0 or 1 articles (Greeting, etc): search pre-body then full body ---
+    if (page <= 1) {
+      pos <- find_title_in_window(text, title, pre_body_start, pre_body_end)
+      if (is.na(pos)) {
+        # Also try full body in case it's placed unexpectedly
+        pos <- find_title_in_window(text, title, 1L, body_end)
+      }
+      if (!is.na(pos)) {
+        positions[i] <- pos
+        cat(sprintf("    [%02d] %-45s @ %6d [pre-body]\n",
+                    i, str_sub(title, 1, 45), positions[i]))
+        next
+      }
+      # Fall through to body/category search
+    }
+
+    # --- Body articles: use page index ---
+    pos <- find_article_start(text, title, page, page_index, body_start, body_end)
+
+    # --- If title search failed, try category-based body search ---
+    if (is.na(pos) && category %in% c("Editorial", "Guide_Lessons", "Notes_from_Field",
+                                       "Home_Economics", "Home_Science", "Current_Topics",
+                                       "Home_Entertainments")) {
+      pos <- find_category_in_body(text, title, category, body_start, body_end)
+      if (!is.na(pos)) {
+        cat(sprintf("    [%02d] %-45s @ %6d [category: %s]\n",
+                    i, str_sub(title, 1, 45), pos, category))
+        positions[i] <- pos
+        next
+      }
+    }
+
+    if (!is.na(pos)) {
+      positions[i] <- pos
+      cat(sprintf("    [%02d] %-45s @ %6d [page %d]\n",
+                  i, str_sub(title, 1, 45), positions[i], page))
+    } else {
+      cat(sprintf("    [%02d] %-45s   MISSED [page %d]\n",
+                  i, str_sub(title, 1, 45), page))
+    }
+  }
+
+  # ==========================================
+  # STEP 7: Position-sorted boundary assignment
+  # ==========================================
+  # Sort ALL found articles by position
+  found_idx <- which(!is.na(positions))
+  if (length(found_idx) == 0) {
+    cat("  No articles found. Saving as Misc.\n")
+    write_file(text, file.path(misc_folder, paste0(prefix, "_Misc_full.txt")))
+    return(data.frame(file = filename, n_contents = nrow(articles),
+                      n_saved = 0, n_missed = nrow(articles),
+                      total_chars = total_chars, stringsAsFactors = FALSE))
+  }
+
+  # Build sorted article table
+  art_table <- data.frame(
+    idx      = found_idx,
+    position = positions[found_idx],
+    stringsAsFactors = FALSE
+  )
+  art_table <- art_table[order(art_table$position), ]
+  art_table$order <- 1:nrow(art_table)
+
+  # Assign end boundaries: each article ends where the next one starts
+  n <- nrow(art_table)
+  art_table$end_pos <- NA_integer_
+  for (k in 1:n) {
+    if (k < n) {
+      art_table$end_pos[k] <- art_table$position[k + 1] - 1
+    } else {
+      # Last article: ends at body_end
+      art_table$end_pos[k] <- body_end
+    }
+  }
+
+  # Ensure no article has negative or zero length
+  art_table <- art_table[art_table$end_pos > art_table$position, ]
+
+  cat(sprintf("  Boundaries: %d articles positioned and bounded\n", nrow(art_table)))
+
+  # ==========================================
+  # STEP 8: Extract and save articles
+  # ==========================================
+  saved_count <- 0
+
+  for (k in 1:nrow(art_table)) {
+    i <- art_table$idx[k]
+    article_start <- art_table$position[k]
+    article_end   <- art_table$end_pos[k]
+
+    article_text <- str_sub(text, article_start, article_end)
+
+    # Remove board text if accidentally captured
+    if (nchar(board_text) > 50) {
+      article_text <- str_replace(article_text, fixed(board_text), "")
+    }
+
+    # Clean running headers
+    article_text <- clean_running_headers(article_text)
+
+    # Trim but keep ALL text
+    article_text <- trimws(article_text)
+    if (nchar(article_text) == 0) next
+
+    saved_count <- saved_count + 1
+    category <- articles$category[i]
+    clean_title <- safe_filename(articles$title[i])
+
+    # Use the position-sorted order for file numbering (chronological in magazine)
+    fname <- paste0(prefix, "_", sprintf("%02d", k), "_",
+                    category, "_", clean_title, ".txt")
+    write_file(article_text, file.path(month_folder, fname))
+
+    size_chars <- nchar(article_text)
+    flag <- ""
+    if (size_chars < WARN_TINY_CHARS) flag <- " [TINY]"
+    if (size_chars > WARN_LARGE_CHARS) flag <- " [LARGE]"
+    cat(sprintf("    Saved [%02d] %-45s %6d chars%s\n",
+                k, str_sub(articles$title[i], 1, 45), size_chars, flag))
+  }
+
+  # ==========================================
+  # STEP 9: Build Misc folder contents
+  # ==========================================
+  # Collect ALL text not covered by any article
+
+  # 9a: Front matter (everything before first article)
+  first_art_pos <- min(art_table$position)
+  if (first_art_pos > 1) {
+    front_text <- str_sub(text, 1, first_art_pos - 1)
+    # Remove CONTENTS and Board (already saved separately)
+    if (!is.null(sections$contents_text)) {
+      front_text <- str_replace(front_text, fixed(sections$contents_text), "")
+    }
+    if (nchar(board_text) > 50) {
+      front_text <- str_replace(front_text, fixed(board_text), "")
+    }
+    front_text <- trimws(front_text)
+    if (nchar(front_text) > 10) {
+      write_file(front_text,
+                 file.path(misc_folder, paste0(prefix, "_Misc_front_matter.txt")))
+      cat("  Misc: front matter saved\n")
+    }
+  }
+
+  # 9b: Back matter (everything after last article)
+  last_art_end <- max(art_table$end_pos)
+  if (last_art_end < total_chars) {
+    back_text <- trimws(str_sub(text, last_art_end + 1, total_chars))
+    if (nchar(back_text) > 10) {
+      write_file(back_text,
+                 file.path(misc_folder, paste0(prefix, "_Misc_back_matter.txt")))
+      cat("  Misc: back matter saved\n")
+    }
+  }
+
+  # 9c: Gaps between articles (text not covered by any article)
+  art_sorted <- art_table[order(art_table$position), ]
+  gap_count <- 0
+  if (nrow(art_sorted) > 1) for (k in 2:nrow(art_sorted)) {
+    gap_start <- art_sorted$end_pos[k - 1] + 1
+    gap_end   <- art_sorted$position[k] - 1
+    if (gap_end > gap_start) {
+      gap_text <- trimws(str_sub(text, gap_start, gap_end))
+      # Clean board text from gaps
+      if (nchar(board_text) > 50) {
+        gap_text <- str_replace(gap_text, fixed(board_text), "")
+        gap_text <- trimws(gap_text)
+      }
+      if (nchar(gap_text) > 10) {
+        gap_count <- gap_count + 1
+        write_file(gap_text,
+                   file.path(misc_folder, paste0(prefix, "_Misc_gap_", gap_count, ".txt")))
+      }
+    }
+  }
+  if (gap_count > 0) cat(sprintf("  Misc: %d gap(s) saved\n", gap_count))
+
+  # ==========================================
+  # STEP 10: Diagnostics
+  # ==========================================
+  n_missed <- sum(is.na(positions))
+  cat(sprintf("\n  RESULT: %d/%d articles saved, %d missed\n",
+              saved_count, nrow(articles), n_missed))
+
+  if (n_missed > 0) {
+    missed_idx <- which(is.na(positions))
+    for (mi in missed_idx) {
+      cat(sprintf("    MISSED: \"%s\" (page %s)\n",
+                  articles$title[mi], articles$page[mi]))
+    }
+  }
+
+  # Warn about tiny/large files
+  for (k in 1:nrow(art_table)) {
+    i <- art_table$idx[k]
+    size <- art_table$end_pos[k] - art_table$position[k]
+    if (size < WARN_TINY_CHARS) {
+      cat(sprintf("    WARNING TINY: [%02d] \"%s\" only %d chars\n",
+                  k, str_sub(articles$title[i], 1, 40), size))
+    }
+  }
+
+  return(data.frame(
+    file = filename,
+    n_contents = nrow(articles),
+    n_saved = saved_count,
+    n_missed = n_missed,
+    total_chars = total_chars,
+    stringsAsFactors = FALSE
+  ))
+}
+```
+
+# 10. Main Execution
+
+```{r run-extraction, message=FALSE}
+cat("Relief Society Magazine Vol. 9 - Article Extractor v4\n")
+cat("Page-Index Guided Boundary Detection + Category Search\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+input_files <- list.files(INPUT_DIR, pattern = "\\.txt$",
+                          full.names = TRUE, recursive = FALSE)
+input_files <- sort(input_files)
+
+cat("Found", length(input_files), "issue file(s)\n\n")
+
+results <- list()
+for (f in input_files) {
+  result <- tryCatch(
+    process_issue(f, OUTPUT_DIR),
+    error = function(e) {
+      cat("ERROR:", basename(f), "-", e$message, "\n")
+      traceback()
+      data.frame(file = basename(f), n_contents = 0, n_saved = 0,
+                 n_missed = 0, total_chars = 0, stringsAsFactors = FALSE)
+    }
+  )
+  results[[length(results) + 1]] <- result
+}
+
+results_df <- do.call(rbind, results)
+```
+
+# 11. Summary Report
+
+```{r summary}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("EXTRACTION COMPLETE\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+if (!is.null(results_df) && nrow(results_df) > 0) {
+  kable(results_df, caption = "Extraction Results by Issue")
+
+  cat(sprintf("\nFiles processed:       %d\n", nrow(results_df)))
+  cat(sprintf("Articles in CONTENTS:  %d\n", sum(results_df$n_contents)))
+  cat(sprintf("Articles saved:        %d\n", sum(results_df$n_saved)))
+  cat(sprintf("Missed (not found):    %d\n", sum(results_df$n_missed)))
+
+  hit_rate <- sum(results_df$n_saved) / max(1, sum(results_df$n_contents)) * 100
+  cat(sprintf("Hit rate:              %.1f%%\n", hit_rate))
+}
+
+cat("\nOutput:", OUTPUT_DIR, "\n")
+```
+
+# 12. Spot-Check: File Sizes
+
+```{r spot-check}
+output_vol9 <- file.path(OUTPUT_DIR, "Vol9_1922")
+cat("Checking output in:", output_vol9, "\n")
+if (dir.exists(output_vol9)) {
+  all_output <- list.files(output_vol9, pattern = "\\.txt$",
+                            full.names = TRUE, recursive = TRUE)
+  sizes <- file.info(all_output)$size
+  names(sizes) <- basename(all_output)
+
+  # Flag large files
+  non_misc <- sizes[!str_detect(names(sizes), "Misc|BOARD|CONTENTS")]
+  large <- non_misc[non_misc > 50000]
+  if (length(large) > 0) {
+    cat("Large article files (>50KB):\n")
+    for (nm in names(sort(large, decreasing = TRUE))) {
+      cat(sprintf("  %6.1f KB  %s\n", large[nm] / 1024, nm))
+    }
+  }
+
+  tiny <- non_misc[non_misc < 30]
+  if (length(tiny) > 0) {
+    cat("\nTiny article files (<30 bytes):\n")
+    for (nm in names(sort(tiny))) {
+      cat(sprintf("  %6d B   %s\n", tiny[nm], nm))
+    }
+  }
+
+  cat(sprintf("\nTotal output files: %d\n", length(all_output)))
+  if (length(non_misc) > 0) {
+    cat(sprintf("Median article size: %.1f KB\n", median(non_misc) / 1024))
+    cat(sprintf("Max article size: %.1f KB\n", max(non_misc) / 1024))
+  }
+}
+```

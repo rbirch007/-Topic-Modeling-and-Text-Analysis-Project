@@ -1,0 +1,32 @@
+{
+  "volume": 4,
+  "month": "July",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "July_Vol4_01_Article_Hazel_Washburn.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (348 chars removed)"
+    },
+    {
+      "file": "July_Vol4_12_Article_President_Joseph_F._Smith_on_Card_Playing.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "July_Vol4_18_Article_In_Memory_of.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "July_Vol4_19_Article_First_Winter_in_Salt_Lake_City,.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content instead of the article about First Winter in Salt Lake City"
+    }
+  ]
+}

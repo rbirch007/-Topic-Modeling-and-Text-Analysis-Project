@@ -1,0 +1,62 @@
+{
+  "volume": 5,
+  "month": "August",
+  "year": 1918,
+  "timestamp": "20260315_120940",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "August_Vol5_01_Article_Chart_of_Solomon's_Temple.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4312 chars removed)"
+    },
+    {
+      "file": "August_Vol5_02_Frontispiece_The_Temple_in_Jerusalem_Frontispiece_Jerusalem_Restored_Jas..txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "August_Vol5_05_Article_Jerusalem,_the_City_of_Cities._A_Romance_of_Today_Lula_Green.txt",
+      "action": "append",
+      "result": "APPLIED append (56 chars added)"
+    },
+    {
+      "file": "August_Vol5_06_Article_Apostrophe_to_Jerusalem_Eliza_R._Snow.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (57 chars removed)"
+    },
+    {
+      "file": "August_Vol5_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (235 chars removed)"
+    },
+    {
+      "file": "August_Vol5_15a_Editorial_Editorial_The_Return_of_the_Jews.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (15 chars removed)"
+    },
+    {
+      "file": "August_Vol5_15c_Guide_Lessons_Lesson_III_-_Genealogy.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (93 chars removed)"
+    },
+    {
+      "file": "August_Vol5_16_Guide_Lessons_Guide_Lessons.txt",
+      "action": "append",
+      "result": "APPLIED append (79 chars added)"
+    }
+  ]
+}

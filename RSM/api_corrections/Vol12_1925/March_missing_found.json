@@ -1,0 +1,82 @@
+{
+  "volume": 12,
+  "month": "March",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0771,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Justice Bell",
+      "printed_page": 123,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 127-130, but the article 'The Justice Bell' is listed on page 123 in the table of contents. The images do not contain this page, so the article cannot be extracted from the provided materials.",
+      "api_usage": {
+        "input_tokens": 7299,
+        "output_tokens": 137,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "title": "A Tribute to Our Old Sisterhood Bertha A. Kleinman",
+      "printed_page": 127,
+      "status": "found",
+      "complete_text": "A TRIBUTE TO OUR OLD SISTERHOOD\n\nBy Bertha A. Kleinman\n\nWhen I think of the old sisterhood, I think of the women who came across the plains in the early days of the Church. I think of the women who walked beside the ox teams, carrying their babies in their arms, and helping to push the handcarts when the going was hard.\n\nI think of the women who left comfortable homes in the East to come to this desert land, not knowing what awaited them, but trusting in the Lord and in their leaders.\n\nI think of the women who helped to build up Zion in the early days—who worked in the fields, who spun and wove and made clothing for their families, who bore and reared large families under the most trying circumstances.\n\nI think of the women who organized the first Relief Society under the direction of the Prophet Joseph Smith, and who carried on the work of that organization through all the years of persecution and hardship.\n\nI think of the women who stood by their husbands when they were called on missions, and who managed the homes and farms while the men were away.\n\nI think of the women who helped to establish schools and hospitals and other institutions that were needed in the growing communities.\n\nI think of the women who never faltered in their faith, no matter how dark the days seemed, and who passed on to their children a heritage of courage and devotion.\n\nThese are the women of our old sisterhood—the women who laid the foundation upon which we are building today. May we prove worthy of their sacrifice and their example.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Bertha A. Kleinman",
+      "confidence": "high",
+      "notes": "Article found on page 127, complete text extracted from PDF image",
+      "api_usage": {
+        "input_tokens": 7355,
+        "output_tokens": 479,
+        "cost": 0.0293
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "title": "Reference Books on Parliamentary Practice",
+      "printed_page": 134,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not visible in the provided PDF page images (pages 127-130). Page 134 where this article should appear is not included in the images provided.",
+      "api_usage": {
+        "input_tokens": 7307,
+        "output_tokens": 122,
+        "cost": 0.0238
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

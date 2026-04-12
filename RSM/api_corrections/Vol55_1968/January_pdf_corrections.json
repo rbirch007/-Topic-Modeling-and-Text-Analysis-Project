@@ -1,0 +1,18 @@
+{
+  "volume": 55,
+  "month": "January",
+  "year": 1968,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V55_01_13_SpFt_Award_Contest.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file contains Emma Lou Thayne's story content instead of ending with the contest announcement",
+      "action": "trim_end",
+      "text": "[Award Winners Relief Society Short Story Contest]",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

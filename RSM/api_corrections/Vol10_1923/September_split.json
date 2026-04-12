@@ -1,0 +1,171 @@
+{
+  "volume": 10,
+  "month": "September",
+  "year": 1923,
+  "total_merged": 3,
+  "total_splits": 11,
+  "total_cost": 0.325,
+  "files": [
+    {
+      "source_file": "September_Vol10_01_Article_THE_BOOK_OF_MORMON_TESTED.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Book of Mormon Tested",
+          "category": "Article",
+          "author": "Alice Louise Reynolds",
+          "start_boundary": "The Book of Mormon Tested Alice Louise",
+          "end_boundary": "the faith of the Latter-day Saints through",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "The Book of Mormon as a Best",
+          "end_boundary": "the dealing of the Lord with them?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Tapestries",
+          "category": "Poem",
+          "author": "Grace Ingles Frost",
+          "start_boundary": "Tapestries Grace Ingles Frost As to and",
+          "end_boundary": "To weave my tapestries of you.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Scenic West and Its Natural Resources",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "The Scenic West and Its Natural Resources",
+          "end_boundary": "foot thick.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE BOOK OF MORMON TESTED",
+        "EDITORIAL",
+        "THE SCENIC WEST"
+      ],
+      "notes": "This file contains the end portion of 'The Book of Mormon Tested' article, followed by editorial content including 'The Book of Mormon as a Best Seller', 'The Scholar and the Book of Mormon', a poem 'Tapestries', and 'The Scenic West and Its Natural Resources'. The file appears to be missing the table of contents that was referenced in the instructions.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12105,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 32843,
+        "output_tokens": 536,
+        "cost": 0.1066
+      }
+    },
+    {
+      "source_file": "September_Vol10_06_Of_Interest_OF_INTEREST_TO_WOMEN.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Of Interest to Women",
+          "category": "Home_Science",
+          "author": "Lalene H. Hart",
+          "start_boundary": "OF INTEREST TO WOMEN 453 Boston Cookies.",
+          "end_boundary": "To trust in God and heaven securely.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Items About Women",
+          "category": "Current_Topics",
+          "author": null,
+          "start_boundary": "Items About Women New York University Honors",
+          "end_boundary": "American Universities at the present time.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown",
+          "end_boundary": "to be translated into the Maori language.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "OF INTEREST TO WOMEN",
+        "ITEMS ABOUT WOMEN",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains three distinct sections with clear ALL-CAPS headers. The first section is a home economics article with recipes and lunch suggestions. The second is a news compilation about women's achievements and activities. The third is mission reports from various Relief Society branches worldwide.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14659,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 33565,
+        "output_tokens": 432,
+        "cost": 0.1072
+      }
+    },
+    {
+      "source_file": "September_Vol10_08_Article_LESSON_DEPARTMENT.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON DEPARTMENT 469 Whitmer, in Fayette, Seneca county,",
+          "end_boundary": "What is your personal testimony of the mission of the Angel. Moroni?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week in November.)",
+          "end_boundary": "LESSON II Work and Business (Second Week in November.)",
+          "confidence": "medium"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in November. ) A convenient",
+          "end_boundary": "Read to the class if your time will permit either King Robert of Sicily or The Birds of Killingworth.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV.. Social Service (Fourth Week in November ) THE HOME",
+          "end_boundary": "Vacuum Electric WASHERS EAS.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "LESSON DEPARTMENT",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains 4 lesson sections for November. Lesson II appears to be incomplete with only a title line. The file ends abruptly with what appears to be an advertisement fragment.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 18511,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 34391,
+        "output_tokens": 532,
+        "cost": 0.1112
+      }
+    }
+  ]
+}

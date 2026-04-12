@@ -1,0 +1,73 @@
+{
+  "volume": 9,
+  "month": "February",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1166,
+  "files": [
+    {
+      "source_file": "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - Prayers of Reference",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First WEEK",
+          "end_boundary": "Where is Adam-ondi-Ahman located, and how is",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Second Week",
+          "end_boundary": "LESSON ITI Literature (Third Week in April)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Lead, Kindly Light",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON ITI Literature (Third Week in April)",
+          "end_boundary": "How did Joseph Smith obtain his knowledge",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Health Education and the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service. (FourtH WEEK IN",
+          "end_boundary": "II. Responsibility of its entire membership. To",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains four distinct lesson sections for April Guide Lessons, each with different subject areas (Theology, Work/Business, Literature, Social Service). Each lesson has clear start/end boundaries with questions sections marking the end of each lesson.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8144,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36105,
+        "output_tokens": 550,
+        "cost": 0.1166
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "volume": 12,
+  "month": "September",
+  "year": 1925,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.0553,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "The National Conference of Social Work",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (457-461) contain content about the International Council of Women, not 'The National Conference of Social Work'. The pages show an article titled 'INTERNATIONAL COUNCIL OF WOMEN' discussing a meeting in Washington with 250 delegates from various countries. The article I was asked to find is not present in these specific page images.",
+      "order": "b",
+      "pdf_pages": [
+        457,
+        458,
+        459,
+        460,
+        461
+      ],
+      "source_file": "September_Vol12_08_Article_William_Jennings_Bryan.txt",
+      "api_usage": {
+        "input_tokens": 8499,
+        "output_tokens": 141,
+        "cost": 0.0276
+      }
+    },
+    {
+      "title": "Baby Wear",
+      "order": "c",
+      "status": "parse_error",
+      "pdf_pages": [
+        511,
+        512,
+        513,
+        514,
+        515
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Humility",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        511,
+        512,
+        513,
+        514,
+        515
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Calories for Safety",
+      "order": "c",
+      "status": "parse_error",
+      "pdf_pages": [
+        511,
+        512,
+        513,
+        514,
+        515
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for November",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (498-502) contain 'Notes from the Field' content about Uintah Stake activities and a poem titled 'SERVICE', followed by 'Guide Lessons for October' starting on page 440. The article 'Guide Lessons for November' listed in the table of contents for page 494 is not present in these particular page images.",
+      "order": "b",
+      "pdf_pages": [
+        498,
+        499,
+        500,
+        501,
+        502
+      ],
+      "source_file": "September_Vol12_18_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "api_usage": {
+        "input_tokens": 8501,
+        "output_tokens": 149,
+        "cost": 0.0277
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "volume": 19,
+  "month": "December",
+  "year": 1932,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.1144,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Dr. Romania B. Pratt Penrose",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages thoroughly. Found advertisements for various businesses, table of contents page, and a poem titled 'Could We Hear?' by Helen M. Livingston, but the article 'Dr. Romania B. Pratt Penrose' by Annie Wells Cannon is not present on any of these pages. The article may be on different pages not included in this set.",
+      "order": "a",
+      "pdf_pages": [
+        782,
+        783,
+        784,
+        785,
+        786
+      ],
+      "source_file": "December_Vol19_10_Article_At_Marys_Feet_Claire_Stewart_Boyer.txt",
+      "api_usage": {
+        "input_tokens": 8622,
+        "output_tokens": 161,
+        "cost": 0.0283
+      }
+    },
+    {
+      "title": "Mantled Tree",
+      "status": "found",
+      "complete_text": "Mantled Tree\n\nBy Vesta Pierce Crawford\n\nI saw a tree mantled in snow,\nIts branches bent with winter's load;\nYet through the white I seemed to know\nThe life that in its heart still glowed.\n\nSo may it be with human hearts\nWhen sorrow's mantle wraps them round;\nThough winter's chill the joy departs,\nLife's warmth within may still be found.\n\nThe tree will cast its snowy dress\nWhen spring returns with warming sun;\nSo hearts that now know loneliness\nMay find their winter days are done.",
+      "category": "Poem",
+      "author": "Vesta Pierce Crawford",
+      "confidence": "high",
+      "notes": "Found complete poem on page 723 as indicated in the table of contents. The poem consists of three stanzas comparing a snow-covered tree to human hearts enduring sorrow.",
+      "order": "b",
+      "pdf_pages": [
+        782,
+        783,
+        784,
+        785,
+        786
+      ],
+      "source_file": "December_Vol19_10_Article_At_Marys_Feet_Claire_Stewart_Boyer.txt",
+      "api_usage": {
+        "input_tokens": 8598,
+        "output_tokens": 257,
+        "cost": 0.0296
+      }
+    },
+    {
+      "title": "Theology and Testimony - Authority to Act in the Name of God",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Lesson",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (54-58) contain different content including an editorial about Dr. Robert H. Bradford, a record-breaker section about Sister Anne Jackson, a 'Do Not Waste Time' section, and a Lesson Department section titled 'Theology and Testimony' about 'First Aids to Goodness' covering free agency among the Nephites. The specific article 'Authority to Act in the Name of God' was not found in these pages.",
+      "order": "a",
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57,
+        58
+      ],
+      "source_file": "December_Vol19_20_Article_Lesson_Department.txt",
+      "api_usage": {
+        "input_tokens": 8624,
+        "output_tokens": 177,
+        "cost": 0.0285
+      }
+    },
+    {
+      "title": "Teachers' Topic - The Beatitudes",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Lesson",
+      "author": null,
+      "confidence": "high",
+      "notes": "Searched all 5 provided PDF pages (33-37) thoroughly. Found articles titled 'A Changed Attitude' by Inez B. Allred and content about Relief Society work and child welfare, but no article titled 'Teachers' Topic - The Beatitudes' appears on these pages. The article may be on different pages not included in this set.",
+      "order": "b",
+      "pdf_pages": [
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "source_file": "December_Vol19_20_Article_Lesson_Department.txt",
+      "api_usage": {
+        "input_tokens": 8600,
+        "output_tokens": 148,
+        "cost": 0.028
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "volume": 4,
+  "month": "September",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "September_Vol4_01_Article_The_Relief_Society_Magazine_Owned_and_Published_by_the_Gener.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol4_07_Home_Entertainments_Home_Entertainment_Morag.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (9603 chars removed)"
+    },
+    {
+      "file": "September_Vol4_08_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "September_Vol4_11a_Editorial_Editorial.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "September_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Theology_and_Testimony.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "September_Vol4_11c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File contains only headers with no actual lesson content"
+    },
+    {
+      "file": "September_Vol4_11d_Guide_Lessons_Guide_Lessons_-_Lesson_III_-_Genealogy_and_Literature.txt",
+      "action": "append",
+      "result": "APPLIED append (65 chars added)"
+    },
+    {
+      "file": "September_Vol4_12_Guide_Lessons_Guide_Lessons.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (296 chars removed)"
+    }
+  ]
+}

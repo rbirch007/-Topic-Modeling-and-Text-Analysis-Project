@@ -1,0 +1,36 @@
+Looking at this file, I can see it contains multiple sections based on the CONTENTS listing and the visual structure. Let me analyze the boundaries:
+
+From the CONTENTS, I can identify these articles that should be in this file:
+- "Notes to the Field" (page 646)
+- "Relief Society Conference" (page 647)
+
+However, examining the actual content, I can see this is one continuous document that starts with "Notes to the Field" and then flows into the "Relief Society Conference" proceedings. The conference section contains multiple subsections (Officers' Meeting, different speakers, etc.) but these are all part of one continuous conference report, not separate articles.
+
+Based on the visual layout and content structure, this appears to be two main articles:
+
+{
+  "source_file": "November_Vol19_08_Notes_from_Field_Notes_to_the_Field.txt",
+  "num_articles_found": 2,
+  "splits": [
+    {
+      "order": "a",
+      "title": "Notes to the Field",
+      "category": "Notes_from_Field",
+      "author": null,
+      "start_boundary": "Notes to the Field IT has always been",
+      "end_boundary": "Your Brother in the Gospel of Christ. Frederick J. Pack.",
+      "confidence": "high"
+    },
+    {
+      "order": "b", 
+      "title": "Relief Society Conference",
+      "category": "Notes_from_Field",
+      "author": "Mrs. Julia A. F. Lund, General Secretary",
+      "start_boundary": "Relief Society Conference By Mrs. Julia A. F. Lund,",
+      "end_boundary": "I humbly pray in the name of Jesus Christ. Amen.",
+      "confidence": "high"
+    }
+  ],
+  "running_headers_to_strip": ["RELIEF SOCIETY MAGAZINE", "RELIEF SOCIETY CONFERENCE"],
+  "notes": "The file contains two main articles: a brief 'Notes to the Field' section followed by an extensive 'Relief Society Conference' report that includes multiple speakers and sessions but forms one continuous conference proceedings document."
+}

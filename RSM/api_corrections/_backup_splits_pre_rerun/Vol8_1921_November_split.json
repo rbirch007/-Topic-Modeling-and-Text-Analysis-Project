@@ -1,0 +1,97 @@
+{
+  "volume": 8,
+  "month": "November",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 6,
+  "total_cost": 0.1161,
+  "files": [
+    {
+      "source_file": "November_Vol8_03_Article_A_Memorable_Journey_to_the_Scenic_Glories_of_Southern_Utah_S.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Memorable Journey to the Scenic Glories of Southern Utah",
+          "category": "Article",
+          "author": "Susa Young Gates",
+          "start_boundary": "A Memorable Journey to the Scenic Glories",
+          "end_boundary": "been born or reared there.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Origin, Object and Destiny of Women",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Origin, Object and Destiny of Women",
+          "end_boundary": "to people other worlds.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Marigold",
+          "category": "Poem",
+          "author": "Raveina Lundgren",
+          "start_boundary": "Yarrow By Raveing Lundgren It is",
+          "end_boundary": "as no others do. CORRECTION",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Missionary's Recompense",
+          "category": "Article",
+          "author": "Edith Anna Johnson",
+          "start_boundary": "Morga Was weary and footsore h",
+          "end_boundary": "Don't let the baby forget!",
+          "confidence": "medium"
+        },
+        {
+          "order": "e",
+          "title": "Out of the World",
+          "category": "Article",
+          "author": "G. Milton Babcock",
+          "start_boundary": "ck ( Continued) \"Oh, don't §0",
+          "end_boundary": "(To be concluded) ' GILES CANTATA",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy B. Lyman",
+          "start_boundary": "Notes from the Field By Amy",
+          "end_boundary": "mend jt World Happenings By James",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A MEMORABLE JOURNEY",
+        "OUT OF THE WORLD",
+        "NOTES FROM T HE FIELD"
+      ],
+      "notes": "This file contains multiple articles that were merged together. The text shows clear transitions between different articles, with some OCR corruption throughout. The 'Don't Let the Baby Forget Me' poem appears to be embedded within 'The Missionary's Recompense' article. Some articles appear to be continuations from previous issues.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 22947,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 34927,
+        "output_tokens": 752,
+        "cost": 0.1161
+      }
+    }
+  ]
+}

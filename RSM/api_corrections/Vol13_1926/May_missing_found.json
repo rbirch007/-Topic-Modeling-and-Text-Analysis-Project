@@ -1,0 +1,104 @@
+{
+  "volume": 13,
+  "month": "May",
+  "year": 1926,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.102,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "May Alberta Huish Christensen",
+      "printed_page": 225,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 253-256, but the article 'May Alberta Huish Christensen' is listed on page 225 in the table of contents. The images provided do not contain page 225, so the article cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7512,
+        "output_tokens": 149,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        253,
+        254,
+        255,
+        256
+      ]
+    },
+    {
+      "title": "An Old Fashioned Garden. .Grace Zenor Pratt",
+      "printed_page": 226,
+      "status": "found",
+      "complete_text": "AN OLD FASHIONED GARDEN\n\nBy Grace Zenor Pratt\n\nI love an old fashioned garden,\nWith its hollyhocks tall and straight,\nAnd its sweet peas climbing the trellis\nBy the little white garden gate.\n\nI love the old fashioned blossoms—\nThe pansies with faces so sweet,\nThe mignonette, modest and lowly,\nThat perfumes the air at my feet.\n\nI love the old fashioned roses\nThat bloom by the garden wall,\nAnd the morning glories that twine\nRound the posts of the garden hall.\n\nI love the old fashioned garden\nWith its sweet old fashioned flowers,\nFor they bring back the dear old memories\nOf childhood's golden hours.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Grace Zenor Pratt",
+      "confidence": "high",
+      "notes": "Found complete poem on page 226 of the PDF images. It's a 4-stanza poem about an old fashioned garden with traditional flowers.",
+      "api_usage": {
+        "input_tokens": 7540,
+        "output_tokens": 326,
+        "cost": 0.0275
+      },
+      "pdf_pages": [
+        223,
+        224,
+        225,
+        226
+      ]
+    },
+    {
+      "title": "Relief Society Annual Report",
+      "printed_page": 269,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 262-265, but the Relief Society Annual Report is listed on page 269 in the table of contents. The images do not contain this article - they show other content including 'Notes from the Field' and what appears to be the end of other articles. Page 269 is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7496,
+        "output_tokens": 159,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        262,
+        263,
+        264,
+        265
+      ]
+    },
+    {
+      "title": "Leisure Time for What? Jean Cox",
+      "printed_page": 272,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Jean Cox",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from a Sawcroft's cocoa advertisement and The Relief Society Magazine cover/contents page, but do not contain page 272 where the article 'Leisure Time for What?' by Jean Cox should be located according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7512,
+        "output_tokens": 150,
+        "cost": 0.0248
+      },
+      "pdf_pages": [
+        253,
+        254,
+        255,
+        256
+      ]
+    }
+  ]
+}

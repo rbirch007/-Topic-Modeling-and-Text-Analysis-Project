@@ -1,0 +1,38 @@
+{
+  "volume": 17,
+  "month": "January",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0295,
+  "stats": {
+    "found": 0,
+    "not_found": 0,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "Add to Your Life Insurance During Thrift Week January 17 to",
+      "printed_page": 23,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "January_Vol17_06_Article_Richards_Street_One-Half_Block_South_of_Temple_Gates_LIFE_INSURANCE_MEANS_T.txt",
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be an advertisement for Beneficial Life Insurance Co. that includes the text 'Add to Your Life Insurance During Thrift Week January 17 to 23'. The content is already extracted in the existing file which contains the full advertisement text including company details and contact information.",
+      "api_usage": {
+        "input_tokens": 8857,
+        "output_tokens": 195,
+        "cost": 0.0295
+      },
+      "pdf_pages": [
+        50,
+        51,
+        52,
+        53
+      ]
+    }
+  ]
+}

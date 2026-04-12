@@ -1,0 +1,60 @@
+{
+  "volume": 12,
+  "month": "August",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0482,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "To a Woodpath Estelle Webb Thomas",
+      "printed_page": 395,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Estelle Webb Thomas",
+      "confidence": "high",
+      "notes": "The article/poem is not visible in the provided PDF page images (pages 390-393). The content should appear on page 395 according to the table of contents, but that page is not included in the attached images.",
+      "api_usage": {
+        "input_tokens": 7228,
+        "output_tokens": 145,
+        "cost": 0.0239
+      },
+      "pdf_pages": [
+        390,
+        391,
+        392,
+        393
+      ]
+    },
+    {
+      "title": "Out of Work Martha Hartford Webb",
+      "printed_page": 427,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Martha Hartford Webb",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 419-422, but the article 'Out of Work' by Martha Hartford Webb is listed on page 427 in the table of contents. The images contain 'The Editor Abroad' by Alice Louise Reynolds (pages 418-421) and 'Vitamins' by Jean Cox (page 422), but do not include page 427 where the missing article should be located.",
+      "api_usage": {
+        "input_tokens": 7212,
+        "output_tokens": 180,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        419,
+        420,
+        421,
+        422
+      ]
+    }
+  ]
+}

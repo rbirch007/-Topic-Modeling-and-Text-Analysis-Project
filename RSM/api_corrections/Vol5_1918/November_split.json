@@ -1,0 +1,108 @@
+{
+  "volume": 5,
+  "month": "November",
+  "year": 1918,
+  "total_merged": 2,
+  "total_splits": 3,
+  "total_cost": 0.3533,
+  "files": [
+    {
+      "source_file": "November_Vol5_01c_Article_Lo_the_Poor_Rich_Indian_a_a_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lo, the Poor, Rich Indian",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Lo, the Poor, Rich Indian. HALF-BROTHER TO THE JEW",
+          "end_boundary": "every adult Indian on the reservation had subscribed the equivalent",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Vision",
+          "category": "Poem",
+          "author": "Elsie C. Carroll",
+          "start_boundary": "The Vision. Elsie C. Carroll. The moon peeped in",
+          "end_boundary": "My boy's a savior on a cross.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "LO, THE POOR, RICH INDIAN",
+        "RELIEF SOCIETY MAGAZINE",
+        "THE VISION"
+      ],
+      "notes": "The file contains a long article about Native Americans followed by a poem about a mother's prayer for her soldier son. The article includes the '(To be continued.)' notation at the end, indicating it continues in a subsequent issue. The poem has clear visual separation and author attribution.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 32489,
+      "tier": 1,
+      "pdf_pages": [
+        694,
+        695,
+        696,
+        697,
+        698,
+        699,
+        700,
+        701,
+        702
+      ],
+      "api_usage": {
+        "input_tokens": 55118,
+        "output_tokens": 356,
+        "cost": 0.1707
+      }
+    },
+    {
+      "source_file": "November_Vol5_11a_Guide_Lessons_Guide_Lessons_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "or person at whose instance the Temple work",
+          "end_boundary": "This is a great favorite in President Smith's",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains only the Guide Lessons section from the November 1918 issue. It includes four lessons: Theology and Testimony (Book of Mormon lesson on abolishing kings), Work and Business (second week), Genealogy (patronymics and temple work), and Home Courses (meat substitutes). The file appears to be a continuation from a previous section, starting mid-sentence about temple work identification requirements.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14494,
+      "tier": 1,
+      "pdf_pages": [
+        740,
+        741,
+        742,
+        743,
+        744,
+        745,
+        746,
+        747,
+        748,
+        749,
+        750,
+        751,
+        752,
+        753,
+        754
+      ],
+      "api_usage": {
+        "input_tokens": 59557,
+        "output_tokens": 265,
+        "cost": 0.1826
+      }
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "volume": 18,
+  "month": "April",
+  "year": 1931,
+  "total_merged": 4,
+  "total_splits": 7,
+  "total_cost": 0.657,
+  "files": [
+    {
+      "source_file": "April_Vol18_02_Women_Organization_Work_Lyman.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Women in Organization Work",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Women in Organization Work By Amy Brown Lyman There has",
+          "end_boundary": "have helped to raise the standard of human life.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "WOMEN IN ORGANIZATION WORK"
+      ],
+      "notes": "This file contains a single complete article by Amy Brown Lyman about women's national organizations in the United States. The article discusses various women's organizations, their membership numbers, purposes, and activities. No splitting is needed as this is one cohesive article.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 16590,
+      "tier": 1,
+      "pdf_pages": [
+        221,
+        222,
+        223,
+        224,
+        225
+      ],
+      "api_usage": {
+        "input_tokens": 50730,
+        "output_tokens": 233,
+        "cost": 0.1557
+      }
+    },
+    {
+      "source_file": "April_Vol18_07_Pine_Valley_Flood_Spencer.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Pine Valley Flood",
+          "category": "Article",
+          "author": "Josephine Spencer",
+          "start_boundary": "The Pine Valley Flood By the Late Josephine Spencer",
+          "end_boundary": "All John Hickley had to do with it is to put Peggy's plan in pants.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE PINE VALLEY FLOOD",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single complete short story by Josephine Spencer. The story runs from the title through to the final paragraph ending with the quote about Peggy's plan. The file includes page numbers (209, 210, 211, etc.) and running headers that should be stripped.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 27205,
+      "tier": 1,
+      "pdf_pages": [
+        238,
+        239,
+        240
+      ],
+      "api_usage": {
+        "input_tokens": 50927,
+        "output_tokens": 255,
+        "cost": 0.1566
+      }
+    },
+    {
+      "source_file": "April_Vol18_09_Exit_Backyard_Modsen.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Contentment",
+          "category": "Poem",
+          "author": "Merling D. Clyde",
+          "start_boundary": "Contentment By Merling D. Clyde The far-away birds",
+          "end_boundary": "And the rainbow's end is Home.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Exit Back Yard, Enter Out-door Living Room",
+          "category": "Article",
+          "author": "Maud Chegwidden",
+          "start_boundary": "Exit Back Yard, Enter Out-door Living Room By",
+          "end_boundary": "which is most important.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "EXIT BACK YARD"
+      ],
+      "notes": "This file contains a short poem 'Contentment' followed by a longer illustrated gardening article 'Exit Back Yard, Enter Out-door Living Room'. The boundaries are clearly marked by title formatting and author bylines visible in the page images.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 10135,
+      "tier": 1,
+      "pdf_pages": [
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "api_usage": {
+        "input_tokens": 49753,
+        "output_tokens": 372,
+        "cost": 0.1548
+      }
+    },
+    {
+      "source_file": "April_Vol18_13_Guide_Lessons_Department.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "America now serving the God of this land? How?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Work and Business TEACHER'S Topic For JUNE",
+          "end_boundary": "By developing personality.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Social Service - Personality Study: Proper Use of Humor",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Social Service (Fourth Week in June PERSONALITY",
+          "end_boundary": "What are the evidences which would support your answer?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This file contains three lesson department sections: Theology and Testimony (Book of Mormon - Jaredite People), Work and Business (Our Responsibility to Ourselves), and Social Service (Proper Use of Humor). All are educational content for Relief Society classes.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 37985,
+      "tier": 1,
+      "pdf_pages": [
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265
+      ],
+      "api_usage": {
+        "input_tokens": 61222,
+        "output_tokens": 415,
+        "cost": 0.1899
+      }
+    }
+  ]
+}

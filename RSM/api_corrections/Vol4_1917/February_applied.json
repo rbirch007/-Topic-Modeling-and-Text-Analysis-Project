@@ -1,0 +1,37 @@
+{
+  "volume": 4,
+  "month": "February",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol4_02_Frontispiece_Frontispiece_Francis_Marion_Lyman_President_Heber_J._Grant.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "February_Vol4_06_Mothers_in_Israel_Mothers_in_Israel_Mary_A._S._Winters.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (495 chars removed)"
+    },
+    {
+      "file": "February_Vol4_07_Article_An_Incident_of_Faith.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol4_11a_Editorial_Editorial_The_Relief_Society_in_Its_Attitude_to_Dress_and_So.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (248 chars added)"
+    },
+    {
+      "file": "February_Vol4_11b_Guide_Lessons_Guide_Lessons_-_Bible_Lesson_Seeking_a_Wife_Rebecca.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3300 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "volume": 55,
+  "month": "March",
+  "year": 1968,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_03_05_SpFt_Knowledge_Cameron.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (147 chars removed)"
+    },
+    {
+      "file": "V55_03_13_Fict_A_Pepper.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 2% OCR coverage"
+    }
+  ]
+}

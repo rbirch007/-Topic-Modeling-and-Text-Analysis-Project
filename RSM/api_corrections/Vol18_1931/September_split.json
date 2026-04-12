@@ -1,0 +1,149 @@
+{
+  "volume": 18,
+  "month": "September",
+  "year": 1931,
+  "total_merged": 3,
+  "total_splits": 5,
+  "total_cost": 0.4454,
+  "files": [
+    {
+      "source_file": "September_Vol18_02_Article_Habit_Training_Infancy_Bennion.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "What Am I?",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "What Am I? I am a",
+          "end_boundary": "poisoning your young bodies by smoking cigarettes.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Habit Training in Infancy and Early Childhood",
+          "category": "Article",
+          "author": "Milton Bennion",
+          "start_boundary": "Habit Training in Infancy and Early",
+          "end_boundary": "should be treated accordingly.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "HABIT TRAINING"
+      ],
+      "notes": "The file contains two distinct articles. The first is 'What Am I?' which appears to be an anti-smoking piece that includes quotes from various authorities. The second is the main article 'Habit Training in Infancy and Early Childhood' by Milton Bennion. There are also advertisements and other magazine content mixed in, but these two are the main articles based on the CONTENTS listing.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 29092,
+      "tier": 1,
+      "pdf_pages": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567
+      ],
+      "api_usage": {
+        "input_tokens": 60714,
+        "output_tokens": 346,
+        "cost": 0.1873
+      }
+    },
+    {
+      "source_file": "September_Vol18_04_Article_Elizabeth_Snow_Ivins_Gates.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Elizabeth Snow Ivins",
+          "category": "Article",
+          "author": "Susa Young Gates",
+          "start_boundary": "ELIZABETH SNOW IVINS Sketches of Representative Women",
+          "end_boundary": "engraved upon her pliant and finely attuned mind and spirit.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Keeping Up With Sonny",
+          "category": "Article",
+          "author": "C. E. C.",
+          "start_boundary": "Keeping Up With Sonny By C. E. C.",
+          "end_boundary": "engraved upon her pliant and finely attuned mind and spirit.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "ELIZABETH SNOW IVINS",
+        "KEEPING UP"
+      ],
+      "notes": "The file appears to contain two complete articles based on the table of contents. However, the text seems to cut off abruptly and may be incomplete, as both articles appear to end with the same phrase about 'engraved upon her pliant and finely attuned mind and spirit' which suggests the second article may not be fully captured in this file.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11722,
+      "tier": 1,
+      "pdf_pages": [
+        578,
+        579,
+        580
+      ],
+      "api_usage": {
+        "input_tokens": 48598,
+        "output_tokens": 375,
+        "cost": 0.1514
+      }
+    },
+    {
+      "source_file": "September_Vol18_19_Article_Article16_Lesson_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony (First Week",
+          "end_boundary": "still what he calls 'buymanship.'",
+          "confidence": "high",
+          "end_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This is a single comprehensive lesson department containing multiple sections: Theology and Testimony (Book of Mormon study), Work and Business (teacher training topic), Literature (Norwegian literature), and Social Service (personality study on making friends). All sections are part of one unified lesson department article, not separate articles.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 40888,
+      "tier": 2,
+      "pdf_pages": [
+        609,
+        610,
+        611,
+        612,
+        613,
+        614,
+        615,
+        616,
+        617,
+        618,
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "api_usage": {
+        "input_tokens": 34402,
+        "output_tokens": 232,
+        "cost": 0.1067
+      }
+    }
+  ]
+}

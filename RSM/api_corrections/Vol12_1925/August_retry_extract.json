@@ -1,0 +1,100 @@
+{
+  "volume": 12,
+  "month": "August",
+  "year": 1925,
+  "mode": "retry_extract",
+  "total_failed": 3,
+  "total_cost": 0.0552,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Mother's Evening Prayer",
+      "order": "c",
+      "status": "parse_error",
+      "pdf_pages": [
+        447,
+        448,
+        449,
+        450,
+        451
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Tell Your Troubles to the Iceman",
+      "order": "d",
+      "status": "parse_error",
+      "pdf_pages": [
+        447,
+        448,
+        449,
+        450,
+        451
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Editorial—Home and Parenthood Recreation",
+      "order": "e",
+      "status": "parse_error",
+      "pdf_pages": [
+        447,
+        448,
+        449,
+        450,
+        451
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for October - Lesson III - Literature",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The PDF images show Guide Lessons for September, not October. The visible lessons are for September and include Lesson I (Theology and Testimony - The Abrahamic Dispensation Part II - Isaac) and Lesson II (Work and Business). There is also a Lesson III (Literature) about Eugene Field, but this is for September, not October as specified in the search criteria.",
+      "order": "c",
+      "pdf_pages": [
+        432,
+        433,
+        434,
+        435,
+        436
+      ],
+      "source_file": "August_Vol12_13_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "api_usage": {
+        "input_tokens": 8419,
+        "output_tokens": 157,
+        "cost": 0.0276
+      }
+    },
+    {
+      "title": "Guide Lessons for October - Lesson IV - Social Service",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (432-436) contain 'Notes from the Field', a poem 'The Sabbath Sun Serenely Falls', and 'Guide Lessons for September' (Lessons I and II covering Theology/Testimony and Work/Business topics). The October Guide Lessons, specifically Lesson IV on Social Service, are not present in these pages.",
+      "order": "d",
+      "pdf_pages": [
+        432,
+        433,
+        434,
+        435,
+        436
+      ],
+      "source_file": "August_Vol12_13_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "api_usage": {
+        "input_tokens": 8423,
+        "output_tokens": 156,
+        "cost": 0.0276
+      }
+    }
+  ]
+}

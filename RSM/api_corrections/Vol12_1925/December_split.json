@@ -1,0 +1,128 @@
+{
+  "volume": 12,
+  "month": "December",
+  "year": 1925,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.2895,
+  "files": [
+    {
+      "source_file": "December_Vol12_03_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Editor Abroad",
+          "category": "Article",
+          "author": "Alice L. Reynolds",
+          "start_boundary": "The Editor Abroad Palestine By Alice L.",
+          "end_boundary": "[ST. CATHERINE'S CLOISTER BY MOUNT SINAI]",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "If Ye Have Faith",
+          "category": "Article",
+          "author": "Claire Stewart Boyer",
+          "start_boundary": "\"If Ye Have Faith\" A Christmas Story,",
+          "end_boundary": "And on her face divine the light",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Relief Society Conference",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Relief Society Conference Mrs. Amy Brown Lyman,",
+          "end_boundary": "The conference was then adjourned.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "State Welfare Workers Meet",
+          "category": "Article",
+          "author": "Julia A. F. Lund",
+          "start_boundary": "State Welfare Workers Meet By Julia A.",
+          "end_boundary": "honoring every truth by use.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "RELIEF SOCIETY CONFERENCE"
+      ],
+      "notes": "File contains 4 distinct articles as listed in the table of contents. Clear boundaries between articles with title/author headers. Some running page headers appear throughout the text.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 11692,
+      "tier": 1,
+      "pdf_pages": [
+        711,
+        712,
+        713
+      ],
+      "api_usage": {
+        "input_tokens": 39892,
+        "output_tokens": 654,
+        "cost": 0.1295
+      }
+    },
+    {
+      "source_file": "December_Vol12_14_Article_Tennyson,_The_Boy_and_the_Match_Annie_Pike_Greenwood.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Tennyson, the Boy and the Match",
+          "category": "Article",
+          "author": "Annie Pike Greenwood",
+          "start_boundary": "Tennyson, the Boy and the Match This incident from",
+          "end_boundary": "darting from shrub to shrub and peering out admiring",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for February",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for February LESSON I Theology and Testimony",
+          "end_boundary": "examined in your community? The pre-school children?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains one article about Tennyson followed by the complete Guide Lessons for February section which includes 4 lessons (Theology, Work and Business, Literature on Mark Twain, and Social Service on Physical Problems of Childhood). The Guide Lessons section is a multi-lesson unit that should remain together as one file.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 26162,
+      "tier": 1,
+      "pdf_pages": [
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765
+      ],
+      "api_usage": {
+        "input_tokens": 51440,
+        "output_tokens": 378,
+        "cost": 0.16
+      }
+    }
+  ]
+}

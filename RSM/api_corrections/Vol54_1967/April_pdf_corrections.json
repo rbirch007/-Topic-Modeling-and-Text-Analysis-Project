@@ -1,0 +1,28 @@
+{
+  "volume": 54,
+  "month": "April",
+  "year": 1967,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V54_04_01_Fict_The_Chapter.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "Article is misclassified as fiction from April 1967 page 3, but content is actually non-fiction about Relief Society Memorial from January 1967 pages 15-18",
+      "action": "note",
+      "text": "Content should be reclassified as non-fiction article about Relief Society Centennial Memorial Bell Tower from January 1967 issue, pages 15-18",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V54_04_34_Poem_Going_Olsen.txt",
+      "issue_type": "bleed_start",
+      "description": "The GOING UNAWARE poem by Pearle M. Olsen is completely missing from the article file - it contains the Danish Grandmother poem instead",
+      "action": "note",
+      "text": "The article file does not contain the GOING UNAWARE poem at all. It appears to contain content from a different article (Danish Grandmother poem by Julene J. Cushing). The entire file content needs to be replaced with the correct GOING UNAWARE poem.",
+      "confidence": "high",
+      "page_verified": true
+    }
+  ]
+}

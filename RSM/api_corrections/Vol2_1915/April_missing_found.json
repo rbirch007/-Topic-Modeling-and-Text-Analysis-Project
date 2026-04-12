@@ -1,0 +1,38 @@
+{
+  "volume": 2,
+  "month": "April",
+  "year": 1915,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0225,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Clothing for Women Past Forty The Two Sarahs",
+      "printed_page": 180,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "The Two Sarahs",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 189-192, but the missing article is listed on page 180 in the table of contents. The images contain parts of other articles including 'Early Development of the Textile Art' by Rose H. Widtsoe and 'The Word of Wisdom' by Maud Baggarley, but do not contain the missing article about clothing for women past forty.",
+      "api_usage": {
+        "input_tokens": 6570,
+        "output_tokens": 187,
+        "cost": 0.0225
+      },
+      "pdf_pages": [
+        189,
+        190,
+        191,
+        192
+      ]
+    }
+  ]
+}

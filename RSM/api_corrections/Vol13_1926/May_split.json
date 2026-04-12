@@ -1,0 +1,170 @@
+{
+  "volume": 13,
+  "month": "May",
+  "year": 1926,
+  "total_merged": 3,
+  "total_splits": 6,
+  "total_cost": 0.4218,
+  "files": [
+    {
+      "source_file": "May_Vol13_12_Article_The_Soul's_Sincere_Desire_Lillith_Shell.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Soul's Sincere Desire",
+          "category": "Article",
+          "author": "Lillith Shell",
+          "start_boundary": "The Soul's Sincere Desire By Lillith Shell School was",
+          "end_boundary": "white birch was dedicated and planted with appropriate ceremonies.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE SOUL'S SINCERE DESIRE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single complete short story by Lillith Shell about an orphaned boy who seeks a mother figure. The story ends with the caption about planting the first 'Mothers' Tree' which appears to be related content but part of the same article section.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 8340,
+      "tier": 1,
+      "pdf_pages": [
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        279,
+        280
+      ],
+      "api_usage": {
+        "input_tokens": 49438,
+        "output_tokens": 256,
+        "cost": 0.1522
+      }
+    },
+    {
+      "source_file": "May_Vol13_15_Article_The_Triumph_of_Love_Sylvia.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Triumph of Love",
+          "category": "Article",
+          "author": "Sylvia",
+          "start_boundary": "The Triumph of Love By Sylvia The spacious College",
+          "end_boundary": "So, till the end when life's dim shadows fall,",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Garden Flowers for Decoration Day",
+          "category": "Article",
+          "author": "Philena Fletcher Homer",
+          "start_boundary": "Garden Flowers for Decoration Day By Philena Fletcher Homer,",
+          "end_boundary": "no excuse for our yards to be without them.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Intellectual Requirements of Mormonism",
+          "category": "Article",
+          "author": "Thomas L. Martin",
+          "start_boundary": "Intellectual Requirements of \"Mormonism\" Thomas L. Martin—Professor of",
+          "end_boundary": "most intellectually active people on earth. If we do",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE TRIUMPH OF LOVE",
+        "REQUIREMENTS OF MORMONISM"
+      ],
+      "notes": "The file contains three distinct articles. The first is a complete short story 'The Triumph of Love' by Sylvia. The second is about garden flowers for Decoration Day by Philena Fletcher Homer. The third appears to be cut off mid-sentence and discusses intellectual requirements of Mormonism by Thomas L. Martin. The visual boundaries are clear with title formatting and author bylines separating each article.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 21817,
+      "tier": 1,
+      "pdf_pages": [
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293
+      ],
+      "api_usage": {
+        "input_tokens": 46330,
+        "output_tokens": 483,
+        "cost": 0.1462
+      }
+    },
+    {
+      "source_file": "May_Vol13_18_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field By Amy Brown Lyman SUMMER",
+          "end_boundary": "Mrs. Minnie J. Davis and Mrs. Agnes E. Calder",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Relief Society Annual Report",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman, General Secretary",
+          "start_boundary": "Relief Society Annual Report For the Year 1925 Amy",
+          "end_boundary": "Total Disbursements and Bal- ances on Hand $448,597.85",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "The file contains two distinct sections: the main 'Notes from the Field' article by Amy Brown Lyman covering summer work programs and organizational changes, followed by the 'Relief Society Annual Report' which is a financial and statistical report for 1925. Both are administrative/organizational content that would fall under Notes_from_Field category.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 12632,
+      "tier": 1,
+      "pdf_pages": [
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304
+      ],
+      "api_usage": {
+        "input_tokens": 39237,
+        "output_tokens": 382,
+        "cost": 0.1234
+      }
+    }
+  ]
+}

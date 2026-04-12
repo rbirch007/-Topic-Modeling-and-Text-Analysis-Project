@@ -1,0 +1,87 @@
+{
+  "volume": 1,
+  "month": "May",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 6,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_May_02_Art_Editorial.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_May_02_Art_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (6 chars removed)"
+    },
+    {
+      "file": "V1_1914_May_03_Art_Genealogy.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_04_Art_HomeEthics.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_05_Art_HomeGarden.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4 chars removed)"
+    },
+    {
+      "file": "V1_1914_May_06_Art_Literature.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (27 chars added)"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_May_07_Art_Artand.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V1_1914_May_08_Art_Music.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (27 chars added)"
+    },
+    {
+      "file": "V1_1914_May_09_Art_MONEY.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_May_09_Art_MONEY.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_May_11_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    },
+    {
+      "file": "V1_1914_May_12_Art_SAMPLES.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content that should be in Misc file"
+    },
+    {
+      "file": "V1_1914_May_14_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: File contains advertisement content, not poetry"
+    }
+  ]
+}

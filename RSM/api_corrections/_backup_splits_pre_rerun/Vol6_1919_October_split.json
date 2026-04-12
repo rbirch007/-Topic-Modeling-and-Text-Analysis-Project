@@ -1,0 +1,306 @@
+{
+  "volume": 6,
+  "month": "October",
+  "year": 1919,
+  "total_merged": 6,
+  "total_splits": 18,
+  "total_cost": 0.7512,
+  "files": [
+    {
+      "source_file": "October_Vol6_02_Beyond_Arsareth_Nephi_Anderson.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Beyond Arsareth",
+          "category": "Article",
+          "author": "Nephi Anderson",
+          "start_boundary": "Beyond Arsareth Nephi Anderson ======================================================================",
+          "end_boundary": "and tell of things in the order of their happening. {To he continued.)",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "BEYOND ARSARETH"
+      ],
+      "notes": "This file contains a single article - the beginning of a serialized story 'Beyond Arsareth' by Nephi Anderson. The story includes an introduction by John Bringingham and the start of the narrative. This appears to be the first installment as indicated by '(To be continued.)' at the end.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 9817,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38012,
+        "output_tokens": 262,
+        "cost": 0.118
+      }
+    },
+    {
+      "source_file": "October_Vol6_04_A_Whiff_of_Ether_Lucy_May_Green.txt",
+      "num_articles_found": 7,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Whiff of Ether",
+          "category": "Article",
+          "author": "Lucy May Green",
+          "start_boundary": "A Whiff of Ether Lucy May Green",
+          "end_boundary": "Her dream was over.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Relief Society School of Obstetrics and Nursing, 1919-1920",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "RELIEF SOCIETY SCHOOL OF OBSTETRICS AND NURSING, 1919-1920.",
+          "end_boundary": "Salt Lake City, Utah.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Let There Be Light",
+          "category": "Article",
+          "author": "J. Lloyd Woodruff, M. D.",
+          "start_boundary": "Let There Be Light.. Lloyd Woodruff, M. D.",
+          "end_boundary": "the incidence of the disease.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "The Supply of Practical Nurses",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "The Supply of Practical Nurses (Note: We copy",
+          "end_boundary": "service to the sick public is the paramount aim?",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Influenza and the Coming Season",
+          "category": "Article",
+          "author": "Dr. A. Cyril Callister",
+          "start_boundary": "Influenza and the Coming Season. Dr. A Cyril Callister,",
+          "end_boundary": "the use of convalescent blood serum.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "To a Lark",
+          "category": "Poem",
+          "author": "Joseph Hunt Stanford",
+          "start_boundary": "To a Lark. Heard singing near support lines",
+          "end_boundary": "I'll try and scale the blue with you today.",
+          "confidence": "high"
+        },
+        {
+          "order": "g",
+          "title": "On the Watch Tower",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "ON THE WATCHTOWER. 605 The league of nations",
+          "end_boundary": "not in Mecca, but in Jerusalem.\"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A WHIFF OF ETHER",
+        "LET THERE BE LIGHT",
+        "ON THE WATCHTOWER"
+      ],
+      "notes": "This file contains multiple articles that were merged together. The content includes medical articles, a poem, nursing school information, and current events. Running headers with page numbers are embedded throughout the text.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found",
+        "Split 'f': start_boundary not found",
+        "Split 'f': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 21150,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40673,
+        "output_tokens": 841,
+        "cost": 0.1346
+      }
+    },
+    {
+      "source_file": "October_Vol6_05_Let_There_Be_Light_J._Lloyd_Woodruff,_M._D..txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Let There Be Light",
+          "category": "Article",
+          "author": "J. Lloyd Woodruff, M. D.",
+          "start_boundary": "Let There Be Light.. Lloyd Woodruff, M. D. When",
+          "end_boundary": "These are but instances of that which is occurring daily all over the world. The",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "The Supply of Practical Nurses",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Supply of Practical Nurses (Note: We copy this most",
+          "end_boundary": "service to the sick public is the paramount aim?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LET THERE BE LIGHT"
+      ],
+      "notes": "The file contains two complete articles. The first is 'Let There Be Light' by Dr. J. Lloyd Woodruff, which discusses the progress of medicine and the medical profession. The second is 'The Supply of Practical Nurses' which appears to be reprinted from The Journal of the American Medical Association and discusses issues with trained nursing. Both articles are complete and there are clear topic boundaries between them.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 16664,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39525,
+        "output_tokens": 392,
+        "cost": 0.1245
+      }
+    },
+    {
+      "source_file": "October_Vol6_14_The_Cigarette_Evil.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Cigarette Evil",
+          "category": "Article",
+          "author": "L. D. S. Social Advisory Committee",
+          "start_boundary": "The Cigarette Evil ====================================================================== Cigarette Evil. [Bulletin No. 1, Issued by the L. D. S.",
+          "end_boundary": "Emmeline B. Wells, President. Clarissa S. Williams, Amy Brown Lyman, General Julina L. Smith, Secretary. Counselors. THE",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE CIGARETTE EVIL",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article - 'The Cigarette Evil' - which is a bulletin issued by the L.D.S. Social Advisory Committee. The article includes an endorsement section at the end signed by Relief Society leadership. The file ends with 'THE' which appears to be the beginning of the next article's running header.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11232,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38091,
+        "output_tokens": 300,
+        "cost": 0.1188
+      }
+    },
+    {
+      "source_file": "October_Vol6_15_The_Official_Round_Table.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Official Round Table",
+          "category": "Notes_from_Field",
+          "author": "Mrs. Clarissa Smith Williams and Mrs. Amy Brown Lyman",
+          "start_boundary": "The Official Round Table ====================================================================== OFFICIAL ROUND TABLE. Conducted by",
+          "end_boundary": "the same success of her work in England that she always made of every position she has ever held. Mrs. Smith is at present a member of the General Board of the Young Ladies' Mutual Improvement Association.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Construction and Reconstruction in the Home",
+          "category": "Home_Science",
+          "author": "Janette A. Hyde and Lucile Y. McAllister",
+          "start_boundary": "Construction and Reconstruction in the Home. Conducted by Janette A. Hyde and Lucile Y. McAllister. THE DRESS FROM THE OLD SUIT.",
+          "end_boundary": "Mrs. Smith is at present a member of the General Board of the Young Ladies' Mutual Improvement Association.",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "THE OFFICIAL ROUND TABLE",
+        "CONSTRUCTION AND RECONSTRUCTION"
+      ],
+      "notes": "This file appears to contain primarily 'The Official Round Table' section which includes biographical information about Anna Howard Shaw, visit reports, and field notes from various stakes. There appears to be some content about 'Construction and Reconstruction in the Home' at the very end, but the boundaries are unclear due to the merged nature of the text. The file seems to end abruptly and may be incomplete.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 12352,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 38654,
+        "output_tokens": 466,
+        "cost": 0.123
+      }
+    },
+    {
+      "source_file": "October_Vol6_20_The_Peace_of_the_Morning_Maude_Baggarley.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Peace of the Morning",
+          "category": "Poem",
+          "author": "Maude Baggarley",
+          "start_boundary": "PEACE OF THE MORNING Maud Baggarley. Oh, if only",
+          "end_boundary": "And with heroes there depart!",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson I - Theology and Testimony - A Day of Redemption for the Lamanites",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "quoted from the Book of Mormon. LESSON II.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in",
+          "end_boundary": "November. LESSON III. Genealogy. Third Week in",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson III - Genealogy - Scandinavian Surnames",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy. Third Week in November. SCANDINAVIAN",
+          "end_boundary": "purchase them at once. 616 RELIEF SOCIETY",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Lesson IV - Home Courses - Thrift in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Courses. Fourth Week in November.",
+          "end_boundary": "What is thrift? Globe Optical Company SALT",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a poem followed by four lesson sections from the Guide Lessons. The poem is complete, followed by Lesson I (Theology), Lesson II (Work and Business - appears to be just a header), Lesson III (Genealogy), and Lesson IV (Home Courses). The file ends with advertisements that appear to be part of the magazine layout.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 21152,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40635,
+        "output_tokens": 695,
+        "cost": 0.1323
+      }
+    }
+  ]
+}

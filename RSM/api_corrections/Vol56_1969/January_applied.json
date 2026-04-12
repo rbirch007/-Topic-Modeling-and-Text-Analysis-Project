@@ -1,0 +1,112 @@
+{
+  "volume": 56,
+  "month": "January",
+  "year": 1969,
+  "timestamp": "20260313_235324",
+  "dry_run": false,
+  "applied": 19,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V56_01_01_Fict_Welcome_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (11857 chars)"
+    },
+    {
+      "file": "V56_01_02_SpFt_Joyous.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1616 chars)"
+    },
+    {
+      "file": "V56_01_03_SpFt_Our_Smith.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1917 chars removed)"
+    },
+    {
+      "file": "V56_01_04_SpFt_Obligations_Lee.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (64 chars removed)"
+    },
+    {
+      "file": "V56_01_05_SpFt_Mayola_Heywood.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2162 chars)"
+    },
+    {
+      "file": "V56_01_06_SpFt_Maurine_Elliott.txt",
+      "action": "append",
+      "result": "APPLIED append (138 chars added)"
+    },
+    {
+      "file": "V56_01_07_Poem_Advice_Blanchard.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V56_01_12_SpFt_Genealogical.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (5123 chars)"
+    },
+    {
+      "file": "V56_01_13_Poem_Snowbound_Cox.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (209 chars)"
+    },
+    {
+      "file": "V56_01_15_Fict_If_You_Trutton.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (950 chars removed)"
+    },
+    {
+      "file": "V56_01_17_Poem_Consider_Carter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (24 chars)"
+    },
+    {
+      "file": "V56_01_19_Poem_Scavengers_Rothe.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (25 chars)"
+    },
+    {
+      "file": "V56_01_20_GenFt_Bone_Wrathall.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1498 chars removed)"
+    },
+    {
+      "file": "V56_01_21_Poem_Wayfarer.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (23 chars)"
+    },
+    {
+      "file": "V56_01_22_GenFt_Calling_Watkins.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (45 chars)"
+    },
+    {
+      "file": "V56_01_25_Fict_Make_Parr.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (5370 chars removed)"
+    },
+    {
+      "file": "V56_01_29_GenFt_Spiritual_Doxey.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (338 chars)"
+    },
+    {
+      "file": "V56_01_30_GenFt_Visiting_Smith.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2911 chars)"
+    },
+    {
+      "file": "V56_01_31_GenFt_Homemaking_Taylor.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (263 chars)"
+    },
+    {
+      "file": "V56_01_32_GenFt_Social_Christensen.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (476 chars)"
+    }
+  ]
+}

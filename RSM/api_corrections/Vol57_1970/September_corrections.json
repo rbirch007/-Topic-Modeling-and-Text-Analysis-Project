@@ -1,0 +1,159 @@
+{
+  "volume": 57,
+  "month": "September",
+  "year": 1970,
+  "total_files_checked": 32,
+  "files_correct": [
+    "V57_09_02_Poem_Across_Bailey.txt",
+    "V57_09_05_Poem_Nativity_Loomis.txt",
+    "V57_09_06_GenFt_Helen_Society.txt",
+    "V57_09_07_GenFt_Notice_Subscribers.txt",
+    "V57_09_08_Poem_Return_Powell.txt",
+    "V57_09_10_GenFt_Womans_Cannon.txt",
+    "V57_09_11_GenFt_Editorial_Sharp.txt",
+    "V57_09_12_Fict_The_Lloyd.txt",
+    "V57_09_15_GenFt_Brooches_Watson.txt",
+    "V57_09_16_GenFt_A.txt",
+    "V57_09_17_GenFt_About_Robinson.txt",
+    "V57_09_18_GenFt_An_Baker.txt",
+    "V57_09_19_GenFt_A_Bring_Richins.txt",
+    "V57_09_22_GenFt_La_Fragonard.txt",
+    "V57_09_23_GenFt_Little_Whistler.txt",
+    "V57_09_24_GenFt_Notes_Activities.txt",
+    "V57_09_25_GenFt_Spiritual.txt",
+    "V57_09_26_GenFt_Visiting_Peacemake.txt",
+    "V57_09_27_Poem_Lament_Sumsion.txt",
+    "V57_09_28_GenFt_Homemaking_Self-Co.txt",
+    "V57_09_29_Poem_My_Jorgensen.txt",
+    "V57_09_30_GenFt_Social_World.txt",
+    "V57_09_31_GenFt_Cultural.txt",
+    "V57_09_32_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_09_01_Poem_Your_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem and additional unrelated text about father singing",
+      "action": "replace_content",
+      "text": "YOUR SUN IS YONDER Farewell, you robins... You larks... You bluebirds! Your sun is yonder, in far southern sky. Our sun is here.... We will wait your returning The magpies... The starlings... The sparrows. And |. 718 Alda Larson Brown",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_09_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information instead of From Near and Far content",
+      "action": "trim_start",
+      "text": "The Cover: Frontispiece: Art Layout: Illustrations: Transparency by Claire W. Noall Z Lithographed in Full Color by Deseret News Press _ Aspens on Mount Timpanogos Photograph by Hal Rumel Dick Scopes Mary Scopes",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_04_SpFt_Temple_Christianse.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence with '643 @ Toa Latter-day Saint'",
+      "action": "note",
+      "text": "Article appears to start mid-sentence, but this matches the OCR text exactly",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_09_09_Fict_And_a_Parr.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Woman's Sphere content at the end",
+      "action": "trim_end",
+      "text": "a. Ramona W. Cannon Senora Virginia de Velasquez",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_13_GenFt_Cookies_Wilson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Switzerland article",
+      "action": "trim_end",
+      "text": "665 Land of Peace Frances C. Yost AUSTRIA FRANCE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_14_SpFt_Seeing_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "Seeing SwitzerlandLand of Peace larly each morning at four",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_09_20_GenFt_Autumn_Dedekind.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Activities content at the end",
+      "action": "trim_end",
+      "text": "Red Rock Crossing, Oak Creek Canyon, Arizona Santa Fe Springs Second Ward",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_21_GenFt_Reflections_Depart.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains gardening content instead of Reflections article",
+      "action": "replace_content",
+      "text": "Reflections Leila Grace Bassford TRANSPARENCIES BY THE AUTHOR Poplars, Mount Timpanogos, Utah, in background. What beautiful pictures reflections make! Anyone can achieve a greater appreciation for form and color by observing their repeated signatures in nature and in art. The tiniest pool of rainwater may reflect trees and sky, just as the largest lake may. Even the raindrop may reflect a rainbow! The photographer is always charmed and beguiled by reflections. He delights in photographing a clear, unrippled lake, with the mountain that towers above it, the clouds drifting overhead, and the trees and flowers that fringe its borders, faithfully reproduced upon its smooth expanse. Even when a wandering breeze stitches neat shallow ruffles upon its surface, this does not conceal the color and sparkle in the reflection that he sees in the onginal, nor diminish his enthusiasm for making pictures Mount Moran and Jackson Lake, Wyoming. Pond in Millcreek Canyon, Utah of it. Around such places as a boat dock, or in a quiet section of a bay, with the gentle lapping of waves, it is a delight to photograph the reflections that are an integral part of the scene. The universe teems with natural wonders. Reflections are but a small fraction of them. Nevertheless, it can become enjoyable and exciting to watch for and detect these shimmering duplicate images, and the smaller and less obvious they are, the more exciting the game. And this simple pastime costs nothing, trains the eye, and enhances our delight in the infinitude of beauties nature has lavished upon our world.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are content bleeding between articles and a few files containing wrong content. The OCR quality is generally good with clear article boundaries visible.",
+  "validated_corrections": [
+    {
+      "file": "V57_09_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information instead of From Near and Far content",
+      "action": "trim_start",
+      "text": "The Cover: Frontispiece: Art Layout: Illustrations: Transparency by Claire W. Noall Z Lithographed in Full Color by Deseret News Press _ Aspens on Mount Timpanogos Photograph by Hal Rumel Dick Scopes Mary Scopes",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_09_Fict_And_a_Parr.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Woman's Sphere content at the end",
+      "action": "trim_end",
+      "text": "a. Ramona W. Cannon Senora Virginia de Velasquez",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_13_GenFt_Cookies_Wilson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains beginning of Switzerland article",
+      "action": "trim_end",
+      "text": "665 Land of Peace Frances C. Yost AUSTRIA FRANCE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_09_20_GenFt_Autumn_Dedekind.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Relief Society Activities content at the end",
+      "action": "trim_end",
+      "text": "Red Rock Crossing, Oak Creek Canyon, Arizona Santa Fe Springs Second Ward",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_09_14_SpFt_Seeing_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with end of previous article",
+      "action": "trim_start",
+      "text": "Seeing SwitzerlandLand of Peace larly each morning at four",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

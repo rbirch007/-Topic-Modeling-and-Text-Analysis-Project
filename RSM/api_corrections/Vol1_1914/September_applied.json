@@ -1,0 +1,42 @@
+{
+  "volume": 1,
+  "month": "September",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Sep_04_Art_LD.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Sep_10_Art_HomeGarden.txt",
+      "action": "append",
+      "result": "APPLIED append (53 chars added)"
+    },
+    {
+      "file": "V1_1914_Sep_11_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This appears to be a fragment that should be part of the Home Gardening article, not a separate poem"
+    },
+    {
+      "file": "V1_1914_Sep_13_Art_Relief.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V1_1914_Sep_15_Poem_TWOSTORES.txt",
+      "action": "note",
+      "result": "INFO: This file contains advertisement content that should be in the Misc file instead"
+    },
+    {
+      "file": "V1_1914_Sep_17_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This appears to be advertisement fragment that should be in Misc file"
+    }
+  ]
+}

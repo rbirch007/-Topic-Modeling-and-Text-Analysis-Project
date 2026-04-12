@@ -1,0 +1,89 @@
+{
+  "volume": 9,
+  "month": "December",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 4,
+  "total_cost": 0.0647,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 3,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+      "status": "not_found",
+      "current_chars": 37,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Christmas Giving' by Mary E. Connelly listed on page 647 in the table of contents is not visible in the provided PDF pages (650-653). The file appears to contain only a table of contents entry.",
+      "api_usage": {
+        "input_tokens": 6221,
+        "output_tokens": 153,
+        "cost": 0.021
+      },
+      "pdf_pages": [
+        650,
+        651,
+        652,
+        653
+      ]
+    },
+    {
+      "source_file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+      "status": "not_found",
+      "current_chars": 40,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'General Procession' by James H. Anderson listed on page 648 in the table of contents is not found in the provided PDF pages (637-640). The PDF pages show content from pages 540-543 of the Relief Society Magazine, which are much earlier in the issue than where this article should appear.",
+      "api_usage": {
+        "input_tokens": 6218,
+        "output_tokens": 171,
+        "cost": 0.0212
+      },
+      "pdf_pages": [
+        637,
+        638,
+        639,
+        640
+      ]
+    },
+    {
+      "source_file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt",
+      "status": "truncated",
+      "current_chars": 54,
+      "complete_text": "LESSON II.\n\nWork and Business\n\nSecond Week In March.\n\nLESSON III.\n\nLiterature\n\nThird Week in March.\n\nIn our last lesson we devoted considerable space to the compositions of Professor George Careless, and of such importance are his compositions, to Latter-day Saint hymnology, that we feel fully justified in devoting a second lesson to his work.",
+      "title": "LESSON II. Work and Business / LESSON III. Literature",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete text in the PDF. The file was truncated and actually contains two lesson headers plus the beginning of Lesson III content about Professor George Careless's compositions.",
+      "api_usage": {
+        "input_tokens": 6227,
+        "output_tokens": 253,
+        "cost": 0.0225
+      },
+      "pdf_pages": [
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  ]
+}

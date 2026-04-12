@@ -1,0 +1,42 @@
+{
+  "volume": 10,
+  "month": "February",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol10_01_Frontispiece_Susan_B._Anthony,_Lucretia_Mott,_and_Mrs._W._H._Felston_Fron.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "February_Vol10_02_Article_Pagan_Hearts_Laura_F._Crane.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (104 chars removed)"
+    },
+    {
+      "file": "February_Vol10_03_Article_From_the_Curtained_Alcove_to_the_United_States_Senate_Annie_.txt",
+      "action": "append",
+      "result": "APPLIED append (13549 chars added)"
+    },
+    {
+      "file": "February_Vol10_07_Article_Grower_Mary_E._Connelly.txt",
+      "action": "append",
+      "result": "APPLIED append (94 chars added)"
+    },
+    {
+      "file": "February_Vol10_09a_Notes_from_Field_Notes_From_the_Field.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "February_Vol10_13a_Notes_from_Field_Notes_From_the_Field.txt",
+      "action": "append",
+      "result": "APPLIED append (65 chars added)"
+    }
+  ]
+}

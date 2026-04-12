@@ -1,0 +1,27 @@
+{
+  "volume": 57,
+  "month": "October",
+  "year": 1970,
+  "timestamp": "20260314_102521",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_10_22_Poem_October_Oswald.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 2% OCR coverage"
+    },
+    {
+      "file": "V57_10_23_Poem_Late_Roberts.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - QC FAIL: only 0% OCR coverage"
+    },
+    {
+      "file": "V57_10_26_Poem_Hope_Cutler.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 1% OCR coverage"
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "volume": 17,
+  "month": "March",
+  "year": 1930,
+  "total": 26,
+  "ok": 20,
+  "flagged": 6,
+  "empty": 0,
+  "records": [
+    {
+      "file": "March_Vol17_00_BOARD.txt",
+      "body_len": 2001,
+      "article_words": 134,
+      "words_in_ocr": 133,
+      "pct_in_ocr": 0.9925,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "bot"
+      ]
+    },
+    {
+      "file": "March_Vol17_00_CONTENTS.txt",
+      "body_len": 863,
+      "article_words": 81,
+      "words_in_ocr": 81,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_00_Misc.txt",
+      "body_len": 5671,
+      "article_words": 318,
+      "words_in_ocr": 314,
+      "pct_in_ocr": 0.9874,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "cover",
+        "directory"
+      ]
+    },
+    {
+      "file": "March_Vol17_00_Misc_backup_premarker.txt",
+      "body_len": 5603,
+      "article_words": 311,
+      "words_in_ocr": 311,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_01_Article_Portrait_of_Clarissa_S_Williams.txt",
+      "body_len": 1321,
+      "article_words": 98,
+      "words_in_ocr": 98,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_02_Article_Our_Presidents_Visit.txt",
+      "body_len": 5510,
+      "article_words": 395,
+      "words_in_ocr": 395,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_04_Article_Portrait_of_Emmeline_B_Wells.txt",
+      "body_len": 746,
+      "article_words": 72,
+      "words_in_ocr": 72,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_05_Article_Slogans_for_Women.txt",
+      "body_len": 2730,
+      "article_words": 253,
+      "words_in_ocr": 253,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_06_Article_Portraits_of_Our_Presidents.txt",
+      "body_len": 1047,
+      "article_words": 95,
+      "words_in_ocr": 95,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_07_Article_The_New_York_Biennial.txt",
+      "body_len": 1186,
+      "article_words": 98,
+      "words_in_ocr": 98,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_08a_Article_Autumn.txt",
+      "body_len": 1328,
+      "article_words": 145,
+      "words_in_ocr": 145,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_08b_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_1_Theology_and_Testimony.txt",
+      "body_len": 12068,
+      "article_words": 674,
+      "words_in_ocr": 674,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3); MULTI_LESSON(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_08c_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_2_Work_and_Business_Teachers.txt",
+      "body_len": 4423,
+      "article_words": 350,
+      "words_in_ocr": 350,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_08d_Guide_Lessons_Guide_Lessons_for_May_-_Lessons_3_and_4.txt",
+      "body_len": 8405,
+      "article_words": 556,
+      "words_in_ocr": 556,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_09_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "body_len": 12793,
+      "article_words": 718,
+      "words_in_ocr": 718,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_10_Article_Out_of_My_Thorn_Helen_Kimball_Orgill.txt",
+      "body_len": 2050,
+      "article_words": 195,
+      "words_in_ocr": 195,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_11_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 7148,
+      "article_words": 415,
+      "words_in_ocr": 415,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_12a_Article_Some_Outstanding_Incidents_in_Joseph_Smiths_Life.txt",
+      "body_len": 14226,
+      "article_words": 859,
+      "words_in_ocr": 859,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(4))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_13_Article_Pictures_in_the_Fire_Julia_Collard_Baker.txt",
+      "body_len": 1348,
+      "article_words": 137,
+      "words_in_ocr": 137,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_15_Article_Ninety-Four_Years_Young_J_A_Washburn.txt",
+      "body_len": 2587,
+      "article_words": 219,
+      "words_in_ocr": 219,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_16_Frontispiece_Frontispiece_Portrait_of_Eliza_R_Snow.txt",
+      "body_len": 158,
+      "article_words": 19,
+      "words_in_ocr": 19,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(158)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_No3_03_Article_National_Council_of_Women.txt",
+      "body_len": 11043,
+      "article_words": 641,
+      "words_in_ocr": 641,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_No3_14_Article_Self-Reliance_Lais_V._Hales.txt",
+      "body_len": 8152,
+      "article_words": 545,
+      "words_in_ocr": 545,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_No3_16_Article_The_Quest_Bertha_A._Kleinman.txt",
+      "body_len": 4470,
+      "article_words": 333,
+      "words_in_ocr": 333,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_No3_17_Article_A_Widows_Protective_League_Elizabeth_Cannon_Porter.txt",
+      "body_len": 4114,
+      "article_words": 352,
+      "words_in_ocr": 352,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "March_Vol17_No3_18_Article_A_March_Reverie_Helen_Evans.txt",
+      "body_len": 5459,
+      "article_words": 418,
+      "words_in_ocr": 418,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol17_No3_March_1930.txt",
+    "ocr_chars": 119151,
+    "ocr_unique_words": 4177,
+    "contents_xref": {
+      "entries_in_contents": 23,
+      "matched": 19,
+      "match_details": [
+        {
+          "title": "Frontispiece Portrait of Eliza R. Snow",
+          "page": 112,
+          "file": "March_Vol17_16_Frontispiece_Frontispiece_Portrait_of_Eliza_R_Snow.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Portrait of Zina D. H. Young",
+          "page": 114,
+          "file": "March_Vol17_15_Article_Ninety-Four_Years_Young_J_A_Washburn.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Portrait of Emmeline B. Wells",
+          "page": 118,
+          "file": "March_Vol17_04_Article_Portrait_of_Emmeline_B_Wells.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Portrait of Clarissa S. Williams",
+          "page": 120,
+          "file": "March_Vol17_01_Article_Portrait_of_Clarissa_S_Williams.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Our President's Visit",
+          "page": 125,
+          "file": "March_Vol17_02_Article_Our_Presidents_Visit.txt",
+          "score": 0.5
+        },
+        {
+          "title": "National Council of Women",
+          "page": 129,
+          "file": "March_Vol17_No3_03_Article_National_Council_of_Women.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Slogans for Women",
+          "page": 130,
+          "file": "March_Vol17_05_Article_Slogans_for_Women.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Portraits of Our Presidents",
+          "page": 130,
+          "file": "March_Vol17_06_Article_Portraits_of_Our_Presidents.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The New York Biennial",
+          "page": 131,
+          "file": "March_Vol17_07_Article_The_New_York_Biennial.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for May",
+          "page": 145,
+          "file": "March_Vol17_08b_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_1_Theology_and_Testimony.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Out of My Thorn Helen Kimball Orgill",
+          "page": 146,
+          "file": "March_Vol17_10_Article_Out_of_My_Thorn_Helen_Kimball_Orgill.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 150,
+          "file": "March_Vol17_11_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Some Outstanding Incidents in Joseph Smith's Career Carter E. Grant",
+          "page": 155,
+          "file": "March_Vol17_12a_Article_Some_Outstanding_Incidents_in_Joseph_Smiths_Life.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Pictures in the Fire Julia Collard Baker",
+          "page": 156,
+          "file": "March_Vol17_13_Article_Pictures_in_the_Fire_Julia_Collard_Baker.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Self-Reliance Lais V. Hales",
+          "page": 159,
+          "file": "March_Vol17_No3_14_Article_Self-Reliance_Lais_V._Hales.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Quest Bertha A. Kleinman",
+          "page": 160,
+          "file": "March_Vol17_No3_16_Article_The_Quest_Bertha_A._Kleinman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Ninety-Four Years Young. J. A. Washburn",
+          "page": 162,
+          "file": "March_Vol17_15_Article_Ninety-Four_Years_Young_J_A_Washburn.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Widow's Protective League Elizabeth Cannon Porter",
+          "page": 163,
+          "file": "March_Vol17_No3_17_Article_A_Widows_Protective_League_Elizabeth_Cannon_Porter.txt",
+          "score": 0.83
+        },
+        {
+          "title": "A March Reverie Helen Evans",
+          "page": 164,
+          "file": "March_Vol17_No3_18_Article_A_March_Reverie_Helen_Evans.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Portrait of Bathsheba W. Smith",
+          "page": 116
+        },
+        {
+          "title": "Portrait of Louise Y. Robison",
+          "page": 122
+        },
+        {
+          "title": "Spring is Here Bertha M. Rosevear",
+          "page": 123
+        },
+        {
+          "title": "Autumn Josephine M. Duncan",
+          "page": 132
+        }
+      ],
+      "extra_files": [
+        "March_Vol17_08a_Article_Autumn.txt",
+        "March_Vol17_08c_Guide_Lessons_Guide_Lessons_for_May_-_Lesson_2_Work_and_Business_Teachers.txt",
+        "March_Vol17_08d_Guide_Lessons_Guide_Lessons_for_May_-_Lessons_3_and_4.txt",
+        "March_Vol17_09_Guide_Lessons_Guide_Lessons_for_May.txt"
+      ]
+    }
+  }
+}

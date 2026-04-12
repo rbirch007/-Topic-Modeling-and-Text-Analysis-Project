@@ -1,0 +1,40 @@
+{
+  "volume": 12,
+  "month": "April",
+  "year": 1925,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.024,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "April_Vol12_01_Frontispiece_Entrance_to_Tomb_of_the_Kings_Frontispiece.txt",
+      "status": "delete",
+      "current_chars": 150,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a fragment from a frontispiece image caption. The PDF pages shown (22-25) contain articles about Boston visit and Women's interests, but no frontispiece content. This is likely a misextracted caption fragment that should be deleted as it contains no substantial article content.",
+      "api_usage": {
+        "input_tokens": 7124,
+        "output_tokens": 174,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        25,
+        26,
+        27,
+        28
+      ]
+    }
+  ]
+}

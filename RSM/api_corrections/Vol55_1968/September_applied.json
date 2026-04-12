@@ -1,0 +1,82 @@
+{
+  "volume": 55,
+  "month": "September",
+  "year": 1968,
+  "timestamp": "20260313_235309",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V55_09_01_SpFt_McKay.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (12201 chars removed)"
+    },
+    {
+      "file": "V55_09_03_SpFt_Because_West.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V55_09_05_GenFt_Womans_Cannon.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (131 chars)"
+    },
+    {
+      "file": "V55_09_06_GenFt_Birthday.txt",
+      "action": "note",
+      "result": "INFO: File only contains Ribbon-Worthy Work content, missing Birthday Congratulations content"
+    },
+    {
+      "file": "V55_09_07_Fict_Suffer_Johnson.txt",
+      "action": "note",
+      "result": "INFO: File contains If Spring Be Late content instead of Suffer the Little Children"
+    },
+    {
+      "file": "V55_09_08_SpFt_The_Red_Olson.txt",
+      "action": "note",
+      "result": "INFO: File contains Dutch Treat content instead of Red Cross training content"
+    },
+    {
+      "file": "V55_09_09_GenFt_Ribbon-Worthy_McBr.txt",
+      "action": "note",
+      "result": "INFO: File contains Dutch Treat content instead of Ribbon-Worthy Work"
+    },
+    {
+      "file": "V55_09_10_GenFt_A_Noall.txt",
+      "action": "append",
+      "result": "APPLIED append (83 chars added)"
+    },
+    {
+      "file": "V55_09_14_GenFt_An_Time.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4624 chars removed)"
+    },
+    {
+      "file": "V55_09_20_GenFt_Editorial_Madsen.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V55_09_21_GenFt_Gift_Department.txt",
+      "action": "note",
+      "result": "INFO: File contains Spiritual Living lesson content instead of Gift Cookies content"
+    },
+    {
+      "file": "V55_09_23_GenFt_Spiritual_Doxey.txt",
+      "action": "note",
+      "result": "INFO: File contains duplicate content from following Visiting Teacher Message"
+    },
+    {
+      "file": "V55_09_28_Fict_If_Chapter.txt",
+      "action": "note",
+      "result": "INFO: File contains mixed content from multiple articles instead of If Spring Be Late Chapter 6"
+    }
+  ]
+}

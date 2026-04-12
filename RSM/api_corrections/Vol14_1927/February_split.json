@@ -1,0 +1,134 @@
+{
+  "volume": 14,
+  "month": "February",
+  "year": 1927,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.3771,
+  "files": [
+    {
+      "source_file": "February_Vol14_12_Article_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Amy Brown Lyman Los Angeles Stake On March",
+          "end_boundary": "March Magazine, 1925, page 115. -",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April 'LESSON I Theology and",
+          "end_boundary": "thinking of how \"",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "NOTES FROM THE FIELD",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains two distinct sections: 'Notes from the Field' by Amy Brown Lyman (which includes reports from various stakes and missions) and 'Guide Lessons for April' (which begins with Lesson I on Theology and Testimony). The Guide Lessons section appears to be cut off mid-sentence at the end of the file.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 16615,
+      "tier": 1,
+      "pdf_pages": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118
+      ],
+      "api_usage": {
+        "input_tokens": 62053,
+        "output_tokens": 354,
+        "cost": 0.1915
+      }
+    },
+    {
+      "source_file": "February_Vol14_13_Guide_Lessons_Guide_Lessons_for_April.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Women of the Messianic Dispensation (Continued) - Elizabeth",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR APRIL 'LESSON I Theology",
+          "end_boundary": "of most value to the women of today?;",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Teachers' Topic for April - Civic Pride - Planting and Gardening",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "continues until November. GUIDE LESSONS FOR APRIL",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - Paul Laurence Dunbar",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "97 LESSON III Literature (Third Week in",
+          "end_boundary": "have achieved something worth while. GUIDE LESSONS",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Emotional Problems of Childhood - Jane and Henrietta",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "FOR APRIL 103 LESSON IV Social Service",
+          "end_boundary": "What is meant by sublimation?  Plan Your",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains four distinct lesson sections for April, each with different subject areas: Theology/Testimony, Work/Business, Literature, and Social Service. Each lesson has its own questions and problems section at the end. The file ends with advertisements that should be included with the final lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 26589,
+      "tier": 1,
+      "pdf_pages": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "api_usage": {
+        "input_tokens": 58958,
+        "output_tokens": 581,
+        "cost": 0.1856
+      }
+    }
+  ]
+}

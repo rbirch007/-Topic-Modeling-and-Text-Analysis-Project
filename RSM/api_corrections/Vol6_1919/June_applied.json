@@ -1,0 +1,27 @@
+{
+  "volume": 6,
+  "month": "June",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "June_Vol6_02_In_Memory_of_the_Martyrdom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "June_Vol6_05_Rambling_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "June_Vol6_18_Editorial_Reconstruction.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

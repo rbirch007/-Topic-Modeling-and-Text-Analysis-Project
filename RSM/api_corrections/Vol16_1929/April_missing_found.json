@@ -1,0 +1,44 @@
+{
+  "volume": 16,
+  "month": "April",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0245,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "My Ideal Mrs. Elsie Parton",
+      "printed_page": 175,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Susan T. Jennings",
+      "printed_page": 230,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 209-212, but the article 'Susan T. Jennings' is listed on page 230 in the table of contents. The images do not contain page 230, so the article cannot be found in the provided materials.",
+      "api_usage": {
+        "input_tokens": 7462,
+        "output_tokens": 144,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    }
+  ]
+}

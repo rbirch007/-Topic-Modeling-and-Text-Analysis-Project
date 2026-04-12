@@ -1,0 +1,30 @@
+{
+  "volume": 12,
+  "month": "November",
+  "year": 1925,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 1,
+  "created": 1,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "b",
+      "title": "Diet for the School Child",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Endurance",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for January - Lesson II: Work and Business",
+      "new_file": "November_Vol12_16b_Guide_Lessons_Guide_Lessons_for_January_-_Lesson_II_Work_and_Business.txt",
+      "chars": 1141,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

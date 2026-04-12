@@ -1,0 +1,47 @@
+{
+  "volume": 6,
+  "month": "September",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "September_Vol6_01_General_Church_Offices_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "September_Vol6_03_Remarks_Made_at_R._S._Conference...Prest._Heber_J._Grant.txt",
+      "action": "append",
+      "result": "APPLIED append (2255 chars added)"
+    },
+    {
+      "file": "September_Vol6_04a_Article_Reminiscences_of_Margaret_Judd_Clawson.txt",
+      "action": "append",
+      "result": "APPLIED append (31 chars added)"
+    },
+    {
+      "file": "September_Vol6_07a_Article_Whats_the_Price.txt",
+      "action": "append",
+      "result": "APPLIED append (36 chars added)"
+    },
+    {
+      "file": "September_Vol6_08_To_My_Friend_Lucy_May_Green.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4 chars removed)"
+    },
+    {
+      "file": "September_Vol6_09_The_Library_of_the_Genealogical_Society.txt",
+      "action": "append",
+      "result": "APPLIED append (5767 chars added)"
+    },
+    {
+      "file": "September_Vol6_13_Dream_Pictures_Gen._D._A._Utter.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

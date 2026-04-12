@@ -1,0 +1,128 @@
+{
+  "volume": 15,
+  "month": "April",
+  "year": 1928,
+  "total_merged": 2,
+  "total_splits": 6,
+  "total_cost": 0.332,
+  "files": [
+    {
+      "source_file": "April_Vol15_03_Article_The_Christ_of_the_Book_of_Mormon_John_Henry_Evans.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The Abundant Harvest",
+          "category": "Article",
+          "author": "Mary Hale Woolsey",
+          "start_boundary": "the Christ. Don't you think so?",
+          "end_boundary": "far, far, even beyond the sunset.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Soil for Potted Plants",
+          "category": "Home_Science",
+          "author": "Dr. Thomas L. Martin",
+          "start_boundary": "Soil for Potted Plants By Dr. Thomas L. Martin",
+          "end_boundary": "should prove helpful to them.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE ABUNDANT HARVEST",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two complete articles. The first is a story titled 'The Abundant Harvest' by Mary Hale Woolsey that begins mid-sentence, suggesting it may be a continuation from a previous page. The second is a practical article about soil preparation for potted plants by Dr. Thomas L. Martin. There's also a short poem 'God's Garden' by Merling D. Clyde at the end of the soil article, but it appears to be part of that same article section rather than a separate piece.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 18868,
+      "tier": 1,
+      "pdf_pages": [
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "api_usage": {
+        "input_tokens": 54426,
+        "output_tokens": 399,
+        "cost": 0.1693
+      }
+    },
+    {
+      "source_file": "April_Vol15_17_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Dispensation of the Fulness of Times",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "We are GUIDE LESSONS FOR JUNE 223",
+          "end_boundary": "15. Discuss \"What is Life Without a Project?\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business - Music in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second Week",
+          "end_boundary": "lay the foundations of a cultivated musical taste.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - William Henry Drummond",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR JUNE 225 LESSON III",
+          "end_boundary": "that you have ever known?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - The Child-Study Course",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in",
+          "end_boundary": "PORTER WALTON CO.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JUNE"
+      ],
+      "notes": "This file contains four distinct lesson sections for June, each covering different subject areas: Theology/Testimony, Work/Business (Music), Literature (William Henry Drummond), and Social Service (Child Study). Each lesson has its own questions and problems section. The file ends with some advertisements that should be included with the final lesson.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 20010,
+      "tier": 1,
+      "pdf_pages": [
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264
+      ],
+      "api_usage": {
+        "input_tokens": 51450,
+        "output_tokens": 554,
+        "cost": 0.1627
+      }
+    }
+  ]
+}

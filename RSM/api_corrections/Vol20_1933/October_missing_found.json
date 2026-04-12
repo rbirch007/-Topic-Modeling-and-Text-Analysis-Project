@@ -1,0 +1,66 @@
+{
+  "volume": 20,
+  "month": "October",
+  "year": 1933,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0507,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Waterfall, Provo River Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (646-649) contain advertisements and the table of contents page, but do not include the frontispiece. A frontispiece is typically an illustration or photograph placed at the beginning of a publication, opposite the title page. The 'Waterfall, Provo River' would likely be a photographic image rather than text content, and would appear much earlier in the magazine than the pages provided.",
+      "api_usage": {
+        "input_tokens": 7553,
+        "output_tokens": 183,
+        "cost": 0.0254
+      },
+      "pdf_pages": [
+        646,
+        647,
+        648,
+        649
+      ]
+    },
+    {
+      "title": "Thrift Frank Evans",
+      "printed_page": 573,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Let's Go Places Mabel S. Harmer",
+      "printed_page": 601,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Mabel S. Harmer",
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (646, 647, 648, 649) but could not locate the article 'Let's Go Places' by Mabel S. Harmer that should appear on page 601. The provided images appear to be advertisements and table of contents pages, not the actual article content pages.",
+      "api_usage": {
+        "input_tokens": 7555,
+        "output_tokens": 174,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        646,
+        647,
+        648,
+        649
+      ]
+    }
+  ]
+}

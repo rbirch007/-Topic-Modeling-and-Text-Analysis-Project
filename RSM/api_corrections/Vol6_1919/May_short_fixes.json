@@ -1,0 +1,62 @@
+{
+  "volume": 6,
+  "month": "May",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0434,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "May_Vol6_14_On_the_Watch_Tower_James_H._Anderson.txt",
+      "status": "not_found",
+      "current_chars": 160,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'On the Watch Tower' by James H. Anderson is listed in the table of contents on page 297, but the provided PDF pages (6-9) do not contain this article. The pages shown are from an 'In Memoriam' section about President Joseph F. Smith from January 1919, not May 1919 content.",
+      "api_usage": {
+        "input_tokens": 6406,
+        "output_tokens": 177,
+        "cost": 0.0219
+      },
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "source_file": "May_Vol6_15c_Guide_Lessons_Lesson_II_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 151,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only a header fragment. The PDF shows this is just a lesson title from page 117 that appears in a table of contents style listing, not a standalone article. The actual lesson content is not present in the provided PDF pages.",
+      "api_usage": {
+        "input_tokens": 6408,
+        "output_tokens": 152,
+        "cost": 0.0215
+      },
+      "pdf_pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "volume": 8,
+  "month": "January",
+  "year": 1921,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0441,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "January_Vol8_02_Article_A_New_Year's_Prayer_for.txt",
+      "status": "truncated",
+      "current_chars": 37,
+      "complete_text": "A NEW YEAR'S PRAYER FOR 1921\n\nL. Lula Greene Richards\n\nFather who art in Heaven,\n    Hallowed be Thy name!\nAs Jesus taught the humble\n    Who to His presence came,\nJoseph Thy modern Prophet\n    Hath taught Thy Saints to pray,\nAnd thus we would approach Thee\n    On this great New Year's day.\n\nWe thank Thee that Thy Kingdom\n    Hath come on earth again,\nWith Prophets and Apostles,\n    Devout and holy men.\nCome Jesus, Heaven's Kingdom\n    In light and power display,\nBring Thou with all its glory\n    A New Eternal Day!",
+      "title": "A NEW YEAR'S PRAYER FOR 1921",
+      "category": "Poem",
+      "author": "L. Lula Greene Richards",
+      "confidence": "high",
+      "notes": "Found complete poem on page 4 of PDF. The file was severely truncated, containing only a fragment that appears to be from a different context.",
+      "api_usage": {
+        "input_tokens": 6073,
+        "output_tokens": 334,
+        "cost": 0.0232
+      },
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source_file": "January_Vol8_11b_Guide_Lessons_Guide_Lessons_for_March_b.txt",
+      "status": "delete",
+      "current_chars": 96,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only lesson headers/titles that appear to be fragments from a table of contents or section dividers. The actual Guide Lessons for March content is not present in the provided PDF pages, which only show February lessons and anti-tobacco content. This appears to be a header artifact with no substantive article content.",
+      "api_usage": {
+        "input_tokens": 6106,
+        "output_tokens": 171,
+        "cost": 0.0209
+      },
+      "pdf_pages": [
+        45,
+        46,
+        47,
+        48
+      ]
+    }
+  ]
+}

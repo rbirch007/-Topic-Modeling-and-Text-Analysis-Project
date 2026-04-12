@@ -1,0 +1,4564 @@
+{
+  "volume": 9,
+  "year": 1922,
+  "generated_at": "2026-03-15T18:45:37.912132",
+  "summary": {
+    "total_files": 242,
+    "article_files": 205,
+    "special_files": 37,
+    "months_processed": 12,
+    "months_available": 12,
+    "ok": 230,
+    "flagged": 12,
+    "empty": 0,
+    "by_remediation": {
+      "manual_review": 10,
+      "re_extract": 1,
+      "api_fix": 1
+    },
+    "by_flag_type": {
+      "SHORT": 10,
+      "MERGED": 1,
+      "LOW_OCR_MATCH": 1
+    }
+  },
+  "months": {
+    "January": {
+      "total": 24,
+      "articles": 21,
+      "special": 3,
+      "ok": 23,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol9_No1_January_1922.txt",
+      "ocr_chars": 138921,
+      "contents_xref": {
+        "entries_in_contents": 18,
+        "matched": 18,
+        "match_details": [
+          {
+            "title": "Presiding Patriarchs Frontispiece",
+            "page": null,
+            "file": "January_Vol9_03_Frontispiece_Presiding_Patriarchs_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Greeting General Presidency",
+            "page": 1,
+            "file": "January_Vol9_01_Article_Greeting_General_Presidency.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Presiding Patriarchs of the Church Susa Young Gates",
+            "page": 3,
+            "file": "January_Vol9_04_Article_Presiding_Patriarchs_of_the_Church_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Reminiscences of the Grand-daughter of Hyrum Smith Nellie Story Bean",
+            "page": 8,
+            "file": "January_Vol9_02_Article_Reminiscences_of_the_Grand-daughter_of_Hyrum_Smith_Nellie_St.txt",
+            "score": 0.75
+          },
+          {
+            "title": "Bubbles and Troubles Ruth Moench Bell",
+            "page": 11,
+            "file": "January_Vol9_05_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Disarmament Conference Delegations",
+            "page": 18,
+            "file": "January_Vol9_06_Article_Disarmament_Conference_Delegations.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Book Notices",
+            "page": 22,
+            "file": "January_Vol9_07_Book_Notices_Book_Notices.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy B. Lyman",
+            "page": 23,
+            "file": "January_Vol9_08_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Conventions and Conferences",
+            "page": 31,
+            "file": "January_Vol9_09_Conventions_Conventions_and_Conferences.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Reforming Mother",
+            "page": 32,
+            "file": "January_Vol9_10_Article_Reforming_Mother.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Vocational Guidance Dr. John T. Miller",
+            "page": 35,
+            "file": "January_Vol9_11_Article_Vocational_Guidance_Dr._John_T._Miller.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Responsibility of Parents in Teaching the Gospel to their Children Lucy Wright Snow",
+            "page": 38,
+            "file": "January_Vol9_12_Article_Responsibility_of_Parents_in_Teaching_the_Gospel_to_their_Ch.txt",
+            "score": 0.56
+          },
+          {
+            "title": "The Art of Cookery in the Hotel Utah",
+            "page": 41,
+            "file": "January_Vol9_13_Article_The_Art_of_Cookery_in_the_Hotel_Utah.txt",
+            "score": 1.0
+          },
+          {
+            "title": "World Happenings James H. Anderson",
+            "page": 44,
+            "file": "January_Vol9_14_Article_World_Happenings_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: How Do You Do, New Year?",
+            "page": 48,
+            "file": "January_Vol9_15_Editorial_Editorial_How_Do_You_Do,_New_Year.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Week's Study in the Brigham Young University",
+            "page": 49,
+            "file": "January_Vol9_16_Article_Week's_Study_in_the_Brigham_Young_University.txt",
+            "score": 1.0
+          },
+          {
+            "title": "To Stake Teacher-Training Supervisors",
+            "page": 51,
+            "file": "January_Vol9_17_Article_To_Stake_Teacher-Training_Supervisors.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 52,
+            "file": "January_Vol9_18a_Guide_Lessons_LESSON_1_Theology_and_Testimony_-_MEMORABLE_PRAYERS.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "January_Vol9_18b_Guide_Lessons_LESSON_II_Work_and_Business.txt",
+          "January_Vol9_18c_Guide_Lessons_LESSON_III_Literature_-_George_Careless_Compositions.txt",
+          "January_Vol9_18d_Guide_Lessons_LESSON_IV_Social_Service_-_PHYSICAL_EFFICIENCY_AND_THE_HOME.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "January_Vol9_00_BOARD.txt",
+          "body_len": 1473,
+          "article_words": 132,
+          "words_in_ocr": 132,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_00_CONTENTS.txt",
+          "body_len": 754,
+          "article_words": 78,
+          "words_in_ocr": 78,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_01_Article_Greeting_General_Presidency.txt",
+          "body_len": 2196,
+          "article_words": 160,
+          "words_in_ocr": 160,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_02_Article_Reminiscences_of_the_Grand-daughter_of_Hyrum_Smith_Nellie_St.txt",
+          "body_len": 3495,
+          "article_words": 254,
+          "words_in_ocr": 254,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_03_Frontispiece_Presiding_Patriarchs_Frontispiece.txt",
+          "body_len": 200,
+          "article_words": 11,
+          "words_in_ocr": 11,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_04_Article_Presiding_Patriarchs_of_the_Church_Susa_Young_Gates.txt",
+          "body_len": 18779,
+          "article_words": 947,
+          "words_in_ocr": 947,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_05_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+          "body_len": 15718,
+          "article_words": 884,
+          "words_in_ocr": 884,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_06_Article_Disarmament_Conference_Delegations.txt",
+          "body_len": 8836,
+          "article_words": 603,
+          "words_in_ocr": 603,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_07_Book_Notices_Book_Notices.txt",
+          "body_len": 1079,
+          "article_words": 110,
+          "words_in_ocr": 110,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_08_Notes_from_Field_Notes_from_the_Field_Amy_B._Lyman.txt",
+          "body_len": 17015,
+          "article_words": 929,
+          "words_in_ocr": 929,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_09_Conventions_Conventions_and_Conferences.txt",
+          "body_len": 2880,
+          "article_words": 144,
+          "words_in_ocr": 144,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_10_Article_Reforming_Mother.txt",
+          "body_len": 6992,
+          "article_words": 445,
+          "words_in_ocr": 445,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_11_Article_Vocational_Guidance_Dr._John_T._Miller.txt",
+          "body_len": 7361,
+          "article_words": 441,
+          "words_in_ocr": 441,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_12_Article_Responsibility_of_Parents_in_Teaching_the_Gospel_to_their_Ch.txt",
+          "body_len": 7125,
+          "article_words": 474,
+          "words_in_ocr": 474,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_13_Article_The_Art_of_Cookery_in_the_Hotel_Utah.txt",
+          "body_len": 7068,
+          "article_words": 482,
+          "words_in_ocr": 482,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_14_Article_World_Happenings_James_H._Anderson.txt",
+          "body_len": 7048,
+          "article_words": 518,
+          "words_in_ocr": 518,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_15_Editorial_Editorial_How_Do_You_Do,_New_Year.txt",
+          "body_len": 4451,
+          "article_words": 352,
+          "words_in_ocr": 352,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_16_Article_Week's_Study_in_the_Brigham_Young_University.txt",
+          "body_len": 1866,
+          "article_words": 133,
+          "words_in_ocr": 133,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_17_Article_To_Stake_Teacher-Training_Supervisors.txt",
+          "body_len": 3146,
+          "article_words": 209,
+          "words_in_ocr": 209,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_18a_Guide_Lessons_LESSON_1_Theology_and_Testimony_-_MEMORABLE_PRAYERS.txt",
+          "body_len": 5823,
+          "article_words": 345,
+          "words_in_ocr": 345,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_18b_Guide_Lessons_LESSON_II_Work_and_Business.txt",
+          "body_len": 53,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(53)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_18c_Guide_Lessons_LESSON_III_Literature_-_George_Careless_Compositions.txt",
+          "body_len": 5437,
+          "article_words": 343,
+          "words_in_ocr": 343,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_18d_Guide_Lessons_LESSON_IV_Social_Service_-_PHYSICAL_EFFICIENCY_AND_THE_HOME.txt",
+          "body_len": 5376,
+          "article_words": 365,
+          "words_in_ocr": 365,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "January_Vol9_Misc_front_matter.txt",
+          "body_len": 3386,
+          "article_words": 233,
+          "words_in_ocr": 233,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "February": {
+      "total": 24,
+      "articles": 21,
+      "special": 3,
+      "ok": 21,
+      "flagged": 3,
+      "empty": 0,
+      "ocr_file": "Vol9_No2_February_1922.txt",
+      "ocr_chars": 135859,
+      "contents_xref": {
+        "entries_in_contents": 17,
+        "matched": 17,
+        "match_details": [
+          {
+            "title": "President Charles W. Penrose Frontispiece",
+            "page": null,
+            "file": "February_Vol9_02_Frontispiece_President_Charles_W._Penrose_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Aunt Em's Birthday Ruth May Fox",
+            "page": 61,
+            "file": "February_Vol9_01_Article_Aunt_Em's_Birthday_Ruth_May_Fox.txt",
+            "score": 1.0
+          },
+          {
+            "title": "President Charles W. Penrose Susa Young Gates",
+            "page": 63,
+            "file": "February_Vol9_03_Article_President_Charles_W._Penrose_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Views of Jerusalem Charles W. Penrose",
+            "page": 69,
+            "file": "February_Vol9_04_Article_Views_of_Jerusalem_Charles_W._Penrose.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Who is my Loved One? Kate Thomas",
+            "page": 72,
+            "file": "February_Vol9_05_Article_Who_is_my_Loved_One_Kate_Thomas.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Gambling for the Glory of God Milton Bennion",
+            "page": 73,
+            "file": "February_Vol9_06_Article_Gambling_for_the_Glory_of_God_Milton_Bennion.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Maternity Bill Passed",
+            "page": 74,
+            "file": "February_Vol9_07_Article_Maternity_Bill_Passed.txt",
+            "score": 1.0
+          },
+          {
+            "title": "William Fowler",
+            "page": 75,
+            "file": "February_Vol9_08_Article_William_Fowler.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Prayer of Gratitude Matilda K. Galloway",
+            "page": 76,
+            "file": "February_Vol9_09_Article_A_Prayer_of_Gratitude_Matilda_K._Galloway.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Bubbles and Troubles Ruth Moench Bell",
+            "page": 77,
+            "file": "February_Vol9_10_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Tate Family Margueritte Cregar Lund",
+            "page": 84,
+            "file": "February_Vol9_11_Article_The_Tate_Family_Margueritte_Cregar_Lund.txt",
+            "score": 1.0
+          },
+          {
+            "title": "World's Destiny in Hands of U. S.",
+            "page": 87,
+            "file": "February_Vol9_12_Article_World's_Destiny_in_Hands_of_U._S..txt",
+            "score": 1.0
+          },
+          {
+            "title": "Suggestive Program Lucy May Green",
+            "page": 90,
+            "file": "February_Vol9_13_Article_Suggestive_Program_Lucy_May_Green.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 95,
+            "file": "February_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 101,
+            "file": "February_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Jealousy",
+            "page": 106,
+            "file": "February_Vol9_16_Editorial_Editorial_Jealousy.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons",
+            "page": 109,
+            "file": "February_Vol9_17a_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_I_-_Theology_and_Testimony.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "February_Vol9_17b_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_II_-_Work_and_Business.txt",
+          "February_Vol9_17c_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_III_-_Literature.txt",
+          "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_a_a.txt",
+          "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_b.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "February_Vol9_00_BOARD.txt",
+          "body_len": 599,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_00_CONTENTS.txt",
+          "body_len": 655,
+          "article_words": 69,
+          "words_in_ocr": 69,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_01_Article_Aunt_Em's_Birthday_Ruth_May_Fox.txt",
+          "body_len": 876,
+          "article_words": 101,
+          "words_in_ocr": 101,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_02_Frontispiece_President_Charles_W._Penrose_Frontispiece.txt",
+          "body_len": 102,
+          "article_words": 11,
+          "words_in_ocr": 11,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(102)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_03_Article_President_Charles_W._Penrose_Susa_Young_Gates.txt",
+          "body_len": 16744,
+          "article_words": 898,
+          "words_in_ocr": 898,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_04_Article_Views_of_Jerusalem_Charles_W._Penrose.txt",
+          "body_len": 7891,
+          "article_words": 599,
+          "words_in_ocr": 599,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_05_Article_Who_is_my_Loved_One_Kate_Thomas.txt",
+          "body_len": 1096,
+          "article_words": 72,
+          "words_in_ocr": 72,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_06_Article_Gambling_for_the_Glory_of_God_Milton_Bennion.txt",
+          "body_len": 2761,
+          "article_words": 220,
+          "words_in_ocr": 220,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_07_Article_Maternity_Bill_Passed.txt",
+          "body_len": 2168,
+          "article_words": 162,
+          "words_in_ocr": 162,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_08_Article_William_Fowler.txt",
+          "body_len": 3935,
+          "article_words": 297,
+          "words_in_ocr": 297,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_09_Article_A_Prayer_of_Gratitude_Matilda_K._Galloway.txt",
+          "body_len": 398,
+          "article_words": 37,
+          "words_in_ocr": 37,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_10_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+          "body_len": 16625,
+          "article_words": 893,
+          "words_in_ocr": 893,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_11_Article_The_Tate_Family_Margueritte_Cregar_Lund.txt",
+          "body_len": 5132,
+          "article_words": 301,
+          "words_in_ocr": 301,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_12_Article_World's_Destiny_in_Hands_of_U._S..txt",
+          "body_len": 6788,
+          "article_words": 503,
+          "words_in_ocr": 503,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_13_Article_Suggestive_Program_Lucy_May_Green.txt",
+          "body_len": 13497,
+          "article_words": 812,
+          "words_in_ocr": 812,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 8873,
+          "article_words": 553,
+          "words_in_ocr": 553,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 10718,
+          "article_words": 788,
+          "words_in_ocr": 788,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_16_Editorial_Editorial_Jealousy.txt",
+          "body_len": 4966,
+          "article_words": 376,
+          "words_in_ocr": 376,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_17a_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_I_-_Theology_and_Testimony.txt",
+          "body_len": 8013,
+          "article_words": 485,
+          "words_in_ocr": 485,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_17b_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_II_-_Work_and_Business.txt",
+          "body_len": 345,
+          "article_words": 33,
+          "words_in_ocr": 30,
+          "pct_in_ocr": 0.9091,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "careless",
+            "compositions",
+            "devoting"
+          ]
+        },
+        {
+          "file": "February_Vol9_17c_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_III_-_Literature.txt",
+          "body_len": 6531,
+          "article_words": 449,
+          "words_in_ocr": 449,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_a_a.txt",
+          "body_len": 8033,
+          "article_words": 491,
+          "words_in_ocr": 491,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "MERGED(MULTI_LESSON(3))"
+          ],
+          "is_special": false,
+          "remediation": "re_extract",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service_d_d_d_b.txt",
+          "body_len": 199,
+          "article_words": 14,
+          "words_in_ocr": 14,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(199)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "February_Vol9_Misc_front_matter.txt",
+          "body_len": 3511,
+          "article_words": 248,
+          "words_in_ocr": 248,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "March": {
+      "total": 21,
+      "articles": 18,
+      "special": 3,
+      "ok": 21,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No3_March_1822.txt",
+      "ocr_chars": 136753,
+      "contents_xref": {
+        "entries_in_contents": 16,
+        "matched": 16,
+        "match_details": [
+          {
+            "title": "Officers of First Relief Society in Denmark Frontispiece",
+            "page": null,
+            "file": "March_Vol9_03_Frontispiece_Officers_of_First_Relief_Society_in_Denmark_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Questions Answered Vera Lee Kearl",
+            "page": 119,
+            "file": "March_Vol9_01_Article_The_Questions_Answered_Vera_Lee_Kearl.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society Beginnings in Foreign Lands",
+            "page": 121,
+            "file": "March_Vol9_04_Article_Relief_Society_Beginnings_in_Foreign_Lands.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Loan Kate B. Curtis",
+            "page": 126,
+            "file": "March_Vol9_05_Article_A_Loan_Kate_B._Curtis.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Alexander Neibaur Susa Young Gates",
+            "page": 132,
+            "file": "March_Vol9_06_Article_Alexander_Neibaur_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Mother's Plea Louise Gulbransen",
+            "page": 142,
+            "file": "March_Vol9_07_Article_A_Mother's_Plea_Louise_Gulbransen.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Bubbles and Troubles Ruth Moench Bell",
+            "page": 143,
+            "file": "March_Vol9_08_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Uncommon Honesty Milton Bennion",
+            "page": 149,
+            "file": "March_Vol9_09_Article_Uncommon_Honesty_Milton_Bennion.txt",
+            "score": 1.0
+          },
+          {
+            "title": "I Am Going Back to Father Marie Jensen",
+            "page": 150,
+            "file": "March_Vol9_10_Article_I_Am_Going_Back_to_Father_Marie_Jensen.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Hotel Utah Food Combinations Louis J. Theu",
+            "page": 151,
+            "file": "March_Vol9_11_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Women and the Disarmament Conference Nancy A. Leatherwood",
+            "page": 152,
+            "file": "March_Vol9_12_Article_Women_and_the_Disarmament_Conference_Nancy_A._Leatherwood.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Sunshine on the Peak Nina B. McKean",
+            "page": 154,
+            "file": "March_Vol9_13_Article_Sunshine_on_the_Peak_Nina_B._McKean.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 155,
+            "file": "March_Vol9_14_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 160,
+            "file": "March_Vol9_15_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Prayer",
+            "page": 165,
+            "file": "March_Vol9_02_Editorial_Editorial_Prayer.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for May",
+            "page": 167,
+            "file": "March_Vol9_16a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Forgiveness.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "March_Vol9_16c_Guide_Lessons_Lesson_III_-_Literature_-_Hymns_of_Alexander_Neibaur.txt",
+          "March_Vol9_16d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Intellectual_Leadership_in_the.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "March_Vol9_00_BOARD.txt",
+          "body_len": 626,
+          "article_words": 67,
+          "words_in_ocr": 67,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_00_CONTENTS.txt",
+          "body_len": 697,
+          "article_words": 75,
+          "words_in_ocr": 75,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_01_Article_The_Questions_Answered_Vera_Lee_Kearl.txt",
+          "body_len": 731,
+          "article_words": 77,
+          "words_in_ocr": 77,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_02_Editorial_Editorial_Prayer.txt",
+          "body_len": 1506,
+          "article_words": 141,
+          "words_in_ocr": 141,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_03_Frontispiece_Officers_of_First_Relief_Society_in_Denmark_Frontispiece.txt",
+          "body_len": 285,
+          "article_words": 30,
+          "words_in_ocr": 30,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_04_Article_Relief_Society_Beginnings_in_Foreign_Lands.txt",
+          "body_len": 12351,
+          "article_words": 572,
+          "words_in_ocr": 572,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_05_Article_A_Loan_Kate_B._Curtis.txt",
+          "body_len": 13323,
+          "article_words": 795,
+          "words_in_ocr": 795,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_06_Article_Alexander_Neibaur_Susa_Young_Gates.txt",
+          "body_len": 25545,
+          "article_words": 1325,
+          "words_in_ocr": 1325,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_07_Article_A_Mother's_Plea_Louise_Gulbransen.txt",
+          "body_len": 1605,
+          "article_words": 162,
+          "words_in_ocr": 162,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_08_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+          "body_len": 13011,
+          "article_words": 788,
+          "words_in_ocr": 788,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_09_Article_Uncommon_Honesty_Milton_Bennion.txt",
+          "body_len": 3242,
+          "article_words": 262,
+          "words_in_ocr": 262,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_10_Article_I_Am_Going_Back_to_Father_Marie_Jensen.txt",
+          "body_len": 925,
+          "article_words": 93,
+          "words_in_ocr": 93,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_11_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+          "body_len": 2094,
+          "article_words": 167,
+          "words_in_ocr": 167,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_12_Article_Women_and_the_Disarmament_Conference_Nancy_A._Leatherwood.txt",
+          "body_len": 5950,
+          "article_words": 418,
+          "words_in_ocr": 418,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_13_Article_Sunshine_on_the_Peak_Nina_B._McKean.txt",
+          "body_len": 627,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_14_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 9023,
+          "article_words": 658,
+          "words_in_ocr": 658,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_15_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 16602,
+          "article_words": 902,
+          "words_in_ocr": 902,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_16a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_Forgiveness.txt",
+          "body_len": 7602,
+          "article_words": 522,
+          "words_in_ocr": 522,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_16c_Guide_Lessons_Lesson_III_-_Literature_-_Hymns_of_Alexander_Neibaur.txt",
+          "body_len": 5712,
+          "article_words": 384,
+          "words_in_ocr": 384,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_16d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Intellectual_Leadership_in_the.txt",
+          "body_len": 6733,
+          "article_words": 409,
+          "words_in_ocr": 409,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "March_Vol9_Misc_front_matter.txt",
+          "body_len": 3612,
+          "article_words": 244,
+          "words_in_ocr": 244,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "April": {
+      "total": 17,
+      "articles": 14,
+      "special": 3,
+      "ok": 16,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol9_No4_April_1922.txt",
+      "ocr_chars": 142981,
+      "contents_xref": {
+        "entries_in_contents": 11,
+        "matched": 11,
+        "match_details": [
+          {
+            "title": "Relief Society Workers Mina Madsen",
+            "page": 177,
+            "file": "April_Vol9_03_Article_Relief_Society_Workers_Mina_Madsen.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Why I am a \"Mormon\" P. V. Cardon",
+            "page": 179,
+            "file": "April_Vol9_04_Article_Why_I_am_a_Mormon_P._V._Cardon.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Relief Society Beginnings in Utah Susa Young Gates",
+            "page": 184,
+            "file": "April_Vol9_05_Article_Relief_Society_Beginnings_in_Utah_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Pageant, \"Come, Come, Ye Saints\"",
+            "page": 197,
+            "file": "April_Vol9_01_Article_Pageant,_Come,_Come,_Ye_Saints.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Jerusalem Redeemed Through the Law of Tithing",
+            "page": 202,
+            "file": "April_Vol9_06_Article_Jerusalem_Redeemed_Through_the_Law_of_Tithing.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Bubbles and Troubles Ruth Moench Bell",
+            "page": 205,
+            "file": "April_Vol9_07_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 209,
+            "file": "April_Vol9_08_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 212,
+            "file": "April_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: The Work of the Millennium",
+            "page": 219,
+            "file": "April_Vol9_02_Editorial_Editorial_The_Work_of_the_Millennium.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Book Notices",
+            "page": 220,
+            "file": "April_Vol9_10_Book_Notices_Book_Notices.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for June",
+            "page": 222,
+            "file": "April_Vol9_11a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_The_Sabbath_Day_and_Sund.txt",
+            "score": 0.67
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "April_Vol9_11b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+          "April_Vol9_11c_Guide_Lessons_Lesson_III_-_Literature_-_John_Jaques.txt",
+          "April_Vol9_11d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Moral_Leadership_in_the_Home.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "April_Vol9_00_BOARD.txt",
+          "body_len": 621,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_00_CONTENTS.txt",
+          "body_len": 460,
+          "article_words": 50,
+          "words_in_ocr": 50,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_01_Article_Pageant,_Come,_Come,_Ye_Saints.txt",
+          "body_len": 214,
+          "article_words": 25,
+          "words_in_ocr": 25,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_02_Editorial_Editorial_The_Work_of_the_Millennium.txt",
+          "body_len": 1719,
+          "article_words": 141,
+          "words_in_ocr": 141,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_03_Article_Relief_Society_Workers_Mina_Madsen.txt",
+          "body_len": 1462,
+          "article_words": 141,
+          "words_in_ocr": 141,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_04_Article_Why_I_am_a_Mormon_P._V._Cardon.txt",
+          "body_len": 12247,
+          "article_words": 697,
+          "words_in_ocr": 697,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_05_Article_Relief_Society_Beginnings_in_Utah_Susa_Young_Gates.txt",
+          "body_len": 41804,
+          "article_words": 1959,
+          "words_in_ocr": 1959,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_06_Article_Jerusalem_Redeemed_Through_the_Law_of_Tithing.txt",
+          "body_len": 10198,
+          "article_words": 614,
+          "words_in_ocr": 614,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_07_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+          "body_len": 5066,
+          "article_words": 376,
+          "words_in_ocr": 376,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_08_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 5078,
+          "article_words": 421,
+          "words_in_ocr": 421,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 21488,
+          "article_words": 1035,
+          "words_in_ocr": 1035,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_10_Book_Notices_Book_Notices.txt",
+          "body_len": 2655,
+          "article_words": 229,
+          "words_in_ocr": 229,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_11a_Guide_Lessons_Lesson_I_-_Theology_and_Testimony_-_The_Sabbath_Day_and_Sund.txt",
+          "body_len": 9872,
+          "article_words": 594,
+          "words_in_ocr": 594,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_11b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+          "body_len": 53,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(53)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_11c_Guide_Lessons_Lesson_III_-_Literature_-_John_Jaques.txt",
+          "body_len": 5497,
+          "article_words": 405,
+          "words_in_ocr": 405,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_11d_Guide_Lessons_Lesson_IV_-_Social_Service_-_Moral_Leadership_in_the_Home.txt",
+          "body_len": 14585,
+          "article_words": 867,
+          "words_in_ocr": 867,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "April_Vol9_Misc_front_matter.txt",
+          "body_len": 4267,
+          "article_words": 272,
+          "words_in_ocr": 272,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "May": {
+      "total": 24,
+      "articles": 21,
+      "special": 3,
+      "ok": 24,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No5_May_1922.txt",
+      "ocr_chars": 132770,
+      "contents_xref": {
+        "entries_in_contents": 21,
+        "matched": 21,
+        "match_details": [
+          {
+            "title": "A Pioneer Mother's Grave on the Prairie Frontispiece",
+            "page": null,
+            "file": "May_Vol9_03_Frontispiece_A_Pioneer_Mother's_Grave_on_the_Prairie_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Contentment Riveina Lundgren",
+            "page": 235,
+            "file": "May_Vol9_01_Article_Contentment_Riveina_Lundgren.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Pioneer Mother's Grave on the Platte River",
+            "page": 237,
+            "file": "May_Vol9_04_Article_A_Pioneer_Mother's_Grave_on_the_Platte_River.txt",
+            "score": 1.0
+          },
+          {
+            "title": "May—Mother's Month",
+            "page": 242,
+            "file": "May_Vol9_05_Article_May—Mother's_Month.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mothering Elsie C. Carroll",
+            "page": 242,
+            "file": "May_Vol9_06_Article_Mothering_Elsie_C._Carroll.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mother Velora Darger",
+            "page": 243,
+            "file": "May_Vol9_07_Article_Mother_Velora_Darger.txt",
+            "score": 1.0
+          },
+          {
+            "title": "O Mother Mine Matilda K. Galloway",
+            "page": 244,
+            "file": "May_Vol9_08_Article_O_Mother_Mine_Matilda_K._Galloway.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Being a Mother Genie Mark",
+            "page": 244,
+            "file": "May_Vol9_09_Article_Being_a_Mother_Genie_Mark.txt",
+            "score": 1.0
+          },
+          {
+            "title": "When Dreams Come True Linda S. Fletcher",
+            "page": 245,
+            "file": "May_Vol9_10_Article_When_Dreams_Come_True_Linda_S._Fletcher.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Life and Death Margaret Erickson",
+            "page": 246,
+            "file": "May_Vol9_11_Article_Life_and_Death_Margaret_Erickson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Form of a Little Child Hannah Deady Tomsick",
+            "page": 247,
+            "file": "May_Vol9_12_Article_The_Form_of_a_Little_Child_Hannah_Deady_Tomsick.txt",
+            "score": 1.0
+          },
+          {
+            "title": "If You Should Know Ruth M. Penrose",
+            "page": 247,
+            "file": "May_Vol9_13_Article_If_You_Should_Know_Ruth_M._Penrose.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Bubbles and Troubles Ruth Moench Bell",
+            "page": 248,
+            "file": "May_Vol9_14_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Unforgotten",
+            "page": 254,
+            "file": "May_Vol9_15_Article_Unforgotten.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Old Fashioned Thrift Coral J. Black",
+            "page": 255,
+            "file": "May_Vol9_16_Article_Old_Fashioned_Thrift_Coral_J._Black.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Tell it now Bertha A. Kleinman",
+            "page": 260,
+            "file": "May_Vol9_17_Article_Tell_it_now_Bertha_A._Kleinman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Awakening of Margaret Vorrest Ivy Williams Stone",
+            "page": 261,
+            "file": "May_Vol9_18_Article_The_Awakening_of_Margaret_Vorrest_Ivy_Williams_Stone.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Freedom and the Changing Standards May Roberts Rinehart",
+            "page": 270,
+            "file": "May_Vol9_19_Article_Freedom_and_the_Changing_Standards_May_Roberts_Rinehart.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 284,
+            "file": "May_Vol9_20_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial: Just Mothering",
+            "page": 285,
+            "file": "May_Vol9_02_Editorial_Editorial_Just_Mothering.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Note Nephi Anderson",
+            "page": 286,
+            "file": "May_Vol9_21_Article_Note_Nephi_Anderson.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": []
+      },
+      "records": [
+        {
+          "file": "May_Vol9_00_BOARD.txt",
+          "body_len": 616,
+          "article_words": 66,
+          "words_in_ocr": 66,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_00_CONTENTS.txt",
+          "body_len": 829,
+          "article_words": 80,
+          "words_in_ocr": 80,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_01_Article_Contentment_Riveina_Lundgren.txt",
+          "body_len": 695,
+          "article_words": 72,
+          "words_in_ocr": 72,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_02_Editorial_Editorial_Just_Mothering.txt",
+          "body_len": 1851,
+          "article_words": 160,
+          "words_in_ocr": 160,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_03_Frontispiece_A_Pioneer_Mother's_Grave_on_the_Prairie_Frontispiece.txt",
+          "body_len": 665,
+          "article_words": 67,
+          "words_in_ocr": 67,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_04_Article_A_Pioneer_Mother's_Grave_on_the_Platte_River.txt",
+          "body_len": 10892,
+          "article_words": 673,
+          "words_in_ocr": 673,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_05_Article_May—Mother's_Month.txt",
+          "body_len": 1661,
+          "article_words": 135,
+          "words_in_ocr": 135,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_06_Article_Mothering_Elsie_C._Carroll.txt",
+          "body_len": 918,
+          "article_words": 103,
+          "words_in_ocr": 103,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_07_Article_Mother_Velora_Darger.txt",
+          "body_len": 887,
+          "article_words": 84,
+          "words_in_ocr": 84,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_08_Article_O_Mother_Mine_Matilda_K._Galloway.txt",
+          "body_len": 629,
+          "article_words": 59,
+          "words_in_ocr": 59,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_09_Article_Being_a_Mother_Genie_Mark.txt",
+          "body_len": 1191,
+          "article_words": 125,
+          "words_in_ocr": 125,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_10_Article_When_Dreams_Come_True_Linda_S._Fletcher.txt",
+          "body_len": 1098,
+          "article_words": 108,
+          "words_in_ocr": 108,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_11_Article_Life_and_Death_Margaret_Erickson.txt",
+          "body_len": 1667,
+          "article_words": 164,
+          "words_in_ocr": 164,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_12_Article_The_Form_of_a_Little_Child_Hannah_Deady_Tomsick.txt",
+          "body_len": 600,
+          "article_words": 52,
+          "words_in_ocr": 52,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_13_Article_If_You_Should_Know_Ruth_M._Penrose.txt",
+          "body_len": 622,
+          "article_words": 64,
+          "words_in_ocr": 64,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_14_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+          "body_len": 15170,
+          "article_words": 828,
+          "words_in_ocr": 828,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_15_Article_Unforgotten.txt",
+          "body_len": 837,
+          "article_words": 86,
+          "words_in_ocr": 86,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_16_Article_Old_Fashioned_Thrift_Coral_J._Black.txt",
+          "body_len": 13156,
+          "article_words": 861,
+          "words_in_ocr": 861,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_17_Article_Tell_it_now_Bertha_A._Kleinman.txt",
+          "body_len": 1188,
+          "article_words": 99,
+          "words_in_ocr": 99,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_18_Article_The_Awakening_of_Margaret_Vorrest_Ivy_Williams_Stone.txt",
+          "body_len": 22740,
+          "article_words": 1233,
+          "words_in_ocr": 1233,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_19_Article_Freedom_and_the_Changing_Standards_May_Roberts_Rinehart.txt",
+          "body_len": 28264,
+          "article_words": 1384,
+          "words_in_ocr": 1384,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_20_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 16421,
+          "article_words": 957,
+          "words_in_ocr": 957,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_21_Article_Note_Nephi_Anderson.txt",
+          "body_len": 4622,
+          "article_words": 351,
+          "words_in_ocr": 351,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "May_Vol9_Misc_front_matter.txt",
+          "body_len": 371,
+          "article_words": 31,
+          "words_in_ocr": 31,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "June": {
+      "total": 10,
+      "articles": 5,
+      "special": 5,
+      "ok": 10,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No6_June_1922.txt",
+      "ocr_chars": 139932,
+      "contents_xref": {
+        "entries_in_contents": 6,
+        "matched": 4,
+        "match_details": [
+          {
+            "title": "Keep on the Key Joseph H. Dean",
+            "page": 293,
+            "file": "June_Vol1_02_KEEP_ON_THE_KEY.txt",
+            "score": 0.5
+          },
+          {
+            "title": "General Conference of Relief Society Amy Brown Lyman",
+            "page": 295,
+            "file": "June_Vol1_03a_Article_General_Conference_of_Relief_Society.txt",
+            "score": 0.57
+          },
+          {
+            "title": "Teachers' Topics for July and August",
+            "page": 343,
+            "file": "June_Vol1_04_TEACHERS_TOPICS.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Smoking and Non-Smoking Women Will H. Brown",
+            "page": 346,
+            "file": "June_Vol1_07_SMOKING_AND_NON_SMOKING_WOMEN.txt",
+            "score": 0.67
+          }
+        ],
+        "missing": [
+          {
+            "title": "Relief Society Assembly Hall and Board Meeting Room Frontispiece",
+            "page": null
+          },
+          {
+            "title": "Editorial: The Measure of Success",
+            "page": 344
+          }
+        ],
+        "extra_files": [
+          "June_Vol1_06_EDITORIAL.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "June_Vol1_00_CONTENTS.txt",
+          "body_len": 326,
+          "article_words": 33,
+          "words_in_ocr": 33,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_01_ADVERTISERS_DIRECTORY.txt",
+          "body_len": 882,
+          "article_words": 56,
+          "words_in_ocr": 56,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_02_KEEP_ON_THE_KEY.txt",
+          "body_len": 846,
+          "article_words": 77,
+          "words_in_ocr": 77,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_03a_Article_General_Conference_of_Relief_Society.txt",
+          "body_len": 119969,
+          "article_words": 2983,
+          "words_in_ocr": 2983,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_04_TEACHERS_TOPICS.txt",
+          "body_len": 465,
+          "article_words": 42,
+          "words_in_ocr": 42,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_05_GENERAL_BOARD.txt",
+          "body_len": 935,
+          "article_words": 92,
+          "words_in_ocr": 92,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_06_EDITORIAL.txt",
+          "body_len": 3775,
+          "article_words": 292,
+          "words_in_ocr": 292,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_07_SMOKING_AND_NON_SMOKING_WOMEN.txt",
+          "body_len": 1600,
+          "article_words": 137,
+          "words_in_ocr": 137,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_08_MISC.txt",
+          "body_len": 2253,
+          "article_words": 187,
+          "words_in_ocr": 187,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "June_Vol1_99_ADVERTISERS.txt",
+          "body_len": 7327,
+          "article_words": 483,
+          "words_in_ocr": 483,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "July": {
+      "total": 19,
+      "articles": 16,
+      "special": 3,
+      "ok": 17,
+      "flagged": 2,
+      "empty": 0,
+      "ocr_file": "Vol9_No7_July_1922.txt",
+      "ocr_chars": 113787,
+      "contents_xref": {
+        "entries_in_contents": 13,
+        "matched": 13,
+        "match_details": [
+          {
+            "title": "Guests Grace Ingles Frost",
+            "page": 347,
+            "file": "July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Our Hymn Book Susa Young Gates",
+            "page": 349,
+            "file": "July_Vol9_03_Article_Our_Hymn_Book_Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "An Indian Story Lucy Guyman Bloomfield",
+            "page": 357,
+            "file": "July_Vol9_04_Article_An_Indian_Story_Lucy_Guyman_Bloomfield.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Trust in God Abby K. Robinson",
+            "page": 363,
+            "file": "July_Vol9_05_Article_Trust_in_God_Abby_K._Robinson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 364,
+            "file": "July_Vol9_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Parting (Music) George Careless",
+            "page": 377,
+            "file": "July_Vol9_02_Article_Parting_(Music)_George_Careless.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Teacher Training",
+            "page": 378,
+            "file": "July_Vol9_07_Article_Teacher_Training.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Let us Seek Eternal Life Reinhard Maeser",
+            "page": 383,
+            "file": "July_Vol9_08_Article_Let_us_Seek_Eternal_Life_Reinhard_Maeser.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Peace Rebecca F. Lewis",
+            "page": 385,
+            "file": "July_Vol9_09_Article_Peace_Rebecca_F._Lewis.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 386,
+            "file": "July_Vol9_10_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Ann and Her Husband",
+            "page": 391,
+            "file": "July_Vol9_11_Article_Ann_and_Her_Husband.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for September",
+            "page": 394,
+            "file": "July_Vol9_12a_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_I_Theology_and_Testimon.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Your Thirty Slaves",
+            "page": 399,
+            "file": "July_Vol9_13_Article_Your_Thirty_Slaves.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "July_Vol9_12b_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_II_Work_and_Business.txt",
+          "July_Vol9_12c_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_III_Literature.txt",
+          "July_Vol9_12d_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_VII_Social_Service_-_Mo.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "July_Vol9_00_BOARD.txt",
+          "body_len": 1153,
+          "article_words": 109,
+          "words_in_ocr": 109,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_00_CONTENTS.txt",
+          "body_len": 478,
+          "article_words": 58,
+          "words_in_ocr": 58,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt",
+          "body_len": 182,
+          "article_words": 26,
+          "words_in_ocr": 26,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(182)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_02_Article_Parting_(Music)_George_Careless.txt",
+          "body_len": 1665,
+          "article_words": 145,
+          "words_in_ocr": 145,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_03_Article_Our_Hymn_Book_Susa_Young_Gates.txt",
+          "body_len": 17742,
+          "article_words": 833,
+          "words_in_ocr": 833,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_04_Article_An_Indian_Story_Lucy_Guyman_Bloomfield.txt",
+          "body_len": 16160,
+          "article_words": 827,
+          "words_in_ocr": 827,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_05_Article_Trust_in_God_Abby_K._Robinson.txt",
+          "body_len": 622,
+          "article_words": 64,
+          "words_in_ocr": 64,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 17905,
+          "article_words": 937,
+          "words_in_ocr": 937,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_07_Article_Teacher_Training.txt",
+          "body_len": 7700,
+          "article_words": 364,
+          "words_in_ocr": 364,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_08_Article_Let_us_Seek_Eternal_Life_Reinhard_Maeser.txt",
+          "body_len": 7008,
+          "article_words": 446,
+          "words_in_ocr": 446,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_09_Article_Peace_Rebecca_F._Lewis.txt",
+          "body_len": 391,
+          "article_words": 43,
+          "words_in_ocr": 43,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_10_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 4942,
+          "article_words": 382,
+          "words_in_ocr": 382,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_11_Article_Ann_and_Her_Husband.txt",
+          "body_len": 7518,
+          "article_words": 542,
+          "words_in_ocr": 542,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_12a_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_I_Theology_and_Testimon.txt",
+          "body_len": 7881,
+          "article_words": 458,
+          "words_in_ocr": 458,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_12b_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_II_Work_and_Business.txt",
+          "body_len": 56,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(56)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_12c_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_III_Literature.txt",
+          "body_len": 298,
+          "article_words": 34,
+          "words_in_ocr": 34,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_12d_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_VII_Social_Service_-_Mo.txt",
+          "body_len": 7177,
+          "article_words": 428,
+          "words_in_ocr": 428,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_13_Article_Your_Thirty_Slaves.txt",
+          "body_len": 2186,
+          "article_words": 196,
+          "words_in_ocr": 196,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "July_Vol9_Misc_front_matter.txt",
+          "body_len": 186,
+          "article_words": 17,
+          "words_in_ocr": 17,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "August": {
+      "total": 24,
+      "articles": 21,
+      "special": 3,
+      "ok": 24,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No8_August_1922.txt",
+      "ocr_chars": 113302,
+      "contents_xref": {
+        "entries_in_contents": 18,
+        "matched": 18,
+        "match_details": [
+          {
+            "title": "A Tribute to Sister Susa Y. Gates Ruth May Fox",
+            "page": 399,
+            "file": "August_Vol9_01_Article_A_Tribute_to_Sister_Susa_Y._Gates_Ruth_May_Fox.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Our Retiring Editor",
+            "page": 401,
+            "file": "August_Vol9_03_Article_Our_Retiring_Editor.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Golden Wedding of Mr. And Mrs. A. W. McCune",
+            "page": 404,
+            "file": "August_Vol9_04_Article_Golden_Wedding_of_Mr._And_Mrs._A._W._McCune.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Girls in Our Own Zion's Cooperative Mercantile Institution",
+            "page": 406,
+            "file": "August_Vol9_05_Article_Girls_in_Our_Own_Zion's_Cooperative_Mercantile_Institution.txt",
+            "score": 1.0
+          },
+          {
+            "title": "My Baby's Prayer Mrs. L. E. Russon",
+            "page": 411,
+            "file": "August_Vol9_06_Article_My_Baby's_Prayer_Mrs._L._E._Russon.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes on Bible Poetry L. Lulu Greene Richards",
+            "page": 412,
+            "file": "August_Vol9_07_Article_Notes_on_Bible_Poetry_L._Lulu_Greene_Richards.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Ungrateful Indian Nina B. McKean",
+            "page": 417,
+            "file": "August_Vol9_08_Article_The_Ungrateful_Indian_Nina_B._McKean.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Relief Society Magazine Mrs. Christine Stacey",
+            "page": 419,
+            "file": "August_Vol9_09_Article_The_Relief_Society_Magazine_Mrs._Christine_Stacey.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Summer Menus Jeanette A. Hyde",
+            "page": 420,
+            "file": "August_Vol9_10_Article_Summer_Menus_Jeanette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Recreative Grace Ingles Frost",
+            "page": 425,
+            "file": "August_Vol9_11_Article_Recreative_Grace_Ingles_Frost.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Hotel Utah Food Combinations Louis J. Theu",
+            "page": 426,
+            "file": "August_Vol9_12_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Northern Mexico Recipes Gladys Sanders",
+            "page": 428,
+            "file": "August_Vol9_13_Article_Northern_Mexico_Recipes_Gladys_Sanders.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 431,
+            "file": "August_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Nature's Perfect Food A. A. Hinckley",
+            "page": 437,
+            "file": "August_Vol9_15_Article_Nature's_Perfect_Food_A._A._Hinckley.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Your Services to God and Man Sarah Deady Tomsik",
+            "page": 439,
+            "file": "August_Vol9_16_Article_Your_Services_to_God_and_Man_Sarah_Deady_Tomsik.txt",
+            "score": 1.0
+          },
+          {
+            "title": "EDITORIAL: Resignation of Mrs. Susa Young Gates",
+            "page": 440,
+            "file": "August_Vol9_02_Editorial_EDITORIAL_Resignation_of_Mrs._Susa_Young_Gates.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for October",
+            "page": 442,
+            "file": "August_Vol9_17a_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_I_-_Theology_and_Testimon.txt",
+            "score": 1.0
+          },
+          {
+            "title": "God Bless My Stupid Soul Mary Foster Gibbs",
+            "page": 451,
+            "file": "August_Vol9_18_Article_God_Bless_My_Stupid_Soul_Mary_Foster_Gibbs.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "August_Vol9_17b_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_II_-_Work_and_Business.txt",
+          "August_Vol9_17c_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_III_-_Literature.txt",
+          "August_Vol9_17d_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_IV_-_Social_Service_-_The.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "August_Vol9_00_BOARD.txt",
+          "body_len": 589,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_00_CONTENTS.txt",
+          "body_len": 820,
+          "article_words": 90,
+          "words_in_ocr": 90,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_01_Article_A_Tribute_to_Sister_Susa_Y._Gates_Ruth_May_Fox.txt",
+          "body_len": 661,
+          "article_words": 74,
+          "words_in_ocr": 74,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_02_Editorial_EDITORIAL_Resignation_of_Mrs._Susa_Young_Gates.txt",
+          "body_len": 2283,
+          "article_words": 204,
+          "words_in_ocr": 204,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_03_Article_Our_Retiring_Editor.txt",
+          "body_len": 7381,
+          "article_words": 493,
+          "words_in_ocr": 493,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_04_Article_Golden_Wedding_of_Mr._And_Mrs._A._W._McCune.txt",
+          "body_len": 3280,
+          "article_words": 240,
+          "words_in_ocr": 240,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_05_Article_Girls_in_Our_Own_Zion's_Cooperative_Mercantile_Institution.txt",
+          "body_len": 10640,
+          "article_words": 634,
+          "words_in_ocr": 634,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_06_Article_My_Baby's_Prayer_Mrs._L._E._Russon.txt",
+          "body_len": 528,
+          "article_words": 54,
+          "words_in_ocr": 54,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_07_Article_Notes_on_Bible_Poetry_L._Lulu_Greene_Richards.txt",
+          "body_len": 10594,
+          "article_words": 664,
+          "words_in_ocr": 664,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_08_Article_The_Ungrateful_Indian_Nina_B._McKean.txt",
+          "body_len": 5537,
+          "article_words": 405,
+          "words_in_ocr": 405,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_09_Article_The_Relief_Society_Magazine_Mrs._Christine_Stacey.txt",
+          "body_len": 848,
+          "article_words": 90,
+          "words_in_ocr": 90,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_10_Article_Summer_Menus_Jeanette_A._Hyde.txt",
+          "body_len": 7452,
+          "article_words": 436,
+          "words_in_ocr": 436,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_11_Article_Recreative_Grace_Ingles_Frost.txt",
+          "body_len": 426,
+          "article_words": 52,
+          "words_in_ocr": 52,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_12_Article_Hotel_Utah_Food_Combinations_Louis_J._Theu.txt",
+          "body_len": 4120,
+          "article_words": 298,
+          "words_in_ocr": 298,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_13_Article_Northern_Mexico_Recipes_Gladys_Sanders.txt",
+          "body_len": 6379,
+          "article_words": 449,
+          "words_in_ocr": 449,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 10665,
+          "article_words": 604,
+          "words_in_ocr": 604,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_15_Article_Nature's_Perfect_Food_A._A._Hinckley.txt",
+          "body_len": 6098,
+          "article_words": 434,
+          "words_in_ocr": 434,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_16_Article_Your_Services_to_God_and_Man_Sarah_Deady_Tomsik.txt",
+          "body_len": 630,
+          "article_words": 58,
+          "words_in_ocr": 58,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_17a_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_I_-_Theology_and_Testimon.txt",
+          "body_len": 5411,
+          "article_words": 345,
+          "words_in_ocr": 345,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_17b_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_II_-_Work_and_Business.txt",
+          "body_len": 345,
+          "article_words": 33,
+          "words_in_ocr": 28,
+          "pct_in_ocr": 0.8485,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "careless",
+            "compositions",
+            "devoting",
+            "importance",
+            "space"
+          ]
+        },
+        {
+          "file": "August_Vol9_17c_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_III_-_Literature.txt",
+          "body_len": 6151,
+          "article_words": 400,
+          "words_in_ocr": 400,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_17d_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_IV_-_Social_Service_-_The.txt",
+          "body_len": 7556,
+          "article_words": 476,
+          "words_in_ocr": 476,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_18_Article_God_Bless_My_Stupid_Soul_Mary_Foster_Gibbs.txt",
+          "body_len": 1855,
+          "article_words": 165,
+          "words_in_ocr": 165,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "August_Vol9_Misc_front_matter.txt",
+          "body_len": 4139,
+          "article_words": 285,
+          "words_in_ocr": 285,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "September": {
+      "total": 19,
+      "articles": 16,
+      "special": 3,
+      "ok": 19,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No9_September_1922.txt",
+      "ocr_chars": 125212,
+      "contents_xref": {
+        "entries_in_contents": 14,
+        "matched": 14,
+        "match_details": [
+          {
+            "title": "Pres. Heber J. Grant and Pioneer L. Sobriskie Young Frontispiece",
+            "page": null,
+            "file": "September_Vol9_01_Frontispiece_Pres._Heber_J._Grant_and_Pioneer_L._Sobriskie_Young_Frontisp.txt",
+            "score": 1.0
+          },
+          {
+            "title": "\"This is the Place\" Julia Dare",
+            "page": 451,
+            "file": "September_Vol9_04_Article_This_is_the_Place_Julia_Dare.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Pioneer Jubilee Annie Wells Cannon",
+            "page": 453,
+            "file": "September_Vol9_03_Article_The_Pioneer_Jubilee_Annie_Wells_Cannon.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Exercises",
+            "page": 463,
+            "file": "September_Vol9_05_Article_Exercises.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Consolation Zella A. Johnson",
+            "page": 469,
+            "file": "September_Vol9_06_Article_Consolation_Zella_A._Johnson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Poorhouse for Mother Clara Fagergren",
+            "page": 470,
+            "file": "September_Vol9_07_Article_The_Poorhouse_for_Mother_Clara_Fagergren.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Widow's Prayer Hazel S. Washburn",
+            "page": 475,
+            "file": "September_Vol9_08_Article_A_Widow's_Prayer_Hazel_S._Washburn.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 476,
+            "file": "September_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Dollar Saved is a Dollar Earned Lalene H. Hart",
+            "page": 482,
+            "file": "September_Vol9_10_Article_A_Dollar_Saved_is_a_Dollar_Earned_Lalene_H._Hart.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 487,
+            "file": "September_Vol9_11_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "My Conversion to Work for the Dead Nina B. McKean",
+            "page": 490,
+            "file": "September_Vol9_12_Article_My_Conversion_to_Work_for_the_Dead_Nina_B._McKean.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial—Priesthood",
+            "page": 491,
+            "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The International Council of Women to Meet in U. S.",
+            "page": 493,
+            "file": "September_Vol9_13_Article_The_International_Council_of_Women_to_Meet_in_U._S..txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for November",
+            "page": 494,
+            "file": "September_Vol9_14a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLESPART_IITHE_MIRAC.txt",
+            "score": 0.67
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt",
+          "September_Vol9_14d_Guide_Lessons_LESSON_IV_-_Social_Service_-_THE_PROBLEM_OF_DISCIPLINE_IN_EA.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "September_Vol9_00_BOARD.txt",
+          "body_len": 603,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_00_CONTENTS.txt",
+          "body_len": 588,
+          "article_words": 60,
+          "words_in_ocr": 60,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_01_Frontispiece_Pres._Heber_J._Grant_and_Pioneer_L._Sobriskie_Young_Frontisp.txt",
+          "body_len": 466,
+          "article_words": 50,
+          "words_in_ocr": 50,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_02_Editorial_Editorial—Priesthood.txt",
+          "body_len": 4526,
+          "article_words": 363,
+          "words_in_ocr": 363,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_03_Article_The_Pioneer_Jubilee_Annie_Wells_Cannon.txt",
+          "body_len": 13095,
+          "article_words": 818,
+          "words_in_ocr": 818,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_04_Article_This_is_the_Place_Julia_Dare.txt",
+          "body_len": 5429,
+          "article_words": 412,
+          "words_in_ocr": 412,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_05_Article_Exercises.txt",
+          "body_len": 18260,
+          "article_words": 1000,
+          "words_in_ocr": 1000,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_06_Article_Consolation_Zella_A._Johnson.txt",
+          "body_len": 755,
+          "article_words": 84,
+          "words_in_ocr": 84,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_07_Article_The_Poorhouse_for_Mother_Clara_Fagergren.txt",
+          "body_len": 14320,
+          "article_words": 882,
+          "words_in_ocr": 882,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_08_Article_A_Widow's_Prayer_Hazel_S._Washburn.txt",
+          "body_len": 969,
+          "article_words": 105,
+          "words_in_ocr": 105,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 12916,
+          "article_words": 674,
+          "words_in_ocr": 674,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_10_Article_A_Dollar_Saved_is_a_Dollar_Earned_Lalene_H._Hart.txt",
+          "body_len": 10380,
+          "article_words": 675,
+          "words_in_ocr": 675,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_11_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 5415,
+          "article_words": 440,
+          "words_in_ocr": 440,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_12_Article_My_Conversion_to_Work_for_the_Dead_Nina_B._McKean.txt",
+          "body_len": 1951,
+          "article_words": 190,
+          "words_in_ocr": 190,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_13_Article_The_International_Council_of_Women_to_Meet_in_U._S..txt",
+          "body_len": 1748,
+          "article_words": 108,
+          "words_in_ocr": 108,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_14a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLESPART_IITHE_MIRAC.txt",
+          "body_len": 4600,
+          "article_words": 274,
+          "words_in_ocr": 274,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_14c_Guide_Lessons_LESSON_III_-_Literature_-_ROCK_OF_AGES.txt",
+          "body_len": 7666,
+          "article_words": 499,
+          "words_in_ocr": 499,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_14d_Guide_Lessons_LESSON_IV_-_Social_Service_-_THE_PROBLEM_OF_DISCIPLINE_IN_EA.txt",
+          "body_len": 7488,
+          "article_words": 449,
+          "words_in_ocr": 449,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "September_Vol9_Misc_front_matter.txt",
+          "body_len": 40,
+          "article_words": 3,
+          "words_in_ocr": 3,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "October": {
+      "total": 23,
+      "articles": 20,
+      "special": 3,
+      "ok": 22,
+      "flagged": 1,
+      "empty": 0,
+      "ocr_file": "Vol9_No10_October_1922.txt",
+      "ocr_chars": 120559,
+      "contents_xref": {
+        "entries_in_contents": 17,
+        "matched": 17,
+        "match_details": [
+          {
+            "title": "Cyrus E. Dallin Frontispiece",
+            "page": null,
+            "file": "October_Vol9_04_Frontispiece_Cyrus_E._Dallin_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Mutual Appreciation Lula Greene Richards",
+            "page": 503,
+            "file": "October_Vol9_01_Article_Mutual_Appreciation_Lula_Greene_Richards.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Dallin's Gift of Massassoit to Utah Alice Merrill Horne",
+            "page": 505,
+            "file": "October_Vol9_03_Article_Dallin's_Gift_of_Massassoit_to_Utah_Alice_Merrill_Horne.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Interview with Mrs. Thomas Dallin Alice L. Reynolds",
+            "page": 510,
+            "file": "October_Vol9_05_Article_Interview_with_Mrs._Thomas_Dallin_Alice_L._Reynolds.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Law Enforcement Milton Bennion",
+            "page": 512,
+            "file": "October_Vol9_06_Article_Law_Enforcement_Milton_Bennion.txt",
+            "score": 1.0
+          },
+          {
+            "title": "\"Aunt Bine\" Myron E. Crandall, Jr.",
+            "page": 513,
+            "file": "October_Vol9_07_Article_Aunt_Bine_Myron_E._Crandall,_Jr..txt",
+            "score": 1.0
+          },
+          {
+            "title": "Woman's Privilege Ruth Savage Hilton",
+            "page": 515,
+            "file": "October_Vol9_08_Article_Woman's_Privilege_Ruth_Savage_Hilton.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Leisure",
+            "page": 518,
+            "file": "October_Vol9_09_Article_Leisure.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Home Economics Jeannette A. Hyde",
+            "page": 520,
+            "file": "October_Vol9_10_Home_Economics_Home_Economics_Jeannette_A._Hyde.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Last Service Annie D. Palmer",
+            "page": 523,
+            "file": "October_Vol9_11_Article_The_Last_Service_Annie_D._Palmer.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes from the Field Amy Brown Lyman",
+            "page": 526,
+            "file": "October_Vol9_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Attune Your Hearts Mrs. Ida R. Alldredge",
+            "page": 532,
+            "file": "October_Vol9_13_Article_Attune_Your_Hearts_Mrs._Ida_R._Alldredge.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Twisted Holiday Lila Little Hicken",
+            "page": 533,
+            "file": "October_Vol9_14_Article_A_Twisted_Holiday_Lila_Little_Hicken.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 538,
+            "file": "October_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Alone Bertha Roberts",
+            "page": 541,
+            "file": "October_Vol9_16_Article_Alone_Bertha_Roberts.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial, The Need of the Hour",
+            "page": 542,
+            "file": "October_Vol9_02_Editorial_Editorial,_The_Need_of_the_Hour.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for December",
+            "page": 544,
+            "file": "October_Vol9_17a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLES_OF_THE_LATTER_D.txt",
+            "score": 0.67
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "October_Vol9_17b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+          "October_Vol9_17c_Guide_Lessons_LESSON_III_-_Literature_-_HYMNS_WRITTEN_BY_WOMEN.txt",
+          "October_Vol9_17d_Guide_Lessons_LESSON_IV_-_Social_Service_-_LATER_ADOLESCENCE.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "October_Vol9_00_BOARD.txt",
+          "body_len": 604,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_00_CONTENTS.txt",
+          "body_len": 672,
+          "article_words": 74,
+          "words_in_ocr": 74,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_01_Article_Mutual_Appreciation_Lula_Greene_Richards.txt",
+          "body_len": 558,
+          "article_words": 63,
+          "words_in_ocr": 63,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_02_Editorial_Editorial,_The_Need_of_the_Hour.txt",
+          "body_len": 4883,
+          "article_words": 328,
+          "words_in_ocr": 328,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_03_Article_Dallin's_Gift_of_Massassoit_to_Utah_Alice_Merrill_Horne.txt",
+          "body_len": 249,
+          "article_words": 19,
+          "words_in_ocr": 19,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_04_Frontispiece_Cyrus_E._Dallin_Frontispiece.txt",
+          "body_len": 9326,
+          "article_words": 637,
+          "words_in_ocr": 637,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_05_Article_Interview_with_Mrs._Thomas_Dallin_Alice_L._Reynolds.txt",
+          "body_len": 4976,
+          "article_words": 374,
+          "words_in_ocr": 374,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_06_Article_Law_Enforcement_Milton_Bennion.txt",
+          "body_len": 3880,
+          "article_words": 280,
+          "words_in_ocr": 280,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_07_Article_Aunt_Bine_Myron_E._Crandall,_Jr..txt",
+          "body_len": 2653,
+          "article_words": 244,
+          "words_in_ocr": 244,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_08_Article_Woman's_Privilege_Ruth_Savage_Hilton.txt",
+          "body_len": 6172,
+          "article_words": 457,
+          "words_in_ocr": 457,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_09_Article_Leisure.txt",
+          "body_len": 5254,
+          "article_words": 382,
+          "words_in_ocr": 382,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_10_Home_Economics_Home_Economics_Jeannette_A._Hyde.txt",
+          "body_len": 4790,
+          "article_words": 366,
+          "words_in_ocr": 366,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_11_Article_The_Last_Service_Annie_D._Palmer.txt",
+          "body_len": 6715,
+          "article_words": 486,
+          "words_in_ocr": 486,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_12_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 12692,
+          "article_words": 676,
+          "words_in_ocr": 676,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_13_Article_Attune_Your_Hearts_Mrs._Ida_R._Alldredge.txt",
+          "body_len": 1037,
+          "article_words": 99,
+          "words_in_ocr": 99,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_14_Article_A_Twisted_Holiday_Lila_Little_Hicken.txt",
+          "body_len": 11585,
+          "article_words": 637,
+          "words_in_ocr": 637,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 6116,
+          "article_words": 464,
+          "words_in_ocr": 464,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_16_Article_Alone_Bertha_Roberts.txt",
+          "body_len": 743,
+          "article_words": 82,
+          "words_in_ocr": 82,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_17a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLES_OF_THE_LATTER_D.txt",
+          "body_len": 7208,
+          "article_words": 428,
+          "words_in_ocr": 428,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_17b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+          "body_len": 53,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(53)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_17c_Guide_Lessons_LESSON_III_-_Literature_-_HYMNS_WRITTEN_BY_WOMEN.txt",
+          "body_len": 8635,
+          "article_words": 572,
+          "words_in_ocr": 572,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_17d_Guide_Lessons_LESSON_IV_-_Social_Service_-_LATER_ADOLESCENCE.txt",
+          "body_len": 7771,
+          "article_words": 490,
+          "words_in_ocr": 490,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "October_Vol9_Misc_front_matter.txt",
+          "body_len": 77,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "November": {
+      "total": 25,
+      "articles": 22,
+      "special": 3,
+      "ok": 25,
+      "flagged": 0,
+      "empty": 0,
+      "ocr_file": "Vol9_No11_November_1922.txt",
+      "ocr_chars": 126020,
+      "contents_xref": {
+        "entries_in_contents": 19,
+        "matched": 19,
+        "match_details": [
+          {
+            "title": "Bureau of Information, Temple Block Frontispiece",
+            "page": null,
+            "file": "November_Vol9_03_Frontispiece_Bureau_of_Information,_Temple_Block_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Jake Clayton",
+            "page": 557,
+            "file": "November_Vol9_01_Article_Jake_Clayton.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Temple Block Mission Levi Edgar Young",
+            "page": 559,
+            "file": "November_Vol9_04a_Article_The_Temple_Block_Mission.txt",
+            "score": 0.5
+          },
+          {
+            "title": "Yours is the Right Bertha A. Kleinman",
+            "page": 563,
+            "file": "November_Vol9_05_Article_Yours_is_the_Right_Bertha_A._Kleinman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Prohibition Enforcement Clarissa S. Williams",
+            "page": 564,
+            "file": "November_Vol9_06_Article_Prohibition_Enforcement_Clarissa_S._Williams.txt",
+            "score": 1.0
+          },
+          {
+            "title": "A Modern John Alden Julia A. F. Lund",
+            "page": 568,
+            "file": "November_Vol9_07_Article_A_Modern_John_Alden_Julia_A._F._Lund.txt",
+            "score": 1.0
+          },
+          {
+            "title": "An Old Time Thanksgiving Helen Everston Smith",
+            "page": 572,
+            "file": "November_Vol9_08_Article_An_Old_Time_Thanksgiving_Helen_Everston_Smith.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Be Near Me Alice Morrill",
+            "page": 575,
+            "file": "November_Vol9_09_Article_Be_Near_Me_Alice_Morrill.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Utah Public Health Conference",
+            "page": 576,
+            "file": "November_Vol9_10_Article_Utah_Public_Health_Conference.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Integrity—a Noble Word Jesma",
+            "page": 578,
+            "file": "November_Vol9_11_Article_Integrity—a_Noble_Word_Jesma.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Pioneer Days Laura F. Crane",
+            "page": 580,
+            "file": "November_Vol9_12_Article_Pioneer_Days_Laura_F._Crane.txt",
+            "score": 1.0
+          },
+          {
+            "title": "My Little Friend May Booth Talmage",
+            "page": 583,
+            "file": "November_Vol9_13_Article_My_Little_Friend_May_Booth_Talmage.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Words Grace Ingles Frost",
+            "page": 585,
+            "file": "November_Vol9_14_Article_Words_Grace_Ingles_Frost.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The General Procession James H. Anderson",
+            "page": 586,
+            "file": "November_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Notes From the Field Amy Brown Lyman",
+            "page": 590,
+            "file": "November_Vol9_16_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial, Spiritual Status of Our Present-day World",
+            "page": 595,
+            "file": "November_Vol9_02_Editorial_Editorial,_Spiritual_Status_of_Our_Present-day_World.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Selection J. G. Whittier",
+            "page": 598,
+            "file": "November_Vol9_17_Article_Selection_J._G._Whittier.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Guide Lessons for December",
+            "page": 599,
+            "file": "November_Vol9_18a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLES_OF_THE_LATTER_D.txt",
+            "score": 0.67
+          },
+          {
+            "title": "Salt Lake City's Milk Supply Fred W. Merrill",
+            "page": 609,
+            "file": "November_Vol9_19_Article_Salt_Lake_City's_Milk_Supply_Fred_W._Merrill.txt",
+            "score": 1.0
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "November_Vol9_18b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+          "November_Vol9_18c_Guide_Lessons_LESSON_III_-_Literature_-_Colonial_Period_a_a.txt",
+          "November_Vol9_18d_Guide_Lessons_LESSON_IV_-_Social_Service_-_LATER_ADOLESCENCE_CONTINUED_and.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "November_Vol9_00_BOARD.txt",
+          "body_len": 580,
+          "article_words": 61,
+          "words_in_ocr": 61,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_00_CONTENTS.txt",
+          "body_len": 758,
+          "article_words": 87,
+          "words_in_ocr": 87,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_01_Article_Jake_Clayton.txt",
+          "body_len": 526,
+          "article_words": 62,
+          "words_in_ocr": 62,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_02_Editorial_Editorial,_Spiritual_Status_of_Our_Present-day_World.txt",
+          "body_len": 7596,
+          "article_words": 523,
+          "words_in_ocr": 523,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_03_Frontispiece_Bureau_of_Information,_Temple_Block_Frontispiece.txt",
+          "body_len": 5510,
+          "article_words": 318,
+          "words_in_ocr": 318,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_04a_Article_The_Temple_Block_Mission.txt",
+          "body_len": 10035,
+          "article_words": 542,
+          "words_in_ocr": 542,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_05_Article_Yours_is_the_Right_Bertha_A._Kleinman.txt",
+          "body_len": 612,
+          "article_words": 51,
+          "words_in_ocr": 51,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_06_Article_Prohibition_Enforcement_Clarissa_S._Williams.txt",
+          "body_len": 12407,
+          "article_words": 785,
+          "words_in_ocr": 785,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_07_Article_A_Modern_John_Alden_Julia_A._F._Lund.txt",
+          "body_len": 10540,
+          "article_words": 666,
+          "words_in_ocr": 666,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_08_Article_An_Old_Time_Thanksgiving_Helen_Everston_Smith.txt",
+          "body_len": 9046,
+          "article_words": 597,
+          "words_in_ocr": 597,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_09_Article_Be_Near_Me_Alice_Morrill.txt",
+          "body_len": 513,
+          "article_words": 59,
+          "words_in_ocr": 59,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_10_Article_Utah_Public_Health_Conference.txt",
+          "body_len": 4786,
+          "article_words": 291,
+          "words_in_ocr": 291,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_11_Article_Integrity—a_Noble_Word_Jesma.txt",
+          "body_len": 2401,
+          "article_words": 207,
+          "words_in_ocr": 207,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_12_Article_Pioneer_Days_Laura_F._Crane.txt",
+          "body_len": 4862,
+          "article_words": 380,
+          "words_in_ocr": 380,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_13_Article_My_Little_Friend_May_Booth_Talmage.txt",
+          "body_len": 6578,
+          "article_words": 501,
+          "words_in_ocr": 501,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_14_Article_Words_Grace_Ingles_Frost.txt",
+          "body_len": 391,
+          "article_words": 52,
+          "words_in_ocr": 52,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+          "body_len": 7467,
+          "article_words": 578,
+          "words_in_ocr": 578,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_16_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+          "body_len": 14083,
+          "article_words": 760,
+          "words_in_ocr": 760,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": true,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_17_Article_Selection_J._G._Whittier.txt",
+          "body_len": 394,
+          "article_words": 47,
+          "words_in_ocr": 47,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_18a_Guide_Lessons_LESSON_I_-_Theology_and_Testimony_-_MIRACLES_OF_THE_LATTER_D.txt",
+          "body_len": 7828,
+          "article_words": 468,
+          "words_in_ocr": 468,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_18b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+          "body_len": 5306,
+          "article_words": 379,
+          "words_in_ocr": 272,
+          "pct_in_ocr": 0.7177,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": [
+            "abiding",
+            "accept",
+            "adjust",
+            "agony",
+            "amid",
+            "angels",
+            "answers",
+            "aptness",
+            "arthur",
+            "awhile"
+          ]
+        },
+        {
+          "file": "November_Vol9_18c_Guide_Lessons_LESSON_III_-_Literature_-_Colonial_Period_a_a.txt",
+          "body_len": 8099,
+          "article_words": 577,
+          "words_in_ocr": 577,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_18d_Guide_Lessons_LESSON_IV_-_Social_Service_-_LATER_ADOLESCENCE_CONTINUED_and.txt",
+          "body_len": 7670,
+          "article_words": 453,
+          "words_in_ocr": 453,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_19_Article_Salt_Lake_City's_Milk_Supply_Fred_W._Merrill.txt",
+          "body_len": 2000,
+          "article_words": 138,
+          "words_in_ocr": 138,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "November_Vol9_Misc_front_matter.txt",
+          "body_len": 97,
+          "article_words": 9,
+          "words_in_ocr": 9,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    },
+    "December": {
+      "total": 12,
+      "articles": 10,
+      "special": 2,
+      "ok": 8,
+      "flagged": 4,
+      "empty": 0,
+      "ocr_file": "Vol9_No12_December_1922.txt",
+      "ocr_chars": 46421,
+      "contents_xref": {
+        "entries_in_contents": 6,
+        "matched": 6,
+        "match_details": [
+          {
+            "title": "Arrival of the Shepherds Frontispiece",
+            "page": null,
+            "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+            "score": 1.0
+          },
+          {
+            "title": "For Christmas The Good They Do Depends On You",
+            "page": 646,
+            "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Christmas Giving Mary E. Connelly",
+            "page": 647,
+            "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+            "score": 1.0
+          },
+          {
+            "title": "General Procession James H. Anderson",
+            "page": 648,
+            "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+            "score": 1.0
+          },
+          {
+            "title": "Editorial, The Christmas Spirit",
+            "page": 651,
+            "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+            "score": 1.0
+          },
+          {
+            "title": "The Message of the Bells Nina Burnham McKean",
+            "page": 652,
+            "file": "December_Vol9_06a_Poem_The_Message_of_the_Bells.txt",
+            "score": 0.4
+          }
+        ],
+        "missing": [],
+        "extra_files": [
+          "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_a_a.txt",
+          "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt",
+          "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_c.txt",
+          "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_d.txt"
+        ]
+      },
+      "records": [
+        {
+          "file": "December_Vol9_00_CONTENTS.txt",
+          "body_len": 261,
+          "article_words": 25,
+          "words_in_ocr": 25,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_01_Article_For_Christmas_The_Good_They_Do_Depends_On_You.txt",
+          "body_len": 49,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(49)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_02_Article_Christmas_Giving_Mary_E._Connelly.txt",
+          "body_len": 37,
+          "article_words": 4,
+          "words_in_ocr": 4,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(37)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_03_Article_General_Procession_James_H._Anderson.txt",
+          "body_len": 40,
+          "article_words": 4,
+          "words_in_ocr": 4,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "SHORT(40)"
+          ],
+          "is_special": false,
+          "remediation": "manual_review",
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_04_Editorial_Editorial,_The_Christmas_Spirit.txt",
+          "body_len": 4934,
+          "article_words": 346,
+          "words_in_ocr": 346,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_05_Frontispiece_Arrival_of_the_Shepherds_Frontispiece.txt",
+          "body_len": 1579,
+          "article_words": 162,
+          "words_in_ocr": 162,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_06a_Poem_The_Message_of_the_Bells.txt",
+          "body_len": 1399,
+          "article_words": 110,
+          "words_in_ocr": 110,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_a_a.txt",
+          "body_len": 7566,
+          "article_words": 457,
+          "words_in_ocr": 457,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_b.txt",
+          "body_len": 345,
+          "article_words": 33,
+          "words_in_ocr": 21,
+          "pct_in_ocr": 0.6364,
+          "first_phrase_in_ocr": false,
+          "status": "FLAG",
+          "flags": [
+            "LOW_OCR_MATCH(64%)"
+          ],
+          "is_special": false,
+          "remediation": "api_fix",
+          "sample_not_in_ocr": [
+            "careless",
+            "compositions",
+            "considerable",
+            "devoted",
+            "devoting",
+            "hymnology",
+            "importance",
+            "justified",
+            "march",
+            "professor"
+          ]
+        },
+        {
+          "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_c.txt",
+          "body_len": 9609,
+          "article_words": 643,
+          "words_in_ocr": 643,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_06b_Guide_Lessons_Guide_Lessons_for_December_d.txt",
+          "body_len": 7053,
+          "article_words": 430,
+          "words_in_ocr": 430,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": false,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        },
+        {
+          "file": "December_Vol9_Misc_front_matter.txt",
+          "body_len": 81,
+          "article_words": 7,
+          "words_in_ocr": 7,
+          "pct_in_ocr": 1.0,
+          "first_phrase_in_ocr": false,
+          "status": "OK",
+          "flags": [],
+          "is_special": true,
+          "remediation": null,
+          "sample_not_in_ocr": []
+        }
+      ]
+    }
+  }
+}

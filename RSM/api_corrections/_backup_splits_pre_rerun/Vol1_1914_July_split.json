@@ -1,0 +1,53 @@
+{
+  "volume": 1,
+  "month": "July",
+  "year": 1914,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.0481,
+  "files": [
+    {
+      "source_file": "V1_1914_Jul_03_Lssn_Health.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Health and Hygiene Lesson II",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "[Vol1 | July 1914 | Sequence: 03 | Category:",
+          "end_boundary": "Romania B. Penrose.) 8 .",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Health and Hygiene Lesson III",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "July HEALTH AND HYGIENE Lesson III. (Forty Minutes.)",
+          "end_boundary": "What about fresh air in the homes and public places?",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Health and Hygiene Lesson IV",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": ". 11 July HEALTH AND HYGIENE Lesson IV.",
+          "end_boundary": "Tell What should be done in case of the accident mentioned.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [],
+      "notes": "This file contains three sequential Health and Hygiene lessons (II, III, and IV) as indicated in the table of contents. Each lesson has clear boundaries with lesson headings and ends with review questions. Lesson II includes recipes for beneficial drinks, Lesson III covers public health topics, and Lesson IV references an accompanying pamphlet about eyesight care.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12616,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 13809,
+        "output_tokens": 448,
+        "cost": 0.0481
+      }
+    }
+  ]
+}

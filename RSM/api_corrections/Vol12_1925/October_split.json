@@ -1,0 +1,53 @@
+{
+  "volume": 12,
+  "month": "October",
+  "year": 1925,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1401,
+  "files": [
+    {
+      "source_file": "October_Vol12_08_Literature_American_Literature_Coming_to_its_Own.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "American Poets and the World War",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in December) AMERICAN POETS",
+          "end_boundary": "sure to develop a group of singers. QUESTIONS AND",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Social Service - The Spirit of Social Work",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in December )",
+          "end_boundary": "Why is long, continued supervision of a family sometimes necessary?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "THE RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains two distinct lesson sections from the Guide Lessons for December: Lesson III on Literature focusing on American war poets (Joyce Kilmer, Alan Seeger, Charles Divine), and Lesson IV on Social Service discussing the spirit and philosophy of social work. Each lesson has its own questions and problems section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 18691,
+      "tier": 1,
+      "pdf_pages": [
+        631,
+        632,
+        633,
+        634
+      ],
+      "api_usage": {
+        "input_tokens": 44921,
+        "output_tokens": 353,
+        "cost": 0.1401
+      }
+    }
+  ]
+}

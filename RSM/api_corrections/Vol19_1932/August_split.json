@@ -1,0 +1,162 @@
+{
+  "volume": 19,
+  "month": "August",
+  "year": 1932,
+  "total_merged": 3,
+  "total_splits": 5,
+  "total_cost": 0.4827,
+  "files": [
+    {
+      "source_file": "August_Vol19_01_Frontispiece_Beauty_Spot_in_the_Sierras_Frontispiece.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Literature in the Home",
+          "category": "Article",
+          "author": "Elsie C. Carroll",
+          "start_boundary": "Literature in the Home By Elsie C. Carroll SLOGAN A poem",
+          "end_boundary": "study of literature should become a part of the daily life",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "By Grace Ye Are Saved",
+          "category": "Article",
+          "author": "Nephi Jensen",
+          "start_boundary": "By Grace Ye Are Saved By Nephi Jensen THAT the source",
+          "end_boundary": "complete victory over the foes of the soul which is the",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LITERATURE IN THE HOME",
+        "BY GRACE YE ARE SAVED"
+      ],
+      "notes": "This file contains two complete articles from the August 1932 issue. The first article 'Literature in the Home' by Elsie C. Carroll runs from the beginning through page 452, followed by 'By Grace Ye Are Saved' by Nephi Jensen which appears to continue beyond the end of this file fragment. Both articles are substantive pieces that match entries in the table of contents.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 18571,
+      "tier": 1,
+      "pdf_pages": [
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363
+      ],
+      "api_usage": {
+        "input_tokens": 69017,
+        "output_tokens": 396,
+        "cost": 0.213
+      }
+    },
+    {
+      "source_file": "August_Vol19_13_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes to the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes to the Field Eliza R. Snow Memorial",
+          "end_boundary": "We are glad to note the widespread interest",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": null,
+          "start_boundary": "Notes from the Field THE \"GOSPEL WAGON,\" RIGBY",
+          "end_boundary": "a very appropriate and delightful entertainment.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "NOTES FROM THE FIELD",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains two distinct sections: 'Notes to the Field' which includes contest announcements and administrative information, and 'Notes from the Field' which contains reports from various stakes and branches. The split occurs at the clear transition between these two different types of content.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 9436,
+      "tier": 1,
+      "pdf_pages": [
+        540,
+        541,
+        542,
+        543,
+        544,
+        545
+      ],
+      "api_usage": {
+        "input_tokens": 52793,
+        "output_tokens": 329,
+        "cost": 0.1633
+      }
+    },
+    {
+      "source_file": "August_Vol19_21_Article_Lesson_Department.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson Department",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson Department Theology and Testimony DOCTRINE AND",
+          "end_boundary": "Social Problems of Childhood,\" pp. 1-2.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSON DEPARTMENT"
+      ],
+      "notes": "This is a single comprehensive lesson department containing multiple sections: Theology and Testimony (Doctrine and Covenants), Teachers' Topic (The Beatitudes), Literature (The Delight of Great Books), and Social Service (Child Health and Protection). All sections are part of one unified lesson department guide, not separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 48949,
+      "tier": 2,
+      "pdf_pages": [
+        548,
+        549,
+        550,
+        551,
+        552,
+        553,
+        554,
+        555,
+        556,
+        557,
+        558,
+        559,
+        560,
+        561
+      ],
+      "api_usage": {
+        "input_tokens": 34245,
+        "output_tokens": 242,
+        "cost": 0.1064
+      }
+    }
+  ]
+}

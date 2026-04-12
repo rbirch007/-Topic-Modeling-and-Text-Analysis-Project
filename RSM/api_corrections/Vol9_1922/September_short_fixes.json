@@ -1,0 +1,40 @@
+{
+  "volume": 9,
+  "month": "September",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0214,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "September_Vol9_14b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 73,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a header fragment showing lesson titles. The actual Guide Lessons content in the PDF shows detailed lesson content about prayer, work/business, and literature, but this file only contains a malformed header with no substantive content.",
+      "api_usage": {
+        "input_tokens": 6351,
+        "output_tokens": 156,
+        "cost": 0.0214
+      },
+      "pdf_pages": [
+        122,
+        123,
+        124,
+        125
+      ]
+    }
+  ]
+}

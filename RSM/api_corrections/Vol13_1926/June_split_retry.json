@@ -1,0 +1,30 @@
+{
+  "volume": 13,
+  "month": "June",
+  "year": 1926,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 2,
+  "created": 1,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "c",
+      "title": "Official Instructions",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "General Sessions",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "General Conference Summary",
+      "new_file": "June_Vol13_10c_Article_General_Conference_Summary.txt",
+      "chars": 10093,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "volume": 57,
+  "month": "April",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V57_04_01_Frnt_Most_Late.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (871 chars removed)"
+    },
+    {
+      "file": "V57_04_02_SpFt_President_Counselo.txt",
+      "action": "note",
+      "result": "INFO: File contains content about President Harold B. Lee but filename suggests it should be about a different counselor"
+    },
+    {
+      "file": "V57_04_03_SpFt_President_Counselo.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V57_04_16_SpFt_A_New_Kearl.txt",
+      "action": "note",
+      "result": "INFO: File appears to start mid-story and is missing the beginning of 'A New Season for Christy'"
+    },
+    {
+      "file": "V57_04_35_SpFt_President.txt",
+      "action": "append",
+      "result": "APPLIED append (103 chars added)"
+    },
+    {
+      "file": "V57_04_36_Poem_Longer_Brown.txt",
+      "action": "note",
+      "result": "INFO: File contains prose text about apple trees instead of the expected poem 'Longer Days'"
+    }
+  ]
+}

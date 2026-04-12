@@ -1,0 +1,28 @@
+{
+  "volume": 52,
+  "month": "August",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_08_05_SpFt_Companionship_Walc.txt",
+      "issue_type": "bleed_end",
+      "description": "Article file appears to be correctly trimmed at natural ending point",
+      "action": "note",
+      "text": "The article file ends appropriately with a complete thought about learning gospel truths. The boundary text 'But there was so much more to' mentioned in the previous attempt is not present in the current article file content.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_08_19_Fict_Ring_Thulin.txt",
+      "issue_type": "bleed_end",
+      "description": "Article ends mid-sentence with incomplete text about little arms around neck",
+      "action": "trim_end",
+      "text": "She turned and leaned down, and all her reserve melted away for just a moment as she felt the little arms warm ground her neck.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

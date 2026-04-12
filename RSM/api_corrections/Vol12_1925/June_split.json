@@ -1,0 +1,55 @@
+{
+  "volume": 12,
+  "month": "June",
+  "year": 1925,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.1121,
+  "files": [
+    {
+      "source_file": "June_Vol12_13_Article_Family_Ties_Amy_Brown_Lyman.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Family Ties",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "FAMILY TIES Mrs. Amy Brown Lyman, General Secretary I",
+          "end_boundary": "spirit of self-sacrifice in",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY CONFERENCE",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains a single article 'Family Ties' by Amy Brown Lyman that appears to be part of Relief Society Conference proceedings. The text includes her main address on family solidarity and parental responsibility, followed by other conference proceedings including plays, announcements, and additional speakers' remarks. All content appears to be part of one continuous conference report rather than separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 51528,
+      "tier": 2,
+      "pdf_pages": [
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366
+      ],
+      "api_usage": {
+        "input_tokens": 36072,
+        "output_tokens": 259,
+        "cost": 0.1121
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "volume": 8,
+  "month": "March",
+  "year": 1921,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0415,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "March_Vol8_01_Frontispiece_Mrs._Zina_D._Young_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 94,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption for the portrait of Mrs. Zina D. Young shown on page 139. The text matches exactly what appears under the photograph.",
+      "api_usage": {
+        "input_tokens": 6150,
+        "output_tokens": 145,
+        "cost": 0.0206
+      },
+      "pdf_pages": [
+        136,
+        137,
+        138,
+        139
+      ]
+    },
+    {
+      "source_file": "March_Vol8_11b_Guide_Lessons_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 70,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (37-40) contain 'Notes from the Field' content about Relief Society activities, reorganizations, and memorials. No Guide Lessons content about 'Work and Business' is visible in these pages. This appears to be a mismatched file that should correspond to different PDF pages.",
+      "api_usage": {
+        "input_tokens": 6122,
+        "output_tokens": 168,
+        "cost": 0.0209
+      },
+      "pdf_pages": [
+        37,
+        38,
+        39,
+        40
+      ]
+    }
+  ]
+}

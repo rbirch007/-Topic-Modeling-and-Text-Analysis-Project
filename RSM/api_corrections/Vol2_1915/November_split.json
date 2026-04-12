@@ -1,0 +1,38 @@
+{
+  "volume": 2,
+  "month": "November",
+  "year": 1915,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.095,
+  "files": [
+    {
+      "source_file": "November_Vol2_11_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 515 Genealogy. SOURCES OF INFORMATION",
+          "end_boundary": "D. E. Burley, General Passenger Agent, O. S. L., Salt Lake City, Utah",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains the complete Guide Lessons section which includes multiple sub-sections: Genealogy, Home Ethics and Art, a poem 'The Crown That I Would Wear', and various advertisements. All content appears to be part of the single Guide Lessons article from the table of contents, with the advertisements being part of the magazine's standard format rather than separate articles.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13289,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 30294,
+        "output_tokens": 275,
+        "cost": 0.095
+      }
+    }
+  ]
+}

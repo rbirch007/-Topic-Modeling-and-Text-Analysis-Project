@@ -1,0 +1,132 @@
+{
+  "volume": 17,
+  "month": "April",
+  "year": 1930,
+  "mode": "find_missing",
+  "total_missing": 6,
+  "total_searched": 6,
+  "total_cost": 0.1218,
+  "stats": {
+    "found": 0,
+    "not_found": 6,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Frontispiece Portrait of Lucy Mack Smith",
+      "printed_page": 168,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Portrait of Amy Brown Lyman",
+      "printed_page": 174,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 137-140 from May guide lessons, not pages 170-174 where the Amy Brown Lyman portrait would be located. The images contain guide lessons about courtesy and literature, not portrait content.",
+      "api_usage": {
+        "input_tokens": 7377,
+        "output_tokens": 141,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        170,
+        171,
+        172,
+        173
+      ]
+    },
+    {
+      "title": "Portrait of Maud May Babcock",
+      "printed_page": 182,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 209-212, but the Portrait of Maud May Babcock article is listed on page 182 in the table of contents. The images provided do not contain page 182, so the article cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7385,
+        "output_tokens": 148,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    },
+    {
+      "title": "Portrait of Martha Hughes Cannon",
+      "printed_page": 188,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 209-212) do not contain the article 'Portrait of Martha Hughes Cannon' which should appear on page 188 according to the table of contents. The images show advertisements and the magazine cover/contents page, but not the missing article content.",
+      "api_usage": {
+        "input_tokens": 7373,
+        "output_tokens": 147,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    },
+    {
+      "title": "Program for 1930 Group Conventions",
+      "printed_page": 202,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 209-212, but the article 'Program for 1930 Group Conventions' is listed on page 202 in the table of contents. The images provided do not contain page 202, so the article cannot be found in these specific pages.",
+      "api_usage": {
+        "input_tokens": 7385,
+        "output_tokens": 151,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    },
+    {
+      "title": "When It's Almost Blossom Time. Lydia Hall",
+      "printed_page": 218,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Lydia Hall",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 PDF page images provided (pages 209-212). The article should appear on page 218 according to the table of contents, but that page is not included in the images provided.",
+      "api_usage": {
+        "input_tokens": 7405,
+        "output_tokens": 150,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        209,
+        210,
+        211,
+        212
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "volume": 15,
+  "month": "October",
+  "year": 1928,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1913,
+  "files": [
+    {
+      "source_file": "October_Vol15_18_Article_Work_and_Business.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I Theology and Testimony (First Week in December)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I Theology and Testimony (First",
+          "end_boundary": "what our future is to be.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II Work and Business (Second Week in December)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (Second",
+          "end_boundary": "what will you do with this gift.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III Literature (Third Week in December)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Third Week in",
+          "end_boundary": "the lines that refer to the flower.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV Social Service (Fourth Week in December)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week",
+          "end_boundary": "reason for the parental movement.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains four distinct lesson sections for December, each with different subject areas: Theology/Testimony, Work/Business, Literature, and Social Service. Each lesson has its own content, questions, and structure. The Literature lesson includes extensive biographical information and poetry samples from Gladys Ann Wagstaff and Ruth Harwood.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 29069,
+      "tier": 1,
+      "pdf_pages": [
+        275,
+        276,
+        277,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289
+      ],
+      "api_usage": {
+        "input_tokens": 60821,
+        "output_tokens": 588,
+        "cost": 0.1913
+      }
+    }
+  ]
+}

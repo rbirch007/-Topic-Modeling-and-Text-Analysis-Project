@@ -1,0 +1,38 @@
+{
+  "volume": 14,
+  "month": "February",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0241,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Land of Northern Lights Kate Palmer Macfarlane",
+      "printed_page": 55,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Kate Palmer Macfarlane",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 PDF page images provided (pages 63-66). The article should appear on page 55 according to the table of contents, but the images provided start from page 63, so the article pages are not included in this set of images.",
+      "api_usage": {
+        "input_tokens": 7198,
+        "output_tokens": 164,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        63,
+        64,
+        65,
+        66
+      ]
+    }
+  ]
+}

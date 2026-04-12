@@ -1,0 +1,44 @@
+{
+  "volume": 14,
+  "month": "September",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 2,
+  "total_searched": 2,
+  "total_cost": 0.0243,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Greatest of All American Books",
+      "printed_page": 437,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (426-429). The images show biographical content about Sarah Andrews Bailey from the Relief Society Magazine, but do not contain the missing article 'The Greatest of All American Books' which should appear on page 437 according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7338,
+        "output_tokens": 150,
+        "cost": 0.0243
+      },
+      "pdf_pages": [
+        426,
+        427,
+        428,
+        429
+      ]
+    },
+    {
+      "title": "Lehi Blessing his Son Joseph (Illustrated)",
+      "printed_page": 438,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

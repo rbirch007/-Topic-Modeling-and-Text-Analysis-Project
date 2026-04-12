@@ -1,0 +1,62 @@
+{
+  "volume": 4,
+  "month": "September",
+  "year": 1917,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0438,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "September_Vol4_02_Frontispiece_Art_Glass_Window_in_the_Salt_Lake_Temple_Frontispiece_A_Frie.txt",
+      "status": "complete",
+      "current_chars": 102,
+      "complete_text": null,
+      "title": "ART GLASS WINDOW IN THE SALT LAKE TEMPLE",
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption describing an art glass window depicting the First Vision. The file contains the full caption text as it appears in the table of contents.",
+      "api_usage": {
+        "input_tokens": 6394,
+        "output_tokens": 169,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        545,
+        546,
+        547,
+        548
+      ]
+    },
+    {
+      "source_file": "September_Vol4_11c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 102,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only lesson titles/headers that appear to be table of contents fragments. The actual Guide Lessons section in the PDF shows 'Lesson I. Theology and Testimony' with full content about the Abrahamic Age, but no separate lessons for 'Work and Business' or 'Genealogy and Literature' are visible in these pages. This appears to be a header artifact.",
+      "api_usage": {
+        "input_tokens": 6380,
+        "output_tokens": 199,
+        "cost": 0.0221
+      },
+      "pdf_pages": [
+        43,
+        44,
+        45,
+        46
+      ]
+    }
+  ]
+}

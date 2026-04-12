@@ -1,0 +1,48 @@
+{
+  "volume": 10,
+  "month": "November",
+  "year": 1923,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1156,
+  "files": [
+    {
+      "source_file": "November_Vol10_17_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes From the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "Notes from the Field Amy Brown Lyman",
+          "end_boundary": "Death was but an entrance to a larger sphere.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for January",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for December LESSON I Theology",
+          "end_boundary": "therefore we include the photograph of the respective author under discussion.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains two distinct sections: Notes from the Field (which includes various stake reports and memoriam notices) and Guide Lessons for January (which includes Lesson I on Theology/Spiritual Service and the beginning of Lesson III on Literature/John Greenleaf Whittier). The Guide Lessons section appears to be incomplete, cutting off mid-sentence in the Literature lesson foreword.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16009,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36641,
+        "output_tokens": 378,
+        "cost": 0.1156
+      }
+    }
+  ]
+}

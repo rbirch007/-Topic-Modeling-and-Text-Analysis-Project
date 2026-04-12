@@ -1,0 +1,28 @@
+{
+  "volume": 18,
+  "month": "May",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 2,
+  "created": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Mothers' Day",
+      "new_file": "May_Vol18_23a_Editorial_Mothers_Day.txt",
+      "chars": 3760,
+      "match_type": "short_window_3w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Twelve Outstanding Women",
+      "new_file": "May_Vol18_23c_Editorial_Twelve_Outstanding_Women.txt",
+      "chars": 2487,
+      "match_type": "short_window_6w",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

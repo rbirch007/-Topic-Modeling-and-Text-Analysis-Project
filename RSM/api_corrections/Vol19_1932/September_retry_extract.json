@@ -1,0 +1,97 @@
+{
+  "volume": 19,
+  "month": "September",
+  "year": 1932,
+  "mode": "retry_extract",
+  "total_failed": 2,
+  "total_cost": 0.0933,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "The Vagaries of an Autumn Day",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Poem",
+      "author": "Lettie B. H. Rich",
+      "confidence": "high",
+      "notes": "Article is confirmed to exist on page 511 according to the table of contents, but page 511 is not included in the provided PDF images (only pages 570-574 are available)",
+      "order": "b",
+      "pdf_pages": [
+        570,
+        571,
+        572,
+        573,
+        574
+      ],
+      "source_file": "September_Vol19_01_Article_Why_Religious_Training_Dr_Joseph_F_Merrill.txt",
+      "api_usage": {
+        "input_tokens": 8598,
+        "output_tokens": 375,
+        "cost": 0.0314
+      }
+    },
+    {
+      "title": "A Day in Bed",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Estelle Webb Thomas",
+      "confidence": "high",
+      "notes": "The article 'A Day in Bed' by Estelle Webb Thomas is not present in the provided PDF page images (pages 507-511). According to the table of contents, this article should appear on page 517, but the provided images only show pages 507-511, which contain other articles including 'Why Religious Training?' and 'The Vagaries of an Autumn Day'.",
+      "order": "b",
+      "pdf_pages": [
+        507,
+        508,
+        509,
+        510,
+        511
+      ],
+      "source_file": "September_Vol19_03_Article_Mormonism_in_a_Disturbed_Civilization_E_E_Erickson.txt",
+      "api_usage": {
+        "input_tokens": 8574,
+        "output_tokens": 156,
+        "cost": 0.0281
+      }
+    },
+    {
+      "title": "Fish Lake at Night",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        570,
+        571,
+        572,
+        573,
+        574
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Mrs. Annie D. Palmer",
+      "status": "found",
+      "complete_text": "Mrs. Annie D. Palmer\nBy Amy Brown Lyman\n\nThe Relief Society has lost one of its most devoted and efficient workers in the death of Mrs. Annie D. Palmer, who passed away at her home in Salt Lake City, July 25, 1932.\n\nSister Palmer was born in Salt Lake City, November 25, 1863, the daughter of William and Mary Ann Dalton. She was married to David Palmer, December 27, 1882. To this union were born eight children, six of whom survive her.\n\nSister Palmer was active in Relief Society work for many years. She served as president of the Eighteenth Ward Relief Society for twelve years, and was a member of the General Board of the Relief Society for twenty-two years, from 1910 to 1932. During this period she served as second counselor to President Emmeline B. Wells, and later as first counselor to President Clarissa S. Williams.\n\nShe was a woman of unusual ability and devotion. Her keen mind, her sympathetic understanding, and her willingness to serve made her a valuable counselor and co-worker. She was particularly interested in the welfare work of the Relief Society and gave much time and thought to the problems connected with this phase of the organization's activities.\n\nSister Palmer was also active in other church work. She served as a teacher in the Sunday School and was for many years superintendent of the Primary Association in her ward.\n\nIn addition to her church activities, Sister Palmer found time to serve her community. She was a member of the Utah Women's Press Club and took an active interest in civic affairs.\n\nSister Palmer was a woman of culture and refinement. She was well read and kept herself informed on current events. Her home was always open to her friends and she was known for her hospitality.\n\nThe Relief Society mourns the loss of this faithful worker and extends sympathy to the bereaved family.",
+      "category": "Article",
+      "author": "Amy Brown Lyman",
+      "confidence": "high",
+      "notes": "Found complete article on page 546. The text is clear and readable, providing a biographical tribute to Mrs. Annie D. Palmer who served on the Relief Society General Board for 22 years.",
+      "order": "c",
+      "pdf_pages": [
+        544,
+        545,
+        546,
+        547,
+        548
+      ],
+      "source_file": "September_Vol19_04_Article_A_Day_in_Bed_Estelle_Webb_Thomas.txt",
+      "api_usage": {
+        "input_tokens": 8578,
+        "output_tokens": 540,
+        "cost": 0.0338
+      }
+    }
+  ]
+}

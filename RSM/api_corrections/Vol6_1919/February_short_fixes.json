@@ -1,0 +1,40 @@
+{
+  "volume": 6,
+  "month": "February",
+  "year": 1919,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0223,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "February_Vol6_17c_Guide_Lessons_Guide_Lessons_-_Lesson_II_-_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 169,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The file contains a Guide Lessons header for Lesson II about Work and Business scheduled for the second week in March, but this content does not appear in any of the provided PDF pages (42-45). The PDF pages show poems, articles about home construction, and official round table content, but no Guide Lessons material.",
+      "api_usage": {
+        "input_tokens": 6509,
+        "output_tokens": 183,
+        "cost": 0.0223
+      },
+      "pdf_pages": [
+        42,
+        43,
+        44,
+        45
+      ]
+    }
+  ]
+}

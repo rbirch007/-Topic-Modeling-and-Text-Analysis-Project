@@ -1,0 +1,72 @@
+{
+  "volume": 54,
+  "month": "May",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 8,
+  "skipped": 0,
+  "failed": 4,
+  "entries": [
+    {
+      "file": "V54_05_01_Fict_The_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (27 chars)"
+    },
+    {
+      "file": "V54_05_02_Art_Well_of_Tangren.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (3455 chars removed)"
+    },
+    {
+      "file": "V54_05_04_SpFt_These_Smith.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2706 chars added)"
+    },
+    {
+      "file": "V54_05_05_Poem_In_Jacobson.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V54_05_07_Poem_Mothers_Lamb.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V54_05_11_Poem_To_Be_a_Thomas.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (662 chars)"
+    },
+    {
+      "file": "V54_05_16_GenFt_The_Barthel.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1579 chars removed)"
+    },
+    {
+      "file": "V54_05_25_SpFt_Marianne.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (814 chars removed)"
+    },
+    {
+      "file": "V54_05_28_GenFt_Bday_Congrats.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (561 chars removed)"
+    },
+    {
+      "file": "V54_05_29_Poem_I_Saw_Coles.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V54_05_30_Poem_Desert_Chamberlin.txt",
+      "action": "trim_end",
+      "result": "FAILED trim_end: Boundary text not found"
+    },
+    {
+      "file": "V54_05_31_Poem_Winds_Bowles.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (291 chars)"
+    }
+  ]
+}

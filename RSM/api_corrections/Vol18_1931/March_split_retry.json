@@ -1,0 +1,38 @@
+{
+  "volume": 18,
+  "month": "March",
+  "year": 1931,
+  "timestamp": "20260316_210707",
+  "dry_run": false,
+  "retried": 2,
+  "created": 2,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "b",
+      "title": "The Dreamer",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Our Birthday",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Notes to the Field",
+      "new_file": "March_Vol18_13b_Notes_from_Field_Notes_to_the_Field.txt",
+      "chars": 3503,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Editorial - Our Mother Tongue",
+      "new_file": "March_Vol18_13c_Editorial_Editorial_-_Our_Mother_Tongue.txt",
+      "chars": 1010,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

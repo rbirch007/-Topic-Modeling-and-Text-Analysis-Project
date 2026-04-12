@@ -1,0 +1,19 @@
+{
+  "volume": 57,
+  "month": "July",
+  "year": 1970,
+  "source": "pdf_audit",
+  "corrections": [
+    {
+      "file": "V57_07_24_Poem_San_Cutler.txt",
+      "status": "needs_fix",
+      "issue_type": "wrong_content",
+      "description": "The article file contains completely wrong content - it shows meatless casserole recipes by Edythe K. Watson instead of a poem by Grayce E. Cutler. The page images show recipe content, not poetry.",
+      "action": "note",
+      "text": "The article file metadata indicates this should be a poem by Grayce E. Cutler on page 523, but the page images show meatless casserole recipes by Edythe K. Watson on pages 512-513. There appears to be a mismatch between the expected content and actual page content.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

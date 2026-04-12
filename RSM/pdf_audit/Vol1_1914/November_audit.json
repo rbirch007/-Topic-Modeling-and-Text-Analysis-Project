@@ -1,0 +1,251 @@
+{
+  "volume": 1,
+  "month": "November",
+  "year": 1914,
+  "total": 12,
+  "ok": 11,
+  "flagged": 1,
+  "empty": 0,
+  "records": [
+    {
+      "file": "V1_1914_Nov_00_BOARD.txt",
+      "body_len": 3770,
+      "article_words": 264,
+      "words_in_ocr": 264,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_00_CONTENTS.txt",
+      "body_len": 202,
+      "article_words": 22,
+      "words_in_ocr": 22,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_00_Misc.txt",
+      "body_len": 18647,
+      "article_words": 917,
+      "words_in_ocr": 911,
+      "pct_in_ocr": 0.9935,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "additional",
+        "advertisements",
+        "consolidated",
+        "files",
+        "poem",
+        "separate"
+      ]
+    },
+    {
+      "file": "V1_1914_Nov_01_Edit_Editorial.txt",
+      "body_len": 2355,
+      "article_words": 187,
+      "words_in_ocr": 187,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_02_Gen_Genealogy_and_Testimony.txt",
+      "body_len": 4606,
+      "article_words": 312,
+      "words_in_ocr": 312,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_03_HomeEthics_HomeEthics.txt",
+      "body_len": 10730,
+      "article_words": 723,
+      "words_in_ocr": 723,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+      "body_len": 4356,
+      "article_words": 354,
+      "words_in_ocr": 354,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_05_Lit_Literature.txt",
+      "body_len": 4300,
+      "article_words": 308,
+      "words_in_ocr": 308,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "V1_1914_Nov_06_Art_Art.txt",
+      "body_len": 3996,
+      "article_words": 263,
+      "words_in_ocr": 262,
+      "pct_in_ocr": 0.9962,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "arth"
+      ]
+    },
+    {
+      "file": "V1_1914_Nov_07_Art_October_Conference.txt",
+      "body_len": 4945,
+      "article_words": 358,
+      "words_in_ocr": 357,
+      "pct_in_ocr": 0.9972,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ins"
+      ]
+    },
+    {
+      "file": "V1_1914_Nov_08_Notice_Notices.txt",
+      "body_len": 4943,
+      "article_words": 379,
+      "words_in_ocr": 378,
+      "pct_in_ocr": 0.9974,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "charit"
+      ]
+    },
+    {
+      "file": "V1_1914_Nov_09_Art_Remarks_Pres_Emmeline_B_Wells_1.txt",
+      "body_len": 9120,
+      "article_words": 549,
+      "words_in_ocr": 549,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol1_No11_November_1914.txt",
+    "ocr_chars": 43604,
+    "ocr_unique_words": 1844,
+    "contents_xref": {
+      "entries_in_contents": 9,
+      "matched": 9,
+      "match_details": [
+        {
+          "title": "Remarks Pres. Emmeline B. Wells",
+          "page": 1,
+          "file": "V1_1914_Nov_09_Art_Remarks_Pres_Emmeline_B_Wells_1.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial",
+          "page": 4,
+          "file": "V1_1914_Nov_01_Edit_Editorial.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Genealogy and Testimony",
+          "page": 5,
+          "file": "V1_1914_Nov_02_Gen_Genealogy_and_Testimony.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Home-Ethics",
+          "page": 6,
+          "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Home Gardening for Women",
+          "page": 6,
+          "file": "V1_1914_Nov_04_HomeGarden_Home_Gardening_for_Women.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Literature",
+          "page": 8,
+          "file": "V1_1914_Nov_05_Lit_Literature.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Art",
+          "page": 9,
+          "file": "V1_1914_Nov_06_Art_Art.txt",
+          "score": 1.0
+        },
+        {
+          "title": "October Conference",
+          "page": 10,
+          "file": "V1_1914_Nov_07_Art_October_Conference.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notices",
+          "page": 14,
+          "file": "V1_1914_Nov_08_Notice_Notices.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "V1_1914_Nov_03_HomeEthics_HomeEthics.txt"
+      ]
+    }
+  }
+}

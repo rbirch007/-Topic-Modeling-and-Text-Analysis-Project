@@ -1,0 +1,129 @@
+{
+  "volume": 1,
+  "month": "March",
+  "year": 1914,
+  "total_files_checked": 18,
+  "files_correct": [
+    "V1_1914_Mar_03_Art_TheSaving.txt",
+    "V1_1914_Mar_04_Art_Genealogy.txt",
+    "V1_1914_Mar_05_Art_HomeEthics.txt",
+    "V1_1914_Mar_06_Art_HomeGarden.txt",
+    "V1_1914_Mar_08_Art_Architectu.txt",
+    "V1_1914_Mar_11_Art_Benefit.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Mar_01_Art_Relief.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of Relief Society Convention in Genealogy article",
+      "action": "replace_content",
+      "text": "Relief Society Convention in Genealogy.\nThe Convention which was announced for April 1st, 2nd, and 3rd, is postponed to the following week, owing to failure to secure railroad rates.\nThe Convention will be held on the 7th, 8th and 9th.\nThe tickets of all delegates will hold good till this convention is over, and none should plan to come to the Convention only part of the time.\nThis is a serious matter, sisters, and needs serious attention.\nIf your delegates are sent here to take these lessons, let that be their prime consideration.\nAll lesson matters should give way to this Convention.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Mar_02_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains magazine header information instead of poetry content",
+      "action": "note",
+      "text": "No poetry content found in OCR for this sequence",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Mar_07_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Literature lesson content instead of poetry",
+      "action": "replace_content",
+      "text": "LITERATURE Lesson III. (Twenty Minutes.) Ten minutes talk on Current Events.\nAutobiography of Benjamin Franklin: LESSON III.\nSubject: Franklin's struggle in England.\nReference: Chap.\nII and III, Autobiography. 1.\nFranklin's disappointment in regard to letter of assistance. (a) Gov.\nKeith breaks promises. (b) Franklin left on own resources in a strange land. 2.\nWork in English Printing Houses. (a) Spends first year at Palmer's.\nWrites pamphlet. (b) \"Works for Watts.\nWorks at press, in composing room, and at dispatch work. 3.\nEffects of Franklin's habits of temperance. (a) On himself. , (b) On companions in printing house. 4.\nFriendships with landlady in Duke street. 5.\nFranklin as a swimmer.\nEffect on health. 6.\nNegotiations with Mr.\nDenham for mercantile business.\nQUESTIONS. 1.\nWhat was the secret of Franklin's success in making friends so readily? 2.\nWere Franklin's experiences with Gov.\nKeith a hindrance or a benefit to him?\nWhy? 3.\nMention two advantages he had over his associates in the office because of his temperate habits. 4.\nWhat opportunities did he have for obtaining books to read? 5.\nWhat was the basis of his friendship with his landlady? 6.\nIn summing up, what would you say Franklin gained by his residence in England?",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Mar_09_Art_Bulletins.txt",
+      "issue_type": "missing_text",
+      "description": "Missing 'Relief Society Bulletin' in address line",
+      "action": "replace_content",
+      "text": "Address all inquiries and Bulletin business letters to Relief Society Bulletin, Room 28, Bishops' Building, Salt Lake City.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Mar_10_Art_Officers.txt",
+      "issue_type": "bleed_end",
+      "description": "File includes content from Relief Society Convention article",
+      "action": "trim_end",
+      "text": "This will enable all our sisters to be present and to take part in this important meeting.\nAs our Relief Society Conference will convene on April 2nd, Thursday, the:  officers' meeting Will be held Friday morning.\nThe General Conference itself is to be held on April -4th, 5th and 6th, Saturday, Sunday and Monday, which would put our officers' meeting off till the 7th.\nBut our convention will begin on the 7th, continuing on the 8th and 9th.\nThe notice of the change in the dates for our Genealogical Convention follows:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Mar_12_Art_Bookon.txt",
+      "issue_type": "bleed_end",
+      "description": "File includes advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "This is our first attempt to supply and prepare a lesson book, and we trust our friends will support this enterprise liberally.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Mar_14_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of poetry",
+      "action": "note",
+      "text": "No poetry content found in OCR for this sequence - contains advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Mar_15_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of poetry",
+      "action": "note",
+      "text": "No poetry content found in OCR for this sequence - contains advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Mar_16_Art_SOUTH.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of article content",
+      "action": "note",
+      "text": "No article content found in OCR for this sequence - contains advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Mar_18_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of poetry",
+      "action": "note",
+      "text": "No poetry content found in OCR for this sequence - contains advertisements",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Many files contain advertisement content instead of actual articles or poetry. The OCR appears to have mixed content types, with several sequences containing only advertisements rather than editorial content. The Literature lesson content was correctly identified but misclassified as poetry.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Mar_10_Art_Officers.txt",
+      "issue_type": "bleed_end",
+      "description": "File includes content from Relief Society Convention article",
+      "action": "trim_end",
+      "text": "This will enable all our sisters to be present and to take part in this important meeting.\nAs our Relief Society Conference will convene on April 2nd, Thursday, the:  officers' meeting Will be held Friday morning.\nThe General Conference itself is to be held on April -4th, 5th and 6th, Saturday, Sunday and Monday, which would put our officers' meeting off till the 7th.\nBut our convention will begin on the 7th, continuing on the 8th and 9th.\nThe notice of the change in the dates for our Genealogical Convention follows:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Mar_12_Art_Bookon.txt",
+      "issue_type": "bleed_end",
+      "description": "File includes advertisement content that should be in misc",
+      "action": "trim_end",
+      "text": "This is our first attempt to supply and prepare a lesson book, and we trust our friends will support this enterprise liberally.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

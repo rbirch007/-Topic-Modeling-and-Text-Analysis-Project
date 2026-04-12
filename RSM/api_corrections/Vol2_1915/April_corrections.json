@@ -1,0 +1,93 @@
+{
+  "volume": 2,
+  "month": "April",
+  "year": 1915,
+  "total_files_checked": 12,
+  "files_correct": [
+    "April_Vol2_01_Article_Service_Maud_Baggarley.txt",
+    "April_Vol2_05_Current_Topics_Current_Topics_James_H._Anderson.txt",
+    "April_Vol2_06_Prince_of_Ur_A._Prince_of_Ur_Homespun.txt",
+    "April_Vol2_07_Article_Early_Development_of_the_Textile_Art_Rose_H._Widtsoe.txt",
+    "April_Vol2_10a_Guide_Lessons_Guide_Lessons_-_Theology_and_Testimony_Baptism.txt",
+    "April_Vol2_10b_Genealogy_Guide_Lessons_-_Genealogy_Family_Group_Forum.txt",
+    "April_Vol2_10c_Home_Ethics_Guide_Lessons_-_Home_Ethics_Truth.txt",
+    "April_Vol2_10d_Art_Guide_Lessons_-_Art_Devotees_and_Their_Shrines.txt"
+  ],
+  "corrections": [
+    {
+      "file": "April_Vol2_03_Article_Thanksgiving_Marie_Jensen.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'Clothing for Women Past Forty' article instead of 'Thanksgiving' poem by Marie Jensen",
+      "action": "replace_content",
+      "text": "Thanksgiving. If life was what we made it, And brightest dreams came true, There'd be no sin nor sorrow, To burden me and you. But crosses come to every heart. And life will fade and die; Life's mission is for other things. To turn our thoughts on high. If you have worldly riches. Be thankful for your wealth. If you are free from sickness. Be thankful for your health. If you are down in poverty, 'Tis surely no disgrace; Be thankful, and with joy Life's toil and struggle face. While you are in life's morning. So young, so gay, and free, O turn your thoughts in gratitude For what God giveth thee; 'Twill make your pathway sweeter, 'Twill lead your hopes on high. The years will bring you greater joy. For gratitude can't die. And later, when life's scenes may change, When the bitter cup you drain. If all that made life bright seems gone. Your prayers are not in vain. If gratitude is in your heart. No sorrow can subdue That precious gift which God will lend To aid and comfort you. You'll find your sorrow you can bear. If you will thank your God Who sends forth rain and sunshine While you pass beneath His rod. Life's ills are Heaven's best blessings. They're sent in love to earth; Let's not forget who sent them. They'll prove what we are worth. BASALT, IDAHO. MARIE JENSEN.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "April_Vol2_08_Article_The_Notes_Word_of_Wisdom_from_the_Field_Maud_Baggarley_193.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains 'Notes from the Field' content that should be separate",
+      "action": "trim_end",
+      "text": "It seems impossible that any intelligent person could read the \"Word of Wisdom\" without feeling the thrill of testimony that bears witness to its holy and divine origin. LISTEN! READ! REMEMBER! Complaints reach this office of subscribers who fail to get their Magazines. If our good friends will remember the following rules, a good deal of this trouble can be avoided. Head every letter with the address of the writer. Spell out first name. Add Mrs. or Miss to name. In changing address, give both the old address and the new one. Send complete post office address. If there is any R. F. D. number or box number, be sure and send it to us.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol2_09_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Guide Lessons content that should be separate",
+      "action": "trim_end",
+      "text": "Note: The illustrations for this month are from photographs, kindly furnished by Kimball and Richards Company of this city. The Circular printed in the March number is now bound up separately, with names and addresses of the General Board and Stake Presidents added, and is on sale at Headquarters; price 10 cents.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol2_11_Article_Music_Spring_B._Cecil_Gates.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Sing la la la la for springtime, Hear the meadow lark sing, and la la la la, for joy time sweet spring time ? Spring.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Clothing for Women Past Forty The Two Sarahs",
+      "expected_page": 180,
+      "status": "merged_with_another",
+      "merged_into": "April_Vol2_03_Article_Thanksgiving_Marie_Jensen.txt"
+    }
+  ],
+  "notes": "Several files have content bleeding issues. The Thanksgiving article file contains the wrong content entirely. The Word of Wisdom article includes Notes from the Field content. The Editorial file includes Guide Lessons content. The Music file contains extensive advertisements. One article (Clothing for Women Past Forty) needs to be extracted as a separate file.",
+  "validated_corrections": [
+    {
+      "file": "April_Vol2_08_Article_The_Notes_Word_of_Wisdom_from_the_Field_Maud_Baggarley_193.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains 'Notes from the Field' content that should be separate",
+      "action": "trim_end",
+      "text": "It seems impossible that any intelligent person could read the \"Word of Wisdom\" without feeling the thrill of testimony that bears witness to its holy and divine origin. LISTEN! READ! REMEMBER! Complaints reach this office of subscribers who fail to get their Magazines. If our good friends will remember the following rules, a good deal of this trouble can be avoided. Head every letter with the address of the writer. Spell out first name. Add Mrs. or Miss to name. In changing address, give both the old address and the new one. Send complete post office address. If there is any R. F. D. number or box number, be sure and send it to us.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol2_09_Editorial_Editorial.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Guide Lessons content that should be separate",
+      "action": "trim_end",
+      "text": "Note: The illustrations for this month are from photographs, kindly furnished by Kimball and Richards Company of this city. The Circular printed in the March number is now bound up separately, with names and addresses of the General Board and Stake Presidents added, and is on sale at Headquarters; price 10 cents.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol2_11_Article_Music_Spring_B._Cecil_Gates.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Sing la la la la for springtime, Hear the meadow lark sing, and la la la la, for joy time sweet spring time ? Spring.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

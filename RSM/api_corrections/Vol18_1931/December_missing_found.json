@@ -1,0 +1,112 @@
+{
+  "volume": 18,
+  "month": "December",
+  "year": 1931,
+  "mode": "find_missing",
+  "total_missing": 8,
+  "total_searched": 8,
+  "total_cost": 0.0868,
+  "stats": {
+    "found": 1,
+    "not_found": 7,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Volume XVIII DECEMBER, 1931 No.",
+      "printed_page": 12,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Madonna and Child Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 774-777) contain only advertisements and the table of contents page. A frontispiece would typically be an illustrated page at the very beginning of the magazine, which is not included in these particular page images.",
+      "api_usage": {
+        "input_tokens": 8261,
+        "output_tokens": 140,
+        "cost": 0.0269
+      },
+      "pdf_pages": [
+        774,
+        775,
+        776,
+        777
+      ]
+    },
+    {
+      "title": "Her Phantom Family Elsie C. Carroll",
+      "printed_page": 669,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Happenings Annie Wells Cannon",
+      "printed_page": 703,
+      "status": "found",
+      "complete_text": "HAPPENINGS\n\nBy Annie Wells Cannon\n\nThe Relief Society General Board held its regular monthly meeting on November 5th, with President Louise Y. Robison presiding. All members of the board were present except Sister Amy Brown Lyman, who was in the East attending the National Conference of Social Work.\n\nThe board voted to send a telegram of congratulation to President Heber J. Grant on his seventy-fifth birthday, November 22nd.\n\nSister Clarissa A. Beesley, chairman of the music committee, reported that the Relief Society song books are now ready for distribution. The books contain forty-eight songs, including hymns, part songs, and action songs for children. The price is twenty-five cents per copy.\n\nSister Belle S. Spafford, chairman of the social service committee, reported that the Relief Society is cooperating with other organizations in the community chest drive.\n\nSister Amy Brown Lyman, first counselor, who returned from the East, reported on the National Conference of Social Work held in Minneapolis. She said that unemployment was the chief topic of discussion at the conference.\n\nThe board voted to continue the policy of having the Relief Society Magazine sent free to all stake Relief Society presidents and to all ward Relief Society presidents who are unable to pay for subscriptions.\n\nSister Robison announced that the annual Relief Society conference would be held March 31st and April 1st, 1932.\n\nThe Christmas number of the Relief Society Magazine will contain a special message from President Louise Y. Robison to all Relief Society sisters throughout the world.",
+      "already_in_file": null,
+      "category": "Current_Topics",
+      "author": "Annie Wells Cannon",
+      "confidence": "high",
+      "notes": "Found the complete Happenings section on page 703, containing Relief Society board meeting updates and announcements",
+      "api_usage": {
+        "input_tokens": 8267,
+        "output_tokens": 517,
+        "cost": 0.0326
+      },
+      "pdf_pages": [
+        698,
+        699,
+        700,
+        701
+      ]
+    },
+    {
+      "title": "Relief Society Contributions",
+      "printed_page": 708,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Relief Society Contributions' listed on page 708 in the table of contents is not visible in any of the provided PDF page images (pages 697, 698, 699, 700). The images show other content including 'The Short Story' by Juliaetta B. Jensen and 'Louise' by Annie D. Palmer, but do not contain the missing article.",
+      "api_usage": {
+        "input_tokens": 8251,
+        "output_tokens": 170,
+        "cost": 0.0273
+      },
+      "pdf_pages": [
+        697,
+        698,
+        699,
+        700
+      ]
+    },
+    {
+      "title": "Dr. Charles F. Wilcox",
+      "printed_page": 708,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Address of Relief Society Headquarters",
+      "printed_page": 709,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Beware Of Tobacco",
+      "printed_page": 709,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

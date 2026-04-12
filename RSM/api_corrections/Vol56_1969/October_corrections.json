@@ -1,0 +1,187 @@
+{
+  "volume": 56,
+  "month": "October",
+  "year": 1969,
+  "total_files_checked": 30,
+  "files_correct": [
+    "V56_10_02_Poem_With_McEwan.txt",
+    "V56_10_05_Poem_Autumn_Hansen.txt",
+    "V56_10_07_Poem_Patterns_Fairbairn.txt",
+    "V56_10_11_Poem_Nauvoo.txt",
+    "V56_10_12_Poem_Home_Turner.txt",
+    "V56_10_15_Poem_Seedtime_Sabin.txt",
+    "V56_10_17_Poem_Autumn_Rothe.txt",
+    "V56_10_22_Poem_Tapestry_Shomaker.txt",
+    "V56_10_30_Poem_Ingeniously_Brown.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_10_01_Fict_Heart_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains multiple unrelated articles including testimony by Hugh B. Brown, reader letters, and table of contents instead of the Heart Room for Home Chapter 5",
+      "action": "replace_content",
+      "text": "HEAR'T ROOM FOR HOME I Alice Morrey Bailey 5 Chapter 5 SYNOPSIS: Several major changes have taken place in the Freeman family as a direct result of Kim, the father, and Mary Ann, the mother, bringing Kim's father from his lovely little home in Mayville, Utah, to Los Angeles to care for him after hospitalization for a fractured hip. Mary Ann has had to resign her teaching position to care for him, even though she has been supporting their son, Tommy, in his last year of college, and their daughter, Rosemary, has expected her to stand the expense of her coming wedding to Cary Marks. Rosemary, who has previously said she had no intention of working, applies for Mary Ann's teaching position, where she has been substituting, and gets it. Tommy blandly accepts a scholarship which has been available to him for the last two quarters. Nevertheless, the family budget is still strained, with Mary Ann feeling the brunt of it. ® For a moment Mary Ann was shocked, even frightened, at the command in Kim's voice. \"What's mine is yours, don't you know that, honey?\" he went on. \"You know what there is to spend. Go ahead and spend it.\" That was right. She did know how much there was to spend, but it was practically all spent by the time Kim got it. If only they had stayed in their smaller home, which was paid for! But it had seemed the only thing to do, to turn it in on a bigger place as the family grew. Four bedrooms had not been too much, with the children coming often, sometimes for overnight visits.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_10_03_SpFt_Testimony_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'testimony of the gospel will meet...' instead of beginning of Testimony article",
+      "action": "trim_start",
+      "text": "testimony of the gospel will meet the demands of home building with poise and dignity.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains poem, cover credits, and reader letters instead of From Near and Far content",
+      "action": "note",
+      "text": "OCR gap - From Near and Far content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_09_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 've the first shots available' instead of beginning of Woman's Sphere article",
+      "action": "trim_start",
+      "text": "ve the first shots available.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_13_GenFt_Birthday.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains fragment about father sending children to earth instead of Birthday Congratulations content",
+      "action": "note",
+      "text": "OCR gap - Birthday Congratulations content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_14_GenFt_Thoughts_Morley.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into casserole recipes instead of ending with Thoughts on College Beginnings",
+      "action": "trim_end",
+      "text": "because of the choice you made when you chose to open the door of education for your future.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_16_GenFt_Casserole_Watson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Black Walnut Gathering content instead of Casserole Cookery",
+      "action": "note",
+      "text": "OCR gap - Casserole Cookery content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_25_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Black Walnut Gathering content instead of Spiritual Living lesson",
+      "action": "note",
+      "text": "OCR gap - Spiritual Living lesson content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_26_GenFt_Visiting_Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Black Walnut Gathering and Make Your Own Baby's Book content instead of Visiting Teacher Message",
+      "action": "note",
+      "text": "OCR gap - Visiting Teacher Message content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_27_GenFt_Homemaking_Taylor.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Make Your Own Baby's Book content instead of Homemaking lesson",
+      "action": "note",
+      "text": "OCR gap - Homemaking lesson content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_10_28_GenFt_Social_Christensen.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into advertisements instead of ending with Social Relations lesson",
+      "action": "trim_end",
+      "text": "Why is Rosicky so effective in bringing out the best in everyone he meets?",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_29_GenFt_Notes_Activities.txt",
+      "issue_type": "wrong_content",
+      "description": "File is nearly empty instead of containing Relief Society Activities content",
+      "action": "note",
+      "text": "OCR gap - Relief Society Activities content not found in source",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 722,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Birthday Congratulations",
+      "expected_page": 800,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Casserole Cookery",
+      "expected_page": 756,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Multiple OCR gaps in lesson department content. Several files contain wrong content due to OCR extraction issues. The Heart Room for Home Chapter 5 content appears to be merged with other articles in the first file. Many lesson department articles are missing or contain wrong content.",
+  "validated_corrections": [
+    {
+      "file": "V56_10_03_SpFt_Testimony_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'testimony of the gospel will meet...' instead of beginning of Testimony article",
+      "action": "trim_start",
+      "text": "testimony of the gospel will meet the demands of home building with poise and dignity.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_09_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 've the first shots available' instead of beginning of Woman's Sphere article",
+      "action": "trim_start",
+      "text": "ve the first shots available.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_14_GenFt_Thoughts_Morley.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into casserole recipes instead of ending with Thoughts on College Beginnings",
+      "action": "trim_end",
+      "text": "because of the choice you made when you chose to open the door of education for your future.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_10_28_GenFt_Social_Christensen.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into advertisements instead of ending with Social Relations lesson",
+      "action": "trim_end",
+      "text": "Why is Rosicky so effective in bringing out the best in everyone he meets?",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

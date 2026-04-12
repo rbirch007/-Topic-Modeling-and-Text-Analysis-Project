@@ -1,0 +1,94 @@
+{
+  "volume": 18,
+  "month": "May",
+  "year": 1931,
+  "total_merged": 1,
+  "total_splits": 6,
+  "total_cost": 0.1444,
+  "files": [
+    {
+      "source_file": "May_Vol18_23_Article_Editorial.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Mothers' Day",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL Mothers' Day THROUGH the activity of the",
+          "end_boundary": "as a gift to be had for the seeking.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Another Victory for Women",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Another Victory for Women PRESIDENT HOOVER h a s",
+          "end_boundary": "anything to the contrary is absurd.",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "c",
+          "title": "Twelve Outstanding Women",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Twelve Outstanding Women GOOD HOUSEKEEPING magazine recently i n v i t e d",
+          "end_boundary": "the education of the women of the country.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Relief Society Handbook",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Relief Society Handbook Long and eagerly have our officers",
+          "end_boundary": "28 Bishop's Building, Salt Lake City, Utah.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Hats Off",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Hats Off Several years ago a strenuous effort",
+          "end_boundary": "cheerfully respond to the request of Church leaders.",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "Mother Heart of Gold",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Mother Heart of Gold Theodore E. Curtis has",
+          "end_boundary": "Price 25c each. $1.35 per doz.",
+          "confidence": "high",
+          "start_match_words": 4
+        }
+      ],
+      "running_headers_to_strip": [
+        "EDITORIAL",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains multiple editorial pieces from the May 1931 issue, all appearing to be part of the Editorial section. Each piece has a clear topic and distinct boundaries.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'c': start_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 11072,
+      "tier": 1,
+      "pdf_pages": [
+        335,
+        336,
+        337
+      ],
+      "api_usage": {
+        "input_tokens": 44893,
+        "output_tokens": 649,
+        "cost": 0.1444
+      }
+    }
+  ]
+}

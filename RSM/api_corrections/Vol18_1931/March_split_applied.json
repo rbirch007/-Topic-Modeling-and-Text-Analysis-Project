@@ -1,0 +1,57 @@
+{
+  "volume": 18,
+  "month": "March",
+  "year": 1931,
+  "timestamp": "20260316_175719",
+  "dry_run": false,
+  "created": 4,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "a",
+      "title": "The Christening",
+      "new_file": "March_Vol18_04a_Article_The_Christening.txt",
+      "chars": 11347,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "The Dreamer",
+      "result": "SKIP: Start boundary not found: Split 'b': start_boundary not found"
+    },
+    {
+      "split": "c",
+      "title": "Our Birthday",
+      "result": "SKIP: Start boundary not found: Split 'c': start_boundary not found"
+    },
+    {
+      "file": "March_Vol18_04_Christening_Ollerton.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol18_1931\\March\\_backups_split_20260316_175719\\March_Vol18_04_Christening_Ollerton.txt"
+    },
+    {
+      "split": "a",
+      "title": "Notes from the Field",
+      "new_file": "March_Vol18_13a_Notes_from_Field_Notes_from_the_Field.txt",
+      "chars": 9042,
+      "result": "CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Notes to the Field",
+      "new_file": "March_Vol18_13b_Notes_from_Field_Notes_to_the_Field.txt",
+      "chars": 3408,
+      "result": "CREATED"
+    },
+    {
+      "split": "c",
+      "title": "Editorial - Our Mother Tongue",
+      "new_file": "March_Vol18_13c_Editorial_Editorial_-_Our_Mother_Tongue.txt",
+      "chars": 993,
+      "result": "CREATED"
+    },
+    {
+      "file": "March_Vol18_13_Notes_from_Field_Field.txt",
+      "result": "MOVED to backup: C:\\Users\\birch\\OneDrive - George Mason University - O365 Production\\Dissertation\\textanalysis\\Articleextractionrfiles\\OutputExtractedarticles\\Vol18_1931\\March\\_backups_split_20260316_175719\\March_Vol18_13_Notes_from_Field_Field.txt"
+    }
+  ]
+}

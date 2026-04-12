@@ -1,0 +1,120 @@
+{
+  "volume": 14,
+  "month": "November",
+  "year": 1927,
+  "total_merged": 2,
+  "total_splits": 5,
+  "total_cost": 0.1807,
+  "files": [
+    {
+      "source_file": "November_Vol14_05_Article_Inez_Knight_Allen_Ida_Peterson_Beal.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Inez Knight Allen",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "INEZ KNIGHT ALLEN Member of General Board",
+          "end_boundary": "sympathetic and tender in all her contacts.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Ida Peterson Beal",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Pies Ida Peterson Beal. The Junior member",
+          "end_boundary": "sincerely the work they are doing.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Genevieve Thornton",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "Genevieve Thornton The Magazine is particularly gratified",
+          "end_boundary": "this very important branch of its work.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "INEZ KINGHT ALLEN",
+        "GENEVIEVE THORNTON"
+      ],
+      "notes": "This file contains three biographical articles about women appointed to the General Board of the Relief Society. Each article is a complete biographical sketch with clear start and end boundaries.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 97599,
+      "tier": 3,
+      "pdf_pages": [
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158
+      ],
+      "api_usage": {
+        "input_tokens": 35887,
+        "output_tokens": 403,
+        "cost": 0.1137
+      }
+    },
+    {
+      "source_file": "November_Vol14_14_Notes_from_Field_Notes_from_the_Field.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Notes from the Field",
+          "category": "Notes_from_Field",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "NOTES FROM THE FIELD 563 Tamaki and Nuhaka",
+          "end_boundary": "neglect the obligation, someone must pay it for you.\"",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for January",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for January THE LESSON COURSE FOR",
+          "end_boundary": "When Buying Mention Relief Society Magazine No hand-rubbing",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR JANUARY",
+        "NOTES FROM THE FIELD"
+      ],
+      "notes": "This file contains two distinct sections: 'Notes from the Field' by Amy Brown Lyman covering mission reports from various locations, and 'Guide Lessons for January' which includes the lesson course for 1928 with theology, literature, and social service lessons. The file also contains advertising content at the end which is part of the Guide Lessons section.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 40514,
+      "tier": 2,
+      "pdf_pages": [
+        681,
+        682,
+        683,
+        684,
+        685,
+        686
+      ],
+      "api_usage": {
+        "input_tokens": 20449,
+        "output_tokens": 374,
+        "cost": 0.067
+      }
+    }
+  ]
+}

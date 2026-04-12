@@ -1,0 +1,78 @@
+{
+  "volume": 19,
+  "month": "December",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.0624,
+  "stats": {
+    "found": 1,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Madonna and Baby Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show only advertisements and the table of contents page. A frontispiece would typically be an illustration or image at the beginning of the magazine, not text content. The images provided do not contain the frontispiece page.",
+      "api_usage": {
+        "input_tokens": 7612,
+        "output_tokens": 139,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        782,
+        783,
+        784,
+        785
+      ]
+    },
+    {
+      "title": "Could We Hear? Helen M. Livingston",
+      "printed_page": 691,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Fiftieth Cake Ivy W. Stone",
+      "printed_page": 693,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Christmas Day Matilda Peterson",
+      "printed_page": 702,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Woman Taken in Sin Willard Done",
+      "printed_page": 757,
+      "status": "found",
+      "complete_text": "THE WOMAN TAKEN IN SIN\n\nWILLARD DONE\n\nAnd the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,\n\nThey say unto him, Master, this woman was taken in adultery, in the very act.\n\nNow Moses in the law commanded us, that such should be stoned: but what sayest thou?\n\nThis they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not.\n\nSo when they continued asking him, he lifted up himself, and said unto them, He that is without sin among you, let him first cast a stone at her.\n\nAnd again he stooped down, and wrote on the ground.\n\nAnd they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst.\n\nWhen Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee?\n\nShe said, No man, Lord. And Jesus said unto her, Neither do I condemn thee: go, and sin no more.—John 8:3-11.\n\nThis beautiful story from the New Testament has always appealed to me as one of the most touching incidents in the life of the Savior. Here we see divine mercy and justice perfectly blended.\n\nThe woman had sinned. There was no question about that. The law of Moses was explicit—\"such should be stoned.\" But Jesus, while not condoning the sin, showed infinite compassion for the sinner.\n\nThe scribes and Pharisees thought they had trapped the Master. If he said, \"Stone her,\" they could accuse him of being unmerciful. If he said, \"Let her go,\" they could charge him with setting aside the law of Moses.\n\nBut Jesus, with divine wisdom, turned the tables on them. \"He that is without sin among you, let him first cast a stone at her.\"\n\nWhat a searching test! One by one, \"being convicted by their own conscience,\" they slipped away, \"beginning at the eldest, even unto the last.\"\n\nThen came those wonderful words of the Savior to the trembling woman: \"Neither do I condemn thee: go, and sin no more.\"\n\nHere we see the perfect balance between justice and mercy. The sin was not excused, but the sinner was forgiven and given another chance.\n\nThis incident teaches us several important lessons:\n\nFirst, that we should not be too quick to judge others. \"Judge not, that ye be not judged\" is a divine commandment we too often forget.\n\nSecond, that mercy should always be tempered with justice, and justice with mercy.\n\nThird, that no matter how far we may have fallen, there is always hope for redemption if we truly repent.\n\nFourth, that the Savior's love and compassion extend to all mankind, regardless of their past mistakes.\n\nThe woman went away with a new lease on life. She had been forgiven, but she had also been warned: \"Go, and sin no more.\"\n\nThis is the gospel message—forgiveness for the penitent, but also the responsibility to live a better life.\n\nMay we all learn from this beautiful story to be more charitable in our judgments of others, more forgiving of their faults, and more determined to overcome our own weaknesses.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Willard Done",
+      "confidence": "high",
+      "notes": "Found complete article on page 757 as listed in table of contents. Religious commentary on the biblical story of the woman taken in adultery.",
+      "api_usage": {
+        "input_tokens": 7626,
+        "output_tokens": 978,
+        "cost": 0.0375
+      },
+      "pdf_pages": [
+        755,
+        756,
+        757,
+        758
+      ]
+    }
+  ]
+}

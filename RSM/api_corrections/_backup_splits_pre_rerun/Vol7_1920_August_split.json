@@ -1,0 +1,52 @@
+{
+  "volume": 7,
+  "month": "August",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1162,
+  "files": [
+    {
+      "source_file": "August_Vol7_03_Article_Class_in_Charities_and_Relief_Work_Amy_Brown_Lyman.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Class in Charities and Relief Work",
+          "category": "Article",
+          "author": "Amy Brown Lyman",
+          "start_boundary": "THE Relief Society Magazine Vol. VII. August, 1920",
+          "end_boundary": "Weber, Agnes H. Stevens; Woodruff, Violet Gerard.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Vacation and a Rag-bag",
+          "category": "Article",
+          "author": "Clara S. Fagergren",
+          "start_boundary": "A Vacation and a Ragbag Clara S. Fagergren.",
+          "end_boundary": "How glorified we'll be. A Testimony Elder",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "CLASS IN CHARITIES AND RELIEF WORK",
+        "A VACATION AND A RAGBAG"
+      ],
+      "notes": "File contains two complete articles. The first is about a Relief Society training course at BYU, the second is a story. There appears to be content from additional articles at the very end (Temple Work poem and beginning of A Testimony) that should be part of subsequent files.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 8455,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 36791,
+        "output_tokens": 388,
+        "cost": 0.1162
+      }
+    }
+  ]
+}

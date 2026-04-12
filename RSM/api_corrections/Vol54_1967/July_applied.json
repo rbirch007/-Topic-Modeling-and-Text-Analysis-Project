@@ -1,0 +1,57 @@
+{
+  "volume": 54,
+  "month": "July",
+  "year": 1967,
+  "timestamp": "20260313_235011",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V54_07_01_Fict_The_Chapter.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (2338 chars)"
+    },
+    {
+      "file": "V54_07_02_Poem_Foresight_Sharp.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (154 chars)"
+    },
+    {
+      "file": "V54_07_04_SpFt_Emma_Ashton.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2101 chars added)"
+    },
+    {
+      "file": "V54_07_05_SpFt_Family_Bradshaw.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (760 chars removed)"
+    },
+    {
+      "file": "V54_07_08_Fict_General_Madsen.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2613 chars removed)"
+    },
+    {
+      "file": "V54_07_12_Poem_Summer_Douglas.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V54_07_13_Fict_The_Thomson.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "V54_07_24_Poem_For_Tangren.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1316 chars removed)"
+    },
+    {
+      "file": "V54_07_25_Poem_Golgotha_Stewart.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (459 chars)"
+    }
+  ]
+}

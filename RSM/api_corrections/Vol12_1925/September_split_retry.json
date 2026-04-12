@@ -1,0 +1,48 @@
+{
+  "volume": 12,
+  "month": "September",
+  "year": 1925,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 3,
+  "created": 2,
+  "failed": 4,
+  "entries": [
+    {
+      "split": "b",
+      "title": "The National Conference of Social Work",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Baby Wear",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "d",
+      "title": "Guide Lessons for November",
+      "new_file": "September_Vol12_08d_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "chars": 13544,
+      "match_type": "short_window_4w",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Humility",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "c",
+      "title": "Calories for Safety",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for November",
+      "new_file": "September_Vol12_18b_Guide_Lessons_Guide_Lessons_for_November.txt",
+      "chars": 1900,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

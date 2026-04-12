@@ -1,0 +1,86 @@
+Looking at this file and the page images, I can see this is actually a merged file containing multiple distinct articles that were incorrectly combined. Let me analyze the content and visual boundaries to properly split them.
+
+From examining the page images and text content, I can identify several distinct articles with clear boundaries:
+
+```json
+{
+  "source_file": "January_Vol17_06_Article_Richards_Street_One-Half_Block_South_of_Temple_Gates_LIFE_INSURANCE_MEANS_T.txt",
+  "num_articles_found": 8,
+  "splits": [
+    {
+      "order": "a",
+      "title": "Training School for the Feeble-Minded",
+      "category": "Article",
+      "author": "Amy Brown Lyman",
+      "start_boundary": "2. That the school should be near",
+      "end_boundary": "to work for themselves.",
+      "confidence": "high"
+    },
+    {
+      "order": "b", 
+      "title": "Theological Studies for the Year",
+      "category": "Article",
+      "author": "Julia A. F. Lund",
+      "start_boundary": "Theological Studies for the Year By",
+      "end_boundary": "truth of all things."",
+      "confidence": "high"
+    },
+    {
+      "order": "c",
+      "title": "Relief Society Organization Information",
+      "category": "Article", 
+      "author": null,
+      "start_boundary": "THE RELIEF SOCIETY OF THE CHURCH",
+      "end_boundary": "Salt Lake City, Utah",
+      "confidence": "high"
+    },
+    {
+      "order": "d",
+      "title": "Editorial - The Bright New Year",
+      "category": "Editorial",
+      "author": null,
+      "start_boundary": "VOL. XVII JANUARY, 1930 No. 1",
+      "end_boundary": "abolition of war.",
+      "confidence": "high"
+    },
+    {
+      "order": "e",
+      "title": "The Eliza Roxey Snow Poem Contest",
+      "category": "Article",
+      "author": null,
+      "start_boundary": "The Eliza Roxey Snow Poem Contest",
+      "end_boundary": "Snow Poetry Contest.",
+      "confidence": "high"
+    },
+    {
+      "order": "f",
+      "title": "President Louise Y. Robison Speaks at General Conference",
+      "category": "Article",
+      "author": null,
+      "start_boundary": "President Louise Y. Robison Speaks at",
+      "end_boundary": "significant responsibility.",
+      "confidence": "high"
+    },
+    {
+      "order": "g",
+      "title": "General Board of Relief Society Expresses Appreciation to Organist",
+      "category": "Article",
+      "author": null,
+      "start_boundary": "General Board of Relief Society Expresses",
+      "end_boundary": "abundant blessings,",
+      "confidence": "high"
+    },
+    {
+      "order": "h",
+      "title": "Notes from the Field",
+      "category": "Notes_from_Field",
+      "author": null,
+      "start_boundary": "Notes from the Field Annual Dues:",
+      "end_boundary": "by the people.",
+      "confidence": "high"
+    }
+  ],
+  "running_headers_to_strip": ["RELIEF SOCIETY MAGAZINE", "TRAINING SCHOOL FOR THE FEEBLE-MINDED", "THEOLOGICAL STUDIES FOR THE YEAR", "EDITORIAL"],
+  "notes": "This file contains multiple distinct articles that were merged together. The boundaries are clearly visible in the page images, with different formatting, titles, and author bylines marking separate articles. The content flows from training school discussion to theological studies to organizational information to editorial content to various news items."
+}
+```

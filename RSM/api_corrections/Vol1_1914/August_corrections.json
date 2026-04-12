@@ -1,0 +1,66 @@
+{
+  "volume": 1,
+  "month": "August",
+  "year": 1914,
+  "total_files_checked": 10,
+  "files_correct": [
+    "V1_1914_Aug_01_Art_Historical.txt",
+    "V1_1914_Aug_02_Art_Editorial.txt",
+    "V1_1914_Aug_03a_Lssn_Health_and_Hygiene_Lesson_I.txt",
+    "V1_1914_Aug_03b_Lssn_Health_and_Hygiene_Lesson_II.txt",
+    "V1_1914_Aug_03c_Lssn_Health_and_Hygiene_Lesson_III.txt",
+    "V1_1914_Aug_03d_Lssn_Work_and_Business_Lesson_I.txt",
+    "V1_1914_Aug_04_Art_SaltLake.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Aug_05_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains administrative notice about bulletin orders, not poetry",
+      "action": "replace_content",
+      "text": "MONEY FOR BULLETINS AND LESSON BOOKS. All orders for Bulletins or Lesson Books, all money to be expended in this direction should be sent to the Relief Society Bulletin, Room 28 Bishop's Building.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V1_1914_Aug_06_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "This file contains advertisement content that should be moved to miscellaneous/ads file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Aug_07_Poem_TWOSTORES.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "This file contains advertisement content that should be moved to miscellaneous/ads file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Aug_08_Art_MI.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not article content",
+      "action": "note",
+      "text": "This file contains advertisement content that should be moved to miscellaneous/ads file",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Aug_10_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content, not poetry",
+      "action": "note",
+      "text": "This file contains advertisement content that should be moved to miscellaneous/ads file",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most content articles and lessons are correctly extracted. However, several files labeled as poetry are actually advertisement content that should be consolidated into a miscellaneous/ads file. The administrative notice about bulletin orders in file 05 should be corrected to include the complete text from the OCR.",
+  "validated_corrections": [],
+  "failed_validations": []
+}

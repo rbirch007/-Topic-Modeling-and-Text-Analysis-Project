@@ -1,0 +1,150 @@
+{
+  "volume": 2,
+  "month": "December",
+  "year": 1915,
+  "total_merged": 3,
+  "total_splits": 8,
+  "total_cost": 0.2858,
+  "files": [
+    {
+      "source_file": "December_Vol2_04_Article_For_a_Safe_and_Sane_Christmas_Fromade.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Current Topics",
+          "category": "Current_Topics",
+          "author": "James H. Anderson",
+          "start_boundary": "for a time, of the great European war,",
+          "end_boundary": "re-arrangement of national relations.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "In the Kitchen Laboratory",
+          "category": "Home_Science",
+          "author": "Hazel Love Dunford",
+          "start_boundary": "In the Kitchen Laboratory. By Hazel Love Dunford.",
+          "end_boundary": "cover closely and set on back of the",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "CURRENT TOPICS",
+        "IN THE KITCHEN LABORATORY"
+      ],
+      "notes": "This file contains the end of the Current Topics article by James H. Anderson and the complete In the Kitchen Laboratory article by Hazel Love Dunford. The Current Topics section ends mid-sentence discussing national relations, while the Kitchen Laboratory section is complete with Christmas-themed cooking advice and recipes.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 10400,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 28933,
+        "output_tokens": 343,
+        "cost": 0.0919
+      }
+    },
+    {
+      "source_file": "December_Vol2_08_Editorial_Editorial.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Editorial",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL . RELIEF SOCIETY MAGAZINE Editor Susa",
+          "end_boundary": "all interested are invited to attend. Guide",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. Lesson I. Theology and",
+          "end_boundary": "twilight? b. Why not leave the",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains the Editorial section followed by the Guide Lessons section. The Editorial includes both the main editorial content and a section on Genealogical Classes. The Guide Lessons section contains multiple lessons (Theology, Work and Business, Genealogy and Art, Home Economics) but appears to be cut off mid-sentence in the Art section's twilight study.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 19158,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 31023,
+        "output_tokens": 335,
+        "cost": 0.0981
+      }
+    },
+    {
+      "source_file": "December_Vol2_09_Guide_Lessons_Guide_Lessons.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 555 b. Why not leave",
+          "end_boundary": "Give your own view of the life",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson II. Work and Business. Second Week,",
+          "end_boundary": "Lesson II. Work and Business. Second Week,",
+          "confidence": "medium"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons - Lesson III: Genealogy and Art",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson III. Genealogy and Art. Third Week,",
+          "end_boundary": "Fig. 2. 556 RELIEF SOCIETY MAGAZINE.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons - Lesson IV: Home Economics",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Lesson IV. Home Economics. THE MODERN",
+          "end_boundary": "What force will purify society and",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains 4 lesson sections merged together. Lesson II appears to be just a header with no content. The file also contains what appears to be index/contents material at the end that doesn't belong to the lesson structure.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11667,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 29258,
+        "output_tokens": 533,
+        "cost": 0.0958
+      }
+    }
+  ]
+}

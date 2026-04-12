@@ -1,0 +1,40 @@
+{
+  "volume": 9,
+  "month": "October",
+  "year": 1922,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0217,
+  "stats": {
+    "truncated": 1,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "October_Vol9_17b_Guide_Lessons_LESSON_II_-_Work_and_Business.txt",
+      "status": "truncated",
+      "current_chars": 40,
+      "complete_text": "LESSON II.\n\nWork and Business\n\n(Second Week in April)",
+      "title": "LESSON II. Work and Business",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found the complete lesson header on page 112. The file was truncated - it only contained part of the title but the PDF shows the complete lesson heading with proper formatting and timing information.",
+      "api_usage": {
+        "input_tokens": 6379,
+        "output_tokens": 173,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        122,
+        123,
+        124,
+        125
+      ]
+    }
+  ]
+}

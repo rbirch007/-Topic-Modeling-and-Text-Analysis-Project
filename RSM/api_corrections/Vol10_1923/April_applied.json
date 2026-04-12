@@ -1,0 +1,32 @@
+{
+  "volume": 10,
+  "month": "April",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 2,
+  "skipped": 2,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol10_01_Frontispiece_Clarissa_Smith_Williams_and_Alice_L._Reynolds_Frontispiece.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol10_02_Article_Treasured_Works_Lula_Greene_Richards.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (17 chars removed)"
+    },
+    {
+      "file": "April_Vol10_03_Article_Announcement.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "April_Vol10_15_Editorial_Editorial.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    }
+  ]
+}

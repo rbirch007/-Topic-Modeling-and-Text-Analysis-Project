@@ -1,0 +1,44 @@
+{
+  "volume": 1,
+  "month": "October",
+  "year": 1914,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.049,
+  "files": [
+    {
+      "source_file": "V1_1914_Oct_07_Art_Genealogy.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Genealogy and Testimony",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "GENEALOGY AND TESTIMONY Lesson II. Ten minutes talk",
+          "end_boundary": "This will make everything clear and avoid confusion.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Art",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "October ART  Lesson III. John Singer Sargent.",
+          "end_boundary": "what she has so long and generously done for Americans?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [],
+      "notes": "Clear split between Lesson II (Genealogy) and Lesson III (Art). The genealogy lesson ends with discussion of temple work limitations, and the art lesson begins with 'October ART Lesson III.' The art lesson covers John Singer Sargent and George De Forest Brush.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11621,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 14746,
+        "output_tokens": 318,
+        "cost": 0.049
+      }
+    }
+  ]
+}

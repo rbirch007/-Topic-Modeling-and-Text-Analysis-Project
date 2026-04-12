@@ -1,0 +1,154 @@
+{
+  "volume": 15,
+  "month": "May",
+  "year": 1928,
+  "total_merged": 2,
+  "total_splits": 8,
+  "total_cost": 0.2692,
+  "files": [
+    {
+      "source_file": "May_Vol15_03_Article_Pioneers—Giants_in_the_Earth_Lois_Vernon_Hales.txt",
+      "num_articles_found": 6,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Pioneers—Giants in the Earth",
+          "category": "Article",
+          "author": "Lois Vernon Hales",
+          "start_boundary": "Pioneers—Giants in the Earth By Lois Vernon Hales",
+          "end_boundary": "drank the blood of Christian men and was satisfied.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Mother of an Ace",
+          "category": "Poem",
+          "author": "Linda S. Fletcher",
+          "start_boundary": "Mother of an Ace By Linda S. Fletcher",
+          "end_boundary": "Visions knit their souls anew!",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Little Mother",
+          "category": "Article",
+          "author": "Josephine Spencer",
+          "start_boundary": "Little Mother By Josephine Spencer Little Mother came",
+          "end_boundary": "him—and the Boy.\" Thoughts of Mother By",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Thoughts of Mother",
+          "category": "Poem",
+          "author": "Velma Brinkerhoff",
+          "start_boundary": "Thoughts of Mother By a Missionary, Velma Brinkerhoff",
+          "end_boundary": "Who is all the world to me!",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Semi-Centennial Review of the Relief Societies of Salt Lake County",
+          "category": "Article",
+          "author": "Lettie T. Cannon",
+          "start_boundary": "STAKE PRESIDENTS OF SALT LAKE COUNTY 1.",
+          "end_boundary": "Emmaretta G. Brown, General Chairman. Mother By Amy",
+          "confidence": "high"
+        },
+        {
+          "order": "f",
+          "title": "When a Man Needs a Mother",
+          "category": "Article",
+          "author": "Philena Fletcher Homer",
+          "start_boundary": "When a Man Needs a Mother A",
+          "end_boundary": "OF THE CHURCH OF JESUS CHRIST OF LATTER-DAY SAINTS",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LITTLE MOTHER",
+        "REVIEW OF THE RELIEF SOCIETIES",
+        "WHEN A MAN NEEDS A MOTHER"
+      ],
+      "notes": "This file contains multiple articles merged together. The content includes stake presidents listing and a poem by Amy Kemp that appear to be part of the Semi-Centennial Review article. The file ends with organizational information about the Relief Society General Board.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 55011,
+      "tier": 2,
+      "pdf_pages": [
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293
+      ],
+      "api_usage": {
+        "input_tokens": 38549,
+        "output_tokens": 763,
+        "cost": 0.1271
+      }
+    },
+    {
+      "source_file": "May_Vol15_09_Article_When_a_Man_Needs_a_Mother_Philena_Fletcher_Homer.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "When a Man Needs a Mother",
+          "category": "Article",
+          "author": "Philena Fletcher Homer",
+          "start_boundary": "And when a Mormon girl goes to the temple",
+          "end_boundary": "who knows more than you. Go",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Intellectual Responsibility of Mothers",
+          "category": "Article",
+          "author": "Heloise Day Merkley",
+          "start_boundary": "to them privately and get them to teach",
+          "end_boundary": "For the glory of God is intelligence.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RESPONSIBILITIES OF MOTHERS",
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "The file contains two complete articles. The first article 'When a Man Needs a Mother' appears to be missing its beginning and ends mid-sentence. The second article 'Intellectual Responsibility of Mothers' starts mid-sentence and continues to completion. Based on the table of contents, these should be separate articles with page numbers 258 and 266 respectively.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 9309,
+      "tier": 1,
+      "pdf_pages": [
+        311,
+        312,
+        313,
+        314,
+        315,
+        316
+      ],
+      "api_usage": {
+        "input_tokens": 45582,
+        "output_tokens": 359,
+        "cost": 0.1421
+      }
+    }
+  ]
+}

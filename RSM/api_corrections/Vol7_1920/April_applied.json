@@ -1,0 +1,22 @@
+{
+  "volume": 7,
+  "month": "April",
+  "year": 1920,
+  "timestamp": "20260315_120944",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "April_Vol7_01_Article_Opening_the_Gate_Beautiful_to_Women.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3353 chars added)"
+    },
+    {
+      "file": "April_Vol7_11_Guide_Lessons_Guide_Lessons.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

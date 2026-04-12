@@ -1,0 +1,722 @@
+{
+  "volume": 20,
+  "month": "June",
+  "year": 1933,
+  "total": 35,
+  "ok": 33,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "June_Vol20_00_BOARD.txt",
+      "body_len": 99,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_00_CONTENTS.txt",
+      "body_len": 1421,
+      "article_words": 139,
+      "words_in_ocr": 139,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_00_Misc.txt",
+      "body_len": 7350,
+      "article_words": 548,
+      "words_in_ocr": 545,
+      "pct_in_ocr": 0.9945,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "June_Vol20_00_Misc_backup_premarker.txt",
+      "body_len": 7282,
+      "article_words": 543,
+      "words_in_ocr": 543,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_01_Article_President_Samuel_O_Bennion_Spencer_Kimball.txt",
+      "body_len": 6593,
+      "article_words": 441,
+      "words_in_ocr": 441,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_03_Article_Bending_the_Twig_Istelle_Webb_Thomas.txt",
+      "body_len": 962,
+      "article_words": 94,
+      "words_in_ocr": 94,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_04_Article_Portrait_of_Mrs_Luacine_Savage_Clark.txt",
+      "body_len": 764,
+      "article_words": 77,
+      "words_in_ocr": 77,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_05_Article_M_C_Stephens.txt",
+      "body_len": 564,
+      "article_words": 59,
+      "words_in_ocr": 59,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_06a_Article_The_Importance_of_Standardization_in_County_Welfare_Work.txt",
+      "body_len": 25560,
+      "article_words": 1074,
+      "words_in_ocr": 1074,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_06c_Article_A_Most_Interesting_Exhibit.txt",
+      "body_len": 6093,
+      "article_words": 373,
+      "words_in_ocr": 373,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_06d_Article_Be_GenuineBe_YourselfRecognize_Worth_of_Others.txt",
+      "body_len": 5202,
+      "article_words": 378,
+      "words_in_ocr": 377,
+      "pct_in_ocr": 0.9974,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "shalt"
+      ]
+    },
+    {
+      "file": "June_Vol20_06g_Current_Topics_Happenings.txt",
+      "body_len": 2660,
+      "article_words": 258,
+      "words_in_ocr": 157,
+      "pct_in_ocr": 0.6085,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(61%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "achievement",
+        "ada",
+        "adventuring",
+        "alexandra",
+        "ambassadors",
+        "angeles",
+        "archeologist",
+        "bestows",
+        "bicentennial",
+        "boat"
+      ]
+    },
+    {
+      "file": "June_Vol20_07_Article_The_Minichoor_Ruth_Partridge_Richan.txt",
+      "body_len": 10500,
+      "article_words": 613,
+      "words_in_ocr": 613,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_08_Article_Be_GentleBe_YourselfRecognize_Worth_in_Others_Elise_B_Alder.txt",
+      "body_len": 5208,
+      "article_words": 380,
+      "words_in_ocr": 380,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_09_Article_Mormon_Lake_Fringed_with_Yellow_Pine_Timber.txt",
+      "body_len": 9618,
+      "article_words": 611,
+      "words_in_ocr": 611,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_10_Article_Happenings_Annie_Wells_Cannon.txt",
+      "body_len": 2571,
+      "article_words": 261,
+      "words_in_ocr": 261,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_11_Article_Convention_of_the_Womans_National_Committee_for_Law_Enforcement_Louise_Y_R.txt",
+      "body_len": 3498,
+      "article_words": 258,
+      "words_in_ocr": 258,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_12_Article_Happy_Mothers_Marba_C_Josephson.txt",
+      "body_len": 7757,
+      "article_words": 540,
+      "words_in_ocr": 540,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_13_Article_Bertha_A_Kleinman.txt",
+      "body_len": 656,
+      "article_words": 71,
+      "words_in_ocr": 71,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_14_Article_Your_House_Beautiful_Mabel_Margaret_Luke.txt",
+      "body_len": 17990,
+      "article_words": 801,
+      "words_in_ocr": 801,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_15_Article_A_North_Texas_Desert_Scene.txt",
+      "body_len": 5397,
+      "article_words": 327,
+      "words_in_ocr": 327,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_17_Article_The_Resurrection_of_Iskabog_Ina_G_Johnson.txt",
+      "body_len": 3568,
+      "article_words": 282,
+      "words_in_ocr": 282,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_18_Article_Sympathy.txt",
+      "body_len": 742,
+      "article_words": 70,
+      "words_in_ocr": 70,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_20_Article_Friendliness.txt",
+      "body_len": 2063,
+      "article_words": 197,
+      "words_in_ocr": 197,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_21_Notes_from_Field_Notes_from_the_Field.txt",
+      "body_len": 9419,
+      "article_words": 598,
+      "words_in_ocr": 598,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_22_Editorial_EditorialFounders_Day_in_Europe.txt",
+      "body_len": 1486,
+      "article_words": 129,
+      "words_in_ocr": 129,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_23_Article_Family_Relationships.txt",
+      "body_len": 1201,
+      "article_words": 99,
+      "words_in_ocr": 99,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_24_Article_Think_of_These_Things.txt",
+      "body_len": 3344,
+      "article_words": 279,
+      "words_in_ocr": 279,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_25_Poem_My_Wealth_H_H_Ramsay.txt",
+      "body_len": 566,
+      "article_words": 53,
+      "words_in_ocr": 47,
+      "pct_in_ocr": 0.8868,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "conscience",
+        "faithful",
+        "fortune",
+        "friendship",
+        "knee",
+        "shirk"
+      ]
+    },
+    {
+      "file": "June_Vol20_26_Article_Choosing_a_Dessert_Lucy_Rose_Middleton.txt",
+      "body_len": 2032,
+      "article_words": 155,
+      "words_in_ocr": 123,
+      "pct_in_ocr": 0.7935,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "adults",
+        "balanced",
+        "calcium",
+        "chosen",
+        "crowning",
+        "economy",
+        "expensive",
+        "factor",
+        "flavors",
+        "gelatin"
+      ]
+    },
+    {
+      "file": "June_Vol20_27_Article_Try_Me_Saith_the_Lord_Joseph_H_Dean.txt",
+      "body_len": 1848,
+      "article_words": 111,
+      "words_in_ocr": 99,
+      "pct_in_ocr": 0.8919,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "accepted",
+        "accident",
+        "challenge",
+        "definite",
+        "herewith",
+        "hosts",
+        "invites",
+        "malachi",
+        "storehouse",
+        "tithes"
+      ]
+    },
+    {
+      "file": "June_Vol20_No6_02_Article_Guest_Ivy_Williams_Stone.txt",
+      "body_len": 17566,
+      "article_words": 966,
+      "words_in_ocr": 966,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_No6_16_Article_Try_Me_Saith_the_Lord_Joseph_H._Dean.txt",
+      "body_len": 7379,
+      "article_words": 439,
+      "words_in_ocr": 439,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_No6_19_Article_The_New_Jerusalem_Frank_C._Steele.txt",
+      "body_len": 9542,
+      "article_words": 680,
+      "words_in_ocr": 680,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "June_Vol20_No6_25_Article_President_Robison_Attends_Convention_Abroad.txt",
+      "body_len": 2991,
+      "article_words": 252,
+      "words_in_ocr": 252,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol20_No6_June_1933.txt",
+    "ocr_chars": 167795,
+    "ocr_unique_words": 5152,
+    "contents_xref": {
+      "entries_in_contents": 32,
+      "matched": 30,
+      "match_details": [
+        {
+          "title": "Portrait of President Samuel O. BennionElla J. Coulam",
+          "page": 325,
+          "file": "June_Vol20_01_Article_President_Samuel_O_Bennion_Spencer_Kimball.txt",
+          "score": 0.6
+        },
+        {
+          "title": "President Samuel O. Bennion Spencer Kimball",
+          "page": 327,
+          "file": "June_Vol20_01_Article_President_Samuel_O_Bennion_Spencer_Kimball.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guest Ivy Williams Stone",
+          "page": 330,
+          "file": "June_Vol20_No6_02_Article_Guest_Ivy_Williams_Stone.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Bending the Twig Istelle Webb Thomas",
+          "page": 335,
+          "file": "June_Vol20_03_Article_Bending_the_Twig_Istelle_Webb_Thomas.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Portrait of Mrs. Luacine Savage Clark",
+          "page": 336,
+          "file": "June_Vol20_04_Article_Portrait_of_Mrs_Luacine_Savage_Clark.txt",
+          "score": 1.0
+        },
+        {
+          "title": "My Wealth H. H. Ramsay",
+          "page": 337,
+          "file": "June_Vol20_25_Poem_My_Wealth_H_H_Ramsay.txt",
+          "score": 1.0
+        },
+        {
+          "title": "M. C. Stephens",
+          "page": 337,
+          "file": "June_Vol20_05_Article_M_C_Stephens.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Importance of Standardization in County Welfare Work Joseph A. Geddes",
+          "page": 338,
+          "file": "June_Vol20_06a_Article_The_Importance_of_Standardization_in_County_Welfare_Work.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The \"Minichoor\" Ruth Partridge Richan",
+          "page": 347,
+          "file": "June_Vol20_07_Article_The_Minichoor_Ruth_Partridge_Richan.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Most Interesting Exhibit",
+          "page": 350,
+          "file": "June_Vol20_06c_Article_A_Most_Interesting_Exhibit.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Be Gentle—Be Yourself—Recognize Worth in Others Elise B. Alder",
+          "page": 351,
+          "file": "June_Vol20_08_Article_Be_GentleBe_YourselfRecognize_Worth_in_Others_Elise_B_Alder.txt",
+          "score": 0.57
+        },
+        {
+          "title": "Mormon Lake Fringed with Yellow Pine Timber",
+          "page": 353,
+          "file": "June_Vol20_09_Article_Mormon_Lake_Fringed_with_Yellow_Pine_Timber.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 357,
+          "file": "June_Vol20_10_Article_Happenings_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Convention of the Woman's National Committee for Law Enforcement Louise Y. Robison",
+          "page": 358,
+          "file": "June_Vol20_11_Article_Convention_of_the_Womans_National_Committee_for_Law_Enforcement_Louise_Y_R.txt",
+          "score": 0.83
+        },
+        {
+          "title": "Happy Mothers Marba C. Josephson",
+          "page": 359,
+          "file": "June_Vol20_12_Article_Happy_Mothers_Marba_C_Josephson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Bertha A. Kleinman",
+          "page": 361,
+          "file": "June_Vol20_13_Article_Bertha_A_Kleinman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Your House Beautiful Mabel Margaret Luke",
+          "page": 362,
+          "file": "June_Vol20_14_Article_Your_House_Beautiful_Mabel_Margaret_Luke.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A North Texas Desert Scene",
+          "page": 367,
+          "file": "June_Vol20_15_Article_A_North_Texas_Desert_Scene.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Choosing a Dessert Lucy Rose Middleton",
+          "page": 368,
+          "file": "June_Vol20_26_Article_Choosing_a_Dessert_Lucy_Rose_Middleton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"Try Me, Saith the Lord\" Joseph H. Dean",
+          "page": 370,
+          "file": "June_Vol20_27_Article_Try_Me_Saith_the_Lord_Joseph_H_Dean.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Resurrection of Iskabog Ina G. Johnson",
+          "page": 372,
+          "file": "June_Vol20_17_Article_The_Resurrection_of_Iskabog_Ina_G_Johnson.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The New Jerusalem Frank C. Steele",
+          "page": 374,
+          "file": "June_Vol20_No6_19_Article_The_New_Jerusalem_Frank_C._Steele.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Friendliness",
+          "page": 377,
+          "file": "June_Vol20_20_Article_Friendliness.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 378,
+          "file": "June_Vol20_21_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 381,
+          "file": "June_Vol20_21_Notes_from_Field_Notes_from_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Founder's Day in Europe",
+          "page": 382,
+          "file": "June_Vol20_22_Editorial_EditorialFounders_Day_in_Europe.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Family Relationships",
+          "page": 383,
+          "file": "June_Vol20_23_Article_Family_Relationships.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Think of These Things",
+          "page": 383,
+          "file": "June_Vol20_24_Article_Think_of_These_Things.txt",
+          "score": 1.0
+        },
+        {
+          "title": "President Robison Attends Convention Abroad",
+          "page": 384,
+          "file": "June_Vol20_No6_25_Article_President_Robison_Attends_Convention_Abroad.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Sympathy",
+          "page": 384,
+          "file": "June_Vol20_18_Article_Sympathy.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Prohibitionists, Fight On! Senator Morris Sheppard",
+          "page": 354
+        },
+        {
+          "title": "The Chicago Conference",
+          "page": 376
+        }
+      ],
+      "extra_files": [
+        "June_Vol20_06d_Article_Be_GenuineBe_YourselfRecognize_Worth_of_Others.txt",
+        "June_Vol20_06g_Current_Topics_Happenings.txt",
+        "June_Vol20_No6_16_Article_Try_Me_Saith_the_Lord_Joseph_H._Dean.txt"
+      ]
+    }
+  }
+}

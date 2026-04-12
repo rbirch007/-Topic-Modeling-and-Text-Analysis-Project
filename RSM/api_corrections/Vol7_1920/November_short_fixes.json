@@ -1,0 +1,40 @@
+{
+  "volume": 7,
+  "month": "November",
+  "year": 1920,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0199,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "November_Vol7_10c_Guide_Lessons_Guide_Lesson_Suggestions_-_Lesson_II_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 79,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The file content mentions 'LESSON II. WORK AND BUSINESS. Second Week in December' but the PDF pages shown (53-56) contain only Lesson I about 'Genealogy and Testimony' for the First Week in February. Lesson II is not visible in these PDF pages.",
+      "api_usage": {
+        "input_tokens": 5714,
+        "output_tokens": 182,
+        "cost": 0.0199
+      },
+      "pdf_pages": [
+        53,
+        54,
+        55,
+        56
+      ]
+    }
+  ]
+}

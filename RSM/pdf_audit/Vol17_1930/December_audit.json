@@ -1,0 +1,434 @@
+{
+  "volume": 17,
+  "month": "December",
+  "year": 1930,
+  "total": 22,
+  "ok": 19,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "December_Vol17_00_BOARD.txt",
+      "body_len": 65,
+      "article_words": 8,
+      "words_in_ocr": 8,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_00_CONTENTS.txt",
+      "body_len": 786,
+      "article_words": 80,
+      "words_in_ocr": 80,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_00_Misc.txt",
+      "body_len": 4738,
+      "article_words": 306,
+      "words_in_ocr": 303,
+      "pct_in_ocr": 0.9902,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "December_Vol17_00_Misc_backup_premarker.txt",
+      "body_len": 4670,
+      "article_words": 299,
+      "words_in_ocr": 299,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_01_Article_Her_Christmas_Gift_Katharine_C_McKay.txt",
+      "body_len": 10514,
+      "article_words": 675,
+      "words_in_ocr": 675,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_02_Article_Santa_Claus.txt",
+      "body_len": 14776,
+      "article_words": 775,
+      "words_in_ocr": 775,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_03_Article_Dahlias_to_Love_Harrison_R_Merrill.txt",
+      "body_len": 18818,
+      "article_words": 1091,
+      "words_in_ocr": 1091,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_04_Article_Moms_Vacation_Elsie_C_Carroll.txt",
+      "body_len": 20953,
+      "article_words": 1007,
+      "words_in_ocr": 1007,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_05_Article_Thoughts_Poem_Helen_M_Livingston.txt",
+      "body_len": 443,
+      "article_words": 50,
+      "words_in_ocr": 50,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_06_Article_Verse_of_Our_Day_Lais_V_Hales.txt",
+      "body_len": 6894,
+      "article_words": 495,
+      "words_in_ocr": 495,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_07_Article_The_Making_of_Personality_Claire_Stewart_Boyer.txt",
+      "body_len": 4167,
+      "article_words": 310,
+      "words_in_ocr": 310,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_08a_Article_Relief_Society_Conference.txt",
+      "body_len": 59722,
+      "article_words": 1971,
+      "words_in_ocr": 1971,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_09_Article_Expansion_of_Interest_in_Terms_of_Child-_Welfare_Jean_Cox.txt",
+      "body_len": 5502,
+      "article_words": 348,
+      "words_in_ocr": 348,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_10_Article_The_Woman_at_the_Well.txt",
+      "body_len": 4279,
+      "article_words": 395,
+      "words_in_ocr": 395,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_11_Editorial_Editorial_Our_Joyf_ullest_Feast.txt",
+      "body_len": 3820,
+      "article_words": 316,
+      "words_in_ocr": 316,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_12_Article_The_Life_Story_of_Brigham_Young.txt",
+      "body_len": 784,
+      "article_words": 77,
+      "words_in_ocr": 77,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_13a_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_I_Theology_and_Testimony.txt",
+      "body_len": 9981,
+      "article_words": 575,
+      "words_in_ocr": 575,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_13b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_II_Work_and_Business.txt",
+      "body_len": 1486,
+      "article_words": 109,
+      "words_in_ocr": 109,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_13c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_Literature.txt",
+      "body_len": 14562,
+      "article_words": 822,
+      "words_in_ocr": 822,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_13d_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_IV_Social_Service.txt",
+      "body_len": 9573,
+      "article_words": 587,
+      "words_in_ocr": 587,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "December_Vol17_14_Frontispiece_The_Madonna_with_St_Jerome_Frontispiece.txt",
+      "body_len": 37,
+      "article_words": 5,
+      "words_in_ocr": 4,
+      "pct_in_ocr": 0.8,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "SHORT(37)"
+      ],
+      "is_special": false,
+      "remediation": "manual_review",
+      "sample_not_in_ocr": [
+        "correggio"
+      ]
+    },
+    {
+      "file": "December_Vol17_No12_14_Article_The_Virgin_and_Child_with_St._Paul_and_St._George.txt",
+      "body_len": 7297,
+      "article_words": 571,
+      "words_in_ocr": 571,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol17_No12_December_1930.txt",
+    "ocr_chars": 198105,
+    "ocr_unique_words": 5343,
+    "contents_xref": {
+      "entries_in_contents": 19,
+      "matched": 15,
+      "match_details": [
+        {
+          "title": "The Madonna with St. Jerome. .Frontispiece",
+          "page": null,
+          "file": "December_Vol17_14_Frontispiece_The_Madonna_with_St_Jerome_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Her Christmas Gift. .Katharine C. McKay",
+          "page": 637,
+          "file": "December_Vol17_01_Article_Her_Christmas_Gift_Katharine_C_McKay.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Dahlias to Love Harrison R. Merrill",
+          "page": 645,
+          "file": "December_Vol17_03_Article_Dahlias_to_Love_Harrison_R_Merrill.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Santa Claus by Adoption. .Silas L. Cheney",
+          "page": 647,
+          "file": "December_Vol17_02_Article_Santa_Claus.txt",
+          "score": 1.0
+        },
+        {
+          "title": "For Christmas (Poem) KateThomas",
+          "page": 652,
+          "file": "December_Vol17_01_Article_Her_Christmas_Gift_Katharine_C_McKay.txt",
+          "score": 0.5
+        },
+        {
+          "title": "Mom's Vacation Elsie C. Carroll",
+          "page": 653,
+          "file": "December_Vol17_04_Article_Moms_Vacation_Elsie_C_Carroll.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Thoughts (Poem) Helen M. Livingston",
+          "page": 659,
+          "file": "December_Vol17_05_Article_Thoughts_Poem_Helen_M_Livingston.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"Verse of Our Day\" Lais V. Hales",
+          "page": 660,
+          "file": "December_Vol17_06_Article_Verse_of_Our_Day_Lais_V_Hales.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Claire Stewart Boyer",
+          "page": 662,
+          "file": "December_Vol17_07_Article_The_Making_of_Personality_Claire_Stewart_Boyer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Welfare Jean Cox",
+          "page": 682,
+          "file": "December_Vol17_09_Article_Expansion_of_Interest_in_Terms_of_Child-_Welfare_Jean_Cox.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Woman at the Well",
+          "page": 683,
+          "file": "December_Vol17_10_Article_The_Woman_at_the_Well.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial— \"Our Joyf ullest Feast\"",
+          "page": 685,
+          "file": "December_Vol17_11_Editorial_Editorial_Our_Joyf_ullest_Feast.txt",
+          "score": 1.0
+        },
+        {
+          "title": "\"The Life Story of Brigham Young",
+          "page": 686,
+          "file": "December_Vol17_12_Article_The_Life_Story_of_Brigham_Young.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for February",
+          "page": 687,
+          "file": "December_Vol17_13a_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_I_Theology_and_Testimony.txt",
+          "score": 1.0
+        },
+        {
+          "title": "St. George ,",
+          "page": 698,
+          "file": "December_Vol17_No12_14_Article_The_Virgin_and_Child_with_St._Paul_and_St._George.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Snow-Covered Pines in the Rockies",
+          "page": 663
+        },
+        {
+          "title": "Julia A. F. Lund",
+          "page": 664
+        },
+        {
+          "title": "Plow Old is Old? Ada Taylor Graham",
+          "page": 684
+        },
+        {
+          "title": "Evan Stephans",
+          "page": 686
+        }
+      ],
+      "extra_files": [
+        "December_Vol17_08a_Article_Relief_Society_Conference.txt",
+        "December_Vol17_13b_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_II_Work_and_Business.txt",
+        "December_Vol17_13c_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_III_Literature.txt",
+        "December_Vol17_13d_Guide_Lessons_Guide_Lessons_for_February_-_Lesson_IV_Social_Service.txt"
+      ]
+    }
+  }
+}

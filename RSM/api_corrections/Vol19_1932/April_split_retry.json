@@ -1,0 +1,22 @@
+{
+  "volume": 19,
+  "month": "April",
+  "year": 1932,
+  "timestamp": "20260316_210708",
+  "dry_run": false,
+  "retried": 2,
+  "created": 0,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "e",
+      "title": "Fidelity",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "f",
+      "title": "The Light Within",
+      "result": "RETRY_FAILED: end (47) <= start (56440)"
+    }
+  ]
+}

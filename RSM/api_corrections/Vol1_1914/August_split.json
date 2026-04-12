@@ -1,0 +1,64 @@
+{
+  "volume": 1,
+  "month": "August",
+  "year": 1914,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.0511,
+  "files": [
+    {
+      "source_file": "V1_1914_Aug_03_Lssn_Health.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Health and Hygiene Lesson I",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "HEALTH AND HYGIENE Lesson I. Care of the",
+          "end_boundary": "should follow each of these health topics. August",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Health and Hygiene Lesson II",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "HEALTH AND HYGIENE Lesson II. Note  The Health",
+          "end_boundary": "make use of A Warning to Mothers. August",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Health and Hygiene Lesson III",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "HEALTH AND HYGIENE Lesson in.  The Fly, A",
+          "end_boundary": "suggestions on hygiene. AugustWORK AND BUSINESS Lesson",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Work and Business Lesson I",
+          "category": "Lesson",
+          "author": null,
+          "start_boundary": "I. \"Sisters, do not find fault, especially",
+          "end_boundary": "Ten minutes talk on Current Events. 14",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY BULLETIN"
+      ],
+      "notes": "File contains 4 distinct lessons as indicated in the table of contents. Three Health and Hygiene lessons (I, II, III) followed by one Work and Business lesson. Clear lesson boundaries with Roman numerals and subject changes. Note that Lesson III has a typo 'in.' instead of 'III.' in the original text.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12949,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 14337,
+        "output_tokens": 538,
+        "cost": 0.0511
+      }
+    }
+  ]
+}

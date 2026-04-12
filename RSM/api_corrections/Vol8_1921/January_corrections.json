@@ -1,0 +1,69 @@
+{
+  "volume": 8,
+  "month": "January",
+  "year": 1921,
+  "total_files_checked": 11,
+  "files_correct": [
+    "January_Vol8_04_Article_A_Prayer.txt",
+    "January_Vol8_07_Article_World_Happenings.txt",
+    "January_Vol8_08_Notes_from_Field_Notes_from_the_Field.txt",
+    "January_Vol8_09_Editorial_Editorial_My_New_Year_Resolution.txt",
+    "January_Vol8_10_Article_Lesson_on_Tobacco_Evil.txt",
+    "January_Vol8_11b_Guide_Lessons_Guide_Lessons_for_March.txt"
+  ],
+  "corrections": [
+    {
+      "file": "January_Vol8_02_Article_A_New_Year's_Prayer_for.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only ending fragment from A Blessed Baby article instead of the prayer poem",
+      "action": "replace_content",
+      "text": "A NEW YEAR'S PRAYER FOR 1921. L. 'Lula Greene Richards. + Father who 'art in Heaven, - Hallowed be Thy name! As Jesus taught the humble _. Who to His presence came, _ Joseph Thy modern Prophet Hath taught Thy Saints to pray, And this we would approach Thee Ae On this great New Year's day.. We thank Thee that Phy Kingdom rs Hath come on earth again, _ With Prophets and Apostles, 'Devout and holy. Men. Come Jesus, Heaven's Kingdom In light and power display, Bring Thou with all its glory A New Eternal Day! —",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "January_Vol8_03_Article_A_Blessed_Baby.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from next article",
+      "action": "trim_end",
+      "text": "a New Year's offering to our readers.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "January_Vol8_11a_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence in the middle of the February lessons",
+      "action": "prepend",
+      "text": "Guide Lessons for February. LESSON I. Theology and Testimony. First WEEK IN FEBRUARY. SALVATION FOR THE LIVING AND THE DEAD. Two sets of lessons are herein given so that class leaders will have ample time for preparation. PERSONALITY OF GOD. The second startling revelation received by the Proplici Joseph Smith in the grove, one hundred years ago, was that God, our Father, is a person, distinct and separated in actual bodily form from his Son, Jesus the Christ. Both stood before the rapt gaze of the youthful seer and both spoke to him. No matter what persecution followed, the prophet maintained the simple testimony of this vision until his death, giving his life to establish its truth. The Christian world, generally speaking, believed and still believes in a God who is invisible and impersonal. According to the old sectarian phraseology he is 'a body without parts and passions, who sits upon the top of a topless throne and whose center is everywhere and circumerence nowhere.\" A famous modern Episcopalian preacher when asked for a definition of God is reported to have answered that God is a principle; again pressed to define what he meant by a principle, he replied that \"two and two make four—that is a principle.\" Let us examine some of the printed creeds of the modern world, old and new, on this point. The ancient Hebrews, according to a very modern authority believed: \"The unique characteristic of the God of the ancient Hebrews is his intense personality.\" Page 83 of Religions of the Past and Present. \"This characteristic of personality appears peculiarly in his relation to his people. He is first of all a tribal God, of that I have no question. His full name is \"Yahwe of Hosts, the God of Israel.\" This particularism, which offends our modern cosmopolitanism, is an expression of his essential personality. It is a limitation, we say, on the pure idea of God, but a limitation which is necessary to the idea of the personal. For it is of the essence of personality that it is independent of other personalities, independent and self-existent, and can only come into contact with other persons through acts of the will and of desire, It is a mistake to try to push the loftiest of the prophets to a more abstract idea of his person. Amos, who states Yahwe's control of the world as strongly as any, and perhaps more clearly, (e. G., cc. 1-2; 9:7) nevertheless holds to the divine particularism. Page 84 of Religions of the Past and Present. The modern Jew, at least the American Jew, seems in many",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are: 1) A New Year's Prayer file contains wrong content, 2) A Blessed Baby has content bleeding from next article, and 3) February Guide Lessons file starts mid-sentence. The frontispiece file appears to contain the caption and magazine header rather than just the image description.",
+  "validated_corrections": [
+    {
+      "file": "January_Vol8_11a_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence in the middle of the February lessons",
+      "action": "prepend",
+      "text": "Guide Lessons for February. LESSON I. Theology and Testimony. First WEEK IN FEBRUARY. SALVATION FOR THE LIVING AND THE DEAD. Two sets of lessons are herein given so that class leaders will have ample time for preparation. PERSONALITY OF GOD. The second startling revelation received by the Proplici Joseph Smith in the grove, one hundred years ago, was that God, our Father, is a person, distinct and separated in actual bodily form from his Son, Jesus the Christ. Both stood before the rapt gaze of the youthful seer and both spoke to him. No matter what persecution followed, the prophet maintained the simple testimony of this vision until his death, giving his life to establish its truth. The Christian world, generally speaking, believed and still believes in a God who is invisible and impersonal. According to the old sectarian phraseology he is 'a body without parts and passions, who sits upon the top of a topless throne and whose center is everywhere and circumerence nowhere.\" A famous modern Episcopalian preacher when asked for a definition of God is reported to have answered that God is a principle; again pressed to define what he meant by a principle, he replied that \"two and two make four—that is a principle.\" Let us examine some of the printed creeds of the modern world, old and new, on this point. The ancient Hebrews, according to a very modern authority believed: \"The unique characteristic of the God of the ancient Hebrews is his intense personality.\" Page 83 of Religions of the Past and Present. \"This characteristic of personality appears peculiarly in his relation to his people. He is first of all a tribal God, of that I have no question. His full name is \"Yahwe of Hosts, the God of Israel.\" This particularism, which offends our modern cosmopolitanism, is an expression of his essential personality. It is a limitation, we say, on the pure idea of God, but a limitation which is necessary to the idea of the personal. For it is of the essence of personality that it is independent of other personalities, independent and self-existent, and can only come into contact with other persons through acts of the will and of desire, It is a mistake to try to push the loftiest of the prophets to a more abstract idea of his person. Amos, who states Yahwe's control of the world as strongly as any, and perhaps more clearly, (e. G., cc. 1-2; 9:7) nevertheless holds to the divine particularism. Page 84 of Religions of the Past and Present. The modern Jew, at least the American Jew, seems in many",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "January_Vol8_03_Article_A_Blessed_Baby.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and includes content from next article",
+      "action": "trim_end",
+      "text": "a New Year's offering to our readers.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

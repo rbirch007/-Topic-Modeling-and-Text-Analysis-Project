@@ -1,0 +1,57 @@
+===========================================================================
+  QC AUDIT SUMMARY: Volume 11 (1924)
+===========================================================================
+
+  Total files:      242 (204 articles, 38 special)
+  OK:               227
+  Flagged:          15
+  Empty:            0
+
+  REMEDIATION NEEDED:
+    api_fix: 1
+    manual_review: 3
+    re_extract: 11
+
+
+  February:
+    February_Vol11_13a_Notes_from_Field_Notes_from_the_Field.txt | MERGED(CAPS_HEADERS(3)) | 17947 chars | re_extract
+    [CONTENTS MISSING] "Eliza R. Snow Minnie Iverson Hodapp" (p59)
+
+  March:
+    March_Vol11_03_Article_Dr_C_H_Levermore.txt | SHORT(151) | 151 chars | manual_review
+    March_Vol11_13b_Guide_Lessons_Guide_Lessons_for_May.txt | MERGED(MULTI_LESSON(4)) | 10417 chars | re_extract
+    [CONTENTS MISSING] "Alice Louise Reynolds" (p115)
+    [CONTENTS MISSING] "Laura Gardner" (p118)
+
+  April:
+    April_Vol11_01_Frontispiece_An_April_Sunset_Frontispiece.txt | SHORT(82) | 82 chars | manual_review
+    April_Vol11_07_Article_A_Perfect_Day.txt | MERGED(CAPS_HEADERS(12)) | 13296 chars | re_extract
+
+  May:
+    May_Vol11_04_Article_Portrait_of_Mother_of_James_Matthew_Barrie.txt | MERGED(CAPS_HEADERS(4)) | 13371 chars | re_extract
+
+  June:
+    June_Vol11_20a_Article_President_Heber_J_Grant.txt | MERGED(CAPS_HEADERS(3)) | 13656 chars | re_extract
+    June_Vol11_22_Editorial_Editorial—President_Williams'_Birthday.txt | MERGED(CAPS_HEADERS(3)) | 9241 chars | re_extract
+    [CONTENTS MISSING] "Object and Preview Lessons" (p283)
+
+  July:
+    July_Vol11_11a_Article_Relief_Society_Nurses.txt | MERGED(CAPS_HEADERS(3)) | 10402 chars | re_extract
+    [CONTENTS MISSING] "What the Pioneers Ate Jean Cox" (p330)
+
+
+  September:
+    September_Vol11_02e_Article_School_Lunches.txt | MERGED(CAPS_HEADERS(9)) | 29777 chars | re_extract
+    September_Vol11_02k_Guide_Lessons_Literature.txt | LOW_OCR_MATCH(62%) | 4919 chars | api_fix
+    September_Vol11_12a_Guide_Lessons_Literature_-_Nathaniel_Hawthornes_Writings.txt | MERGED(MULTI_LESSON(2)) | 11214 chars | re_extract
+    [CONTENTS MISSING] "The Mountains Shall be Laid Low Thomas L. Martin" (p439)
+
+
+  November:
+    November_Vol11_01_Frontispiece_Boating_on_the_Jordan,_in_Utah_Frontispiece.txt | SHORT(30) | 30 chars | manual_review
+    November_Vol11_16a_Guide_Lessons_Guide_Lessons_for_January_-_Lesson_I_Theology_and_Testimony.txt | MERGED(MULTI_LESSON(2)) | 12626 chars | re_extract
+    November_Vol11_16c_Guide_Lessons_Guide_Lessons_for_January_-_Lesson_III_Literature.txt | MERGED(MULTI_LESSON(2)) | 9353 chars | re_extract
+    [CONTENTS MISSING] "The Fruits of Faith Alfred Osmond" (p545)
+
+
+===========================================================================

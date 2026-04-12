@@ -1,0 +1,47 @@
+{
+  "volume": 4,
+  "month": "August",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1188,
+  "files": [
+    {
+      "source_file": "August_Vol4_17c_Guide_Lessons_Lesson_III_Genealogy_and_Literature_-_The_Historical_Fatherl_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON III. Genealogy and Literature. Third Week Int September. THE HISTORICAL FATHERLAND AND MIGRATIONS OF OUR ANCESTRY",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week Int September.",
+          "end_boundary": "What do von know of the Ansdo-Saxons?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Literature. Third Week in August. CHILDREN'S STORIES AND STORY WRITERS",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Literature. Third Week in August. CHILDREN'S STORIES AND",
+          "end_boundary": "to write the public librarian to join in this discussion.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two distinct lesson sections: a genealogy lesson about Teutonic ancestry and migrations, and a literature lesson about children's stories and story writers. Both appear to be part of the Guide Lessons curriculum but cover different subject areas.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 15433,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 37648,
+        "output_tokens": 391,
+        "cost": 0.1188
+      }
+    }
+  ]
+}

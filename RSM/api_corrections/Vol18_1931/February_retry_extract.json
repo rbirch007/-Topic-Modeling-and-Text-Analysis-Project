@@ -1,0 +1,57 @@
+{
+  "volume": 18,
+  "month": "February",
+  "year": 1931,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0278,
+  "stats": {
+    "found": 0,
+    "not_found": 2,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "The Indian Appeal",
+      "order": "c",
+      "status": "parse_error",
+      "pdf_pages": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "The Indian in the Public Schools",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Marian Gardner Nielson",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 81-85). According to the table of contents, this article should be on page 92, but the provided images only show pages 81-85 which contain advertisements and other content but not the target article.",
+      "order": "c",
+      "pdf_pages": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "source_file": "February_Vol18_04_Article_Indian_Appeal_Lund.txt",
+      "api_usage": {
+        "input_tokens": 8616,
+        "output_tokens": 132,
+        "cost": 0.0278
+      }
+    },
+    {
+      "title": "Literature - The Short Story in France",
+      "order": "c",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

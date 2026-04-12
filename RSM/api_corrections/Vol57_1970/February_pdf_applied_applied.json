@@ -1,0 +1,37 @@
+{
+  "volume": 57,
+  "month": "February",
+  "year": 1970,
+  "timestamp": "20260314_102521",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_02_12_Fict_Happy_Addis.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2314 chars removed)"
+    },
+    {
+      "file": "V57_02_15_GenFt_Make_a_Watson.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (6056 chars removed)"
+    },
+    {
+      "file": "V57_02_21_Fict_Jerusha_Todd.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    },
+    {
+      "file": "V57_02_24_GenFt_Notes_Activities.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5585 chars removed)"
+    },
+    {
+      "file": "V57_02_25_GenFt_Spiritual_Doxey.txt",
+      "action": "note",
+      "result": "INFO: Article starts correctly with metadata headers followed by the article content beginning with 'Zion related? THE CATALYST'"
+    }
+  ]
+}

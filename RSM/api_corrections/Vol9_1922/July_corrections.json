@@ -1,0 +1,126 @@
+{
+  "volume": 9,
+  "month": "July",
+  "year": 1922,
+  "total_files_checked": 13,
+  "files_correct": [
+    "July_Vol9_04_Article_An_Indian_Story_Lucy_Guyman_Bloomfield.txt",
+    "July_Vol9_05_Article_Trust_in_God_Abby_K._Robinson.txt",
+    "July_Vol9_07_Article_Teacher_Training.txt",
+    "July_Vol9_08_Article_Let_us_Seek_Eternal_Life_Reinhard_Maeser.txt",
+    "July_Vol9_09_Article_Peace_Rebecca_F._Lewis.txt",
+    "July_Vol9_10_Article_The_General_Procession_James_H._Anderson.txt",
+    "July_Vol9_11_Article_Ann_and_Her_Husband.txt",
+    "July_Vol9_12b_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_II_Work_and_Business.txt",
+    "July_Vol9_12c_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_III_Literature.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol9_01_Article_Guests_Grace_Ingles_Frost.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains table of contents instead of the actual poem 'Guests' by Grace Ingles Frost",
+      "action": "replace_content",
+      "text": "Guests Grace Ingles Frost When life's -hours grow solitary A reception oft I hold In the spacious halls of memory, For my friends, both young and old. One by one with smiles they greet me, As they pause to press my hand, Courtly knights and gentle ladies, Kings and queens of Friendship's Land. Now and then rings merry laughter, When 'tis pleasantry's just due,. With oft times a word of homage Spoken low with accent true. Thus are vanished lonely hours, And increasing more and more, Are the royal guests I welcome Yearly to my castle door.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "July_Vol9_02_Article_Parting_(Music)_George_Careless.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of the musical composition",
+      "action": "trim_start",
+      "text": "Parting C. W. PENROSE.. GEO. CARELESS.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "July_Vol9_03_Article_Our_Hymn_Book_Susa_Young_Gates.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears to be missing the beginning portion and has some text gaps",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IX JULY, 1922 No. 7 Our Hymn Book By Susa Young Gates The great interest taken in the study of our hymns suggests in inquiry into the history of the hymn book which has been so vital a part of the worship of our people for nearly a century.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains musical notation and other content that belongs to other articles",
+      "action": "trim_end",
+      "text": "SUNDAY 9",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_12a_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_I_Theology_and_Testimon.txt",
+      "issue_type": "missing_text",
+      "description": "Missing some questions at the end of the lesson",
+      "action": "append",
+      "text": "5. What special advantage comes through having a patriarchal blessing. 6. How may patriarchal blessings be made to help parents to get close to the hearts of their young folks? 7. Show how an interest in Adam-Ondi-Ahman may lead to an interest in patriarchal blessings. 8. What official messengers from heaven were in attendance at the dedication of the Kirtland temple and what was the special mission of each? 9. Show that children's blessings and patriarchal blessings pave the way for a desire for temple blessings.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_13_Article_Your_Thirty_Slaves.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Measured in ancient standards, we are all kings today, with the slaves of electricity, steam and machinery toiling constantly for us.?Haverhill Gazette.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several files have content bleeding issues, particularly with table of contents and advertisements. The 'Guests' poem file contains completely wrong content. The 'Notes from the Field' article has significant content bleeding from other articles including musical notation. Advertisement content is mixed into the 'Your Thirty Slaves' article.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol9_03_Article_Our_Hymn_Book_Susa_Young_Gates.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears to be missing the beginning portion and has some text gaps",
+      "action": "prepend",
+      "text": "THE Relief Society Magazine Vol. IX JULY, 1922 No. 7 Our Hymn Book By Susa Young Gates The great interest taken in the study of our hymns suggests in inquiry into the history of the hymn book which has been so vital a part of the worship of our people for nearly a century.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains musical notation and other content that belongs to other articles",
+      "action": "trim_end",
+      "text": "SUNDAY 9",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_12a_Guide_Lessons_Guide_Lessons_for_September_-_Lesson_I_Theology_and_Testimon.txt",
+      "issue_type": "missing_text",
+      "description": "Missing some questions at the end of the lesson",
+      "action": "append",
+      "text": "5. What special advantage comes through having a patriarchal blessing. 6. How may patriarchal blessings be made to help parents to get close to the hearts of their young folks? 7. Show how an interest in Adam-Ondi-Ahman may lead to an interest in patriarchal blessings. 8. What official messengers from heaven were in attendance at the dedication of the Kirtland temple and what was the special mission of each? 9. Show that children's blessings and patriarchal blessings pave the way for a desire for temple blessings.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "July_Vol9_13_Article_Your_Thirty_Slaves.txt",
+      "issue_type": "ad_content",
+      "description": "File contains extensive advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "Measured in ancient standards, we are all kings today, with the slaves of electricity, steam and machinery toiling constantly for us.?Haverhill Gazette.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "July_Vol9_02_Article_Parting_(Music)_George_Careless.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents and advertisers directory instead of the musical composition",
+      "action": "trim_start",
+      "text": "Parting C. W. PENROSE.. GEO. CARELESS.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

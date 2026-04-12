@@ -1,0 +1,27 @@
+{
+  "volume": 4,
+  "month": "May",
+  "year": 1917,
+  "timestamp": "20260315_120938",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol4_02_Mothers_in_Israel_Council_Bluffs_Ferry,_1853_Frontispiece_Mothers_in_Israel.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2686 chars added)"
+    },
+    {
+      "file": "May_Vol4_09_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (2687 chars removed)"
+    }
+  ]
+}

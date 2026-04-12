@@ -1,0 +1,307 @@
+{
+  "volume": 54,
+  "month": "October",
+  "year": 1967,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V54_10_03_Art_From_Near_and_Far.txt",
+    "V54_10_09_SpFt_The_Jones.txt",
+    "V54_10_10_SpFt_Within_Young.txt",
+    "V54_10_11_GenFt_Womans_Cannon.txt",
+    "V54_10_12_GenFt_Editorial_Crawford.txt",
+    "V54_10_20_GenFt_Self-Imposed_Schow.txt",
+    "V54_10_21_GenFt_I_Owen.txt",
+    "V54_10_23_GenFt_Creative.txt",
+    "V54_10_29_Lssn_Visiting_Smith.txt",
+    "V54_10_30_Lssn_Homemaking_Taylor.txt",
+    "V54_10_31_Lssn_Social_Christensen.txt",
+    "V54_10_32_Lssn_Cultural_Thomas.txt",
+    "V54_10_33_Poem_Anchorage_Kleinman.txt",
+    "V54_10_34_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_10_01_Fict_Throw_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be a mix of multiple articles instead of the fiction story",
+      "action": "replace_content",
+      "text": "This file needs complete re-extraction as it contains mixed content from multiple articles",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_02_Art_At_Tangren.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be from Petersen article instead of the poem",
+      "action": "replace_content",
+      "text": "At Half-Past Autumn Peggy Tangren The year is measured by a shadow's length And now it is half-past autumn. Behind small weirs of sodden maple leaves Rain waters deepen into little lakes; The cradling nest has emptied To a sky wedge of swift wings. Two months ago this forest reeled And roared defiance In wars with storm and wind And held its roots. But now, at half-past autumn, A soughing fills the pauses in the woods' deep breathing. October, tremulous and slow, Descends the mountain Down from cliff and canyon To the drowsing hills, Then waits, as an aging patriarch Who, seeing beyond his sightless eyes, A vision of resurgence, and its keeping, Stands waiting with the waiting land.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_04_SpFt_Turning_Petersen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "Turning the Hearts of Family Members to the Family And certainly, at this critical point in their lives, parents should be willing to take whatever time is necessary",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_05_Poem_Space_Sadlier.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem content",
+      "action": "replace_content",
+      "text": "SPACE THE DAYS Beulah Huish Sadlier Space the days—lest swift as running deer, October ends. Lf in heaven's sight, she spread a flame of sorrow On the hills, then only in pretense shall I confiscate How to extoll the opulence of apple And the clinging peach, the clustered grape, And burnished essence of aquatic dust Floating on the leaf-banked stream. It was October when we met— And days went swift as running deer a",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_07_Poem_No_Robinson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be from Maguey Story instead of the poem",
+      "action": "replace_content",
+      "text": "NO SACRIFICE Linnie Fisher Robinson I made a promise in my early youth To sacrifice for thee, dear Lord, above; To learn thy sovereign will, thy every word, And serve my fellows with unstinting love. And I have served in myriad ways And shared with those I found in need; But, oh, the sweetness that came back to me, Repaid so many times each single deed. So never once in all these years, Has there been aught of sacrifice from me; Accept my good desires, through rueful tears,: I have but gained the while and better see.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_08_SpFt_The_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "The Maguey Story Leanor J. Brown, Member, General Board of Relief Society ¢ Imagine my getting excited about a cactus!",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_13_GenFt_In_Brockbank.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond the memoriam into next content",
+      "action": "trim_end",
+      "text": "May the beautiful life and blessed memory of Nada Rich Brockbank be a continuing blessing to them.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_14_Poem_Seagulls_Fairbairn.txt",
+      "issue_type": "wrong_content",
+      "description": "File appears to be duplicate of preceding article content",
+      "action": "replace_content",
+      "text": "SEAGULLS Vesta Nickerson Fairbairn Whiter Than flying spray When breakers crash against The coral sand are sunlit wings",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_15_GenFt_Notes_Programs.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "UNIFIED STARTING TIME FOR CHURCH PROGRAMS As has been announced previously, all Church curriculum programs",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_16_Fict_Then_Nielson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'Then Comes Tomorrow' but has content from previous article",
+      "action": "trim_start",
+      "text": "Then Comes Tomorrow Marian Gardner Nielson ¢ Esther lovingly traced the intricate appliquéd flowers",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V54_10_17_Poem_Since_Gabbott.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content instead of the poem",
+      "action": "replace_content",
+      "text": "SINCE TIME BEGAN Mabel Jones Gabbott While her hand Or Iding clean, bree tumb g through the young hild; or wisi 3 dancing with yc ad s. The son who f i 8 Q a 5 Ve nu.",
+      "confidence": "medium",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_18_Poem_A_Woolley.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains recipe content instead of the poem",
+      "action": "replace_content",
+      "text": "A PRAYER Enid F. Woolley Australia Father, forgive the times of doubting, Of never being sure If what I do is right or wrong. And give me wisdom pure, That when two paths are there before me And one I needs must tread, Let me know without a doubt, A worry or a dread, That the path I take is right, And meant for me to use. Father forgive my indecision; And teach me how to choose.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_10_19_GenFt_The_McGhie.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed recipe and other content instead of party recipes article",
+      "action": "note",
+      "text": "File needs complete re-extraction to properly capture the party recipes article",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V54_10_22_Poem_Weapon_Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "WEAPON Lois M. Anderson Love is the only weapon to date, That can silence the guns Of human hate!",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_24_Fict_At_the_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete title",
+      "action": "trim_start",
+      "text": "At the End of a Pilgrimage Marilyn McMeen Miller ¢ The motion of the car rocked the babies to sleep.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V54_10_25_Poem_Burnished_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "BURNISHED FIELD Gladys Hesser Burnham When ripening grain waves softly in the breeze",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_26_Fict_Janet.txt",
+      "issue_type": "wrong_content",
+      "description": "File has incorrect title - should be 'Throw Down the Gauntlet Chapter 2'",
+      "action": "note",
+      "text": "Filename should be V54_10_26_Fict_Throw_Breeze.txt to match the actual content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V54_10_27_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond Relief Society Activities section",
+      "action": "trim_end",
+      "text": "An exquisite table decoration was arranged by Sister Edna Berg, Smithfield Third Ward.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_28_Lssn_Spiritual_Doxey.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond the lesson into next content",
+      "action": "trim_end",
+      "text": "The member of the Church who sustains all of the officers of his ward, stake, and the General Authorities finds rich blessings.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "In This Dark Hiatus Alda L. Brown",
+      "expected_page": 732,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Many files contain wrong content or content from adjacent articles, indicating systematic extraction issues. Several poetry files contain completely different content than expected. The fiction files have particular issues with incorrect titles and mixed content. Multiple files need complete re-extraction rather than simple corrections.",
+  "validated_corrections": [
+    {
+      "file": "V54_10_04_SpFt_Turning_Petersen.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "Turning the Hearts of Family Members to the Family And certainly, at this critical point in their lives, parents should be willing to take whatever time is necessary",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_08_SpFt_The_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "The Maguey Story Leanor J. Brown, Member, General Board of Relief Society ¢ Imagine my getting excited about a cactus!",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_13_GenFt_In_Brockbank.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond the memoriam into next content",
+      "action": "trim_end",
+      "text": "May the beautiful life and blessed memory of Nada Rich Brockbank be a continuing blessing to them.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_15_GenFt_Notes_Programs.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "UNIFIED STARTING TIME FOR CHURCH PROGRAMS As has been announced previously, all Church curriculum programs",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_16_Fict_Then_Nielson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with 'Then Comes Tomorrow' but has content from previous article",
+      "action": "trim_start",
+      "text": "Then Comes Tomorrow Marian Gardner Nielson ¢ Esther lovingly traced the intricate appliquéd flowers",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (6 words)"
+    },
+    {
+      "file": "V54_10_22_Poem_Weapon_Anderson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "WEAPON Lois M. Anderson Love is the only weapon to date, That can silence the guns Of human hate!",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_24_Fict_At_the_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete title",
+      "action": "trim_start",
+      "text": "At the End of a Pilgrimage Marilyn McMeen Miller ¢ The motion of the car rocked the babies to sleep.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (8 words)"
+    },
+    {
+      "file": "V54_10_25_Poem_Burnished_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article",
+      "action": "trim_start",
+      "text": "BURNISHED FIELD Gladys Hesser Burnham When ripening grain waves softly in the breeze",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "fuzzy_match (4 words)"
+    },
+    {
+      "file": "V54_10_27_GenFt_Notes_Activities.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond Relief Society Activities section",
+      "action": "trim_end",
+      "text": "An exquisite table decoration was arranged by Sister Edna Berg, Smithfield Third Ward.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_10_28_Lssn_Spiritual_Doxey.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues beyond the lesson into next content",
+      "action": "trim_end",
+      "text": "The member of the Church who sustains all of the officers of his ward, stake, and the General Authorities finds rich blessings.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

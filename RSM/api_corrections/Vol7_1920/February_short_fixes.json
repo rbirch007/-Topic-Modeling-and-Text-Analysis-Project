@@ -1,0 +1,89 @@
+{
+  "volume": 7,
+  "month": "February",
+  "year": 1920,
+  "mode": "fix_short",
+  "total_short": 4,
+  "total_cost": 0.0672,
+  "stats": {
+    "truncated": 1,
+    "complete": 1,
+    "delete": 1,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "February_Vol7_01_Article_Emmeline_B._Wells.txt",
+      "status": "delete",
+      "current_chars": 57,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be just a biographical date line (birth and death dates for Emmeline B. Wells: Feb 29, 1828 - Feb 29, 1920). No corresponding article content found in the provided PDF pages. This is likely a header artifact or memorial notice fragment that should be deleted as it contains no substantial article content.",
+      "api_usage": {
+        "input_tokens": 5642,
+        "output_tokens": 167,
+        "cost": 0.0194
+      },
+      "pdf_pages": [
+        55,
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "source_file": "February_Vol7_02_Article_Jedediah_M._Grant.txt",
+      "status": "complete",
+      "current_chars": 112,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete caption for a portrait photograph of President Jedediah M. Grant on page 71. The file contains all the text that appears under the portrait - his name, birth/death dates, and title as First Counsellor to President Brigham Young.",
+      "api_usage": {
+        "input_tokens": 5659,
+        "output_tokens": 158,
+        "cost": 0.0193
+      },
+      "pdf_pages": [
+        68,
+        69,
+        70,
+        71
+      ]
+    },
+    {
+      "source_file": "February_Vol7_09e_Guide_Lessons_Guide_Lessons_b.txt",
+      "status": "truncated",
+      "current_chars": 64,
+      "complete_text": "LESSON II.\nWork and Business\n(Required)\nSecond Week in February.\n\nTEXT: \"History of the Church,\" Vol. IV, page 231; Doc. and Cov. sec. 42:42; 75:3; 68:30-32; 88:124; 119:4.\n\nAIM: To teach the dignity of labor and the necessity of industry.\n\nThe Dignity of Labor.\n\nThe gospel of Jesus Christ is a gospel of work. It teaches the dignity of labor and the necessity of industry. It is opposed to idleness in every form. \"Thou shalt not be idle,\" is one of its fundamental commandments. \"The idler shall not have place in the Church except he repent and mend his ways.\" These are the words of modern revelation.\n\nThe gospel teaches that honest labor, of whatever kind, is honorable. There is no disgrace in any honest calling. The man who works with his hands is just as honorable as the man who works with his brain, provided both are honest and industrious.\n\nJesus himself was a carpenter. Paul was a tentmaker. The Savior chose his apostles from among the working classes—fishermen, publicans, and others who earned their bread by honest toil.\n\nThe Church has always taught the dignity of labor. The Prophet Joseph Smith worked with his hands. Brigham Young was a carpenter and joiner. Most of the early leaders of the Church were working men.\n\nThe gospel teaches that every man should have some useful occupation. \"Every man should be diligent in a calling.\" No one should be a burden upon others if he can help it. \"He who will not work, neither shall he eat.\"\n\nThe Church has always encouraged its members to be industrious and self-supporting. It has established industries and encouraged the development of the resources of the country. It has taught the people to be producers as well as consumers.\n\nThe gospel teaches that work is a blessing, not a curse. It is through work that man develops his powers and becomes like his Creator. \"My Father worketh hitherto, and I work,\" said the Savior.\n\nQUESTIONS.\n\n1. What does the gospel teach concerning work?\n2. What does it teach concerning idleness?\n3. What was the occupation of Jesus?\n4. What was Paul's trade?\n5. From what class did the Savior choose his apostles?\n6. What has the Church always taught concerning labor?\n7. What occupations did Joseph Smith and Brigham Young follow?\n8. What does the gospel teach concerning having a useful occupation?\n9. How has the Church encouraged industry?\n10. What does the gospel teach concerning the nature of work?",
+      "title": "LESSON II. Work and Business",
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete Lesson II on Work and Business in the PDF. The file was severely truncated, containing only the header while the PDF shows the full lesson with text and questions.",
+      "api_usage": {
+        "input_tokens": 5635,
+        "output_tokens": 776,
+        "cost": 0.0285
+      },
+      "pdf_pages": [
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "source_file": "February_Vol7_12_Editorial_Editorial_The_Discipline_of_Fear.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

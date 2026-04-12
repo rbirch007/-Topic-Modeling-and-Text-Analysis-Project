@@ -1,0 +1,104 @@
+{
+  "volume": 16,
+  "month": "June",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0965,
+  "stats": {
+    "found": 0,
+    "not_found": 3,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "Relief Society Conference Julia A. F. Lund",
+      "printed_page": 289,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Julia A. F. Lund",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from May 1929 issue (Vol XVI No. 5) featuring 'The Pioneer Mother' article by Jennie B. Knight, not the June 1929 issue. The images do not contain the Relief Society Conference article by Julia A. F. Lund that should be on page 289 of the June issue.",
+      "api_usage": {
+        "input_tokens": 7230,
+        "output_tokens": 179,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        279,
+        280,
+        281,
+        282
+      ]
+    },
+    {
+      "title": "General Session—Morning",
+      "printed_page": 341,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "June_Vol16_10_Article_General_SessionMorning.txt",
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'General Session—Morning' has already been extracted and exists in the file June_Vol16_10_Article_General_SessionMorning.txt. The provided PDF images show pages 343-346 which contain different articles (The Best You Can Do, Evolution of the Ugly Duckling, etc.) but not the General Session—Morning article which would be on page 341.",
+      "api_usage": {
+        "input_tokens": 7202,
+        "output_tokens": 188,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        343,
+        344,
+        345,
+        346
+      ]
+    },
+    {
+      "title": "The Best You Can Do Alfred Osmond",
+      "printed_page": 343,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alfred Osmond",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four provided PDF page images (pages 332-335). Page 343 where this article should appear is not included in the provided images.",
+      "api_usage": {
+        "input_tokens": 7222,
+        "output_tokens": 133,
+        "cost": 0.0237
+      },
+      "pdf_pages": [
+        332,
+        333,
+        334,
+        335
+      ]
+    },
+    {
+      "title": "Beloved Nona H. Brown",
+      "printed_page": 357,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Beloved Nona H. Brown' listed on page 357 in the table of contents is not visible in any of the provided PDF page images (pages 343, 344, 345, 346). The images show other articles but do not contain page 357 where this article should appear.",
+      "api_usage": {
+        "input_tokens": 7218,
+        "output_tokens": 158,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        343,
+        344,
+        345,
+        346
+      ]
+    }
+  ]
+}

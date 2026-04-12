@@ -1,0 +1,57 @@
+{
+  "volume": 6,
+  "month": "July",
+  "year": 1919,
+  "total_files_checked": 16,
+  "files_correct": [
+    "July_Vol6_01_Famous_Statue_of_Moses_Frontispiece.txt",
+    "July_Vol6_02a_Article_Medical_Needs_in_the_Days_of_Moses_and_Today.txt",
+    "July_Vol6_03a_Article_Gems_from_the_General_Conference.txt",
+    "July_Vol6_04a_Article_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+    "July_Vol6_06_A_Quaker_Girl's_Dream_Sabina_L._Baxter.txt",
+    "July_Vol6_07_A_Friendly_Rhyme_in_Honor_of_E._Wesley_Smith_and_Family._Lil.txt",
+    "July_Vol6_08a_Article_An_Indian_Story.txt",
+    "July_Vol6_08b_Current_Topics_What_Do_You_Know.txt",
+    "July_Vol6_09_The_Jews.txt",
+    "July_Vol6_10_Thrift_Hints.txt",
+    "July_Vol6_11a_Notes_from_Field_The_Official_Round_Table.txt",
+    "July_Vol6_11b_Poem_Prisoners_of_the_Pit.txt",
+    "July_Vol6_12_On_the_Watch_Tower_James_H._Anderson.txt",
+    "July_Vol6_13_Construction_and_Reconstruction_in_the_Home.txt",
+    "July_Vol6_14_Caution_Grace_Ingles_Frost.txt",
+    "July_Vol6_15_Editorial_Teachers'_Training_Course.txt",
+    "July_Vol6_16a_Home_Science_Summer_Lessons_in_Hygiene.txt"
+  ],
+  "corrections": [
+    {
+      "file": "July_Vol6_05_Modesty.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'A' which appears to be the start of the next article title",
+      "action": "trim_end",
+      "text": "— Yale Record. A",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Appeal Lillian Pamplin Lee",
+      "expected_page": 373,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Most files are correctly extracted. The 'Appeal' article by Lillian Pamplin Lee (page 373) is missing from the extracted files but appears in the OCR text. One file has minor bleed from the next article.",
+  "validated_corrections": [
+    {
+      "file": "July_Vol6_05_Modesty.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with 'A' which appears to be the start of the next article title",
+      "action": "trim_end",
+      "text": "— Yale Record. A",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

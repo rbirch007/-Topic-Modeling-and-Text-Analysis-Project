@@ -1,0 +1,47 @@
+{
+  "volume": 7,
+  "month": "December",
+  "year": 1920,
+  "timestamp": "20260315_120945",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol7_01_Article_The_Pilgrim_Mothers_Annie_Wells_Cannon.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4787 chars removed)"
+    },
+    {
+      "file": "December_Vol7_02_Article_Utah_Descendants_of_Mayflower.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4784 chars added)"
+    },
+    {
+      "file": "December_Vol7_04_Article_General_Conference_of_Relief_Society.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (22946 chars removed)"
+    },
+    {
+      "file": "December_Vol7_05_Poetry_Relief_Society_Workers_Poem_Isabelle_E._King.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (13137 chars removed)"
+    },
+    {
+      "file": "December_Vol7_07b_Guide_Lessons_Guide_Lesson_Suggestions.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2 chars removed)"
+    },
+    {
+      "file": "December_Vol7_08_Guide_Lessons_Guide_Lesson_Suggestions.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "December_Vol7_09_Article_Index—Vol._VII.txt",
+      "action": "note",
+      "result": "INFO: File starts with just page number instead of full index content"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "volume": 11,
+  "month": "October",
+  "year": 1924,
+  "total_merged": 3,
+  "total_splits": 10,
+  "total_cost": 0.3873,
+  "files": [
+    {
+      "source_file": "October_Vol11_04_Article_Why_There_Should_be_More_Influence_of_Women_in_our_Legislatu.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Why There Should be More Influence of Women in Our Legislature",
+          "category": "Article",
+          "author": "Dr. Hugh Woodward",
+          "start_boundary": "Why There Should be More Influence of",
+          "end_boundary": "must become a part of our law making bodies.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Just a Woman",
+          "category": "Article",
+          "author": "Elsie E. Barrett",
+          "start_boundary": "Just a Woman By Elsie E. Barrett",
+          "end_boundary": "She does these things most every day, Without",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Editorial—Woman's Sphere Broadens",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL Entered as second-class matter at the",
+          "end_boundary": "Room 29, Bishop's Building, Salt Lake City, Utah",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Woman's Sphere Broadens",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "Woman's Sphere Broadens Women are concious of",
+          "end_boundary": "whatever we partake of and enjoy the readers",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "WOMEN IN OUR LEGISLATURE",
+        "EDITORIAL"
+      ],
+      "notes": "This file contains the main article by Dr. Woodward, a short poem, editorial masthead information, and the beginning of editorial content. The boundaries are clear based on topic changes and formatting in the original pages.",
+      "validation_issues": [
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 19054,
+      "tier": 1,
+      "pdf_pages": [
+        577,
+        578,
+        579,
+        580
+      ],
+      "api_usage": {
+        "input_tokens": 38690,
+        "output_tokens": 573,
+        "cost": 0.1247
+      }
+    },
+    {
+      "source_file": "October_Vol11_09_Article_Portrait_of_Mrs_Mabel_Walker_Willebrandt.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for December - Literature (Edgar Allen Poe)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "portrait of one American poet and that poet",
+          "end_boundary": "the class that is created for the purpose",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for December - Social Service (Problems of Income)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in December)",
+          "end_boundary": "should some children have opportunity to attend school",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains two separate lessons from the Guide Lessons for December section. The first is a literature lesson on Edgar Allan Poe (Lesson III), and the second is a social service lesson on Problems of Income (Lesson IV). The file appears to start mid-sentence with the end of the Poe lesson.",
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14675,
+      "tier": 1,
+      "pdf_pages": [
+        629,
+        630,
+        631,
+        632,
+        633
+      ],
+      "api_usage": {
+        "input_tokens": 39208,
+        "output_tokens": 452,
+        "cost": 0.1244
+      }
+    },
+    {
+      "source_file": "October_Vol11_16_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for December - Lesson I: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR DECEMBER 533 prompted by a",
+          "end_boundary": "LESSON II (Second Week in December) Work AND BUSINESS",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for December - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in December) Work AND BUSINESS",
+          "end_boundary": "LESSON III (Third Week in December) Literature EDGAR ALLEN POE",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for December - Lesson III: Literature - Edgar Allen Poe",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in December) Literature EDGAR ALLEN POE",
+          "end_boundary": "LESSON IV Social Service (Fourth Week in December) PROBLEMS OF INCOME",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for December - Lesson IV: Social Service - Problems of Income",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service (Fourth Week in December) PROBLEMS OF INCOME",
+          "end_boundary": "Teachers' Topic for December LOVE \"To love abundantly",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR DECEMBER"
+      ],
+      "notes": "This file contains four distinct lesson sections from the December Guide Lessons, each with clear Roman numeral headings (I, II, III, IV) and different subject areas: Theology and Testimony, Work and Business, Literature (Edgar Allen Poe), and Social Service (Problems of Income). Each lesson has its own content structure with questions and problems sections.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 10703,
+      "tier": 1,
+      "pdf_pages": [
+        623,
+        624,
+        625,
+        626,
+        627,
+        628,
+        629,
+        630
+      ],
+      "api_usage": {
+        "input_tokens": 43043,
+        "output_tokens": 605,
+        "cost": 0.1382
+      }
+    }
+  ]
+}

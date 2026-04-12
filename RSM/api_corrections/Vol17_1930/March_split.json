@@ -1,0 +1,143 @@
+{
+  "volume": 17,
+  "month": "March",
+  "year": 1930,
+  "total_merged": 2,
+  "total_splits": 7,
+  "total_cost": 0.3325,
+  "files": [
+    {
+      "source_file": "March_Vol17_08_Article_Autumn_Josephine_M_Duncan.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Autumn",
+          "category": "Article",
+          "author": "Josephine M. Duncan",
+          "start_boundary": "Autumn By Josephine M. Duncan. Second Honorable",
+          "end_boundary": "A song of praise to God on high.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May - Lesson 1: Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON 1 Theology",
+          "end_boundary": "pages 168-177. LESSON 2 Work and Business",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for May - Lesson 2: Work and Business (Teachers' Topics)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "TEACHERS' TOPICS (Second Week in May) Courtesy",
+          "end_boundary": "full purpose of heart. We why DO) SD",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for May - Lessons 3 and 4",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON 3 Literature (Third Week in May)",
+          "end_boundary": "are rarely ever tabulated for the public's use.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR MAY"
+      ],
+      "notes": "This file contains one poem 'Autumn' followed by three Guide Lessons for May covering different subjects. The lessons appear to be incomplete at the end, cutting off mid-sentence in Lesson 4 about Crime and Delinquency.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 26318,
+      "tier": 1,
+      "pdf_pages": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "api_usage": {
+        "input_tokens": 60816,
+        "output_tokens": 553,
+        "cost": 0.1907
+      }
+    },
+    {
+      "source_file": "March_Vol17_12_Article_Some_Outstanding_Incidents_in_Joseph_Smiths_Career_Carter_E_Grant.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Some Outstanding Incidents in Joseph Smith's Life",
+          "category": "Article",
+          "author": "Carter E. Grant",
+          "start_boundary": "Business College Salt Lake City Some Outstanding Incidents",
+          "end_boundary": "further facts regarding Joseph and Emma with special",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "A Parent's Desire",
+          "category": "Article",
+          "author": null,
+          "start_boundary": "A PARENT'S DESIRE Would it not be",
+          "end_boundary": "If It's a Beneficial Policy It's the Best",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Pictures in the Fire",
+          "category": "Poem",
+          "author": "Julia Collard Baker",
+          "start_boundary": "Pictures in the Fire By Julia Collard",
+          "end_boundary": "And became a child like thee.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "JOSEPH SMITH'S LIFE"
+      ],
+      "notes": "The file contains the main article about Joseph Smith's life, followed by an advertisement for Beneficial Life Insurance Company with the title 'A Parent's Desire', and ends with a poem 'Pictures in the Fire'. The Joseph Smith article appears to be incomplete as it mentions 'Our second chapter will narrate further facts' but no second chapter follows.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 14405,
+      "tier": 1,
+      "pdf_pages": [
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188
+      ],
+      "api_usage": {
+        "input_tokens": 45009,
+        "output_tokens": 452,
+        "cost": 0.1418
+      }
+    }
+  ]
+}

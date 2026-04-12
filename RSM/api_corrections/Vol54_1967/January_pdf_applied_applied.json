@@ -1,0 +1,22 @@
+{
+  "volume": 54,
+  "month": "January",
+  "year": 1967,
+  "timestamp": "20260314_100110",
+  "dry_run": false,
+  "applied": 1,
+  "skipped": 0,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V54_01_01_Art_A_New_Presidency.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4783 chars removed)"
+    },
+    {
+      "file": "V54_01_15_Poem_Beyond_Gabbott.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    }
+  ]
+}

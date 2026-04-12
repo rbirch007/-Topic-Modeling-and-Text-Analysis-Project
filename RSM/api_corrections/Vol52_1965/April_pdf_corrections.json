@@ -1,0 +1,19 @@
+{
+  "volume": 52,
+  "month": "April",
+  "year": 1965,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V52_04_10_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with metadata and content notes instead of the actual editorial text",
+      "action": "trim_start",
+      "text": "\"Sufficient Unto the Day\"",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ]
+}

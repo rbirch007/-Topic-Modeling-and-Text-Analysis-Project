@@ -1,0 +1,213 @@
+{
+  "volume": 57,
+  "month": "August",
+  "year": 1970,
+  "total_files_checked": 39,
+  "files_correct": [
+    "V57_08_02_Poem_Color_Loomis.txt",
+    "V57_08_04_SpFt_Report_Spafford.txt",
+    "V57_08_08_Poem_And_Rees.txt",
+    "V57_08_09_GenFt_Womans_Cannon.txt",
+    "V57_08_10_GenFt_Editorial_Madsen.txt",
+    "V57_08_11_GenFt_Lucile_Society.txt",
+    "V57_08_15_SpFt_Keep_Lundgren.txt",
+    "V57_08_17_SpFt_Relief_Beck.txt",
+    "V57_08_18_Poem_A_Leonard.txt",
+    "V57_08_19_Poem_Small_Roberts.txt",
+    "V57_08_20_GenFt_Treasure_Jessen.txt",
+    "V57_08_21_GenFt_A_Rug_Watson.txt",
+    "V57_08_23_GenFt_Born_Olsen.txt",
+    "V57_08_24_GenFt_Hobby.txt",
+    "V57_08_25_SpFt_A_Pedersen.txt",
+    "V57_08_27_Poem_His_Dickson.txt",
+    "V57_08_28_Fict_The_Mackay.txt",
+    "V57_08_29_Poem_The_Schow.txt",
+    "V57_08_30_Fict_The_Lloyd.txt",
+    "V57_08_31_Poem_Regrets_Rothe.txt",
+    "V57_08_32_GenFt_Notes_Activities.txt",
+    "V57_08_33_GenFt_Spiritual.txt",
+    "V57_08_34_GenFt_Visiting_Gratitude.txt",
+    "V57_08_35_GenFt_Homemaking.txt",
+    "V57_08_36_GenFt_Social_Morality.txt",
+    "V57_08_37_GenFt_Cultural_Heart.txt",
+    "V57_08_38_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_08_01_Poem_Solace_Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains lesson content about Joseph Smith and the First Vision instead of the poem 'Solace From a Book'",
+      "action": "replace_content",
+      "text": "SOLACE FROM A BOOK In a crowded room, I heard the babble of many voices, Saw familiar and unfamiliar faces, yet I was lonely. I walked beside a rushing brook, Felt spray as it tripped on rock and crag To nourish spawning moss. Again I was lonely. I followed a path through wooded hills, Saw sunlight play with shadows, Heard song of bird, hum of bee, still I was lonely. Then I found a quiet niche, Opened 'a book, and friends came forth To sing, play, dance, weep, and live. Now I am nevery lonely! 632 Lila L. Smith",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_08_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header and cover information instead of the actual 'From Near and Far' content",
+      "action": "trim_start",
+      "text": "The Reliet Society Magazine AUGUST 1970 The Cover: Frontispiece: Art Layout: \\lustrations: Transparency by Three Lions Lithographed in Full Color by Deseret News Press Cliff Country Photograph by President J. Reuben Clark, Jr. Dick Scopes Mary Scopes 561",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_05_Poem_Old_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Giving' story that should not be included",
+      "action": "trim_end",
+      "text": "Nona H. Brown 569",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_06_Poem_On_the_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Giving' story that should not be included",
+      "action": "trim_end",
+      "text": "Nona H. Brown",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_07_Fict_The_Larson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous poem instead of beginning of 'The Giving' story",
+      "action": "trim_start",
+      "text": "es after her husband Simon died in June. True, she was thankful for Simon's sake that the years of suffering were over, that he was with Heavenly Father where there is no more painbut she missed him. They had been very close. And now she would miss Teddy alsoactive, happy-go-lucky Teddy, who could be so thoughtful and loving at the right time. The last morning of his stay, she rose determined to present a cheerful face. When they heard the school bus stop across the road, she joined Teddy on the porch to wave to the nine Newton children, shining in their new school clothes. As they solemnly filed into the bus, they looked just like any other group of childrenand for that Laura felt a glow of satisfaction. \"I wish I could go with them. It must be fun to take a school bus,\"' sighed Teddy. \"Mama and Daddy need you, Teddy. They lent you to me all summer. It's their turn now.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_12_GenFt_Notes_Discontinued.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Lucile Peterson",
+      "action": "trim_start",
+      "text": "She was chairman of the visiting teacher committee at the time of her resignation. She has always undertaken the many and varied responsibilities given to her in an attitude of sweet humility and has served with quiet ability and admirable efficiency. Sister Peterson and her husband are sure to be well received by the members and missionaries in Germany, and their service will be valued by many. The united love and best wishes of the Board and the sisters throughout the Church go with them as they continue in their unselfish service to the Lord. May they find joy in this new calling and receive the blessings which they so richly deserve. 580",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_13_Poem_My_Jorgensen.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Relief Society notes instead of the poem 'My Pen'",
+      "action": "note",
+      "text": "Poem 'My Pen' by Margaret B. Jorgensen not found in OCR text - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_08_14_Poem_Housecleaning_Blai.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society notices instead of the poem 'Housecleaning Time'",
+      "action": "note",
+      "text": "Poem 'Housecleaning Time' by Wanda B. Blaisdell not found in OCR text - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_08_16_Poem_Tall_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Relief Society Arctic Style content instead of the poem 'Tall'",
+      "action": "note",
+      "text": "Poem 'Tall' by Alda Larson Brown not found in OCR text - appears to be an OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_08_22_Poem_Reflection.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains 'Born Cooks' recipe content that should not be included",
+      "action": "trim_end",
+      "text": "Sandra Lundquist",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_26_GenFt_Shall_I_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains poem content that should be in separate file",
+      "action": "trim_end",
+      "text": "I only know my loss would have been great had I continued to deem her my enemy.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_39_Poem_Earths_Jennings.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a fragment and hobby features content instead of complete poem",
+      "action": "replace_content",
+      "text": "EARTH'S RENEWAL Lyric with April, mountains reach for sky, Pearl-shadowed in the rose and gold of dawn. Above the quickening stream, a killdeer's cry Pours spring's ecstatic melody upon A fledgling breeze. As seedling freshness spills Over the meadow's fragile green and gold, Even the hint of snow returning fills The heart with more of joy than heart can hold! Though coats of storm are wrapped around the elms, (Cloud fringe and sharp twig patterns intertwined Like worn fur. Trappings), though winter overwhelms A leafy freshness with a crystal kind, No frost, returning, stills or censures long The blush of earth's renewal, nor its song. Maxine R. Jennings",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Several poems appear to have OCR gaps where the actual poem text is missing from the source. The extraction generally follows article boundaries well, but there are several instances of content bleeding between articles, particularly where poems and other content are adjacent on pages.",
+  "validated_corrections": [
+    {
+      "file": "V57_08_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with magazine header and cover information instead of the actual 'From Near and Far' content",
+      "action": "trim_start",
+      "text": "The Reliet Society Magazine AUGUST 1970 The Cover: Frontispiece: Art Layout: \\lustrations: Transparency by Three Lions Lithographed in Full Color by Deseret News Press Cliff Country Photograph by President J. Reuben Clark, Jr. Dick Scopes Mary Scopes 561",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_05_Poem_Old_Fairbairn.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Giving' story that should not be included",
+      "action": "trim_end",
+      "text": "Nona H. Brown 569",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_06_Poem_On_the_Brown.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Giving' story that should not be included",
+      "action": "trim_end",
+      "text": "Nona H. Brown",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_07_Fict_The_Larson.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous poem instead of beginning of 'The Giving' story",
+      "action": "trim_start",
+      "text": "es after her husband Simon died in June. True, she was thankful for Simon's sake that the years of suffering were over, that he was with Heavenly Father where there is no more painbut she missed him. They had been very close. And now she would miss Teddy alsoactive, happy-go-lucky Teddy, who could be so thoughtful and loving at the right time. The last morning of his stay, she rose determined to present a cheerful face. When they heard the school bus stop across the road, she joined Teddy on the porch to wave to the nine Newton children, shining in their new school clothes. As they solemnly filed into the bus, they looked just like any other group of childrenand for that Laura felt a glow of satisfaction. \"I wish I could go with them. It must be fun to take a school bus,\"' sighed Teddy. \"Mama and Daddy need you, Teddy. They lent you to me all summer. It's their turn now.\"",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_12_GenFt_Notes_Discontinued.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with content from previous article about Lucile Peterson",
+      "action": "trim_start",
+      "text": "She was chairman of the visiting teacher committee at the time of her resignation. She has always undertaken the many and varied responsibilities given to her in an attitude of sweet humility and has served with quiet ability and admirable efficiency. Sister Peterson and her husband are sure to be well received by the members and missionaries in Germany, and their service will be valued by many. The united love and best wishes of the Board and the sisters throughout the Church go with them as they continue in their unselfish service to the Lord. May they find joy in this new calling and receive the blessings which they so richly deserve. 580",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_22_Poem_Reflection.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains 'Born Cooks' recipe content that should not be included",
+      "action": "trim_end",
+      "text": "Sandra Lundquist",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_08_26_GenFt_Shall_I_Department.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains poem content that should be in separate file",
+      "action": "trim_end",
+      "text": "I only know my loss would have been great had I continued to deem her my enemy.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

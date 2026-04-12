@@ -1,0 +1,71 @@
+{
+  "volume": 16,
+  "month": "March",
+  "year": 1929,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1515,
+  "files": [
+    {
+      "source_file": "March_Vol16_10_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for May - Lesson I: Practical Religion and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for May LESSON I Practical Religion",
+          "end_boundary": "Progressive work in God's employ. LESSON II",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for May - Lesson II: Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (This topic",
+          "end_boundary": "Our souls can never part. LESSON III",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for May - Lesson III: Literature - Joseph and His Brethren",
+          "category": "Guide_Lessons",
+          "author": "Louis N. Parker",
+          "start_boundary": "LESSON III Literature (Third Week in May)",
+          "end_boundary": "stamped himself (or herself) as a member",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR APRIL"
+      ],
+      "notes": "This file contains three distinct lesson sections from the Guide Lessons for May. The third lesson appears to be cut off mid-sentence, suggesting the file may be incomplete or truncated. Each lesson has a clear Roman numeral heading and distinct subject matter - Industry/Vocation, Social Service/Child Study, and Literature respectively.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found",
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 11509,
+      "tier": 1,
+      "pdf_pages": [
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182
+      ],
+      "api_usage": {
+        "input_tokens": 48159,
+        "output_tokens": 466,
+        "cost": 0.1515
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "volume": 13,
+  "month": "September",
+  "year": 1926,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0273,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "The Lost City of Nevada",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        509,
+        510,
+        511,
+        512,
+        513
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Of Interest to Women",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Extract from the Life of Faith",
+      "order": "b",
+      "status": "parse_error",
+      "pdf_pages": [
+        170,
+        171,
+        172,
+        173,
+        174
+      ],
+      "notes": "Could not parse API response"
+    },
+    {
+      "title": "Guide Lessons for November",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (45-49) contain content about Relief Society activities, Guide Lessons for March (not November), and literature lessons about Mark Twain. The article 'Guide Lessons for November' is not present in these specific pages, though it is listed in the table of contents as being on page 476.",
+      "order": "b",
+      "pdf_pages": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "source_file": "September_Vol13_09_Guide_Lessons_Extract_from_the_Life_of_Faith_475_Guide_Lessons_for_Novembe.txt",
+      "api_usage": {
+        "input_tokens": 8428,
+        "output_tokens": 137,
+        "cost": 0.0273
+      }
+    }
+  ]
+}

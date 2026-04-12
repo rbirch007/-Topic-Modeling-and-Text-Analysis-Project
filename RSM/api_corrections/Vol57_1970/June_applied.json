@@ -1,0 +1,72 @@
+{
+  "volume": 57,
+  "month": "June",
+  "year": 1970,
+  "timestamp": "20260314_002230",
+  "dry_run": false,
+  "applied": 10,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (227 chars removed)"
+    },
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (117 chars removed)"
+    },
+    {
+      "file": "V57_06_05_SpFt_ElderPacker.txt",
+      "action": "replace_content",
+      "result": "APPLIED replace_content (1890 chars)"
+    },
+    {
+      "file": "V57_06_08_Poem_Sea_Leavreault.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1676 chars removed)"
+    },
+    {
+      "file": "V57_06_09_GenFt_Editorial_Conferen.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (554 chars added)"
+    },
+    {
+      "file": "V57_06_12_SpFt_Birthday_McKay.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3122 chars removed)"
+    },
+    {
+      "file": "V57_06_13_GenFt_Womans_Cannon.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (1121 chars added)"
+    },
+    {
+      "file": "V57_06_16_Fict_Jerusha_Todd.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (180 chars added)"
+    },
+    {
+      "file": "V57_06_19_SpFt_The_Buehner.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3643 chars removed)"
+    },
+    {
+      "file": "V57_06_20_GenFt_Honeymoon_Fox.txt",
+      "action": "note",
+      "result": "INFO: File contains water lily content instead of bridal shower content"
+    },
+    {
+      "file": "V57_06_24_GenFt_Sunflowers_Monet.txt",
+      "action": "note",
+      "result": "INFO: File contains jeweled fruit content instead of Sunflowers commentary"
+    },
+    {
+      "file": "V57_06_25_GenFt_Temple_Fletcher.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2732 chars removed)"
+    }
+  ]
+}

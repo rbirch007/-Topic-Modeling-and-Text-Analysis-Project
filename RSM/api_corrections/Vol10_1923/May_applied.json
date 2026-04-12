@@ -1,0 +1,52 @@
+{
+  "volume": 10,
+  "month": "May",
+  "year": 1923,
+  "timestamp": "20260315_120951",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 3,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol10_01_Frontispiece_The_Mother_Frontispiece.txt",
+      "action": "note",
+      "result": "INFO: File contains text from 'A Mother's Love' article instead of frontispiece content"
+    },
+    {
+      "file": "May_Vol10_04_Article_The_Mother,_By_James_MacNeil_Whistler_Henry_Turner_Bailey.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_05_Article_Mother_Claire_Stewart_Boyer.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_07_Article_To_Father_and_Mother_Myron_E._Crandall,_Jr..txt",
+      "action": "append",
+      "result": "APPLIED append (63 chars added)"
+    },
+    {
+      "file": "May_Vol10_12_Article_Presidents'_Day.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (147 chars removed)"
+    },
+    {
+      "file": "May_Vol10_13_Article_Aunt_Em's_Birthday.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in file"
+    },
+    {
+      "file": "May_Vol10_19_Article_Mary_Schenck_Woolman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (7049 chars removed)"
+    },
+    {
+      "file": "May_Vol10_21_Notes_from_Field_Notes_From_the_Field_Amy_Brown_Lyman.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4982 chars removed)"
+    }
+  ]
+}

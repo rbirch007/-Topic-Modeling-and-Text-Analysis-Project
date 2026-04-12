@@ -1,0 +1,92 @@
+{
+  "volume": 52,
+  "month": "July",
+  "year": 1965,
+  "timestamp": "20260314_002226",
+  "dry_run": false,
+  "applied": 7,
+  "skipped": 3,
+  "failed": 1,
+  "entries": [
+    {
+      "file": "V52_07_03_Fict_Homecoming_MacArth.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_07_06_Fict_Postmark_Harlow.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_07_07_GenFt_Editorial_Crawford.txt",
+      "action": "trim_start",
+      "result": "FAILED trim_start: Boundary text not found in file body"
+    },
+    {
+      "file": "V52_07_13_The Home_Easier_Hicks.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_07_15_The Home_Food_Thayn.txt",
+      "action": "note",
+      "result": "INFO: Article appears to have OCR corruption and missing text - content is garbled and incomplete"
+    },
+    {
+      "file": "V52_07_17_The Home_Knitted_Art.txt",
+      "action": "note",
+      "result": "INFO: File contains content from Snatches of Happiness article instead of Knitted Lace article"
+    },
+    {
+      "file": "V52_07_18_SpFt_Snatches_Carroll.txt",
+      "action": "note",
+      "result": "INFO: File starts mid-article without proper beginning"
+    },
+    {
+      "file": "V52_07_21_SpFt_Dont_Sabin.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_07_23_Fict_Ring_Thulin.txt",
+      "action": "prepend",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_07_25_The Home_Theology_Doxey.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (1 chars removed)"
+    },
+    {
+      "file": "V52_07_28_The Home_Work_In.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V52_07_31_The Home_Social.txt",
+      "action": "note",
+      "result": "INFO: File contains only brief note instead of actual Social Science lesson content"
+    },
+    {
+      "file": "V52_07_32_Lssn_Literature_Clark.txt",
+      "action": "append",
+      "result": "APPLIED append (7491 chars added)"
+    },
+    {
+      "file": "V52_07_35_Poem_Moon-Beguiled.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "V52_07_36_GenFt_Bday_Congrats.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V52_07_37_Poem_Dear_Curtis.txt",
+      "action": "note",
+      "result": "INFO: File contains multiple different articles instead of just the Dear Lord poem"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "volume": 1,
+  "month": "October",
+  "year": 1914,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 6,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V1_1914_Oct_04_Art_LD.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Oct_05_Art_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (8 chars removed)"
+    },
+    {
+      "file": "V1_1914_Oct_06_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This is not a poem but the start of Work and Business lesson - should be categorized as Article"
+    },
+    {
+      "file": "V1_1914_Oct_07a_Art_Genealogy_and_Testimony.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - TEXT NOT FOUND IN OCR"
+    },
+    {
+      "file": "V1_1914_Oct_07b_Art_Art.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (9 chars removed)"
+    },
+    {
+      "file": "V1_1914_Oct_08_Poem_Poemfrom.txt",
+      "action": "note",
+      "result": "INFO: This contains questions from the Art lesson, not poetry"
+    },
+    {
+      "file": "V1_1914_Oct_09_Art_Literature.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3953 chars removed)"
+    },
+    {
+      "file": "V1_1914_Oct_10_Art_HomeGarden.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (1065 chars removed)"
+    },
+    {
+      "file": "V1_1914_Oct_13_Art_WHERE.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    },
+    {
+      "file": "V1_1914_Oct_14_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Oct_15_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Oct_16_Poem_TWOSTORES.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "V1_1914_Oct_18_Poem_Poemfrom.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    }
+  ]
+}

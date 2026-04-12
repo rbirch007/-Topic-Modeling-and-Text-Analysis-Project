@@ -1,0 +1,68 @@
+{
+  "volume": 5,
+  "month": "May",
+  "year": 1918,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1979,
+  "files": [
+    {
+      "source_file": "May_Vol5_15_Guide_Lessons_GUIDE_LESSONS.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Agriculture and Stock Raising Among Book of Mormon Peoples",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS. 293 The wisdom of a wise",
+          "end_boundary": "among the Nephites? LESSON IL Work and Business.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IL Work and Business. Second Week in",
+          "end_boundary": "Second Week in June. LESSON in. Genealogy.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "English Racial History, 55 B.C. to 1066 A.D.",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "LESSON in. Genealogy. Third Week in June.",
+          "end_boundary": "adaptable enough to assimilate and amalgamate himself",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Testing and Cleaning of Fabrics",
+          "category": "Home_Science",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Economics. EouRTH Week in",
+          "end_boundary": "Send coupon for free hooks COL. JOSEPH J.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "GUIDE LESSONS.",
+        "RELIEF SOCIETY MAGAZINE."
+      ],
+      "notes": "This file contains 4 distinct lesson sections as indicated by the Roman numerals. The first lesson is complete with questions, the second is just a title, the third is a substantial genealogy lesson on English history, and the fourth is a home economics lesson on fabric care. The file appears to end with an advertisement for a Columbia Grafonola.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 31663,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 63157,
+        "output_tokens": 561,
+        "cost": 0.1979
+      }
+    }
+  ]
+}

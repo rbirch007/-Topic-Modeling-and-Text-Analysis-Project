@@ -1,0 +1,81 @@
+{
+  "volume": 6,
+  "month": "June",
+  "year": 1919,
+  "total_files_checked": 21,
+  "files_correct": [
+    "June_Vol6_03_Mothers_of_Our_Leaders.txt",
+    "June_Vol6_04_A_Utah_Mornng_Maud_Baggarley.txt",
+    "June_Vol6_06_There_was_an_Unhappy_Woman_Annie_G._Lauritzen.txt",
+    "June_Vol6_07_The_Paymaster_Lucy_S._Burnham.txt",
+    "June_Vol6_08_Helps_for_Health_Talks.txt",
+    "June_Vol6_09_Why_Not_Mrs._Parley_Nelson.txt",
+    "June_Vol6_10_History_of_Instrumental_Music_Brigham_Cecil_Gates_33,5.txt",
+    "June_Vol6_11_June_Magic_Morag_3'40.txt",
+    "June_Vol6_12_Faith_Grace_Ingles_Frost.txt",
+    "June_Vol6_13_The_House_of_Gifts_Clara_S._Fagergren.txt",
+    "June_Vol6_14_Our_Temple_Mothers_James_Kirkham,_Sr..txt",
+    "June_Vol6_15_The_Official_Round_Table.txt",
+    "June_Vol6_16_Construction_and_Reconstruction_in_the_Home.txt",
+    "June_Vol6_17_On_the_Watch_Tower.txt",
+    "June_Vol6_19_Germs_and_Disease_Dr._Martin_P._Henderson_3^3.txt",
+    "June_Vol6_20_The_House_Fly_Dr._Martin_P._Henderson.txt",
+    "June_Vol6_21_O_My_Father''_Professor_Henry_E._Giles.txt"
+  ],
+  "corrections": [
+    {
+      "file": "June_Vol6_02_In_Memory_of_the_Martyrdom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content from Margaret Gay Judd Clawson's reminiscences instead of the martyrdom article",
+      "action": "replace_content",
+      "text": "This file should contain the martyrdom article content, not the Clawson reminiscences",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "June_Vol6_05_Rambling_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete text about the martyrdom room",
+      "action": "trim_end",
+      "text": "ROOM IN CARTHAGE JAIL WHERE THE",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol6_18_Editorial_Reconstruction.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Mrs. James H. Moyle instead of the Reconstruction editorial",
+      "action": "replace_content",
+      "text": "This file should contain the Reconstruction editorial content",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Verses Charles W. Penrose",
+      "expected_page": 311,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "In Memory of the Martyrdom",
+      "expected_page": 312,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content mismatches. The 'In Memory of the Martyrdom' file contains Margaret Gay Judd Clawson content instead. The Editorial file contains unrelated content about Mrs. Moyle. The Clawson reminiscences file ends abruptly mid-sentence. Two articles from the table of contents (Verses and the actual In Memory of the Martyrdom content) appear to be missing entirely from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "June_Vol6_05_Rambling_Reminiscences_of_Margaret_Gay_Judd_Clawson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with incomplete text about the martyrdom room",
+      "action": "trim_end",
+      "text": "ROOM IN CARTHAGE JAIL WHERE THE",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

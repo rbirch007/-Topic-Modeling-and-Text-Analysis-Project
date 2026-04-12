@@ -1,0 +1,215 @@
+{
+  "volume": 54,
+  "month": "March",
+  "year": 1967,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V54_03_03_Art_From_Near_and_Far.txt",
+    "V54_03_13_SpFt_What_Is_Henderson.txt",
+    "V54_03_25_Fict_A_Nimmo.txt",
+    "V54_03_26_Fict_Lauras_Cole.txt",
+    "V54_03_27_GenFt_Handicraft_World.txt",
+    "V54_03_31_Poem_Walk_Stewart.txt",
+    "V54_03_32_Poem_River_Wangsgaard.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V54_03_01_Fict_The_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'From Near and Far' content instead of 'Come, Truant Spring' poem",
+      "action": "replace_content",
+      "text": "Come, Truant Spring by Linnie Fisher Robinson - content not found in OCR",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_02_Art_Come_Robinson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'From Near and Far' content instead of 'Come, Truant Spring' poem",
+      "action": "replace_content",
+      "text": "Come, Truant Spring by Linnie Fisher Robinson - content not found in OCR",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_04_SpFt_Personal_Hinckley.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Personal Development Through Relief Society Society bring new knowledge'",
+      "action": "prepend",
+      "text": "Personal Development Through Relief Society Elder Gordon B. Hinckley of The Council of the Twelve {Address Delivered at the Stake Board Meeting of the Relief Society Annual General Conference, September 29, 1966] wI have just come from the temple, where we have had a wonderful five-hour meeting with President McKay in preparation for the conference. Brother Lee is not out of the meeting yet I guess. I hope the Lord will inspire me with the continuation of the marvelous spirit which we have felt in his holy house this morning. Sister Spafford has asked me to speak to the subject: \"The 164 Development of Women Through the Relief Society.\" I think she was led to honor me with this_ opportunity because of the things she saw recently in the Far East —in Hong Kong, the Philippines, Taiwan, Okinawa, Japan, and Korea. I know that her heart was touched as she met with the good saints of that strange and distant part of the earth where she had seen so many women for whom life is so desperate a struggle, whose lives are one bleak round of childbirth, of fighting hopelessly to get enough food to satisfy the hunger of their children, of toiling at degrading work day in and day out without the benefit of a Sabbath, of a status that gives little dignity to the position of wife, of crowded homes in which there are few, if any, of the conveniences we know, and beyond this, little, if any, opportunity for personal growth or development. The circumstances of some are better than I have indicated, but the circumstances of many are dark or worse than I have painted them. And then to see, by contrast, the marvelous miracles that occur to those women when the light of the gospel touches their lives and the blessings of Relief",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_05_Poem_Foothills_Jacobson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains text about Joshua and setting homes in order instead of the poem 'Foothills in Spring'",
+      "action": "replace_content",
+      "text": "FOOTHILLS IN SPRING Ethel Jacobson What can I call you, hills, But jocund—where lark song spills And feathery branches fan Against this cloudless span Of hyacinth blue? What can I call you, hills, where jonquil laughter rings And a hidden waterfall sings? Doves coo, Rabbits kick up their heels, And a sweet thunder steals From root to sunlit crown till each out-reaching bough Is transfigured now In a thousand lilting petals. A jaunty robin settles On one limb. Noisily, in the pond, Young raccoons splash and swim. And everywhere is the green excitement of grasses Up every slope and cranny, while From wide-arching Oaks come squirrel talk and tree-frog trills. What can these hills be but joyful— and innocent, as when",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_07_Fict_To_Warm_Thomson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with 'To be dependable is far more to be desired than all the treasures of the orient, for without it we are nothing, and we will be so regarded as soon as it is discovered. People will want to sever all connections with us, and we will be cast adrift without friends or followers. No one will fellowship us, and why? Because if people cannot depend on us or our word or promise, they will regard us as a bag of sand that pours out in all directions—having no firmness, no stamina or backbone—nothing to cling to—nothing to rely on whatever! If we agree to do something, we must do it at all costs, no matter what effort or sacrifice or price is involved. If something should occur to render it absolutely impossible to make our word good on a particular occasion, we must get in touch with those with whom the agreement was made, immediately, explaining the situation, and assuring them it will be attended to at the earliest possible moment. Then nothing must keep us from fulfilling that promise. Otherwise, we have forfeited our good name, and with it, the admiration and respect of friends. And to live a full and happy life, it is absolutely essential that we have the respect and approval of both God and man! Oh, remember! Remember!'",
+      "action": "trim_end",
+      "text": "and he bent his head until his lips touched hers.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_08_GenFt_The_Openshaw.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles beyond 'Oh, Remember! Remember!'",
+      "action": "trim_end",
+      "text": "Oh, remember! Remember!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_09_Poem_My_Wilson.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains text about dependability instead of the poem 'My Beautiful'",
+      "action": "replace_content",
+      "text": "My Beautiful Grace Barker Wilson She walks abroad, my beautiful, The sunlight in her glance Makes all the world a brighter place, And all the sunbeams dance. She walks abroad, my beautiful, My grandchild, small and sweet, With star dust shining in her eyes, And flowers at her feet.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_10_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with garbled text from previous article",
+      "action": "trim_start",
+      "text": "Ramona W. Cannon",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_16_GenFt_Work_Australia.txt",
+      "issue_type": "wrong_content",
+      "description": "File is too short and appears to be a duplicate reference",
+      "action": "replace_content",
+      "text": "Content from OCR starting with 'Workday and Social Melbourne Stake, Melbourne, Australia—October 19, 1966 Stake officers standing in front of Art Display table, framed by colorful arrangement of artificial flowers made by Relief Society women of the stake. Left to right: Lola Smibert, Second Counselor; Mavis E. Cutts, President; Helen S. Opie, First Counselor; Coral Sampson, Secretary-Treasurer.'",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_20_Poem_Another_Clarke.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains 'My Beautiful' poem content instead of 'Another Spring'",
+      "action": "replace_content",
+      "text": "ANOTHER SPRING Linda L. Clarke The pines are mine, the dogwood bower, The stars, the moon, and every hour; Trails that only deer have known Are here for me to make my own. I taste sea spray upon my lips While sand runs through my fingertips And then I stand on desert land With sprigs of sagebrush in my hand. What could be more fair to see Than lilacs blooming on a tree? What could be more fair to hear Than song-birds cradled in the air? Then why is it when all is mine That I become aware of time? This one thought evades my reason, Have I gained or lost a season?",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_21_GenFt_Teneriffe_Chadwick.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains mixed content from picture frame article instead of Teneriffe embroidery instructions",
+      "action": "replace_content",
+      "text": "Teneriffe Embroidery for Pillowcases Ethel Chadwick Materials Percale pillowcases Six-strand embroidery floss (use 3 strands only) Hoops Embroidery needles (not too small) Scissors Instructions Tracing Pattern (See Figure 1) — Trace pattern onto card and cut out along dots. Leave dots showing. Mark pattern on pillowcases, using dots only. Begin pattern at center of pillowcase and mark patterns entirely across toward the sides. Making the Web (See Figure 2) — With three strands of floss, and with thread long enough for completion (about 5 or 6 ft.), put in the long stitches of the web. The points of the web are stitched onto the percale. Be sure all threads cross exactly in the center of the pattern. Fasten down center by bringing your needle from the wrong side and make a cross stitch on top of the threads. This makes the center of the motif. Weaving the Motif (Figure 3) — Weave individual petals separately. To weave, pull thread under one and over the other. Do not pull the threads too tight, keep the long threads exactly in place. Follow the pattern, complete the motif, and fasten thread. (Always start and fasten threads on under side of material.) Start another motif, be sure thread is long enough to finish the web. The complete 9 patterns in the teneriffe set are available at the Mormon Handicraft Gift Shop, 21 West South Temple, Salt Lake City, Utah 84111, for 35¢.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V54_03_24_Poem_The_Hill.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text from next article",
+      "action": "trim_end",
+      "text": "diminuendo.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_30_Lssn_Homemaking_Jorgens.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "CAUTION: If you desire an expensive, professional look, be sure to match plaids, stripes, or checks, as you cut and seam garments.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_34_Poem_Encountering_Schow.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about April short story issue instead of the poem 'Encountering Soon'",
+      "action": "replace_content",
+      "text": "ENCOUNTERING SOON Iris W. Schow We are waiting at the crossroads Where spring and winter meet; Each hopes to rule the elements With dominance complete. But soon the sky will sparkle, The brooks will wake and sing, When winter, worsted, abdicates To promise-laden spring.",
+      "confidence": "high",
+      "validated": "manual_review"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Come, Truant Spring Linnie Fisher Robinson",
+      "expected_page": 161,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "It's Spring Sally Talker",
+      "expected_page": 169,
+      "status": "merged_with_another",
+      "merged_into": "V54_03_04_SpFt_Personal_Hinckley.txt"
+    }
+  ],
+  "notes": "Multiple files contain wrong content or content from other articles. Several poems are missing or incorrectly extracted. The OCR appears to have some gaps for certain poems and articles. Many files have content bleeding from adjacent articles.",
+  "validated_corrections": [
+    {
+      "file": "V54_03_04_SpFt_Personal_Hinckley.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with 'Personal Development Through Relief Society Society bring new knowledge'",
+      "action": "prepend",
+      "text": "Personal Development Through Relief Society Elder Gordon B. Hinckley of The Council of the Twelve {Address Delivered at the Stake Board Meeting of the Relief Society Annual General Conference, September 29, 1966] wI have just come from the temple, where we have had a wonderful five-hour meeting with President McKay in preparation for the conference. Brother Lee is not out of the meeting yet I guess. I hope the Lord will inspire me with the continuation of the marvelous spirit which we have felt in his holy house this morning. Sister Spafford has asked me to speak to the subject: \"The 164 Development of Women Through the Relief Society.\" I think she was led to honor me with this_ opportunity because of the things she saw recently in the Far East —in Hong Kong, the Philippines, Taiwan, Okinawa, Japan, and Korea. I know that her heart was touched as she met with the good saints of that strange and distant part of the earth where she had seen so many women for whom life is so desperate a struggle, whose lives are one bleak round of childbirth, of fighting hopelessly to get enough food to satisfy the hunger of their children, of toiling at degrading work day in and day out without the benefit of a Sabbath, of a status that gives little dignity to the position of wife, of crowded homes in which there are few, if any, of the conveniences we know, and beyond this, little, if any, opportunity for personal growth or development. The circumstances of some are better than I have indicated, but the circumstances of many are dark or worse than I have painted them. And then to see, by contrast, the marvelous miracles that occur to those women when the light of the gospel touches their lives and the blessings of Relief",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_07_Fict_To_Warm_Thomson.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with 'To be dependable is far more to be desired than all the treasures of the orient, for without it we are nothing, and we will be so regarded as soon as it is discovered. People will want to sever all connections with us, and we will be cast adrift without friends or followers. No one will fellowship us, and why? Because if people cannot depend on us or our word or promise, they will regard us as a bag of sand that pours out in all directions—having no firmness, no stamina or backbone—nothing to cling to—nothing to rely on whatever! If we agree to do something, we must do it at all costs, no matter what effort or sacrifice or price is involved. If something should occur to render it absolutely impossible to make our word good on a particular occasion, we must get in touch with those with whom the agreement was made, immediately, explaining the situation, and assuring them it will be attended to at the earliest possible moment. Then nothing must keep us from fulfilling that promise. Otherwise, we have forfeited our good name, and with it, the admiration and respect of friends. And to live a full and happy life, it is absolutely essential that we have the respect and approval of both God and man! Oh, remember! Remember!'",
+      "action": "trim_end",
+      "text": "and he bent his head until his lips touched hers.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_08_GenFt_The_Openshaw.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple articles beyond 'Oh, Remember! Remember!'",
+      "action": "trim_end",
+      "text": "Oh, remember! Remember!",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_10_GenFt_Womans_Cannon.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with garbled text from previous article",
+      "action": "trim_start",
+      "text": "Ramona W. Cannon",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_24_Poem_The_Hill.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with incomplete text from next article",
+      "action": "trim_end",
+      "text": "diminuendo.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V54_03_30_Lssn_Homemaking_Jorgens.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content at the end",
+      "action": "trim_end",
+      "text": "CAUTION: If you desire an expensive, professional look, be sure to match plaids, stripes, or checks, as you cut and seam garments.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

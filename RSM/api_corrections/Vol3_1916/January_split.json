@@ -1,0 +1,64 @@
+{
+  "volume": 3,
+  "month": "January",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1313,
+  "files": [
+    {
+      "source_file": "January_Vol3_18_Genealogy_International_Congress_of_Genealogy_Journal_of_Heredity.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Genealogy Lesson - Individual Records and Letters",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "GENEALOGY. The moment a person begins his individual",
+          "end_boundary": "When your own data is complete, what next will you do?",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Art and Architecture - Winter Landscape and Architecture Lessons",
+          "category": "Art",
+          "author": null,
+          "start_boundary": "ART AND ARCHITECTURE. WINTER LANDSCAPE AND SUNSHINE.",
+          "end_boundary": "Describe the Elizabethan style. (Figure 3, Montacute House.)",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Home Economics - The Latter-day Saint Home",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "LESSON IV. Home Economics. THE LATTER-DAY SAINT HOME.",
+          "end_boundary": "What are the foundation principles of the home?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "International Congress of Genealogy",
+          "category": "Genealogy",
+          "author": "Journal of Heredity",
+          "start_boundary": "International Congress of Genealogy. We copy the following",
+          "end_boundary": "Mid-winter Excursion TO CALIFORNIA December 27, 1915",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE"
+      ],
+      "notes": "This file contains multiple lesson sections merged together: a genealogy lesson on individual records, an art/architecture lesson on winter landscapes, a home economics lesson on LDS homes, and an article about the International Congress of Genealogy. The file also includes various outlines for 1916 lessons and advertisements at the end.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 22699,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40928,
+        "output_tokens": 566,
+        "cost": 0.1313
+      }
+    }
+  ]
+}

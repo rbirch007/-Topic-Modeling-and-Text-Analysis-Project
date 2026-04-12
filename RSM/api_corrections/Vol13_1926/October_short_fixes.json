@@ -1,0 +1,40 @@
+{
+  "volume": 13,
+  "month": "October",
+  "year": 1926,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0242,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "October_Vol13_01_Frontispiece_The_Southland_With_its_Heat_and_its_Color_Frontispiece_Judge.txt",
+      "status": "delete",
+      "current_chars": 173,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This is just a frontispiece caption/title. The PDF pages shown are advertisements and the magazine cover/contents page. The frontispiece would be an image with this caption, but no actual article content exists - just the title of what appears to be an artwork or photograph.",
+      "api_usage": {
+        "input_tokens": 7209,
+        "output_tokens": 172,
+        "cost": 0.0242
+      },
+      "pdf_pages": [
+        573,
+        574,
+        575,
+        576
+      ]
+    }
+  ]
+}

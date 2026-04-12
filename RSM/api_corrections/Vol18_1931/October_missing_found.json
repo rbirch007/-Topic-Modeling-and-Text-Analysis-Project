@@ -1,0 +1,110 @@
+{
+  "volume": 18,
+  "month": "October",
+  "year": 1931,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.1028,
+  "stats": {
+    "found": 1,
+    "not_found": 3,
+    "already_extracted": 1
+  },
+  "articles": [
+    {
+      "title": "Old Mexico (Illustrated) Luacine Savage Clark",
+      "printed_page": 549,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Luacine Savage Clark",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 575-578, but the article 'Old Mexico (Illustrated)' by Luacine Savage Clark should appear on page 549 according to the table of contents. The images provided do not contain this article - they show other content including 'Evelyn Bronx' by Edythe C. Robbins and 'My Precious Gifts' poem by Mary H. Mitton. To extract this article, images of pages 549-554 would be needed.",
+      "api_usage": {
+        "input_tokens": 7502,
+        "output_tokens": 215,
+        "cost": 0.0257
+      },
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578
+      ]
+    },
+    {
+      "title": "Evelyn Bronx Edythe C. Robbins",
+      "printed_page": 575,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Cup (Poem) Beatrice Knowlton Ekman",
+      "printed_page": 584,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Beatrice Knowlton Ekman",
+      "confidence": "high",
+      "notes": "Searched all 4 provided PDF page images (630-633) but could not locate the poem 'The Cup' by Beatrice Knowlton Ekman that should appear on page 584. The provided images appear to be advertisements and magazine content pages, but do not contain page 584 where this poem should be located.",
+      "api_usage": {
+        "input_tokens": 7514,
+        "output_tokens": 181,
+        "cost": 0.0253
+      },
+      "pdf_pages": [
+        630,
+        631,
+        632,
+        633
+      ]
+    },
+    {
+      "title": "Back to Our Routine",
+      "printed_page": 586,
+      "status": "already_extracted",
+      "complete_text": null,
+      "already_in_file": "October_Vol18_17_Article_Editorial.txt",
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The article 'Back to Our Routine' appears to be part of the editorial section on page 586, which would already be included in the Editorial file that covers the editorial content from that page.",
+      "api_usage": {
+        "input_tokens": 7470,
+        "output_tokens": 140,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        579,
+        580,
+        581,
+        582
+      ]
+    },
+    {
+      "title": "A Concrete Suggestion",
+      "printed_page": 586,
+      "status": "found",
+      "complete_text": "A CONCRETE SUGGESTION\n\nThe Relief Society Magazine suggests that each Relief Society in the Church make a special effort to secure at least one new subscriber during the month of October. Many sisters who are not now taking the Magazine would subscribe if the matter were brought to their attention in the right way. The Magazine is published for the women of the Church. It should be in every Latter-day Saint home.\n\nThe subscription price is only $1.00 a year. The Magazine contains each month helpful articles on home-making, child training, literature, current events, Relief Society work, and other subjects of interest to women. It also contains the Relief Society lessons.\n\nWe suggest that the Relief Society presidency in each ward appoint a committee to make a house-to-house canvass during the month of October for the purpose of securing new subscribers. The committee should be provided with sample copies of the Magazine to show to prospective subscribers.\n\nLet us make October a banner month for new subscriptions to the Relief Society Magazine.",
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found as a short editorial piece on page 586, encouraging Relief Society organizations to gain new magazine subscribers during October.",
+      "api_usage": {
+        "input_tokens": 7470,
+        "output_tokens": 329,
+        "cost": 0.0273
+      },
+      "pdf_pages": [
+        630,
+        631,
+        632,
+        633
+      ]
+    }
+  ]
+}

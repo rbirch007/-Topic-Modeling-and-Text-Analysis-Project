@@ -1,0 +1,171 @@
+{
+  "volume": 12,
+  "month": "August",
+  "year": 1925,
+  "total_merged": 2,
+  "total_splits": 9,
+  "total_cost": 0.359,
+  "files": [
+    {
+      "source_file": "August_Vol12_01_Frontispiece_The_White_House_at_Washington_D_C_Frontispiece.txt",
+      "num_articles_found": 5,
+      "splits": [
+        {
+          "order": "a",
+          "title": "The White House at Washington D. C.",
+          "category": "Frontispiece",
+          "author": null,
+          "start_boundary": "THE WHITE HOUSE AT WASHINGTON D. C.",
+          "end_boundary": "President and Mrs. Coolidge entertained the Quinquennial delegates here.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "International Council of Women",
+          "category": "Article",
+          "author": "Clarissa S. Williams",
+          "start_boundary": "International Council of Women Quinquennial Meeting By Clarissa S. Williams",
+          "end_boundary": "Mrs. M. F. Cowley, and daughter Carol.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Mother's Evening Prayer",
+          "category": "Poem",
+          "author": "Nettie E. McMurtrey",
+          "start_boundary": "Mother's Evening Prayer Fourth poem to receive honorable mention",
+          "end_boundary": "Mother said her evening prayer.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Tell Your Troubles to the Iceman",
+          "category": "Article",
+          "author": "Kate Thomas",
+          "start_boundary": "Tell Your Troubles to the Iceman. By Kate Thomas.",
+          "end_boundary": "And the breadman and the iceman once more walked away together.",
+          "confidence": "high"
+        },
+        {
+          "order": "e",
+          "title": "Editorial—Home and Parenthood Recreation",
+          "category": "Editorial",
+          "author": null,
+          "start_boundary": "EDITORIAL Entered as second-class matter at the Post Office,",
+          "end_boundary": "All the entries should be sent to Alice L. Reynolds, Associate editor, Relief Society Magazine, 28 Bishop's Building, Salt Lake City, Utah, not later than October 15.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "INTERNATIONAL COUNCIL OF WOMEN",
+        "TELL YOUR TROUBLES TO THE ICEMAN"
+      ],
+      "notes": "This file contains multiple distinct articles as indicated by the table of contents. The frontispiece is a brief caption for a photograph, followed by a major article about the International Council of Women, a poem, a story, and editorial content including announcements. The boundaries are clearly defined by title headers and content changes.",
+      "validation_issues": [
+        "Split 'c': start_boundary not found",
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found",
+        "Split 'e': start_boundary not found",
+        "Split 'e': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 29805,
+      "tier": 1,
+      "pdf_pages": [
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "api_usage": {
+        "input_tokens": 62834,
+        "output_tokens": 692,
+        "cost": 0.1989
+      }
+    },
+    {
+      "source_file": "August_Vol12_13_Guide_Lessons_Guide_Lessons_for_October.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for October - Lesson I - Theology and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for October LESSON I (First",
+          "end_boundary": "Tell about Jacob's tithing contract with the",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons for October - Lesson I Questions and Lesson II",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Give Laban's testimony concerning the source of",
+          "end_boundary": "would join in the frolics of the",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons for October - Lesson III - Literature",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in October) Literature",
+          "end_boundary": "much as the poet feels when you",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Guide Lessons for October - Lesson IV - Social Service",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in October)",
+          "end_boundary": "have them move? 4. Why should children",
+          "confidence": "medium"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "LESSONS FOR OCTOBER"
+      ],
+      "notes": "This file contains the complete Guide Lessons for October with 4 distinct lessons covering different subject areas: Theology and Testimony (Jacob), Work and Business (Halloween topic), Literature (Edwin Markham), and Social Service (Care of the Aged). The text appears to be cut off at the end of Lesson IV.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 13415,
+      "tier": 1,
+      "pdf_pages": [
+        498,
+        499,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506
+      ],
+      "api_usage": {
+        "input_tokens": 50634,
+        "output_tokens": 544,
+        "cost": 0.1601
+      }
+    }
+  ]
+}

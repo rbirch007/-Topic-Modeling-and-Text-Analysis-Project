@@ -1,0 +1,82 @@
+{
+  "volume": 16,
+  "month": "February",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0746,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Winter Grass Lowry Nelson",
+      "printed_page": 61,
+      "status": "found",
+      "complete_text": "Winter Grass\n\nBy Lowry Nelson\n\nUp through the sparse, wind-drifted snow,\nSere and brown upon the winter field\nTufts of summer's grass stand, dry and old—\nLone, stark survivors of the season's yield.\n\nAnd though the spears are green no more; unto\nAn autumn fruitfulness no more aspire,\nThey lend unto the somber field, a hue;\nAnd to the solitary wind, a lyre.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Lowry Nelson",
+      "confidence": "high",
+      "notes": "Found complete poem on page 75 of the PDF images. It's a short poem with two stanzas describing winter grass.",
+      "api_usage": {
+        "input_tokens": 7323,
+        "output_tokens": 241,
+        "cost": 0.0256
+      },
+      "pdf_pages": [
+        73,
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "title": "Tongues in Trees Maud Chegwidden",
+      "printed_page": 62,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Maud Chegwidden",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 73-76). The article should appear on page 62 according to the table of contents, but the provided images start from page 73, so the article would be on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7343,
+        "output_tokens": 165,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        73,
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "title": "Responsibility of the State in Caring for Its Children Judge Hugo B. Anderson",
+      "printed_page": 64,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Judge Hugo B. Anderson",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 73-76, but the missing article should be on page 64 according to the table of contents. The images contain content about winter scenes, poetry, and other articles, but do not include the Hugo B. Anderson article about state responsibility for children.",
+      "api_usage": {
+        "input_tokens": 7359,
+        "output_tokens": 162,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        73,
+        74,
+        75,
+        76
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "volume": 8,
+  "month": "December",
+  "year": 1921,
+  "timestamp": "20260315_120948",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "December_Vol8_01_Article_General_Conference_of_Relief_Society_Amy_Brown_Lyman,_Genera.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (54 chars added)"
+    },
+    {
+      "file": "December_Vol8_02_Article_Out_of_the_World_G._Milton_Babcock.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (12511 chars removed)"
+    },
+    {
+      "file": "December_Vol8_04a_Editorial_Editorial_The_Years_Old_Age.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (714 chars added)"
+    },
+    {
+      "file": "December_Vol8_05_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (11252 chars added)"
+    },
+    {
+      "file": "December_Vol8_06_Article_Life's_Mirror,_Words_by_Madeline_Bridges,_Music_by_Edna_H._C.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3753 chars removed)"
+    }
+  ]
+}

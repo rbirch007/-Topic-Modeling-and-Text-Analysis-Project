@@ -1,0 +1,32 @@
+{
+  "volume": 55,
+  "month": "August",
+  "year": 1968,
+  "timestamp": "20260314_102520",
+  "dry_run": false,
+  "applied": 0,
+  "skipped": 4,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "V55_08_18_Poem_Loath_Cook.txt",
+      "action": "append",
+      "result": "SKIP: Failed validation - QC FAIL: only 0% OCR coverage"
+    },
+    {
+      "file": "V55_08_25_Poem_Our_Welker.txt",
+      "action": "trim_start",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    },
+    {
+      "file": "V55_08_28_Poem_Swift_Perry.txt",
+      "action": "replace_content",
+      "result": "SKIP: Failed validation - QC FAIL: only 19% OCR coverage"
+    },
+    {
+      "file": "V55_08_34_Poem_Interval_Stanley.txt",
+      "action": "trim_end",
+      "result": "SKIP: Failed validation - Trim target not found in article file"
+    }
+  ]
+}

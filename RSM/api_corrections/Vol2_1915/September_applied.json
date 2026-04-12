@@ -1,0 +1,47 @@
+{
+  "volume": 2,
+  "month": "September",
+  "year": 1915,
+  "timestamp": "20260315_120935",
+  "dry_run": false,
+  "applied": 6,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "September_Vol2_01_Genealogy_International_Genealogical_Congress_at_the_Panama-Pacific_Ex.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (9874 chars added)"
+    },
+    {
+      "file": "September_Vol2_04_Prince_of_Ur_A_Prince_of_Ur.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (5117 chars added)"
+    },
+    {
+      "file": "September_Vol2_05_Article_Homespun.txt",
+      "action": "note",
+      "result": "INFO: This file contains content from 'A Prince of Ur' story, not a separate 'Homespun' article"
+    },
+    {
+      "file": "September_Vol2_08_Editorial_Editorial.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (828 chars added)"
+    },
+    {
+      "file": "September_Vol2_08_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (9242 chars removed)"
+    },
+    {
+      "file": "September_Vol2_09_Guide_Lessons_Guide_Lessons.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (6489 chars added)"
+    },
+    {
+      "file": "September_Vol2_10_Article_Clothing_for_Women_Past_Forty_—_The_Two_Sarahs.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5515 chars removed)"
+    }
+  ]
+}

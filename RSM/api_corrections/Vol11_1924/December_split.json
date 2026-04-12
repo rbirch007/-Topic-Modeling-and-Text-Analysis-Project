@@ -1,0 +1,82 @@
+{
+  "volume": 11,
+  "month": "December",
+  "year": 1924,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1354,
+  "files": [
+    {
+      "source_file": "December_Vol11_12_Guide_Lessons_Guide_Lessons_for_February.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I - Theology and Testimony - THE PARABLES OF OUR SAVIOR (Concluded)",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "GUIDE LESSONS FOR FEBRUARY LESSON I (First Week",
+          "end_boundary": "day Saint lesson is taught by it?",
+          "confidence": "high",
+          "start_match_words": 4
+        },
+        {
+          "order": "b",
+          "title": "LESSON II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II (Second Week in February) Work and",
+          "end_boundary": "Sleep is as conducive to health as food.",
+          "confidence": "high",
+          "start_match_words": 6
+        },
+        {
+          "order": "c",
+          "title": "LESSON III - Literature - SIDNEY LANIER",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III (Third Week in February) Literature SIDNEY",
+          "end_boundary": "would have made notable. Contributions?",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LESSON IV - Social Service - Housing and Housekeeping",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV (Fourth Week in February) Social Service",
+          "end_boundary": "In rural communities?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS FOR FEBRUARY"
+      ],
+      "notes": "This file contains four weekly lessons for February, each with distinct subject areas: Theology/Testimony (parables), Work/Business (curfew law), Literature (Sidney Lanier biography), and Social Service (housing/housekeeping). Each lesson has clear boundaries with Roman numeral headings and week designations.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 19883,
+      "tier": 1,
+      "pdf_pages": [
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        763,
+        764,
+        765,
+        766,
+        767,
+        768,
+        769
+      ],
+      "api_usage": {
+        "input_tokens": 42379,
+        "output_tokens": 551,
+        "cost": 0.1354
+      }
+    }
+  ]
+}

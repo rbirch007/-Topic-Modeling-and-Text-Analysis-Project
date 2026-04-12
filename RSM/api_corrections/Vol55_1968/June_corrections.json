@@ -1,0 +1,212 @@
+{
+  "volume": 55,
+  "month": "June",
+  "year": 1968,
+  "total_files_checked": 36,
+  "files_correct": [
+    "V55_06_04_SpFt_Birthday_McKay.txt",
+    "V55_06_05_SpFt_Elder_Presidency.txt",
+    "V55_06_06_SpFt_Elder.txt",
+    "V55_06_07_SpFt_Elder.txt",
+    "V55_06_08_SpFt_Elder.txt",
+    "V55_06_09_SpFt_The_Bradshaw.txt",
+    "V55_06_10_GenFt_Womans_Cannon.txt",
+    "V55_06_11_GenFt_Editorial_Conferen.txt",
+    "V55_06_14_SpFt_Australia_Mendenha.txt",
+    "V55_06_15_GenFt_South_Badger.txt",
+    "V55_06_16_SpFt_Open_Buehner.txt",
+    "V55_06_17_GenFt_Cactus_Noall.txt",
+    "V55_06_18_GenFt_Wild_Gardens.txt",
+    "V55_06_19_GenFt_A_Quilt_Groberg.txt",
+    "V55_06_20_GenFt_Fashion_Grimm.txt",
+    "V55_06_21_GenFt_An_Old_Burt.txt",
+    "V55_06_22_GenFt_Chestnut_Breinholt.txt",
+    "V55_06_24_GenFt_Notes_Activities.txt",
+    "V55_06_25_Lssn_Homemaking_Edmunds.txt",
+    "V55_06_26_Lssn_Roy_W..txt",
+    "V55_06_27_Lssn_Alice.txt",
+    "V55_06_28_Lssn_Celestia.txt",
+    "V55_06_29_Lssn_Alberta.txt",
+    "V55_06_31_Poem_When_Coles.txt",
+    "V55_06_33_Poem_Endurance_Bowles.txt",
+    "V55_06_35_Poem_Summer_Fairbairn.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V55_06_01_Fict_If_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be from a different article about poetry contest winners rather than 'If Spring Be Late Chapter 3'",
+      "action": "replace_content",
+      "text": "Content should be the continuation of Mabel Harmer's 'If Spring Be Late Chapter 3' story starting around page 425",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_06_02_Art_Mountain_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in separate file",
+      "action": "trim_end",
+      "text": "As I love you now.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_03_Art_From_Near_and_Far.txt",
+      "issue_type": "missing_text",
+      "description": "File is essentially empty and needs proper extraction of 'From Near and Far' content",
+      "action": "replace_content",
+      "text": "The subject matter, fiction, special and general articles, suggestions for home and family living, which enrich the Magazine, are a great help and inspiration to all of the sisters...",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V55_06_12_GenFt_The_Pearson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Pickle Booth' story that should be in separate file",
+      "action": "trim_end",
+      "text": "all of whom are inspired by her attendance at all of her Church meetings, and her kind, helpful ways. 420",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_13_Fict_The_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "\"This year, Sister Maggie, we wanted to have a",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_06_23_Fict_Mabel.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous articles at the beginning",
+      "action": "trim_start",
+      "text": "(Continued from page 426)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_30_Lssn_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete sentence from previous lesson",
+      "action": "trim_start",
+      "text": "That which cannot be fully",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_32_Poem_Snail.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains birthday congratulations content that should be separate",
+      "action": "trim_end",
+      "text": "Here is a blossom, Eat. Ethel Jacobson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_06_34_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-list without proper beginning",
+      "action": "prepend",
+      "text": "Names of Latter-day Saint women who have reached the ages of ninety or older may be submitted by anyone for inclusion in the Birthday Congratulations column. The full name (maiden and married), age, month of birth, street address, city, state, and zip code, should be submitted at least three months before the birthday. 100",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_36_Poem_Portrait_Bailey.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains garden content instead of the poem 'Portrait' by Alice Morrey Bailey",
+      "action": "note",
+      "text": "OCR gap - poem content not found in source text",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "To My Missionary Son Gay N. Blanchard",
+      "expected_page": 416,
+      "status": "merged_with_another",
+      "merged_into": "V55_06_09_SpFt_The_Bradshaw.txt"
+    },
+    {
+      "title": "Portrait Alice Morrey Bailey",
+      "expected_page": 477,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding between articles. The main fiction piece 'If Spring Be Late Chapter 3' appears to be incorrectly extracted. Some poetry is embedded within other articles rather than being separate files. Overall extraction quality is moderate with clear article boundaries needing correction.",
+  "validated_corrections": [
+    {
+      "file": "V55_06_02_Art_Mountain_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'From Near and Far' section that should be in separate file",
+      "action": "trim_end",
+      "text": "As I love you now.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_12_GenFt_The_Pearson.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from 'The Pickle Booth' story that should be in separate file",
+      "action": "trim_end",
+      "text": "all of whom are inspired by her attendance at all of her Church meetings, and her kind, helpful ways. 420",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_23_Fict_Mabel.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains content from previous articles at the beginning",
+      "action": "trim_start",
+      "text": "(Continued from page 426)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_30_Lssn_Lessons.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete sentence from previous lesson",
+      "action": "trim_start",
+      "text": "That which cannot be fully",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V55_06_34_GenFt_Bday_Congrats.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-list without proper beginning",
+      "action": "prepend",
+      "text": "Names of Latter-day Saint women who have reached the ages of ninety or older may be submitted by anyone for inclusion in the Birthday Congratulations column. The full name (maiden and married), age, month of birth, street address, city, state, and zip code, should be submitted at least three months before the birthday. 100",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V55_06_13_Fict_The_Yost.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "\"This year, Sister Maggie, we wanted to have a",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V55_06_32_Poem_Snail.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains birthday congratulations content that should be separate",
+      "action": "trim_end",
+      "text": "Here is a blossom, Eat. Ethel Jacobson",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

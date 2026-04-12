@@ -1,0 +1,32 @@
+{
+  "volume": 5,
+  "month": "May",
+  "year": 1918,
+  "timestamp": "20260315_120940",
+  "dry_run": false,
+  "applied": 4,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "May_Vol5_06_Article_FAT_AND_FIFTY.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol5_07_Patriotic_Dept_PATRIOTIC_DEPARTMENT.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol5_08_Home_Science_HOME_SCIENCE_DEPARTMENT.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "May_Vol5_14_Editorial_Editorial.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (4499 chars removed)"
+    }
+  ]
+}

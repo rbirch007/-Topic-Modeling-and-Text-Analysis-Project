@@ -1,0 +1,27 @@
+{
+  "volume": 2,
+  "month": "January",
+  "year": 1915,
+  "timestamp": "20260315_120934",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "January_Vol2_03_Article_The_Relief_Society.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "January_Vol2_08_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "January_Vol2_08_Prince_of_Ur_A_Prince_of_Ur_Homespun.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (4973 chars added)"
+    }
+  ]
+}

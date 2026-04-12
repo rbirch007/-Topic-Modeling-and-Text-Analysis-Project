@@ -1,0 +1,258 @@
+{
+  "volume": 57,
+  "month": "May",
+  "year": 1970,
+  "total_files_checked": 41,
+  "files_correct": [
+    "V57_05_02_Poem_The_Tangren.txt",
+    "V57_05_06_Poem_Arrayed_Schow.txt",
+    "V57_05_08_Poem_We_Sabin.txt",
+    "V57_05_15_Poem_Thy_Despain.txt",
+    "V57_05_27_Poem_Unexpected_Tanner.txt",
+    "V57_05_28_The Home_The_Arden.txt",
+    "V57_05_29_Poem_Remembrance_Broadb.txt",
+    "V57_05_38_Poem_Pussy_Jacobson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_05_01_Poem_I_Would_Sadleir.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong poem and extensive advertisement content instead of 'I Would be Flexible'",
+      "action": "replace_content",
+      "text": "I WOULD BE FLEXIBLE I look through veils of mist Upon a cherry tree, Wearing the name of spring. Defying cold, immune To stinging rain, flowered Branches dripping fragility, Move, as winds sweep through Them from a frothy sea I would be flexible As is this tree, Sharing fruitful blessings, Quite unknowingly. —Beulah H. Sadleir",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_05_02_Poem_The_Tangren.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about Relief Society board",
+      "action": "trim_start",
+      "text": "THE STORYTELLER Running, laughing, the happy children came",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V57_05_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains 'The Storyteller' poem which belongs to previous file",
+      "action": "trim_start",
+      "text": "I think it is wonderful to have the lessons right in the Magazine",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_04_SpFt_A_Pettit.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about Relief Society board",
+      "action": "trim_start",
+      "text": "As we talked together, my 324 Aline R. Pettit",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_05_SpFt_Children_With.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about poetry",
+      "action": "trim_start",
+      "text": "Pictures are helpful to complete enjoyment",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_09_Poem_On_Mays_Brown.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains garbled OCR text instead of proper poem",
+      "action": "replace_content",
+      "text": "ON MAY'S GREEN HILLS The song lingers after the lark has flown, Cascading like a silver waterfall, Reverberating melody over every ledge and stone— Then silence, before the mate's sweet answering call. And I awake to memories: There was another hill, another love song as vibrant and as sweet as this. I remember springtime by blossoming by every sunlit rill— May as warm and gentle as a lover's kiss, Nor would I forget your voice—your smile—your touch The delicacy of springtime, the fragrant air; The road, green valleys below we loved so much, The blue forget-me-nots you picked for me to wear. Oh, take back the distant dreams! Don't let me know this hurting loneliness that another spring has brought! Don't let my heart break because a lark sings so— Don't let me stoop to pick a small blue forget-me-not! —Alda Larson Brown",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_05_10_Poem_Teach_Cannon.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains garbled text from previous poem instead of 'Teach Your Toddler Gospel Truths'",
+      "action": "note",
+      "text": "Article appears to be merged with previous poem - needs proper extraction",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_05_11_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains incomplete content and board member names",
+      "action": "trim_end",
+      "text": "Some chilVolume 57. May 1970 Number 5",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_13_Poem_A_Lark_Young.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains content from Woman's Sphere article instead of poem",
+      "action": "note",
+      "text": "Poem content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_05_16_Poem_Days_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous poem",
+      "action": "trim_start",
+      "text": "Day's End—Bay Of Islands Olive B. Taylor",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_21_Poem_Dear_Robinson.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains content from previous poem instead of 'Dear Mother'",
+      "action": "note",
+      "text": "Poem content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_05_30_The_Home_One_Peterson.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains garbled OCR text instead of proper article content",
+      "action": "replace_content",
+      "text": "One Step at a Time Judyth S. Peterson Keeping a clean, orderly house is a natural thing for some women. Others, myself included, seem to resist their mothers' teachings and do not develop good habits. My group is usually discouraged by articles on homemaking—we are made only too aware of our shortcomings, and we feel all the more inadequate because others accomplish so easily what we ourselves cannot seem to begin. We are led to believe that nearly all homemakers are efficient, conscientious bundles of energy, tireless, and capable of coping with every problem. We read glowing reports of how Grandma managed to keep everything washed and pressed, swept and dusted, polished and preserved, with none of our modern conveniences, and thirteen children. And we sink deeper into despair! I've never been neat with my clothes, drawers, etc., and after I married, I seemed to get worse instead of better. When I was expecting our second baby, I was also teaching kindergarten part time, and I did very little housework. When I came home at noon, the bed was unmade, dishes from dinner the night before and from breakfast were in the sink, the house was disorderly, and as it took me most of the afternoon to get the dishes done (I moved very slowly!) I had not touched an iron or a mop in ages. The worse the house looked, the worse I felt, and vice versa. Finally, at New Year's resolution time, I knew something had to be done. To reinforce my good intentions, I bought an excellent book on homemaking. When I saw that I should be doing more in one day than I did in an entire week, I felt discouraged. I could never do it. It was like trying to learn to read without being able to recognize the alphabet! I had so far to go that I couldn't even get started. If you have lived for years without good habits, you will know what I mean. Then I had an idea. Perhaps I could never do everything the way I should, but I could do just one thing right. I made a list of my housekeeping problems in the order of their importance, starting with the ones that bothered me most, such as: 1. Dishes left overnight; 2. Bed left unmade; 3. Ironing left too long; and so on. The first month I told myself, 'I'm going to do this one thing right after I get up each morning—make my bed.' When a month had passed, I found I was doing these two things with very little effort. It was becoming more interested in the appearance of my bedroom, and the kitchen floor looked out of place, and I swept it. But these were only by-products of my resolution. I was concerned with my immediate task only, and the good feeling of accomplishment. The second month I added another chore, working on each one for a full month gave me enough time to establish a new routine, and gain confidence. I still have a long way to go, but I am ready for that book on homemaking now. And I haven't been confronted in the morning with unwashed dishes or a disorderly house for several years. I may never be the world's most efficient homemaker, but when I think of the progress I have made so far, it is not an impossible possibility. Surely if I can do it, you can, too. Make your list right now and be confident of your success. It's easy—one step at a time!",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_05_32_The_Home_Hobby_McCabe.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains content from Kranj Wonder article instead of Hobby Features",
+      "action": "note",
+      "text": "Article content not found in OCR - may be OCR gap",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_05_37_Lssn_Homema_Taylor.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content at end",
+      "action": "trim_end",
+      "text": "Drain, place beans in large Saucepan, cover with water, add onion, simmer until tender (about one hour.)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_39_Poem_I_Would_Sadleir.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains extensive advertisement and birthday congratulations content",
+      "action": "trim_end",
+      "text": "—Beulah H. Sadleir",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Dear Mother, Linnie Fisher Robinson",
+      "expected_page": 356,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "Hobby Features— Mattie 0. Shurtliff and Jessie C. McCabe",
+      "expected_page": 375,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "A Lark in the Meadow Sylvia Probst Young",
+      "expected_page": 345,
+      "status": "ocr_gap",
+      "merged_into": null
+    },
+    {
+      "title": "To My Son, Leaving, Vesta N. Fairbairn",
+      "expected_page": 398,
+      "status": "merged_with_another",
+      "merged_into": "V57_05_39_Poem_I_Would_Sadleir.txt"
+    }
+  ],
+  "notes": "Many files contain significant OCR errors with garbled text, particularly in poetry sections. Several articles appear to be missing or have content gaps. The lesson department article is incomplete, cutting off mid-recipe. Multiple files contain content bleeding from adjacent articles or advertisements.",
+  "validated_corrections": [
+    {
+      "file": "V57_05_03_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains 'The Storyteller' poem which belongs to previous file",
+      "action": "trim_start",
+      "text": "I think it is wonderful to have the lessons right in the Magazine",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_04_SpFt_A_Pettit.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about Relief Society board",
+      "action": "trim_start",
+      "text": "As we talked together, my 324 Aline R. Pettit",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_05_SpFt_Children_With.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about poetry",
+      "action": "trim_start",
+      "text": "Pictures are helpful to complete enjoyment",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_11_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains incomplete content and board member names",
+      "action": "trim_end",
+      "text": "Some chilVolume 57. May 1970 Number 5",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_16_Poem_Days_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous poem",
+      "action": "trim_start",
+      "text": "Day's End—Bay Of Islands Olive B. Taylor",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_37_Lssn_Homema_Taylor.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains advertisement content at end",
+      "action": "trim_end",
+      "text": "Drain, place beans in large Saucepan, cover with water, add onion, simmer until tender (about one hour.)",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_05_39_Poem_I_Would_Sadleir.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains extensive advertisement and birthday congratulations content",
+      "action": "trim_end",
+      "text": "—Beulah H. Sadleir",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V57_05_02_Poem_The_Tangren.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from previous article about Relief Society board",
+      "action": "trim_start",
+      "text": "THE STORYTELLER Running, laughing, the happy children came",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "volume": 56,
+  "month": "August",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_08_11_GenFt_Womans_Cannor.txt",
+      "issue_type": "bleed_start",
+      "description": "Article contains bleed from previous articles about police lieutenants and happiness article. Should start with 'She advises business college graduates'",
+      "action": "trim_start",
+      "text": "She advises business college graduates to get positions with large firms which have good supervisors to train inexperienced employees in up-to-the-minute, practical details of business offices.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V56_08_13_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains wrong content - General Board announcements instead of the editorial by Marianne C. Sharp",
+      "action": "note",
+      "text": "The article file contains entirely wrong content. It shows General Board member listings and announcements about Mayola R. Miltenberger's appointment rather than the editorial 'Leisure for Oneself' by Marianne C. Sharp. The file needs to be replaced with the correct editorial content from page 580.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_08_17_Fict_The_Applegate.txt",
+      "issue_type": "bleed_start",
+      "description": "Article contains content from previous article at beginning. Should start with 'And I did not know how I was going to continue...'",
+      "action": "trim_start",
+      "text": "And I did not know how I was going to continue to give the same answer without breaking.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V56_08_18_GenFt_Can_We_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "The article file contains content from a completely different article not shown on these pages. The pages show content about family identity and a poem about Sarah, not a story about Kimberly.",
+      "action": "note",
+      "text": "Article file content does not match the pages shown - appears to be from wrong article entirely",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_08_24_Fict_In_the_Miller.txt",
+      "issue_type": "bleed_start",
+      "description": "File contains completely wrong article - shows 'In the Way They Should Go' by Marilyn McMeer Miller instead of 'The Weather Report' by A. Dee Applegate",
+      "action": "replace_content",
+      "text": "The sounds of the radio banged into Cally's ears as she tried to remember what came next in her pancake recipe. The baby was crying to be picked up, and her husband was calling for a clean towel. The rain beat a heavy tempo against the window; gray clouds pressed a damper on any cheerful thoughts that might have entered her mind. Over the din she heard the radio announcer presenting the local weatherman for his report and forecast.\n\n\"It's a beautiful day in Fremont County!\" he began. \"At 7:00 this morning, 45 hundredths of an inch of precipitation. . . .\" Click! Cally couldn't bear hearing anyone being cheerful about this muggy weather. \"He must be some kind of nut,\" she muttered.\n\nAt least now with the radio off there was less competition for her attention. She finally got her husband out the door, the baby fed, the dishes done, and the bed made. She had an awful temptation to climb back into bed, but wisdom and good sense beat back her heavy eyelids, and she smoothed the bedspread over the pillows. \"A beautiful day indeed!\" she muttered as she settled into her daily routine.\n\nThe phone rang.\n\n\"Is this the Glen MacMillan residence?\" a man's voice asked.\n\n\"Yes — this is Cally MacMillan.\"\n\n\"Mrs. MacMillan, your husband has been in an automobile accident and has been injured. The ambulance is taking him to City Memorial Hospital now. Can you meet us there?\" Cally's heart fell to her feet and she froze in shock. \"Mrs. MacMillan?\" The man's voice seemed twenty miles away. Cally had visions of her husband strapped on a stretcher in a whining ambulance. The man's voice reached",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V56_08_26_GenFt_Notes_Packet.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains Relief Society Activities content that should be separate from Notes to the Field",
+      "action": "trim_end",
+      "text": "[Notes to the Field The Relief Society Annual General Conference; Cultural Refinement Textbook and Teaching Aid Packet]",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    }
+  ]
+}

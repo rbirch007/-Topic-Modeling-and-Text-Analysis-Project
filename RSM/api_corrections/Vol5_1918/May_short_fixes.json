@@ -1,0 +1,40 @@
+{
+  "volume": 5,
+  "month": "May",
+  "year": 1918,
+  "mode": "fix_short",
+  "total_short": 1,
+  "total_cost": 0.0211,
+  "stats": {
+    "truncated": 0,
+    "complete": 0,
+    "delete": 1,
+    "not_found": 0,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "May_Vol5_15b_Guide_Lessons_Work_and_Business.txt",
+      "status": "delete",
+      "current_chars": 71,
+      "complete_text": null,
+      "title": null,
+      "category": null,
+      "author": null,
+      "confidence": "high",
+      "notes": "This appears to be a header artifact or table of contents fragment. The text 'LESSON IL Work and Business. Second Week in June. LESSON in. Genealogy.' looks like lesson titles or guide headings but no actual lesson content is visible in the provided PDF pages, which contain a poem, notes from the field, and other content but no guide lessons matching this text.",
+      "api_usage": {
+        "input_tokens": 6150,
+        "output_tokens": 176,
+        "cost": 0.0211
+      },
+      "pdf_pages": [
+        29,
+        30,
+        31,
+        32
+      ]
+    }
+  ]
+}

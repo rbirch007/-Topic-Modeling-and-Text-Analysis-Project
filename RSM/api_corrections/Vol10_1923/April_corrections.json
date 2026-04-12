@@ -1,0 +1,90 @@
+{
+  "volume": 10,
+  "month": "April",
+  "year": 1923,
+  "total_files_checked": 16,
+  "files_correct": [
+    "April_Vol10_02_Article_Treasured_Works_Lula_Greene_Richards.txt",
+    "April_Vol10_05_Article_Alice_Louise_Reynolds_Alfred_Osmond.txt",
+    "April_Vol10_06_Article_A_Tribute_James_L._Barker.txt",
+    "April_Vol10_07_Article_Ellen_Thornycroft_Fowler_(Mrs._Felkins).txt",
+    "April_Vol10_08_Article_Women_Presiding_in_Latter-day_Saint_Temples.txt",
+    "April_Vol10_09_Article_The_Revolt_of_Grandma_Davis_Elsie_C._Carroll.txt",
+    "April_Vol10_10_Article_The_Thirteen_Mistakes_in_Life.txt",
+    "April_Vol10_11_Of_Interest_Of_Interest_to_Women_Lalene_H._Hart.txt",
+    "April_Vol10_12_Article_Maude_Adams.txt",
+    "April_Vol10_13_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+    "April_Vol10_14a_Current_Topics_National_Garden_Week.txt",
+    "April_Vol10_14b_Poem_The_Awakening.txt",
+    "April_Vol10_14c_Editorial_Editorial_-_Philosophic_Despair_of_the_World.txt",
+    "April_Vol10_14d_Guide_Lessons_Guide_Lessons_for_June.txt"
+  ],
+  "corrections": [
+    {
+      "file": "April_Vol10_01_Frontispiece_Clarissa_Smith_Williams_and_Alice_L._Reynolds_Frontispiece.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains the Mary E. Connelly article instead of frontispiece content",
+      "action": "replace_content",
+      "text": "Clarissa Smith Williams and Alice L. Reynolds Frontispiece",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "April_Vol10_02_Article_Treasured_Works_Lula_Greene_Richards.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about General Board announcement",
+      "action": "trim_end",
+      "text": "With this issue of the Magazine, the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol10_03_Article_Announcement.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains content about Maude Adams retirement instead of the announcement about new editors",
+      "action": "replace_content",
+      "text": "General Board of Relief Society relinquishes the active direction of the editorial department and hereafter the department will be in charge of the new editors, President Clarissa S. Williams, editor, and Professor Alice L. Reynolds, associate editor. The General Board is gratified with these appointments, and bespeaks for the editors the support and cooperation of Relief Society women throughout the Church. 'The editors were appointed by the First Presidency of the Church and unanimously sustained, on February 7, by the General Board. On the same date, Miss Reynolds was also sustained as a member of the Relief Society General Board. General Board of Relief Society.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "April_Vol10_15_Editorial_Editorial.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "editorial career began.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Mary E. Connelly",
+      "expected_page": 163,
+      "status": "merged_with_another",
+      "merged_into": "April_Vol10_01_Frontispiece_Clarissa_Smith_Williams_and_Alice_L._Reynolds_Frontispiece.txt"
+    }
+  ],
+  "notes": "Several files have content mismatches. The frontispiece file contains the Mary E. Connelly article content. The announcement file contains unrelated Maude Adams content. Some files have minor bleeding issues at start/end boundaries.",
+  "validated_corrections": [
+    {
+      "file": "April_Vol10_02_Article_Treasured_Works_Lula_Greene_Richards.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from the next article about General Board announcement",
+      "action": "trim_end",
+      "text": "With this issue of the Magazine, the",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "April_Vol10_15_Editorial_Editorial.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence with content from previous article",
+      "action": "trim_start",
+      "text": "editorial career began.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

@@ -1,0 +1,401 @@
+{
+  "volume": 12,
+  "month": "October",
+  "year": 1925,
+  "total": 20,
+  "ok": 16,
+  "flagged": 4,
+  "empty": 0,
+  "records": [
+    {
+      "file": "October_Vol12_00_BOARD.txt",
+      "body_len": 660,
+      "article_words": 65,
+      "words_in_ocr": 65,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_00_CONTENTS.txt",
+      "body_len": 671,
+      "article_words": 74,
+      "words_in_ocr": 74,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_00_Misc.txt",
+      "body_len": 8412,
+      "article_words": 629,
+      "words_in_ocr": 627,
+      "pct_in_ocr": 0.9968,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "October_Vol12_02_Article_Autumn_Annie_Wells_Cannon.txt",
+      "body_len": 742,
+      "article_words": 77,
+      "words_in_ocr": 77,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_03_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+      "body_len": 18330,
+      "article_words": 939,
+      "words_in_ocr": 939,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(7))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_04_Article_Self-Love_Elsie_E_Barrett.txt",
+      "body_len": 312,
+      "article_words": 33,
+      "words_in_ocr": 33,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_05_Article_The_Status_of_Women_in_Japan_I_A_Ray_Olpin.txt",
+      "body_len": 14949,
+      "article_words": 904,
+      "words_in_ocr": 904,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_06_Article_The_Other_Side_Alice_Morrill.txt",
+      "body_len": 912,
+      "article_words": 88,
+      "words_in_ocr": 88,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_07_Editorial_Editorial—Women_of_the_East_and_the_Veil.txt",
+      "body_len": 6181,
+      "article_words": 445,
+      "words_in_ocr": 445,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_08a_Lesson_American_Poets_and_the_World_War.txt",
+      "body_len": 9019,
+      "article_words": 659,
+      "words_in_ocr": 659,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_08b_Lesson_Social_Service_-_The_Spirit_of_Social_Work.txt",
+      "body_len": 8713,
+      "article_words": 493,
+      "words_in_ocr": 493,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_09_Article_Condolence.txt",
+      "body_len": 12613,
+      "article_words": 757,
+      "words_in_ocr": 757,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_10_Article_The_Dawn_Grace_Ingles_Frost.txt",
+      "body_len": 740,
+      "article_words": 81,
+      "words_in_ocr": 81,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_11_Article_Phyllis_Morton's_Birthday_Gift_Myrtle_M._Dean.txt",
+      "body_len": 9465,
+      "article_words": 532,
+      "words_in_ocr": 532,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_12_Article_Diet_for_the_Woman_of_Forty_Plus_Jean_Cox.txt",
+      "body_len": 17882,
+      "article_words": 851,
+      "words_in_ocr": 851,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_13_Article_Of_Interest_to_Women_Lalene_H_Hart.txt",
+      "body_len": 4478,
+      "article_words": 353,
+      "words_in_ocr": 353,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_14_Article_Utah_State_Conference_of_Social_Workers.txt",
+      "body_len": 2376,
+      "article_words": 152,
+      "words_in_ocr": 152,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_16_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 9877,
+      "article_words": 609,
+      "words_in_ocr": 609,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_17_Guide_Lessons_Guide_Lessons_for_December.txt",
+      "body_len": 7225,
+      "article_words": 482,
+      "words_in_ocr": 482,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol12_18_Article_Love_Patriotism_Susan_Coolidge.txt",
+      "body_len": 3471,
+      "article_words": 271,
+      "words_in_ocr": 271,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol12_No10_October_1925.txt",
+    "ocr_chars": 139205,
+    "ocr_unique_words": 4578,
+    "contents_xref": {
+      "entries_in_contents": 18,
+      "matched": 15,
+      "match_details": [
+        {
+          "title": "Autumn Annie Wells Cannon",
+          "page": 507,
+          "file": "October_Vol12_02_Article_Autumn_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Editor Abroad Alice L. Reynolds",
+          "page": 509,
+          "file": "October_Vol12_03_Article_The_Editor_Abroad_Alice_L_Reynolds.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Self-Love Elsie E. Barrett",
+          "page": 516,
+          "file": "October_Vol12_04_Article_Self-Love_Elsie_E_Barrett.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Status of Women in Japan I. A. Ray Olpin",
+          "page": 517,
+          "file": "October_Vol12_05_Article_The_Status_of_Women_in_Japan_I_A_Ray_Olpin.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Other Side Alice Morrill",
+          "page": 522,
+          "file": "October_Vol12_06_Article_The_Other_Side_Alice_Morrill.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Women of the East and the Veil",
+          "page": 523,
+          "file": "October_Vol12_07_Editorial_Editorial—Women_of_the_East_and_the_Veil.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Condolence",
+          "page": 525,
+          "file": "October_Vol12_09_Article_Condolence.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Dawn Grace Ingles Frost",
+          "page": 526,
+          "file": "October_Vol12_10_Article_The_Dawn_Grace_Ingles_Frost.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Phyllis Morton's Birthday Gift Myrtle M. Dean",
+          "page": 527,
+          "file": "October_Vol12_11_Article_Phyllis_Morton's_Birthday_Gift_Myrtle_M._Dean.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Diet for the Woman of Forty Plus Jean Cox",
+          "page": 535,
+          "file": "October_Vol12_12_Article_Diet_for_the_Woman_of_Forty_Plus_Jean_Cox.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Of Interest to Women Lalene H. Hart",
+          "page": 541,
+          "file": "October_Vol12_13_Article_Of_Interest_to_Women_Lalene_H_Hart.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Utah State Conference of Social Workers",
+          "page": 543,
+          "file": "October_Vol12_14_Article_Utah_State_Conference_of_Social_Workers.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field Amy Brown Lyman",
+          "page": 545,
+          "file": "October_Vol12_16_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Guide Lessons for December",
+          "page": 551,
+          "file": "October_Vol12_17_Guide_Lessons_Guide_Lessons_for_December.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Love Patriotism Susan Coolidge",
+          "page": 561,
+          "file": "October_Vol12_18_Article_Love_Patriotism_Susan_Coolidge.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "American Literature Coming to its Own",
+          "page": 525
+        },
+        {
+          "title": "Our Heritage Josephine Spencer",
+          "page": 544
+        },
+        {
+          "title": "Frontispiece",
+          "page": null
+        }
+      ],
+      "extra_files": [
+        "October_Vol12_08a_Lesson_American_Poets_and_the_World_War.txt",
+        "October_Vol12_08b_Lesson_Social_Service_-_The_Spirit_of_Social_Work.txt"
+      ]
+    }
+  }
+}

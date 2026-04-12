@@ -1,0 +1,50 @@
+{
+  "volume": 8,
+  "month": "February",
+  "year": 1921,
+  "total_merged": 1,
+  "total_splits": 1,
+  "total_cost": 0.1476,
+  "files": [
+    {
+      "source_file": "February_Vol8_15b_Guide_Lessons_Guide_Lessons_for_April_a_a_a.txt",
+      "num_articles_found": 1,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons for April",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for April LESSON I. Theology",
+          "end_boundary": "first printed. It is safe to say",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains a single Guide Lessons article for April with multiple lessons (Theology and Testimony, Work and Business, Literature, Social Service). The content appears to be cut off mid-sentence at the end, suggesting this may be part of a larger article that continues in another file.",
+      "validation_issues": [
+        "Split 'a': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 13202,
+      "tier": 1,
+      "pdf_pages": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "api_usage": {
+        "input_tokens": 47954,
+        "output_tokens": 247,
+        "cost": 0.1476
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "volume": 9,
+  "month": "April",
+  "year": 1922,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1429,
+  "files": [
+    {
+      "source_file": "April_Vol9_11_Guide_Lessons_Guide_Lessons_for_June.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Lesson I - Theology and Testimony - The Sabbath Day and Sunday",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons for June LESSON I Theology and Testimony",
+          "end_boundary": "Have someone read pages 309, 310, Gospel Doctrine;",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Lesson II - Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II Work and Business (SEconD WEEK IN",
+          "end_boundary": "LESSON II Work and Business (SEconD WEEK IN",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Lesson III - Literature - John Jaques",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III Literature (Tutrp WeEK In JUNE) LITERATURE",
+          "end_boundary": "preferably both, if you have time.",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "Lesson IV - Social Service - Moral Leadership in the Home",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON IV Social Service. Fourth Week in June",
+          "end_boundary": "When Shopping Mention Relief Society Magazine",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the complete Guide Lessons for June with 4 distinct lessons: Theology/Testimony (Sabbath), Work/Business (brief), Literature (John Jaques hymns), and Social Service (Moral Leadership). Lesson II appears to be just a header with no content. The file also contains extensive advertising material at the end which should be included with Lesson IV as it appears to be part of the magazine layout.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 35842,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 44675,
+        "output_tokens": 589,
+        "cost": 0.1429
+      }
+    }
+  ]
+}

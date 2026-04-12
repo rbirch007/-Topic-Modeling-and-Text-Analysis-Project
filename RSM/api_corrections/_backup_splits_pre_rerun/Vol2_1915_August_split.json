@@ -1,0 +1,87 @@
+{
+  "volume": 2,
+  "month": "August",
+  "year": 1915,
+  "total_merged": 2,
+  "total_splits": 4,
+  "total_cost": 0.1897,
+  "files": [
+    {
+      "source_file": "August_Vol2_07_Prince_of_Ur_A_Prince_of_Ur.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "A Prince of Ur",
+          "category": "Article",
+          "author": "Homespun",
+          "start_boundary": "A Prince of Ur. By Homespun. Abram said nothing",
+          "end_boundary": "Abraham took his way towards the City of Ur. (to be continued)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "No Enemies",
+          "category": "Poem",
+          "author": "Selected",
+          "start_boundary": "NO ENEMIES. \"You have no enemies; alas, my friend,",
+          "end_boundary": "You've been a coward in the fight. You have no enemies.\" â€” Selected.",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "A PRINCE OF UR"
+      ],
+      "notes": "This file contains the continuation of 'A Prince of Ur' serialized story by Homespun, followed by a short poem 'No Enemies'. The story appears to be set in ancient Mesopotamia featuring characters Abram and Mardan discussing religious and moral issues. The poem is a brief reflection on having enemies as a sign of having done meaningful work.",
+      "merge_type": "RUNNING_HEADERS",
+      "file_chars": 14380,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 30539,
+        "output_tokens": 380,
+        "cost": 0.0973
+      }
+    },
+    {
+      "source_file": "August_Vol2_12b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Guide Lessons - August 1915",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Work and Business.",
+          "end_boundary": "land which the Lord thy God giveth to thee.",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - September 1915",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "September Guide Lessons. LESSON I. Work and Business",
+          "end_boundary": "are you making the most of it?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains two separate monthly Guide Lessons sections - August and September 1915. The August lesson focuses on hygiene for women past fifty, while September covers genealogy (heirship rules) and home ethics/art. There's a clear note in the text explaining that both months are published together so readers have lessons one month in advance.",
+      "validation_issues": [
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 9029,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 29044,
+        "output_tokens": 350,
+        "cost": 0.0924
+      }
+    }
+  ]
+}

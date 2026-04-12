@@ -1,0 +1,46 @@
+{
+  "volume": 1,
+  "month": "December",
+  "year": 1914,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.0475,
+  "files": [
+    {
+      "source_file": "V1_1914_Dec_03_Art_Genealogy.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Genealogy and Testimony",
+          "category": "Genealogy",
+          "author": null,
+          "start_boundary": "[Vol1 | December 1914 | Sequence: 03 | Category:",
+          "end_boundary": "crown your whole life here and hereafter with perfection",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Home Ethics and Gardening - The Christmas Spirit",
+          "category": "Home_Ethics",
+          "author": null,
+          "start_boundary": "DecemberHOME ETHICS AND GARDENING Lesson IIL Ten minutes talk",
+          "end_boundary": "How the children, old and young, papas and mamas,",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY BULLETIN"
+      ],
+      "notes": "This file contains two distinct lesson sections: a Genealogy lesson (Lesson II) focused on securing genealogical data, and a Home Ethics lesson (Lesson III) about the Christmas Spirit. The boundary between them is clear where 'DecemberHOME ETHICS AND GARDENING' begins immediately after the genealogy section ends.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 8739,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 14034,
+        "output_tokens": 362,
+        "cost": 0.0475
+      }
+    }
+  ]
+}

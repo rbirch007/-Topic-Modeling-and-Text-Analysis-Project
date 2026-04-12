@@ -1,0 +1,88 @@
+{
+  "volume": 11,
+  "month": "August",
+  "year": 1924,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0717,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Her Things Claire Stewart Boyer",
+      "printed_page": 383,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Claire Stewart Boyer",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 406-409, but the missing article 'Her Things Claire Stewart Boyer' is listed on page 383 in the table of contents. The images provided do not contain this article - they show content from much later in the magazine including 'Not Understood Thomas Bracken' and 'Conference on Prevention of Causes of War'.",
+      "api_usage": {
+        "input_tokens": 7201,
+        "output_tokens": 168,
+        "cost": 0.0241
+      },
+      "pdf_pages": [
+        406,
+        407,
+        408,
+        409
+      ]
+    },
+    {
+      "title": "Eliza Roxey Snow Prize Memorial Poem",
+      "printed_page": 394,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Utah, a Mecca of Education",
+      "printed_page": 395,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Editorial",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 399-402, but the article 'Utah, a Mecca of Education' is listed on page 395 in the table of contents. The images do not contain this page, so the article cannot be extracted from the provided materials.",
+      "api_usage": {
+        "input_tokens": 7213,
+        "output_tokens": 147,
+        "cost": 0.0238
+      },
+      "pdf_pages": [
+        399,
+        400,
+        401,
+        402
+      ]
+    },
+    {
+      "title": "The Henry Car",
+      "printed_page": 413,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements for Blue Pine Olive Oil, The Relief Society Magazine cover, and various business advertisements. None of these pages contain the article 'The Henry Car' which should appear on page 413 according to the table of contents.",
+      "api_usage": {
+        "input_tokens": 7229,
+        "output_tokens": 139,
+        "cost": 0.0238
+      },
+      "pdf_pages": [
+        449,
+        450,
+        451,
+        452
+      ]
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "volume": 19,
+  "month": "September",
+  "year": 1932,
+  "total": 22,
+  "ok": 20,
+  "flagged": 2,
+  "empty": 0,
+  "records": [
+    {
+      "file": "September_Vol19_00_BOARD.txt",
+      "body_len": 81,
+      "article_words": 10,
+      "words_in_ocr": 10,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_00_CONTENTS.txt",
+      "body_len": 1006,
+      "article_words": 102,
+      "words_in_ocr": 102,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_00_Misc.txt",
+      "body_len": 7686,
+      "article_words": 521,
+      "words_in_ocr": 518,
+      "pct_in_ocr": 0.9942,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory"
+      ]
+    },
+    {
+      "file": "September_Vol19_00_Misc_backup_premarker.txt",
+      "body_len": 7618,
+      "article_words": 516,
+      "words_in_ocr": 516,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_01a_Article_Why_Religious_Training.txt",
+      "body_len": 13778,
+      "article_words": 750,
+      "words_in_ocr": 750,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_02_Article_The_Vagaries_of_an_Autumn_Day_Lettie_B_H_Rich.txt",
+      "body_len": 604,
+      "article_words": 66,
+      "words_in_ocr": 66,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_03a_Article_Mormonism_in_a_Disturbed_Civilization.txt",
+      "body_len": 15707,
+      "article_words": 774,
+      "words_in_ocr": 774,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_04a_Article_A_Day_in_Bed.txt",
+      "body_len": 16192,
+      "article_words": 930,
+      "words_in_ocr": 930,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_04c_Article_Mrs_Annie_D_Palmer.txt",
+      "body_len": 1840,
+      "article_words": 142,
+      "words_in_ocr": 134,
+      "pct_in_ocr": 0.9437,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ann",
+        "bereaved",
+        "clarissa",
+        "eighteenth",
+        "emmeline",
+        "informed",
+        "mourns",
+        "refinement"
+      ]
+    },
+    {
+      "file": "September_Vol19_05_Article_Fish_Lake_at_Night_Ethel_Bean_Andrew.txt",
+      "body_len": 589,
+      "article_words": 69,
+      "words_in_ocr": 69,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_06_Article_Mrs_Annie_D_Palmer_Amy_Brown_Lyman.txt",
+      "body_len": 10469,
+      "article_words": 617,
+      "words_in_ocr": 617,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_07_Article_Thy_Years_Shall_Have_No_End_Annie_Pike_Greenwood.txt",
+      "body_len": 1304,
+      "article_words": 114,
+      "words_in_ocr": 114,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_08_Article_Sir_Walter_Scott_Nellie_Schofield_Thornton.txt",
+      "body_len": 19209,
+      "article_words": 1110,
+      "words_in_ocr": 1110,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_09_Article_Help_Me_to_Serve_Mary_H_Mitton.txt",
+      "body_len": 727,
+      "article_words": 78,
+      "words_in_ocr": 78,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_10_Article_A_Vignette_Annie_Wells_Cannon.txt",
+      "body_len": 2828,
+      "article_words": 279,
+      "words_in_ocr": 279,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_11_Article_Seasonable_Recipes_Lucy_Rose_Middleton.txt",
+      "body_len": 8258,
+      "article_words": 577,
+      "words_in_ocr": 577,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_12_Article_Indian_Summer_Helen_Kimball_Orgill.txt",
+      "body_len": 596,
+      "article_words": 73,
+      "words_in_ocr": 73,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_13_Notes_from_Field_Notes_to_the_Field.txt",
+      "body_len": 10271,
+      "article_words": 632,
+      "words_in_ocr": 632,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_14_Editorial_EditorialCultivate_the_Power_to_Enjoy_Beauty.txt",
+      "body_len": 3467,
+      "article_words": 293,
+      "words_in_ocr": 293,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_15_Article_Dr_George_H_Brimhall.txt",
+      "body_len": 3252,
+      "article_words": 275,
+      "words_in_ocr": 275,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_16_Article_Lesson_Department.txt",
+      "body_len": 47496,
+      "article_words": 1935,
+      "words_in_ocr": 1935,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "September_Vol19_No9_17_Article_The_Government_a_Saloon_Keeper.txt",
+      "body_len": 5208,
+      "article_words": 379,
+      "words_in_ocr": 379,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol19_No9_September_1932.txt",
+    "ocr_chars": 168701,
+    "ocr_unique_words": 5074,
+    "contents_xref": {
+      "entries_in_contents": 22,
+      "matched": 20,
+      "match_details": [
+        {
+          "title": "A Vignette Annie Wells Cannon",
+          "page": 505,
+          "file": "September_Vol19_10_Article_A_Vignette_Annie_Wells_Cannon.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Why Religious Training? Dr. Joseph F. Merrill",
+          "page": 507,
+          "file": "September_Vol19_01a_Article_Why_Religious_Training.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Vagaries of an Autumn Day Lettie B. H. Rich",
+          "page": 511,
+          "file": "September_Vol19_02_Article_The_Vagaries_of_an_Autumn_Day_Lettie_B_H_Rich.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mormonism in a Disturbed Civilization E. E. Erickson",
+          "page": 512,
+          "file": "September_Vol19_03a_Article_Mormonism_in_a_Disturbed_Civilization.txt",
+          "score": 1.0
+        },
+        {
+          "title": "A Day in Bed Estelle Webb Thomas",
+          "page": 517,
+          "file": "September_Vol19_04a_Article_A_Day_in_Bed.txt",
+          "score": 0.7
+        },
+        {
+          "title": "Fish Lake at Night Ethel Bean Andrew",
+          "page": 522,
+          "file": "September_Vol19_05_Article_Fish_Lake_at_Night_Ethel_Bean_Andrew.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Mrs. Annie D. Palmer Amy Brown Lyman",
+          "page": 523,
+          "file": "September_Vol19_04c_Article_Mrs_Annie_D_Palmer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Thy Years Shall Have No End Annie Pike Greenwood",
+          "page": 527,
+          "file": "September_Vol19_07_Article_Thy_Years_Shall_Have_No_End_Annie_Pike_Greenwood.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Sir Walter Scott Nellie Schofield Thornton",
+          "page": 528,
+          "file": "September_Vol19_08_Article_Sir_Walter_Scott_Nellie_Schofield_Thornton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Help Me to Serve Mary H. Mitton",
+          "page": 534,
+          "file": "September_Vol19_09_Article_Help_Me_to_Serve_Mary_H_Mitton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Seasonable Recipes Lucy Rose Middleton",
+          "page": 536,
+          "file": "September_Vol19_11_Article_Seasonable_Recipes_Lucy_Rose_Middleton.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Happenings Annie Wells Cannon",
+          "page": 535,
+          "file": "September_Vol19_10_Article_A_Vignette_Annie_Wells_Cannon.txt",
+          "score": 0.75
+        },
+        {
+          "title": "Notes to the Field",
+          "page": 538,
+          "file": "September_Vol19_13_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Indian Summer Helen Kimball Orgill",
+          "page": 539,
+          "file": "September_Vol19_12_Article_Indian_Summer_Helen_Kimball_Orgill.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Notes from the Field",
+          "page": 540,
+          "file": "September_Vol19_13_Notes_from_Field_Notes_to_the_Field.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Editorial—Cultivate the Power to Enjoy Beauty",
+          "page": 544,
+          "file": "September_Vol19_14_Editorial_EditorialCultivate_the_Power_to_Enjoy_Beauty.txt",
+          "score": 0.8
+        },
+        {
+          "title": "Dr. George H. Brimhall",
+          "page": 545,
+          "file": "September_Vol19_15_Article_Dr_George_H_Brimhall.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Annie D. Palmer",
+          "page": 546,
+          "file": "September_Vol19_04c_Article_Mrs_Annie_D_Palmer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Lesson Department",
+          "page": 547,
+          "file": "September_Vol19_16_Article_Lesson_Department.txt",
+          "score": 1.0
+        },
+        {
+          "title": "The Government a Saloon Keeper",
+          "page": 562,
+          "file": "September_Vol19_No9_17_Article_The_Government_a_Saloon_Keeper.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [
+        {
+          "title": "Glacier National Park Frontispiece",
+          "page": null
+        },
+        {
+          "title": "Gift Handkerchiefs Elsie E. Barrett",
+          "page": 537
+        }
+      ],
+      "extra_files": [
+        "September_Vol19_06_Article_Mrs_Annie_D_Palmer_Amy_Brown_Lyman.txt"
+      ]
+    }
+  }
+}

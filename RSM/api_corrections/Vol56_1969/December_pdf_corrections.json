@@ -1,0 +1,28 @@
+{
+  "volume": 56,
+  "month": "December",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_12_05_SpFt_Service_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "Article starts with Relief Society Conference content instead of the story beginning",
+      "action": "trim_start",
+      "text": "The howling wind made the tall old house rock and creak.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    },
+    {
+      "file": "V56_12_13_Fict_Mama_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "Article contains content from 'Heart Room for Home' at the beginning, need to trim to start of actual 'Mama and the Magic Bag' story",
+      "action": "trim_start",
+      "text": "Time picked up momentum as the weeks passed. Mary Ann, beleaguered with wedding plans, had little time to worry about her father-in-law beyond his meals and clean clothes, and nobody else did.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": true
+    }
+  ]
+}

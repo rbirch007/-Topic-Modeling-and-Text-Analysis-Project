@@ -1,0 +1,59 @@
+{
+  "volume": 7,
+  "month": "January",
+  "year": 1920,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1302,
+  "files": [
+    {
+      "source_file": "January_Vol7_09_Article_On_the_Watch_Tower_James_H._Anderson.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "On the Watch Tower",
+          "category": "Article",
+          "author": "James H. Anderson",
+          "start_boundary": "on the basis of the constant friction between",
+          "end_boundary": "Thus we may face the rising of our",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Guide Lessons - Lesson I: Genealogy and Testimony",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons LESSON I. Genealogy and Testimony (Required)",
+          "end_boundary": "Read description of baptismal font on Nauvoo, found",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "Guide Lessons - Lessons II, III, and IV",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business (Required) Second",
+          "end_boundary": "How can you obtain government publications on",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains the end of an editorial article 'On the Watch Tower' by James H. Anderson, followed by multiple Guide Lessons sections. The lessons include Genealogy (Lesson I), Work and Business (Lesson II), Book of Mormon study on 'The Land of Joseph' (Lesson III), and Social Service on Health/Malnutrition (Lesson IV). The lessons are grouped together as they form a cohesive instructional unit.",
+      "validation_issues": [
+        "Split 'c': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 17912,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 40976,
+        "output_tokens": 483,
+        "cost": 0.1302
+      }
+    }
+  ]
+}

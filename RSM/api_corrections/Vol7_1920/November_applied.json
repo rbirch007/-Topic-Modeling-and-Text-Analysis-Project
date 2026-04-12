@@ -1,0 +1,42 @@
+{
+  "volume": 7,
+  "month": "November",
+  "year": 1920,
+  "timestamp": "20260315_120945",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "November_Vol7_01_Article_Page_The_Evolution_of_the_Post.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (3379 chars added)"
+    },
+    {
+      "file": "November_Vol7_01_Article_Page_The_Evolution_of_the_Post.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (3380 chars removed)"
+    },
+    {
+      "file": "November_Vol7_07_Article_The_Official_Round_Table.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2012 chars added)"
+    },
+    {
+      "file": "November_Vol7_10b_Guide_Lessons_Guide_Lesson_Suggestions_-_Lesson_I_Testimony_and_Genealogy.txt",
+      "action": "append",
+      "result": "APPLIED append (713 chars added)"
+    },
+    {
+      "file": "November_Vol7_10c_Guide_Lessons_Guide_Lesson_Suggestions_-_Lesson_II_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File contains only headers with no content"
+    },
+    {
+      "file": "November_Vol7_13_Article_The_Actor_Grace_Ingles_Frost.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (0 chars removed)"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "volume": 2,
+  "month": "March",
+  "year": 1915,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0221,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Instruction of the Prophet",
+      "printed_page": 91,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages with advertisements and the table of contents, but do not contain page 91 where 'Instruction of the Prophet' should be located according to the contents listing.",
+      "api_usage": {
+        "input_tokens": 6737,
+        "output_tokens": 127,
+        "cost": 0.0221
+      },
+      "pdf_pages": [
+        105,
+        106,
+        107,
+        108
+      ]
+    }
+  ]
+}

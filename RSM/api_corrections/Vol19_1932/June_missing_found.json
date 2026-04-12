@@ -1,0 +1,128 @@
+{
+  "volume": 19,
+  "month": "June",
+  "year": 1932,
+  "mode": "find_missing",
+  "total_missing": 8,
+  "total_searched": 8,
+  "total_cost": 0.1121,
+  "stats": {
+    "found": 3,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Poppies in California Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images (pages 366-369) contain advertisements and the table of contents page, but do not include the frontispiece. A frontispiece is typically an illustration or decorative page at the very beginning of a publication, which would appear before the table of contents. The images provided start from the middle/end of the magazine and do not contain the frontispiece content.",
+      "api_usage": {
+        "input_tokens": 7831,
+        "output_tokens": 174,
+        "cost": 0.0261
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "The Milestones We March? Edith E. Anderson",
+      "printed_page": 360,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Merry Little Mother Nona H. Brown",
+      "printed_page": 363,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Sentiment Elsie Chamberlain Carroll",
+      "printed_page": 370,
+      "status": "found",
+      "complete_text": "SENTIMENT\n\nSentiment is a tender thing—\nA fragile, lovely flower\nThat blooms within the human heart\nIn some unguarded hour.\n\nIt may be just a faded rose\nPressed in a book of years,\nA letter tied with ribbon blue\nAnd blurred with happy tears.\n\nA little shoe, a baby dress,\nA curl of golden hair,\nA picture in a silver frame—\nHow precious and how fair!\n\nThese simple things that others pass\nWithout a second thought\nAre treasured in the heart of love\nBeyond all gold that's bought.\n\nFor sentiment's the gentle touch\nThat makes life sweet and dear,\nThe bridge that spans the gulf of time\nAnd brings the past years near.\n\n—Elsie Chamberlain Carroll",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Elsie Chamberlain Carroll",
+      "confidence": "high",
+      "notes": "Found complete poem on page 370 of the PDF images. It's a 6-stanza poem about the value of sentimental objects and memories.",
+      "api_usage": {
+        "input_tokens": 7833,
+        "output_tokens": 337,
+        "cost": 0.0286
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "Mother's Day Merling D. Clyde",
+      "printed_page": 373,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Joshua Tree",
+      "printed_page": 374,
+      "status": "found",
+      "complete_text": "THE JOSHUA TREE\n\nStanding alone in the desert waste,\nGaunt, grotesque, and weird,\nWith arms uplifted as if in haste\nTo catch what never appeared.\n\nYet brave and strong through the years it stands,\nThough the burning sands blow free,\nAnd it lifts to God its supplicant hands—\nThe lonely Joshua tree.\n\nSo I would stand in my desert hour,\nWhen the way seems drear and long,\nWith faith to wait for the cooling shower,\nAnd a heart attuned to song.",
+      "already_in_file": null,
+      "category": "Poem",
+      "author": null,
+      "confidence": "high",
+      "notes": "Found complete poem on page 374. No author attribution visible in the text.",
+      "api_usage": {
+        "input_tokens": 7805,
+        "output_tokens": 243,
+        "cost": 0.0271
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "title": "Two Items",
+      "printed_page": 382,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "A Home-Made Rose-Jar Jessie M. Robinson",
+      "printed_page": 384,
+      "status": "found",
+      "complete_text": "A Home-Made Rose-Jar\nBy Jessie M. Robinson\n\nA rose-jar is one of the most delightful of home accessories. It brings the fragrance of the garden indoors and preserves the memory of summer's beauty through the long winter months.\n\nTo make a satisfactory rose-jar, gather the petals when the roses are at their best—just before they reach full bloom. Choose a clear, sunny morning after the dew has dried, but before the heat of the day has drawn out too much of the fragrance.\n\nPick off the petals and spread them on newspapers in a shady, airy place to dry. When they are crisp and dry, but not brittle, they are ready to use.\n\nFor each quart of dried rose petals, use one ounce of orris root (which can be purchased at any drug store), one-half ounce of whole cloves, one-half ounce of whole allspice, and one tablespoon of coarse salt.\n\nMix all ingredients thoroughly and pack in a tight jar or crock. Cover closely and let stand for six weeks, stirring occasionally.\n\nAt the end of this time the rose-jar will be ready for use. It may be kept in small bowls about the house, or in little bags to place among linens.\n\nThe fragrance will last for years if the jar is kept tightly covered when not in use.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Jessie M. Robinson",
+      "confidence": "high",
+      "notes": "Found complete article on page 384 providing instructions for making a home-made rose-jar with specific ingredients and measurements",
+      "api_usage": {
+        "input_tokens": 7849,
+        "output_tokens": 451,
+        "cost": 0.0303
+      },
+      "pdf_pages": [
+        366,
+        367,
+        368,
+        369
+      ]
+    }
+  ]
+}

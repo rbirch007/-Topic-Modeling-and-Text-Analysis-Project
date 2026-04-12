@@ -1,0 +1,73 @@
+{
+  "volume": 1,
+  "month": "January",
+  "year": 1914,
+  "total_files_checked": 10,
+  "files_correct": [
+    "V1_1914_Jan_01_Art_Presidents.txt",
+    "V1_1914_Jan_02_Art_SAMPLE.txt",
+    "V1_1914_Jan_03_Art_Genealogic.txt",
+    "V1_1914_Jan_05_Art_HomeGarden.txt",
+    "V1_1914_Jan_06_Art_Literary.txt",
+    "V1_1914_Jan_07_Art_Instructio.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V1_1914_Jan_04_Art_HomeEthics.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with 'LESSONS IN' which belongs to the next article",
+      "action": "trim_end",
+      "text": "LESSONS IN",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V1_1914_Jan_09_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of poetry",
+      "action": "note",
+      "text": "This file appears to contain advertisement content that should be in the Misc file instead",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jan_10_Art_GIVES.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of article content",
+      "action": "note",
+      "text": "This file appears to contain advertisement content that should be in the Misc file instead",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V1_1914_Jan_12_Poem_Poemfrom.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only a fragment that appears to be advertisement content",
+      "action": "note",
+      "text": "This file appears to contain advertisement content that should be in the Misc file instead",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Architecture and Art",
+      "expected_page": 13,
+      "status": "merged_with_another",
+      "merged_into": "V1_1914_Jan_06_Art_Literary.txt"
+    }
+  ],
+  "notes": "Several files contain advertisement content that should be moved to the Misc file. The Architecture and Art section appears to be correctly merged with the Literary Department file. The Home Ethics file has a minor bleed issue at the end.",
+  "validated_corrections": [
+    {
+      "file": "V1_1914_Jan_04_Art_HomeEthics.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence with 'LESSONS IN' which belongs to the next article",
+      "action": "trim_end",
+      "text": "LESSONS IN",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

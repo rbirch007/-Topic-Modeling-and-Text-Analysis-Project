@@ -1,0 +1,27 @@
+{
+  "volume": 6,
+  "month": "February",
+  "year": 1919,
+  "timestamp": "20260315_120942",
+  "dry_run": false,
+  "applied": 3,
+  "skipped": 0,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "February_Vol6_01_A_Business_Man's_Appreciation_of_President_Heber_J._Grant_Ho.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (148 chars removed)"
+    },
+    {
+      "file": "February_Vol6_04_Elder_Rudger_Clawson.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (9 chars removed)"
+    },
+    {
+      "file": "February_Vol6_09a_Article_Our_Indian_Cousins.txt",
+      "action": "append",
+      "result": "APPLIED append (2731 chars added)"
+    }
+  ]
+}

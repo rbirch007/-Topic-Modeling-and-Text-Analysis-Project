@@ -1,0 +1,62 @@
+{
+  "volume": 10,
+  "month": "August",
+  "year": 1923,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0468,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "August_Vol10_01_Frontispiece_Timpanogos_Climbed_to_the_Top_in_Winter_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 64,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece caption. The PDF shows this is just a photo caption for the frontispiece image, not a full article. The text matches what appears in the table of contents.",
+      "api_usage": {
+        "input_tokens": 6987,
+        "output_tokens": 160,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        447,
+        448,
+        449,
+        450
+      ]
+    },
+    {
+      "source_file": "August_Vol10_09b_Guide_Lessons_Work_and_Business.txt",
+      "status": "not_found",
+      "current_chars": 40,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF pages (24-27) contain an article about 'Relief Society Nurse Aids' Course' by Emma A. Empey, but do not contain any Guide Lessons content about 'Work and Business'. The file appears to be a mismatched extraction that doesn't correspond to the actual content on these pages.",
+      "api_usage": {
+        "input_tokens": 6936,
+        "output_tokens": 173,
+        "cost": 0.0234
+      },
+      "pdf_pages": [
+        24,
+        25,
+        26,
+        27
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "volume": 12,
+  "month": "October",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 5,
+  "total_searched": 5,
+  "total_cost": 0.0974,
+  "stats": {
+    "found": 0,
+    "not_found": 5,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Phyllis Morton's Birthday Gift Myrtle M. Dean",
+      "printed_page": 527,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Myrtle M. Dean",
+      "confidence": "high",
+      "notes": "The article is not present in any of the four PDF page images provided (pages 575-578). These pages contain advertisements for Sawcroft's Blue Pine Extracts, the magazine contents page, and various business advertisements, but do not include the missing article which should appear on page 527.",
+      "api_usage": {
+        "input_tokens": 7333,
+        "output_tokens": 165,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578
+      ]
+    },
+    {
+      "title": "Diet for the Woman of Forty Plus Jean Cox",
+      "printed_page": 535,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Jean Cox",
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from advertisements and the magazine cover/contents, but do not contain page 535 where this article should appear. The article is not visible in any of the four provided images.",
+      "api_usage": {
+        "input_tokens": 7317,
+        "output_tokens": 136,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578
+      ]
+    },
+    {
+      "title": "Our Heritage Josephine Spencer",
+      "printed_page": 544,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Love Patriotism Susan Coolidge",
+      "printed_page": 561,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Poem",
+      "author": "Susan Coolidge",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (575, 576, 577, 578). These pages contain advertisements for Sawcroft's Blue Pine Extracts, the magazine table of contents, and various business advertisements. The article listed on page 561 would appear on an earlier page not included in these images.",
+      "api_usage": {
+        "input_tokens": 7313,
+        "output_tokens": 171,
+        "cost": 0.0245
+      },
+      "pdf_pages": [
+        575,
+        576,
+        577,
+        578
+      ]
+    },
+    {
+      "title": "Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages from February 1925 (Vol. XII, No. 2) with advertisements for Blue Pine Olive Oil, Relief Society Magazine bound volumes, Temple and Burial Clothes, sacrament sets, and pepper/salt shakers. These are not from the October 1925 issue being searched for. No frontispiece content is visible in these images.",
+      "api_usage": {
+        "input_tokens": 7291,
+        "output_tokens": 170,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        63,
+        64,
+        65,
+        66
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "volume": 14,
+  "month": "September",
+  "year": 1927,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.024,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "September_Vol14_01_Frontispiece_The_Coming_Forth_of_the_Book_of_Mormon_Frontispiece.txt",
+      "status": "complete",
+      "current_chars": 165,
+      "complete_text": null,
+      "title": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "This is a complete frontispiece entry - just a title page with no additional content. The PDF pages shown contain different articles about the Book of Mormon but not this specific frontispiece.",
+      "api_usage": {
+        "input_tokens": 7227,
+        "output_tokens": 154,
+        "cost": 0.024
+      },
+      "pdf_pages": [
+        470,
+        471,
+        472,
+        473
+      ]
+    },
+    {
+      "source_file": "September_Vol14_04_Article_Items_of_Interest_Concerning_the_Book_of_Mormon.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    }
+  ]
+}

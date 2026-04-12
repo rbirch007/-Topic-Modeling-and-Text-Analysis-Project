@@ -1,0 +1,61 @@
+{
+  "volume": 17,
+  "month": "July",
+  "year": 1930,
+  "total_merged": 1,
+  "total_splits": 2,
+  "total_cost": 0.1758,
+  "files": [
+    {
+      "source_file": "July_Vol17_09_Article_Jubilee_Boxes_Annie_Wells_Cannon.txt",
+      "num_articles_found": 2,
+      "splits": [
+        {
+          "order": "a",
+          "title": "Jubilee Boxes",
+          "category": "Article",
+          "author": "Annie Wells Cannon",
+          "start_boundary": "Jubilee Boxes Voices from the Past By Annie",
+          "end_boundary": "will receive a message in the days to",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "Mary Birch Miller, a Gold Star Mother",
+          "category": "Article",
+          "author": "Cora Carver Ritchie",
+          "start_boundary": "Mary Birch Miller, a Gold Star Mother By",
+          "end_boundary": "and marvel? If By Dying By Arthur James",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "JUBILEE BOXES"
+      ],
+      "notes": "The file contains two main articles. The first is about jubilee boxes opened in 1930, and the second is a biographical sketch of Mary Birch Miller. There appears to be a short poem 'If By Dying' at the very end that may be part of the second article or a separate piece, but based on the contents listing it seems to be a separate item that got merged in.",
+      "validation_issues": [
+        "Split 'b': start_boundary not found",
+        "Split 'b': end_boundary not found"
+      ],
+      "merge_type": "CAPS_HEADERS",
+      "file_chars": 21467,
+      "tier": 1,
+      "pdf_pages": [
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451
+      ],
+      "api_usage": {
+        "input_tokens": 56572,
+        "output_tokens": 408,
+        "cost": 0.1758
+      }
+    }
+  ]
+}

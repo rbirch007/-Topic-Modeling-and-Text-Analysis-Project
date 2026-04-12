@@ -1,0 +1,79 @@
+{
+  "volume": 4,
+  "month": "January",
+  "year": 1917,
+  "total_merged": 1,
+  "total_splits": 4,
+  "total_cost": 0.1401,
+  "files": [
+    {
+      "source_file": "January_Vol4_14d_Guide_Lessons_Guide_Lessons_c_a_c.txt",
+      "num_articles_found": 4,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony. First Week in February. THE ABRAHAMIC AGE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "Prove your statements. Either before or after",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business. Second Week in February",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second",
+          "end_boundary": "LESSON III. Genealogy and Literature. Third",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy and Literature. Third Week in February. SURNAMES FROM THE VILLAGE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Literature. Third Week",
+          "end_boundary": "What surnames are there in your class that",
+          "confidence": "high"
+        },
+        {
+          "order": "d",
+          "title": "LITERATURE. Third Meeting in February. THE AUTHOR AT WORK",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "are of this character? LITERATURE. Third",
+          "end_boundary": "selecting literature for the home would you give?",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains 4 distinct lesson sections from the Guide Lessons department. The first lesson is incomplete (missing its end), the second lesson appears to be just a header with no content, the third lesson is complete and covers surnames/genealogy, and the fourth lesson covers literature. There's also a partial fifth lesson on Home Economics that appears to be cut off at the end.",
+      "validation_issues": [
+        "Split 'a': start_boundary not found",
+        "Split 'a': end_boundary not found",
+        "Split 'b': start_boundary not found",
+        "Split 'd': start_boundary not found",
+        "Split 'd': end_boundary not found"
+      ],
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 12251,
+      "tier": 1,
+      "pdf_pages": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "api_usage": {
+        "input_tokens": 43799,
+        "output_tokens": 583,
+        "cost": 0.1401
+      }
+    }
+  ]
+}

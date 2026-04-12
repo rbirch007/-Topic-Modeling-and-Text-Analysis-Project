@@ -1,0 +1,149 @@
+{
+  "volume": 3,
+  "month": "June",
+  "year": 1916,
+  "total_files_checked": 18,
+  "files_correct": [
+    "June_Vol3_05_Article_The_Cross.txt",
+    "June_Vol3_08_Article_The_Seeing_Heart_Maud_Baggarley.txt",
+    "June_Vol3_09_Article_A_Prayer_for_Life_Annie_G._Lauritzen.txt",
+    "June_Vol3_13_Article_Ethics_Lillian_G._Knight.txt",
+    "June_Vol3_14_Notes_from_Field_Notes_from_the_Field.txt",
+    "June_Vol3_15_Article_Query_Box_Hazel_Love_Dunford.txt",
+    "June_Vol3_16_Current_Topics_Current_Topics_James_H._Anderson.txt"
+  ],
+  "corrections": [
+    {
+      "file": "June_Vol3_02_Article_Mothers_of_Leaders_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "age; but a new life was about to dawn upon them, a life that would change their daily struggle for bare existence to a gradual betterment of themselves and which would establish their children in a land of peace, freedom and plenty. To them it was a glorious reward for obedience and faithful service. In 1850, Euphamia Wilson, Jean Nibley's younger sister, married and sailed to America, locating in Rhode Island. She wrote back encouraging reports of America and sent money to James Nibley and wife Jean to emigrate their two eldest children. Not willing to separate her family, Jean began to plan how she could secure the money to emigrate every member of her family. She therefore determined to make an effort to borrow the money, and went straightway to the merchant with whom she had dealt for twelve years. After making her errand known, he not only granted the money for their passage across the sea, but offered to supply the family with clothing and everything necessary for the journey, without security, and to wait until they were able to pay the debt after arriving in America. This unusual incident indicates the remarkable character of this most remarkable pioneer Scotch woman. An appeal to a shrewd, cautious Scotch merchant by a comparatively poor, unknown Scotch house-mother for an indefinite bill of credit demonstrates both the winning nature of her honest appeal and the profound financial esteem in which this good woman was held. She had conducted her little shop on such thoroughly sound principles that her friendly associate in business was perfectly willing to put his official trust in her power to meet any and all obligations. Preparations were at once made for departure, and in the year 1855 they set sail, as steerage passengers, on the clipper ship, Dreadnought. On the voyage, they were caught in a terrible storm and came near being lost, but through the blessing of Providence, they arrived safely in Boston harbour in twenty-eight days.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_10_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and continues into next article",
+      "action": "trim_end",
+      "text": "A HEROINE. 343 take their peaceful way adown the dusty road of life, meeting its problems as supinely as did the crowds of dogs which gathered about them now in mangy droves of snarling opposition to every hindrance on their way. As the dogs snapped and yowled here and there, plunging now through the crowd of yokels, or mingling in a mass of canine fury to settle some contested canine point, the huge, black dog came back towards them with his awkward but swift leaps, and in an instant there was a mingling of yaps and growls, and the masters fell upon the struggling writhing mass of dog-flesh in the dusty road, and together with the soldier's stout axes laid about their ears, the dogs were separated and went whimpering onwards. But the black dog was evidently not through with his work. He trotted away quietly enough but after him leaped a large yellow mastiff, and they disappeared down the curving way that led to the courts of the Ziggarut. The bedlam of dogs yapped after them more slowly. (to be continued.)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of previous article",
+      "action": "trim_start",
+      "text": "A HEROINE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into Home Science Department content",
+      "action": "trim_end",
+      "text": "Lucy Burnham.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_12_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains advertisement content instead of Home Science Department article",
+      "action": "note",
+      "text": "This file appears to contain only advertisement content and magazine header information, not the actual Home Science Department article content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "June_Vol3_17_Editorial_Editorial_Climbing.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial board information instead of the editorial content",
+      "action": "trim_start",
+      "text": "CLIMBING.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_18_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into advertisements and next issue content",
+      "action": "trim_end",
+      "text": "Current Topics. James H. Anderson. Switzerland is considerably disturbed over frequent violations of that nation's neutrality by German aviators. The Swiss are fortunate in having the violations confined to aerial flights rather than a resort to that which Belgium experienced. The British campaign in Mesopotamia has met with a severe setback in the surrender to the Turks of Gen. Townshend and his army at Kut-el-Amara. Failure to back up with sufficient force this campaign and others attempted in the present war has done more to diminish British prestige as a fighter among the nations than any other event since the American Revolution. Francisco Villa, the Mexican revolutionist and bandit whom the American army pursued 200 miles into Mexico, has made good his escape for the present. An important factor in his successful coup was the story given out by Carranza government officials that Villa was dead, this being an effort to deceive the Americans into a withdrawal of troops from Mexico. Uncle Sam's Aerial Service in connection with the advance of American troops into Mexico was a total collapse, all the machines being put out of commission in a short time. While American editors have been criticising severely Great Britain's aerial war service they have been overlooking a more notable incompetency at home.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Old Folks Greeting",
+      "expected_page": 301,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "The Home Science Department article appears to be missing entirely from the extracted files, with only advertisement content in its place. Several files have boundary issues with content bleeding between articles. The Old Folks Greeting article is completely missing from the extraction.",
+  "validated_corrections": [
+    {
+      "file": "June_Vol3_02_Article_Mothers_of_Leaders_in_Israel.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence without the beginning of the article",
+      "action": "prepend",
+      "text": "age; but a new life was about to dawn upon them, a life that would change their daily struggle for bare existence to a gradual betterment of themselves and which would establish their children in a land of peace, freedom and plenty. To them it was a glorious reward for obedience and faithful service. In 1850, Euphamia Wilson, Jean Nibley's younger sister, married and sailed to America, locating in Rhode Island. She wrote back encouraging reports of America and sent money to James Nibley and wife Jean to emigrate their two eldest children. Not willing to separate her family, Jean began to plan how she could secure the money to emigrate every member of her family. She therefore determined to make an effort to borrow the money, and went straightway to the merchant with whom she had dealt for twelve years. After making her errand known, he not only granted the money for their passage across the sea, but offered to supply the family with clothing and everything necessary for the journey, without security, and to wait until they were able to pay the debt after arriving in America. This unusual incident indicates the remarkable character of this most remarkable pioneer Scotch woman. An appeal to a shrewd, cautious Scotch merchant by a comparatively poor, unknown Scotch house-mother for an indefinite bill of credit demonstrates both the winning nature of her honest appeal and the profound financial esteem in which this good woman was held. She had conducted her little shop on such thoroughly sound principles that her friendly associate in business was perfectly willing to put his official trust in her power to meet any and all obligations. Preparations were at once made for departure, and in the year 1855 they set sail, as steerage passengers, on the clipper ship, Dreadnought. On the voyage, they were caught in a terrible storm and came near being lost, but through the blessing of Providence, they arrived safely in Boston harbour in twenty-eight days.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with continuation of previous article",
+      "action": "trim_start",
+      "text": "A HEROINE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_11_Article_A_Heroine_Lucy_Burnham.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into Home Science Department content",
+      "action": "trim_end",
+      "text": "Lucy Burnham.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_17_Editorial_Editorial_Climbing.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with editorial board information instead of the editorial content",
+      "action": "trim_start",
+      "text": "CLIMBING.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "June_Vol3_18_Guide_Lessons_Guide_Lessons.txt",
+      "issue_type": "bleed_end",
+      "description": "File continues into advertisements and next issue content",
+      "action": "trim_end",
+      "text": "Current Topics. James H. Anderson. Switzerland is considerably disturbed over frequent violations of that nation's neutrality by German aviators. The Swiss are fortunate in having the violations confined to aerial flights rather than a resort to that which Belgium experienced. The British campaign in Mesopotamia has met with a severe setback in the surrender to the Turks of Gen. Townshend and his army at Kut-el-Amara. Failure to back up with sufficient force this campaign and others attempted in the present war has done more to diminish British prestige as a fighter among the nations than any other event since the American Revolution. Francisco Villa, the Mexican revolutionist and bandit whom the American army pursued 200 miles into Mexico, has made good his escape for the present. An important factor in his successful coup was the story given out by Carranza government officials that Villa was dead, this being an effort to deceive the Americans into a withdrawal of troops from Mexico. Uncle Sam's Aerial Service in connection with the advance of American troops into Mexico was a total collapse, all the machines being put out of commission in a short time. While American editors have been criticising severely Great Britain's aerial war service they have been overlooking a more notable incompetency at home.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "June_Vol3_10_Prince_of_Ur_The_Prince_of_Ur_Homespun.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends mid-sentence and continues into next article",
+      "action": "trim_end",
+      "text": "A HEROINE. 343 take their peaceful way adown the dusty road of life, meeting its problems as supinely as did the crowds of dogs which gathered about them now in mangy droves of snarling opposition to every hindrance on their way. As the dogs snapped and yowled here and there, plunging now through the crowd of yokels, or mingling in a mass of canine fury to settle some contested canine point, the huge, black dog came back towards them with his awkward but swift leaps, and in an instant there was a mingling of yaps and growls, and the masters fell upon the struggling writhing mass of dog-flesh in the dusty road, and together with the soldier's stout axes laid about their ears, the dogs were separated and went whimpering onwards. But the black dog was evidently not through with his work. He trotted away quietly enough but after him leaped a large yellow mastiff, and they disappeared down the curving way that led to the courts of the Ziggarut. The bedlam of dogs yapped after them more slowly. (to be continued.)",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

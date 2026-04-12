@@ -1,0 +1,56 @@
+{
+  "volume": 16,
+  "month": "September",
+  "year": 1929,
+  "mode": "find_missing",
+  "total_missing": 4,
+  "total_searched": 4,
+  "total_cost": 0.0249,
+  "stats": {
+    "found": 0,
+    "not_found": 4,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Transfiguration Henry F. Kirkham",
+      "printed_page": 463,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "The Coming of Autumn Mary Hale Woolsey",
+      "printed_page": 465,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Developing the Moral Judgment Dean Milton Bennion",
+      "printed_page": 483,
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "title": "Uncontrollable Curiosity Owen Woodruff Bunker",
+      "printed_page": 518,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Owen Woodruff Bunker",
+      "confidence": "high",
+      "notes": "The article is not present in any of the 4 provided PDF page images (pages 547-550). The table of contents indicates it should be on page 518, but the provided images show pages much later in the magazine. The article may exist on earlier pages not included in these images.",
+      "api_usage": {
+        "input_tokens": 7467,
+        "output_tokens": 167,
+        "cost": 0.0249
+      },
+      "pdf_pages": [
+        547,
+        548,
+        549,
+        550
+      ]
+    }
+  ]
+}

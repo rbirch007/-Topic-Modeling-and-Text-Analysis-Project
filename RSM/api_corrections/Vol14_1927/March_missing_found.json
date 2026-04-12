@@ -1,0 +1,38 @@
+{
+  "volume": 14,
+  "month": "March",
+  "year": 1927,
+  "mode": "find_missing",
+  "total_missing": 1,
+  "total_searched": 1,
+  "total_cost": 0.0251,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "Seventeenth of March Frontispiece",
+      "printed_page": null,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Frontispiece",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 127-130 which contain advertisements for Sawcroft's Blue Pine Extracts and Olive Oil, The Relief Society Magazine table of contents, and various other advertisements. No frontispiece content for 'Seventeenth of March' is visible in these pages. A frontispiece would typically appear at the very beginning of the magazine issue, likely before page 107 where the first article begins.",
+      "api_usage": {
+        "input_tokens": 7422,
+        "output_tokens": 186,
+        "cost": 0.0251
+      },
+      "pdf_pages": [
+        127,
+        128,
+        129,
+        130
+      ]
+    }
+  ]
+}

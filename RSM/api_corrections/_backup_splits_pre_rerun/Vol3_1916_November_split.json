@@ -1,0 +1,56 @@
+{
+  "volume": 3,
+  "month": "November",
+  "year": 1916,
+  "total_merged": 1,
+  "total_splits": 3,
+  "total_cost": 0.1258,
+  "files": [
+    {
+      "source_file": "November_Vol3_09b_Guide_Lessons_Guide_Lessons_a.txt",
+      "num_articles_found": 3,
+      "splits": [
+        {
+          "order": "a",
+          "title": "LESSON I. Theology and Testimony - WOMEN OF THE BIBLE MARY",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "Guide Lessons. LESSON I. Theology and Testimony. First Week",
+          "end_boundary": "do not say what you do not have any authority for.)",
+          "confidence": "high"
+        },
+        {
+          "order": "b",
+          "title": "LESSON II. Work and Business",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON II. Work and Business. Second Week in December.",
+          "end_boundary": "LESSON II. Work and Business. Second Week in December.",
+          "confidence": "high"
+        },
+        {
+          "order": "c",
+          "title": "LESSON III. Genealogy and Art - ANGLO-SAXON SURNAMES and ART AND ARCHITECTURE",
+          "category": "Guide_Lessons",
+          "author": null,
+          "start_boundary": "LESSON III. Genealogy and Art. Third Week in December.",
+          "end_boundary": "unique plan for hanging up Christmas stocking",
+          "confidence": "high"
+        }
+      ],
+      "running_headers_to_strip": [
+        "RELIEF SOCIETY MAGAZINE",
+        "GUIDE LESSONS"
+      ],
+      "notes": "This file contains three lesson sections: Lesson I is a full theology lesson about Mary, Lesson II appears to be just a header with no content, and Lesson III contains both genealogy content about Anglo-Saxon surnames and art content about Christmas decorations and architecture. The lessons are clearly delineated with Roman numeral headings.",
+      "merge_type": "MULTI_LESSON",
+      "file_chars": 16622,
+      "tier": 1,
+      "api_usage": {
+        "input_tokens": 39523,
+        "output_tokens": 479,
+        "cost": 0.1258
+      }
+    }
+  ]
+}

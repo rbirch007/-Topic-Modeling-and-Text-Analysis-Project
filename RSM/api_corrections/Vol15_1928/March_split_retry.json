@@ -1,0 +1,64 @@
+{
+  "volume": 15,
+  "month": "March",
+  "year": 1928,
+  "timestamp": "20260316_210705",
+  "dry_run": false,
+  "retried": 3,
+  "created": 4,
+  "failed": 4,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Letter to President Clarissa S. Williams",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Book of Mormon Women and Their Work",
+      "new_file": "March_Vol15_03b_Article_Book_of_Mormon_Women_and_Their_Work.txt",
+      "chars": 15302,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "d",
+      "title": "Cyrus E. Dallin and the Indians",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "This is the Day",
+      "new_file": "March_Vol15_17a_Poem_This_is_the_Day.txt",
+      "chars": 1601,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Guide Lessons for May",
+      "new_file": "March_Vol15_17b_Guide_Lessons_Guide_Lessons_for_May.txt",
+      "chars": 8534,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "a",
+      "title": "LESSON I - Theology and Testimony",
+      "result": "RETRY_FAILED: end (53) <= start (96)"
+    },
+    {
+      "split": "b",
+      "title": "LESSON II - Work and Business",
+      "result": "RETRY_REJECTED: STUB: body only 42 chars (< 200 threshold)"
+    },
+    {
+      "split": "d",
+      "title": "LESSON IV - Social Service (The Child's Moral Development)",
+      "new_file": "March_Vol15_18d_Guide_Lessons_LESSON_IV_-_Social_Service_The_Childs_Moral_Development.txt",
+      "chars": 9776,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

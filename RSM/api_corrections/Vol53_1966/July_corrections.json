@@ -1,0 +1,125 @@
+{
+  "volume": 53,
+  "month": "July",
+  "year": 1966,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V53_07_02_SpFt_Involvement_Covey.txt",
+    "V53_07_03_SpFt_Zelma_Christensen.txt",
+    "V53_07_04_Poem_If_You_Roberts.txt",
+    "V53_07_05_SpFt_Become_Sharp.txt",
+    "V53_07_07_Poem_Prayer.txt",
+    "V53_07_08_Fict_Tell_Me_Lloyd.txt",
+    "V53_07_09_GenFt_Womans_Cannon.txt",
+    "V53_07_10_GenFt_Editorial_Crawford.txt",
+    "V53_07_11_GenFt_Wealtha_Board.txt",
+    "V53_07_12_The Home_Elemental.txt",
+    "V53_07_13_SpFt_They_Isaacson.txt",
+    "V53_07_14_Poem_The_Kleinman.txt",
+    "V53_07_15_Fict_Bag_of_Todd.txt",
+    "V53_07_17_The Home_Vacation_Franks.txt",
+    "V53_07_18_The Home_Passing_Hopper.txt",
+    "V53_07_19_The Home_Dripless_Woolley.txt",
+    "V53_07_20_The Home_A_Sansom.txt",
+    "V53_07_21_The Home_Songs_Wagenen.txt",
+    "V53_07_22_The Home_Myrtle_Artistry.txt",
+    "V53_07_23_Fict_Wheat_Stewart.txt",
+    "V53_07_24_Poem_A_Day_Cook.txt",
+    "V53_07_25_GenFt_Notes_Activities.txt",
+    "V53_07_26_The Home_Spiritual_Doxey.txt",
+    "V53_07_27_The Home_Visiting_Smith.txt",
+    "V53_07_28_The Home_Homemaking_Cannon.txt",
+    "V53_07_29_The Home_Social_Christensen.txt",
+    "V53_07_30_The Home_Cultural_Thomas.txt",
+    "V53_07_32_Poem_Morning_Young.txt",
+    "V53_07_34_GenFt_Bday_Congrats.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V53_07_01_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "I want to express my appreciation fo the fine literature lessons",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_06_SpFt_The_Ashton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "They need th",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_16_Poem_Reverie_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about vacation plans",
+      "action": "trim_end",
+      "text": "Will go softly through the meadow grass Breathing a benediction as I pass.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_31_The Home_Unfinished_Departm.txt",
+      "issue_type": "wrong_content",
+      "description": "Filename indicates 'Lesson Department' but content is 'Unfinished Business' article",
+      "action": "note",
+      "text": "Filename should be V53_07_31_The Home_Unfinished_Jensen.txt",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V53_07_33_Poem_Summertime_Green.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "I pray ail living souls will share These gifts from God's creation fair.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. Main issues are bleeding between articles and one filename mismatch. Advertisement content appears mixed with regular content in some files.",
+  "validated_corrections": [
+    {
+      "file": "V53_07_01_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with incomplete text from previous content",
+      "action": "trim_start",
+      "text": "I want to express my appreciation fo the fine literature lessons",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_06_SpFt_The_Ashton.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from previous article",
+      "action": "trim_start",
+      "text": "They need th",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_16_Poem_Reverie_Tangren.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from next article about vacation plans",
+      "action": "trim_end",
+      "text": "Will go softly through the meadow grass Breathing a benediction as I pass.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V53_07_33_Poem_Summertime_Green.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains advertisement content that should be in Misc file",
+      "action": "trim_end",
+      "text": "I pray ail living souls will share These gifts from God's creation fair.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

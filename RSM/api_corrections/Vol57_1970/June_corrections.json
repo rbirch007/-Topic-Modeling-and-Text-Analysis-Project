@@ -1,0 +1,233 @@
+{
+  "volume": 57,
+  "month": "June",
+  "year": 1970,
+  "total_files_checked": 34,
+  "files_correct": [
+    "V57_06_01_Poem_On_Roberts.txt",
+    "V57_06_03_SpFt_ElderAnderson.txt",
+    "V57_06_04_SpFt_ElderHaight.txt",
+    "V57_06_05_SpFt_ElderBennett.txt",
+    "V57_06_06_Poem_Enclosed_Brown.txt",
+    "V57_06_11_Poem_Beyond_Schow.txt",
+    "V57_06_15_Poem_Song_Gabbott.txt",
+    "V57_06_17_Poem_In_Olsen.txt",
+    "V57_06_21_GenFt_Lilies_Bassford.txt",
+    "V57_06_22_GenFt_Cupboards_Baker.txt",
+    "V57_06_23_GenFt_Beauty_Stoddart.txt",
+    "V57_06_26_GenFt_Hobby_Department.txt",
+    "V57_06_27_GenFt_Notes_Activities.txt",
+    "V57_06_28_GenFt_Homemaking.txt",
+    "V57_06_29_GenFt_Spiritual.txt",
+    "V57_06_30_GenFt_Visiting.txt",
+    "V57_06_31_GenFt_Homemaking.txt",
+    "V57_06_32_GenFt_Social.txt",
+    "V57_06_33_GenFt_Cultural.txt",
+    "V57_06_34_GenFt_Birthday.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information that should be in a separate file",
+      "action": "trim_start",
+      "text": "What a thrill it was to see the short story",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with publication information that should be trimmed",
+      "action": "trim_end",
+      "text": "Judith Hohmann, Tainan, Taiwan 402",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_05_SpFt_ElderPacker.txt",
+      "issue_type": "wrong_content",
+      "description": "File header indicates Elder Bennett but content is about Elder Packer",
+      "action": "replace_content",
+      "text": "Elder Boyd K. Packer was sustained a member of the Council of the Twelve at the Solemn Assembly of the 140th Annual General Conference of the Church, April 6, 1970. Elder Packer fills the vacancy created by the accession of President Joseph Fielding Smith to the Presidency. Elder Packer was called to be an Assistant to the Twelve in 1961, and since that time has traveled widely throughout the Church teaching its truths and supervising missionary work. At the time of his call he was supervisor of the Franco-Belgian, Netherlands, French, French East, and South African missions. He is managing director of the Priesthood Home Teaching and Family Home Evening programs, and also of the Church's Military Relations Committee. Elder Packer is an educator. He studied at Weber State College and received his B.S. and Master's degrees from Utah State University, and a Ph.D. from Brigham Young University. He has served for many years as a member of the administrative council of Brigham Young University and the Church Unified School System. He presently serves as a member of the Church Board of Education and the Board of Trustees at Brigham Young University. For three years Elder and Sister Packer and their family were in New England where Elder Packer served as President of the New England Mission. Elder Packer was born September 10, 1924, the tenth of eleven children of Ira W. and Emma Jensen Packer. He was born and reared in Brigham City, Utah. On July 27, 1947, he was married to Donna Smith in the Logan Temple. They are the parents of ten children. Elder Packer has long been a favorite of the youth of the Church. His inspiring addresses have acted as a beacon to aid many in their quest for the right way. He radiates spiritual strength and humility. Sister Packer has been a devoted helpmeet to Elder Packer, and their home is one of love and respect among family members.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V57_06_08_Poem_Sea_Leavreault.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that should be in a separate file",
+      "action": "trim_end",
+      "text": "—Eldoris Pauline Leavreault",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_09_GenFt_Editorial_Conferen.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The 140th Annual General Conference of the Church, April 4, 5, 6, 1970, was held in the great Tabernacle in Salt Lake City. Marking the 150th anniversary year of the First Vision to the Prophet Joseph Smith, the conference was significant in emphasizing the divinely directed continuity of leadership and authority and the great growth within the Church. In a Solemn Assembly on Monday, April 6th, President Joseph Fielding Smith was sustained as the tenth President of the Church of Jesus Christ of Latter-day Saints and as prophet, seer, and revelator.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_12_SpFt_Birthday_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Woman's Sphere content that should be in separate file",
+      "action": "trim_end",
+      "text": "May her birthday be one of contentment and rewarding memories.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_13_GenFt_Womans_Cannon.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Woman's Sphere Ramona W. Cannon Queen Elizabeth II of Great Britain and Senator Margaret Chase Smith of the United States have both placed on the Gallup Poll's list of the World's Ten Most Admired Women annually since the list was first published twenty-seven years ago. Fifteen hundred and eleven adult men and women chose the 1969 list. On the list of most admired women or the ten runners-up were such differing individuals as Mrs. Golda Meir, Madame Ghandi of India (both admired for the way they handle their difficult premierships), Mrs. Pat Nixon, Pauline Frederick, Mrs. Martin Luther King, Helen Hays, Pearl Buck, and Sylvia Porter. Most winners are outstanding for their humanitarianism. Beth Ryan, at the age of fifty-eight, left her Portland, Oregon, field of journalism and became for two years a staff writer on the English-language China Post, a newspaper with a present circulation of fifty thousand, in Taipei, Republic of China. The newspaper-oriented Huang Family started the China Post eighteen years ago, and today brilliant Nancy Huang is the publisher. Mrs. Ryan found some fabulous women in China.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V57_06_16_Fict_Jerusha_Todd.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous page",
+      "action": "prepend",
+      "text": "Amy watched from her distance behind the bedroom door, peeking out now and then with wide eyes to share the excitement in her far-off way. \"I brought her something,\" Lynn said, tak",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_19_SpFt_The_Buehner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple other articles that should be in separate files",
+      "action": "trim_end",
+      "text": "This was a simple but very cleverly executed display.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_20_GenFt_Honeymoon_Fox.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains water lily content instead of bridal shower content",
+      "action": "note",
+      "text": "This file appears to contain the wrong content - water lily information instead of honeymoon cafe bridal shower content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_06_24_GenFt_Sunflowers_Monet.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains jeweled fruit content instead of Sunflowers commentary",
+      "action": "note",
+      "text": "This file contains wrong content - jeweled fruit information instead of Sunflowers by Monet commentary",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V57_06_25_GenFt_Temple_Fletcher.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple other articles",
+      "action": "trim_end",
+      "text": "To \"see\" not just with the eyes but with the whole mind awake is truly a great gift.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Poem Why Poetry? by Margaret B. Jorgensen",
+      "expected_page": 476,
+      "status": "not_in_any_file",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several files have content bleeding issues where multiple articles are merged together. The Honeymoon Cafe and Sunflowers articles appear to have wrong content entirely. Some files start mid-sentence indicating page break issues in the OCR. The poem 'Why Poetry?' appears to be missing from the extracted files.",
+  "validated_corrections": [
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with cover information that should be in a separate file",
+      "action": "trim_start",
+      "text": "What a thrill it was to see the short story",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_02_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_end",
+      "description": "File ends with publication information that should be trimmed",
+      "action": "trim_end",
+      "text": "Judith Hohmann, Tainan, Taiwan 402",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_08_Poem_Sea_Leavreault.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains editorial content that should be in a separate file",
+      "action": "trim_end",
+      "text": "—Eldoris Pauline Leavreault",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_09_GenFt_Editorial_Conferen.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "The 140th Annual General Conference of the Church, April 4, 5, 6, 1970, was held in the great Tabernacle in Salt Lake City. Marking the 150th anniversary year of the First Vision to the Prophet Joseph Smith, the conference was significant in emphasizing the divinely directed continuity of leadership and authority and the great growth within the Church. In a Solemn Assembly on Monday, April 6th, President Joseph Fielding Smith was sustained as the tenth President of the Church of Jesus Christ of Latter-day Saints and as prophet, seer, and revelator.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_12_SpFt_Birthday_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains Woman's Sphere content that should be in separate file",
+      "action": "trim_end",
+      "text": "May her birthday be one of contentment and rewarding memories.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_13_GenFt_Womans_Cannon.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence without proper beginning",
+      "action": "prepend",
+      "text": "Woman's Sphere Ramona W. Cannon Queen Elizabeth II of Great Britain and Senator Margaret Chase Smith of the United States have both placed on the Gallup Poll's list of the World's Ten Most Admired Women annually since the list was first published twenty-seven years ago. Fifteen hundred and eleven adult men and women chose the 1969 list. On the list of most admired women or the ten runners-up were such differing individuals as Mrs. Golda Meir, Madame Ghandi of India (both admired for the way they handle their difficult premierships), Mrs. Pat Nixon, Pauline Frederick, Mrs. Martin Luther King, Helen Hays, Pearl Buck, and Sylvia Porter. Most winners are outstanding for their humanitarianism. Beth Ryan, at the age of fifty-eight, left her Portland, Oregon, field of journalism and became for two years a staff writer on the English-language China Post, a newspaper with a present circulation of fifty thousand, in Taipei, Republic of China. The newspaper-oriented Huang Family started the China Post eighteen years ago, and today brilliant Nancy Huang is the publisher. Mrs. Ryan found some fabulous women in China.",
+      "confidence": "high",
+      "validated": true,
+      "validation_note": "partial_match (4 words)"
+    },
+    {
+      "file": "V57_06_16_Fict_Jerusha_Todd.txt",
+      "issue_type": "mid_sentence_start",
+      "description": "File starts mid-sentence from previous page",
+      "action": "prepend",
+      "text": "Amy watched from her distance behind the bedroom door, peeking out now and then with wide eyes to share the excitement in her far-off way. \"I brought her something,\" Lynn said, tak",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_19_SpFt_The_Buehner.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple other articles that should be in separate files",
+      "action": "trim_end",
+      "text": "This was a simple but very cleverly executed display.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V57_06_25_GenFt_Temple_Fletcher.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains content from multiple other articles",
+      "action": "trim_end",
+      "text": "To \"see\" not just with the eyes but with the whole mind awake is truly a great gift.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

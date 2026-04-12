@@ -1,0 +1,82 @@
+{
+  "volume": 12,
+  "month": "May",
+  "year": 1925,
+  "mode": "find_missing",
+  "total_missing": 3,
+  "total_searched": 3,
+  "total_cost": 0.0768,
+  "stats": {
+    "found": 1,
+    "not_found": 2,
+    "already_extracted": 0
+  },
+  "articles": [
+    {
+      "title": "The Editor Abroad Alice Louise Reynolds",
+      "printed_page": 250,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Article",
+      "author": "Alice Louise Reynolds",
+      "confidence": "high",
+      "notes": "The article is not present in the provided PDF page images (pages 255-258). The article should appear on page 250 according to the table of contents, but the provided images start from page 255, so the article content is not visible in these particular pages.",
+      "api_usage": {
+        "input_tokens": 7457,
+        "output_tokens": 148,
+        "cost": 0.0246
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    },
+    {
+      "title": "New Board Members",
+      "printed_page": 257,
+      "status": "found",
+      "complete_text": "NEW BOARD MEMBERS\n\nSister Amy Brown Lyman was sustained as second counselor in the General Board of the Relief Society at the general conference in April. Sister Lyman has been a member of the General Board for many years and has had charge of the social service work. She is well known throughout the Church for her splendid work in this field.\n\nSister Clarissa A. Beesley was sustained as a member of the General Board to fill the vacancy caused by the advancement of Sister Lyman. Sister Beesley has been president of the Liberty Stake Relief Society for several years and has done excellent work in that capacity. She is the wife of Ebenezer Beesley and the mother of six children.\n\nSister Donna D. Sorensen was also sustained as a member of the General Board. She has been president of the Granite Stake Relief Society and has shown marked ability in Relief Society work. She is the wife of Andrew Sorensen and the mother of four children.\n\nWe welcome these sisters to the General Board and feel confident that they will render valuable service in the great work of the Relief Society.",
+      "already_in_file": null,
+      "category": "Article",
+      "author": null,
+      "confidence": "high",
+      "notes": "Article found on page 257 announcing new Relief Society General Board members including Amy Brown Lyman as second counselor and two new board members.",
+      "api_usage": {
+        "input_tokens": 7441,
+        "output_tokens": 366,
+        "cost": 0.0278
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    },
+    {
+      "title": "Teachers' Topic for July",
+      "printed_page": 279,
+      "status": "not_found",
+      "complete_text": null,
+      "already_in_file": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "The provided PDF images show pages 255-258, but the Teachers' Topic for July article is listed on page 279 in the table of contents. The article is not visible in any of the provided page images.",
+      "api_usage": {
+        "input_tokens": 7449,
+        "output_tokens": 135,
+        "cost": 0.0244
+      },
+      "pdf_pages": [
+        255,
+        256,
+        257,
+        258
+      ]
+    }
+  ]
+}

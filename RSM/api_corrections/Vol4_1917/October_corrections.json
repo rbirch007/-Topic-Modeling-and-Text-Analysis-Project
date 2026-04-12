@@ -1,0 +1,87 @@
+{
+  "volume": 4,
+  "month": "October",
+  "year": 1917,
+  "total_files_checked": 11,
+  "files_correct": [
+    "October_Vol4_03_Article_The_Magic_of_Song_Mrs._Parley_Nelson.txt",
+    "October_Vol4_04_Article_Our_Boys_in_France.txt",
+    "October_Vol4_05_Article_Somewhere_Annie_R._Roberts.txt",
+    "October_Vol4_07_Home_Science_Home_Science_Department_Janette_A._Hyde.txt",
+    "October_Vol4_08_Current_Topics_Current_Events_James_H._Anderson.txt",
+    "October_Vol4_09_Editorial_Editorial_Are_You_Conserving_Yourself.txt",
+    "October_Vol4_10_Article_Book_Review.txt",
+    "October_Vol4_11a_Guide_Lessons_LESSON_I_Theology_and_Testimony_First_Week_In_November_THE_N.txt",
+    "October_Vol4_11b_Guide_Lessons_LESSON_II_Work_and_Business_Second_Week_in_November.txt",
+    "October_Vol4_11c_Guide_Lessons_LESSON_III_Genealogy_and_Literature_Third_Week_in_November_C.txt",
+    "October_Vol4_11d_Guide_Lessons_LESSON_IV_Home_Economics_Fourth_Week_in_October_THE_FORMATIO.txt"
+  ],
+  "corrections": [
+    {
+      "file": "October_Vol4_01_Article_I_Ought_to_Know_Annie_D._Palmer.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the complete Conservation article which should be in a separate file",
+      "action": "trim_end",
+      "text": "For truth awaits my grasp on even.- hand.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol4_02_Frontispiece_The_Woman_with_the_Hoe_Frontispiece_Conservation_as_Practice.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from Conservation article, missing beginning",
+      "action": "prepend",
+      "text": "Conservation as Practiced by the Women of the Relief Society. While it is true that any organization or institution may accomplish marvelous results, such achievements will be the actual work of individuals who compose that body. We are hearing a great deal now about conservation  that word which spells closer economies, more rigid activity, and a keener application of preservative measures for home and national honor; so that it will be interesting to the readers of the Magazine to recall in some detail the labors in conservation undertaken and carried to successful issue by individual women on farms, in the wilderness, and in the confine s of the crowded city centers; as well as those greater endeavors of ward and stake Relief Societies,  not only such labors as have been called forth by the war, but those long carried on by this Society and its individual members in building homes and towns, beautifying them, and in conserving all the resources granted us by a beneficent heavenly Provider. The public press is full of glowing reports from this and that official concerning what Utah has done for this great war charity, and in that fine conservation movement. But we fail to find any credit given to the Relief Society through whose splendid and complete machinery of organized human effort, much of this war work has been undertaken. Men have subscribed money for the Liberty Loan, and our sons have enlisted and have entered the army at our country's call. We are glad to recognize and honor all these public-spirited men in their place and calling; so have most of the women of the state answered the call of the Red Cross and the State Food Conservation committee. But let us sift the facts somewhat. It is said by the best women's club authority that the club membership in the state amounts to about 3,000 women. Most of these, nearly all, are located in Salt Lake City 344 RELIEF SOCIETY MAGAZINE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol4_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence, missing beginning of Notes from the Field article",
+      "action": "prepend",
+      "text": "Notes from the Field. By Amy Brown Lyman, General Secretary. CONSERVATION. When it is taken into consideration that the women of the Relief Society are as a general rule the mothers of large families, that they clo practically all their own sewing and housework, and in many instances cook for farm hands, that they attend faithfully to their Relief Society duties, by administering to the sick and needy, and in addition attend regularly their weekly Society meetings where courses of study are pursued, that they take an active part in all public movements for civic betterment, it is gratifying as well as surprising that they have managed to go so extensively into war food production and conservation, and have found time to take up additional work for the Red Cross. It is very evident that they have learned to conserve time as well as food, and that they have wasted no effort during the last year. We only hope our members will not overdo, but conserve themselves as well as the food and material resources. North Sanpete. The North Sanpete stake has secure 1 and distributed a large number of bulletins and pamphlets on food conservation. The members are working individually as well as collectively to economize in all matters and to conserve large quantities of fruit and vegetables for the coming winter's use. South Sanpete. The Relief Society members of the Stirling ward made good use of a donation of 9 1/4 bushels of apples. These apples were quarts of jelly were made. This same ward has just finished 4 pealed and dried. Of the peelings and cores of the apple? 16 quilts for a needy family. Bannock Stake. The women of Bannock stake have for many years been successfully canning vegetables of all kinds. They have also dried for their own use large quantities of sweet corn. It has therefore required little or no effort to enlist their services in a general campaign for food preservation. Not all varieties of fruit can be grown in this locality and as a result of this, all that is grown is well cared for. Some of the women of this stake have been eminently successful in the canning of fish  salmon trout  which is most delicious and palatable. In some families this canned fish is taking the place of meat. RELIEF SOCIETY MAGAZINE. Deseret Stake. The women in Deseret stake have been very active in food production. Many of the wards have planted wheat and potatoes. At a recent meeting held in Deserel ward, it was noted that in the minutes of the previous meeting the women of the ward were invited to appear at the potato field on a certain day to weed the Relief Society potato patch. A great deal of the labor on the various wheat and potato patches has been done by these good women personally. One of the best looking wheat fields in Millard county is that of the Leamington Relief Society, a branch of 37 members.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "The Woman with the Hoe Frontispiece",
+      "expected_page": 0,
+      "status": "merged_with_another",
+      "merged_into": "October_Vol4_02_Frontispiece_The_Woman_with_the_Hoe_Frontispiece_Conservation_as_Practice.txt"
+    }
+  ],
+  "notes": "The main issue is that the Conservation article was split incorrectly - part of it appears at the end of the first file and the beginning is missing from the second file. The frontispiece appears to be merged with the Conservation article. The Notes from the Field article is also missing its beginning. Most other files are correctly extracted.",
+  "validated_corrections": [
+    {
+      "file": "October_Vol4_01_Article_I_Ought_to_Know_Annie_D._Palmer.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains the complete Conservation article which should be in a separate file",
+      "action": "trim_end",
+      "text": "For truth awaits my grasp on even.- hand.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol4_02_Frontispiece_The_Woman_with_the_Hoe_Frontispiece_Conservation_as_Practice.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence from Conservation article, missing beginning",
+      "action": "prepend",
+      "text": "Conservation as Practiced by the Women of the Relief Society. While it is true that any organization or institution may accomplish marvelous results, such achievements will be the actual work of individuals who compose that body. We are hearing a great deal now about conservation  that word which spells closer economies, more rigid activity, and a keener application of preservative measures for home and national honor; so that it will be interesting to the readers of the Magazine to recall in some detail the labors in conservation undertaken and carried to successful issue by individual women on farms, in the wilderness, and in the confine s of the crowded city centers; as well as those greater endeavors of ward and stake Relief Societies,  not only such labors as have been called forth by the war, but those long carried on by this Society and its individual members in building homes and towns, beautifying them, and in conserving all the resources granted us by a beneficent heavenly Provider. The public press is full of glowing reports from this and that official concerning what Utah has done for this great war charity, and in that fine conservation movement. But we fail to find any credit given to the Relief Society through whose splendid and complete machinery of organized human effort, much of this war work has been undertaken. Men have subscribed money for the Liberty Loan, and our sons have enlisted and have entered the army at our country's call. We are glad to recognize and honor all these public-spirited men in their place and calling; so have most of the women of the state answered the call of the Red Cross and the State Food Conservation committee. But let us sift the facts somewhat. It is said by the best women's club authority that the club membership in the state amounts to about 3,000 women. Most of these, nearly all, are located in Salt Lake City 344 RELIEF SOCIETY MAGAZINE.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "October_Vol4_06_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts mid-sentence, missing beginning of Notes from the Field article",
+      "action": "prepend",
+      "text": "Notes from the Field. By Amy Brown Lyman, General Secretary. CONSERVATION. When it is taken into consideration that the women of the Relief Society are as a general rule the mothers of large families, that they clo practically all their own sewing and housework, and in many instances cook for farm hands, that they attend faithfully to their Relief Society duties, by administering to the sick and needy, and in addition attend regularly their weekly Society meetings where courses of study are pursued, that they take an active part in all public movements for civic betterment, it is gratifying as well as surprising that they have managed to go so extensively into war food production and conservation, and have found time to take up additional work for the Red Cross. It is very evident that they have learned to conserve time as well as food, and that they have wasted no effort during the last year. We only hope our members will not overdo, but conserve themselves as well as the food and material resources. North Sanpete. The North Sanpete stake has secure 1 and distributed a large number of bulletins and pamphlets on food conservation. The members are working individually as well as collectively to economize in all matters and to conserve large quantities of fruit and vegetables for the coming winter's use. South Sanpete. The Relief Society members of the Stirling ward made good use of a donation of 9 1/4 bushels of apples. These apples were quarts of jelly were made. This same ward has just finished 4 pealed and dried. Of the peelings and cores of the apple? 16 quilts for a needy family. Bannock Stake. The women of Bannock stake have for many years been successfully canning vegetables of all kinds. They have also dried for their own use large quantities of sweet corn. It has therefore required little or no effort to enlist their services in a general campaign for food preservation. Not all varieties of fruit can be grown in this locality and as a result of this, all that is grown is well cared for. Some of the women of this stake have been eminently successful in the canning of fish  salmon trout  which is most delicious and palatable. In some families this canned fish is taking the place of meat. RELIEF SOCIETY MAGAZINE. Deseret Stake. The women in Deseret stake have been very active in food production. Many of the wards have planted wheat and potatoes. At a recent meeting held in Deserel ward, it was noted that in the minutes of the previous meeting the women of the ward were invited to appear at the potato field on a certain day to weed the Relief Society potato patch. A great deal of the labor on the various wheat and potato patches has been done by these good women personally. One of the best looking wheat fields in Millard county is that of the Leamington Relief Society, a branch of 37 members.",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

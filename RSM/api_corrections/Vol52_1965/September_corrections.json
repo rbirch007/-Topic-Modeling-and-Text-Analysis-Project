@@ -1,0 +1,209 @@
+{
+  "volume": 52,
+  "month": "September",
+  "year": 1965,
+  "total_files_checked": 30,
+  "files_correct": [
+    "V52_09_03_Poem_The_Greenwood.txt",
+    "V52_09_05_Poem_Shared_Fairbairn.txt",
+    "V52_09_11_Poem_From_a_Ames..txt",
+    "V52_09_13_Poem_Creek_Jacobson.txt",
+    "V52_09_18_Poem_Four-_Hill.txt",
+    "V52_09_27_Poem_The_Olsen.txt",
+    "V52_09_30_Poem_French_Krambule.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V52_09_01_SpFt_A_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues into next article (Repentance) without proper ending",
+      "action": "trim_end",
+      "text": "We are grateful to President McKay for his tender, loving watchcare over the sisters of the Church 645",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_02_SpFt_Repentance_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains decorative elements and partial text from previous article at beginning",
+      "action": "trim_start",
+      "text": "Principle of repentance SEPTEMBER 1965",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_04_SpFt_The_Anderson.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears to have OCR corruption in middle section with garbled text",
+      "action": "note",
+      "text": "OCR corruption present in middle section starting around 'to keep hey grades' - text becomes largely unreadable",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_09_06_Fict_A_Dress_Yost.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues beyond its natural ending into next content",
+      "action": "trim_end",
+      "text": "And in my heart I was thanking my Heavenly Father for giving me such a wonderful mother, and giving us all three Valentine dresses at once. 659",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_09_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains extensive list of names that appears to be from a different section",
+      "action": "trim_end",
+      "text": "There is no loneliness, no aloneness in the kingdom of God—every one will belong forever.\n\n—M. C. S.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_10_GenFt_In_Widtsoe.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of next article about schoolroom window",
+      "action": "trim_end",
+      "text": "The General Board of Relief Society extends sympathy to the two daughters of Sister Widtsoe, Mrs. Ann W. Wallace and Mrs. Eudora W. Durham, to their families, and to the wide circle of friends who have known and loved Leah D. Widtsoe.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_12_GenFt_Notes_Available.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains wrong content - appears to be continuation of Widtsoe memorial rather than Notes to Field",
+      "action": "replace_content",
+      "text": "Content should be about Record with Commentary for Literature Lessons Available - current content is from Widtsoe memorial",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V52_09_16_The Home_Swedish_Tangren.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains only garbled text/symbols, not the Swedish Weaving article",
+      "action": "note",
+      "text": "File contains only corrupted symbols and partial text fragments - article content missing",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_09_17_The Home_Make_a_Williams.txt",
+      "issue_type": "missing_text",
+      "description": "Article appears incomplete - ends abruptly without full instructions",
+      "action": "note",
+      "text": "Article ends mid-instruction without completing the drum-making directions",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_09_20_The Home_Pearl_Department.txt",
+      "issue_type": "wrong_content",
+      "description": "Filename suggests this should be Pearl Turley Frost article but title shows 'Lesson Department'",
+      "action": "note",
+      "text": "Content appears correct for Pearl Turley Frost but filename suggests confusion with Lesson Department",
+      "confidence": "medium",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_09_28_Poem_Autumn_Taylor.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains list of names rather than the Autumn poem by Celestia J. Taylor",
+      "action": "note",
+      "text": "File contains names list instead of expected poem content",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V52_09_29_Poem_Give_Me_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of next article about dressmaking",
+      "action": "trim_end",
+      "text": "Their captive beauty treasured lies Where love belongs. 654",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "From Near and Far",
+      "expected_page": 642,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Birthday Congratulations",
+      "expected_page": 720,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Shadowless Interval Dorothy J. Roberts",
+      "expected_page": 641,
+      "status": "not_in_any_file",
+      "merged_into": null
+    },
+    {
+      "title": "Autumn, by Celestia J. Taylor",
+      "expected_page": 651,
+      "status": "ocr_gap",
+      "merged_into": null
+    }
+  ],
+  "notes": "Several articles show significant OCR corruption or missing content. The Swedish Weaving article is completely corrupted. Multiple articles have content bleeding between them. Some poetry pieces are missing or contain wrong content. The extraction quality varies significantly across different sections of the magazine.",
+  "validated_corrections": [
+    {
+      "file": "V52_09_01_SpFt_A_McKay.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues into next article (Repentance) without proper ending",
+      "action": "trim_end",
+      "text": "We are grateful to President McKay for his tender, loving watchcare over the sisters of the Church 645",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_02_SpFt_Repentance_Taylor.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains decorative elements and partial text from previous article at beginning",
+      "action": "trim_start",
+      "text": "Principle of repentance SEPTEMBER 1965",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_06_Fict_A_Dress_Yost.txt",
+      "issue_type": "bleed_end",
+      "description": "Article continues beyond its natural ending into next content",
+      "action": "trim_end",
+      "text": "And in my heart I was thanking my Heavenly Father for giving me such a wonderful mother, and giving us all three Valentine dresses at once. 659",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_09_GenFt_Editorial_Sharp.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains extensive list of names that appears to be from a different section",
+      "action": "trim_end",
+      "text": "There is no loneliness, no aloneness in the kingdom of God—every one will belong forever.\n\n—M. C. S.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_10_GenFt_In_Widtsoe.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of next article about schoolroom window",
+      "action": "trim_end",
+      "text": "The General Board of Relief Society extends sympathy to the two daughters of Sister Widtsoe, Mrs. Ann W. Wallace and Mrs. Eudora W. Durham, to their families, and to the wide circle of friends who have known and loved Leah D. Widtsoe.",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V52_09_29_Poem_Give_Me_Coles.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains beginning of next article about dressmaking",
+      "action": "trim_end",
+      "text": "Their captive beauty treasured lies Where love belongs. 654",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": []
+}

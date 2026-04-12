@@ -1,0 +1,47 @@
+{
+  "volume": 9,
+  "month": "August",
+  "year": 1922,
+  "timestamp": "20260315_120949",
+  "dry_run": false,
+  "applied": 5,
+  "skipped": 1,
+  "failed": 0,
+  "entries": [
+    {
+      "file": "August_Vol9_01_Article_A_Tribute_to_Sister_Susa_Y._Gates_Ruth_May_Fox.txt",
+      "action": "replace_content",
+      "result": "SKIP: Needs manual review (use --include-unvalidated to apply)"
+    },
+    {
+      "file": "August_Vol9_02_Editorial_EDITORIAL_Resignation_of_Mrs._Susa_Young_Gates.txt",
+      "action": "trim_start",
+      "result": "APPLIED trim_start (0 chars removed)"
+    },
+    {
+      "file": "August_Vol9_09_Article_The_Relief_Society_Magazine_Mrs._Christine_Stacey.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (2028 chars removed)"
+    },
+    {
+      "file": "August_Vol9_10_Article_Summer_Menus_Jeanette_A._Hyde.txt",
+      "action": "prepend",
+      "result": "APPLIED prepend (2026 chars added)"
+    },
+    {
+      "file": "August_Vol9_16_Article_Your_Services_to_God_and_Man_Sarah_Deady_Tomsik.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (3790 chars removed)"
+    },
+    {
+      "file": "August_Vol9_17b_Guide_Lessons_Guide_Lessons_for_October_-_Lesson_II_-_Work_and_Business.txt",
+      "action": "note",
+      "result": "INFO: File only contains header text, missing actual lesson content"
+    },
+    {
+      "file": "August_Vol9_18_Article_God_Bless_My_Stupid_Soul_Mary_Foster_Gibbs.txt",
+      "action": "trim_end",
+      "result": "APPLIED trim_end (5217 chars removed)"
+    }
+  ]
+}

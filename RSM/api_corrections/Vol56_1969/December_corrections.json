@@ -1,0 +1,182 @@
+{
+  "volume": 56,
+  "month": "December",
+  "year": 1969,
+  "total_files_checked": 35,
+  "files_correct": [
+    "V56_12_04_Poem_Inventory_Gabbott.txt",
+    "V56_12_10_GenFt_Singing_Radio.txt",
+    "V56_12_16_GenFt_Christmas.txt",
+    "V56_12_17_GenFt_Celebrating_Bergma.txt",
+    "V56_12_19_GenFt_Wreaths_Season.txt",
+    "V56_12_21_GenFt_Refinished_New.txt",
+    "V56_12_22_GenFt_Working_Alvord.txt",
+    "V56_12_27_Poem_Poetic_Jorgensen.txt",
+    "V56_12_33_Poem_Communication_Roth.txt"
+  ],
+  "corrections": [
+    {
+      "file": "V56_12_01_Fict_Heart_Chapter.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains Christmas Lullaby poem instead of Heart Room for Home Chapter 7",
+      "action": "replace_content",
+      "text": "Chapter 7 @ No man likes to antagonize his employer, but Kim was in a cold rage at Mr. Shelton's coming to his home and offering to buy Kim's father's beloved family homestead in Utah.",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_12_02_Poem_North.txt",
+      "issue_type": "wrong_content",
+      "description": "File contains subscription information instead of a poem",
+      "action": "note",
+      "text": "This appears to be subscription/publication information, not a poem. May need to be reclassified as miscellaneous content.",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_12_03_Poem_Christmas_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains cover/publication information after the poem",
+      "action": "trim_end",
+      "text": "Betty W. Madsen - OK ON man. Lorie Cover:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_12_05_SpFt_Service_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from Relief Society Conference article",
+      "action": "trim_start",
+      "text": "ERM President Hugh B. Brown Of the First Presidency",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_12_06_Poem_A_Snowy_Jones.txt",
+      "issue_type": "missing_text",
+      "description": "File is too short and marked as needing re-extraction",
+      "action": "replace_content",
+      "text": "A SNOWY MORNING The snow sneaked in on us last night On downy, padded feet. So still it is as flakes float down All muffled in the street. The cars creep past like shrouded ghosts. No children shout aloud. The sky above is quiet, too; One massive, great gray cloud. How peaceful and serene earth lies Under its coverlet of white. That softly, silently drifted down During the tranquil night. Lucy W. Jones",
+      "confidence": "high",
+      "validated": "manual_review"
+    },
+    {
+      "file": "V56_12_07_SpFt_Elder.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from previous article about Mabel Jones Gabbott",
+      "action": "trim_start",
+      "text": "® Elder Marvin J. Ashton, for- 'mer first assistant in the YMMIA general superintendency",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_12_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with publication information instead of From Near and Far content",
+      "action": "trim_start",
+      "text": "I want to thank you for the wonderful Magazine",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_12_13_Fict_Mama_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Heart Room for Home instead of Mama and the Magic Bag",
+      "action": "trim_start",
+      "text": "@ The howling wind made the tall old house rock and creak.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_12_28_GenFt_Spiritual_Doxey.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains Heart Room for Home content instead of Spiritual Living lesson",
+      "action": "note",
+      "text": "File contains wrong content - needs complete re-extraction from OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    },
+    {
+      "file": "V56_12_29_GenFt_Visiting_Smith.txt",
+      "issue_type": "wrong_content",
+      "description": "Contains Heart Room for Home content instead of Visiting Teacher Message",
+      "action": "note",
+      "text": "File contains wrong content - needs complete re-extraction from OCR",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [
+    {
+      "title": "Service Hugh B. Brown",
+      "expected_page": 884,
+      "status": "merged_with_another",
+      "merged_into": "V56_12_05_SpFt_Service_Brown.txt"
+    },
+    {
+      "title": "Homemaking lesson",
+      "expected_page": 945,
+      "status": "not_in_any_file"
+    },
+    {
+      "title": "Cultural Refinement lesson",
+      "expected_page": 952,
+      "status": "merged_with_another",
+      "merged_into": "V56_12_32_GenFt_Social_Christensen.txt"
+    }
+  ],
+  "notes": "Several files contain wrong content entirely, particularly lesson department files that contain fiction content instead. Multiple files have content bleeding from adjacent articles. The OCR quality appears good overall but article boundaries were not properly identified during extraction.",
+  "validated_corrections": [
+    {
+      "file": "V56_12_03_Poem_Christmas_Madsen.txt",
+      "issue_type": "bleed_end",
+      "description": "Contains cover/publication information after the poem",
+      "action": "trim_end",
+      "text": "Betty W. Madsen - OK ON man. Lorie Cover:",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_12_07_SpFt_Elder.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from previous article about Mabel Jones Gabbott",
+      "action": "trim_start",
+      "text": "® Elder Marvin J. Ashton, for- 'mer first assistant in the YMMIA general superintendency",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "V56_12_08_GenFt_From_Near_and_Far.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with publication information instead of From Near and Far content",
+      "action": "trim_start",
+      "text": "I want to thank you for the wonderful Magazine",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "V56_12_05_SpFt_Service_Brown.txt",
+      "issue_type": "bleed_start",
+      "description": "Starts with content from Relief Society Conference article",
+      "action": "trim_start",
+      "text": "ERM President Hugh B. Brown Of the First Presidency",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "V56_12_13_Fict_Mama_Smith.txt",
+      "issue_type": "bleed_start",
+      "description": "Contains content from Heart Room for Home instead of Mama and the Magic Bag",
+      "action": "trim_start",
+      "text": "@ The howling wind made the tall old house rock and creak.",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

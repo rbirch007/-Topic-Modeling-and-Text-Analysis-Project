@@ -1,0 +1,45 @@
+{
+  "volume": 5,
+  "month": "February",
+  "year": 1918,
+  "mode": "fix_short",
+  "total_short": 2,
+  "total_cost": 0.0217,
+  "stats": {
+    "truncated": 0,
+    "complete": 1,
+    "delete": 0,
+    "not_found": 1,
+    "content_filtered": 0,
+    "parse_error": 0
+  },
+  "files": [
+    {
+      "source_file": "February_Vol5_15_Editorial_Editorial_O_War,_Where_is_Our_Fear_of_Thee.txt",
+      "status": "not_found",
+      "notes": "Could not locate in PDF"
+    },
+    {
+      "source_file": "February_Vol5_16b_Guide_Lessons_Lesson_II_-_Work_and_Business.txt",
+      "status": "complete",
+      "current_chars": 111,
+      "complete_text": null,
+      "title": null,
+      "category": "Guide_Lessons",
+      "author": null,
+      "confidence": "high",
+      "notes": "This file contains only lesson headers/titles that appear at the bottom of page 50 and top of page 51. These are just section dividers between lessons, not actual lesson content. The actual Lesson III content about 'Genealogy and Literature' begins below these headers on page 51.",
+      "api_usage": {
+        "input_tokens": 6391,
+        "output_tokens": 171,
+        "cost": 0.0217
+      },
+      "pdf_pages": [
+        53,
+        54,
+        55,
+        56
+      ]
+    }
+  ]
+}

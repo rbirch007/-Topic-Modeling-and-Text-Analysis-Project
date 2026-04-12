@@ -1,0 +1,446 @@
+{
+  "volume": 14,
+  "month": "June",
+  "year": 1927,
+  "total": 16,
+  "ok": 8,
+  "flagged": 8,
+  "empty": 0,
+  "records": [
+    {
+      "file": "June_Vol14_00_BOARD.txt",
+      "body_len": 1148,
+      "article_words": 96,
+      "words_in_ocr": 80,
+      "pct_in_ocr": 0.8333,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "granite",
+        "hostess",
+        "hotel",
+        "kindly",
+        "musical",
+        "neral",
+        "official",
+        "properly",
+        "reception",
+        "roll"
+      ]
+    },
+    {
+      "file": "June_Vol14_00_CONTENTS.txt",
+      "body_len": 519,
+      "article_words": 45,
+      "words_in_ocr": 43,
+      "pct_in_ocr": 0.9556,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "prodigal",
+        "sunset"
+      ]
+    },
+    {
+      "file": "June_Vol14_00_Misc.txt",
+      "body_len": 10996,
+      "article_words": 690,
+      "words_in_ocr": 620,
+      "pct_in_ocr": 0.8986,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "appointment",
+        "approved",
+        "attachments",
+        "bride",
+        "carat",
+        "carded",
+        "cleaner",
+        "cleanliness"
+      ]
+    },
+    {
+      "file": "June_Vol14_01_Frontispiece_Portrait_of_Josephine_Smith_Frontispiece.txt",
+      "body_len": 263,
+      "article_words": 25,
+      "words_in_ocr": 19,
+      "pct_in_ocr": 0.76,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "fielding",
+        "hyrum",
+        "louie",
+        "patriarch",
+        "unveiled",
+        "witnesses"
+      ]
+    },
+    {
+      "file": "June_Vol14_02_Article_Sunset_Josephine_Spencer.txt",
+      "body_len": 546,
+      "article_words": 68,
+      "words_in_ocr": 45,
+      "pct_in_ocr": 0.6618,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(66%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "amber",
+        "blushed",
+        "brow",
+        "cloud",
+        "coldly",
+        "crimson",
+        "dusky",
+        "fading",
+        "faint",
+        "fold"
+      ]
+    },
+    {
+      "file": "June_Vol14_03_Article_Relief_Society_Conference.txt",
+      "body_len": 1127,
+      "article_words": 98,
+      "words_in_ocr": 71,
+      "pct_in_ocr": 0.7245,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "aird",
+        "anderson",
+        "anthem",
+        "brewerton",
+        "burnham",
+        "cello",
+        "climax",
+        "contralto",
+        "duet",
+        "eva"
+      ]
+    },
+    {
+      "file": "June_Vol14_04_Article_Officers'_Meeting,_Morning_Session.txt",
+      "body_len": 5952,
+      "article_words": 359,
+      "words_in_ocr": 288,
+      "pct_in_ocr": 0.8022,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "accounting",
+        "advisability",
+        "african",
+        "answering",
+        "backward",
+        "ballif",
+        "belong",
+        "bookkeeping",
+        "brunt",
+        "burdens"
+      ]
+    },
+    {
+      "file": "June_Vol14_05_Article_Work_and_Business_Meeting.txt",
+      "body_len": 26205,
+      "article_words": 1025,
+      "words_in_ocr": 695,
+      "pct_in_ocr": 0.678,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(68%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "absence",
+        "absent",
+        "accessories",
+        "accomplishments",
+        "accorded",
+        "accounts",
+        "addressed",
+        "advisable",
+        "advise",
+        "agencies"
+      ]
+    },
+    {
+      "file": "June_Vol14_06a_Article_Officers_Meeting_Afternoon_Session_-_Social_Service.txt",
+      "body_len": 6325,
+      "article_words": 386,
+      "words_in_ocr": 237,
+      "pct_in_ocr": 0.614,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(61%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "abilities",
+        "accord",
+        "acquire",
+        "adjust",
+        "adjustment",
+        "adjustments",
+        "adult",
+        "affect",
+        "aim",
+        "airplane"
+      ]
+    },
+    {
+      "file": "June_Vol14_06b_Article_Social_Service.txt",
+      "body_len": 16245,
+      "article_words": 706,
+      "words_in_ocr": 442,
+      "pct_in_ocr": 0.6261,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(63%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "abuse",
+        "accomplish",
+        "additional",
+        "adjust",
+        "adjusted",
+        "adjustments",
+        "adjusts",
+        "admitting",
+        "affinity",
+        "aim"
+      ]
+    },
+    {
+      "file": "June_Vol14_06c_Article_Theology.txt",
+      "body_len": 9605,
+      "article_words": 483,
+      "words_in_ocr": 339,
+      "pct_in_ocr": 0.7019,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": [
+        "access",
+        "addition",
+        "aim",
+        "aims",
+        "allotted",
+        "amazed",
+        "answering",
+        "appliances",
+        "applied",
+        "arizona"
+      ]
+    },
+    {
+      "file": "June_Vol14_06d_Article_Literature.txt",
+      "body_len": 4528,
+      "article_words": 377,
+      "words_in_ocr": 255,
+      "pct_in_ocr": 0.6764,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(68%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "ada",
+        "afar",
+        "arch",
+        "audience",
+        "autumn",
+        "awed",
+        "beauties",
+        "bloom",
+        "bonnie",
+        "braes"
+      ]
+    },
+    {
+      "file": "June_Vol14_06e_Article_Edgar_Lee_Masters.txt",
+      "body_len": 14605,
+      "article_words": 896,
+      "words_in_ocr": 508,
+      "pct_in_ocr": 0.567,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(57%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "abandoned",
+        "admirable",
+        "admire",
+        "admitted",
+        "affirm",
+        "afraid",
+        "alleged",
+        "alta",
+        "angela",
+        "anne"
+      ]
+    },
+    {
+      "file": "June_Vol14_07_Article_General_Session,_Morning_Meeting.txt",
+      "body_len": 38132,
+      "article_words": 1467,
+      "words_in_ocr": 869,
+      "pct_in_ocr": 0.5924,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "LOW_OCR_MATCH(59%)"
+      ],
+      "is_special": false,
+      "remediation": "api_fix",
+      "sample_not_in_ocr": [
+        "absence",
+        "access",
+        "acquired",
+        "adds",
+        "adults",
+        "advancing",
+        "advantages",
+        "aesthetic",
+        "affair",
+        "affords"
+      ]
+    },
+    {
+      "file": "June_Vol14_08_Article_General_Session,_Afternoon_Meeting.txt",
+      "body_len": 14856,
+      "article_words": 700,
+      "words_in_ocr": 530,
+      "pct_in_ocr": 0.7571,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "abiding",
+        "abreast",
+        "absent",
+        "accomplish",
+        "accomplishedthrough",
+        "acknowledge",
+        "acquiescing",
+        "administration",
+        "advise",
+        "anytime"
+      ]
+    },
+    {
+      "file": "June_Vol14_09_Poem_My_Prodigal_Lucy_Wright_Snow.txt",
+      "body_len": 1258,
+      "article_words": 128,
+      "words_in_ocr": 105,
+      "pct_in_ocr": 0.8203,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "anguish",
+        "beyond",
+        "blame",
+        "burn",
+        "dreamed",
+        "forgive",
+        "grief",
+        "hopeless",
+        "nights",
+        "paths"
+      ]
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol14_No6_June_1927.txt",
+    "ocr_chars": 126887,
+    "ocr_unique_words": 4290,
+    "contents_xref": {
+      "entries_in_contents": 4,
+      "matched": 4,
+      "match_details": [
+        {
+          "title": "Portrait of Josephine Smith Frontispiece",
+          "page": null,
+          "file": "June_Vol14_01_Frontispiece_Portrait_of_Josephine_Smith_Frontispiece.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Sunset Josephine Spencer",
+          "page": 261,
+          "file": "June_Vol14_02_Article_Sunset_Josephine_Spencer.txt",
+          "score": 1.0
+        },
+        {
+          "title": "Officers' Meeting, Afternoon Session",
+          "page": 275,
+          "file": "June_Vol14_04_Article_Officers'_Meeting,_Morning_Session.txt",
+          "score": 1.0
+        },
+        {
+          "title": "My Prodigal Lucy Wright Snow",
+          "page": 313,
+          "file": "June_Vol14_09_Poem_My_Prodigal_Lucy_Wright_Snow.txt",
+          "score": 1.0
+        }
+      ],
+      "missing": [],
+      "extra_files": [
+        "June_Vol14_03_Article_Relief_Society_Conference.txt",
+        "June_Vol14_05_Article_Work_and_Business_Meeting.txt",
+        "June_Vol14_06a_Article_Officers_Meeting_Afternoon_Session_-_Social_Service.txt",
+        "June_Vol14_06b_Article_Social_Service.txt",
+        "June_Vol14_06c_Article_Theology.txt",
+        "June_Vol14_06d_Article_Literature.txt",
+        "June_Vol14_06e_Article_Edgar_Lee_Masters.txt",
+        "June_Vol14_07_Article_General_Session,_Morning_Meeting.txt",
+        "June_Vol14_08_Article_General_Session,_Afternoon_Meeting.txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "volume": 9,
+  "month": "February",
+  "year": 1922,
+  "total_files_checked": 18,
+  "files_correct": [
+    "February_Vol9_02_Frontispiece_President_Charles_W._Penrose_Frontispiece.txt",
+    "February_Vol9_03_Article_President_Charles_W._Penrose_Susa_Young_Gates.txt",
+    "February_Vol9_04_Article_Views_of_Jerusalem_Charles_W._Penrose.txt",
+    "February_Vol9_05_Article_Who_is_my_Loved_One_Kate_Thomas.txt",
+    "February_Vol9_06_Article_Gambling_for_the_Glory_of_God_Milton_Bennion.txt",
+    "February_Vol9_07_Article_Maternity_Bill_Passed.txt",
+    "February_Vol9_08_Article_William_Fowler.txt",
+    "February_Vol9_09_Article_A_Prayer_of_Gratitude_Matilda_K._Galloway.txt",
+    "February_Vol9_10_Article_Bubbles_and_Troubles_Ruth_Moench_Bell.txt",
+    "February_Vol9_11_Article_The_Tate_Family_Margueritte_Cregar_Lund.txt",
+    "February_Vol9_12_Article_World's_Destiny_in_Hands_of_U._S..txt",
+    "February_Vol9_13_Article_Suggestive_Program_Lucy_May_Green.txt",
+    "February_Vol9_15_Article_The_General_Procession_James_H._Anderson.txt",
+    "February_Vol9_16_Editorial_Editorial_Jealousy.txt",
+    "February_Vol9_17a_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_I_-_Theology_and_Testimony.txt",
+    "February_Vol9_17c_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_III_-_Literature.txt",
+    "February_Vol9_17d_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_IV_-_Social_Service.txt"
+  ],
+  "corrections": [
+    {
+      "file": "February_Vol9_01_Article_Aunt_Em's_Birthday_Ruth_May_Fox.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents instead of the actual article",
+      "action": "trim_start",
+      "text": "Aunt Em's Birthday Ruth May Fox The season is the same as of yore,",
+      "confidence": "high",
+      "validated": true
+    },
+    {
+      "file": "February_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with just 'NOTES' instead of proper article beginning",
+      "action": "trim_start",
+      "text": "Notes/from the Field ' 7 By Amy Brown Lyman",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    },
+    {
+      "file": "February_Vol9_17b_Guide_Lessons_Guide_Lessons_for_April_-_Lesson_II_-_Work_and_Business.txt",
+      "issue_type": "missing_text",
+      "description": "File is incomplete - only contains lesson header and beginning of next lesson",
+      "action": "note",
+      "text": "This lesson appears to be missing from the OCR or was not properly extracted",
+      "confidence": "high",
+      "validated": "info_only"
+    }
+  ],
+  "missing_articles": [],
+  "notes": "Most files are correctly extracted. The main issues are: 1) The first article file contains table of contents material that should be trimmed, 2) The Notes from Field file has an incomplete header, and 3) Lesson II appears to be missing content, likely due to OCR gaps or extraction issues.",
+  "validated_corrections": [
+    {
+      "file": "February_Vol9_01_Article_Aunt_Em's_Birthday_Ruth_May_Fox.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with table of contents instead of the actual article",
+      "action": "trim_start",
+      "text": "Aunt Em's Birthday Ruth May Fox The season is the same as of yore,",
+      "confidence": "high",
+      "validated": true
+    }
+  ],
+  "failed_validations": [
+    {
+      "file": "February_Vol9_14_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "issue_type": "bleed_start",
+      "description": "File starts with just 'NOTES' instead of proper article beginning",
+      "action": "trim_start",
+      "text": "Notes/from the Field ' 7 By Amy Brown Lyman",
+      "confidence": "high",
+      "validated": false,
+      "validation_note": "Trim target not found in file"
+    }
+  ]
+}

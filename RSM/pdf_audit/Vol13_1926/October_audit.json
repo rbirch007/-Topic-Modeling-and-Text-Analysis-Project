@@ -1,0 +1,263 @@
+{
+  "volume": 13,
+  "month": "October",
+  "year": 1926,
+  "total": 16,
+  "ok": 13,
+  "flagged": 3,
+  "empty": 0,
+  "records": [
+    {
+      "file": "October_Vol13_00_CONTENTS.txt",
+      "body_len": 735,
+      "article_words": 85,
+      "words_in_ocr": 85,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_00_Misc.txt",
+      "body_len": 3991,
+      "article_words": 335,
+      "words_in_ocr": 330,
+      "pct_in_ocr": 0.9851,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": true,
+      "remediation": null,
+      "sample_not_in_ocr": [
+        "ads",
+        "advertisers",
+        "directory",
+        "front",
+        "trailing"
+      ]
+    },
+    {
+      "file": "October_Vol13_02_Article_Aunt_Hannah_Sharp_and_the_Muddy_Mission_Ramona_Wilcox_Cannon.txt",
+      "body_len": 20769,
+      "article_words": 1224,
+      "words_in_ocr": 1224,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_03_Article_Money_Spending_and_its_Effect_on_Character_Effie_Warnick.txt",
+      "body_len": 18302,
+      "article_words": 953,
+      "words_in_ocr": 953,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(3))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_04_Article_Poetry_Josephine_Spencer.txt",
+      "body_len": 315,
+      "article_words": 37,
+      "words_in_ocr": 37,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_05_Editorial_Editorial—Ours.txt",
+      "body_len": 2679,
+      "article_words": 211,
+      "words_in_ocr": 211,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_06_Article_Dublin_Proud_of_His_Native_City.txt",
+      "body_len": 1159,
+      "article_words": 111,
+      "words_in_ocr": 111,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_07_Article_Neighbors.txt",
+      "body_len": 1648,
+      "article_words": 145,
+      "words_in_ocr": 145,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_08_Article_Sweden,_The_Land_of_the_Vikings_Clara_J_Fagergren.txt",
+      "body_len": 9424,
+      "article_words": 737,
+      "words_in_ocr": 737,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_09_Article_Protect_Milk_Supply_Neven_O_Betz.txt",
+      "body_len": 4210,
+      "article_words": 326,
+      "words_in_ocr": 326,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_10_Article_When_the_Clouds_are_Dark_Martha_Shepherd_Lippincott.txt",
+      "body_len": 460,
+      "article_words": 50,
+      "words_in_ocr": 50,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+      "body_len": 20606,
+      "article_words": 911,
+      "words_in_ocr": 911,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": true,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_12a_Lesson_Lesson_I_-_Theology_and_Testimony_-_The_Twelve_Apostles.txt",
+      "body_len": 11338,
+      "article_words": 524,
+      "words_in_ocr": 524,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(MULTI_LESSON(2))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_12b_Lesson_Lesson_II_-_Work_and_Business_-_Teachers_Topic_for_December.txt",
+      "body_len": 2641,
+      "article_words": 170,
+      "words_in_ocr": 170,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_12c_Lesson_Lesson_III_-_Literature_-_Sara_Teasdale.txt",
+      "body_len": 8029,
+      "article_words": 515,
+      "words_in_ocr": 515,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "FLAG",
+      "flags": [
+        "MERGED(CAPS_HEADERS(5))"
+      ],
+      "is_special": false,
+      "remediation": "re_extract",
+      "sample_not_in_ocr": []
+    },
+    {
+      "file": "October_Vol13_12d_Lesson_Lesson_VI_-_Social_Service_-_Intellectual_Problems.txt",
+      "body_len": 12385,
+      "article_words": 683,
+      "words_in_ocr": 683,
+      "pct_in_ocr": 1.0,
+      "first_phrase_in_ocr": false,
+      "status": "OK",
+      "flags": [],
+      "is_special": false,
+      "remediation": null,
+      "sample_not_in_ocr": []
+    }
+  ],
+  "meta": {
+    "ocr_file": "Vol13_No10_October_1926.txt",
+    "ocr_chars": 119565,
+    "ocr_unique_words": 4025,
+    "contents_xref": {
+      "entries_in_contents": 1,
+      "matched": 0,
+      "match_details": [],
+      "missing": [
+        {
+          "title": "\"The Southland With its Heat and its Color\" Frontispiece Judge Not Ruth May Fox 491 Aunt Hannah Sharp and the Muddy Mission Ramona Wilcox Cannon 493 Money Spending and its Effect on Character Effie Warnick 503 Poetry Josephine Spencer 509 Editorial—Ours 510 Dublin Proud of His Native City 511 Neighbors 512 Sweden, The Land of the Vikings Clara J. Fagergren 513 Protect Milk Supply Neven O. Betz 517 When the Clouds are Dark Martha Shepherd Lippincott 518 Notes from the Field Amy Brown Lyman 519 Lessons for December",
+          "page": 528
+        }
+      ],
+      "extra_files": [
+        "October_Vol13_02_Article_Aunt_Hannah_Sharp_and_the_Muddy_Mission_Ramona_Wilcox_Cannon.txt",
+        "October_Vol13_03_Article_Money_Spending_and_its_Effect_on_Character_Effie_Warnick.txt",
+        "October_Vol13_04_Article_Poetry_Josephine_Spencer.txt",
+        "October_Vol13_05_Editorial_Editorial—Ours.txt",
+        "October_Vol13_06_Article_Dublin_Proud_of_His_Native_City.txt",
+        "October_Vol13_07_Article_Neighbors.txt",
+        "October_Vol13_08_Article_Sweden,_The_Land_of_the_Vikings_Clara_J_Fagergren.txt",
+        "October_Vol13_09_Article_Protect_Milk_Supply_Neven_O_Betz.txt",
+        "October_Vol13_10_Article_When_the_Clouds_are_Dark_Martha_Shepherd_Lippincott.txt",
+        "October_Vol13_11_Notes_from_Field_Notes_from_the_Field_Amy_Brown_Lyman.txt",
+        "October_Vol13_12a_Lesson_Lesson_I_-_Theology_and_Testimony_-_The_Twelve_Apostles.txt",
+        "October_Vol13_12b_Lesson_Lesson_II_-_Work_and_Business_-_Teachers_Topic_for_December.txt",
+        "October_Vol13_12c_Lesson_Lesson_III_-_Literature_-_Sara_Teasdale.txt",
+        "October_Vol13_12d_Lesson_Lesson_VI_-_Social_Service_-_Intellectual_Problems.txt"
+      ]
+    }
+  }
+}

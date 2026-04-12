@@ -1,0 +1,38 @@
+{
+  "volume": 17,
+  "month": "July",
+  "year": 1930,
+  "mode": "retry_extract",
+  "total_failed": 1,
+  "total_cost": 0.0305,
+  "stats": {
+    "found": 0,
+    "not_found": 1,
+    "content_filtered": 0
+  },
+  "articles": [
+    {
+      "title": "Mary Birch Miller, a Gold Star Mother",
+      "status": "not_found",
+      "complete_text": null,
+      "category": "Article",
+      "author": "Cora Carver Richie",
+      "confidence": "high",
+      "notes": "Article is listed in table of contents on page 374, but the provided PDF images only show pages up to approximately 349. The target article pages are not included in the image set.",
+      "order": "b",
+      "pdf_pages": [
+        421,
+        422,
+        423,
+        424,
+        425
+      ],
+      "source_file": "July_Vol17_09_Article_Jubilee_Boxes_Annie_Wells_Cannon.txt",
+      "api_usage": {
+        "input_tokens": 8571,
+        "output_tokens": 321,
+        "cost": 0.0305
+      }
+    }
+  ]
+}

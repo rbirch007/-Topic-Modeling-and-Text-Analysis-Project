@@ -1,0 +1,38 @@
+{
+  "volume": 19,
+  "month": "December",
+  "year": 1932,
+  "timestamp": "20260316_210708",
+  "dry_run": false,
+  "retried": 2,
+  "created": 2,
+  "failed": 2,
+  "entries": [
+    {
+      "split": "a",
+      "title": "Dr. Romania B. Pratt Penrose",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "b",
+      "title": "Mantled Tree",
+      "result": "RETRY_FAILED: start_boundary still not found"
+    },
+    {
+      "split": "a",
+      "title": "Theology and Testimony - Authority to Act in the Name of God",
+      "new_file": "December_Vol19_20a_Lesson_Theology_and_Testimony_-_Authority_to_Act_in_the_Name_of_God.txt",
+      "chars": 13845,
+      "match_type": "exact",
+      "result": "RETRY_CREATED"
+    },
+    {
+      "split": "b",
+      "title": "Teachers' Topic - The Beatitudes",
+      "new_file": "December_Vol19_20b_Lesson_Teachers_Topic_-_The_Beatitudes.txt",
+      "chars": 3212,
+      "match_type": "normalized",
+      "result": "RETRY_CREATED"
+    }
+  ]
+}

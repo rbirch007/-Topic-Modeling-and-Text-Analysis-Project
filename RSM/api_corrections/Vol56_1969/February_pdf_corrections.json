@@ -1,0 +1,29 @@
+{
+  "volume": 56,
+  "month": "February",
+  "year": 1969,
+  "source": "pdf_verify",
+  "corrections": [
+    {
+      "file": "V56_02_03_Poem_Peace_Blanchard.txt",
+      "issue_type": "bleed_end",
+      "description": "Article contains content from Common Ground article that should be removed",
+      "action": "trim_end",
+      "text": "—Gay N. Blanchard",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": false,
+      "validation_note": "Trim target not found in article file"
+    },
+    {
+      "file": "V56_02_09_Poem_City_Larsen.txt",
+      "issue_type": "bleed_end",
+      "description": "File contains wrong content - has 'A Day for Diddle-Daddling' story instead of the 'City' poem by Katherine F. Larsen",
+      "action": "note",
+      "text": "The file content does not match the expected poem. It contains the wrong article entirely - 'A Day for Diddle-Daddling' by Alice Morrey Bailey instead of the poem 'City' by Katherine F. Larsen. The entire file content needs to be replaced with the correct poem.",
+      "confidence": "high",
+      "page_verified": true,
+      "validated": "info_only"
+    }
+  ]
+}
