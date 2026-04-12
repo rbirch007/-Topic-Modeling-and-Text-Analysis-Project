@@ -1,0 +1,558 @@
+---
+title: "STM Topic Modeling - Complete Clean Version"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# STM Topic Modeling - Complete Workflow
+
+All refinements included: metadata extraction from Vol10-1923/June structure, stopword removal, year removal, manual K selection, and thematic auto-labeling.
+
+---
+
+## 1. Load Packages
+
+```{r load-packages}
+library(stm)
+library(tidyverse)
+library(dplyr)
+library(stopwords)
+library(igraph)
+library(wordcloud)
+library(tidyr)       # For data tidying
+library(stringr)     # For string manipulation
+library(purrr)       # For map functions
+library(readr)       # For read_file and write_csv
+library(tibble)      # For tibble function
+
+
+set.seed(12345)
+cat("Packages loaded successfully!\n")
+
+set.seed(12345)
+cat("Packages loaded successfully!\n")
+```
+
+---
+
+## 2. Set Input and Output Paths
+
+```{r set-paths}
+# ============================================================================
+# SET INPUT AND OUTPUT PATHS
+# ============================================================================
+
+# Input folder (where your .txt files are)
+input_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/input"
+
+# Output folder (where results will be saved)
+output_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/output"
+
+# Create output directory if it doesn't exist
+if (!dir.exists(output_path)) {
+  dir.create(output_path, recursive = TRUE)
+  cat("✓ Created output directory\n")
+}
+
+cat("Paths configured:\n")
+cat("  Input: ", input_path, "\n")
+cat("  Output:", output_path, "\n\n")
+```
+
+---
+
+## 3. Import Files
+
+```{r import-files}
+cat("=" , rep("=", 70), "\n", sep = "")
+cat("FILE IMPORT\n")
+cat("=" , rep("=", 70), "\n\n", sep = "")
+
+# Get all .txt files recursively
+all_files <- list.files(path = input_path, full.names = TRUE, recursive = TRUE)
+file_paths <- all_files[grepl("\\.txt$", all_files, ignore.case = TRUE)]
+
+cat("Total .txt files found:", length(file_paths), "\n")
+
+if (length(file_paths) == 0) {
+  stop("No .txt files found! Check your folder path.")
+}
+
+cat("\nFirst 5 files:\n")
+for (i in 1:min(5, length(file_paths))) {
+  cat(i, ":", basename(file_paths[i]), "\n")
+}
+```
+
+---
+
+## 4. Sample or Use All Files
+
+```{r read-files}
+# ============================================================================
+# CHOOSE: SAMPLE OR ALL FILES
+# ============================================================================
+
+USE_SAMPLE <- FALSE  # Set to TRUE to sample, FALSE for all files
+sample_size <- 300
+
+if (USE_SAMPLE) {
+  set.seed(123)
+  sampled_paths <- sample(file_paths, size = sample_size)
+  cat("\nUsing", sample_size, "of", length(file_paths), "files (sampled)\n")
+} else {
+  sampled_paths <- file_paths
+  cat("\nUsing ALL", length(file_paths), "files\n")
+}
+
+cat("\nReading files...\n")
+
+raw_texts <- tibble(
+  filepath = sampled_paths,
+  filename = basename(sampled_paths),
+  text = map_chr(sampled_paths, ~read_file(.x))
+)
+
+cat("Successfully read", nrow(raw_texts), "files\n")
+```
+
+---
+
+## 5. Extract Metadata
+
+```{r extract-metadata}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("EXTRACTING METADATA\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+raw_texts <- raw_texts %>%
+  mutate(
+    volume_folder = str_extract(filepath, "Vol\\d+[-_]\\d{4}"),
+    volume_num = str_extract(volume_folder, "Vol\\d+"),
+    year_from_folder = as.numeric(str_extract(volume_folder, "\\d{4}$")),
+    month_from_folder = str_extract(filepath, "(?<=/)(January|February|March|April|May|June|July|August|September|October|November|December)(?=/)"),
+    month_from_filename = str_extract(filename, "^[A-Za-z]+"),
+    volume_from_filename = str_extract(filename, "Vol\\d+"),
+    year_from_filename = as.numeric(str_extract(filepath, "\\d{4}")),
+    month = ifelse(!is.na(month_from_folder), month_from_folder, month_from_filename),
+    volume = ifelse(!is.na(volume_num), volume_num, volume_from_filename),
+    year = ifelse(!is.na(year_from_folder), year_from_folder, year_from_filename),
+    doc_id = row_number(),
+    word_count = str_count(text, "\\S+")
+  )
+
+cat("Metadata extracted:\n\n")
+cat("Volumes:", paste(unique(na.omit(raw_texts$volume)), collapse = ", "), "\n")
+cat("Years:", paste(unique(na.omit(raw_texts$year)), collapse = ", "), "\n")
+cat("Months:", paste(unique(na.omit(raw_texts$month)), collapse = ", "), "\n\n")
+
+cat("Sample:\n")
+print(head(raw_texts %>% select(filename, volume, year, month, word_count), 10))
+
+cat("\n", rep("=", 70), "\n\n", sep = "")
+```
+
+---
+
+## 6. Text Cleaning with Stopword Removal
+
+```{r clean-with-stopwords}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TEXT CLEANING\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Stopwords
+standard_stopwords <- stopwords::stopwords("en", source = "snowball")
+
+custom_stopwords <- c(
+  "the", "of", "and", "in", "to", "a", "is", "that", "it", "for",
+  "as", "on", "with", "be", "was", "by", "are", "from", "or", "an",
+  "at", "this", "which", "have", "has", "had", "but", "not", "can",
+  "will", "been", "were", "their", "they", "we", "our", "would",
+  "there", "what", "so", "if", "who", "than", "may", "also",
+  "mrs", "mr", "miss", "dr", "ms",
+  "january", "february", "march", "april", "may", "june",
+  "july", "august", "september", "october", "november", "december",
+  "vol", "page", "number", "volume", "board", "officer", "general"
+)
+
+# Add years dynamically
+years_in_data <- unique(na.omit(raw_texts$year))
+years_as_words <- as.character(years_in_data)
+
+cat("Years found:", paste(years_as_words, collapse = ", "), "\n")
+cat("Adding as stopwords...\n\n")
+
+all_stopwords <- unique(c(standard_stopwords, custom_stopwords, years_as_words))
+
+cat("Total stopwords:", length(all_stopwords), "\n\n")
+
+# Clean text
+processed_texts <- raw_texts %>%
+  mutate(
+    text_clean = str_to_lower(text),
+    text_clean = str_remove_all(text_clean, "http\\S+"),
+    text_clean = str_remove_all(text_clean, "\\S+@\\S+"),
+    text_clean = str_remove_all(text_clean, "[[:punct:]]"),
+    text_clean = str_squish(text_clean),
+    words = str_split(text_clean, "\\s+"),
+    words_no_stop = map(words, ~.x[!.x %in% all_stopwords]),
+    words_final = map(words_no_stop, ~.x[nchar(.x) >= 3]),
+    text_final = map_chr(words_final, ~paste(.x, collapse = " ")),
+    final_word_count = str_count(text_final, "\\S+")
+  )
+
+cat("Cleaning stats:\n")
+cat("  Avg before:", round(mean(raw_texts$word_count)), "\n")
+cat("  Avg after:", round(mean(processed_texts$final_word_count)), "\n\n")
+
+processed_texts <- processed_texts %>%
+  filter(final_word_count >= 10)
+
+cat("Documents after filtering:", nrow(processed_texts), "\n\n")
+```
+
+---
+
+## 7. Prepare for STM
+
+```{r prepare-stm}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("PREPARING FOR STM\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+processed <- textProcessor(
+  documents = processed_texts$text_final,
+  metadata = processed_texts %>% select(doc_id, month, volume, year, filename),
+  lowercase = FALSE,
+  removestopwords = FALSE,
+  removenumbers = FALSE,
+  removepunctuation = FALSE,
+  stem = FALSE,
+  wordLengths = c(3, Inf),
+  sparselevel = 1,
+  language = "en",
+  verbose = TRUE
+)
+
+cat("\n")
+
+out <- prepDocuments(
+  documents = processed$documents,
+  vocab = processed$vocab,
+  meta = processed$meta,
+  lower.thresh = 1,
+  upper.thresh = Inf
+)
+
+docs <- out$documents
+vocab <- out$vocab
+meta <- out$meta
+
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("CORPUS READY\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+cat("Documents:", length(docs), "\n")
+cat("Vocabulary:", length(vocab), "\n\n")
+
+if (length(docs) == 0) stop("No documents remaining!")
+
+cat("Sample vocab:\n", paste(vocab[1:50], collapse = ", "), "\n\n")
+```
+
+---
+
+## 8. SET K MANUALLY
+
+```{r set-k}
+chosen_K <- 20  # CHANGE THIS
+
+cat("Chosen K =", chosen_K, "\n\n")
+```
+
+---
+
+## 9. Fit STM Model
+
+```{r fit-model, cache=TRUE}
+cat(rep("=", 70), "\n", sep = "")
+cat("FITTING MODEL K =", chosen_K, "\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+stm_model <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = chosen_K,
+  data = meta,
+  max.em.its = 75,
+  init.type = "Spectral",
+  seed = 12345,
+  verbose = TRUE
+)
+
+# Save to output folder
+model_file <- file.path(output_path, paste0("stm_model_K", chosen_K, ".rds"))
+saveRDS(stm_model, model_file)
+cat("\n✓ Model saved to:", model_file, "\n")
+```
+
+---
+
+## 10. Examine Topics
+
+```{r examine-topics}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TOP WORDS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+labelTopics(stm_model, n = 15)
+```
+
+---
+
+## 11. Auto-Generate Labels (Method 6: Specific)
+
+```{r create-labels-semantic}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("AUTO-GENERATING SPECIFIC LABELS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+create_specific_label <- function(topic_num, frex_words, prob_words) {
+  frex_text <- tolower(paste(frex_words, collapse = " "))
+  prob_text <- tolower(paste(prob_words, collapse = " "))
+  all_words <- paste(frex_text, prob_text)
+  
+  if (grepl("kingdom.*gospel|baptism.*eternal", frex_text)) {
+    label <- "Gospel Doctrine & Spiritual Kingdom"
+  } else if (grepl("passover|paschal|feast", frex_text)) {
+    label <- "Biblical Symbolism & Ancient Rituals"
+  } else if (grepl("nurse.*hospital|nursing.*training", frex_text)) {
+    label <- "Nursing Training & Hospital Work"
+  } else if (grepl("diet.*protein|nutrition|malnutrition", frex_text)) {
+    label <- "Nutrition & Dietary Science"
+  } else if (grepl("recipe|tbsp|boiling|oven", frex_text)) {
+    label <- "Recipes & Cooking Instructions"
+  } else if (grepl("housework|housekeeping|budget", frex_text)) {
+    label <- "Household Management & Budgeting"
+  } else if (grepl("moral.*parent|obedience.*spiritual", frex_text)) {
+    label <- "Moral Education & Character Development"
+  } else if (grepl("irving|tale|literature", frex_text)) {
+    label <- "American Literature (Washington Irving)"
+  } else if (grepl("radium.*curie|pasteur.*science", frex_text)) {
+    label <- "Scientific Biography & Discovery"
+  } else if (grepl("emigration.*journey|wagon.*pioneer", frex_text)) {
+    label <- "Pioneer Emigration & Journey Stories"
+  } else if (grepl("sisters.*presidency|organization.*grain", frex_text)) {
+    label <- "Relief Society Leadership & Organization"
+  } else if (grepl("stake.*ward|attendance.*conference", frex_text)) {
+    label <- "Stake & Ward Relief Society Reports"
+  } else if (grepl("suffrage.*vote|legislature", frex_text)) {
+    label <- "Women's Suffrage & Political Rights"
+  } else if (grepl("council.*international|convention", frex_text)) {
+    label <- "International Women's Councils"
+  } else if (grepl("entente.*allies|war.*troops", frex_text)) {
+    label <- "World War I Commentary & News"
+  } else if (grepl("tableau.*song|music.*hymn", frex_text)) {
+    label <- "Musical Programs & Performances"
+  } else if (grepl("^\\d+.*\\d+.*\\d+", frex_text)) {
+    label <- "Magazine Index & Page Numbers"
+  } else if (grepl("empey.*mclelland|board.*member", frex_text)) {
+    label <- "Board Member Directory"
+  } else if (grepl("merino.*cotton|bleached.*gauze", frex_text)) {
+    label <- "Garment & Product Advertisements"
+  } else if (grepl("jerry|walter|jimmy", frex_text) && grepl("said|little", prob_text)) {
+    label <- "Serialized Fiction & Stories"
+  } else if (grepl("abraham.*sarai|biblical", frex_text)) {
+    label <- "Biblical Narratives (Abraham)"
+  } else {
+    keywords <- paste(tools::toTitleCase(frex_words[1:3]), collapse= " ")
+    label <- keywords
+  }
+  
+  return(label)
+}
+
+all_top_words <- labelTopics(stm_model, n = 15)
+
+topic_labels <- sapply(1:chosen_K, function(i) {
+  frex_words <- all_top_words$frex[i, 1:10]
+  prob_words <- all_top_words$prob[i, 1:10]
+  specific_label <- create_specific_label(i, frex_words, prob_words)
+  paste0("Topic ", i, ": ", specific_label)
+})
+
+cat("Specific labels:\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+for (i in 1:chosen_K) {
+  cat(topic_labels[i], "\n")
+  cat("  FREX: ", paste(all_top_words$frex[i, 1:7], collapse = ", "), "\n")
+  cat("  PROB: ", paste(all_top_words$prob[i, 1:7], collapse = ", "), "\n\n")
+}
+
+# Export to output folder
+frex_for_export <- apply(all_top_words$frex, 1, function(x) paste(x, collapse = ", "))
+prob_for_export <- apply(all_top_words$prob, 1, function(x) paste(x, collapse = ", "))
+
+label_export <- tibble(
+  topic_num = 1:chosen_K,
+  auto_label = str_remove(topic_labels, "^Topic \\d+: "),
+  full_label = topic_labels,
+  frex_words = frex_for_export,
+  prob_words = prob_for_export,
+  manual_label = ""
+)
+
+labels_file <- file.path(output_path, paste0("topic_labels_K", chosen_K, ".csv"))
+write_csv(label_export, labels_file)
+cat("✓ Labels saved to:", labels_file, "\n\n")
+```
+
+---
+
+## 12. Find Examples
+
+```{r find-examples}
+topic_to_examine <- 1
+
+cat("Examples for", topic_labels[topic_to_examine], ":\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+thoughts <- findThoughts(stm_model, texts = processed_texts$text_final, topics = topic_to_examine, n = 3)
+
+for (i in 1:3) {
+  cat("Example", i, ":\n", substr(thoughts$docs[[1]][i], 1, 250), "...\n\n")
+}
+```
+
+---
+
+## 13. Visualizations
+
+### Topic Prevalence
+
+```{r plot-prevalence, fig.width=10, fig.height=6}
+plot(stm_model, 
+     type = "summary", 
+     n = min(10, chosen_K),
+     main = paste("Topic Prevalence (K =", chosen_K, ")"),
+     xlim = c(0, 0.3))
+```
+
+### Topic Correlation Network
+
+```{r plot-correlation, fig.width=10, fig.height=8}
+mod.out.corr <- topicCorr(stm_model)
+plot(mod.out.corr, main = "Topic Correlation Network")
+```
+
+### Word Cloud for Topic 1
+
+```{r wordcloud-1, fig.width=8, fig.height=6}
+cloud(stm_model, 
+      topic = 1,
+      scale = c(3, 0.5),
+      main = topic_labels[1])
+```
+
+### Create Word Clouds for All Topics
+
+```{r wordcloud-all, fig.width=8, fig.height=6, eval=FALSE}
+# Set eval=TRUE to generate word clouds for all topics
+for (i in 1:chosen_K) {
+  cloud(stm_model, 
+        topic = i,
+        scale = c(3, 0.5),
+        main = topic_labels[i])
+}
+```
+
+### Topic Quality
+
+```{r topic-quality, fig.width=8, fig.height=6}
+topicQuality(stm_model, documents = docs)
+```
+
+### Compare Two Topics
+
+```{r compare-topics, fig.width=10, fig.height=6}
+# Compare two topics
+plot(stm_model, 
+     type = "perspectives", 
+     topics = c(1, 5),
+     main = paste("Comparing", topic_labels[1], "vs", topic_labels[5]))
+```
+
+---
+
+---
+
+## 14. Export Results
+
+```{r export-results}
+# Document-topic proportions
+doc_topics <- make.dt(stm_model, meta = meta)
+doc_topics_full <- doc_topics %>%
+  left_join(processed_texts %>% select(doc_id, filename, volume, year, month), by = "doc_id")
+
+doc_file <- file.path(output_path, paste0("document_topics_K", chosen_K, ".csv"))
+write_csv(doc_topics_full, doc_file)
+
+# Top words
+top_words <- labelTopics(stm_model, n = 20)
+topic_words_df <- tibble(
+  topic = 1:chosen_K,
+  label = topic_labels,
+  top_prob = apply(top_words$prob, 1, function(x) paste(x, collapse = ", ")),
+  top_frex = apply(top_words$frex, 1, function(x) paste(x, collapse = ", "))
+)
+
+words_file <- file.path(output_path, paste0("topic_words_K", chosen_K, ".csv"))
+write_csv(topic_words_df, words_file)
+
+cat("Results exported!\n")
+cat("  -", doc_file, "\n")
+cat("  -", words_file, "\n")
+```
+
+---
+
+## 15. Save Session
+
+```{r save-session}
+session_file <- file.path(output_path, paste0("stm_session_K", chosen_K, ".RData"))
+save(stm_model, docs, vocab, meta, raw_texts, processed_texts, 
+     all_stopwords, topic_labels, file = session_file)
+
+cat("Session saved to:", session_file, "\n")
+cat("\nTo reload: load('", session_file, "')\n", sep = "")
+```
+
+---
+
+## Files Created
+
+All files are saved to: `C:/Users/birch/.../Topicmodel/output/`
+
+- `stm_model_K20.rds` - Fitted model
+- `topic_labels_K20.csv` - Labels with FREX/PROB words
+- `document_topics_K20.csv` - Document-topic proportions
+- `topic_words_K20.csv` - Top words per topic
+- `stm_session_K20.RData` - Complete session
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

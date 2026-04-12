@@ -1,0 +1,707 @@
+---
+title: "STM Visualizations & Regression Analysis"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6)
+```
+
+# STM Visualizations & Regression Guide
+
+This notebook demonstrates all major visualizations for STM topic modeling and explains how regression analysis helps you understand topic prevalence.
+
+---
+
+## Setup: Load Packages and Model
+
+```{r load-packages}
+library(stm)
+library(tidyverse)
+library(ggplot2)
+
+# Set seed for reproducibility
+set.seed(12345)
+
+# Load your saved model (adjust filename as needed)
+# stm_model <- readRDS("stm_model_K15.rds")
+# stm_model_cov <- readRDS("stm_model_cov_K15.rds")  # If you have covariates
+# docs <- readRDS("docs.rds")
+# vocab <- readRDS("vocab.rds")
+# meta <- readRDS("meta.rds")
+
+# For this demo, we'll assume you have these objects loaded
+```
+
+**Note:** Make sure you've already run the main workflow and have:
+- `stm_model` - your fitted STM model
+- `stm_model_cov` - model with covariates (optional, for regression)
+- `docs` - processed documents
+- `vocab` - vocabulary
+- `meta` - metadata
+
+---
+
+## Visualization 1: Topic Prevalence
+
+**What it shows:** Which topics are most common across your corpus
+
+```{r topic-prevalence}
+# Create prevalence plot
+plot(stm_model, 
+     type = "summary", 
+     n = 10,  # Show top 10 topics
+     main = "Topic Prevalence - Top 10 Topics",
+     xlim = c(0, 0.15))
+```
+
+### Interpretation:
+
+- **X-axis:** Expected topic proportion (0 = 0%, 0.15 = 15%)
+- **Y-axis:** Topics, labeled by their most probable words
+- **Longer bars:** More prevalent topics
+
+### What to look for:
+
+- Is one topic dominating (>20%)? Might be too broad
+- Are topics evenly distributed? Suggests diverse corpus
+- Very small topics (<2%)? Might be noise or very specific themes
+
+---
+
+## Visualization 2: Topic Labels with Custom Names
+
+After examining the top words, create meaningful labels:
+
+```{r label-topics}
+# View top words for each topic
+labelTopics(stm_model, n = 7)
+
+# Create your own topic labels (EDIT THESE based on your results)
+topic_labels <- data.frame(
+  topic_num = 1:15,
+  label = c(
+    "Economic Indicators",
+    "Defense & Security", 
+    "Climate Change",
+    "Criminal Justice",
+    "Healthcare Policy",
+    "International Trade",
+    "Elections & Voting",
+    "Housing & Real Estate",
+    "Education Reform",
+    "Social Welfare",
+    "Social Media",
+    "Technology & AI",
+    "Transportation",
+    "Immigration",
+    "Energy Policy"
+  )
+)
+
+# Display labels with top words
+print(topic_labels)
+```
+
+---
+
+## Visualization 3: Topic Correlation Network
+
+**What it shows:** Which topics frequently co-occur in the same documents
+
+```{r topic-correlation, fig.width=10, fig.height=10}
+# Calculate topic correlations
+mod.out.corr <- topicCorr(stm_model)
+
+# Plot correlation network
+plot(mod.out.corr,
+     main = "Topic Correlation Network")
+```
+
+### Interpretation:
+
+- **Lines between topics:** These topics appear together in documents
+- **No lines:** Topics are independent
+- **Thick lines:** Stronger correlation
+- **Clusters:** Groups of related topics
+
+### What to look for:
+
+- **Expected correlations:** Elections connected to Healthcare, Economy (policy issues)
+- **Unexpected correlations:** Surprising relationships worth investigating
+- **Isolated topics:** Topics that appear independently
+
+---
+
+## Visualization 4: Word Clouds for Individual Topics
+
+**What it shows:** Most important words for a specific topic
+
+```{r wordcloud-topic1, fig.width=8, fig.height=6}
+# Create word cloud for Topic 1
+cloud(stm_model, 
+      topic = 1,
+      scale = c(4, 0.5),
+      max.words = 50,
+      colors = brewer.pal(8, "Dark2"))
+
+title(main = "Topic 1: Economic Indicators", 
+      cex.main = 1.5)
+```
+
+```{r wordcloud-topic3, fig.width=8, fig.height=6}
+# Create word cloud for Topic 3
+cloud(stm_model, 
+      topic = 3,
+      scale = c(4, 0.5),
+      max.words = 50,
+      colors = brewer.pal(8, "Dark2"))
+
+title(main = "Topic 3: Climate Change", 
+      cex.main = 1.5)
+```
+
+### Create clouds for all topics:
+
+```{r all-wordclouds, fig.width=8, fig.height=6, eval=FALSE}
+# Loop through all topics (set eval=TRUE to run)
+for (i in 1:15) {
+  cloud(stm_model, 
+        topic = i,
+        scale = c(4, 0.5),
+        max.words = 50,
+        colors = brewer.pal(8, "Dark2"))
+  
+  title(main = paste("Topic", i, ":", topic_labels$label[i]), 
+        cex.main = 1.5)
+}
+```
+
+---
+
+## Visualization 5: Topic Quality - Semantic Coherence vs Exclusivity
+
+**What it shows:** Quality metrics for each topic
+
+```{r topic-quality, fig.width=10, fig.height=8}
+# Calculate and plot topic quality
+topicQuality(stm_model, documents = docs)
+
+# Add custom labels (optional)
+text(x = topicQuality(stm_model, documents = docs)$semcoh,
+     y = topicQuality(stm_model, documents = docs)$exclusivity,
+     labels = 1:15,
+     pos = 3, cex = 0.8)
+```
+
+### Interpretation:
+
+- **X-axis:** Semantic Coherence (how often top words co-occur)
+- **Y-axis:** Exclusivity (how unique words are to this topic)
+- **Top-right quadrant:** Best topics (coherent AND exclusive)
+- **Bottom-left quadrant:** Problematic topics
+
+### What to do:
+
+- **If many topics in bottom-left:** Try different K
+- **Outliers:** Investigate those specific topics
+- **Trade-off is normal:** Can't maximize both perfectly
+
+---
+
+## Visualization 6: Comparing Topics (Perspectives)
+
+**What it shows:** How two topics differ in their vocabularies
+
+```{r perspectives-plot, fig.width=12, fig.height=6}
+# Compare two topics (e.g., Climate vs Elections)
+plot(stm_model, 
+     type = "perspectives", 
+     topics = c(3, 7),  # Climate (T3) vs Elections (T7)
+     main = "Comparing Topics: Climate Change vs Elections & Voting")
+```
+
+```{r perspectives-plot2, fig.width=12, fig.height=6}
+# Compare another pair (e.g., Healthcare vs Technology)
+plot(stm_model, 
+     type = "perspectives", 
+     topics = c(5, 12),  # Healthcare (T5) vs Technology (T12)
+     main = "Comparing Topics: Healthcare Policy vs Technology & AI")
+```
+
+### Interpretation:
+
+- **Left side:** Words more associated with first topic
+- **Right side:** Words more associated with second topic
+- **Large gaps:** Topics are very distinct (good!)
+- **Words in middle:** Shared vocabulary
+
+---
+
+## Visualization 7: Topic Proportions in Example Documents
+
+**What it shows:** How topics are distributed in specific documents
+
+```{r document-topics}
+# Get topic proportions for all documents
+doc_topics <- make.dt(stm_model, meta = meta)
+
+# View first few documents
+head(doc_topics, 10)
+
+# Visualize topic distribution for a single document
+doc_num <- 1  # Change this to examine different documents
+
+doc_topic_dist <- doc_topics %>%
+  filter(docnum == doc_num) %>%
+  select(starts_with("Topic")) %>%
+  pivot_longer(everything(), names_to = "Topic", values_to = "Proportion") %>%
+  mutate(Topic_Num = parse_number(Topic)) %>%
+  left_join(topic_labels, by = c("Topic_Num" = "topic_num"))
+
+ggplot(doc_topic_dist, aes(x = reorder(label, -Proportion), y = Proportion)) +
+  geom_col(fill = "#667eea") +
+  coord_flip() +
+  labs(title = paste("Topic Distribution - Document", doc_num),
+       x = "Topic",
+       y = "Proportion") +
+  theme_minimal() +
+  theme(text = element_text(size = 12))
+```
+
+---
+
+# REGRESSION ANALYSIS IN STM
+
+## What is Regression in STM?
+
+**Regression analysis** in STM helps you understand **what predicts topic prevalence**.
+
+Instead of just knowing that "12.3% of the corpus is about Elections," regression lets you ask:
+
+- Do **Elections topics** increase over time?
+- Do certain **authors** write more about **Healthcare**?
+- Are **Climate topics** more common in certain **sources**?
+
+---
+
+## When to Use Regression in STM
+
+Use regression when you have **metadata** (covariates) and want to know:
+
+✅ **Temporal trends:** How topics change over time  
+✅ **Author differences:** Do different authors emphasize different topics?  
+✅ **Source patterns:** Do topics vary by publication/source?  
+✅ **Geographic patterns:** Do topics differ by location?  
+✅ **Any categorical or continuous variable**
+
+---
+
+## Step 1: Fit STM Model with Covariates
+
+**IMPORTANT:** You must fit a model WITH covariates to do regression
+
+```{r fit-covariate-model, eval=FALSE}
+# Example: Model with year and source as covariates
+stm_model_cov <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = 15,
+  prevalence = ~ year + source,  # YOUR COVARIATES HERE
+  data = meta,
+  max.em.its = 75,
+  init.type = "Spectral",
+  seed = 12345,
+  verbose = TRUE
+)
+
+# Save the model
+saveRDS(stm_model_cov, "stm_model_cov_K15.rds")
+```
+
+---
+
+## Step 2: Estimate Effects
+
+Use `estimateEffect()` to run the regression:
+
+```{r estimate-effects, eval=FALSE}
+# Estimate how covariates affect topic prevalence
+# Formula: which topics ~ which covariates
+
+prep <- estimateEffect(
+  formula = 1:15 ~ year + source,  # All topics ~ year and source
+  stmobj = stm_model_cov,
+  metadata = meta,
+  uncertainty = "Global"
+)
+
+# Save results
+saveRDS(prep, "effect_estimates.rds")
+```
+
+### Breaking down the formula:
+
+- `1:15` = Topics 1 through 15 (all topics)
+- `~ year + source` = Predicted by year and source
+- You can also do specific topics: `c(1, 3, 7) ~ year`
+
+---
+
+## Step 3: View Regression Tables
+
+**THIS IS WHERE REGRESSION TABLES COME IN!**
+
+```{r regression-table, eval=FALSE}
+# View regression results for Topic 3 (Climate Change)
+summary(prep, topics = 3)
+```
+
+### What the regression table shows:
+
+```
+Topic 3: Climate Change
+
+            Estimate  Std.Error  t value  Pr(>|t|)    
+(Intercept)  -0.0234   0.0045    -5.200   < 0.001  ***
+year          0.0012   0.0003     4.000   < 0.001  ***
+sourceNYT     0.0156   0.0067     2.328    0.020   *
+sourceWSJ    -0.0089   0.0071    -1.254    0.210    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+### How to read this table:
+
+**Intercept (-0.0234):**
+- Baseline topic proportion when all covariates = 0
+- Not usually interesting
+
+**year (0.0012):**
+- **Positive coefficient** = Topic proportion INCREASES each year
+- **0.0012** = Climate topic increases by 0.12 percentage points per year
+- **p < 0.001** = Highly significant (marked ***)
+- **Interpretation:** "Climate Change discussions have significantly increased over time"
+
+**sourceNYT (0.0156):**
+- **Positive coefficient** = NYT covers Climate more than baseline (reference category)
+- **0.0156** = NYT has 1.56 percentage points MORE Climate coverage
+- **p = 0.020** = Significant (marked *)
+- **Interpretation:** "New York Times covers Climate Change more than other sources"
+
+**sourceWSJ (-0.0089):**
+- **Negative coefficient** = WSJ covers Climate less than baseline
+- **p = 0.210** = NOT significant (no stars)
+- **Interpretation:** "Wall Street Journal coverage of Climate is not significantly different"
+
+---
+
+## Step 4: Visualize Regression Results
+
+### Continuous Covariates (like year):
+
+```{r plot-continuous, eval=FALSE, fig.width=10, fig.height=6}
+# Plot how topics change over time
+plot(prep, 
+     covariate = "year",
+     topics = c(3, 7, 12),  # Climate, Elections, Technology
+     model = stm_model_cov,
+     method = "continuous",
+     main = "Topic Trends Over Time",
+     xlab = "Year",
+     ylab = "Expected Topic Proportion")
+
+# Add legend
+legend("topleft", 
+       legend = c("Topic 3: Climate", "Topic 7: Elections", "Topic 12: Technology"),
+       col = 1:3, lty = 1, lwd = 2)
+```
+
+### Categorical Covariates (like source):
+
+```{r plot-categorical, eval=FALSE, fig.width=10, fig.height=6}
+# Plot how topics vary by source
+plot(prep,
+     covariate = "source",
+     topics = c(3, 5, 7),  # Climate, Healthcare, Elections
+     model = stm_model_cov,
+     method = "pointestimate",
+     main = "Topic Prevalence by Source",
+     xlab = "Source",
+     ylab = "Expected Topic Proportion")
+```
+
+---
+
+## Complete Regression Workflow Example
+
+```{r complete-regression-example, eval=FALSE}
+# ============================================================================
+# COMPLETE REGRESSION ANALYSIS WORKFLOW
+# ============================================================================
+
+# 1. FIT MODEL WITH COVARIATES
+stm_model_cov <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = 15,
+  prevalence = ~ year + author + source,  # Multiple covariates
+  data = meta,
+  max.em.its = 75,
+  init.type = "Spectral",
+  seed = 12345
+)
+
+# 2. ESTIMATE EFFECTS
+prep <- estimateEffect(
+  formula = 1:15 ~ year + author + source,
+  stmobj = stm_model_cov,
+  metadata = meta,
+  uncertainty = "Global"
+)
+
+# 3. VIEW REGRESSION TABLES FOR EACH TOPIC
+for (i in 1:15) {
+  cat("\n\n========================================\n")
+  cat("TOPIC", i, ":", topic_labels$label[i], "\n")
+  cat("========================================\n")
+  print(summary(prep, topics = i))
+}
+
+# 4. IDENTIFY SIGNIFICANT EFFECTS
+# Which topics are significantly affected by year?
+for (i in 1:15) {
+  sum_result <- summary(prep, topics = i)
+  year_pvalue <- sum_result$tables[[1]]["year", "Pr(>|t|)"]
+  
+  if (year_pvalue < 0.05) {
+    year_coef <- sum_result$tables[[1]]["year", "Estimate"]
+    direction <- ifelse(year_coef > 0, "INCREASING", "DECREASING")
+    
+    cat(sprintf("Topic %d (%s): %s over time (p = %.4f)\n", 
+                i, topic_labels$label[i], direction, year_pvalue))
+  }
+}
+
+# 5. VISUALIZE KEY FINDINGS
+# Plot topics with significant time trends
+significant_topics <- c(3, 7, 12)  # Based on your analysis
+
+plot(prep,
+     covariate = "year",
+     topics = significant_topics,
+     model = stm_model_cov,
+     method = "continuous",
+     main = "Topics with Significant Time Trends",
+     xlab = "Year",
+     ylab = "Expected Topic Proportion")
+```
+
+---
+
+## Common Regression Questions & Answers
+
+### Q1: "Do I always need to do regression?"
+
+**No!** Regression is optional. Use it when:
+- You have meaningful metadata (year, author, source, etc.)
+- You want to test specific hypotheses
+- You want to understand what predicts topics
+
+Skip it if:
+- You just want to explore topics
+- You don't have good metadata
+- Your goal is description, not prediction
+
+---
+
+### Q2: "What's the difference between the regular model and covariate model?"
+
+**Regular STM model (`stm()` without covariates):**
+- Finds topics and their prevalence
+- Shows which topics exist and how common they are
+- Can't test hypotheses about what predicts topics
+
+**Covariate STM model (`stm()` with `prevalence = ~...`):**
+- Finds topics AND models what affects their prevalence
+- Tests hypotheses: "Does Climate increase over time?"
+- Produces regression tables
+
+---
+
+### Q3: "What covariates should I include?"
+
+Include covariates that might meaningfully predict topics:
+
+**Good covariates:**
+- **Time** (year, date) - for trends
+- **Author/Source** - different perspectives
+- **Location** - geographic patterns
+- **Document type** - speeches vs articles
+- **Political party** - partisan differences
+
+**Bad covariates:**
+- **Document ID** - too many categories
+- **Document length** - not substantively meaningful
+- **Random noise** - no theoretical reason
+
+---
+
+### Q4: "How do I interpret interaction effects?"
+
+```{r interaction-example, eval=FALSE}
+# Model with interaction
+stm_model_int <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = 15,
+  prevalence = ~ year * source,  # Interaction: year × source
+  data = meta
+)
+
+prep_int <- estimateEffect(
+  1:15 ~ year * source,
+  stmobj = stm_model_int,
+  metadata = meta
+)
+
+# Interpretation of year:sourceNYT coefficient:
+# "The effect of year on topic prevalence DIFFERS between NYT and other sources"
+# Example: Climate might increase over time in NYT but not in WSJ
+```
+
+---
+
+## Regression Output Table Interpretation Guide
+
+Here's how to read a complete regression table:
+
+```
+Topic: Climate Change
+
+                    Estimate  Std.Error  t value  Pr(>|t|)    
+(Intercept)         -0.0234    0.0045   -5.200   < 0.001  ***
+year                 0.0012    0.0003    4.000   < 0.001  ***
+sourceNYT            0.0156    0.0067    2.328    0.020   *
+sourceWSJ           -0.0089    0.0071   -1.254    0.210    
+authorSmith          0.0234    0.0089    2.629    0.009   **
+authorJones         -0.0145    0.0092   -1.576    0.115    
+```
+
+| Column | Meaning |
+|--------|---------|
+| **Estimate** | Change in topic proportion for 1-unit increase in predictor |
+| **Std.Error** | Uncertainty in the estimate |
+| **t value** | Test statistic (Estimate/Std.Error) |
+| **Pr(>\|t\|)** | P-value - probability of seeing this if no real effect |
+| **Stars** | *** p<0.001, ** p<0.01, * p<0.05 |
+
+**In plain English:**
+
+"Climate Change topic increases by 0.12 percentage points each year (p<0.001). 
+The New York Times covers Climate 1.56 percentage points more than other sources (p=0.02).
+Author Smith writes about Climate 2.34 percentage points more than other authors (p=0.009)."
+
+---
+
+## Creating Publication-Ready Regression Tables
+
+```{r publication-table, eval=FALSE}
+# Extract regression results for multiple topics
+library(broom)
+
+# Function to extract tidy results
+extract_effects <- function(prep_obj, topic_num) {
+  summary(prep_obj, topics = topic_num)$tables[[1]] %>%
+    as.data.frame() %>%
+    rownames_to_column("Variable") %>%
+    mutate(Topic = topic_num)
+}
+
+# Combine results for topics of interest
+regression_results <- bind_rows(
+  extract_effects(prep, 3),   # Climate
+  extract_effects(prep, 7),   # Elections
+  extract_effects(prep, 12)   # Technology
+)
+
+# Export to CSV
+write_csv(regression_results, "regression_results.csv")
+
+# Create formatted table
+library(kableExtra)
+
+regression_results %>%
+  filter(Variable == "year") %>%  # Focus on time trends
+  select(Topic, Estimate, `Pr(>|t|)`) %>%
+  left_join(topic_labels, by = c("Topic" = "topic_num")) %>%
+  select(label, Estimate, `Pr(>|t|)`) %>%
+  kable(col.names = c("Topic", "Yearly Change", "P-value"),
+        digits = 4,
+        caption = "How Topics Change Over Time") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+---
+
+## Summary: When and How to Use Regression
+
+```{r summary-table, echo=FALSE}
+summary_df <- data.frame(
+  Question = c(
+    "Do topics change over time?",
+    "Do sources emphasize different topics?",
+    "Do authors have topic specialties?",
+    "Are topics seasonal?",
+    "Do topics vary geographically?"
+  ),
+  Covariate = c("year or date", "source", "author", "month", "location"),
+  Type = c("Continuous", "Categorical", "Categorical", "Categorical", "Categorical"),
+  Example_Finding = c(
+    "Climate increases 0.12% per year",
+    "NYT covers healthcare 1.5% more",
+    "Author Smith focuses on economics",
+    "Education peaks in September",
+    "Immigration higher in border states"
+  )
+)
+
+knitr::kable(summary_df, 
+             caption = "Common Research Questions and Regression Approaches")
+```
+
+---
+
+## Key Takeaways
+
+### Visualizations:
+1. **Always start with Topic Prevalence** - understand what's in your corpus
+2. **Check Topic Quality** - validate your model
+3. **Use Word Clouds** - communicate findings visually
+4. **Examine Correlations** - understand relationships
+
+### Regression:
+1. **Regression is OPTIONAL** - only use if you have metadata and research questions
+2. **Fit with covariates** - `prevalence = ~ var1 + var2`
+3. **Estimate effects** - `estimateEffect()`
+4. **Interpret tables** - coefficients show change in topic proportion
+5. **Visualize trends** - plots are clearer than tables
+
+### Research Workflow:
+**Exploratory:** Fit model → Visualize → Interpret topics  
+**Hypothesis-Testing:** Fit covariate model → Regression → Test predictions
+
+---
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

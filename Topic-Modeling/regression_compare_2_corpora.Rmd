@@ -1,0 +1,2669 @@
+---
+title: "Comparing Two Publications - Woman's Exponent vs Relief Society Magazine"
+author: "Birch"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6)
+```
+
+# Comparing Two Publications with STM
+
+This notebook compares **Woman's Exponent** vs **Relief Society Magazine** using Structural Topic Modeling (STM) with publication as a prevalence covariate.
+
+---
+
+## 1. Load Packages
+
+```{r load-packages}
+library(tidyverse)
+library(stm)
+library(stopwords)
+library(kableExtra)
+library(textstem)
+library(ggrepel)
+library(wordcloud)
+library(RColorBrewer)
+library(igraph)
+library(ggraph)
+library(patchwork)
+library(ggridges)
+library(readxl)
+library(pheatmap)
+library(scales)
+
+set.seed(12345)
+cat("Packages loaded!\n")
+```
+
+---
+
+## 2. Set Paths (TWO Input Folders)
+  
+```{r set-paths}
+base_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis"
+
+# Corpus A: Woman's Exponent
+corpus_a_path <- file.path(base_path, "Topicmodel/input")
+
+# Corpus B: Relief Society Magazine
+corpus_b_path <- file.path(base_path, "Topicmodel/input2")
+
+# Inventories
+inventory_a_path <- file.path(base_path, "exponentorder/output/WE_article_inventory_vols1-41.xlsx")
+inventory_b_path <- file.path(base_path, "Articleextractionrfiles/Administrationorganization/RSM_article_inventory_vols1-57.xlsx")
+
+# Output folder
+output_path <- file.path(base_path, "Topicmodel/output_linked_comparison")
+
+if (!dir.exists(output_path)) {
+  dir.create(output_path, recursive = TRUE)
+  cat("Created output directory\n")
+}
+
+cat("Corpus A (Woman's Exponent):", corpus_a_path, "\n")
+cat("Corpus B (Relief Society Magazine):", corpus_b_path, "\n")
+cat("Inventory A:", inventory_a_path, "\n")
+cat("Inventory B:", inventory_b_path, "\n")
+cat("Output:", output_path, "\n\n")
+```
+
+---
+
+## 3. Import Both Corpora
+
+```{r import-corpora}
+cat("=", rep("=", 70), "\n", sep = "")
+cat("IMPORTING BOTH PUBLICATIONS\n")
+cat("=", rep("=", 70), "\n\n", sep = "")
+
+# Helper: import a corpus with header stripping and metadata extraction
+import_corpus <- function(corpus_path, corpus_name, pub_name) {
+  if (!dir.exists(corpus_path)) stop(paste(pub_name, "path does not exist!"))
+
+  file_paths <- list.files(corpus_path, pattern = "\\.txt$",
+                           full.names = TRUE, recursive = TRUE, ignore.case = TRUE)
+  file_paths <- file_paths[!grepl("_backups", file_paths)]
+  cat(pub_name, "files found:", length(file_paths), "\n")
+
+  tibble(
+    filepath = file_paths,
+    filename = basename(file_paths),
+    text = map_chr(file_paths, ~{
+      raw <- readr::read_file(.x)
+      # Strip bracket metadata header line (RSM and WE both have these)
+      str_remove(raw, "^\\[.*?\\]\\s*\\n?")
+    })
+  ) %>%
+    mutate(
+      volume_folder    = str_extract(filepath, "(?:WE)?Vol\\d+[-_]\\d{4}"),
+      volume_num       = str_extract(volume_folder, "(?:WE)?Vol\\d+"),
+      year_from_folder = as.numeric(str_extract(volume_folder, "\\d{4}$")),
+      volume_from_file = str_extract(filename, "WEVol\\d+|Vol\\d+"),
+      year_from_filename = as.numeric(str_extract(filepath, "(?<![0-9])(1[89]\\d{2})(?![0-9])")),
+      month_from_folder = str_extract(filepath,
+        "(?<=/)(January|February|March|April|May|June|July|August|September|October|November|December)(?=/)"),
+      month_from_filename = str_extract(filename, "^[A-Za-z]+"),
+      month  = coalesce(month_from_folder, month_from_filename),
+      volume = coalesce(volume_num, volume_from_file),
+      year   = coalesce(year_from_folder, year_from_filename),
+      corpus      = corpus_name,
+      publication = pub_name,
+      word_count  = str_count(text, "\\S+")
+    )
+}
+
+# --- Import both corpora ---
+corpus_a <- import_corpus(corpus_a_path, "Womans_Exponent", "Woman's Exponent")
+corpus_b <- import_corpus(corpus_b_path, "Relief_Society_Magazine", "Relief Society Magazine")
+
+cat("\nCorpus A:", nrow(corpus_a), "documents |",
+    "Years:", paste(range(na.omit(corpus_a$year)), collapse = "-"), "\n")
+cat("Corpus B:", nrow(corpus_b), "documents |",
+    "Years:", paste(range(na.omit(corpus_b$year)), collapse = "-"), "\n\n")
+
+# --- Load inventories and join metadata ---
+cat("Loading inventories...\n")
+
+inv_a <- read_excel(inventory_a_path, sheet = "Article Inventory") %>%
+  select(Filename, Title, Author, Article_Type) %>%
+  mutate(across(everything(), as.character))
+
+inv_b <- read_excel(inventory_b_path, sheet = "Article Inventory") %>%
+  select(Filename, Title, Author, Article_Type) %>%
+  mutate(across(everything(), as.character))
+
+cat("  WE inventory:", nrow(inv_a), "rows\n")
+cat("  RSM inventory:", nrow(inv_b), "rows\n")
+
+corpus_a <- corpus_a %>%
+  left_join(inv_a, by = c("filename" = "Filename"))
+corpus_b <- corpus_b %>%
+  left_join(inv_b, by = c("filename" = "Filename"))
+
+cat("  WE matched:", sum(!is.na(corpus_a$Title)), "/", nrow(corpus_a), "\n")
+cat("  RSM matched:", sum(!is.na(corpus_b$Title)), "/", nrow(corpus_b), "\n")
+
+# --- Filter out Board files (name rosters pollute topic clustering) ---
+corpus_a <- corpus_a %>% filter(!str_detect(filename, "BOARD"), !Article_Type %in% "Board" | is.na(Article_Type))
+corpus_b <- corpus_b %>% filter(!str_detect(filename, "BOARD"), !Article_Type %in% "Board" | is.na(Article_Type))
+cat("  After Board filter: WE =", nrow(corpus_a), "| RSM =", nrow(corpus_b), "\n\n")
+
+# --- Combine ---
+combined_corpus <- bind_rows(corpus_a, corpus_b) %>%
+  mutate(
+    corpus = factor(corpus),
+    doc_id = row_number()
+  )
+
+cat("Combined corpus:", nrow(combined_corpus), "documents\n")
+cat("  Woman's Exponent:", sum(combined_corpus$corpus == "Womans_Exponent"), "\n")
+cat("  Relief Society Magazine:", sum(combined_corpus$corpus == "Relief_Society_Magazine"), "\n")
+cat("  With author data:", sum(!is.na(combined_corpus$Author) & combined_corpus$Author != ""), "\n\n")
+cat(rep("=", 70), "\n\n", sep = "")
+```
+
+---
+
+## 4. Text Cleaning
+
+```{r clean-text}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TEXT CLEANING\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Combined stopwords from both individual notebooks
+base_stopwords <- stopwords::stopwords("en", source = "snowball")
+
+# Publication-specific boilerplate
+pub_stopwords <- c(
+  # WE-specific
+  "womansexponent", "womans", "exponent", "womanexponent",
+  # RSM-specific
+  "relief", "society", "magazine", "bulletin", "latter", "saint", "saints",
+  # Shared LDS/editorial
+  "church", "jesus", "christ", "latterday",
+  "editor", "publisher", "publishe", "assistant", "monthly",
+  "salt", "lake", "city", "utah", "zion",
+  # Structural/masthead
+  "board", "officer", "general", "secretary", "sec", "secy",
+  "asst", "pres", "treas", "president", "vice",
+  "vol", "vols", "volume", "num", "page", "pp", "pg", "issue",
+  # Advertising
+  "advertise", "advertiser", "advertisement", "rate", "discount",
+  "subscription", "subscriber", "copy", "copies", "price",
+  # Titles/honorifics
+  "mrs", "mr", "miss", "dr", "ms", "elder", "sister", "brother", "bishop",
+  # Months
+  "january", "february", "march", "april", "june",
+  "july", "august", "september", "october", "november", "december",
+  # Common function words missed by snowball
+  "will", "would", "also", "may", "shall", "upon", "unto", "thee", "thou",
+  "thy", "hath", "doth", "said", "one", "two", "three"
+)
+
+minimal_stopwords <- unique(c(base_stopwords, pub_stopwords))
+
+# Add years from BOTH corpora dynamically
+years_in_data  <- unique(na.omit(combined_corpus$year))
+years_as_words <- as.character(years_in_data)
+
+cat("Years found:", paste(years_as_words, collapse = ", "), "\n")
+cat("Removing as stopwords...\n\n")
+
+# OCR fragment / junk word blacklist — common broken words from digitized text
+ocr_junk_stopwords <- c(
+  # Suffix-only fragments
+  "ing", "tion", "ment", "ness", "ings", "tive", "ance", "ence",
+  "ered", "ters", "bers", "dren", "howe", "ould", "ight", "ther",
+  "ated", "ting", "ally", "ible", "able", "ious", "eous", "ical",
+  "onal", "ship", "ward", "wise", "less",
+  # Truncated word fragments from OCR
+  "deliv", "presi", "inter", "encour", "terest", "testi",
+  "soci", "coun", "chil", "pariel", "organiza", "ganized",
+  "ference", "musser", "selion",
+  # Structural boilerplate remnants
+  "column", "columns", "chapter", "section", "article",
+  "continued", "copyright", "printed"
+)
+
+all_stopwords <- unique(c(minimal_stopwords, ocr_junk_stopwords, years_as_words))
+cat("Total stopwords:", length(all_stopwords), "\n\n")
+
+# --------------------------------------------------------------------------
+# FIX 3: Remove Vol/No/page markers and ALL standalone numbers BEFORE
+#         removing punctuation, so "Vol. 10" and bare "1897" are caught.
+# FIX 4: Apply lemmatization to the actual word-splitting step (was ignored)
+# --------------------------------------------------------------------------
+
+# Regex patterns to catch OCR fragments not in the explicit list
+is_ocr_fragment <- function(w) {
+  grepl("^[a-z]{1,3}(tion|ment|ence|ness|ings|tive|ance)$", w) |
+  grepl("^(pre|suf|dis|un|re)[a-z]{0,2}$", w) |
+  grepl("^[^a-z]+$", w)
+}
+
+processed_texts <- combined_corpus %>%
+  mutate(
+    text_clean = str_to_lower(text),
+    text_clean = str_remove_all(text_clean, "http\\S+"),
+    text_clean = str_remove_all(text_clean, "\\S+@\\S+"),
+
+    # FIX 3a: strip Vol/No/page markers before punctuation is removed
+    text_clean = str_remove_all(text_clean, "\\bvol\\.?\\s*\\d+\\b"),
+    text_clean = str_remove_all(text_clean, "\\bno\\.?\\s*\\d+\\b"),
+    text_clean = str_remove_all(text_clean, "\\bpp?\\.?\\s*\\d+\\b"),
+
+    # FIX 3b: remove all standalone numbers
+    text_clean = str_remove_all(text_clean, "\\b\\d+\\b"),
+
+    text_clean = str_remove_all(text_clean, "[[:punct:]]"),
+    text_clean = str_squish(text_clean),
+
+    # FIX 4: lemmatize, then use that result for word splitting
+    text_lemmatized = lemmatize_strings(text_clean),
+
+    words         = str_split(text_lemmatized, "\\s+"),   # <-- was text_clean
+    words_no_stop = map(words, ~.x[!.x %in% all_stopwords]),
+    # FIX 3c: belt-and-suspenders — drop any token that is purely numeric
+    words_no_nums = map(words_no_stop, ~.x[!grepl("^\\d+$", .x)]),
+    words_final   = map(words_no_nums, ~.x[nchar(.x) >= 3 & !is_ocr_fragment(.x)]),
+    text_final    = map_chr(words_final, ~paste(.x, collapse = " ")),
+    final_word_count = str_count(text_final, "\\S+")
+  )
+
+cat("Cleaning stats:\n")
+cat("  Avg words before:", round(mean(combined_corpus$word_count)), "\n")
+cat("  Avg words after:", round(mean(processed_texts$final_word_count)), "\n")
+cat("  Retention:", round(mean(processed_texts$final_word_count) /
+                          mean(combined_corpus$word_count) * 100), "%\n\n")
+
+processed_texts <- processed_texts %>% filter(final_word_count >= 10)
+
+cat("Documents after filtering (>= 10 words):", nrow(processed_texts), "\n")
+cat("  Woman's Exponent:", sum(processed_texts$corpus == "Womans_Exponent"), "\n")
+cat("  Relief Society Magazine:", sum(processed_texts$corpus == "Relief_Society_Magazine"), "\n\n")
+
+if (nrow(processed_texts) == 0) stop("All documents removed!")
+
+# --- Deduplicate near-identical documents ---
+# Some articles were split into multiple sub-files with identical text
+# (e.g., Guide Lessons _b_a_a, _b_a_b, _b_b, _b_c). These duplicates
+# give one piece of content outsized weight in the model.
+cat("Deduplicating near-identical documents...\n")
+n_before_dedup <- nrow(processed_texts)
+
+# Use first 200 characters of cleaned text as a fingerprint
+processed_texts <- processed_texts %>%
+  mutate(text_fingerprint = substr(text_final, 1, 200)) %>%
+  group_by(text_fingerprint, corpus) %>%
+  slice(1) %>%    # Keep first occurrence, drop duplicates
+  ungroup() %>%
+  select(-text_fingerprint) %>%
+  mutate(doc_id = row_number())   # Re-number doc_ids after dedup
+
+n_after_dedup <- nrow(processed_texts)
+cat("  Removed", n_before_dedup - n_after_dedup, "near-duplicate documents\n")
+cat("  Corpus after dedup:", n_after_dedup, "documents\n")
+cat("  Woman's Exponent:", sum(processed_texts$corpus == "Womans_Exponent"), "\n")
+cat("  Relief Society Magazine:", sum(processed_texts$corpus == "Relief_Society_Magazine"), "\n\n")
+```
+
+---
+
+## 5. Prepare for STM
+
+```{r prepare-stm}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("PREPARING FOR STM\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# --- Defensive NA handling BEFORE textProcessor ---
+processed_texts <- processed_texts %>%
+  mutate(
+    year = ifelse(is.na(year), median(year, na.rm = TRUE), year),
+    month = ifelse(is.na(month), "Unknown", month),
+    Article_Type = ifelse(is.na(Article_Type), "Unknown", Article_Type),
+    Author = ifelse(is.na(Author), "", Author)
+  )
+
+processed <- textProcessor(
+  documents        = processed_texts$text_final,
+  metadata         = processed_texts %>% select(doc_id, month, volume, year, corpus,
+                                                 publication, filename, Title, Article_Type, Author),
+  lowercase        = FALSE,
+  removestopwords  = FALSE,  # already done
+  removenumbers    = TRUE,
+  removepunctuation = FALSE,
+  stem             = FALSE,
+  wordLengths      = c(3, Inf),
+  sparselevel      = 1,
+  language         = "en",
+  verbose          = TRUE
+)
+
+out  <- prepDocuments(processed$documents, processed$vocab, processed$meta, lower.thresh = 1)
+docs <- out$documents
+vocab <- out$vocab
+meta  <- out$meta
+
+# Store the texts that actually made it into the model (for findThoughts later)
+modeled_texts <- processed_texts$text_final[match(meta$doc_id, processed_texts$doc_id)]
+cat("  (dropped", nrow(processed_texts) - length(docs), "documents during preprocessing)\n")
+
+# --- Defensive NA handling AFTER prepDocuments (rows may have been dropped) ---
+meta$year <- as.numeric(meta$year)
+meta$year[is.na(meta$year)] <- median(meta$year, na.rm = TRUE)
+meta$month[is.na(meta$month)] <- "Unknown"
+meta$Article_Type[is.na(meta$Article_Type)] <- "Unknown"
+
+cat("\nDocuments:", length(docs), "\n")
+cat("  Woman's Exponent:", sum(meta$corpus == "Womans_Exponent"), "\n")
+cat("  Relief Society Magazine:", sum(meta$corpus == "Relief_Society_Magazine"), "\n")
+cat("Vocabulary:", length(vocab), "\n\n")
+
+if (length(docs) == 0) stop("No documents remaining!")
+```
+
+---
+
+## 6. Diagnostic: searchK
+##ONLY WHEN TRYING TO DETERMINE K
+
+```{r searchK-diagnostic, eval=TRUE, cache=TRUE}
+# ============================================================
+# DIAGNOSTIC: searchK — THREE-WAY COMPARISON
+# Runs searchK separately for WE, RSM, and Combined so you can
+# compare the optimal K for each corpus and the joint model.
+# Set eval=TRUE to run (takes a while), then FALSE after.
+# ============================================================
+cat(rep("=", 70), "\n", sep = "")
+cat("RUNNING searchK: WE alone, RSM alone, and Combined\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+K_candidates <- c(5, 7, 10, 12, 15, 20)
+
+# Helper: run searchK on a subset and return tidy results
+run_searchK_for <- function(corpus_filter, label, prev_formula) {
+  if (is.null(corpus_filter)) {
+    # Combined: use all docs
+    sub_docs  <- docs
+    sub_vocab <- vocab
+    sub_meta  <- meta
+  } else {
+    # Single corpus: subset and re-prep
+    sub_texts <- processed_texts %>% filter(corpus == corpus_filter)
+    sub_proc  <- textProcessor(
+      documents = sub_texts$text_final,
+      metadata  = sub_texts %>% select(doc_id, month, volume, year, corpus,
+                                        publication, filename, Article_Type, Author),
+      lowercase = FALSE, removestopwords = FALSE, removenumbers = TRUE,
+      removepunctuation = FALSE, stem = FALSE, wordLengths = c(3, Inf),
+      sparselevel = 1, language = "en", verbose = FALSE
+    )
+    sub_out   <- prepDocuments(sub_proc$documents, sub_proc$vocab, sub_proc$meta, lower.thresh = 1)
+    sub_docs  <- sub_out$documents
+    sub_vocab <- sub_out$vocab
+    sub_meta  <- sub_out$meta
+    sub_meta$year <- as.numeric(sub_meta$year)
+    sub_meta$year[is.na(sub_meta$year)] <- median(sub_meta$year, na.rm = TRUE)
+  }
+
+  cat("\n--- searchK for", label, "(", length(sub_docs), "docs ) ---\n")
+
+  sk <- searchK(
+    documents  = sub_docs,
+    vocab      = sub_vocab,
+    K          = K_candidates,
+    data       = sub_meta,
+    prevalence = prev_formula,
+    init.type  = "Spectral",
+    seed       = 12345,
+    verbose    = TRUE
+  )
+
+  as.data.frame(sk$results) %>%
+    mutate(
+      K        = unlist(K),
+      heldout  = unlist(heldout),
+      residual = unlist(residual),
+      semcoh   = unlist(semcoh),
+      exclus   = unlist(exclus),
+      lbound   = unlist(lbound),
+      corpus   = label
+    )
+}
+
+# Run all three
+sk_we       <- run_searchK_for("Womans_Exponent",       "Woman's Exponent",       ~ s(year))
+sk_rsm      <- run_searchK_for("Relief_Society_Magazine","Relief Society Magazine", ~ s(year))
+sk_combined <- run_searchK_for(NULL,                     "Combined",               ~ corpus + s(year))
+
+searchK_all <- bind_rows(sk_we, sk_rsm, sk_combined)
+
+saveRDS(searchK_all, file.path(output_path, "searchK_three_way_results.rds"))
+cat("\nsearchK results saved for all three models.\n")
+```
+
+```{r searchK-load-results, eval=TRUE}
+# ============================================================
+# Load saved searchK results if they exist (avoids re-running)
+# Set the searchK-diagnostic chunk above to eval=TRUE to generate
+# these results for the first time (takes 30-60 minutes).
+# ============================================================
+searchK_rds <- file.path(output_path, "searchK_three_way_results.rds")
+if (!exists("searchK_all") && file.exists(searchK_rds)) {
+  searchK_all <- readRDS(searchK_rds)
+  cat("Loaded saved searchK results from:", searchK_rds, "\n")
+  cat("Corpora:", paste(unique(searchK_all$corpus), collapse = ", "), "\n")
+  cat("K values tested:", paste(sort(unique(searchK_all$K)), collapse = ", "), "\n")
+} else if (!exists("searchK_all")) {
+  cat("No searchK results found.\n")
+  cat("To generate: set the searchK-diagnostic chunk above to eval=TRUE and run it.\n")
+  cat("Results will be saved to:", searchK_rds, "\n")
+}
+```
+
+```{r searchK-comparison-plot, eval=TRUE, fig.width=14, fig.height=12}
+# ============================================================
+# Three-way searchK comparison: 5 separate panels, 3 lines each
+# ============================================================
+if (exists("searchK_all")) {
+
+  sk_plot <- searchK_all %>%
+    mutate(corpus = factor(corpus, levels = c("Woman's Exponent",
+                                               "Relief Society Magazine",
+                                               "Combined")))
+
+  shared_scales <- list(
+    scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                   "Relief Society Magazine" = "#458B74",
+                                   "Combined" = "#2563eb")),
+    scale_linetype_manual(values = c("solid", "solid", "dashed")),
+    scale_x_continuous(breaks = K_candidates),
+    theme_minimal(base_size = 11),
+    theme(legend.position = "none", panel.grid.minor = element_blank())
+  )
+
+  p1 <- ggplot(sk_plot, aes(x = K, y = heldout, color = corpus, linetype = corpus)) +
+    geom_line(linewidth = 1.2) + geom_point(size = 3) +
+    labs(title = "Held-Out Likelihood", subtitle = "Higher is better",
+         x = "K", y = "Held-Out Likelihood") + shared_scales
+
+  p2 <- ggplot(sk_plot, aes(x = K, y = residual, color = corpus, linetype = corpus)) +
+    geom_line(linewidth = 1.2) + geom_point(size = 3) +
+    labs(title = "Residuals", subtitle = "Lower is better",
+         x = "K", y = "Residuals") + shared_scales
+
+  p3 <- ggplot(sk_plot, aes(x = K, y = semcoh, color = corpus, linetype = corpus)) +
+    geom_line(linewidth = 1.2) + geom_point(size = 3) +
+    labs(title = "Semantic Coherence", subtitle = "Higher is better (trades off with exclusivity)",
+         x = "K", y = "Semantic Coherence") + shared_scales
+
+  p4 <- ggplot(sk_plot, aes(x = K, y = exclus, color = corpus, linetype = corpus)) +
+    geom_line(linewidth = 1.2) + geom_point(size = 3) +
+    labs(title = "Exclusivity", subtitle = "Higher is better (trades off with coherence)",
+         x = "K", y = "Exclusivity") + shared_scales
+
+  p5 <- ggplot(sk_plot, aes(x = semcoh, y = exclus, color = corpus, shape = corpus)) +
+    geom_point(size = 4, alpha = 0.8) +
+    geom_text(aes(label = K), size = 3, vjust = -1, show.legend = FALSE) +
+    scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                   "Relief Society Magazine" = "#458B74",
+                                   "Combined" = "#2563eb")) +
+    labs(title = "Coherence vs Exclusivity Tradeoff",
+         subtitle = "Numbers = K value; upper-right = best quality",
+         x = "Semantic Coherence", y = "Exclusivity",
+         color = "Corpus", shape = "Corpus") +
+    theme_minimal(base_size = 11) +
+    theme(legend.position = "bottom")
+
+  (p1 | p2) / (p3 | p4) / p5 +
+    plot_annotation(
+      title = "searchK Diagnostic: WE vs RSM vs Combined",
+      subtitle = "Orange = Woman's Exponent | Green = Relief Society Magazine | Blue dashed = Combined",
+      theme = theme(plot.title = element_text(face = "bold", size = 16))
+    )
+}
+```
+##ONLY WHEN TRYING TO DETERMINE K
+```{r searchK-faceted-plot, eval=TRUE, fig.width=12, fig.height=9}
+# ============================================================
+# ALTERNATIVE: Compact 4-panel faceted grid (publication-ready)
+# ============================================================
+if (exists("searchK_all")) {
+
+  sk_long <- searchK_all %>%
+    mutate(corpus = factor(corpus, levels = c("Woman's Exponent",
+                                               "Relief Society Magazine",
+                                               "Combined"))) %>%
+    select(K, corpus, heldout, residual, semcoh, exclus) %>%
+    pivot_longer(c(heldout, residual, semcoh, exclus),
+                 names_to = "metric", values_to = "value") %>%
+    mutate(metric = factor(metric,
+      levels = c("heldout", "residual", "semcoh", "exclus"),
+      labels = c("Held-Out Likelihood\n(higher is better)",
+                  "Residuals\n(lower is better)",
+                  "Semantic Coherence\n(higher is better)",
+                  "Exclusivity\n(higher is better)")))
+
+  ggplot(sk_long, aes(x = K, y = value, color = corpus, linetype = corpus)) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 3) +
+    facet_wrap(~metric, ncol = 2, scales = "free_y") +
+    scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                   "Relief Society Magazine" = "#458B74",
+                                   "Combined" = "#2563eb")) +
+    scale_linetype_manual(values = c("solid", "solid", "dashed")) +
+    scale_x_continuous(breaks = K_candidates) +
+    labs(title = "searchK Diagnostic: WE vs RSM vs Combined",
+         subtitle = "Compare optimal K across each corpus and the joint model",
+         x = "Number of Topics (K)", y = NULL,
+         color = "Corpus", linetype = "Corpus") +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      strip.text = element_text(face = "bold", size = 11),
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold", size = 16)
+    )
+}
+```
+##ONLY WHEN TRYING TO DETERMINE K
+```{r searchK-sweet-spot, eval=TRUE, fig.width=14, fig.height=6}
+# ============================================================
+# COHERENCE vs EXCLUSIVITY OVERLAY — Finding the Sweet Spot
+# Both metrics on one plot per corpus, with dual y-axes.
+# The crossover/convergence region = optimal K.
+# ============================================================
+if (exists("searchK_all")) {
+
+  # Normalize both metrics to 0-1 scale for overlay comparison
+  sk_norm <- searchK_all %>%
+    mutate(corpus = factor(corpus, levels = c("Woman's Exponent",
+                                               "Relief Society Magazine",
+                                               "Combined"))) %>%
+    group_by(corpus) %>%
+    mutate(
+      coherence_norm = (semcoh - min(semcoh)) / (max(semcoh) - min(semcoh)),
+      exclusivity_norm = (exclus - min(exclus)) / (max(exclus) - min(exclus))
+    ) %>%
+    ungroup() %>%
+    select(K, corpus, coherence_norm, exclusivity_norm) %>%
+    pivot_longer(c(coherence_norm, exclusivity_norm),
+                 names_to = "metric", values_to = "value") %>%
+    mutate(metric = ifelse(metric == "coherence_norm",
+                           "Semantic Coherence", "Exclusivity"))
+
+  # Find approximate sweet spot per corpus (where lines are closest)
+  sweet_spots <- searchK_all %>%
+    mutate(corpus = factor(corpus, levels = c("Woman's Exponent",
+                                               "Relief Society Magazine",
+                                               "Combined"))) %>%
+    group_by(corpus) %>%
+    mutate(
+      coh_n = (semcoh - min(semcoh)) / (max(semcoh) - min(semcoh)),
+      exc_n = (exclus - min(exclus)) / (max(exclus) - min(exclus)),
+      gap = abs(coh_n - exc_n)
+    ) %>%
+    slice_min(gap, n = 1) %>%
+    ungroup()
+
+  ggplot(sk_norm, aes(x = K, y = value, color = metric, linetype = metric)) +
+    geom_line(linewidth = 1.3) +
+    geom_point(size = 3) +
+    # Mark the sweet spot
+    geom_vline(data = sweet_spots,
+               aes(xintercept = K),
+               linetype = "dotted", color = "grey30", linewidth = 0.8) +
+    geom_label(data = sweet_spots,
+               aes(x = K, y = 0.5, label = paste0("K=", K)),
+               color = "grey30", size = 3.5, fill = "white",
+               label.padding = unit(0.2, "lines"),
+               inherit.aes = FALSE) +
+    facet_wrap(~corpus, ncol = 3) +
+    scale_color_manual(values = c("Semantic Coherence" = "#2563eb",
+                                   "Exclusivity" = "#dc2626")) +
+    scale_linetype_manual(values = c("solid", "dashed")) +
+    scale_x_continuous(breaks = K_candidates) +
+    labs(title = "Finding the Sweet Spot: Coherence vs Exclusivity",
+         subtitle = "Both metrics normalized to 0-1 scale | Dotted line = where the tradeoff is most balanced",
+         x = "Number of Topics (K)",
+         y = "Normalized Score (0-1)",
+         color = "Metric", linetype = "Metric") +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "bottom",
+      strip.text = element_text(face = "bold", size = 12),
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold", size = 16)
+    )
+}
+```
+
+### 6b. Set K
+
+```{r set-k}
+chosen_K <- 10  # CHANGE THIS based on searchK results above
+cat("Chosen K =", chosen_K, "\n\n")
+```
+
+---
+
+## 7. Fit STM with Corpus as Covariate
+
+```{r fit-model, cache=TRUE}
+cat(rep("=", 70), "\n", sep = "")
+cat("FITTING MODEL WITH CORPUS COVARIATE\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+stm_model_corpus <- stm(
+  documents  = docs,
+  vocab      = vocab,
+  K          = chosen_K,
+  prevalence = ~ corpus + s(year),
+  data       = meta,
+  max.em.its = 75,
+  init.type  = "Spectral",
+  seed       = 12345,
+  verbose    = TRUE
+)
+
+model_file <- file.path(output_path, paste0("comparison_model_K", chosen_K, ".rds"))
+saveRDS(stm_model_corpus, model_file)
+cat("\n✓ Model saved to:", model_file, "\n")
+```
+
+---
+
+## 8. Examine Topics
+
+```{r examine-topics}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TOP WORDS FOR EACH TOPIC\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+labelTopics(stm_model_corpus, n = 15)
+```
+
+---
+
+## 9. Auto-Generate & Override Topic Labels
+
+```{r create-labels}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("AUTO-GENERATING TOPIC LABELS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+create_specific_label <- function(topic_num, frex_words, prob_words) {
+  frex_text <- tolower(paste(frex_words, collapse = " "))
+  prob_text <- tolower(paste(prob_words, collapse = " "))
+
+  # --- Religious/Doctrinal ---
+  if (grepl("kingdom.*gospel|baptism.*eternal|doctrine|covenant", frex_text)) {
+    label <- "Gospel Doctrine & Spiritual Kingdom"
+  } else if (grepl("passover|paschal|feast|abraham|sarai|moses|israelite", frex_text)) {
+    label <- "Biblical Narratives & Symbolism"
+  } else if (grepl("lesson|lecture|teacher|teach.*class|theology", frex_text)) {
+    label <- "Gospel Lessons & Religious Instruction"
+  } else if (grepl("temple|ordinance|endow|sealing|baptize", frex_text)) {
+    label <- "Temple & Sacred Ordinances"
+  } else if (grepl("missionary|mission.*convert|preach|investigator", frex_text)) {
+    label <- "Missionary Work & Conversion"
+  } else if (grepl("faith.*prayer|spiritual.*testimony|believe.*lord", frex_text)) {
+    label <- "Faith & Spiritual Life"
+
+  # --- Women's Issues ---
+  } else if (grepl("suffrage.*vote|women.*rights|legislature|ballot|franchise", frex_text)) {
+    label <- "Women's Suffrage & Political Rights"
+  } else if (grepl("council.*international|convention.*delegates|congress.*women", frex_text)) {
+    label <- "International Women's Councils"
+  } else if (grepl("reform.*activism|temperance|prohibition|civic", frex_text)) {
+    label <- "Women's Reform & Activism"
+
+  # --- Organization ---
+  } else if (grepl("sisters.*presidency|organization.*grain|auxiliary|general.*board", frex_text)) {
+    label <- "Relief Society Leadership & Organization"
+  } else if (grepl("stake.*ward|attendance.*conference|branch|reorganize", frex_text)) {
+    label <- "Stake & Ward Reports"
+
+  # --- Domestic ---
+  } else if (grepl("child|parent|mother.*child|obedience.*parent", frex_text) &&
+             grepl("children|child|parent", prob_text)) {
+    label <- "Parenting & Child Moral Education"
+  } else if (grepl("marriage|husband|wife|family.*home|courtship", frex_text)) {
+    label <- "Marriage & Family Life"
+  } else if (grepl("recipe|tbsp|boiling|oven|cooking|baking|flour|sugar", frex_text)) {
+    label <- "Recipes & Cooking Instructions"
+  } else if (grepl("diet.*protein|nutrition|malnutrition|food.*milk|vitamin", frex_text)) {
+    label <- "Nutrition & Dietary Science"
+  } else if (grepl("housework|housekeeping|budget|homemaking|cleaning", frex_text)) {
+    label <- "Household Management & Budgeting"
+  } else if (grepl("sew|pattern|crochet|quilt|fabric|needle|stitch|dress", frex_text)) {
+    label <- "Sewing, Fashion & Handwork"
+  } else if (grepl("garden|plant|seed|flower|shrub|prune|soil", frex_text)) {
+    label <- "Home Gardening & Agriculture"
+
+  # --- Health/Science ---
+  } else if (grepl("nurse.*hospital|nursing.*training|health.*care|sanit", frex_text)) {
+    label <- "Nursing Training & Hospital Work"
+  } else if (grepl("radium.*curie|pasteur.*science|scientific|discovery", frex_text)) {
+    label <- "Scientific Biography & Discovery"
+
+  # --- History/Pioneer ---
+  } else if (grepl("emigration.*journey|wagon.*pioneer|ancestor|handcart", frex_text)) {
+    label <- "Pioneer History & Emigration"
+  } else if (grepl("genealogy|ancestor.*record|family.*history|pedigree", frex_text)) {
+    label <- "Genealogy & Family History"
+  } else if (grepl("obituary|funeral|deceased|memorial|tribute.*memory", frex_text)) {
+    label <- "Obituaries & Tributes"
+
+  # --- Culture/Arts ---
+  } else if (grepl("irving|tale|story.*literature|book.*read|novel|dickens", frex_text)) {
+    label <- "Literature & Book Reviews"
+  } else if (grepl("jerry|walter|jimmy|bob|chapter.*story", frex_text) &&
+             grepl("said|little|story", prob_text)) {
+    label <- "Serialized Fiction & Stories"
+  } else if (grepl("poem|verse|rhyme|stanza|lyric", frex_text)) {
+    label <- "Poetry & Verse"
+  } else if (grepl("tableau|music|hymn|chorus|song.*sing|concert", frex_text)) {
+    label <- "Musical Programs & Performances"
+
+  # --- Political/World ---
+  } else if (grepl("war|entente.*allies|troops|german|battle|soldier", frex_text)) {
+    label <- "War News & Commentary"
+  } else if (grepl("moral|virtue|character|righteousness", frex_text)) {
+    label <- "Moral Education & Character Development"
+  } else if (grepl("education|school|university|college|study|student", frex_text)) {
+    label <- "Education & Learning"
+  } else if (grepl("welfare|charitable|benevolent|poor|needy|donate", frex_text)) {
+    label <- "Social Welfare & Charitable Work"
+
+  # --- Structural/Noise ---
+  } else if (grepl("^\\d+.*\\d+.*\\d+|page.*number|index", frex_text)) {
+    label <- "Magazine Index & Structure"
+  } else if (grepl("empey|mclelland|edna|farnsworth|board.*member", frex_text)) {
+    label <- "Board Member Directory"
+  } else if (grepl("merino|cotton|bleached|gauze|fabric|price|advertisement", frex_text)) {
+    label <- "Product Advertisements"
+  } else if (grepl("letter.*editor|correspond|reply.*question", frex_text)) {
+    label <- "Correspondence & Letters"
+  } else {
+    keywords <- paste(tools::toTitleCase(frex_words[1:3]), collapse = " ")
+    label <- keywords
+  }
+
+  return(label)
+}
+
+all_top_words <- labelTopics(stm_model_corpus, n = 15)
+
+topic_labels <- sapply(1:chosen_K, function(i) {
+  frex_words <- all_top_words$frex[i, 1:10]
+  prob_words <- all_top_words$prob[i, 1:10]
+  paste0("Topic ", i, ": ", create_specific_label(i, frex_words, prob_words))
+})
+
+cat("Auto-generated labels:\n\n")
+for (i in 1:chosen_K) {
+  cat(topic_labels[i], "\n")
+  cat("  FREX:", paste(all_top_words$frex[i, 1:7], collapse = ", "), "\n\n")
+}
+```
+
+```{r manual-overrides}
+# ============================================================================
+# MANUAL OVERRIDES — edit after reviewing auto-generated labels above
+# Uncomment and modify as needed after running the model
+# ============================================================================
+topic_labels[1]  <- "Topic 1: Community Celebrations"
+#topic_labels[2]  <- "Topic 2: Relief Society Meeting Reports"
+topic_labels[3]  <- "Topic 3: Education"
+topic_labels[4]  <- "Topic 4: Home-Making and Recipes"
+topic_labels[5]  <- "Topic 5: Genealogy"
+topic_labels[7]  <- "Topic 7: Relief Society Conference Reports "
+topic_labels[8]  <- "Topic 8: World News and Women's Rights Reports"
+topic_labels[10]  <- "Topic 10: Poetry"
+
+# Show final labels
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("FINAL TOPIC LABELS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+for (i in 1:chosen_K) cat(topic_labels[i], "\n")
+```
+
+---
+
+### 9c. Find Article Examples for a Topic
+
+```{r find-examples-custom}
+# ============================================================
+# CHANGE THIS to examine any topic
+# ============================================================
+topic_to_examine <- 1
+n_examples <- 10
+
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPIC", topic_to_examine, ":", topic_labels[topic_to_examine], "\n")
+cat(rep("=", 70), "\n", sep = "")
+cat("FREX:", paste(all_top_words$frex[topic_to_examine, 1:10], collapse = ", "), "\n")
+cat("PROB:", paste(all_top_words$prob[topic_to_examine, 1:10], collapse = ", "), "\n")
+cat(rep("-", 70), "\n\n", sep = "")
+
+# modeled_texts was stored after prepDocuments — guaranteed to match model docs
+thoughts <- findThoughts(stm_model_corpus,
+                         texts = modeled_texts,
+                         topics = topic_to_examine,
+                         n = n_examples)
+
+thought_indices <- thoughts$index[[1]]
+
+for (i in seq_along(thought_indices)) {
+  idx <- thought_indices[i]
+  row <- processed_texts[idx, ]
+
+  pub_tag <- ifelse(row$corpus == "Womans_Exponent", "WE", "RSM")
+
+  cat(sprintf("Example %d of %d:\n", i, length(thought_indices)))
+  cat(sprintf("  File:        %s\n", row$filename))
+  cat(sprintf("  Title:       %s\n", ifelse(is.na(row$Title), "(unknown)", row$Title)))
+  cat(sprintf("  Author:      %s\n", ifelse(is.na(row$Author) | row$Author == "", "-", row$Author)))
+  cat(sprintf("  Type:        %s\n", ifelse(is.na(row$Article_Type), "-", row$Article_Type)))
+  cat(sprintf("  Publication: %s (%s, %s)\n\n", pub_tag, row$volume, row$year))
+  cat(substr(thoughts$docs[[1]][i], 1, 400), "\n\n")
+  cat(rep("-", 50), "\n\n", sep = "")
+}
+```
+
+---
+
+## 10. Link Topics to Articles
+
+```{r link-topics-to-articles}
+cat(rep("=", 70), "\n", sep = "")
+cat("LINKING TOPICS TO ARTICLES\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+doc_topics <- make.dt(stm_model_corpus, meta = meta)
+
+topic_article_link <- doc_topics %>%
+  pivot_longer(
+    cols = starts_with("Topic"),
+    names_to = "topic",
+    values_to = "proportion"
+  ) %>%
+  mutate(
+    topic_num = as.integer(str_remove(topic, "Topic")),
+    topic_label = topic_labels[topic_num]
+  ) %>%
+  select(topic_num, topic_label, proportion,
+         any_of(c("doc_id", "filename", "Title", "Author", "Article_Type",
+                  "volume", "year", "month", "corpus", "publication"))) %>%
+  arrange(topic_num, desc(proportion))
+
+cat("Linked table:", nrow(topic_article_link), "rows\n")
+cat("  (", nrow(doc_topics), "documents x", chosen_K, "topics )\n\n")
+```
+
+### 10b. Dominant Topic Assignment
+
+```{r dominant-topic}
+exemplar_threshold <- 0.40
+
+dominant_topics <- doc_topics %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "proportion") %>%
+  mutate(topic_num = as.integer(str_remove(topic, "Topic"))) %>%
+  group_by(doc_id) %>%
+  slice_max(proportion, n = 1, with_ties = FALSE) %>%
+  ungroup() %>%
+  mutate(
+    topic_label = topic_labels[topic_num],
+    strong_exemplar = proportion >= exemplar_threshold,
+    proportion_pct = round(proportion * 100, 1)
+  ) %>%
+  select(doc_id, any_of(c("filename", "Title", "Author", "Article_Type",
+         "volume", "year", "month", "corpus", "publication")),
+         dominant_topic = topic_num, topic_label, proportion_pct, strong_exemplar) %>%
+  arrange(dominant_topic, desc(proportion_pct))
+
+cat("Dominant topic assigned to", nrow(dominant_topics), "documents\n")
+cat("Strong exemplars (>=", exemplar_threshold * 100, "%):",
+    sum(dominant_topics$strong_exemplar), "\n\n")
+
+# Summary table
+dominant_topics %>%
+  group_by(dominant_topic, topic_label) %>%
+  summarise(
+    n_articles = n(),
+    n_strong = sum(strong_exemplar),
+    avg_pct = round(mean(proportion_pct), 1),
+    .groups = "drop"
+  ) %>%
+  print(n = chosen_K)
+```
+
+### 10c. Strong Exemplar Articles
+
+```{r strong-exemplars}
+cat("\nSTRONG EXEMPLARS (>=", exemplar_threshold * 100, "% topic proportion):\n\n")
+
+for (t in 1:chosen_K) {
+  strong <- dominant_topics %>% filter(dominant_topic == t, strong_exemplar)
+  cat(rep("-", 60), "\n", sep = "")
+  cat("Topic", t, ":", str_remove(topic_labels[t], "^Topic \\d+: "),
+      " (", nrow(strong), " strong)\n", sep = "")
+
+  if (nrow(strong) > 0) {
+    for (i in 1:min(5, nrow(strong))) {
+      row <- strong[i, ]
+      title_str <- ifelse(is.na(row$Title), row$filename, row$Title)
+      author_str <- ifelse(is.na(row$Author) | row$Author == "", "-", row$Author)
+      pub_str <- ifelse(row$corpus == "Womans_Exponent", "WE", "RSM")
+      cat(sprintf("  [%s%% | %s] %s | %s | %s\n",
+                  row$proportion_pct, pub_str,
+                  str_trunc(title_str, 50), author_str, row$year))
+    }
+  } else {
+    cat("  (none above threshold)\n")
+  }
+  cat("\n")
+}
+```
+
+### 10d. Representative Passages
+
+```{r representative-passages}
+cat("REPRESENTATIVE PASSAGES PER TOPIC\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+all_top_words <- labelTopics(stm_model_corpus, n = 15)
+
+for (t in 1:chosen_K) {
+  cat("TOPIC", t, ":", str_remove(topic_labels[t], "^Topic \\d+: "), "\n")
+  cat(rep("-", 60), "\n", sep = "")
+
+  top_docs <- topic_article_link %>% filter(topic_num == t) %>% head(3)
+  topic_words <- tolower(all_top_words$frex[t, 1:15])
+
+  for (j in 1:nrow(top_docs)) {
+    fname <- top_docs$filename[j]
+    title_str <- ifelse(is.na(top_docs$Title[j]), fname,
+                        str_trunc(top_docs$Title[j], 60))
+
+    # Search both input folders for the file
+    match_file <- c(
+      list.files(corpus_a_path, pattern = fixed(fname),
+                 recursive = TRUE, full.names = TRUE),
+      list.files(corpus_b_path, pattern = fixed(fname),
+                 recursive = TRUE, full.names = TRUE)
+    )
+    if (length(match_file) == 0) next
+
+    full_text <- read_file(match_file[1])
+    # Strip header
+    full_text <- str_remove(full_text, "^\\[.*?\\]\\s*\\n?")
+    sentences <- str_split(full_text, "(?<=[.!?])\\s+")[[1]]
+    sentences <- sentences[nchar(sentences) > 40 & nchar(sentences) < 500]
+    if (length(sentences) == 0) next
+
+    # Score sentences by FREX word overlap
+    scores <- sapply(sentences, function(s) {
+      words <- tolower(str_split(s, "\\s+")[[1]])
+      sum(words %in% topic_words) / max(length(words), 1)
+    })
+    best <- str_squish(sentences[order(scores, decreasing = TRUE)[1]])
+
+    pub_tag <- ifelse(grepl("input2", match_file[1]), "RSM", "WE")
+    cat(sprintf("\n  [%s | %.1f%%] %s\n", pub_tag,
+                top_docs$proportion[j] * 100, title_str))
+    cat("  \"", str_trunc(best, 300), "\"\n", sep = "")
+  }
+  cat("\n\n")
+}
+```
+
+---
+
+## 11. Estimate Publication Effects
+
+```{r set-coef-name}
+# --------------------------------------------------------------------------
+# FIX 5: Define corpus_coef_name HERE so every downstream chunk can see it
+# --------------------------------------------------------------------------
+# Determine coefficient name dynamically from factor levels
+corpus_levels <- levels(meta$corpus)
+cat("Corpus factor levels:", paste(corpus_levels, collapse = ", "), "\n")
+cat("Reference group (alphabetically first):", corpus_levels[1], "\n\n")
+
+# The non-reference level becomes the coefficient name
+corpus_coef_name <- paste0("corpus", corpus_levels[2])
+cat("Coefficient name:", corpus_coef_name, "\n\n")
+```
+
+```{r estimate-effects}
+cat(rep("=", 70), "\n", sep = "")
+cat("ESTIMATING PUBLICATION EFFECTS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+prep_corpus <- estimateEffect(
+  formula  = 1:chosen_K ~ corpus + s(year),
+  stmobj   = stm_model_corpus,
+  metadata = meta,
+  uncertainty = "Global"
+)
+
+effects_file <- file.path(output_path, paste0("publication_effects_K", chosen_K, ".rds"))
+saveRDS(prep_corpus, effects_file)
+cat("✓ Effects saved to:", effects_file, "\n\n")
+```
+
+```{r diagnose-regression}
+cat("Checking Topic 1 regression results:\n\n")
+test_result <- summary(prep_corpus, topics = 1)
+print(test_result)
+
+cat("\nRow names in regression table:\n")
+print(rownames(test_result$tables[[1]]))
+
+cat("\nCorpus factor levels:\n")
+print(levels(meta$corpus))
+```
+
+---
+
+## 12. Identify Significant Differences
+
+```{r view-differences}
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPICS WITH SIGNIFICANT DIFFERENCES BETWEEN PUBLICATIONS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+significant_topics <- tibble()
+
+for (i in 1:chosen_K) {
+  sum_result <- summary(prep_corpus, topics = i)
+
+  if (corpus_coef_name %in% rownames(sum_result$tables[[1]])) {
+    corpus_pvalue <- sum_result$tables[[1]][corpus_coef_name, "Pr(>|t|)"]
+    corpus_coef   <- sum_result$tables[[1]][corpus_coef_name, "Estimate"]
+    corpus_se     <- sum_result$tables[[1]][corpus_coef_name, "Std. Error"]
+
+    if (corpus_pvalue < 0.05) {
+      direction <- ifelse(corpus_coef > 0,
+                          paste0("MORE in ", corpus_levels[2]),
+                          paste0("MORE in ", corpus_levels[1]))
+
+      cat(sprintf("%s\n", topic_labels[i]))
+      cat(sprintf("  Difference: %.4f (SE = %.4f)\n", corpus_coef, corpus_se))
+      cat(sprintf("  P-value: %.4f → %s\n\n", corpus_pvalue, direction))
+
+      significant_topics <- bind_rows(significant_topics, tibble(
+        Topic     = i,
+        Label     = str_remove(topic_labels[i], "^Topic \\d+: "),
+        Coefficient = corpus_coef,
+        SE        = corpus_se,
+        P_value   = corpus_pvalue,
+        Direction = direction
+      ))
+    }
+  }
+}
+
+if (nrow(significant_topics) == 0) {
+  cat("No significant differences found at p < 0.05\n")
+} else {
+  cat("\nTotal significant differences:", nrow(significant_topics), "\n")
+}
+```
+
+---
+
+## 13. Build Comparison Table
+
+```{r comparison-table}
+corpus_effects <- map_dfr(1:chosen_K, function(i) {
+  sum_result <- summary(prep_corpus, topics = i)
+
+  if (corpus_coef_name %in% rownames(sum_result$tables[[1]])) {
+    tibble(
+      Topic      = i,
+      Label      = str_remove(topic_labels[i], "^Topic \\d+: "),
+      Difference = sum_result$tables[[1]][corpus_coef_name, "Estimate"],
+      SE         = sum_result$tables[[1]][corpus_coef_name, "Std. Error"],
+      P_value    = sum_result$tables[[1]][corpus_coef_name, "Pr(>|t|)"]
+    )
+  }
+}) %>%
+  mutate(
+    Significant    = P_value < 0.05,
+    Difference_Pct = round(Difference * 100, 2),
+    Direction = case_when(
+      !Significant ~ "No significant difference",
+      Difference > 0 ~ "More in Woman's Exponent",
+      TRUE ~ "More in Relief Society Magazine"
+    )
+  ) %>%
+  arrange(desc(abs(Difference_Pct)))
+
+# topic_props = doc_topics (created in Section 10 via make.dt)
+topic_props <- doc_topics
+
+cat("Comparison table built.\n")
+print(corpus_effects)
+```
+
+---
+
+## 14. Visualize Differences
+
+```{r diverging-bar}
+diverging_data <- corpus_effects %>%
+  mutate(
+    unique_label = paste0("T", Topic, ": ", Label),
+    color_group  = case_when(
+      !Significant ~ "No difference",
+      Difference_Pct > 0 ~ "More in Woman's Exponent",
+      TRUE ~ "More in Relief Society Magazine"
+    )
+  ) %>%
+  arrange(Difference_Pct)
+
+diverging_data$unique_label <- factor(
+  diverging_data$unique_label,
+  levels = unique(diverging_data$unique_label[order(diverging_data$Difference_Pct)])
+)
+
+ggplot(diverging_data, aes(x = Difference_Pct, y = unique_label, fill = color_group)) +
+  geom_col() +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black", linewidth = 1) +
+  scale_fill_manual(values = c(
+    "More in Woman's Exponent"         = "#CD661D",
+    "More in Relief Society Magazine"  = "#458B74",
+    "No difference"                    = "#94a3b8"
+  )) +
+  labs(
+    title    = "Topic Differences Between Publications",
+    subtitle = "Positive = more in Woman's Exponent | Negative = more in Relief Society Magazine",
+    x = "Difference (percentage points)",
+    y = NULL,
+    fill = "Direction"
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    legend.position  = "bottom",
+    axis.text.y      = element_text(size = 8),
+    panel.grid.major.y = element_blank()
+  )
+```
+
+---
+
+## 15. Plot Individual Significant Topic Comparisons
+
+```{r plot-topic, fig.width=10, fig.height=6}
+if (nrow(significant_topics) > 0) {
+
+  cat("Creating comparison plots for significant topics...\n\n")
+
+  # FIX 7: was max(3, ...) which would crash if fewer than 3 sig topics exist
+  n_plots <- min(3, nrow(significant_topics))
+
+  for (plot_num in 1:n_plots) {
+    topic_to_plot <- significant_topics$Topic[plot_num]
+    topic_col     <- paste0("Topic", topic_to_plot)
+
+    plot_data <- topic_props %>%
+      group_by(corpus) %>%
+      summarize(
+        mean_prop = mean(.data[[topic_col]]),
+        se        = sd(.data[[topic_col]]) / sqrt(n()),
+        ci_lower  = mean_prop - 1.96 * se,
+        ci_upper  = mean_prop + 1.96 * se,
+        .groups   = "drop"
+      ) %>%
+      mutate(
+        publication = case_when(
+          corpus == "Relief_Society_Magazine" ~ "Relief Society\nMagazine",
+          corpus == "Womans_Exponent"         ~ "Woman's\nExponent",
+          TRUE ~ as.character(corpus)
+        ),
+        publication = factor(publication,
+                             levels = c("Relief Society\nMagazine", "Woman's\nExponent"))
+      )
+
+    p <- ggplot(plot_data, aes(x = publication, y = mean_prop)) +
+      geom_point(size = 5, color = "#3b82f6") +
+      geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper),
+                    width = 0.15, linewidth = 1.2, color = "#3b82f6") +
+      geom_line(aes(group = 1), color = "#94a3b8", linewidth = 0.8, linetype = "dashed") +
+      labs(
+        title    = str_remove(topic_labels[topic_to_plot], "^Topic \\d+: "),
+        subtitle = sprintf("Difference: %.2f%% (p = %.4f) — %s",
+                           significant_topics$Coefficient[plot_num] * 100,
+                           significant_topics$P_value[plot_num],
+                           significant_topics$Direction[plot_num]),
+        x = "Publication",
+        y = "Expected Topic Proportion"
+      ) +
+      theme_minimal(base_size = 13) +
+      theme(
+        plot.title         = element_text(size = 15, face = "bold", hjust = 0.5),
+        plot.subtitle      = element_text(size = 11, hjust = 0.5, color = "#64748b"),
+        panel.grid.minor   = element_blank(),
+        panel.grid.major.x = element_blank()
+      ) +
+      scale_y_continuous(labels = scales::percent_format(accuracy = 0.1),
+                         limits = c(0, max(plot_data$ci_upper) * 1.1))
+
+    print(p)
+    cat("\n")
+  }
+
+} else {
+  cat("No significant differences to plot.\n")
+}
+```
+
+---
+
+## 16. Faceted Comparison — Top 9 Most Different Topics
+
+```{r faceted-comparison, fig.width=14, fig.height=10}
+top_9_topics <- corpus_effects %>%
+  arrange(desc(abs(Difference_Pct))) %>%
+  head(9) %>%
+  pull(Topic)
+
+facet_data <- topic_props %>%
+  select(corpus, all_of(paste0("Topic", top_9_topics))) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "proportion") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic"))) %>%
+  group_by(corpus, topic_num) %>%
+  summarize(
+    mean     = mean(proportion),
+    se       = sd(proportion) / sqrt(n()),
+    ci_lower = mean - 1.96 * se,
+    ci_upper = mean + 1.96 * se,
+    .groups  = "drop"
+  ) %>%
+  mutate(
+    topic_label = str_wrap(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 25),
+    publication = ifelse(corpus == "Relief_Society_Magazine",
+                         "Relief Society\nMagazine", "Woman's\nExponent")
+  )
+
+ggplot(facet_data, aes(x = publication, y = mean, fill = publication)) +
+  geom_col(alpha = 0.7) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2) +
+  facet_wrap(~topic_label, ncol = 3, scales = "free_y") +
+  scale_fill_manual(values = c("Relief Society\nMagazine" = "#458B74",
+                               "Woman's\nExponent"        = "#CD661D")) +
+  labs(title = "Top 9 Topics: Comparison by Publication",
+       x = NULL, y = "Mean Topic Proportion", fill = "Publication") +
+  theme_minimal() +
+  theme(axis.text.x    = element_blank(),
+        legend.position = "bottom",
+        strip.text      = element_text(size = 9, face = "bold")) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+---
+
+## 17. Topic Prevalence Over Time
+
+```{r topic-time-series, fig.width=12, fig.height=8}
+topic_time <- topic_props %>%
+  select(starts_with("Topic"), year, corpus) %>%
+  group_by(year, corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic")))
+
+top_5_difference <- corpus_effects %>%
+  arrange(desc(abs(Difference_Pct))) %>%
+  head(5) %>%
+  pull(Topic)
+
+topic_time %>%
+  filter(topic_num %in% top_5_difference) %>%
+  mutate(topic_label = str_remove(topic_labels[topic_num], "^Topic \\d+: ")) %>%
+  ggplot(aes(x = year, y = prevalence, color = topic_label, linetype = corpus)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  facet_wrap(~topic_label, ncol = 2, scales = "free_y") +
+  scale_color_brewer(palette = "Set2") +
+  scale_linetype_manual(values = c("solid", "dashed")) +
+  labs(title    = "Topic Prevalence Over Time",
+       subtitle = "Top 5 topics with largest differences between publications",
+       x = "Year", y = "Prevalence",
+       color    = "Topic",
+       linetype = "Publication") +
+  theme_minimal() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(labels = scales::percent)
+```
+
+
+## Topic Continuity Over Time
+```{r topic-continuity-time, fig.width=12, fig.height=8}
+# Topics with the SMALLEST absolute difference between publications = most shared
+
+top_5_similar <- corpus_effects %>%
+  arrange(abs(Difference_Pct)) %>%
+  head(6) %>%
+  pull(Topic)
+
+topic_time %>%
+  filter(topic_num %in% top_5_similar) %>%
+  mutate(
+    topic_label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    publication = ifelse(corpus == "Relief_Society_Magazine",
+                         "Relief Society Magazine", "Woman's Exponent")
+  ) %>%
+  ggplot(aes(x = year, y = prevalence, color = publication, linetype = publication)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 2.5, alpha = 0.7) +
+  geom_smooth(method = "loess", se = FALSE, linewidth = 0.5, alpha = 0.4) +
+  facet_wrap(~topic_label, ncol = 2, scales = "fixed") +
+  scale_color_manual(values = c(
+    "Woman's Exponent"        = "#CD661D",
+    "Relief Society Magazine" = "#458B74"
+  )) +
+  scale_linetype_manual(values = c(
+    "Woman's Exponent"        = "solid",
+    "Relief Society Magazine" = "dashed"
+  )) +
+  labs(
+    title    = "Topics of Greatest Continuity Between Publications",
+    subtitle = "Lines tracking closely together = shared emphasis across time",
+    x        = "Year",
+    y        = "Mean Topic Proportion",
+    color    = "Publication",
+    linetype = "Publication"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    strip.text      = element_text(face = "bold", size = 10),
+    panel.grid.minor = element_blank(),
+    plot.title      = element_text(face = "bold", size = 15),
+    plot.subtitle   = element_text(size = 11, color = "#64748b")
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1))
+```
+
+---
+
+## 18. Topic Correlation Network
+
+```{r topic-correlation-scatter, fig.width=10, fig.height=8}
+topic_corr   <- topicCorr(stm_model_corpus)
+corr_matrix  <- topic_corr$cor
+
+corr_data <- as.data.frame(corr_matrix) %>%
+  rownames_to_column("topic1") %>%
+  pivot_longer(-topic1, names_to = "topic2", values_to = "correlation") %>%
+  mutate(
+    topic1_num = as.numeric(str_remove(topic1, "V")),
+    topic2_num = as.numeric(str_remove(topic2, "V"))
+  ) %>%
+  filter(topic1_num < topic2_num, abs(correlation) > 0.02) %>%
+  mutate(
+    topic1_label = str_remove(topic_labels[topic1_num], "^Topic \\d+: "),
+    topic2_label = str_remove(topic_labels[topic2_num], "^Topic \\d+: ")
+  )
+
+ggplot(corr_data, aes(x = topic1_num, y = topic2_num,
+                      size = abs(correlation), color = correlation)) +
+  geom_point(alpha = 0.8) +
+  scale_color_gradient2(low = "#dc2626", mid = "#fbbf24", high = "#2563eb",
+                        midpoint = 0, limits = c(-0.2, 0.2)) +
+  scale_size_continuous(range = c(3, 15)) +
+  labs(title    = "Topic Correlation Network",
+       subtitle = "Weak correlations indicate well-separated topics (good!)",
+       x = "Topic Number", y = "Topic Number",
+       color = "Correlation", size = "Abs. Correlation") +
+  theme_minimal(base_size = 13)
+```
+
+### Correlation Heatmap
+
+```{r correlation-heatmap}
+heatmap_data <- as.data.frame(corr_matrix) %>%
+  rownames_to_column("topic1") %>%
+  pivot_longer(-topic1, names_to = "topic2", values_to = "correlation") %>%
+  mutate(
+    topic1_num = as.numeric(str_remove(topic1, "V")),
+    topic2_num = as.numeric(str_remove(topic2, "V"))
+  )
+
+ggplot(heatmap_data, aes(x = topic1_num, y = topic2_num, fill = correlation)) +
+  geom_tile(color = "white", linewidth = 0.5) +
+  scale_fill_gradient2(low = "#dc2626", mid = "white", high = "#2563eb",
+                       midpoint = 0, limits = c(-0.15, 0.15),
+                       breaks = seq(-0.15, 0.15, 0.05)) +
+  labs(title    = "Topic Correlation Heatmap",
+       subtitle = "Weak correlations are normal — indicates distinct topics",
+       x = "Topic Number", y = "Topic Number", fill = "Correlation") +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        panel.grid  = element_blank()) +
+  coord_fixed() +
+  scale_x_continuous(breaks = seq(1, chosen_K, 1)) +
+  scale_y_continuous(breaks = seq(1, chosen_K, 1))
+```
+
+### Side-by-Side Heatmaps by Publication
+
+```{r heatmap-by-publication}
+calc_pub_corr <- function(pub_name) {
+  topic_props %>%
+    filter(corpus == pub_name) %>%
+    select(starts_with("Topic")) %>%
+    as.matrix() %>%
+    cor()
+}
+
+corr_rs <- calc_pub_corr("Relief_Society_Magazine")
+corr_we <- calc_pub_corr("Womans_Exponent")
+
+prepare_heatmap_data <- function(corr_matrix, pub_name) {
+  as.data.frame(corr_matrix) %>%
+    rownames_to_column("topic1") %>%
+    pivot_longer(-topic1, names_to = "topic2", values_to = "correlation") %>%
+    mutate(
+      topic1_num  = as.numeric(str_remove(topic1, "Topic")),
+      topic2_num  = as.numeric(str_remove(topic2, "Topic")),
+      publication = pub_name
+    )
+}
+
+bind_rows(
+  prepare_heatmap_data(corr_rs, "Relief Society Magazine"),
+  prepare_heatmap_data(corr_we, "Woman's Exponent")
+) %>%
+  ggplot(aes(x = topic1_num, y = topic2_num, fill = correlation)) +
+  geom_tile(color = "white", linewidth = 0.3) +
+  facet_wrap(~publication, ncol = 2) +
+  scale_fill_gradient2(low = "#dc2626", mid = "white", high = "#2563eb",
+                       midpoint = 0, limits = c(-0.3, 0.3)) +
+  labs(title    = "Topic Correlation Comparison",
+       subtitle = "How do topic relationships differ between publications?",
+       x = "Topic Number", y = "Topic Number", fill = "Correlation") +
+  theme_minimal() +
+  theme(panel.grid = element_blank(),
+        strip.text = element_text(size = 12, face = "bold")) +
+  coord_fixed() +
+  scale_x_continuous(breaks = seq(5, chosen_K, 5)) +
+  scale_y_continuous(breaks = seq(5, chosen_K, 5))
+```
+
+---
+
+## 19. Scatterplot: Topic Prevalence by Publication
+
+```{r prevalence-scatter}
+topic_means <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean)) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic"))) %>%
+  pivot_wider(names_from = corpus, values_from = prevalence) %>%
+  left_join(corpus_effects %>% select(Topic, P_value, Significant),
+            by = c("topic_num" = "Topic")) %>%
+  mutate(
+    label = str_trunc(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 30),
+    distance_from_diagonal = abs(Womans_Exponent - Relief_Society_Magazine),
+    show_label = Significant |
+                 (!Significant & topic_num %in% head(order(distance_from_diagonal), 3))
+  )
+
+ggplot(topic_means, aes(x = Relief_Society_Magazine, y = Womans_Exponent)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed",
+              color = "#94a3b8", linewidth = 1.5) +
+  geom_point(aes(color = Significant,
+                 size  = abs(Womans_Exponent - Relief_Society_Magazine)),
+             alpha = 0.7) +
+  geom_text_repel(
+    data = topic_means %>% filter(show_label),
+    aes(label = label, color = Significant),
+    size = 3.5, max.overlaps = 20,
+    box.padding = 0.5, point.padding = 0.3,
+    segment.color = "#64748b", segment.linewidth = 0.3,
+    show.legend = FALSE
+  ) +
+  scale_color_manual(values = c("FALSE" = "#474747", "FALSE" = "#474747"),
+                     labels = c("No significant difference", "Significant difference")) +
+  scale_size_continuous(range = c(3, 12), guide = "none") +
+  labs(title    = "Topic Prevalence Comparison",
+       subtitle = "Diagonal = equal prevalence; distance from line = magnitude of difference",
+       x = "Relief Society Magazine (Mean Proportion)",
+       y = "Woman's Exponent (Mean Proportion)",
+       color = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        plot.title      = element_text(size = 16, face = "bold")) +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1))
+```
+
+---
+
+## 20. Word Clouds
+
+```{r wordcloud-single, fig.width=8, fig.height=6}
+topic_to_show <- 17  # CHANGE THIS
+
+topic_words_wc <- labelTopics(stm_model_corpus, topics = topic_to_show, n = 50)
+word_freq <- data.frame(
+  word = topic_words_wc$prob[1, ],
+  freq = rank(desc(seq_along(topic_words_wc$prob[1, ])))
+)
+
+set.seed(123)
+wordcloud(words = word_freq$word, freq = word_freq$freq,
+          min.freq = 1, max.words = 50, random.order = FALSE,
+          rot.per = 0.35, colors = brewer.pal(8, "Dark2"), scale = c(4, 0.5))
+title(main = topic_labels[topic_to_show], cex.main = 1.5, col.main = "#1e3a8a")
+```
+
+```{r wordcloud-comparison, fig.width=14, fig.height=7}
+# FIX 8: was using freq_rs for BOTH panels — left panel now correctly uses freq_we
+topic_num_wc <- 4  # CHANGE THIS
+
+topic_docs_wc <- topic_props
+topic_col_wc  <- paste0("Topic", topic_num_wc)
+
+get_corpus_words <- function(corpus_name) {
+  processed_texts %>%
+    filter(corpus == corpus_name) %>%
+    left_join(topic_docs_wc %>% select(doc_id, !!sym(topic_col_wc)), by = "doc_id") %>%
+    filter(!!sym(topic_col_wc) > quantile(!!sym(topic_col_wc), 0.75, na.rm = TRUE)) %>%
+    pull(text_final) %>%
+    paste(collapse = " ") %>%
+    strsplit("\\s+") %>%
+    `[[`(1) %>%
+    table()
+}
+
+freq_we <- get_corpus_words("Womans_Exponent")
+freq_rs <- get_corpus_words("Relief_Society_Magazine")
+
+par(mfrow = c(1, 2))
+
+set.seed(123)
+wordcloud(names(freq_we), freq_we, max.words = 100,
+          colors = brewer.pal(8, "BuGn")[3:8], scale = c(3, 0.5))
+title(main = "Woman's Exponent", col.main = "#CD661D")
+
+set.seed(123)
+wordcloud(names(freq_rs), freq_rs, max.words = 100,
+          colors = brewer.pal(8, "BuGn")[3:8], scale = c(3, 0.5))
+title(main = "Relief Society Magazine", col.main = "#556B2F")
+
+par(mfrow = c(1, 1))
+```
+
+### Whole-Corpus Word Cloud Comparison
+
+```{r wordcloud-whole-corpus, fig.width=14, fig.height=7}
+# ============================================================
+# Side-by-side word clouds: ALL words per publication
+# Shows the overall vocabulary fingerprint of each periodical
+# ============================================================
+
+freq_we_all <- processed_texts %>%
+  filter(corpus == "Womans_Exponent") %>%
+  pull(text_final) %>%
+  paste(collapse = " ") %>%
+  strsplit("\\s+") %>%
+  `[[`(1) %>%
+  table()
+
+freq_rsm_all <- processed_texts %>%
+  filter(corpus == "Relief_Society_Magazine") %>%
+  pull(text_final) %>%
+  paste(collapse = " ") %>%
+  strsplit("\\s+") %>%
+  `[[`(1) %>%
+  table()
+
+par(mfrow = c(1, 2))
+
+set.seed(123)
+wordcloud(names(freq_we_all), freq_we_all, max.words = 150,
+          colors = brewer.pal(9, "Greys")[4:9], scale = c(4, 0.5))
+title(main = "Woman's Exponent — Full Corpus", col.main = "#030303", cex.main = 1.3)
+
+set.seed(123)
+wordcloud(names(freq_rsm_all), freq_rsm_all, max.words = 150,
+          colors = brewer.pal(9, "Greys")[4:9], scale = c(4, 0.5))
+title(main = "Relief Society Magazine — Full Corpus", col.main = "#030303", cex.main = 1.3)
+
+par(mfrow = c(1, 1))
+```
+
+### Distinctive Words: What Makes Each Publication Unique
+
+```{r wordcloud-distinctive, fig.width=16, fig.height=9}
+# ============================================================
+# Words that are disproportionately MORE common in one pub
+# vs the other — the vocabulary that distinguishes them
+# ============================================================
+
+# Build frequency tables with proportions
+we_df <- tibble(word = names(freq_we_all), we_count = as.integer(freq_we_all)) %>%
+  mutate(we_prop = we_count / sum(we_count))
+rsm_df <- tibble(word = names(freq_rsm_all), rsm_count = as.integer(freq_rsm_all)) %>%
+  mutate(rsm_prop = rsm_count / sum(rsm_count))
+
+# Common OCR fragments and word-pieces to exclude
+ocr_junk <- c("ters", "tion", "ence", "ment", "ness", "ings", "tive", "ance",
+              "ered", "deliv", "presi", "inter", "encour", "terest", "testi",
+              "bers", "soci", "coun", "howe", "dren", "chil", "pariel",
+              "organiza", "ganized", "ference", "musser", "selion",
+              "suf", "cts", "ref", "ber", "ter", "pre", "dis", "hus",
+              "peo", "ety", "ous", "lar", "est", "con", "mony", "lief")
+
+word_compare <- full_join(we_df, rsm_df, by = "word") %>%
+  replace_na(list(we_count = 0, rsm_count = 0, we_prop = 0, rsm_prop = 0)) %>%
+  filter(
+    we_count + rsm_count >= 20,         # Only words with meaningful frequency
+    nchar(word) >= 5,                   # Require 5+ chars to avoid most fragments
+    !grepl("^[^a-z]+$", word),          # Drop pure symbols/numbers
+    !word %in% ocr_junk,               # Drop known OCR fragments
+    !grepl("^(pre|suf|dis|inter|un|re)[a-z]{0,2}$", word),  # Drop prefix-only fragments
+    !grepl("^[a-z]{1,3}(tion|ment|ence|ness|ings|tive|ance|ered|ment)$", word),  # Drop suffix-only fragments
+    # Require word to exist in BOTH corpora (at least a little) — truly distinctive
+    # words are used MORE in one, not ONLY in one (which signals OCR artifact)
+    we_count >= 3 & rsm_count >= 3
+  ) %>%
+  mutate(log_ratio = log2((we_prop + 0.00001) / (rsm_prop + 0.00001)))
+
+# Words most distinctive to WE
+we_distinctive <- word_compare %>%
+  arrange(desc(log_ratio)) %>%
+  head(80)
+
+# Words most distinctive to RSM
+rsm_distinctive <- word_compare %>%
+  arrange(log_ratio) %>%
+  head(80)
+
+par(mfrow = c(1, 2), mar = c(1, 1, 3, 1))
+
+set.seed(123)
+wordcloud(we_distinctive$word, we_distinctive$log_ratio,
+          max.words = 80, min.freq = 0, rot.per = 0.4,
+          colors = brewer.pal(9, "Greys")[4:9], scale = c(3.5, 0.5))
+title(main = "\nDistinctive to Woman's Exponent", col.main = "#030303", cex.main = 1.6, line = 0.7)
+
+set.seed(123)
+wordcloud(rsm_distinctive$word, abs(rsm_distinctive$log_ratio),
+          max.words = 80, min.freq = 0, rot.per = 0.4,
+          colors = brewer.pal(9, "Greys")[4:9], scale = c(3.0, 0.5))
+title(main = "\nDistinctive to Relief Society Magazine", col.main = "#030303", cex.main = 1.6, line = 0.7)
+
+par(mfrow = c(1, 1))
+```
+
+---
+
+## 21. Topic Quality
+
+```{r topic-quality-scatter, fig.width=10, fig.height=8}
+# Compute coherence and exclusivity separately for reliability
+sem_coh_vals <- semanticCoherence(stm_model_corpus, docs)
+excl_vals    <- exclusivity(stm_model_corpus)
+
+quality_df <- data.frame(
+  topic     = 1:chosen_K,
+  sem_coh   = sem_coh_vals,
+  excl      = excl_vals
+)
+quality_df$label <- str_trunc(str_remove(topic_labels, "^Topic \\d+: "), 25)
+
+# Join significance data
+quality_df <- merge(quality_df,
+                    corpus_effects[, c("Topic", "Significant", "Difference_Pct")],
+                    by.x = "topic", by.y = "Topic", all.x = TRUE)
+
+ggplot(quality_df, aes(x = sem_coh, y = excl)) +
+  geom_point(aes(color = Significant, size = abs(Difference_Pct)), alpha = 0.7) +
+  geom_text(aes(label = topic), size = 3, nudge_y = 0.3, check_overlap = TRUE) +
+  scale_color_manual(values = c("FALSE" = "#94a3b8", "TRUE" = "#ef4444"),
+                     labels = c("Not significant", "Significant difference")) +
+  scale_size_continuous(range = c(3, 10), guide = "none") +
+  labs(title    = "Topic Quality: Semantic Coherence vs Exclusivity",
+       subtitle = "Upper right = high quality | Numbers = Topic IDs",
+       x = "Semantic Coherence\n(higher = words co-occur more)",
+       y = "Exclusivity\n(higher = words unique to topic)",
+       color = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        plot.title      = element_text(face = "bold", size = 15))
+```
+
+---
+
+# PART III: DEEP COMPARATIVE ANALYSIS
+
+---
+
+## 22. Topic Continuity & Handoff Between Publications
+
+This section identifies which topics are **shared** (present in both publications), which are **signature** (strongly associated with one), and which represent an editorial **handoff** (declining in one, emerging in the other).
+
+```{r topic-continuity, fig.width=12, fig.height=8}
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPIC CONTINUITY ANALYSIS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Mean topic proportion per publication
+pub_means <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.integer(str_remove(topic, "Topic"))) %>%
+  pivot_wider(names_from = corpus, values_from = prevalence)
+
+# Classify topics
+pub_means <- pub_means %>%
+  mutate(
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    we_pct = Womans_Exponent * 100,
+    rsm_pct = Relief_Society_Magazine * 100,
+    ratio = we_pct / pmax(rsm_pct, 0.001),
+    category = case_when(
+      ratio > 2.0  ~ "WE Signature",
+      ratio < 0.5  ~ "RSM Signature",
+      ratio >= 0.8 & ratio <= 1.25 ~ "Shared (Balanced)",
+      ratio > 1.25 ~ "Shared (WE-leaning)",
+      TRUE ~ "Shared (RSM-leaning)"
+    )
+  )
+
+cat("Topic Classification:\n\n")
+for (cat_name in c("WE Signature", "Shared (Balanced)", "Shared (WE-leaning)",
+                    "Shared (RSM-leaning)", "RSM Signature")) {
+  topics_in_cat <- pub_means %>% filter(category == cat_name)
+  if (nrow(topics_in_cat) > 0) {
+    cat(cat_name, ":\n")
+    for (i in 1:nrow(topics_in_cat)) {
+      row <- topics_in_cat[i, ]
+      cat(sprintf("  T%d: %-35s  WE: %5.1f%%  RSM: %5.1f%%\n",
+                  row$topic_num, row$label, row$we_pct, row$rsm_pct))
+    }
+    cat("\n")
+  }
+}
+
+# Visualize: Dumbbell plot
+pub_means_long <- pub_means %>%
+  select(topic_num, label, category, Womans_Exponent, Relief_Society_Magazine) %>%
+  pivot_longer(c(Womans_Exponent, Relief_Society_Magazine),
+               names_to = "pub", values_to = "prevalence") %>%
+  mutate(
+    publication = ifelse(pub == "Womans_Exponent", "Woman's Exponent", "Relief Society Magazine"),
+    display_label = paste0("T", topic_num, ": ", str_trunc(label, 30))
+  )
+
+ggplot(pub_means_long, aes(x = prevalence, y = reorder(display_label, prevalence))) +
+  geom_line(aes(group = display_label), color = "grey60", linewidth = 1.5) +
+  geom_point(aes(color = publication), size = 4) +
+  scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Prevalence: Dumbbell Comparison",
+       subtitle = "Distance between dots = magnitude of difference between publications",
+       x = "Mean Topic Proportion", y = NULL, color = "Publication") +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom",
+        panel.grid.major.y = element_blank()) +
+  scale_x_continuous(labels = percent_format())
+```
+
+### Topic Fingerprint Radar
+
+```{r topic-fingerprint, fig.width=10, fig.height=10}
+# Radar/polar chart showing each publication's topic "fingerprint"
+fingerprint_data <- pub_means %>%
+  select(topic_num, label, we_pct, rsm_pct) %>%
+  pivot_longer(c(we_pct, rsm_pct), names_to = "pub", values_to = "pct") %>%
+  mutate(
+    publication = ifelse(pub == "we_pct", "Woman's Exponent", "Relief Society Magazine"),
+    topic_label = paste0("T", topic_num)
+  )
+
+ggplot(fingerprint_data, aes(x = topic_label, y = pct, fill = publication)) +
+  geom_col(position = "dodge", alpha = 0.8) +
+  coord_polar() +
+  scale_fill_manual(values = c("Woman's Exponent" = "#CD661D",
+                               "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Fingerprint: Publication Profiles",
+       subtitle = "Each spoke = one topic; length = prevalence",
+       x = NULL, y = "Prevalence (%)", fill = "Publication") +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "bottom",
+        axis.text.y = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+---
+
+## 23. Within-Topic Vocabulary Comparison
+
+When both publications discuss the same topic, do they use different language? This reveals **how** each publication frames shared concerns.
+
+```{r vocab-comparison, fig.width=16, fig.height=20}
+cat(rep("=", 70), "\n", sep = "")
+cat("WITHIN-TOPIC VOCABULARY COMPARISON\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# OCR junk / nonsensical fragment blacklist
+vocab_junk <- c(
+  # Common OCR fragments (broken words, suffix/prefix remnants)
+  "ing", "tion", "ment", "ness", "ings", "tive", "ance", "ence",
+  "ered", "ters", "bers", "dren", "howe", "ould", "ight", "ther",
+  "ated", "ting", "ally", "ible", "able", "ious", "eous", "ical",
+  "onal", "ment", "ship", "ward", "wise", "like", "less", "ness",
+  # Truncated word fragments
+  "deliv", "presi", "inter", "encour", "terest", "testi",
+  "soci", "coun", "chil", "pariel", "organiza", "ganized",
+  "ference", "musser", "selion",
+  # Structural / boilerplate remnants
+  "column", "page", "pages", "number", "vol", "volume",
+  "chapter", "section", "article", "editor", "editorial",
+  "continued", "copyright", "printed", "published",
+  "january", "february", "march", "april", "june",
+  "july", "august", "september", "october", "november", "december",
+  # Common function words that slip through stopword removal
+  "also", "upon", "much", "many", "well", "even", "come",
+  "came", "made", "make", "said", "just", "like", "shall",
+  "would", "could", "should", "may", "might", "must",
+  "yet", "still", "ever", "every", "very", "most",
+  "one", "two", "three", "four", "five", "six",
+  "first", "second", "third", "last", "next"
+)
+
+# Select top 6 most "shared" topics (closest to equal prevalence)
+shared_topics <- pub_means %>%
+  mutate(balance = abs(log2(ratio))) %>%
+  arrange(balance) %>%
+  head(6) %>%
+  pull(topic_num)
+
+cat("Most shared topics for vocabulary comparison:\n")
+for (t in shared_topics) {
+  cat(sprintf("  T%d: %s\n", t, str_remove(topic_labels[t], "^Topic \\d+: ")))
+}
+cat("\n")
+
+# For each shared topic, find words that differ most between publications
+get_topic_words_by_pub <- function(topic_num, pub_name) {
+  topic_col <- paste0("Topic", topic_num)
+
+  # Get top-quartile documents for this topic in this publication
+  pub_docs <- topic_props %>%
+    filter(corpus == pub_name)
+  threshold <- quantile(pub_docs[[topic_col]], 0.75, na.rm = TRUE)
+
+  doc_ids <- pub_docs %>%
+    filter(.data[[topic_col]] >= threshold) %>%
+    pull(doc_id)
+
+  # Get word frequencies from these documents
+  words <- processed_texts %>%
+    filter(doc_id %in% doc_ids) %>%
+    pull(text_final) %>%
+    paste(collapse = " ") %>%
+    str_split("\\s+") %>%
+    `[[`(1)
+
+  freq <- sort(table(words), decreasing = TRUE)
+  tibble(word = names(freq), count = as.integer(freq)) %>%
+    mutate(proportion = count / sum(count)) %>%
+    filter(
+      nchar(word) >= 4,                                    # Min 4 chars
+      !word %in% vocab_junk,                               # Drop known junk
+      !grepl("^[^a-z]+$", word),                           # Drop pure symbols/numbers
+      !grepl("^[a-z]{1,3}(tion|ment|ence|ness|ings|tive|ance)$", word),  # Suffix-only
+      !grepl("^(pre|suf|dis|un|re)[a-z]{0,2}$", word)     # Prefix-only fragments
+    )
+}
+
+# Build comparison plots for shared topics
+vocab_plots <- list()
+for (idx in seq_along(shared_topics)) {
+  t <- shared_topics[idx]
+
+  words_we  <- get_topic_words_by_pub(t, "Womans_Exponent")
+  words_rsm <- get_topic_words_by_pub(t, "Relief_Society_Magazine")
+
+  # Join and compute log-ratio
+  word_compare <- full_join(
+    words_we %>% select(word, we_prop = proportion),
+    words_rsm %>% select(word, rsm_prop = proportion),
+    by = "word"
+  ) %>%
+    replace_na(list(we_prop = 0.0001, rsm_prop = 0.0001)) %>%
+    mutate(
+      log_ratio = log2(we_prop / rsm_prop),
+      avg_prop = (we_prop + rsm_prop) / 2
+    ) %>%
+    filter(avg_prop > 0.001) %>%  # Only words with meaningful frequency
+    arrange(desc(abs(log_ratio)))
+
+  # Top 20 words each direction
+  top_we  <- word_compare %>% filter(log_ratio > 0) %>% head(20)
+  top_rsm <- word_compare %>% filter(log_ratio < 0) %>% head(20)
+  plot_words <- bind_rows(top_we, top_rsm) %>%
+    mutate(
+      direction = ifelse(log_ratio > 0, "More in WE", "More in RSM"),
+      word = reorder(word, log_ratio)
+    )
+
+  p <- ggplot(plot_words, aes(x = log_ratio, y = word, fill = direction)) +
+    geom_col(alpha = 0.8) +
+    geom_vline(xintercept = 0, linewidth = 0.8) +
+    scale_fill_manual(values = c("More in WE" = "#CD661D", "More in RSM" = "#458B74")) +
+    labs(title = paste0("T", t, ": ", str_trunc(str_remove(topic_labels[t], "^Topic \\d+: "), 35)),
+         x = "Log2 Ratio (WE / RSM)", y = NULL, fill = NULL) +
+    theme_minimal(base_size = 8) +
+    theme(legend.position = "none", plot.title = element_text(size = 10, face = "bold"))
+
+  vocab_plots[[idx]] <- p
+}
+
+# Combine plots
+if (length(vocab_plots) >= 6) {
+  (vocab_plots[[1]] | vocab_plots[[2]] | vocab_plots[[3]]) /
+  (vocab_plots[[4]] | vocab_plots[[5]] | vocab_plots[[6]]) +
+    plot_annotation(
+      title = "Within-Topic Vocabulary Shifts",
+      subtitle = "Top 20 words each publication emphasizes differently when discussing the SAME topic",
+      theme = theme(plot.title = element_text(size = 16, face = "bold"))
+    )
+} else if (length(vocab_plots) >= 1) {
+  wrap_plots(vocab_plots, ncol = 3) +
+    plot_annotation(title = "Within-Topic Vocabulary Shifts")
+}
+```
+
+---
+
+## 24. Topic Diversity & Concentration
+
+Is one publication more topically diverse or more narrowly focused? These measures reveal editorial strategy.
+
+```{r topic-diversity, fig.width=12, fig.height=10}
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPIC DIVERSITY ANALYSIS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Shannon entropy per document (higher = more diverse)
+doc_entropy <- topic_props %>%
+  select(doc_id, corpus, starts_with("Topic")) %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "p") %>%
+  filter(p > 0) %>%
+  group_by(doc_id, corpus) %>%
+  summarize(entropy = -sum(p * log2(p)), .groups = "drop")
+
+# Gini concentration per document (higher = more concentrated on one topic)
+doc_gini <- topic_props %>%
+  select(doc_id, corpus, starts_with("Topic")) %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "p") %>%
+  group_by(doc_id, corpus) %>%
+  summarize(
+    max_topic_prop = max(p),
+    gini = 1 - sum(p^2),  # Inverse Herfindahl (0 = one topic dominates, 1 = even)
+    .groups = "drop"
+  )
+
+# Publication-level summary
+diversity_summary <- doc_entropy %>%
+  left_join(doc_gini, by = c("doc_id", "corpus")) %>%
+  group_by(corpus) %>%
+  summarize(
+    mean_entropy = mean(entropy),
+    sd_entropy = sd(entropy),
+    mean_gini = mean(gini),
+    mean_max_prop = mean(max_topic_prop),
+    pct_strong_exemplar = mean(max_topic_prop >= 0.4) * 100,
+    .groups = "drop"
+  ) %>%
+  mutate(publication = ifelse(corpus == "Womans_Exponent",
+                              "Woman's Exponent", "Relief Society Magazine"))
+
+cat("Diversity Metrics:\n\n")
+cat(sprintf("%-25s  Entropy  Gini   Max-Topic  Strong-Exemplar%%\n", "Publication"))
+cat(rep("-", 75), "\n", sep = "")
+for (i in 1:nrow(diversity_summary)) {
+  r <- diversity_summary[i, ]
+  cat(sprintf("%-25s  %.2f     %.3f  %.1f%%       %.1f%%\n",
+              r$publication, r$mean_entropy, r$mean_gini,
+              r$mean_max_prop * 100, r$pct_strong_exemplar))
+}
+
+# Entropy distribution plot
+p1 <- doc_entropy %>%
+  mutate(publication = ifelse(corpus == "Womans_Exponent",
+                              "Woman's Exponent", "Relief Society Magazine")) %>%
+  ggplot(aes(x = entropy, fill = publication)) +
+  geom_density(alpha = 0.5, linewidth = 0.8) +
+  scale_fill_manual(values = c("Woman's Exponent" = "#CD661D",
+                               "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Diversity per Document",
+       subtitle = "Higher entropy = article discusses more topics evenly",
+       x = "Shannon Entropy (bits)", y = "Density", fill = "Publication") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom")
+
+# Dominant topic concentration plot
+p2 <- doc_gini %>%
+  mutate(publication = ifelse(corpus == "Womans_Exponent",
+                              "Woman's Exponent", "Relief Society Magazine")) %>%
+  ggplot(aes(x = max_topic_prop, fill = publication)) +
+  geom_density(alpha = 0.5, linewidth = 0.8) +
+  geom_vline(xintercept = 0.4, linetype = "dashed", color = "grey40") +
+  ggplot2::annotate("text", x = 0.42, y = 0, label = "Exemplar\nthreshold", size = 3, hjust = 0) +
+  scale_fill_manual(values = c("Woman's Exponent" = "#CD661D",
+                               "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Concentration per Document",
+       subtitle = "Higher = article dominated by single topic; dashed line = 40% exemplar threshold",
+       x = "Dominant Topic Proportion", y = "Density", fill = "Publication") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom") +
+  scale_x_continuous(labels = percent_format())
+
+p1 / p2
+```
+
+### Effective Number of Topics per Publication
+
+```{r effective-topics, fig.width=10, fig.height=5}
+# Publication-level topic distribution (how many topics does each pub actually "use"?)
+pub_topic_dist <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.integer(str_remove(topic, "Topic")),
+    publication = ifelse(corpus == "Womans_Exponent",
+                         "Woman's Exponent", "Relief Society Magazine"),
+    label = str_trunc(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 25)
+  )
+
+# Effective number of topics = exp(entropy of topic distribution)
+pub_ent <- pub_topic_dist %>%
+  filter(prevalence > 0) %>%
+  group_by(publication) %>%
+  summarize(
+    eff_topics = exp(-sum(prevalence * log(prevalence))),
+    .groups = "drop"
+  )
+cat("\nEffective number of topics:\n")
+for (i in 1:nrow(pub_ent)) {
+  cat(sprintf("  %s: %.1f (of %d)\n", pub_ent$publication[i], pub_ent$eff_topics[i], chosen_K))
+}
+
+# Stacked area showing topic weight per publication
+ggplot(pub_topic_dist, aes(x = reorder(label, -prevalence), y = prevalence,
+                            fill = publication)) +
+  geom_col(position = "dodge", alpha = 0.8) +
+  scale_fill_manual(values = c("Woman's Exponent" = "#CD661D",
+                               "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Weight Distribution by Publication",
+       subtitle = paste0("Effective topics: WE = ", round(pub_ent$eff_topics[pub_ent$publication == "Woman's Exponent"], 1),
+                         " | RSM = ", round(pub_ent$eff_topics[pub_ent$publication == "Relief Society Magazine"], 1)),
+       x = NULL, y = "Mean Proportion", fill = "Publication") +
+  theme_minimal(base_size = 10) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+        legend.position = "bottom") +
+  scale_y_continuous(labels = percent_format())
+```
+
+---
+
+## 25. Temporal Trajectory Analysis
+
+How do topic prevalences evolve within each publication, and what happens at the transition point?
+
+```{r temporal-trajectory, fig.width=14, fig.height=10}
+cat(rep("=", 70), "\n", sep = "")
+cat("TEMPORAL TRAJECTORY ANALYSIS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Yearly topic prevalence per publication
+yearly_topics <- topic_props %>%
+  filter(!is.na(year)) %>%
+  select(year, corpus, starts_with("Topic")) %>%
+  group_by(year, corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.integer(str_remove(topic, "Topic")),
+    publication = ifelse(corpus == "Womans_Exponent",
+                         "Woman's Exponent", "Relief Society Magazine"),
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: ")
+  )
+
+# Pick top 6 most significant topics
+top_sig_topics <- corpus_effects %>%
+  arrange(P_value) %>%
+  head(6) %>%
+  pull(Topic)
+
+yearly_topics %>%
+  filter(topic_num %in% top_sig_topics) %>%
+  ggplot(aes(x = year, y = prevalence, color = publication)) +
+  geom_point(alpha = 0.6, size = 2) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2, linewidth = 1.2) +
+  facet_wrap(~str_wrap(label, 30), ncol = 3, scales = "free_y") +
+  scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Topic Trajectories Over Time",
+       subtitle = "Top 6 most significantly different topics with LOESS trends",
+       x = "Year", y = "Mean Prevalence", color = "Publication") +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom",
+        strip.text = element_text(face = "bold", size = 9)) +
+  scale_y_continuous(labels = percent_format())
+```
+
+### Shared Topic Trajectories
+
+```{r shared-trajectories, fig.width=14, fig.height=10}
+# Topics with LEAST difference = most shared
+shared_traj_topics <- corpus_effects %>%
+  arrange(abs(Difference_Pct)) %>%
+  head(6) %>%
+  pull(Topic)
+
+yearly_topics %>%
+  filter(topic_num %in% shared_traj_topics) %>%
+  ggplot(aes(x = year, y = prevalence, color = publication)) +
+  geom_point(alpha = 0.6, size = 2) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2, linewidth = 1.2) +
+  facet_wrap(~str_wrap(label, 30), ncol = 3, scales = "free_y") +
+  scale_color_manual(values = c("Woman's Exponent" = "#CD661D",
+                                "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Shared Topic Trajectories",
+       subtitle = "Topics with LEAST difference between publications — continuity in discourse",
+       x = "Year", y = "Mean Prevalence", color = "Publication") +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom",
+        strip.text = element_text(face = "bold", size = 9)) +
+  scale_y_continuous(labels = percent_format())
+```
+
+### Topic Prevalence Heatmap Over Time
+
+```{r topic-time-heatmap, fig.width=14, fig.height=8}
+# Heatmap: years × topics, faceted by publication
+yearly_topics %>%
+  mutate(short_label = paste0("T", topic_num)) %>%
+  ggplot(aes(x = year, y = short_label, fill = prevalence)) +
+  geom_tile(color = "white", linewidth = 0.3) +
+  facet_wrap(~publication, ncol = 2) +
+  scale_fill_gradient(low = "white", high = "#2E4A1E",
+                      labels = percent_format()) +
+  labs(title = "Topic Prevalence Over Time: Full Landscape",
+       subtitle = "Darker = higher prevalence in that year",
+       x = "Year", y = "Topic", fill = "Prevalence") +
+  theme_minimal(base_size = 10) +
+  theme(strip.text = element_text(face = "bold", size = 12),
+        panel.grid = element_blank()) +
+  scale_y_discrete(limits = rev)
+```
+
+---
+
+### Percentage Change in Topics Between Publications
+
+How much does each topic's prevalence **shift** from the Exponent era to the Magazine era? This captures the editorial transition in quantitative terms.
+
+```{r topic-pct-change, fig.width=12, fig.height=8}
+cat(rep("=", 70), "\n", sep = "")
+cat("PERCENTAGE CHANGE IN TOPICS: WE -> RSM\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Mean prevalence per topic per publication
+era_means <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.integer(str_remove(topic, "Topic"))) %>%
+  pivot_wider(names_from = corpus, values_from = prevalence)
+
+# Compute percentage change: (RSM - WE) / WE * 100
+era_change <- era_means %>%
+  mutate(
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    we_pct = Womans_Exponent * 100,
+    rsm_pct = Relief_Society_Magazine * 100,
+    abs_change = rsm_pct - we_pct,
+    pct_change = ifelse(Womans_Exponent > 0.001,
+                        (Relief_Society_Magazine - Womans_Exponent) / Womans_Exponent * 100,
+                        NA_real_),
+    direction = case_when(
+      abs_change > 0.5  ~ "Grew in Magazine",
+      abs_change < -0.5 ~ "Declined in Magazine",
+      TRUE ~ "Stable"
+    )
+  ) %>%
+  arrange(desc(abs_change))
+
+cat("Topic changes (WE era -> RSM era):\n\n")
+cat(sprintf("%-35s  %6s  %6s  %8s  %8s\n",
+            "Topic", "WE %", "RSM %", "Change", "% Change"))
+cat(rep("-", 80), "\n", sep = "")
+for (i in 1:nrow(era_change)) {
+  r <- era_change[i, ]
+  pct_str <- ifelse(is.na(r$pct_change), "N/A", sprintf("%+.0f%%", r$pct_change))
+  cat(sprintf("%-35s  %5.1f%%  %5.1f%%  %+6.1fpp  %8s\n",
+              str_trunc(r$label, 35), r$we_pct, r$rsm_pct, r$abs_change, pct_str))
+}
+
+# --- Absolute change bar chart (percentage points) ---
+p_abs <- era_change %>%
+  mutate(display = paste0("T", topic_num, ": ", str_trunc(label, 28)),
+         display = reorder(display, abs_change)) %>%
+  ggplot(aes(x = abs_change, y = display, fill = direction)) +
+  geom_col(alpha = 0.85) +
+  geom_vline(xintercept = 0, linewidth = 1) +
+  scale_fill_manual(values = c("Grew in Magazine" = "#458B74",
+                                "Declined in Magazine" = "#CD661D",
+                                "Stable" = "#94a3b8")) +
+  labs(title = "Topic Change: Woman's Exponent -> Relief Society Magazine",
+       subtitle = "Absolute change in percentage points of topic prevalence",
+       x = "Change (percentage points)", y = NULL, fill = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+
+print(p_abs)
+```
+
+```{r topic-pct-change-relative, fig.width=12, fig.height=8}
+# --- Relative (%) change bar chart ---
+era_change_filtered <- era_change %>%
+  filter(!is.na(pct_change), abs(pct_change) < 500) %>%  # Cap extreme ratios
+  mutate(display = paste0("T", topic_num, ": ", str_trunc(label, 28)),
+         display = reorder(display, pct_change))
+
+if (nrow(era_change_filtered) > 0) {
+  ggplot(era_change_filtered, aes(x = pct_change, y = display, fill = direction)) +
+    geom_col(alpha = 0.85) +
+    geom_vline(xintercept = 0, linewidth = 1) +
+    scale_fill_manual(values = c("Grew in Magazine" = "#458B74",
+                                  "Declined in Magazine" = "#CD661D",
+                                  "Stable" = "#94a3b8")) +
+    labs(title = "Relative Percentage Change in Topic Prevalence",
+         subtitle = "How much did each topic grow or shrink relative to its Exponent-era baseline?",
+         x = "Relative Change (%)", y = NULL, fill = NULL) +
+    theme_minimal(base_size = 11) +
+    theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+}
+```
+
+### Topic Change Over Time (Year-by-Year Gap)
+
+```{r topic-gap-over-time, fig.width=14, fig.height=10}
+# For years where BOTH publications have data, compute the prevalence gap
+yearly_gap <- yearly_topics %>%
+  select(year, corpus, topic_num, prevalence, label) %>%
+  pivot_wider(names_from = corpus, values_from = prevalence) %>%
+  filter(!is.na(Womans_Exponent), !is.na(Relief_Society_Magazine)) %>%
+  mutate(gap = Relief_Society_Magazine - Womans_Exponent)
+
+# If there's temporal overlap, show the gap over time
+if (nrow(yearly_gap) > 0) {
+  # Top 6 topics with largest variance in gap
+  gap_var <- yearly_gap %>%
+    group_by(topic_num, label) %>%
+    summarize(gap_var = var(gap, na.rm = TRUE), .groups = "drop") %>%
+    arrange(desc(gap_var)) %>%
+    head(6)
+
+  yearly_gap %>%
+    filter(topic_num %in% gap_var$topic_num) %>%
+    ggplot(aes(x = year, y = gap, fill = gap > 0)) +
+    geom_col(alpha = 0.7, show.legend = FALSE) +
+    geom_hline(yintercept = 0, linewidth = 0.8) +
+    facet_wrap(~str_wrap(label, 25), ncol = 3, scales = "free_y") +
+    scale_fill_manual(values = c("TRUE" = "#458B74", "FALSE" = "#CD661D")) +
+    labs(title = "Year-by-Year Topic Prevalence Gap (RSM - WE)",
+         subtitle = "Green = more prevalent in RSM that year | Orange = more prevalent in WE",
+         x = "Year", y = "Prevalence Gap (RSM - WE)") +
+    theme_minimal(base_size = 11) +
+    theme(strip.text = element_text(face = "bold", size = 9)) +
+    scale_y_continuous(labels = percent_format())
+} else {
+  cat("No overlapping years between publications — gap analysis requires temporal overlap.\n")
+  cat("Showing era-to-era comparison instead (see absolute change chart above).\n")
+}
+```
+
+---
+
+## 26. Complementary Evolution Summary
+
+```{r complementary-summary, fig.width=12, fig.height=8}
+cat(rep("=", 70), "\n", sep = "")
+cat("COMPLEMENTARY EVOLUTION SUMMARY\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Build a comprehensive topic classification
+topic_class <- pub_means %>%
+  left_join(corpus_effects %>% select(Topic, Significant, Difference_Pct, P_value),
+            by = c("topic_num" = "Topic")) %>%
+  mutate(
+    evolution_type = case_when(
+      !Significant ~ "Stable Core",
+      category == "WE Signature" ~ "WE Distinctive",
+      category == "RSM Signature" ~ "RSM Distinctive",
+      TRUE ~ "Shifting Emphasis"
+    ),
+    evolution_type = factor(evolution_type,
+                            levels = c("Stable Core", "Shifting Emphasis",
+                                       "WE Distinctive", "RSM Distinctive"))
+  )
+
+cat("COMPLEMENTARY EVOLUTION CLASSIFICATION:\n\n")
+
+cat("STABLE CORE — topics sustained across both publications:\n")
+stable <- topic_class %>% filter(evolution_type == "Stable Core")
+if (nrow(stable) > 0) {
+  for (i in 1:nrow(stable)) {
+    cat(sprintf("  T%d: %s (WE: %.1f%%, RSM: %.1f%%)\n",
+                stable$topic_num[i], stable$label[i],
+                stable$we_pct[i], stable$rsm_pct[i]))
+  }
+} else cat("  (none)\n")
+
+cat("\nSHIFTING EMPHASIS — present in both but weighted differently:\n")
+shifting <- topic_class %>% filter(evolution_type == "Shifting Emphasis")
+if (nrow(shifting) > 0) {
+  for (i in 1:nrow(shifting)) {
+    cat(sprintf("  T%d: %s (WE: %.1f%%, RSM: %.1f%%, p=%.3f)\n",
+                shifting$topic_num[i], shifting$label[i],
+                shifting$we_pct[i], shifting$rsm_pct[i], shifting$P_value[i]))
+  }
+} else cat("  (none)\n")
+
+cat("\nWE DISTINCTIVE — topics much more prevalent in the Exponent:\n")
+we_dist <- topic_class %>% filter(evolution_type == "WE Distinctive")
+if (nrow(we_dist) > 0) {
+  for (i in 1:nrow(we_dist)) {
+    cat(sprintf("  T%d: %s (WE: %.1f%% vs RSM: %.1f%%)\n",
+                we_dist$topic_num[i], we_dist$label[i],
+                we_dist$we_pct[i], we_dist$rsm_pct[i]))
+  }
+} else cat("  (none)\n")
+
+cat("\nRSM DISTINCTIVE — topics much more prevalent in the Magazine:\n")
+rsm_dist <- topic_class %>% filter(evolution_type == "RSM Distinctive")
+if (nrow(rsm_dist) > 0) {
+  for (i in 1:nrow(rsm_dist)) {
+    cat(sprintf("  T%d: %s (RSM: %.1f%% vs WE: %.1f%%)\n",
+                rsm_dist$topic_num[i], rsm_dist$label[i],
+                rsm_dist$rsm_pct[i], rsm_dist$we_pct[i]))
+  }
+} else cat("  (none)\n")
+
+# Visual summary
+ggplot(topic_class, aes(x = we_pct, y = rsm_pct, color = evolution_type)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "grey70", linewidth = 1) +
+  geom_point(size = 5, alpha = 0.8) +
+  geom_text_repel(aes(label = paste0("T", topic_num, ": ", str_trunc(label, 25))),
+                  size = 3, max.overlaps = 20, show.legend = FALSE) +
+  scale_color_manual(values = c(
+    "Stable Core" = "#6495ED",
+    "Shifting Emphasis" = "#DAA520",
+    "WE Distinctive" = "#CD661D",
+    "RSM Distinctive" = "#458B74"
+  )) +
+  labs(title = "Complementary Evolution of Topics",
+       subtitle = "Diagonal = equal prevalence | Distance from line = degree of difference",
+       x = "Woman's Exponent (Mean %)", y = "Relief Society Magazine (Mean %)",
+       color = "Evolution Type") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        plot.title = element_text(face = "bold", size = 16)) +
+  coord_fixed()
+```
+
+---
+
+## 27. Export Results
+
+```{r export-results}
+cat("Exporting results to:", output_path, "\n\n")
+
+# 1. Publication comparison table
+write_csv(corpus_effects,
+          file.path(output_path, paste0("publication_comparison_K", chosen_K, ".csv")))
+cat("  publication_comparison.csv\n")
+
+# 2. Significant differences
+if (nrow(significant_topics) > 0) {
+  write_csv(significant_topics,
+            file.path(output_path, paste0("significant_differences_K", chosen_K, ".csv")))
+  cat("  significant_differences.csv\n")
+}
+
+# 3. Topic summary with words
+topic_props_mean <- colMeans(topic_props %>% select(starts_with("Topic")))
+write_csv(tibble(
+    topic_num = 1:chosen_K,
+    label = str_remove(topic_labels, "^Topic \\d+: "),
+    prevalence_pct = round(topic_props_mean * 100, 2),
+    frex_words = apply(all_top_words$frex, 1, function(x) paste(x, collapse = ", ")),
+    prob_words = apply(all_top_words$prob, 1, function(x) paste(x, collapse = ", "))
+  ),
+  file.path(output_path, paste0("topic_summary_K", chosen_K, ".csv")))
+cat("  topic_summary.csv\n")
+
+# 4. Full topic-article link
+write_csv(topic_article_link %>% mutate(proportion_pct = round(proportion * 100, 2)),
+          file.path(output_path, paste0("topic_article_full_link_K", chosen_K, ".csv")))
+cat("  topic_article_full_link.csv\n")
+
+# 5. Dominant topic per article
+write_csv(dominant_topics,
+          file.path(output_path, paste0("dominant_topic_per_article_K", chosen_K, ".csv")))
+cat("  dominant_topic_per_article.csv\n")
+
+# 6. Strong exemplars only
+write_csv(dominant_topics %>% filter(strong_exemplar),
+          file.path(output_path, paste0("strong_exemplars_K", chosen_K, ".csv")))
+cat("  strong_exemplars.csv\n")
+
+# 7. Top 25 exemplar articles per topic
+write_csv(topic_article_link %>%
+            group_by(topic_num, topic_label) %>%
+            slice_max(proportion, n = 25) %>%
+            ungroup() %>%
+            mutate(proportion_pct = round(proportion * 100, 2)),
+          file.path(output_path, paste0("topic_exemplar_articles_K", chosen_K, ".csv")))
+cat("  topic_exemplar_articles.csv\n")
+
+# 8. Topic classification (continuity analysis)
+if (exists("topic_class")) {
+  write_csv(topic_class %>% select(topic_num, label, category, evolution_type,
+                                    we_pct, rsm_pct, Significant, Difference_Pct, P_value),
+            file.path(output_path, paste0("topic_classification_K", chosen_K, ".csv")))
+  cat("  topic_classification.csv\n")
+}
+
+cat("\nAll results exported.\n")
+```
+
+---
+
+## 28. Summary Statistics
+
+```{r summary-stats}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("COMPARISON SUMMARY\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+cat("Publications Compared:\n")
+cat("  Woman's Exponent (", sum(meta$corpus == "Womans_Exponent"), " docs)\n", sep = "")
+cat("  Relief Society Magazine (", sum(meta$corpus == "Relief_Society_Magazine"), " docs)\n\n", sep = "")
+
+cat("Topic Analysis:\n")
+cat("  Total topics:", chosen_K, "\n")
+cat("  Significant differences:", sum(corpus_effects$Significant), "\n")
+cat("    More in Woman's Exponent:", sum(corpus_effects$Direction == "More in Woman's Exponent"), "\n")
+cat("    More in RS Magazine:", sum(corpus_effects$Direction == "More in Relief Society Magazine"), "\n")
+cat("    No difference:", sum(corpus_effects$Direction == "No significant difference"), "\n\n")
+
+cat("Largest differences:\n")
+top_3 <- corpus_effects %>% head(3)
+for (i in 1:nrow(top_3)) {
+  cat(sprintf("  %s: %.2f%% (%s)\n", top_3$Label[i], top_3$Difference_Pct[i], top_3$Direction[i]))
+}
+```
+
+---
+
+## 29. Author-Topic Heatmap
+
+```{r author-topic-heatmap, fig.width=12, fig.height=10}
+cat(rep("=", 70), "\n", sep = "")
+cat("AUTHOR-TOPIC ANALYSIS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Build author-topic data from document-topic proportions
+author_topic_data <- topic_props %>%
+  filter(!is.na(Author), Author != "", nchar(Author) > 1) %>%
+  mutate(Author = str_trim(Author))
+
+if (nrow(author_topic_data) >= 10) {
+  # Get top 25 most frequent authors
+  top_authors <- author_topic_data %>%
+    count(Author, sort = TRUE) %>%
+    head(25) %>%
+    pull(Author)
+
+  # Calculate mean topic proportion per author
+  author_matrix_data <- author_topic_data %>%
+    filter(Author %in% top_authors) %>%
+    select(Author, starts_with("Topic")) %>%
+    group_by(Author) %>%
+    summarize(across(starts_with("Topic"), mean), .groups = "drop")
+
+  mat <- as.matrix(author_matrix_data %>% select(-Author))
+  rownames(mat) <- author_matrix_data$Author
+  colnames(mat) <- paste0("T", 1:chosen_K, ": ",
+                           str_trunc(str_remove(topic_labels, "^Topic \\d+: "), 18))
+
+  # Replace any NaN/Inf
+  mat[!is.finite(mat)] <- 0
+
+  pheatmap(mat,
+    main = paste0("Author-Topic Affinity (Top ", length(top_authors), " Authors)"),
+    color = colorRampPalette(c("white", "#D4E8D4", "#6E8B3D", "#2E4A1E"))(100),
+    cluster_rows = TRUE, cluster_cols = FALSE,
+    fontsize_row = 8, fontsize_col = 8, angle_col = 45, border_color = "grey90")
+} else {
+  cat("Skipping author-topic heatmap: not enough named authors in the combined corpus.\n")
+  cat("Articles with author data:", nrow(author_topic_data), "\n")
+}
+```
+
+---
+
+## 30. Author-Topic by Publication
+
+```{r author-topic-by-pub, fig.width=14, fig.height=8}
+if (exists("author_topic_data") && nrow(author_topic_data) >= 10) {
+
+  # Top 10 authors per publication
+  top_by_pub <- author_topic_data %>%
+    count(Author, corpus, sort = TRUE) %>%
+    group_by(corpus) %>%
+    slice_head(n = 10) %>%
+    pull(Author) %>%
+    unique()
+
+  pub_author_data <- author_topic_data %>%
+    filter(Author %in% top_by_pub) %>%
+    select(Author, corpus, starts_with("Topic")) %>%
+    pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "proportion") %>%
+    mutate(topic_num = as.numeric(str_remove(topic, "Topic"))) %>%
+    group_by(Author, corpus, topic_num) %>%
+    summarize(mean_prop = mean(proportion), .groups = "drop") %>%
+    mutate(
+      topic_label = str_trunc(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 20),
+      publication = ifelse(corpus == "Relief_Society_Magazine",
+                           "Relief Society Magazine", "Woman's Exponent")
+    )
+
+  # Top 3 topics per author
+  top_topics_per_author <- pub_author_data %>%
+    group_by(Author) %>%
+    slice_max(mean_prop, n = 3) %>%
+    ungroup()
+
+  ggplot(top_topics_per_author,
+         aes(x = reorder(Author, mean_prop), y = mean_prop,
+             fill = topic_label)) +
+    geom_col(position = "stack") +
+    coord_flip() +
+    facet_wrap(~publication, scales = "free_y") +
+    scale_fill_brewer(palette = "Set3") +
+    labs(title = "Top 3 Topics per Author (by Publication)",
+         x = NULL, y = "Mean Topic Proportion", fill = "Topic") +
+    theme_minimal(base_size = 11) +
+    theme(legend.position = "bottom",
+          strip.text = element_text(face = "bold", size = 12)) +
+    scale_y_continuous(labels = percent_format())
+}
+```
+
+---
+
+## 31. Article Type Distribution
+
+```{r article-type-dist, fig.width=12, fig.height=6}
+type_data <- topic_props %>%
+  filter(!is.na(Article_Type), Article_Type != "Unknown") %>%
+  count(corpus, Article_Type, sort = TRUE) %>%
+  mutate(publication = ifelse(corpus == "Relief_Society_Magazine",
+                              "Relief Society Magazine", "Woman's Exponent"))
+
+# Top 10 types per pub
+top_types <- type_data %>%
+  group_by(publication) %>%
+  slice_max(n, n = 10) %>%
+  pull(Article_Type) %>%
+  unique()
+
+type_data %>%
+  filter(Article_Type %in% top_types) %>%
+  ggplot(aes(x = reorder(Article_Type, n), y = n, fill = publication)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  scale_fill_manual(values = c("Woman's Exponent" = "#CD661D",
+                               "Relief Society Magazine" = "#458B74")) +
+  labs(title = "Article Type Distribution by Publication",
+       x = NULL, y = "Count", fill = "Publication") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom")
+```
+
+---
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

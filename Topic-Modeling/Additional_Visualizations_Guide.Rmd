@@ -1,0 +1,530 @@
+# Additional Visualizations for STM Topic Modeling
+
+A guide to creating publication-ready visualizations beyond basic comparison plots
+
+---
+
+## 1. Topic Correlation Scatterplot
+
+**Shows which topics tend to appear together**
+
+```{r topic-correlation-scatter, fig.width=10, fig.height=8}
+# Calculate topic correlations
+topic_corr <- topicCorr(stm_model_corpus)
+
+# Extract correlation matrix
+corr_matrix <- topic_corr$cor
+
+# Create correlation data for plotting
+corr_data <- as.data.frame(corr_matrix) %>%
+  rownames_to_column("topic1") %>%
+  pivot_longer(-topic1, names_to = "topic2", values_to = "correlation") %>%
+  mutate(
+    topic1_num = as.numeric(str_remove(topic1, "V")),
+    topic2_num = as.numeric(str_remove(topic2, "V"))
+  ) %>%
+  filter(topic1_num < topic2_num) %>%  # Only upper triangle
+  filter(abs(correlation) > 0.05)  # Only meaningful correlations
+
+# Add labels
+corr_data <- corr_data %>%
+  mutate(
+    topic1_label = str_remove(topic_labels[topic1_num], "^Topic \\d+: "),
+    topic2_label = str_remove(topic_labels[topic2_num], "^Topic \\d+: ")
+  )
+
+# Plot
+ggplot(corr_data, aes(x = topic1_num, y = topic2_num, 
+                      size = abs(correlation), 
+                      color = correlation)) +
+  geom_point(alpha = 0.7) +
+  scale_color_gradient2(low = "#ef4444", mid = "white", high = "#3b82f6",
+                        midpoint = 0, limits = c(-1, 1)) +
+  scale_size_continuous(range = c(2, 10)) +
+  labs(title = "Topic Correlation Network",
+       subtitle = "Which topics tend to co-occur in documents?",
+       x = "Topic Number",
+       y = "Topic Number",
+       color = "Correlation",
+       size = "Abs. Correlation") +
+  theme_minimal() +
+  theme(legend.position = "right")
+```
+
+---
+
+## 2. Topic Prevalence Comparison Scatterplot
+
+**Compare topic prevalence between two publications**
+
+```{r prevalence-scatterplot, fig.width=10, fig.height=10}
+# Get topic proportions by publication
+topic_props <- make.dt(stm_model_corpus, meta = meta)
+
+# Calculate mean prevalence by publication
+topic_means <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean)) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic"))) %>%
+  pivot_wider(names_from = corpus, values_from = prevalence)
+
+# Add labels and significance
+topic_means <- topic_means %>%
+  left_join(
+    corpus_effects %>% select(Topic, P_value, Significant),
+    by = c("topic_num" = "Topic")
+  ) %>%
+  mutate(
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    sig_label = ifelse(Significant, label, NA)
+  )
+
+# Create scatterplot
+ggplot(topic_means, aes(x = Relief_Society_Bulletin, 
+                        y = Womans_Exponent)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", 
+              color = "#94a3b8", size = 1) +
+  geom_point(aes(color = Significant, size = abs(Womans_Exponent - Relief_Society_Bulletin)),
+             alpha = 0.7) +
+  geom_text_repel(aes(label = sig_label), 
+                  size = 3, max.overlaps = 15) +
+  scale_color_manual(values = c("FALSE" = "#94a3b8", "TRUE" = "#ef4444")) +
+  scale_size_continuous(range = c(2, 8)) +
+  labs(title = "Topic Prevalence Comparison",
+       subtitle = "Topics on diagonal = equal prevalence in both publications",
+       x = "Relief Society Bulletin (Proportion)",
+       y = "Woman's Exponent (Proportion)",
+       color = "Significantly\nDifferent",
+       size = "Difference") +
+  theme_minimal() +
+  theme(legend.position = "right") +
+  scale_x_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+---
+
+## 3. Topic Prevalence Heatmap
+
+**Show all topic differences at once**
+
+```{r topic-heatmap, fig.width=12, fig.height=8}
+# Prepare data for heatmap
+heatmap_data <- topic_props %>%
+  group_by(corpus) %>%
+  summarize(across(starts_with("Topic"), mean)) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.numeric(str_remove(topic, "Topic")),
+    topic_label = str_remove(topic_labels[topic_num], "^Topic \\d+: ")
+  )
+
+# Create heatmap
+ggplot(heatmap_data, aes(x = corpus, y = reorder(topic_label, topic_num), 
+                         fill = prevalence)) +
+  geom_tile(color = "white", size = 0.5) +
+  geom_text(aes(label = sprintf("%.1f%%", prevalence * 100)), 
+            size = 3, color = "white") +
+  scale_fill_gradient(low = "#1e3a8a", high = "#ef4444",
+                     labels = scales::percent) +
+  labs(title = "Topic Prevalence by Publication",
+       subtitle = "Darker red = higher prevalence",
+       x = "Publication",
+       y = "Topic",
+       fill = "Prevalence") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text.y = element_text(size = 9),
+        panel.grid = element_blank())
+```
+
+---
+
+## 4. Diverging Bar Chart
+
+**Show which topics are MORE in each publication**
+
+```{r diverging-bars, fig.width=10, fig.height=12}
+# Prepare data
+diverging_data <- corpus_effects %>%
+  arrange(Difference_Pct) %>%
+  mutate(
+    Label = factor(Label, levels = Label),
+    color_group = case_when(
+      !Significant ~ "No difference",
+      Difference_Pct > 0 ~ "More in Woman's Exponent",
+      TRUE ~ "More in Relief Society Bulletin"
+    )
+  )
+
+# Create diverging bar chart
+ggplot(diverging_data, aes(x = Difference_Pct, y = Label, fill = color_group)) +
+  geom_col() +
+  geom_vline(xintercept = 0, linetype = "solid", color = "black", size = 1) +
+  scale_fill_manual(values = c(
+    "More in Woman's Exponent" = "#3b82f6",
+    "More in Relief Society Bulletin" = "#ef4444",
+    "No difference" = "#94a3b8"
+  )) +
+  labs(title = "Topic Differences Between Publications",
+       subtitle = "Positive = more in Woman's Exponent, Negative = more in Relief Society Bulletin",
+       x = "Difference (percentage points)",
+       y = NULL,
+       fill = "Direction") +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    axis.text.y = element_text(size = 9),
+    panel.grid.major.y = element_blank()
+  )
+```
+
+---
+
+## 5. Time Series: Topics Over Time
+
+**How do topics change over time?**
+
+```{r topic-time-series, fig.width=12, fig.height=8}
+# Get topic proportions with year
+topic_time <- make.dt(stm_model_corpus, meta = meta) %>%
+  select(starts_with("Topic"), year, corpus) %>%
+  group_by(year, corpus) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic")))
+
+# Plot top 5 topics over time
+top_topics <- corpus_effects %>%
+  arrange(desc(abs(Difference_Pct))) %>%
+  head(5) %>%
+  pull(Topic)
+
+topic_time_subset <- topic_time %>%
+  filter(topic_num %in% top_topics) %>%
+  mutate(topic_label = str_remove(topic_labels[topic_num], "^Topic \\d+: "))
+
+ggplot(topic_time_subset, aes(x = year, y = prevalence, 
+                               color = topic_label, linetype = corpus)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  facet_wrap(~topic_label, ncol = 2, scales = "free_y") +
+  scale_color_brewer(palette = "Set2") +
+  scale_linetype_manual(values = c("solid", "dashed")) +
+  labs(title = "Topic Prevalence Over Time",
+       subtitle = "Top 5 topics with largest differences between publications",
+       x = "Year",
+       y = "Prevalence",
+       color = "Topic",
+       linetype = "Publication") +
+  theme_minimal() +
+  theme(legend.position = "bottom") +
+  scale_y_continuous(labels = scales::percent)
+```
+
+---
+
+## 6. Word Cloud Comparison
+
+**Compare word clouds between publications**
+
+```{r wordcloud-comparison, fig.width=14, fig.height=7}
+library(wordcloud)
+
+par(mfrow = c(1, 2))
+
+# Choose a topic to compare
+topic_num <- significant_topics$Topic[1]
+
+# Word cloud for Woman's Exponent
+plot(stm_model_corpus, 
+     type = "perspectives",
+     topics = topic_num,
+     main = paste(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 
+                  "\n(Woman's Exponent perspective)"))
+
+# Reset for second plot
+par(mfrow = c(1, 1))
+```
+
+---
+
+## 7. Topic Quality Metrics Scatterplot
+
+**Semantic coherence vs. exclusivity**
+
+```{r topic-quality-scatter, fig.width=10, fig.height=8}
+# Calculate topic quality
+quality <- topicQuality(stm_model_corpus, docs)
+
+# Create quality dataframe
+quality_df <- tibble(
+  topic = 1:chosen_K,
+  coherence = quality$semcoh,
+  exclusivity = quality$exclusivity,
+  label = str_remove(topic_labels, "^Topic \\d+: ")
+) %>%
+  left_join(corpus_effects %>% select(Topic, Significant, Difference_Pct),
+            by = c("topic" = "Topic"))
+
+# Scatterplot
+ggplot(quality_df, aes(x = coherence, y = exclusivity)) +
+  geom_point(aes(color = Significant, size = abs(Difference_Pct)), alpha = 0.7) +
+  geom_text_repel(aes(label = label), size = 3, max.overlaps = 10) +
+  scale_color_manual(values = c("FALSE" = "#94a3b8", "TRUE" = "#ef4444")) +
+  scale_size_continuous(range = c(2, 8)) +
+  labs(title = "Topic Quality: Coherence vs Exclusivity",
+       subtitle = "Upper right = high quality topics (coherent AND exclusive)",
+       x = "Semantic Coherence (higher = better)",
+       y = "Exclusivity (higher = better)",
+       color = "Significantly\nDifferent",
+       size = "Abs. Difference") +
+  theme_minimal()
+```
+
+---
+
+## 8. Topic Distribution Violin Plot
+
+**Show distribution of topic proportions**
+
+```{r topic-violin, fig.width=12, fig.height=10}
+# Get top 8 topics
+top_8_topics <- corpus_effects %>%
+  arrange(desc(abs(Difference_Pct))) %>%
+  head(8) %>%
+  pull(Topic)
+
+# Prepare data
+violin_data <- topic_props %>%
+  select(corpus, all_of(paste0("Topic", top_8_topics))) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "proportion") %>%
+  mutate(
+    topic_num = as.numeric(str_remove(topic, "Topic")),
+    topic_label = str_wrap(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 30)
+  )
+
+# Violin plot
+ggplot(violin_data, aes(x = corpus, y = proportion, fill = corpus)) +
+  geom_violin(alpha = 0.7, trim = FALSE) +
+  geom_boxplot(width = 0.2, alpha = 0.5, outlier.shape = NA) +
+  facet_wrap(~topic_label, ncol = 2, scales = "free_y") +
+  scale_fill_manual(values = c("Relief_Society_Bulletin" = "#ef4444",
+                                "Womans_Exponent" = "#3b82f6")) +
+  labs(title = "Topic Proportion Distributions",
+       subtitle = "Top 8 topics with largest differences",
+       x = "Publication",
+       y = "Proportion in Document",
+       fill = "Publication") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  scale_y_continuous(labels = scales::percent)
+```
+
+---
+
+## 9. Network Graph of Topic Correlations
+
+**Interactive network showing topic relationships**
+
+```{r topic-network, fig.width=12, fig.height=12}
+library(igraph)
+library(ggraph)
+
+# Get strong correlations
+topic_corr <- topicCorr(stm_model_corpus)
+corr_matrix <- topic_corr$cor
+
+# Create edge list for strong correlations
+edges <- as.data.frame(corr_matrix) %>%
+  rownames_to_column("from") %>%
+  pivot_longer(-from, names_to = "to", values_to = "correlation") %>%
+  mutate(
+    from_num = as.numeric(str_remove(from, "V")),
+    to_num = as.numeric(str_remove(to, "V"))
+  ) %>%
+  filter(from_num < to_num,  # Only upper triangle
+         abs(correlation) > 0.1)  # Only strong correlations
+
+# Create graph
+g <- graph_from_data_frame(edges, directed = FALSE)
+
+# Add node attributes
+V(g)$topic_num <- as.numeric(V(g)$name)
+V(g)$label <- str_wrap(str_remove(topic_labels[V(g)$topic_num], "^Topic \\d+: "), 15)
+V(g)$size <- colMeans(make.dt(stm_model_corpus)) * 100  # Proportional to prevalence
+
+# Plot network
+ggraph(g, layout = "fr") +
+  geom_edge_link(aes(width = abs(correlation), alpha = abs(correlation)),
+                 color = "#94a3b8") +
+  geom_node_point(aes(size = size), color = "#3b82f6", alpha = 0.7) +
+  geom_node_text(aes(label = label), size = 3, repel = TRUE) +
+  scale_edge_width(range = c(0.5, 3)) +
+  scale_edge_alpha(range = c(0.3, 0.8)) +
+  scale_size_continuous(range = c(3, 15)) +
+  labs(title = "Topic Correlation Network",
+       subtitle = "Node size = topic prevalence, Edge width = correlation strength") +
+  theme_graph() +
+  theme(legend.position = "none")
+```
+
+---
+
+## 10. Ridge Plot: Topic Distribution Over Time
+
+**Show how topic proportions change over time**
+
+```{r ridge-plot, fig.width=10, fig.height=12}
+library(ggridges)
+
+# Get topic proportions by year
+ridge_data <- make.dt(stm_model_corpus, meta = meta) %>%
+  select(year, all_of(paste0("Topic", top_8_topics))) %>%
+  pivot_longer(-year, names_to = "topic", values_to = "proportion") %>%
+  mutate(
+    topic_num = as.numeric(str_remove(topic, "Topic")),
+    topic_label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    year_group = cut(year, breaks = 4, labels = c("Early", "Mid-Early", "Mid-Late", "Late"))
+  )
+
+# Ridge plot
+ggplot(ridge_data, aes(x = proportion, y = topic_label, fill = topic_label)) +
+  geom_density_ridges(alpha = 0.7, scale = 1.5) +
+  facet_wrap(~year_group, ncol = 2) +
+  scale_fill_viridis_d() +
+  labs(title = "Topic Distribution Evolution Over Time",
+       subtitle = "How topic prevalence distributions change across periods",
+       x = "Topic Proportion",
+       y = NULL) +
+  theme_ridges() +
+  theme(legend.position = "none") +
+  scale_x_continuous(labels = scales::percent)
+```
+
+---
+
+## 11. Coefficient Plot with Uncertainty
+
+**Publication-quality coefficient plot**
+
+```{r coefficient-plot, fig.width=10, fig.height=12}
+# Prepare data with confidence intervals
+coef_data <- corpus_effects %>%
+  mutate(
+    ci_lower = Difference - 1.96 * SE,
+    ci_upper = Difference + 1.96 * SE,
+    Label = factor(Label, levels = Label)
+  ) %>%
+  arrange(Difference)
+
+# Coefficient plot
+ggplot(coef_data, aes(x = Difference, y = Label)) +
+  geom_vline(xintercept = 0, linetype = "dashed", size = 1, color = "#64748b") +
+  geom_errorbarh(aes(xmin = ci_lower, xmax = ci_upper, color = Significant),
+                 height = 0.3, size = 1) +
+  geom_point(aes(color = Significant), size = 3) +
+  scale_color_manual(values = c("FALSE" = "#94a3b8", "TRUE" = "#ef4444")) +
+  labs(title = "Topic Prevalence Differences with 95% Confidence Intervals",
+       subtitle = "Positive = more in Woman's Exponent, Negative = more in Relief Society Bulletin",
+       x = "Difference (proportion)",
+       y = NULL,
+       color = "Statistically\nSignificant") +
+  theme_minimal() +
+  theme(axis.text.y = element_text(size = 9),
+        legend.position = "bottom") +
+  scale_x_continuous(labels = scales::percent)
+```
+
+---
+
+## 12. Faceted Comparison Plots
+
+**Show multiple topics side-by-side**
+
+```{r faceted-comparison, fig.width=14, fig.height=10}
+# Get top 9 topics for 3x3 grid
+top_9_topics <- corpus_effects %>%
+  arrange(desc(abs(Difference_Pct))) %>%
+  head(9) %>%
+  pull(Topic)
+
+# Calculate means and CIs
+facet_data <- topic_props %>%
+  select(corpus, all_of(paste0("Topic", top_9_topics))) %>%
+  pivot_longer(-corpus, names_to = "topic", values_to = "proportion") %>%
+  mutate(topic_num = as.numeric(str_remove(topic, "Topic"))) %>%
+  group_by(corpus, topic_num) %>%
+  summarize(
+    mean = mean(proportion),
+    se = sd(proportion) / sqrt(n()),
+    ci_lower = mean - 1.96 * se,
+    ci_upper = mean + 1.96 * se,
+    .groups = "drop"
+  ) %>%
+  mutate(
+    topic_label = str_wrap(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 25),
+    publication = ifelse(corpus == "Relief_Society_Bulletin",
+                        "Relief Society\nBulletin",
+                        "Woman's\nExponent")
+  )
+
+# Faceted plot
+ggplot(facet_data, aes(x = publication, y = mean, fill = publication)) +
+  geom_col(alpha = 0.7) +
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper), width = 0.2) +
+  facet_wrap(~topic_label, ncol = 3, scales = "free_y") +
+  scale_fill_manual(values = c("Relief Society\nBulletin" = "#ef4444",
+                               "Woman's\nExponent" = "#3b82f6")) +
+  labs(title = "Top 9 Topics: Comparison by Publication",
+       x = NULL,
+       y = "Mean Topic Proportion",
+       fill = "Publication") +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(),
+        legend.position = "bottom",
+        strip.text = element_text(size = 9, face = "bold")) +
+  scale_y_continuous(labels = scales::percent)
+```
+
+---
+
+## Complete Visualization Section
+
+**Add this as a new section (e.g., Section 17) after your existing visualizations:**
+
+```{r all-visualizations}
+# You can run all the visualizations above in one section
+# Or split them into separate sections for your notebook
+```
+
+---
+
+## Tips for Publication-Ready Figures
+
+1. **Save high-resolution versions:**
+```r
+ggsave("figure1_scatterplot.png", width = 10, height = 8, dpi = 300)
+ggsave("figure2_heatmap.pdf", width = 12, height = 8)
+```
+
+2. **Consistent color scheme:**
+```r
+# Use these colors throughout
+rs_bulletin_color <- "#ef4444"
+womans_exp_color <- "#3b82f6"
+neutral_color <- "#94a3b8"
+```
+
+3. **Font sizes for presentations:**
+```r
+theme_minimal(base_size = 16)  # For slides
+theme_minimal(base_size = 12)  # For papers
+```
+
+4. **Export tables:**
+```r
+write_csv(corpus_effects, "topic_differences_table.csv")
+```

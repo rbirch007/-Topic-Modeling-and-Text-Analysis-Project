@@ -1,0 +1,1388 @@
+---
+title: "STM Topic Modeling - Complete Clean Version"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# STM Topic Modeling - Complete Workflow
+
+All refinements included: metadata extraction from Vol10-1923/June structure, stopword removal, year removal, manual K selection, and thematic auto-labeling.
+
+---
+
+## 1. Load Packages
+
+```{r load-packages}
+library(stm)
+library(tidyverse)
+library(dplyr)
+library(stopwords)
+library(igraph)
+library(wordcloud)
+library(tidyr)       # For data tidying
+library(stringr)     # For string manipulation
+library(purrr)       # For map functions
+library(readr)       # For read_file and write_csv
+library(tibble)      # For tibble function
+library(dplyr)
+library(tidyverse)
+library(patchwork)
+library(scales)
+library(ggrepel)
+
+
+set.seed(12345)
+cat("Packages loaded successfully!\n")
+```
+
+---
+
+## 2. Set Input and Output Paths
+
+```{r set-paths}
+# ============================================================================
+# SET INPUT AND OUTPUT PATHS
+# ============================================================================
+
+# Input folder (where your .txt files are)
+input_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/input"
+
+# Output folder (where results will be saved)
+output_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/output"
+
+# Create output directory if it doesn't exist
+if (!dir.exists(output_path)) {
+  dir.create(output_path, recursive = TRUE)
+  cat("✓ Created output directory\n")
+}
+
+cat("Paths configured:\n")
+cat("  Input: ", input_path, "\n")
+cat("  Output:", output_path, "\n\n")
+```
+
+---
+
+## 3. Import Files
+
+```{r import-files}
+cat("=" , rep("=", 70), "\n", sep = "")
+cat("FILE IMPORT\n")
+cat("=" , rep("=", 70), "\n\n", sep = "")
+
+# Get all .txt files recursively
+all_files <- list.files(path = input_path, full.names = TRUE, recursive = TRUE)
+file_paths <- all_files[grepl("\\.txt$", all_files, ignore.case = TRUE)]
+
+cat("Total .txt files found:", length(file_paths), "\n")
+
+if (length(file_paths) == 0) {
+  stop("No .txt files found! Check your folder path.")
+}
+
+cat("\nFirst 5 files:\n")
+for (i in 1:min(5, length(file_paths))) {
+  cat(i, ":", basename(file_paths[i]), "\n")
+}
+```
+
+---
+
+## 4. Sample or Use All Files
+
+```{r read-files}
+# ============================================================================
+# CHOOSE: SAMPLE OR ALL FILES
+# ============================================================================
+
+USE_SAMPLE <- FALSE  # Set to TRUE to sample, FALSE for all files
+sample_size <- 300
+
+if (USE_SAMPLE) {
+  set.seed(123)
+  sampled_paths <- sample(file_paths, size = sample_size)
+  cat("\nUsing", sample_size, "of", length(file_paths), "files (sampled)\n")
+} else {
+  sampled_paths <- file_paths
+  cat("\nUsing ALL", length(file_paths), "files\n")
+}
+
+cat("\nReading files...\n")
+
+raw_texts <- tibble(
+  filepath = sampled_paths,
+  filename = basename(sampled_paths),
+  text = map_chr(sampled_paths, ~read_file(.x))
+)
+
+cat("Successfully read", nrow(raw_texts), "files\n")
+```
+
+---
+
+## 5. Extract Metadata
+
+```{r extract-metadata}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("EXTRACTING METADATA\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+raw_texts <- raw_texts %>%
+  mutate(
+    volume_folder = str_extract(filepath, "Vol\\d+[-_]\\d{4}"),
+    volume_num = str_extract(volume_folder, "Vol\\d+"),
+    year_from_folder = as.numeric(str_extract(volume_folder, "\\d{4}$")),
+    month_from_folder = str_extract(filepath, "(?<=/)(January|February|March|April|May|June|July|August|September|October|November|December)(?=/)"),
+    month_from_filename = str_extract(filename, "^[A-Za-z]+"),
+    volume_from_filename = str_extract(filename, "Vol\\d+"),
+    year_from_filename = as.numeric(str_extract(filepath, "(?<![0-9])(1[89]\\d{2})(?![0-9])")),
+    month = ifelse(!is.na(month_from_folder), month_from_folder, month_from_filename),
+    volume = ifelse(!is.na(volume_num), volume_num, volume_from_filename),
+    year = ifelse(!is.na(year_from_folder), year_from_folder, year_from_filename),
+    doc_id = row_number(),
+    word_count = str_count(text, "\\S+")
+  )
+
+cat("Metadata extracted:\n\n")
+cat("Volumes:", paste(unique(na.omit(raw_texts$volume)), collapse = ", "), "\n")
+cat("Years:", paste(unique(na.omit(raw_texts$year)), collapse = ", "), "\n")
+cat("Months:", paste(unique(na.omit(raw_texts$month)), collapse = ", "), "\n\n")
+
+cat("Sample:\n")
+print(head(raw_texts %>% select(filename, volume, year, month, word_count), 10))
+
+cat("\n", rep("=", 70), "\n\n", sep = "")
+```
+
+---
+
+## 6. Text Cleaning with Stopword Removal
+
+```{r clean-with-stopwords}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TEXT CLEANING\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Stopwords
+standard_stopwords <- stopwords::stopwords("en", source = "snowball")
+
+custom_stopwords <- c(
+  "the", "of", "and", "in", "to", "a", "is", "that", "it", "for",
+  "as", "on", "with", "be", "was", "by", "are", "from", "or", "an",
+  "at", "this", "which", "have", "has", "had", "but", "not", "can",
+  "will", "been", "were", "their", "they", "we", "our", "would",
+  "there", "what", "so", "if", "who", "than", "may", "also",
+  "mrs", "mr", "miss", "dr", "ms",
+  "january", "february", "march", "april", "may", "june",
+  "july", "august", "september", "october", "november", "december",
+  "vol", "page", "number", "volume", "board", "officer", "general",
+  "thee", "thou", "whom", "no", "num", "pp", "pg", "vol", "volume", "page", "number",
+  "issue", "nth", "th", "st", "nd", "rd"  # ordinal suffixes
+)
+
+# Add years dynamically
+years_in_data <- unique(na.omit(raw_texts$year))
+years_as_words <- as.character(years_in_data)
+
+cat("Years found:", paste(years_as_words, collapse = ", "), "\n")
+cat("Adding as stopwords...\n\n")
+
+# OCR fragment / junk word blacklist
+ocr_junk_stopwords <- c(
+  "ing", "tion", "ment", "ness", "ings", "tive", "ance", "ence",
+  "ered", "ters", "bers", "dren", "howe", "ould", "ight", "ther",
+  "ated", "ting", "ally", "ible", "able", "ious", "eous", "ical",
+  "onal", "ship", "ward", "wise", "less",
+  "deliv", "presi", "inter", "encour", "terest", "testi",
+  "soci", "coun", "chil", "pariel", "organiza", "ganized",
+  "ference", "musser", "selion",
+  "column", "columns", "chapter", "section", "article",
+  "continued", "copyright", "printed"
+)
+
+all_stopwords <- unique(c(standard_stopwords, custom_stopwords,
+                          ocr_junk_stopwords, years_as_words))
+
+cat("Total stopwords:", length(all_stopwords), "\n\n")
+
+# Regex patterns to catch OCR fragments not in the explicit list
+is_ocr_fragment <- function(w) {
+  grepl("^[a-z]{1,3}(tion|ment|ence|ness|ings|tive|ance)$", w) |
+  grepl("^(pre|suf|dis|un|re)[a-z]{0,2}$", w) |
+  grepl("^[^a-z]+$", w)
+}
+
+# Clean text
+processed_texts <- raw_texts %>%
+  mutate(
+    text_clean = str_to_lower(text),
+    
+    # Remove URLs and emails
+    text_clean = str_remove_all(text_clean, "http\\S+"),
+    text_clean = str_remove_all(text_clean, "\\S+@\\S+"),
+    
+    # ---- NEW: Remove volume/issue/page markers before stripping punctuation ----
+    text_clean = str_remove_all(text_clean, "\\bvol\\.?\\s*\\d+\\b"),
+    text_clean = str_remove_all(text_clean, "\\bno\\.?\\s*\\d+\\b"),
+    text_clean = str_remove_all(text_clean, "\\bp\\.?\\s*\\d+\\b"),
+    text_clean = str_remove_all(text_clean, "\\bpp\\.?\\s*\\d+\\b"),
+    
+    # ---- NEW: Remove all standalone numbers (any length) ----
+    text_clean = str_remove_all(text_clean, "\\b\\d+\\b"),
+    
+    # Remove punctuation AFTER the above (order matters!)
+    text_clean = str_remove_all(text_clean, "[[:punct:]]"),
+    text_clean = str_squish(text_clean),
+    
+    words = str_split(text_clean, "\\s+"),
+    words_no_stop = map(words, ~.x[!.x %in% all_stopwords]),
+    
+    # ---- NEW: Also filter out pure number strings that survived ----
+    words_no_numbers = map(words_no_stop, ~.x[!grepl("^\\d+$", .x)]),
+    words_final = map(words_no_numbers, ~.x[nchar(.x) >= 3 & !is_ocr_fragment(.x)]),
+    
+    text_final = map_chr(words_final, ~paste(.x, collapse = " ")),
+    final_word_count = str_count(text_final, "\\S+")
+  )
+
+cat("Cleaning stats:\n")
+cat("  Avg before:", round(mean(raw_texts$word_count)), "\n")
+cat("  Avg after:", round(mean(processed_texts$final_word_count)), "\n\n")
+
+processed_texts <- processed_texts %>%
+  filter(final_word_count >= 10)
+
+cat("Documents after filtering:", nrow(processed_texts), "\n\n")
+```
+
+---
+
+## 7. Prepare for STM
+
+```{r prepare-stm}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("PREPARING FOR STM\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+processed <- textProcessor(
+  documents = processed_texts$text_final,
+  metadata = processed_texts %>% select(doc_id, month, volume, year, filename),
+  lowercase = FALSE,
+  removestopwords = FALSE,
+  removenumbers = TRUE,
+  removepunctuation = FALSE,
+  stem = FALSE,
+  wordLengths = c(3, Inf),
+  sparselevel = 1,
+  language = "en",
+  verbose = TRUE
+)
+
+cat("\n")
+
+out <- prepDocuments(
+  documents = processed$documents,
+  vocab = processed$vocab,
+  meta = processed$meta,
+  lower.thresh = 1,
+  upper.thresh = Inf
+)
+
+docs <- out$documents
+vocab <- out$vocab
+meta <- out$meta
+
+# Store the texts that actually made it into the model (for findThoughts later)
+modeled_texts <- processed_texts$text_final[match(meta$doc_id, processed_texts$doc_id)]
+
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("CORPUS READY\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+cat("Documents:", length(docs), "\n")
+cat("Vocabulary:", length(vocab), "\n\n")
+
+if (length(docs) == 0) stop("No documents remaining!")
+
+cat("Sample vocab:\n", paste(vocab[1:50], collapse = ", "), "\n\n")
+```
+
+---
+
+## 8. SET K MANUALLY
+
+```{r set-k}
+chosen_K <- 10  # CHANGE THIS
+
+cat("Chosen K =", chosen_K, "\n\n")
+```
+
+---
+
+## 9. Fit STM Model
+
+```{r fit-model, cache=TRUE}
+cat(rep("=", 70), "\n", sep = "")
+cat("FITTING MODEL K =", chosen_K, "\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+stm_model <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = chosen_K,
+  data = meta,
+  max.em.its = 75,
+  init.type = "Spectral",
+  seed = 12345,
+  verbose = TRUE
+)
+
+# Save to output folder
+model_file <- file.path(output_path, paste0("stm_model_K", chosen_K, ".rds"))
+saveRDS(stm_model, model_file)
+cat("\n✓ Model saved to:", model_file, "\n")
+```
+
+---
+
+## 10. Examine Topics
+
+```{r examine-topics}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("TOP WORDS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+labelTopics(stm_model, n = 15)
+```
+
+---
+
+## 11. Auto-Generate Labels (Method 6: Specific)
+
+```{r create-labels-semantic}
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("AUTO-GENERATING SPECIFIC LABELS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+create_specific_label <- function(topic_num, frex_words, prob_words) {
+  frex_text <- tolower(paste(frex_words, collapse = " "))
+  prob_text <- tolower(paste(prob_words, collapse = " "))
+  all_words <- paste(frex_text, prob_text)
+  
+  if (grepl("kingdom.*gospel|baptism.*eternal", frex_text)) {
+    label <- "Gospel Doctrine & Spiritual Kingdom"
+  } else if (grepl("passover|paschal|feast", frex_text)) {
+    label <- "Biblical Symbolism & Ancient Rituals"
+  } else if (grepl("nurse.*hospital|nursing.*training", frex_text)) {
+    label <- "Nursing Training & Hospital Work"
+  } else if (grepl("diet.*protein|nutrition|malnutrition", frex_text)) {
+    label <- "Nutrition & Dietary Science"
+  } else if (grepl("recipe|tbsp|boiling|oven", frex_text)) {
+    label <- "Recipes & Cooking Instructions"
+  } else if (grepl("housework|housekeeping|budget", frex_text)) {
+    label <- "Household Management & Budgeting"
+  } else if (grepl("moral.*parent|obedience.*spiritual", frex_text)) {
+    label <- "Moral Education & Character Development"
+  } else if (grepl("irving|tale|literature", frex_text)) {
+    label <- "American Literature (Washington Irving)"
+  } else if (grepl("radium.*curie|pasteur.*science", frex_text)) {
+    label <- "Scientific Biography & Discovery"
+  } else if (grepl("emigration.*journey|wagon.*pioneer", frex_text)) {
+    label <- "Pioneer Emigration & Journey Stories"
+  } else if (grepl("sisters.*presidency|organization.*grain", frex_text)) {
+    label <- "Relief Society Leadership & Organization"
+  } else if (grepl("stake.*ward|attendance.*conference", frex_text)) {
+    label <- "Stake & Ward Relief Society Reports"
+  } else if (grepl("suffrage.*vote|legislature", frex_text)) {
+    label <- "Women's Suffrage & Political Rights"
+  } else if (grepl("council.*international|convention", frex_text)) {
+    label <- "International Women's Councils"
+  } else if (grepl("entente.*allies|war.*troops", frex_text)) {
+    label <- "World War I Commentary & News"
+  } else if (grepl("tableau.*song|music.*hymn", frex_text)) {
+    label <- "Musical Programs & Performances"
+  } else if (grepl("^\\d+.*\\d+.*\\d+", frex_text)) {
+    label <- "Magazine Index & Page Numbers"
+  } else if (grepl("empey.*mclelland|board.*member", frex_text)) {
+    label <- "Board Member Directory"
+  } else if (grepl("merino.*cotton|bleached.*gauze", frex_text)) {
+    label <- "Garment & Product Advertisements"
+  } else if (grepl("jerry|walter|jimmy", frex_text) && grepl("said|little", prob_text)) {
+    label <- "Serialized Fiction & Stories"
+  } else if (grepl("abraham.*sarai|biblical", frex_text)) {
+    label <- "Biblical Narratives (Abraham)"
+  } else {
+    keywords <- paste(tools::toTitleCase(frex_words[1:3]), collapse= " ")
+    label <- keywords
+  }
+  
+  return(label)
+}
+
+all_top_words <- labelTopics(stm_model, n = 15)
+
+topic_labels <- sapply(1:chosen_K, function(i) {
+  frex_words <- all_top_words$frex[i, 1:10]
+  prob_words <- all_top_words$prob[i, 1:10]
+  specific_label <- create_specific_label(i, frex_words, prob_words)
+  paste0("Topic ", i, ": ", specific_label)
+})
+
+cat("Specific labels:\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+for (i in 1:chosen_K) {
+  cat(topic_labels[i], "\n")
+  cat("  FREX: ", paste(all_top_words$frex[i, 1:7], collapse = ", "), "\n")
+  cat("  PROB: ", paste(all_top_words$prob[i, 1:7], collapse = ", "), "\n\n")
+}
+
+# Export to output folder
+frex_for_export <- apply(all_top_words$frex, 1, function(x) paste(x, collapse = ", "))
+prob_for_export <- apply(all_top_words$prob, 1, function(x) paste(x, collapse = ", "))
+
+label_export <- tibble(
+  topic_num = 1:chosen_K,
+  auto_label = str_remove(topic_labels, "^Topic \\d+: "),
+  full_label = topic_labels,
+  frex_words = frex_for_export,
+  prob_words = prob_for_export,
+  manual_label = ""
+)
+
+labels_file <- file.path(output_path, paste0("topic_labels_K", chosen_K, ".csv"))
+write_csv(label_export, labels_file)
+cat("✓ Labels saved to:", labels_file, "\n\n")
+```
+
+
+```{r}
+# ============================================================================
+# MANUAL OVERRIDE (Optional - edit labels after seeing auto-generated ones)
+# ============================================================================
+
+# Uncomment and edit any labels you want to change:
+topic_labels[1] <- "Topic 1: Pioneer Heritage"
+topic_labels[2] <- "Topic 2: Education"
+topic_labels[3] <- "Topic 3: Women Professionalization"
+topic_labels[4] <- "Topic 4: International Women's Organizations"
+topic_labels[5] <- "Topic 5: Relief Society Leadership"
+topic_labels[6] <- "Topic 6: Religious Leadership"
+topic_labels[7] <- "Topic 7: Religious Lessons"
+topic_labels[8] <- "Topic 8: Missionary Reports"
+topic_labels[9] <- "Topic 9: Religious Literature"
+topic_labels[10] <- "Topic 10: Scientific Advancement"
+
+
+
+# Show final labels
+cat("\n", rep("=", 70), "\n", sep = "")
+cat("FINAL TOPIC LABELS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+for (i in 1:chosen_K) {
+  cat(topic_labels[i], "\n")
+}
+```
+---
+
+## 12. Find Examples
+
+```{r find-examples}
+topic_to_examine <- 2
+
+
+cat("Examples for", topic_labels[topic_to_examine], ":\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# modeled_texts was stored after prepDocuments — guaranteed to match model docs
+thoughts <- findThoughts(stm_model, texts = modeled_texts, topics = topic_to_examine, n = 3)
+
+for (i in 1:3) {
+  cat("Example", i, ":\n", substr(thoughts$docs[[1]][i], 1, 250), "...\n\n")
+}
+```
+
+```{r}
+plot(stm_model, 
+     type = "summary", 
+     n = min(10, chosen_K),
+     main = paste("Topic Prevalence (K =", chosen_K, ")"),
+     xlim = c(0, 0.3))
+```
+
+```{r plot-prevalence-bar, fig.width=10, fig.height=6}
+# ============================================================================
+# TOPIC PREVALENCE PLOT WITH CUSTOM LABELS - WOMAN'S EXPONENT
+# ============================================================================
+
+# Step 1: Define your topic labels (corrected)
+topic_labels <- c(
+"Pioneer Heritage", 
+"Education",
+"Women Professionalization", 
+"International Women's Organizations",
+"Relief Society Leadership",
+"Religious Leadership",
+"Religious Lessons",
+"Missionary Reports",
+"Religious Literature",
+"Scientific Advancement"
+
+)
+ 
+
+# Step 2: Get topic prevalences from the model
+topic_props <- colMeans(make.dt(stm_model, meta = meta) %>% 
+                        select(starts_with("Topic")))
+
+# Step 3: Sort topics by prevalence (highest first)
+sorted_order <- order(topic_props, decreasing = TRUE)
+
+# Step 4: Create the plot
+par(mar = c(5, 18, 4, 2))  # Wide left margin for labels
+
+barplot(
+  height = topic_props[sorted_order],
+  names.arg = topic_labels[sorted_order],
+  horiz = TRUE,
+  las = 1,
+  col = "#CD661D",        # Orange/brown for Woman's Exponent
+  border = "#8B4513",     # Saddle brown border
+  main = "Topic Prevalence - Woman's Exponent",
+  xlab = "Expected Topic Proportions",
+  cex.names = 0.8,
+  xlim = c(0, 0.35)
+)
+
+# Step 5: Add percentage labels
+text(
+  x = topic_props[sorted_order] + 0.015,
+  y = (1:10) * 1.2 - 0.5,
+  labels = sprintf("%.1f%%", topic_props[sorted_order] * 100),
+  cex = 0.8,
+  col = "#8B4513",       # Saddle brown text
+  font = 2
+)
+
+# Step 6: Reset margins
+par(mar = c(5, 4, 4, 2))
+
+cat("✓ Plot created successfully\n")
+```
+
+```{r}
+library(ggplot2)
+
+# Topic names
+topic_names <- c(
+    "Pioneer Heritage", 
+"Education",
+"Women Professionalization", 
+"International Women's Organizations",
+"Relief Society Leadership",
+"Religious Leadership",
+"Religious Lessons",
+"Missionary Reports",
+"Religious Literature",
+"Scientific Advancement"
+
+)
+
+# Get prevalences and words
+topic_props <- colMeans(make.dt(stm_model, meta = meta) %>% 
+                        select(starts_with("Topic")))
+top_words <- labelTopics(stm_model, n = 10)
+
+# Create labels
+labels_df <- tibble(
+  topic = 1:10,
+  name = topic_names,
+  words = sapply(1:10, function(i) paste(top_words$prob[i, 1:10], collapse = ", ")),
+  full_label = paste0(name, ": ", words),
+  prevalence = topic_props
+)
+
+# Plot
+ggplot(labels_df, aes(x = prevalence, y = reorder(full_label, prevalence))) +
+  geom_segment(aes(x = 0, xend = prevalence, y = full_label, yend = full_label),
+               linewidth = 1.2, color = "black") +
+  geom_point(aes(x = prevalence, y = full_label), size = 0.5) +  # Small endpoint
+  labs(
+    title = "Topic Prevalence (K = 10)",
+    x = "Expected Topic Proportions",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(
+    axis.text.y = element_text(size = 8, hjust = 1),
+    plot.title = element_text(face = "bold", size = 14, hjust = 0.5),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank()
+  ) +
+  scale_x_continuous(limits = c(0, 0.35),
+                    breaks = seq(0, 0.35, 0.05))
+```
+
+---
+
+## 🎯 What This Does:
+
+**Before:**
+```
+Topic 5: one, mother, little, time, now, said, home, see, just
+```
+
+**After:**
+```
+Serialized Fiction & Stories: one, mother, little, time, now, said, home, see, just
+```
+
+---
+
+## 13. Visualizations
+
+### Topic Prevalence
+
+```{r plot-prevalence-time, fig.width=10, fig.height=6}
+
+##Topic Prevalence over time
+# ============================================================================
+# TOPIC PREVALENCE OVER TIME WITH CORPUS COMPARISON
+# ============================================================================
+# ============================================================================
+# SECTION: TOPIC PREVALENCE OVER TIME
+# ============================================================================
+
+cat("=" , rep("=", 70), "\n", sep = "")
+cat("TOPIC PREVALENCE OVER TIME\n")
+cat("=" , rep("=", 70), "\n\n", sep = "")
+
+# Step 1: Estimate effect of year on topics
+cat("Estimating time effects...\n")
+
+prep_time <- estimateEffect(
+  formula = 1:chosen_K ~ s(year),  # Smooth function of year
+  stmobj = stm_model,
+  metadata = meta,
+  uncertainty = "Global"
+)
+
+cat("✓ Estimation complete\n\n")
+
+# ============================================================================
+# OPTION 1: Plot Top 6 Topics by Prevalence
+# ============================================================================
+
+# Get topic prevalences
+topic_props <- make.dt(stm_model, meta = meta)
+topic_prevalences <- colMeans(topic_props %>% select(starts_with("Topic")))
+
+# Get top 6 most prevalent topics
+top_6_topics <- order(topic_prevalences, decreasing = TRUE)[1:6]
+
+cat("Plotting top 6 most prevalent topics over time...\n")
+cat("Topics:", paste(top_6_topics, collapse = ", "), "\n\n")
+
+# Set up plotting area
+par(mfrow = c(2, 3), mar = c(4, 4, 3, 1))
+
+for (topic_num in top_6_topics) {
+  plot(
+    prep_time,
+    covariate = "year",
+    model = stm_model,
+    topics = topic_num,
+    method = "continuous",
+    xlim = range(meta$year, na.rm = TRUE),
+    main = str_wrap(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 30),
+    xlab = "Year",
+    ylab = "Topic Proportion",
+    linecol = "#3b82f6",
+    printlegend = TRUE,
+    ci.level = 0.95,
+    lwd = 2
+  )
+}
+
+par(mfrow = c(1, 1))
+cat("✓ Plots created\n\n")
+```
+
+##Scatter plot
+```{r}
+# ============================================================================
+# CREATE TIME SERIES DATA
+# ============================================================================
+
+# Get document-topic proportions with year
+topic_time_data <- make.dt(stm_model, meta = meta) %>%
+  select(starts_with("Topic"), year) %>%
+  filter(!is.na(year)) %>%
+  group_by(year) %>%
+  summarize(across(starts_with("Topic"), mean, na.rm = TRUE), .groups = "drop") %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.numeric(str_remove(topic, "Topic")),
+    topic_label = str_wrap(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 30)
+  )
+
+# Filter for top 6 topics
+topic_time_top6 <- topic_time_data %>%
+  filter(topic_num %in% top_6_topics)
+
+# ============================================================================
+# CREATE FACETED PLOT
+# ============================================================================
+
+ggplot(topic_time_top6, aes(x = year, y = prevalence)) +
+  geom_line(color = "#E0EEEE", size = 1.5) +
+  geom_point(color = "#E0EEEE", size = 3, alpha = 0.6) +
+  geom_smooth(method = "loess", color = "#CD661D", linetype = "dashed", 
+              se = TRUE, alpha = 0.2) +
+  facet_wrap(~topic_label, ncol = 3, scales = "free_y") +
+  labs(
+    title = "Topic Prevalence Over Time: Top 6 Most Prevalent Topics",
+    subtitle = "Blue line = actual data | Red dashed line = trend",
+    x = "Year",
+    y = "Mean Topic Proportion"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    strip.text = element_text(size = 10, face = "bold"),
+    panel.grid.minor = element_blank(),
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(size = 11, color = "#FFF8DC")
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1))
+```
+##All topics in one graph
+```{r}
+# Plot ALL topics
+ggplot(topic_time_data, aes(x = year, y = prevalence)) +
+  geom_line(color = "#CD661d", size = 0.8) +
+  geom_point(color = "#CD661d", size = 1.5, alpha = 0.5) +
+  facet_wrap(~topic_label, ncol = 4, scales = "free_y") +
+  labs(
+    title = "Complete Topic Evolution Over Time (Woman's Exponent)",
+    subtitle = "All 20 topics across years",
+    x = "Year",
+    y = "Topic Proportion"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(
+    strip.text = element_text(size = 7, face = "bold"),
+    panel.grid.minor = element_blank()
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1))
+```
+
+##Interactive time lapse
+```{r}
+# Choose one topic to examine in detail
+topic_to_examine <- 2  # CHANGE THIS to any topic number
+
+# Filter data
+topic_detail <- topic_time_data %>%
+  filter(topic_num == topic_to_examine)
+
+# Create detailed plot with trend
+ggplot(topic_detail, aes(x = year, y = prevalence)) +
+  geom_line(color = "#3b82f6", size = 1.5) +
+  geom_point(color = "#3b82f6", size = 4, alpha = 0.7) +
+  geom_smooth(method = "loess", color = "#ef4444", 
+              fill = "#fecaca", alpha = 0.3, size = 1) +
+  labs(
+    title = str_remove(topic_labels[topic_to_examine], "^Topic \\d+: "),
+    subtitle = "Points = annual averages | Red band = smoothed trend with confidence interval",
+    x = "Year",
+    y = "Topic Proportion"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    plot.subtitle = element_text(size = 11, color = "#64748b"),
+    panel.grid.minor = element_blank()
+  ) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  scale_x_continuous(breaks = seq(min(topic_detail$year), 
+                                   max(topic_detail$year), by = 2))
+```
+
+### Topic Correlation Network
+
+```{r plot-correlation, fig.width=10, fig.height=8}
+mod.out.corr <- topicCorr(stm_model)
+plot(mod.out.corr, main = "Topic Correlation Network")
+```
+
+### Word Cloud for Topic 1
+
+```{r wordcloud-1, fig.width=8, fig.height=6}
+cloud(stm_model, 
+      topic = 9,
+      scale = c(3, 0.5),
+      main = topic_labels[1])
+```
+
+### Create Word Clouds for All Topics
+
+```{r wordcloud-all, fig.width=8, fig.height=6, eval=FALSE}
+# Set eval=TRUE to generate word clouds for all topics
+for (i in 1:chosen_K) {
+  cloud(stm_model, 
+        topic = i,
+        scale = c(3, 0.5),
+        main = topic_labels[i])
+}
+```
+
+### Topic Quality
+
+```{r topic-quality, fig.width=8, fig.height=6}
+topicQuality(stm_model, documents = docs)
+```
+
+### Compare Two Topics
+
+```{r compare-topics, fig.width=10, fig.height=6}
+# Compare two topics
+plot(stm_model, 
+     type = "perspectives", 
+     topics = c(2, 3),
+     main = paste("Comparing", topic_labels[2], "vs", topic_labels[3]))
+```
+
+---
+```{r topic-prevalence-stats}
+# Get average proportion of each topic across all documents
+topic_props <- make.dt(stm_model, meta = meta)
+
+prevalence_summary <- topic_props %>%
+  select(starts_with("Topic")) %>%
+  summarise(across(everything(), mean, na.rm = TRUE)) %>%
+  pivot_longer(everything(), names_to = "topic", values_to = "mean_proportion") %>%
+  mutate(
+    topic_num   = as.numeric(str_remove(topic, "Topic")),
+    label       = topic_labels[topic_num],
+    percentage  = round(mean_proportion * 100, 2),
+    rank        = rank(-mean_proportion)
+  ) %>%
+  arrange(rank) %>%
+  select(rank, label, percentage)
+
+print(prevalence_summary)
+```
+
+---
+```{r trend-summary}
+topic_trends <- topic_time_data %>%
+  group_by(topic_num, topic_label) %>%
+  summarise(
+    start_prev = first(prevalence),
+    end_prev   = last(prevalence),
+    change     = end_prev - start_prev,
+    pct_change = round((change / start_prev) * 100, 1),
+    trend      = case_when(
+      change >  0.005 ~ "Increasing",
+      change < -0.005 ~ "Decreasing",
+      TRUE            ~ "Stable"
+    ),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(abs(pct_change)))
+
+# Print a readable sentence for each topic
+cat("TOPIC CHANGE SUMMARY\n")
+cat(rep("=", 50), "\n\n", sep = "")
+
+for (i in 1:nrow(topic_trends)) {
+  direction <- ifelse(topic_trends$pct_change[i] > 0, "increased", "decreased")
+  cat(sprintf("Topic %d (%s): %s by %.1f%% over the study period\n",
+              topic_trends$topic_num[i],
+              topic_trends$topic_label[i],
+              direction,
+              abs(topic_trends$pct_change[i])))
+}
+
+# Also print as a clean table
+cat("\n\nSUMMARY TABLE\n")
+print(topic_trends %>% select(topic_num, topic_label, pct_change, trend))
+```
+
+**What was wrong:** The chunk saved results into `topic_trends` but then tried to print `trend_summary` — R couldn't find that name and threw the error.
+
+**What this now outputs**, for example:
+```
+Topic 1 (Pioneer Heritage): decreased by 14.2% over the study period
+Topic 3 (Women Professionalization): increased by 8.7% over the study period
+...
+
+## 14. Within-Topic Vocabulary Comparison (Early vs Late Period)
+
+When the same topic appears across both eras of the Exponent, does the **language** shift? This reveals how the publication's framing of shared concerns evolved over time.
+
+```{r vocab-comparison-era, fig.width=16, fig.height=20}
+cat(rep("=", 70), "\n", sep = "")
+cat("WITHIN-TOPIC VOCABULARY COMPARISON (EARLY vs LATE)\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Build document-topic proportions with metadata
+topic_props_we <- make.dt(stm_model, meta = meta)
+
+# Split into early and late eras at median year
+median_year <- median(meta$year, na.rm = TRUE)
+topic_props_we <- topic_props_we %>%
+  mutate(era = ifelse(year <= median_year, "Early", "Late"))
+
+cat("Era split at year", median_year, "\n")
+cat("  Early:", sum(topic_props_we$era == "Early"), "documents\n")
+cat("  Late: ", sum(topic_props_we$era == "Late"), "documents\n\n")
+
+# Function: get word frequencies for top-quartile docs of a topic in an era
+# (includes OCR junk filtering as safety net)
+get_topic_words_by_era <- function(topic_num, era_name) {
+  topic_col <- paste0("Topic", topic_num)
+  era_docs <- topic_props_we %>% filter(era == era_name)
+  threshold <- quantile(era_docs[[topic_col]], 0.75, na.rm = TRUE)
+
+  doc_ids <- era_docs %>%
+    filter(.data[[topic_col]] >= threshold) %>%
+    pull(doc_id)
+
+  words <- processed_texts %>%
+    filter(doc_id %in% doc_ids) %>%
+    pull(text_final) %>%
+    paste(collapse = " ") %>%
+    str_split("\\s+") %>%
+    `[[`(1)
+
+  freq <- sort(table(words), decreasing = TRUE)
+  tibble(word = names(freq), count = as.integer(freq)) %>%
+    mutate(proportion = count / sum(count)) %>%
+    filter(
+      nchar(word) >= 4,
+      !word %in% all_stopwords,
+      !is_ocr_fragment(word)
+    )
+}
+
+# Pick the 6 most prevalent topics for comparison
+top_6_for_vocab <- order(colMeans(topic_props_we %>% select(starts_with("Topic"))),
+                         decreasing = TRUE)[1:min(6, chosen_K)]
+
+cat("Comparing vocabulary for top", length(top_6_for_vocab), "topics:\n")
+for (t in top_6_for_vocab) {
+  cat(sprintf("  T%d: %s\n", t, str_remove(topic_labels[t], "^Topic \\d+: ")))
+}
+cat("\n")
+
+# Build log-ratio plots
+vocab_plots <- list()
+for (idx in seq_along(top_6_for_vocab)) {
+  t <- top_6_for_vocab[idx]
+
+  words_early <- get_topic_words_by_era(t, "Early")
+  words_late  <- get_topic_words_by_era(t, "Late")
+
+  word_compare <- full_join(
+    words_early %>% select(word, early_prop = proportion),
+    words_late  %>% select(word, late_prop = proportion),
+    by = "word"
+  ) %>%
+    replace_na(list(early_prop = 0.0001, late_prop = 0.0001)) %>%
+    mutate(
+      log_ratio = log2(early_prop / late_prop),
+      avg_prop = (early_prop + late_prop) / 2
+    ) %>%
+    filter(avg_prop > 0.001) %>%
+    arrange(desc(abs(log_ratio)))
+
+  # Top 20 words each direction
+  top_early <- word_compare %>% filter(log_ratio > 0) %>% head(20)
+  top_late  <- word_compare %>% filter(log_ratio < 0) %>% head(20)
+  plot_words <- bind_rows(top_early, top_late) %>%
+    mutate(
+      direction = ifelse(log_ratio > 0,
+                         paste0("More in Early (\u2264", median_year, ")"),
+                         paste0("More in Late (>", median_year, ")")),
+      word = reorder(word, log_ratio)
+    )
+
+  early_label <- paste0("More in Early (\u2264", median_year, ")")
+  late_label  <- paste0("More in Late (>", median_year, ")")
+
+  p <- ggplot(plot_words, aes(x = log_ratio, y = word, fill = direction)) +
+    geom_col(alpha = 0.8) +
+    geom_vline(xintercept = 0, linewidth = 0.8) +
+    scale_fill_manual(values = setNames(c("#CD661D", "#8B4513"),
+                                        c(early_label, late_label))) +
+    labs(title = paste0("T", t, ": ",
+                        str_trunc(str_remove(topic_labels[t], "^Topic \\d+: "), 35)),
+         x = "Log2 Ratio (Early / Late)", y = NULL, fill = NULL) +
+    theme_minimal(base_size = 8) +
+    theme(legend.position = "none",
+          plot.title = element_text(size = 10, face = "bold"))
+
+  vocab_plots[[idx]] <- p
+}
+
+# Combine plots
+if (length(vocab_plots) >= 6) {
+  (vocab_plots[[1]] | vocab_plots[[2]] | vocab_plots[[3]]) /
+  (vocab_plots[[4]] | vocab_plots[[5]] | vocab_plots[[6]]) +
+    plot_annotation(
+      title = "Within-Topic Vocabulary Shifts: Early vs Late Period",
+      subtitle = paste0("Top 20 words each era emphasizes differently (split at ",
+                        median_year, ")"),
+      theme = theme(plot.title = element_text(size = 16, face = "bold"))
+    )
+} else if (length(vocab_plots) >= 1) {
+  wrap_plots(vocab_plots, ncol = min(3, length(vocab_plots))) +
+    plot_annotation(title = "Within-Topic Vocabulary Shifts: Early vs Late Period")
+}
+```
+
+---
+
+## 15. Topic Diversity & Concentration
+
+Is the Exponent topically diverse across its articles, or do most articles focus narrowly on a single topic?
+
+```{r topic-diversity, fig.width=12, fig.height=10}
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPIC DIVERSITY ANALYSIS\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Shannon entropy per document (higher = more diverse)
+doc_entropy <- topic_props_we %>%
+  select(doc_id, starts_with("Topic")) %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "p") %>%
+  filter(p > 0) %>%
+  group_by(doc_id) %>%
+  summarize(entropy = -sum(p * log2(p)), .groups = "drop")
+
+# Gini concentration per document
+doc_gini <- topic_props_we %>%
+  select(doc_id, starts_with("Topic")) %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "p") %>%
+  group_by(doc_id) %>%
+  summarize(
+    max_topic_prop = max(p),
+    gini = 1 - sum(p^2),
+    .groups = "drop"
+  )
+
+# Summary
+diversity_summary <- doc_entropy %>%
+  left_join(doc_gini, by = "doc_id") %>%
+  summarize(
+    mean_entropy = mean(entropy),
+    sd_entropy = sd(entropy),
+    mean_gini = mean(gini),
+    mean_max_prop = mean(max_topic_prop),
+    pct_strong_exemplar = mean(max_topic_prop >= 0.4) * 100
+  )
+
+cat("Diversity Metrics (Woman's Exponent):\n\n")
+cat(sprintf("  Mean Shannon Entropy:     %.2f bits\n", diversity_summary$mean_entropy))
+cat(sprintf("  SD Entropy:               %.2f\n", diversity_summary$sd_entropy))
+cat(sprintf("  Mean Gini (inv-Herf):     %.3f\n", diversity_summary$mean_gini))
+cat(sprintf("  Mean Dominant Topic %%:    %.1f%%\n", diversity_summary$mean_max_prop * 100))
+cat(sprintf("  Strong Exemplars (>40%%):  %.1f%% of documents\n\n", diversity_summary$pct_strong_exemplar))
+
+# Entropy distribution
+p1 <- ggplot(doc_entropy, aes(x = entropy)) +
+  geom_density(fill = "#CD661D", alpha = 0.5, linewidth = 0.8, color = "#8B4513") +
+  labs(title = "Topic Diversity per Document",
+       subtitle = "Higher entropy = article discusses more topics evenly",
+       x = "Shannon Entropy (bits)", y = "Density") +
+  theme_minimal(base_size = 12)
+
+# Dominant topic concentration
+p2 <- ggplot(doc_gini, aes(x = max_topic_prop)) +
+  geom_density(fill = "#CD661D", alpha = 0.5, linewidth = 0.8, color = "#8B4513") +
+  geom_vline(xintercept = 0.4, linetype = "dashed", color = "grey40") +
+  annotate("text", x = 0.42, y = 0, label = "Exemplar\nthreshold", size = 3, hjust = 0) +
+  labs(title = "Topic Concentration per Document",
+       subtitle = "Higher = article dominated by single topic; dashed line = 40% exemplar threshold",
+       x = "Dominant Topic Proportion", y = "Density") +
+  theme_minimal(base_size = 12) +
+  scale_x_continuous(labels = percent_format())
+
+p1 / p2
+```
+
+### Effective Number of Topics
+
+```{r effective-topics, fig.width=10, fig.height=5}
+# Publication-level topic distribution
+pub_topic_dist <- topic_props_we %>%
+  summarize(across(starts_with("Topic"), mean)) %>%
+  pivot_longer(everything(), names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.integer(str_remove(topic, "Topic")),
+    label = str_trunc(str_remove(topic_labels[topic_num], "^Topic \\d+: "), 25)
+  )
+
+# Effective number of topics = exp(entropy of topic distribution)
+eff_topics <- pub_topic_dist %>%
+  filter(prevalence > 0) %>%
+  summarize(eff = exp(-sum(prevalence * log(prevalence)))) %>%
+  pull(eff)
+
+cat(sprintf("Effective number of topics: %.1f (of %d)\n\n", eff_topics, chosen_K))
+
+ggplot(pub_topic_dist, aes(x = reorder(label, -prevalence), y = prevalence)) +
+  geom_col(fill = "#CD661D", alpha = 0.8) +
+  labs(title = "Topic Weight Distribution — Woman's Exponent",
+       subtitle = paste0("Effective topics: ", round(eff_topics, 1), " of ", chosen_K),
+       x = NULL, y = "Mean Proportion") +
+  theme_minimal(base_size = 10) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 8)) +
+  scale_y_continuous(labels = percent_format())
+```
+
+---
+
+## 16. Topic Prevalence Heatmap Over Time
+
+```{r topic-time-heatmap, fig.width=12, fig.height=7}
+# Yearly topic prevalence
+yearly_topics_we <- topic_props_we %>%
+  filter(!is.na(year)) %>%
+  select(year, starts_with("Topic")) %>%
+  group_by(year) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "prevalence") %>%
+  mutate(
+    topic_num = as.integer(str_remove(topic, "Topic")),
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    short_label = paste0("T", topic_num, ": ", str_trunc(label, 20))
+  )
+
+ggplot(yearly_topics_we, aes(x = year, y = short_label, fill = prevalence)) +
+  geom_tile(color = "white", linewidth = 0.3) +
+  scale_fill_gradient(low = "white", high = "#8B4513",
+                      labels = percent_format()) +
+  labs(title = "Topic Prevalence Over Time — Woman's Exponent",
+       subtitle = "Darker = higher prevalence in that year",
+       x = "Year", y = NULL, fill = "Prevalence") +
+  theme_minimal(base_size = 11) +
+  theme(panel.grid = element_blank(),
+        plot.title = element_text(face = "bold", size = 14)) +
+  scale_y_discrete(limits = rev) +
+  scale_x_continuous(breaks = sort(unique(yearly_topics_we$year)))
+```
+
+---
+
+## 17. Topic Percentage Change (Early vs Late Era)
+
+How much does each topic's prevalence **shift** from the early period to the late period?
+
+```{r topic-pct-change-era, fig.width=12, fig.height=8}
+cat(rep("=", 70), "\n", sep = "")
+cat("PERCENTAGE CHANGE IN TOPICS: EARLY vs LATE ERA\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+# Mean prevalence per topic per era
+era_means <- topic_props_we %>%
+  group_by(era) %>%
+  summarize(across(starts_with("Topic"), mean), .groups = "drop") %>%
+  pivot_longer(-era, names_to = "topic", values_to = "prevalence") %>%
+  mutate(topic_num = as.integer(str_remove(topic, "Topic"))) %>%
+  pivot_wider(names_from = era, values_from = prevalence)
+
+era_change <- era_means %>%
+  mutate(
+    label = str_remove(topic_labels[topic_num], "^Topic \\d+: "),
+    early_pct = Early * 100,
+    late_pct = Late * 100,
+    abs_change = late_pct - early_pct,
+    pct_change = ifelse(Early > 0.001,
+                        (Late - Early) / Early * 100,
+                        NA_real_),
+    direction = case_when(
+      abs_change > 0.5  ~ "Grew in Late Period",
+      abs_change < -0.5 ~ "Declined in Late Period",
+      TRUE ~ "Stable"
+    )
+  ) %>%
+  arrange(desc(abs_change))
+
+cat(sprintf("Era split: Early (\u2264%d) vs Late (>%d)\n\n", median_year, median_year))
+cat(sprintf("%-35s  %7s  %7s  %8s  %9s\n",
+            "Topic", "Early%", "Late%", "Change", "% Change"))
+cat(rep("-", 80), "\n", sep = "")
+for (i in 1:nrow(era_change)) {
+  r <- era_change[i, ]
+  pct_str <- ifelse(is.na(r$pct_change), "N/A", sprintf("%+.0f%%", r$pct_change))
+  cat(sprintf("%-35s  %5.1f%%  %5.1f%%  %+6.1fpp  %9s\n",
+              str_trunc(r$label, 35), r$early_pct, r$late_pct, r$abs_change, pct_str))
+}
+
+# Absolute change bar chart
+p_abs <- era_change %>%
+  mutate(display = paste0("T", topic_num, ": ", str_trunc(label, 28)),
+         display = reorder(display, abs_change)) %>%
+  ggplot(aes(x = abs_change, y = display, fill = direction)) +
+  geom_col(alpha = 0.85) +
+  geom_vline(xintercept = 0, linewidth = 1) +
+  scale_fill_manual(values = c("Grew in Late Period" = "#458B74",
+                                "Declined in Late Period" = "#CD661D",
+                                "Stable" = "#94a3b8")) +
+  labs(title = paste0("Topic Change: Early (\u2264", median_year,
+                      ") vs Late (>", median_year, ") Period"),
+       subtitle = "Absolute change in percentage points of topic prevalence",
+       x = "Change (percentage points)", y = NULL, fill = NULL) +
+  theme_minimal(base_size = 11) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+
+print(p_abs)
+```
+
+```{r topic-pct-change-relative-era, fig.width=12, fig.height=8}
+# Relative (%) change bar chart
+era_change_filtered <- era_change %>%
+  filter(!is.na(pct_change), abs(pct_change) < 500) %>%
+  mutate(display = paste0("T", topic_num, ": ", str_trunc(label, 28)),
+         display = reorder(display, pct_change))
+
+if (nrow(era_change_filtered) > 0) {
+  ggplot(era_change_filtered, aes(x = pct_change, y = display, fill = direction)) +
+    geom_col(alpha = 0.85) +
+    geom_vline(xintercept = 0, linewidth = 1) +
+    scale_fill_manual(values = c("Grew in Late Period" = "#458B74",
+                                  "Declined in Late Period" = "#CD661D",
+                                  "Stable" = "#94a3b8")) +
+    labs(title = "Relative Percentage Change in Topic Prevalence",
+         subtitle = paste0("How much did each topic grow or shrink relative to its early-period (\u2264",
+                           median_year, ") baseline?"),
+         x = "Relative Change (%)", y = NULL, fill = NULL) +
+    theme_minimal(base_size = 11) +
+    theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+}
+```
+
+---
+
+## 18. Topic Evolution Summary
+
+```{r evolution-summary-scatter, fig.width=10, fig.height=10}
+cat(rep("=", 70), "\n", sep = "")
+cat("TOPIC EVOLUTION SUMMARY\n")
+cat(rep("=", 70), "\n\n", sep = "")
+
+topic_evolution <- era_change %>%
+  mutate(
+    evolution_type = case_when(
+      abs(abs_change) <= 0.5 ~ "Stable",
+      abs_change > 0.5  ~ "Growing",
+      abs_change < -0.5 ~ "Declining"
+    ),
+    evolution_type = factor(evolution_type,
+                            levels = c("Stable", "Growing", "Declining"))
+  )
+
+cat("TOPIC EVOLUTION CLASSIFICATION:\n\n")
+for (etype in c("Stable", "Growing", "Declining")) {
+  cat(toupper(etype), ":\n")
+  subset <- topic_evolution %>% filter(evolution_type == etype)
+  if (nrow(subset) > 0) {
+    for (i in 1:nrow(subset)) {
+      r <- subset[i, ]
+      cat(sprintf("  T%d: %s (Early: %.1f%%, Late: %.1f%%, %+.1fpp)\n",
+                  r$topic_num, r$label, r$early_pct, r$late_pct, r$abs_change))
+    }
+  } else {
+    cat("  (none)\n")
+  }
+  cat("\n")
+}
+
+# Scatter plot: early vs late prevalence
+ggplot(topic_evolution, aes(x = early_pct, y = late_pct, color = evolution_type)) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed",
+              color = "grey70", linewidth = 1) +
+  geom_point(size = 5, alpha = 0.8) +
+  geom_text_repel(aes(label = paste0("T", topic_num, ": ", str_trunc(label, 25))),
+                  size = 3, max.overlaps = 20, show.legend = FALSE) +
+  scale_color_manual(values = c(
+    "Stable" = "#6495ED",
+    "Growing" = "#458B74",
+    "Declining" = "#CD661D"
+  )) +
+  labs(title = "Topic Evolution: Early vs Late Period",
+       subtitle = paste0("Diagonal = no change | Above = grew in late period (",
+                         median_year + 1, "-", max(meta$year, na.rm = TRUE),
+                         ") | Below = declined"),
+       x = paste0("Early Period Mean % (\u2264", median_year, ")"),
+       y = paste0("Late Period Mean % (>", median_year, ")"),
+       color = "Evolution Type") +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom",
+        plot.title = element_text(face = "bold", size = 16)) +
+  coord_fixed()
+```
+
+---
+
+## 19. Export Results
+
+```{r export-results}
+# Document-topic proportions
+doc_topics <- make.dt(stm_model, meta = meta)
+doc_topics_full <- doc_topics %>%
+  left_join(processed_texts %>% select(doc_id, filename, volume, year, month), by = "doc_id")
+
+doc_file <- file.path(output_path, paste0("document_topics_K", chosen_K, ".csv"))
+write_csv(doc_topics_full, doc_file)
+
+# Top words
+top_words <- labelTopics(stm_model, n = 20)
+topic_words_df <- tibble(
+  topic = 1:chosen_K,
+  label = topic_labels,
+  top_prob = apply(top_words$prob, 1, function(x) paste(x, collapse = ", ")),
+  top_frex = apply(top_words$frex, 1, function(x) paste(x, collapse = ", "))
+)
+
+words_file <- file.path(output_path, paste0("topic_words_K", chosen_K, ".csv"))
+write_csv(topic_words_df, words_file)
+
+cat("Results exported!\n")
+cat("  -", doc_file, "\n")
+cat("  -", words_file, "\n")
+```
+
+---
+
+## 20. Save Session
+
+```{r save-session}
+session_file <- file.path(output_path, paste0("stm_session_K", chosen_K, ".RData"))
+save(stm_model, docs, vocab, meta, raw_texts, processed_texts,
+     all_stopwords, topic_labels, file = session_file)
+
+cat("Session saved to:", session_file, "\n")
+cat("\nTo reload: load('", session_file, "')\n", sep = "")
+```
+
+---
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

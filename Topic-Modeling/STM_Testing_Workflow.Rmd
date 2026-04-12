@@ -1,0 +1,684 @@
+---
+title: "STM Topic Modeling - Complete Workflow"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: show
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# STM Topic Modeling Workflow
+
+This notebook walks through the complete workflow for topic modeling using the STM package in R, from raw text files to interpretable topics.
+
+---
+
+## 1. Setup: Install and Load Packages
+
+```{r install-packages, eval=FALSE}
+# Run this once to install packages (set eval=TRUE if needed)
+install.packages("stm")
+install.packages("tidyverse")
+install.packages("tidytext")
+install.packages("quanteda")
+```
+
+```{r load-packages}
+# Load required libraries
+library(stm)
+library(tidyverse)
+library(tidytext)
+library(quanteda)
+
+# Set seed for reproducibility
+set.seed(12345)
+```
+
+---
+
+## 2. Import Raw Text Files
+
+```{r import-files}
+library(tidyverse)
+library(stm)
+
+# Set seed for reproducibility
+set.seed(12345)
+
+# ============================================================================
+# STEP 1: SET YOUR FOLDER PATH
+# ============================================================================
+
+# EDIT THIS PATH to point to your input folder
+folder_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/Topicmodel/input"
+
+# ============================================================================
+# STEP 2: LIST ALL FILES RECURSIVELY
+# ============================================================================
+
+# Get ALL files first
+all_files <- list.files(
+  path = folder_path,
+  full.names = TRUE,
+  recursive = TRUE
+)
+
+# Filter to only .txt files (case-insensitive)
+file_paths <- all_files[grepl("\\.txt$", all_files, ignore.case = TRUE)]
+
+cat("=" , rep("=", 60), "\n", sep = "")
+cat("FILE IMPORT\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+cat("Total .txt files found:", length(file_paths), "\n\n")
+
+# Check if we found any files
+if (length(file_paths) == 0) {
+  cat("ERROR: No .txt files found!\n")
+  cat("Total files of any type:", length(all_files), "\n")
+  
+  if (length(all_files) > 0) {
+    cat("\nFile extensions found:\n")
+    print(table(tools::file_ext(all_files)))
+    cat("\nFirst 10 files:\n")
+    print(basename(all_files)[1:10])
+  }
+  
+  stop("No .txt files found. Please check your folder path.")
+}
+
+# Show sample of files found
+cat("First 10 filenames found:\n")
+print(basename(file_paths)[1:10])
+```
+
+---
+
+## 3. Create Sample for Testing (Optional)
+
+```{r create-sample}
+# ============================================================================
+# FOR TESTING: Use smaller sample
+# ============================================================================
+
+# OPTION 1: Use a sample for faster testing (RECOMMENDED for first run)
+sample_size <- min(300, length(file_paths))  # Use 300 or all if fewer
+cat("\nUsing", sample_size, "of", length(file_paths), "files for testing\n")
+set.seed(123)
+sampled_paths <- sample(file_paths, size = sample_size)
+
+# OPTION 2: Use ALL files (comment out above, uncomment below)
+# sampled_paths <- file_paths
+# cat("\nUsing ALL", length(file_paths), "files\n")
+```
+
+---
+
+## 4. Read Files and Extract Metadata
+
+```{r read-files}
+# ============================================================================
+# READ ALL FILES INTO DATA FRAME
+# ============================================================================
+
+cat("\nReading files...\n")
+
+raw_texts <- tibble(
+  filepath = sampled_paths,
+  filename = basename(sampled_paths),
+  text = map_chr(sampled_paths, ~read_file(.x))
+)
+
+cat("Successfully read", nrow(raw_texts), "files\n")
+
+# ============================================================================
+# EXTRACT METADATA FROM FILENAMES AND PATHS
+# ============================================================================
+
+# Your filename format: April_Vol1_00_FRONT_MATTER.txt
+raw_texts <- raw_texts %>%
+  mutate(
+    # Extract month from filename
+    month = str_extract(filename, "^[A-Za-z]+"),
+    
+    # Extract volume (e.g., Vol1, Vol6)
+    volume = str_extract(filename, "Vol\\d+"),
+    
+    # Extract section number (e.g., 00, 01, 02)
+    section_num = str_extract(filename, "(?<=Vol\\d_)\\d{2}"),
+    
+    # Extract section name (everything after section number before .txt)
+    section_name = str_remove(filename, "^[A-Za-z]+_Vol\\d+_\\d{2}_"),
+    section_name = str_remove(section_name, "\\.txt$"),
+    
+    # Extract year from folder path
+    year = as.numeric(str_extract(filepath, "\\d{4}")),
+    
+    # Create unique document ID
+    doc_id = row_number(),
+    
+    # Calculate word count
+    word_count = str_count(text, "\\S+")
+  )
+
+# ============================================================================
+# DISPLAY RESULTS
+# ============================================================================
+
+cat("\n" , rep("=", 60), "\n", sep = "")
+cat("DATA SUMMARY\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+cat("Total documents loaded:", nrow(raw_texts), "\n")
+cat("Volumes found:", paste(unique(na.omit(raw_texts$volume)), collapse = ", "), "\n")
+cat("Months found:", paste(unique(na.omit(raw_texts$month)), collapse = ", "), "\n")
+cat("Years found:", paste(unique(na.omit(raw_texts$year)), collapse = ", "), "\n")
+
+cat("\nWord count statistics:\n")
+cat("  Minimum:", min(raw_texts$word_count), "words\n")
+cat("  Average:", round(mean(raw_texts$word_count)), "words\n")
+cat("  Maximum:", max(raw_texts$word_count), "words\n")
+
+cat("\nSample of loaded data:\n")
+print(head(raw_texts %>% select(filename, month, volume, year, word_count), 10))
+
+cat("\n" , rep("=", 60), "\n\n", sep = "")
+```
+
+---
+
+## 5. Text Preprocessing
+
+```{r preprocess-text}
+# ============================================================================
+# TEXT PREPROCESSING
+# ============================================================================
+
+cat("Preprocessing text...\n\n")
+
+processed_texts <- raw_texts %>%
+  mutate(
+    # Convert to lowercase
+    text_clean = str_to_lower(text),
+    
+    # Remove URLs
+    text_clean = str_remove_all(text_clean, "http\\S+"),
+    
+    # Remove email addresses
+    text_clean = str_remove_all(text_clean, "\\S+@\\S+"),
+    
+    # Remove extra whitespace
+    text_clean = str_squish(text_clean)
+  )
+
+# Filter out very short documents (optional)
+cat("Documents before filtering:", nrow(processed_texts), "\n")
+
+processed_texts <- processed_texts %>%
+  filter(word_count >= 50)  # Keep documents with at least 50 words
+
+cat("Documents after filtering:", nrow(processed_texts), "\n")
+cat("Removed:", nrow(raw_texts) - nrow(processed_texts), "short documents\n\n")
+
+# Check distribution of word counts
+cat("Word count distribution after filtering:\n")
+print(summary(processed_texts$word_count))
+```
+
+---
+
+## 6. Prepare Data for STM
+
+```{r prepare-stm-data}
+# ============================================================================
+# DIAGNOSTIC: Check what's in your text files
+# ============================================================================
+
+cat("DIAGNOSTIC CHECK\n")
+cat("=================\n\n")
+
+# Check first document
+cat("First document filename:", raw_texts$filename[1], "\n")
+cat("First document length:", nchar(raw_texts$text[1]), "characters\n")
+cat("First document word count:", raw_texts$word_count[1], "words\n\n")
+
+cat("First 500 characters of first document:\n")
+cat(substr(raw_texts$text[1], 1, 500), "\n\n")
+
+# Check text after cleaning
+cat("After basic cleaning:\n")
+test_clean <- str_to_lower(raw_texts$text[1])
+test_clean <- str_remove_all(test_clean, "http\\S+")
+test_clean <- str_remove_all(test_clean, "\\S+@\\S+")
+test_clean <- str_squish(test_clean)
+
+cat("First 500 characters after cleaning:\n")
+cat(substr(test_clean, 1, 500), "\n\n")
+
+# Try manual tokenization to see what words are present
+words <- str_split(test_clean, "\\s+")[[1]]
+cat("Total words after basic cleaning:", length(words), "\n")
+cat("First 50 words:\n")
+cat(paste(words[1:50], collapse = ", "), "\n\n")
+
+# Check stopwords removal
+library(tm)
+stopwords_en <- stopwords("english")
+words_no_stop <- words[!words %in% stopwords_en]
+cat("Words after stopword removal:", length(words_no_stop), "\n")
+cat("First 30 words (no stopwords):\n")
+cat(paste(words_no_stop[1:30], collapse = ", "), "\n")
+```
+
+---
+
+## 7. Determine Optimal Number of Topics (K)
+
+**This is where you set different numbers of topics to test!**
+
+```{r search-k, cache=TRUE}
+# ============================================================================
+# SETTING DIFFERENT NUMBERS OF TOPICS (K)
+# ============================================================================
+# 
+# K is the number of topics you want the model to find.
+# There's no "correct" K - it depends on your data and goals.
+#
+# HOW TO SET K:
+# 1. For initial exploration, test a range: c(5, 10, 15, 20, 25, 30)
+# 2. For smaller corpora (<500 docs), try: c(5, 10, 15, 20)
+# 3. For larger corpora (>1000 docs), try: c(10, 20, 30, 40, 50)
+#
+# The searchK() function tests multiple K values and helps you choose
+# ============================================================================
+
+# Define K values to test
+# ADJUST THIS BASED ON YOUR DATA SIZE
+K_values <- c(5, 10, 15, 20, 25)  # Testing 5 different K values
+
+cat("=" , rep("=", 60), "\n", sep = "")
+cat("SEARCHING FOR OPTIMAL K\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+cat("Testing K values:", paste(K_values, collapse = ", "), "\n")
+cat("This may take several minutes...\n\n")
+
+# Search over different K values
+K_search <- searchK(
+  documents = docs,
+  vocab = vocab,
+  K = K_values,
+  data = meta,
+  init.type = "Spectral",
+  verbose = TRUE
+)
+
+# Save results
+saveRDS(K_search, "K_search_results.rds")
+cat("\nSearch results saved to 'K_search_results.rds'\n")
+```
+
+### Visualize K Search Results
+
+```{r plot-k-search, fig.width=10, fig.height=8}
+# Plot diagnostic measures
+plot(K_search)
+```
+
+**What to look for:**
+
+- **Higher Semantic Coherence** = better (topics make more sense)
+- **Higher Held-Out Likelihood** = better (model fits data well)
+- **Lower Residuals** = better (model explains data well)
+- **Exclusivity vs Coherence**: there's often a trade-off
+  - High exclusivity = topics are distinct from each other
+  - High coherence = words within topics are related
+
+### Extract Search Results as Data Frame
+
+```{r k-search-table}
+# Create a summary table
+k_results <- K_search$results %>%
+  select(K, exclus, semcoh, heldout, residual)
+
+knitr::kable(k_results, 
+             digits = 3,
+             col.names = c("K", "Exclusivity", "Semantic Coherence", 
+                          "Held-Out Likelihood", "Residuals"),
+             caption = "Model Diagnostics for Different K Values")
+```
+
+**How to choose K:**
+
+- Look for the "elbow" where adding more topics doesn't help much
+- Balance between coherence and exclusivity
+- Consider interpretability - can you meaningfully label all topics?
+- Try 2-3 promising K values and compare the actual topics
+
+---
+
+## 8. Fit the STM Model
+
+```{r fit-model, cache=TRUE}
+# ============================================================================
+# CHOOSE YOUR K VALUE
+# Based on the searchK results above, select the optimal K
+# ============================================================================
+
+# CHANGE THIS to your chosen K value
+chosen_K <- 15
+
+cat("=" , rep("=", 60), "\n", sep = "")
+cat("FITTING STM MODEL\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+cat("Fitting STM model with K =", chosen_K, "topics\n\n")
+
+# Fit the model
+stm_model <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = chosen_K,
+  data = meta,
+  max.em.its = 75,      # Maximum iterations
+  init.type = "Spectral",
+  seed = 12345,          # For reproducibility
+  verbose = TRUE
+)
+
+# Save the model
+saveRDS(stm_model, paste0("stm_model_K", chosen_K, ".rds"))
+cat("\nModel saved to 'stm_model_K", chosen_K, ".rds'\n")
+```
+
+### Optional: Model with Covariates
+
+```{r fit-model-covariates, eval=FALSE}
+# If you have metadata like year, month, volume, etc., you can include it
+# This shows how topics vary by your metadata variables
+
+stm_model_cov <- stm(
+  documents = docs,
+  vocab = vocab,
+  K = chosen_K,
+  prevalence = ~ year + volume,  # ADJUST to match your metadata
+  data = meta,
+  max.em.its = 75,
+  init.type = "Spectral",
+  seed = 12345,
+  verbose = TRUE
+)
+
+saveRDS(stm_model_cov, paste0("stm_model_cov_K", chosen_K, ".rds"))
+```
+
+---
+
+## 9. Examine and Interpret Topics
+
+```{r examine-topics}
+# View top words for each topic
+cat("=" , rep("=", 60), "\n", sep = "")
+cat("TOP WORDS FOR EACH TOPIC\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+labelTopics(stm_model, n = 10)
+```
+
+### Create Topic Labels
+
+```{r create-labels}
+# After viewing the top words, create meaningful labels
+# EDIT THESE based on what you see in the top words
+
+topic_labels <- c(
+  "Topic 1: [Your Label]",
+  "Topic 2: [Your Label]",
+  "Topic 3: [Your Label]",
+  "Topic 4: [Your Label]",
+  "Topic 5: [Your Label]",
+  "Topic 6: [Your Label]",
+  "Topic 7: [Your Label]",
+  "Topic 8: [Your Label]",
+  "Topic 9: [Your Label]",
+  "Topic 10: [Your Label]",
+  "Topic 11: [Your Label]",
+  "Topic 12: [Your Label]",
+  "Topic 13: [Your Label]",
+  "Topic 14: [Your Label]",
+  "Topic 15: [Your Label]"
+)
+
+# Print labels with top words
+cat("\n\nTOPIC LABELS WITH TOP WORDS:\n")
+cat(rep("=", 60), "\n\n", sep = "")
+
+for (i in 1:chosen_K) {
+  cat(topic_labels[i], "\n")
+  cat("  Top words:", paste(labelTopics(stm_model, topics = i, n = 7)$prob[1,], 
+                          collapse = ", "), "\n\n")
+}
+```
+
+### Find Example Documents
+
+```{r find-examples}
+# Find exemplar documents for Topic 1
+# Change the topic number to explore different topics
+topic_to_examine <- 1
+
+cat("=" , rep("=", 60), "\n", sep = "")
+cat("EXAMPLE DOCUMENTS FOR", topic_labels[topic_to_examine], "\n")
+cat("=" , rep("=", 60), "\n\n", sep = "")
+
+thoughts <- findThoughts(
+  model = stm_model,
+  texts = processed_texts$text_clean,
+  topics = topic_to_examine,
+  n = 3
+)
+
+for (i in 1:3) {
+  cat("Example", i, ":\n")
+  cat(substr(thoughts$docs[[1]][i], 1, 300), "...\n\n")
+}
+```
+
+---
+
+## 10. Visualize Results
+
+### Topic Prevalence
+
+```{r plot-prevalence, fig.width=10, fig.height=6}
+# Which topics are most common?
+plot(stm_model, 
+     type = "summary", 
+     n = 10,
+     main = "Topic Prevalence - Top 10 Topics",
+     xlim = c(0, 0.3))
+```
+
+### Topic Correlation Network
+
+```{r plot-correlation, fig.width=10, fig.height=8}
+# How do topics relate to each other?
+mod.out.corr <- topicCorr(stm_model)
+plot(mod.out.corr, 
+     main = "Topic Correlation Network")
+```
+
+### Word Clouds for Specific Topics
+
+```{r wordcloud, fig.width=8, fig.height=6}
+# Create word cloud for a specific topic
+cloud(stm_model, 
+      topic = 1,  # Change this to view different topics
+      scale = c(3, 0.5),
+      main = topic_labels[1])
+```
+
+### Create Word Clouds for All Topics
+
+```{r wordcloud-all, fig.width=8, fig.height=6, eval=FALSE}
+# Set eval=TRUE to generate word clouds for all topics
+for (i in 1:chosen_K) {
+  cloud(stm_model, 
+        topic = i,
+        scale = c(3, 0.5),
+        main = topic_labels[i])
+}
+```
+
+### Topic Quality
+
+```{r topic-quality, fig.width=8, fig.height=6}
+# Evaluate semantic coherence vs exclusivity
+topicQuality(stm_model, documents = docs)
+```
+
+### Compare Two Topics
+
+```{r compare-topics, fig.width=8, fig.height=6}
+# Compare words between two topics
+plot(stm_model, 
+     type = "perspectives", 
+     topics = c(1, 5),  # Change these to compare different topics
+     main = paste("Comparing", topic_labels[1], "vs", topic_labels[5]))
+```
+
+---
+
+## 11. Analyze Topic Prevalence with Covariates (Optional)
+
+This section only works if you fit a model with covariates above.
+
+```{r analyze-covariates, eval=FALSE}
+# Estimate effect of covariates on topic prevalence
+prep <- estimateEffect(
+  formula = 1:chosen_K ~ year + volume,  # ADJUST to match your covariates
+  stmobj = stm_model_cov,
+  metadata = meta,
+  uncertainty = "Global"
+)
+
+# Plot effect of year on specific topics
+plot(prep, 
+     covariate = "year",
+     topics = c(1, 5, 10),  # Choose topics to plot
+     model = stm_model_cov,
+     method = "continuous",
+     main = "Topic Prevalence Over Time")
+
+# Summary of effects for Topic 1
+summary(prep, topics = 1)
+```
+
+---
+
+## 12. Extract and Export Results
+
+### Document-Topic Proportions
+
+```{r export-doc-topics}
+# Get topic proportions for each document
+doc_topics <- make.dt(stm_model, meta = meta)
+
+# View first few rows
+head(doc_topics)
+
+# Export to CSV
+write_csv(doc_topics, paste0("document_topic_proportions_K", chosen_K, ".csv"))
+cat("Exported to 'document_topic_proportions_K", chosen_K, ".csv'\n")
+```
+
+### Top Words per Topic
+
+```{r export-top-words}
+# Extract top 20 words per topic
+top_words <- labelTopics(stm_model, n = 20)
+
+# Create data frame
+topic_words_df <- tibble(
+  topic = 1:chosen_K,
+  label = topic_labels,
+  top_words = apply(top_words$prob, 1, function(x) paste(x, collapse = ", "))
+)
+
+# Export
+write_csv(topic_words_df, paste0("topic_top_words_K", chosen_K, ".csv"))
+cat("Exported to 'topic_top_words_K", chosen_K, ".csv'\n")
+
+# Display
+knitr::kable(topic_words_df, caption = "Top Words for Each Topic")
+```
+
+### Summary Statistics
+
+```{r summary-stats}
+# Create summary of your analysis
+summary_stats <- tibble(
+  metric = c("Number of documents", "Vocabulary size", "Number of topics", 
+             "Model seed", "Lower threshold", "Upper threshold"),
+  value = c(length(docs), length(vocab), chosen_K, 12345, 5, "95%")
+)
+
+knitr::kable(summary_stats, caption = "Analysis Summary")
+```
+
+---
+
+## 13. Save Your Session
+
+```{r save-session}
+# Save all important objects
+save(stm_model, docs, vocab, meta, K_search, raw_texts, processed_texts,
+     file = paste0("stm_session_K", chosen_K, ".RData"))
+
+cat("Session saved to 'stm_session_K", chosen_K, ".RData'\n")
+cat("\nTo reload later: load('stm_session_K", chosen_K, ".RData')\n")
+```
+
+---
+
+## Notes and Next Steps
+
+### What you accomplished:
+- ✅ Imported and preprocessed text files from multiple volumes/months
+- ✅ Tested multiple K values to find optimal number of topics
+- ✅ Fit an STM model
+- ✅ Interpreted and labeled topics
+- ✅ Created visualizations
+- ✅ Exported results
+
+### Next steps:
+1. **Refine K**: Try different K values based on your searchK results
+2. **Improve labels**: Read more example documents and refine topic names
+3. **Add covariates**: Use year, volume, month to explore how topics vary
+4. **Validate topics**: Share with domain experts to verify topics make sense
+5. **Scale up**: Once satisfied with test results, run on full dataset
+
+### Tips for choosing K:
+- **Too few topics (K too small)**: Topics are very broad and mix different themes
+- **Too many topics (K too large)**: Topics are very specific and might be redundant
+- **Just right**: Topics are distinct, interpretable, and align with your research goals
+
+### Common K ranges by corpus size:
+- Small corpus (50-200 docs): K = 5-15
+- Medium corpus (200-1000 docs): K = 10-25
+- Large corpus (1000+ docs): K = 20-50
+
+---
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```
