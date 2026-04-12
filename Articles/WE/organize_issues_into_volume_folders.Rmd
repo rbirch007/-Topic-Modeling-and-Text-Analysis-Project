@@ -1,0 +1,240 @@
+---
+title: "Organize Woman's Exponent Issues into Volume Folders"
+output: html_notebook
+---
+
+# Overview
+
+This notebook organises files in the `by_issue` output directory into
+sub-folders, one per volume, named in the format **WEVol{n}-{year}**
+(e.g. `WEVol1-1872`, `WEVol2-1873`, …).
+
+Files are expected to follow the naming convention:
+
+```
+wex_vol##_issue##[_anything].<ext>
+```
+
+Run each chunk in order. No packages beyond base R are required.
+
+---
+
+## Chunk 1 – Configuration
+
+Edit the paths and the volume-to-year table here; everything else is automatic.
+
+```{r config}
+# ── PATHS ────────────────────────────────────────────────────────────────────
+# Full path to the folder that currently holds all the by-issue files.
+source_dir <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/by_issue"
+
+# Where the new WEVol* sub-folders will be created.
+# Using source_dir means the folders land right next to the files.
+# Change to a different path if you want them elsewhere.
+output_dir <- source_dir
+
+# Set to TRUE to MOVE files (removes originals); FALSE = copy only.
+move_files <- FALSE
+
+# ── VOLUME → YEAR LOOKUP ─────────────────────────────────────────────────────
+# The Woman's Exponent ran June 1872 – February 1914 (41 volumes).
+# Each volume started in June of the listed year.
+# Adjust any entry if your files use a different convention.
+vol_year_map <- data.frame(
+  volume = 1:41,
+  year   = c(
+    1872, 1873, 1874, 1875, 1876, 1877, 1878, 1879, 1880, 1881,  # v01–v10
+    1882, 1883, 1884, 1885, 1886, 1887, 1888, 1889, 1890, 1891,  # v11–v20
+    1892, 1893, 1894, 1895, 1896, 1897, 1898, 1899, 1900, 1901,  # v21–v30
+    1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911,  # v31–v40
+    1912                                                           # v41
+  ),
+  stringsAsFactors = FALSE
+)
+```
+
+---
+
+## Chunk 2 – Helper functions
+
+```{r helpers}
+# Extract the volume number from a filename like "wex_vol02_issue01.txt"
+extract_vol_number <- function(filename) {
+  m <- regmatches(filename,
+                  regexpr("vol(\\d+)", filename, ignore.case = TRUE))
+  if (length(m) == 0 || m == "") return(NA_integer_)
+  as.integer(sub("vol", "", m, ignore.case = TRUE))
+}
+
+# Look up year for a given volume number
+get_year <- function(vol_num, map = vol_year_map) {
+  idx <- which(map$volume == vol_num)
+  if (length(idx) == 0) return(NA_integer_)
+  map$year[idx]
+}
+
+# Build folder name, e.g. "WEVol2-1873"
+make_folder_name <- function(vol_num, year) {
+  paste0("WEVol", vol_num, "-", year)
+}
+```
+
+---
+
+## Chunk 3 – Preview (dry run, no files are moved or copied)
+
+Run this first to check that filenames are parsed correctly.
+
+```{r preview, message=FALSE}
+if (!dir.exists(source_dir)) {
+  stop("Source directory not found:\n  ", source_dir,
+       "\nCheck the path in Chunk 1.")
+}
+
+all_files <- list.files(source_dir, full.names = FALSE, recursive = FALSE)
+
+# Keep only files (skip any existing sub-folders)
+all_files <- all_files[!file.info(file.path(source_dir, all_files))$isdir]
+
+# Filter to files that match the wex_vol##_issue## pattern
+wex_files  <- grep("wex_vol\\d+_issue\\d+", all_files,
+                   value = TRUE, ignore.case = TRUE)
+other_files <- setdiff(all_files, wex_files)
+
+cat("=== SOURCE DIRECTORY ===\n", source_dir, "\n\n")
+cat("Total files found      :", length(all_files), "\n")
+cat("Matching wex_vol* files:", length(wex_files), "\n")
+cat("Non-matching files     :", length(other_files), "\n\n")
+
+if (length(other_files) > 0) {
+  cat("--- Files that will NOT be moved (no vol/issue pattern) ---\n")
+  cat(paste0("  ", other_files, "\n"), sep = "")
+  cat("\n")
+}
+
+# Build a preview table
+preview <- data.frame(
+  filename   = wex_files,
+  vol_num    = sapply(wex_files, extract_vol_number),
+  stringsAsFactors = FALSE
+)
+preview$year        <- sapply(preview$vol_num, get_year)
+preview$destination <- ifelse(
+  is.na(preview$vol_num) | is.na(preview$year),
+  "UNKNOWN (no year mapping)",
+  make_folder_name(preview$vol_num, preview$year)
+)
+
+cat("=== DESTINATION PREVIEW ===\n")
+print(preview[, c("filename", "vol_num", "year", "destination")],
+      row.names = FALSE)
+
+# Summary of unique destination folders
+cat("\n=== FOLDERS THAT WILL BE CREATED ===\n")
+unique_folders <- sort(unique(preview$destination[!is.na(preview$vol_num)]))
+cat(paste0("  ", unique_folders, "\n"), sep = "")
+cat("\nTotal unique folders:", length(unique_folders), "\n")
+
+if (any(is.na(preview$vol_num))) {
+  cat("\n*** WARNING: some files could not be parsed – check names above ***\n")
+}
+```
+
+---
+
+## Chunk 4 – Create folders and copy/move files
+
+Only run after reviewing the preview above.
+
+```{r organize}
+cat(if (move_files) "MODE: MOVE\n" else "MODE: COPY (originals kept)\n")
+cat("Output directory:", output_dir, "\n\n")
+
+success <- 0
+skipped <- 0
+errors  <- character(0)
+
+for (i in seq_len(nrow(preview))) {
+  row <- preview[i, ]
+
+  if (is.na(row$vol_num) || is.na(row$year)) {
+    cat("SKIP (unrecognised):", row$filename, "\n")
+    skipped <- skipped + 1
+    next
+  }
+
+  dest_folder <- file.path(output_dir, row$destination)
+
+  # Create folder if needed
+  if (!dir.exists(dest_folder)) {
+    dir.create(dest_folder, recursive = TRUE)
+    cat("Created folder:", row$destination, "\n")
+  }
+
+  src  <- file.path(source_dir, row$filename)
+  dest <- file.path(dest_folder, row$filename)
+
+  result <- tryCatch({
+    if (move_files) {
+      file.rename(src, dest)
+    } else {
+      file.copy(src, dest, overwrite = FALSE)
+    }
+  }, error = function(e) {
+    FALSE
+  })
+
+  if (isTRUE(result)) {
+    success <- success + 1
+  } else {
+    msg <- paste0("FAILED: ", row$filename, " → ", row$destination)
+    cat(msg, "\n")
+    errors <- c(errors, msg)
+  }
+}
+
+cat("\n=== SUMMARY ===\n")
+cat("Files processed successfully:", success, "\n")
+cat("Files skipped               :", skipped, "\n")
+cat("Errors                      :", length(errors), "\n")
+
+if (length(errors) > 0) {
+  cat("\nFailed operations:\n")
+  cat(paste0("  ", errors, "\n"), sep = "")
+}
+
+cat("\nDone!\n")
+```
+
+---
+
+## Chunk 5 – Verify results
+
+Run after organising to confirm every volume folder contains the expected files.
+
+```{r verify}
+cat("=== VERIFICATION ===\n\n")
+
+created_folders <- list.dirs(output_dir, recursive = FALSE, full.names = FALSE)
+we_folders <- grep("^WEVol", created_folders, value = TRUE)
+we_folders <- sort(we_folders)
+
+if (length(we_folders) == 0) {
+  cat("No WEVol* folders found in output directory.\n")
+} else {
+  cat(sprintf("%-25s  %s\n", "Folder", "Files inside"))
+  cat(strrep("-", 50), "\n")
+
+  total_organised <- 0
+  for (fdr in we_folders) {
+    fdr_path <- file.path(output_dir, fdr)
+    contents <- list.files(fdr_path, recursive = FALSE)
+    n <- length(contents)
+    total_organised <- total_organised + n
+    cat(sprintf("%-25s  %d file(s)\n", fdr, n))
+  }
+
+  cat(strrep("-", 50), "\n")
+  cat("Total files in WEVol folders:", total_organised, "\n")
+}
+```

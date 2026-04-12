@@ -1,0 +1,273 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
+```{r}
+#STEP 1: INSTALL AND LOAD REQUIRED PACKAGES
+#Run these lines once to install packages (remove # to run):
+install.packages("stringr")
+install.packages("dplyr")
+install.packages("lubridate")
+```
+```{r}
+library(stringr)      # For text manipulation
+library(dplyr)        # For data manipulation
+library(lubridate)
+```
+```{r}
+# STEP 2: DEFINE THE MAIN SORTING FUNCTION
+# ============================================================================
+
+sort_newspaper_articles <- function(input_file,
+                                   output_file = "sorted_articles.txt",
+                                   separator = "---",
+                                   date_pattern = NULL) {
+  
+  cat("\n========================================\n")
+  cat("NEWSPAPER ARTICLE SORTER\n")
+  cat("========================================\n\n")
+  
+  # Read the text file
+  cat("Step 1: Reading file...\n")
+  text_lines <- readLines(input_file, warn = FALSE)
+  full_text <- paste(text_lines, collapse = "\n")
+  cat("✓ File read successfully\n\n")
+  
+  # Split into individual articles
+  cat("Step 2: Splitting articles...\n")
+  articles <- str_split(full_text, separator)[[1]]
+  articles <- articles[nchar(trimws(articles)) > 0]  # Remove empty ones
+  cat("✓ Found", length(articles), "articles\n\n")
+  
+  # Extract dates from each article
+  cat("Step 3: Extracting dates...\n")
+  
+  # Define date patterns to search for
+  if (is.null(date_pattern)) {
+    patterns <- c(
+      "\\b\\d{1,2}/\\d{1,2}/\\d{4}\\b",          # 1/15/2024 or 01/15/2024
+      "\\b\\d{4}-\\d{2}-\\d{2}\\b",              # 2024-01-15
+      "\\b[A-Za-z]+ \\d{1,2}, \\d{4}\\b",       # January 15, 2024
+      "\\b\\d{1,2} [A-Za-z]+ \\d{4}\\b",        # 15 January 2024
+      "\\b\\d{1,2}-\\d{1,2}-\\d{4}\\b",          # 01-15-2024
+      "\\b[A-Za-z]{3,9} \\d{1,2}, \\d{4}\\b",   # Month name variations
+      "\\b\\d{1,2}/\\d{1,2}/\\d{2}\\b"           # 1/15/24
+    )
+  } else {
+    patterns <- date_pattern
+  }
+  
+  # Function to find first date in text
+  find_date <- function(text) {
+    for (pattern in patterns) {
+      matches <- str_extract_all(text, pattern)[[1]]
+      if (length(matches) > 0) {
+        return(matches[1])
+      }
+    }
+    return(NA)
+  }
+  
+  # Extract date from each article
+  date_strings <- sapply(articles, find_date)
+  cat("✓ Found dates in", sum(!is.na(date_strings)), "articles\n\n")
+  
+  # Parse dates into Date objects
+  cat("Step 4: Parsing dates...\n")
+  
+  parse_date <- function(date_str) {
+    if (is.na(date_str)) return(NA)
+    
+    # Try multiple parsing approaches
+    result <- tryCatch({
+      # Try automatic parsing
+      parsed <- as.Date(date_str)
+      if (!is.na(parsed)) return(parsed)
+      
+      # Try specific formats
+      formats <- c("%m/%d/%Y", "%Y-%m-%d", "%B %d, %Y", 
+                   "%d %B %Y", "%m-%d-%Y", "%b %d, %Y",
+                   "%d %b %Y", "%m/%d/%y")
+      
+      for (fmt in formats) {
+        parsed <- as.Date(date_str, format = fmt)
+        if (!is.na(parsed)) return(parsed)
+      }
+      
+      # Try lubridate functions
+      parsed <- mdy(date_str)
+      if (!is.na(parsed)) return(parsed)
+      
+      parsed <- ymd(date_str)
+      if (!is.na(parsed)) return(parsed)
+      
+      parsed <- dmy(date_str)
+      if (!is.na(parsed)) return(parsed)
+      
+      return(NA)
+    }, error = function(e) NA)
+    
+    return(result)
+  }
+  
+  # Parse all dates
+  parsed_dates <- sapply(date_strings, parse_date)
+  parsed_dates <- as.Date(parsed_dates, origin = "1970-01-01")
+  
+  successful <- sum(!is.na(parsed_dates))
+  cat("✓ Successfully parsed", successful, "dates\n\n")
+  
+  # Create dataframe with articles and dates
+  cat("Step 5: Organizing data...\n")
+  article_df <- data.frame(
+    article_num = 1:length(articles),
+    article_text = articles,
+    date_string = date_strings,
+    parsed_date = parsed_dates,
+    stringsAsFactors = FALSE
+  )
+  
+  # Sort by date (articles without dates go to end)
+  article_df <- article_df %>%
+    arrange(parsed_date, article_num)
+  
+  cat("✓ Articles sorted chronologically\n\n")
+  
+  # Show date range
+  if (successful > 0) {
+    earliest <- min(article_df$parsed_date, na.rm = TRUE)
+    latest <- max(article_df$parsed_date, na.rm = TRUE)
+    cat("Date range: ", as.character(earliest), " to ", as.character(latest), "\n\n")
+  }
+  
+  # Write sorted articles to file
+  cat("Step 6: Writing output file...\n")
+  
+  output_lines <- c()
+  output_lines <- c(output_lines, 
+                   "========================================",
+                   "CHRONOLOGICALLY SORTED NEWSPAPER ARTICLES",
+                   paste("Generated:", Sys.time()),
+                   paste("Total articles:", nrow(article_df)),
+                   paste("Articles with dates:", successful),
+                   "========================================",
+                   "")
+  
+  for (i in 1:nrow(article_df)) {
+    # Add article header
+    if (!is.na(article_df$parsed_date[i])) {
+      header <- paste0("\n\n", separator, "\n",
+                      "ARTICLE #", i, " | Date: ", article_df$parsed_date[i],
+                      "\n", separator, "\n")
+    } else {
+      header <- paste0("\n\n", separator, "\n",
+                      "ARTICLE #", i, " | Date: NOT FOUND",
+                      "\n", separator, "\n")
+    }
+    
+    output_lines <- c(output_lines, header, article_df$article_text[i])
+  }
+  
+  # Save to file
+  writeLines(output_lines, output_file)
+  cat("✓ Output saved to:", output_file, "\n\n")
+  
+  cat("========================================\n")
+  cat("SORTING COMPLETE!\n")
+  cat("========================================\n\n")
+  
+  # Return the dataframe for further analysis
+  return(invisible(article_df))
+}
+```
+```{r}
+# STEP 3: HELPER FUNCTION - PREVIEW RESULTS
+# ============================================================================
+
+preview_sorted_articles <- function(article_df, n = 5) {
+  cat("\n========================================\n")
+  cat("PREVIEW OF SORTED ARTICLES\n")
+  cat("========================================\n\n")
+  
+  num_to_show <- min(n, nrow(article_df))
+  
+  for (i in 1:num_to_show) {
+    cat("--- Article", i, "---\n")
+    
+    if (!is.na(article_df$parsed_date[i])) {
+      cat("Date:", as.character(article_df$parsed_date[i]), "\n")
+    } else {
+      cat("Date: NOT FOUND\n")
+    }
+    
+    # Show first 150 characters
+    preview_text <- substr(article_df$article_text[i], 1, 150)
+    preview_text <- gsub("\n", " ", preview_text)
+    cat("Preview:", preview_text, "...\n\n")
+  }
+}
+
+```
+```{r}
+# STEP 4: HELPER FUNCTION - ANALYZE RESULTS
+# ============================================================================
+
+analyze_results <- function(article_df) {
+  cat("\n========================================\n")
+  cat("ANALYSIS REPORT\n")
+  cat("========================================\n\n")
+  
+  cat("Total articles:", nrow(article_df), "\n")
+  cat("Articles with dates:", sum(!is.na(article_df$parsed_date)), "\n")
+  cat("Articles without dates:", sum(is.na(article_df$parsed_date)), "\n\n")
+  
+  if (sum(!is.na(article_df$parsed_date)) > 0) {
+    cat("Date Statistics:\n")
+    cat("  Earliest:", as.character(min(article_df$parsed_date, na.rm = TRUE)), "\n")
+    cat("  Latest:", as.character(max(article_df$parsed_date, na.rm = TRUE)), "\n")
+    cat("  Median:", as.character(median(article_df$parsed_date, na.rm = TRUE)), "\n\n")
+    
+    # Show date formats found
+    cat("Date formats found:\n")
+    unique_formats <- unique(article_df$date_string[!is.na(article_df$date_string)])
+    for (fmt in head(unique_formats, 10)) {
+      cat(" ", fmt, "\n")
+    }
+  }
+  
+  # Show articles without dates
+  no_dates <- article_df %>% filter(is.na(parsed_date))
+  if (nrow(no_dates) > 0) {
+    cat("\n⚠ Articles without detected dates:\n")
+    for (i in 1:min(3, nrow(no_dates))) {
+      preview <- substr(no_dates$article_text[i], 1, 100)
+      preview <- gsub("\n", " ", preview)
+      cat("  Article", no_dates$article_num[i], ":", preview, "...\n")
+    }
+  }
+  
+  cat("\n========================================\n\n")
+}
+
+```
+```{r}
+#TUTORIAL STEP 1: Basic Usage
+# Run the sorter
+result <- sort_newspaper_articles("EMP52_WomansExponenta.txt")
+```
+
