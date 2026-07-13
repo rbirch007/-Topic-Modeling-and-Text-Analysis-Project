@@ -1,0 +1,1114 @@
+---
+title: "Advanced Text Analysis - Woman's Exponent"
+author: "Birch"
+date: "`r Sys.Date()`"
+output:
+  html_notebook:
+    toc: true
+    toc_float: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 7)
+```
+
+# Advanced Text Analysis - Woman's Exponent
+
+This notebook is the **R reporting layer** of a two-part pipeline. The heavy
+machine-learning work (transformer embeddings, a neural topic model, and
+contextual diachronic semantic-change measurement) runs *outside* this knit, in
+checkpointed Python scripts you launch from a terminal. This notebook does no
+model training of its own: it **loads the finished artifacts** those scripts
+wrote and turns them into figures and tables.
+
+That split is deliberate. The previous version of this notebook re-derived the
+corpus, trained word2vec models, and ran Procrustes alignment all inside the
+knit — which is exactly what kept timing out. Now the slow work is decoupled,
+resumable, and runs on its own schedule; the knit just reads Parquet/CSV files
+and plots. **If a section's artifact is missing, that section prints a friendly
+"run script X first" note and skips, rather than erroring.**
+
+The five layers of analysis:
+
+1. **Topic geometry** — Jensen-Shannon distances between STM topics as a
+   prevalence-and-cluster bar chart, two MDS "four-quadrant" scatters (one labeled
+   by topic, one by FREX words), and a `ggraph` co-occurrence network. *(Computed
+   here in R from the STM model — fast, no Python needed.)*
+2. **Document atlas + semantic search** — every article embedded with a
+   sentence-transformer, laid out in 2D, and made searchable by meaning. §9c adds
+   an **interactive article browser**: a full-text keyword search over every
+   modeled article, labeled by dominant topic. *(Reads `embed_documents.py`
+   output.)*
+3. **BERTopic cross-check** — a neural topic model clustered over the same
+   embeddings, cross-tabulated against STM to show where the two methods agree.
+   *(Reads `run_bertopic.py` output.)*
+4. **Diachronic semantic change** — for target words, how meaning moves across
+   historical periods, measured three ways (PRT / APD / JSD) with MacBERTh, a
+   BERT trained on historical English. *(Reads `semantic_change.py` output.)*
+5. **Author topic profiles** — each prolific named author's mean STM topic mix as
+   a stacked bar (vertical and horizontal layouts). *(Computed here in R.)*
+
+> **The contextual-embedding approach (layer 4) is the frontier piece.** Instead
+> of training a separate word2vec per period and rotating the spaces together
+> (the old approach — fragile, and rotation-dependent), every occurrence of a
+> word is embedded *in its sentence context* in a single pretrained historical
+> space. No alignment is needed, and we recover genuine **sense-level** change,
+> not just neighbor reshuffling. This is the SemEval-2020 Task 1 methodology.
+
+---
+
+## How to produce the inputs (read this first)
+
+This notebook reads two families of files:
+
+**A. Handoff from the STM linker** (`output_linked/`, suffixed by K):
+`advanced_input_K{K}.rds`, `advanced_docs_K{K}.csv`, `advanced_theta_K{K}.csv`,
+`advanced_topics_K{K}.csv`. Produced by `scripts/generate_handoff.R`, which reads
+the linker's `topic_linker_session_K{K}.RData` and re-aligns each document to its
+source text:
+
+```text
+"C:\Program Files\R\R-4.5.3\bin\Rscript.exe" scripts\generate_handoff.R 35
+```
+
+**B. Python compute artifacts** (`output_advanced_WE/`). From a terminal, using
+the dedicated Python 3.11 venv (NOT system Python):
+
+```text
+C:\Users\birch\dh-env\Scripts\python.exe scripts\embed_documents.py   35
+C:\Users\birch\dh-env\Scripts\python.exe scripts\run_bertopic.py      35
+C:\Users\birch\dh-env\Scripts\python.exe scripts\semantic_change.py   35
+C:\Users\birch\dh-env\Scripts\python.exe scripts\hybrid_search.py women right to vote   # on-demand, any query
+```
+
+The trailing `35` pins K=35 (the canonical model). Omit it and the scripts use
+the newest `advanced_docs_K*.csv` they find. The first three are checkpointed and
+resumable — if one stops, just run it again and it picks up where it left off.
+Keyword + meaning search now lives **in the report**: §9c is a full-text article
+browser (no script needed), and §9 finds meaning-neighbors of any article.
+See `WEadvancedtextanalysis_handover.md` for a full setup + Python primer.
+
+---
+
+## 1. Packages
+
+```{r install, eval=FALSE}
+# Run once. arrow reads the Parquet files the Python layer writes; stylo is the
+# modern stylometry toolkit (Burrows' Delta, bootstrap consensus trees).
+install.packages(c(
+  "arrow",         # read Parquet embedding files
+  "philentropy",   # JSD distance
+  "ggdendro",      # dendrogram in ggplot
+  "dendextend",    # colored dendrogram branches
+  "ggraph",        # network plots in ggplot
+  "tidygraph",     # graph objects for ggraph
+  "uwot",          # UMAP layout
+  "stylo",         # Burrows' Delta + bootstrap consensus tree
+  "jsonlite",      # read the periods sidecar
+  "DT"             # interactive searchable result tables
+))
+```
+
+```{r load-packages}
+library(stm)
+library(tidyverse)
+library(scales)
+library(ggrepel)
+library(patchwork)
+library(arrow)
+library(philentropy)
+library(ggdendro)
+library(dendextend)
+library(ggraph)
+library(tidygraph)
+library(igraph)
+library(uwot)
+library(jsonlite)
+library(DT)
+
+set.seed(12345)
+cat("Packages loaded.\n")
+```
+
+---
+
+## 2. Paths & K-agnostic model selection
+
+We do **not** hardcode K. The loader discovers the available handoff files in
+`output_linked/` and picks the requested K (or the newest one). Set
+`pin_K <- 35L` to force the canonical model; leave it `NULL` to auto-pick.
+
+```{r paths}
+base_path   <- "C:/Users/birch/Rachel/GMU/Dissertation/textanalysis/Claudepythonexperimentadvtext"
+
+# scenario: which corpus slice to report on. Must match the linker's "Scenario
+# tag" and the Python ADV_SCENARIO. One of "WEfull" | "WE1872-1891" |
+# "WE1892-1912", or a data-derived auto tag the linker printed.
+scenario <- "WEfull"
+
+linked_path <- file.path(base_path, "output_linked",      scenario)  # STM handoff
+adv_path    <- file.path(base_path, "output_advanced_WE", scenario)  # Python artifacts
+emb_dir     <- file.path(adv_path, "embeddings")
+bertopic_dir<- file.path(adv_path, "bertopic")
+diachr_dir  <- file.path(adv_path, "diachronic")
+output_path <- file.path(adv_path, "report_figures")      # this notebook's PNG/CSV outputs
+if (!dir.exists(output_path)) dir.create(output_path, recursive = TRUE)
+
+pin_K <- NULL  # auto-picks the K in the selected scenario folder (each holds one K)
+
+# Discover handoff files: advanced_input_K{K}.rds
+input_candidates <- list.files(linked_path, pattern = "^advanced_input_K\\d+\\.rds$",
+                               full.names = TRUE)
+if (length(input_candidates) == 0) {
+  stop("No advanced_input_K*.rds in ", linked_path,
+       "\nRun the 'Checkpoint - Save Inputs for Advanced Analysis' chunk in ",
+       "Topic_to_Article_Linker_WE.Rmd first.")
+}
+avail_K <- as.integer(str_match(basename(input_candidates), "_K(\\d+)\\.rds$")[, 2])
+
+if (!is.null(pin_K)) {
+  if (!pin_K %in% avail_K) {
+    stop("Requested K=", pin_K, " not found. Available: ",
+         paste(sort(avail_K), collapse = ", "),
+         "\nProduce it by running the linker checkpoint chunk with chosen_K = ", pin_K, ".")
+  }
+  K <- pin_K
+} else {
+  # newest by mtime
+  K <- avail_K[which.max(file.mtime(input_candidates))]
+}
+cat("Using K =", K, "  (available:", paste(sort(avail_K), collapse = ", "), ")\n")
+
+# Helper: does an artifact exist? Used to gracefully skip sections.
+have <- function(path) {
+  ok <- file.exists(path)
+  if (!ok) cat("  [skip] missing artifact:", basename(path), "\n")
+  ok
+}
+```
+
+---
+
+## 3. Load the STM handoff
+
+The linker's checkpoint chunk saved everything we need in one `.rds`: the fitted
+STM model, the document metadata (`meta`, already row-aligned to `theta`), the
+manual topic labels, and both the natural-language text (`modeled_raw`, for
+stylometry and reading) and the cleaned bag-of-words (`modeled_clean`). Because
+the linker aligned these at save time, **we never re-derive the corpus or guess
+at row order** — the alignment problem that haunted the old notebook is gone.
+
+```{r load-handoff}
+adv_in <- readRDS(file.path(linked_path, sprintf("advanced_input_K%d.rds", K)))
+model        <- adv_in$stm_model
+meta         <- adv_in$meta            # row-aligned to model$theta
+topic_labels_manual <- adv_in$topic_labels
+modeled_raw  <- adv_in$modeled_raw     # natural-language article text
+modeled_clean<- adv_in$modeled_clean   # cleaned bag-of-words
+
+stopifnot(model$settings$dim$K == K,
+          nrow(meta) == nrow(model$theta),
+          length(modeled_raw) == nrow(meta))
+
+vocab <- model$vocab
+beta  <- exp(model$beta$logbeta[[1]])    # K x V topic-word probabilities
+colnames(beta) <- vocab
+theta <- model$theta                     # D x K document-topic probabilities
+
+# Plot labels: prefer the manual labels from the linker, fall back to top words.
+top_words <- labelTopics(model, n = 3)$prob |> apply(1, paste, collapse = " ")
+topic_labels <- if (!is.null(topic_labels_manual) &&
+                    length(topic_labels_manual) == K) {
+  paste0("T", seq_len(K), ": ", topic_labels_manual)
+} else {
+  paste0("T", seq_len(K), ": ", top_words)
+}
+topic_prevalence <- colMeans(theta)
+
+# Also load the flat docs CSV (row_index keyed) so we can join Python artifacts,
+# which reference documents by the same row_index.
+docs <- readr::read_csv(file.path(linked_path, sprintf("advanced_docs_K%d.csv", K)),
+                        show_col_types = FALSE)
+stopifnot(nrow(docs) == nrow(theta))
+
+cat("K =", K, " | Vocab =", length(vocab), " | Documents =", nrow(theta), "\n")
+cat("Year range:", paste(range(docs$year, na.rm = TRUE), collapse = "-"), "\n")
+```
+
+---
+
+## 4. Topic Geometry I — Jensen-Shannon Distance Matrix
+
+JSD between topic word-distributions is a proper, bounded distance — suitable
+for both clustering and MDS. Computed in R directly from `beta`; no Python.
+
+```{r jsd}
+jsd <- function(p, q) {
+  m <- 0.5 * (p + q)
+  kl_pm <- sum(p * log((p + 1e-12) / (m + 1e-12)))
+  kl_qm <- sum(q * log((q + 1e-12) / (m + 1e-12)))
+  sqrt(0.5 * (kl_pm + kl_qm))
+}
+
+D_jsd <- matrix(0, K, K)
+for (i in 1:K) for (j in 1:K) D_jsd[i, j] <- jsd(beta[i, ], beta[j, ])
+rownames(D_jsd) <- colnames(D_jsd) <- paste0("T", 1:K)
+cat("JSD matrix range:", round(range(D_jsd[D_jsd > 0]), 3), "\n")
+
+# Number of topic clusters scales gently with K (cut height is taste, not law).
+n_clusters <- max(4L, round(K / 7))
+hc       <- hclust(as.dist(D_jsd), method = "ward.D2")
+clusters <- cutree(hc, k = n_clusters)
+cat("Topic clusters:", n_clusters, "\n")
+```
+
+---
+
+## 5. Topic Geometry II — Topic Prevalence & Clusters
+
+```{r dendrogram, fig.height=9}
+# Bar chart (replaces the dendrogram): each topic's share of the corpus, with the
+# topics ORDERED by the Ward/JSD clustering so similar topics sit next to each
+# other, and COLORED by cluster. Bar length = prevalence; adjacency + color carry
+# the grouping the dendrogram used to show, in a far more readable form.
+ord <- order.dendrogram(as.dendrogram(hc))
+hier_df <- tibble(
+  label      = topic_labels,
+  prevalence = topic_prevalence,
+  cluster    = factor(clusters)
+) |>
+  mutate(label = factor(label, levels = topic_labels[ord]))
+
+p_hier <- ggplot(hier_df, aes(prevalence, label, fill = cluster)) +
+  geom_col(width = 0.8) +
+  scale_fill_brewer(palette = "Set2") +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 0.1),
+                     expand = expansion(mult = c(0, 0.05))) +
+  labs(title = "Topic Prevalence & Clusters (Ward / Jensen-Shannon)",
+       subtitle = "Bars ordered by JSD topic-similarity clustering; color = cluster; length = share of corpus",
+       x = "Share of corpus", y = NULL, fill = "Cluster") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold"),
+        panel.grid.major.y = element_blank())
+
+print(p_hier)
+ggsave(file.path(output_path, "01_topic_prevalence_clusters.png"), p_hier,
+       width = 12, height = 9, dpi = 150)
+cat("Saved 01_topic_prevalence_clusters.png\n")
+```
+
+---
+
+## 6. Topic Geometry III — MDS Four-Quadrant Plot
+
+Classical MDS on the JSD matrix gives each topic a 2D coordinate. Axes are
+derived dimensions; interpret them post-hoc from the anchoring topics printed
+below.
+
+```{r mds-quadrant, fig.height=9}
+mds <- cmdscale(as.dist(D_jsd), k = 2)
+mds_df <- tibble(
+  topic = seq_len(K), Dim1 = mds[, 1], Dim2 = mds[, 2],
+  prevalence = topic_prevalence, cluster = factor(clusters), label = topic_labels
+)
+
+p_mds <- ggplot(mds_df, aes(Dim1, Dim2)) +
+  geom_hline(yintercept = 0, color = "gray60", linetype = "dashed") +
+  geom_vline(xintercept = 0, color = "gray60", linetype = "dashed") +
+  geom_point(aes(size = prevalence, color = cluster), alpha = 0.85) +
+  geom_text_repel(aes(label = label, color = cluster), size = 2.8,
+                  max.overlaps = 40, box.padding = 0.4, show.legend = FALSE) +
+  scale_size_continuous(range = c(3, 14), labels = percent_format(0.1)) +
+  scale_color_brewer(palette = "Set2") +
+  labs(title = "Topic Geometry - MDS on Jensen-Shannon Distance",
+       subtitle = "Quadrant axes are derived dimensions; interpret post-hoc",
+       x = "Dimension 1", y = "Dimension 2", size = "Prevalence", color = "Cluster") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"))
+
+print(p_mds)
+ggsave(file.path(output_path, "02_mds_quadrant.png"), p_mds, width = 12, height = 9, dpi = 150)
+
+# ---- Second view: SAME MDS layout, each topic labeled by its top FREX words ----
+# (the words most distinctive to that topic) instead of the manual label — so the
+# axes/quadrants can be read straight off vocabulary.
+frex_words  <- apply(labelTopics(model, n = 3)$frex, 1, paste, collapse = ", ")
+mds_df$frex <- frex_words
+
+p_mds_frex <- ggplot(mds_df, aes(Dim1, Dim2)) +
+  geom_hline(yintercept = 0, color = "gray60", linetype = "dashed") +
+  geom_vline(xintercept = 0, color = "gray60", linetype = "dashed") +
+  geom_point(aes(size = prevalence, color = cluster), alpha = 0.85) +
+  geom_text_repel(aes(label = frex, color = cluster), size = 2.5,
+                  max.overlaps = 40, box.padding = 0.4, show.legend = FALSE) +
+  scale_size_continuous(range = c(3, 14), labels = percent_format(0.1)) +
+  scale_color_brewer(palette = "Set2") +
+  labs(title = "Topic Geometry - MDS, labeled by FREX words",
+       subtitle = "Same layout as above; each topic labeled by its most distinctive (FREX) words",
+       x = "Dimension 1", y = "Dimension 2", size = "Prevalence", color = "Cluster") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title = element_text(face = "bold"))
+
+print(p_mds_frex)
+ggsave(file.path(output_path, "02b_mds_frex_words.png"), p_mds_frex, width = 12, height = 9, dpi = 150)
+```
+
+```{r mds-interpret}
+ne <- 3
+cat("=== INTERPRETING THE AXES (topic label + FREX words) ===\n")
+for (ax in c("Dim1", "Dim2")) {
+  hi <- mds_df |> slice_max(.data[[ax]], n = ne)
+  lo <- mds_df |> slice_min(.data[[ax]], n = ne)
+  cat("\n", ax, " - positive extreme:\n", sep = "")
+  cat(paste0("  ", hi$label, "   [", hi$frex, "]"), sep = "\n")
+  cat("\n", ax, " - negative extreme:\n", sep = "")
+  cat(paste0("  ", lo$label, "   [", lo$frex, "]"), sep = "\n")
+}
+```
+
+---
+
+## 7. Topic Geometry IV — Co-occurrence Network
+
+`stm::topicCorr()` measures whether topics *co-occur in the same articles* —
+distinct from the JSD vocabulary similarity above.
+
+```{r topic-network, fig.height=8}
+tcorr <- topicCorr(model, method = "simple", cutoff = 0.05)
+adj <- tcorr$cor; adj[abs(adj) < 0.05] <- 0; diag(adj) <- 0
+
+g <- graph_from_adjacency_matrix(abs(adj), mode = "undirected", weighted = TRUE, diag = FALSE)
+V(g)$prevalence <- topic_prevalence
+V(g)$label <- topic_labels
+V(g)$cluster <- factor(clusters)
+
+p_net <- ggraph(as_tbl_graph(g), layout = "fr") +
+  geom_edge_link(aes(width = weight, alpha = weight), color = "gray40") +
+  geom_node_point(aes(size = prevalence, color = cluster), alpha = 0.9) +
+  geom_node_text(aes(label = label), size = 2.6, repel = TRUE,
+                 max.overlaps = 40, segment.alpha = 0.4) +
+  scale_edge_width(range = c(0.2, 2)) + scale_edge_alpha(range = c(0.2, 0.8)) +
+  scale_size_continuous(range = c(3, 12)) + scale_color_brewer(palette = "Set2") +
+  labs(title = "Topic Co-occurrence Network",
+       subtitle = "Edges = partial correlations of topic prevalence across documents (|r| > 0.05)",
+       color = "Cluster", size = "Prevalence") +
+  theme_void() + theme(plot.title = element_text(face = "bold"))
+
+print(p_net)
+ggsave(file.path(output_path, "03_topic_network.png"), p_net, width = 12, height = 9, dpi = 150)
+```
+
+---
+
+## 8. Document Atlas (transformer embeddings)
+
+Each article was embedded by `embed_documents.py` with a sentence-transformer
+(`all-MiniLM-L6-v2`, 384-dim): long articles were split into word-windows,
+each window embedded, then length-weighted mean-pooled back to one vector per
+document. Here we lay those vectors out in 2D with UMAP and color by decade and
+by dominant STM topic. Unlike the old topic-space UMAP, this places articles by
+their *full semantic content*, independent of the STM model.
+
+```{r doc-atlas, fig.height=8}
+emb_path <- file.path(emb_dir, sprintf("doc_emb_K%d.parquet", K))
+if (have(emb_path)) {
+  emb_tbl <- read_parquet(emb_path) |> arrange(row_index)
+  dim_cols <- grep("^dim_", names(emb_tbl), value = TRUE)
+  X <- as.matrix(emb_tbl[, dim_cols])
+
+  # Align doc metadata to the embedded rows (embeddings may be a dev subset).
+  atlas_meta <- docs |> filter(row_index %in% emb_tbl$row_index) |> arrange(row_index)
+  stopifnot(nrow(atlas_meta) == nrow(X))
+  atlas_meta <- atlas_meta |>
+    mutate(decade = floor(year / 10) * 10,
+           dominant_topic = max.col(theta[match(row_index, docs$row_index), , drop = FALSE]))
+
+  set.seed(12345)
+  uu <- umap(X, n_neighbors = 15, min_dist = 0.1, metric = "cosine")
+  atlas_meta$umap1 <- uu[, 1]; atlas_meta$umap2 <- uu[, 2]
+
+  # ---- OPTION (a): de-blob the map by faceting into decade small-multiples ----
+  # Same UMAP layout, split per decade so points don't pile up; color = dominant
+  # STM topic. Reading: where each decade's articles sit, and how that shifts.
+  p_atlas_a <- ggplot(atlas_meta, aes(umap1, umap2, color = factor(dominant_topic))) +
+    geom_point(alpha = 0.6, size = 0.7) +
+    facet_wrap(~ decade, ncol = 3) +
+    scale_color_viridis_d(option = "turbo", guide = "none") +
+    labs(title = "Article Atlas (a) — semantic map, faceted by decade",
+         subtitle = "Each panel = one decade's articles in the SAME embedding layout; color = dominant STM topic",
+         x = "UMAP 1", y = "UMAP 2") +
+    theme_minimal(base_size = 11) + theme(plot.title = element_text(face = "bold"))
+  print(p_atlas_a)
+  ggsave(file.path(output_path, "04a_atlas_by_decade.png"), p_atlas_a,
+         width = 12, height = 9, dpi = 150)
+
+  # ---- OPTION (b): topic prevalence over time (theme-evolution view) ----
+  # Doesn't use the embeddings at all — each STM topic's mean share of the
+  # articles each year, as a stacked area. The most direct "how did themes shift".
+  topic_year <- as.data.frame(theta) |>
+    setNames(paste0("T", seq_len(ncol(theta)))) |>
+    mutate(year = docs$year) |>
+    filter(!is.na(year)) |>
+    tidyr::pivot_longer(-year, names_to = "topic", values_to = "share") |>
+    group_by(year, topic) |>
+    summarise(share = mean(share), .groups = "drop") |>
+    mutate(topic = factor(topic, levels = paste0("T", seq_len(ncol(theta)))))
+
+  p_atlas_b <- ggplot(topic_year, aes(year, share, fill = topic)) +
+    geom_area(position = "fill", color = "white", linewidth = 0.1) +
+    scale_y_continuous(labels = percent_format()) +
+    scale_fill_viridis_d(option = "turbo") +
+    labs(title = "Article Atlas (b) — topic prevalence over time",
+         subtitle = "Each band = an STM topic's share of that year's articles (themes rising/falling)",
+         x = "Year", y = "Share of articles", fill = "Topic") +
+    theme_minimal(base_size = 11) + theme(plot.title = element_text(face = "bold"))
+  print(p_atlas_b)
+  ggsave(file.path(output_path, "04b_topic_over_time.png"), p_atlas_b,
+         width = 12, height = 8, dpi = 150)
+} else {
+  cat("Run:  python scripts\\embed_documents.py", K, "\n")
+}
+```
+
+---
+
+## 9. Semantic Search
+
+The same embeddings make the corpus searchable *by meaning* rather than keyword.
+Pick a query article (by `row_index`) and find its nearest neighbors by cosine
+similarity — articles "about the same thing" even when they share no vocabulary.
+
+```{r semantic-search}
+if (exists("X")) {
+  Xn <- X / sqrt(rowSums(X^2))          # L2-normalize rows -> cosine via dot product
+  rownames(Xn) <- emb_tbl$row_index
+
+  nearest_docs <- function(query_row_index, n = 8) {
+    qi <- match(as.character(query_row_index), rownames(Xn))
+    if (is.na(qi)) { cat("row_index", query_row_index, "not embedded\n"); return(invisible(NULL)) }
+    sims <- as.vector(Xn %*% Xn[qi, ])
+    ord  <- order(sims, decreasing = TRUE)
+    ord  <- ord[ord != qi][1:n]
+    atlas_meta |>
+      slice(match(rownames(Xn)[ord], as.character(atlas_meta$row_index))) |>
+      transmute(row_index, year, author, title,
+                similarity = round(sims[ord], 3))
+  }
+
+  # Example: nearest neighbors of the first article that mentions "suffrage".
+  seed_row <- docs |>
+    filter(str_detect(str_to_lower(text), "\\bsuffrage\\b")) |>
+    slice(1) |> pull(row_index)
+  if (length(seed_row) == 1) {
+    cat("Query article row_index =", seed_row, " | ",
+        docs$title[match(seed_row, docs$row_index)], "\n\n")
+    print(nearest_docs(seed_row, 8))
+  }
+} else {
+  cat("Embeddings not loaded - run embed_documents.py first.\n")
+}
+```
+
+---
+
+## 9c. Interactive Article Browser (full-text keyword search)
+
+The **Search** box (and the per-column filters) match the **full article text**
+via the *Content* column — so you can keyword-search the body, not just the
+title/metadata. Cells show the first 200 characters, but the search scans the
+whole article. This is the in-report replacement for ad-hoc `hybrid_search.py`
+queries. *(For meaning-based rather than literal-word search, use §9
+`nearest_docs()` above.)*
+
+```{r interactive-browser}
+# ALL modeled articles (one row each), labeled with their dominant STM topic and
+# that topic's share. Fully keyword-searchable on the Content (full body) column.
+# Sort/filter by the Topic column to browse a single topic; search Content for
+# keywords across the whole corpus. Built from the row-aligned theta (doc x topic)
+# and docs (one row per modeled article) that §3 loaded.
+.dom       <- max.col(theta)                                  # dominant topic per doc
+.dom_share <- theta[cbind(seq_len(nrow(theta)), .dom)]        # that topic's share
+
+browse_data <- tibble::tibble(
+  Topic   = .dom,
+  Label   = topic_labels[.dom],
+  `%`     = round(.dom_share * 100, 1),
+  Title   = docs$title,
+  Author  = docs$author,
+  Type    = docs$article_type,
+  Volume  = docs$volume_num,
+  Year    = docs$year,
+  Content = stringr::str_squish(dplyr::coalesce(docs$text, "")),  # full body, searchable
+  File    = docs$filename
+)
+
+# DataTables 0-based index of the Content column for the JS truncation renderer.
+content_col <- which(names(browse_data) == "Content") - 1L
+
+datatable(
+  browse_data, filter = "top", rownames = FALSE,
+  caption = paste0("ALL ", nrow(browse_data), " modeled articles, labeled by dominant topic. ",
+                   "Search box matches the FULL article text (Content); sort/filter the Topic column to browse one topic."),
+  options = list(
+    pageLength = 20, scrollX = TRUE,
+    # Show only the first 200 chars in the cell, but DataTables still SEARCHES the
+    # full untruncated text (the 'filter' type receives the whole value).
+    columnDefs = list(list(
+      targets = content_col,
+      render = DT::JS(
+        "function(data, type, row) {",
+        "  if (type === 'display' && data != null && data.length > 200) {",
+        "    return data.substr(0, 200) + '…';",
+        "  }",
+        "  return data;",
+        "}"
+      )
+    ))
+  )
+)
+```
+
+---
+
+## 10. BERTopic Cross-Check vs STM
+
+`run_bertopic.py` clustered the *same* document embeddings with BERTopic (UMAP +
+HDBSCAN). BERTopic discovers its own number of topics bottom-up and labels some
+documents as outliers (topic `-1`). We cross-tabulate BERTopic clusters against
+each article's dominant STM topic: bright cells off the diagonal show where the
+neural model splits or merges an STM topic — **triangulation, not replacement.**
+
+```{r bertopic-crosstab, fig.height=9}
+bt_docs_path   <- file.path(bertopic_dir, sprintf("bertopic_docs_K%d.csv", K))
+bt_topics_path <- file.path(bertopic_dir, sprintf("bertopic_topics_K%d.csv", K))
+if (have(bt_docs_path)) {
+  bt_docs <- readr::read_csv(bt_docs_path, show_col_types = FALSE)
+
+  stm_dom <- tibble(row_index = docs$row_index, stm_topic = max.col(theta))
+  cmp <- bt_docs |> left_join(stm_dom, by = "row_index") |> filter(!is.na(stm_topic))
+
+  n_out <- sum(cmp$bertopic_topic == -1)
+  cat("BERTopic: ", dplyr::n_distinct(cmp$bertopic_topic[cmp$bertopic_topic >= 0]),
+      "clusters | outliers:", n_out, "/", nrow(cmp), "\n")
+
+  ct <- cmp |> filter(bertopic_topic >= 0) |>
+    count(stm_topic, bertopic_topic) |>
+    group_by(bertopic_topic) |> mutate(frac = n / sum(n)) |> ungroup()
+
+  # Line chart (replaces the heatmap/bars): an AGREEMENT CURVE. Each BERTopic
+  # cluster's "purity" = the share of its docs in its single most-common STM
+  # topic. Sort clusters by purity and connect them: a curve that stays high =
+  # the two methods mostly agree; a curve that drops steeply = many neural
+  # clusters split across STM topics. Dashed line = 50% (a clean 1:1 match).
+  purity <- ct |>
+    group_by(bertopic_topic) |>
+    slice_max(frac, n = 1, with_ties = FALSE) |>
+    ungroup() |>
+    arrange(desc(frac)) |>
+    mutate(rank = row_number())
+
+  p_ct <- ggplot(purity, aes(rank, frac)) +
+    geom_hline(yintercept = 0.5, linetype = "dashed", color = "grey55") +
+    geom_line(color = "#2C7FB8", linewidth = 1) +
+    geom_point(aes(color = factor(stm_topic)), size = 2.6) +
+    scale_y_continuous(labels = percent_format(), limits = c(0, 1)) +
+    scale_color_viridis_d(option = "turbo", guide = "none") +
+    labs(title = "BERTopic–STM agreement curve",
+         subtitle = "Each point = a BERTopic cluster (sorted by purity); y = % of its docs in its top STM topic. Above the dashed 50% line = clean 1:1 mapping with an STM topic.",
+         x = "BERTopic clusters, sorted by agreement", y = "Purity (share in top STM topic)") +
+    theme_minimal(base_size = 11) +
+    theme(plot.title = element_text(face = "bold"))
+  print(p_ct)
+  ggsave(file.path(output_path, "05_bertopic_vs_stm.png"), p_ct, width = 12, height = 8, dpi = 150)
+
+  if (have(bt_topics_path)) {
+    bt_topics <- readr::read_csv(bt_topics_path, show_col_types = FALSE)
+    lab_col <- intersect(c("Name", "Representation"), names(bt_topics))[1]
+    cat("\nTop BERTopic clusters:\n")
+    bt_topics |> filter(Topic >= 0) |> arrange(desc(Count)) |> head(15) |>
+      transmute(Topic, Count, label = .data[[lab_col]]) |> print()
+  }
+} else {
+  cat("Run:  python scripts\\run_bertopic.py", K, "\n")
+}
+```
+
+---
+
+## 11. Diachronic Semantic Change (MacBERTh)
+
+`semantic_change.py` measured, for each target word, how its meaning moves
+across the historical periods, three complementary ways:
+
+- **PRT** — prototype distance: `1 - cos` between period mean vectors. Coarse drift.
+- **APD** — average pairwise distance: mean `1 - cos` over cross-period pairs.
+  Sensitive to changes in *spread*, not just the centroid.
+- **JSD** — Jensen-Shannon over induced word senses (KMeans on pooled
+  occurrences). Captures change in the *mix of senses* a word is used in.
+
+All three come from embedding each occurrence **in context** with MacBERTh
+(historical-English BERT). Higher = more change between the two periods.
+
+```{r diachronic-load}
+change_path <- file.path(diachr_dir, sprintf("diachronic_change_K%d.csv", K))
+proto_path  <- file.path(diachr_dir, sprintf("diachronic_prototypes_K%d.parquet", K))
+periods_path<- file.path(diachr_dir, "diachronic_periods.json")
+have_diachr <- have(change_path)
+if (have_diachr) {
+  change <- readr::read_csv(change_path, show_col_types = FALSE)
+  if (file.exists(periods_path)) {
+    pj <- fromJSON(periods_path)
+    cat("Periods used:", paste(pj$periods$name, collapse = ", "), "\n")
+  }
+  cat("Comparisons:", nrow(change), "over",
+      dplyr::n_distinct(change$word), "words\n")
+} else {
+  cat("Run:  python scripts\\semantic_change.py", K, "\n")
+}
+```
+
+```{r diachronic-heatmap, eval=have_diachr, fig.height=8}
+# Internal guard so "Run All Chunks" (which ignores eval=have_diachr) can't error.
+if (!have_diachr) {
+  cat("[skip] diachronic artifacts not computed for this scenario yet.\n")
+} else {
+# ONE line per change measure (names spelled out), instead of three bar panels.
+# For each word we take its PEAK change across any period pair, then scale each
+# measure 0-1 so the three sit comparably on one axis. Words sorted by APD.
+#   PRT = Prototype distance | APD = Average Pairwise Distance | JSD = Jensen-Shannon Divergence
+word_order <- change |> group_by(word) |> summarise(m = max(apd, na.rm = TRUE)) |>
+  arrange(desc(m)) |> pull(word)   # most-changed first (also used by the drift plot)
+
+measure_names <- c(prt = "Prototype distance (PRT)",
+                   apd = "Average pairwise distance (APD)",
+                   jsd = "Jensen-Shannon divergence (JSD)")
+
+peak <- change |>
+  group_by(word) |>
+  summarise(prt = max(prt, na.rm = TRUE),
+            apd = max(apd, na.rm = TRUE),
+            jsd = max(jsd, na.rm = TRUE), .groups = "drop") |>
+  pivot_longer(c(prt, apd, jsd), names_to = "measure", values_to = "peak") |>
+  group_by(measure) |>
+  mutate(scaled = (peak - min(peak)) / (max(peak) - min(peak) + 1e-12)) |>
+  ungroup() |>
+  mutate(word    = factor(word, levels = word_order),
+         measure = factor(measure_names[measure], levels = measure_names))
+
+# NOTE: x is WORDS, not time. Each value is a word's PEAK change across the period
+# pairs, summarised to one number. (For the genuine temporal view see the
+# "drift over time" chart below.) Words sorted by APD, most-changed first.
+
+# (a) GROUPED BAR — magnitude per word, the three measures side by side.
+p_bar <- ggplot(peak, aes(word, scaled, fill = measure)) +
+  geom_col(position = position_dodge(width = 0.8), width = 0.72) +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Diachronic change by word — ranked (bar)",
+       subtitle = "Peak shift per word, each measure scaled 0-1. Sorted by APD; taller = more change.  PRT=centroid drift, APD=spread of usage, JSD=sense-mix.",
+       x = NULL, y = "Relative change (0-1 within measure)", fill = "Measure") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "top")
+print(p_bar)
+ggsave(file.path(output_path, "06_diachronic_change.png"), p_bar, width = 14, height = 8, dpi = 150)
+
+# (b) DOT / LOLLIPOP — same numbers as dots, with a grey guide spanning each word's
+# three measures. A WIDE gap between a word's dots = the measures DISAGREE (e.g.
+# JSD high but PRT low = its sense-mix shifted more than its average meaning moved).
+peak_range <- peak |> group_by(word) |>
+  summarise(lo = min(scaled), hi = max(scaled), .groups = "drop")
+p_dot <- ggplot(peak, aes(scaled, fct_rev(word))) +
+  geom_segment(data = peak_range,
+               aes(x = lo, xend = hi, y = fct_rev(word), yend = fct_rev(word)),
+               inherit.aes = FALSE, color = "grey80", linewidth = 1.1) +
+  geom_point(aes(color = measure), size = 3) +
+  scale_color_brewer(palette = "Dark2") +
+  labs(title = "Diachronic change by word — dot plot",
+       subtitle = "Three measures per word; a wide spread between a word's dots = the measures disagree about HOW it changed.",
+       x = "Relative change (0-1 within measure)", y = NULL, color = "Measure") +
+  theme_minimal(base_size = 11) +
+  theme(plot.title = element_text(face = "bold"))
+print(p_dot)
+ggsave(file.path(output_path, "06b_diachronic_change_dots.png"), p_dot, width = 12, height = 8, dpi = 150)
+}
+```
+
+```{r diachronic-drift, eval=have_diachr, fig.height=8}
+# Drift trajectories: project each word's per-period prototype vector through a
+# shared PCA (fit on all prototypes), then connect periods in order.
+if (have(proto_path)) {
+  proto <- read_parquet(proto_path)
+  pdim <- grep("^dim_", names(proto), value = TRUE)
+  Pm <- as.matrix(proto[, pdim])
+  pca <- prcomp(Pm, center = TRUE, scale. = FALSE)
+  proto$PC1 <- pca$x[, 1]; proto$PC2 <- pca$x[, 2]
+
+  # period order from the JSON sidecar if present, else alphabetical
+  per_levels <- if (exists("pj")) pj$periods$name else sort(unique(proto$period))
+  proto <- proto |> mutate(period = factor(period, levels = per_levels)) |>
+    arrange(word, period)
+
+  # Show the most-changed words for legibility.
+  show_words <- head(word_order, 9)
+  dd <- proto |> filter(word %in% show_words)
+
+  p_drift <- ggplot(dd, aes(PC1, PC2, group = word, color = word)) +
+    geom_path(arrow = arrow(length = unit(0.18, "cm"), type = "closed"),
+              alpha = 0.8, linewidth = 0.7) +
+    geom_point(aes(shape = period), size = 3) +
+    geom_text_repel(aes(label = ifelse(period == per_levels[length(per_levels)] |
+                                        period == per_levels[1], word, "")),
+                    size = 3, max.overlaps = 30, show.legend = FALSE) +
+    scale_color_brewer(palette = "Set1") +
+    labs(title = "Diachronic Word Drift (MacBERTh prototypes)",
+         subtitle = "Each path = one word's meaning trajectory across periods, in a shared PCA",
+         x = "PC1", y = "PC2", color = "Word", shape = "Period") +
+    theme_minimal(base_size = 12) + theme(plot.title = element_text(face = "bold"))
+  print(p_drift)
+  ggsave(file.path(output_path, "07_diachronic_drift.png"), p_drift, width = 12, height = 9, dpi = 150)
+}
+```
+
+### Semantic drift over time
+
+The genuine **temporal** view (the one the ranked charts above can't give): for the
+most-changed words, each line is its **cosine distance from its earliest-period
+meaning**, plotted across the periods. A line that **rises is drifting away** from
+where it started; a **flat** line is stable; the steeper the climb, the faster the
+change. Same MacBERTh prototypes as the 2-D drift map, read as "how far from the
+start, over time."
+
+```{r diachronic-over-time, eval=have_diachr, fig.height=7}
+if (!have_diachr || !have(proto_path)) {
+  cat("[skip] need diachronic prototypes for the over-time chart.\n")
+} else {
+  proto_ot   <- read_parquet(proto_path)
+  pdim_ot    <- grep("^dim_", names(proto_ot), value = TRUE)
+  per_levels <- if (exists("pj")) pj$periods$name else sort(unique(proto_ot$period))
+  show_words <- head(word_order, 9)             # word_order from the chunk above
+
+  drift_ot <- proto_ot |>
+    filter(word %in% show_words) |>
+    mutate(period = factor(period, levels = per_levels)) |>
+    filter(!is.na(period)) |>
+    arrange(word, period) |>
+    group_by(word) |>
+    group_modify(~{
+      M  <- as.matrix(.x[, pdim_ot])
+      Mn <- M / sqrt(rowSums(M^2))              # L2-normalize -> cosine via dot product
+      tibble(period = .x$period, dist = 1 - as.vector(Mn %*% Mn[1, ]))
+    }) |>
+    ungroup()
+
+  # Label each line directly at its last period (and drop the color legend) so you
+  # don't have to match colors to names.
+  ends <- drift_ot |> group_by(word) |>
+    slice_max(as.integer(period), n = 1, with_ties = FALSE) |> ungroup()
+  p_ot <- ggplot(drift_ot, aes(period, dist, group = word, color = word)) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 2.6) +
+    ggrepel::geom_text_repel(data = ends, aes(label = word),
+                             hjust = 0, direction = "y", nudge_x = 0.18, size = 3.2,
+                             segment.alpha = 0.3, max.overlaps = 20, show.legend = FALSE) +
+    scale_color_brewer(palette = "Paired", guide = "none") +
+    scale_x_discrete(expand = expansion(mult = c(0.04, 0.22))) +
+    labs(title = "Semantic drift over time (MacBERTh)",
+         subtitle = paste0("Cosine distance from each word's earliest-period meaning (",
+                           per_levels[1], "). Rising = drifting away; flat = stable."),
+         x = "Period", y = "Distance from earliest period") +
+    theme_minimal(base_size = 12) +
+    theme(plot.title = element_text(face = "bold"))
+  print(p_ot)
+  ggsave(file.path(output_path, "07b_diachronic_over_time.png"), p_ot,
+         width = 12, height = 7, dpi = 150)
+}
+```
+
+---
+
+## 11b. Within-Topic Vocabulary Changepoints
+
+For each STM topic, find the year that most sharply splits its **vocabulary**
+(maximizing Jensen-Shannon divergence between the pooled word distributions
+before vs. after), then show which words rose or fell across that split — the
+topic-level companion to §11's word-level diachrony. Built from the row-aligned
+`theta` + `docs$year` + `modeled_clean` (the already-cleaned bag-of-words), so it
+works for whatever scenario is loaded. Detection is **cached** to an `.rds`, so
+the first knit takes a few minutes and re-knits are instant.
+
+```{r vocab-changepoint, fig.width=14, fig.height=22}
+# ---- helpers --------------------------------------------------------------
+.row_words <- function(rows) {                       # cleaned words for doc rows
+  w <- unlist(strsplit(paste(modeled_clean[rows], collapse = " "), "\\s+"))
+  w[nchar(w) >= 4]                                   # already stopworded/lemmatized
+}
+.js_divergence <- function(wa, wb) {
+  if (length(wa) < 50 || length(wb) < 50) return(0)
+  vu <- union(unique(wa), unique(wb))
+  pa <- as.numeric(table(factor(wa, levels = vu))) / length(wa)
+  pb <- as.numeric(table(factor(wb, levels = vu))) / length(wb)
+  m  <- (pa + pb) / 2; eps <- 1e-12
+  kl <- function(p, q) sum(p * log2((p + eps) / (q + eps)), na.rm = TRUE)
+  (kl(pa, m) + kl(pb, m)) / 2
+}
+.yr <- docs$year
+find_cp <- function(t, min_side = 15) {
+  thr  <- stats::quantile(theta[, t], 0.75, na.rm = TRUE)
+  rows <- which(theta[, t] >= thr & !is.na(.yr))
+  if (length(rows) < 2 * min_side) return(list(year = NA_integer_, max_div = NA_real_))
+  ry   <- .yr[rows]
+  cand <- sort(unique(ry))
+  cand <- cand[vapply(cand, function(y)
+    sum(ry <= y) >= min_side && sum(ry > y) >= min_side, logical(1))]
+  if (!length(cand)) return(list(year = NA_integer_, max_div = NA_real_))
+  divs <- vapply(cand, function(y)
+    .js_divergence(.row_words(rows[ry <= y]), .row_words(rows[ry > y])), numeric(1))
+  list(year = as.integer(cand[which.max(divs)]), max_div = max(divs))
+}
+side_words <- function(t, split, side) {
+  thr  <- stats::quantile(theta[, t], 0.75, na.rm = TRUE)
+  rows <- which(theta[, t] >= thr & !is.na(.yr))
+  rows <- if (side == "early") rows[.yr[rows] <= split] else rows[.yr[rows] > split]
+  f <- sort(table(.row_words(rows)), decreasing = TRUE)
+  tibble(word = names(f), proportion = as.integer(f) / sum(f))
+}
+
+# ---- detect (cached) ------------------------------------------------------
+cp_rds <- file.path(output_path, sprintf("topic_changepoints_K%d.rds", K))
+if (file.exists(cp_rds)) {
+  changepoints <- readRDS(cp_rds); cat("Loaded cached changepoints.\n")
+} else {
+  cat("Detecting vocabulary changepoints for", ncol(theta), "topics (one-time)...\n")
+  changepoints <- lapply(seq_len(ncol(theta)), function(t) {
+    cp <- find_cp(t)
+    cat(sprintf("  T%-2d %-36s %s\n", t, str_trunc(topic_labels[t], 34),
+                if (is.na(cp$year)) "(too few docs)" else sprintf("split %d (JS %.3f)", cp$year, cp$max_div)))
+    cp
+  })
+  saveRDS(changepoints, cp_rds)
+}
+
+# ---- summary table --------------------------------------------------------
+cp_df <- tibble(topic = seq_len(ncol(theta)), label = topic_labels,
+                prevalence = topic_prevalence,
+                split_year = vapply(changepoints, function(x) x$year, integer(1)),
+                max_jsd    = vapply(changepoints, function(x) x$max_div, numeric(1))) |>
+  arrange(desc(prevalence))
+print(cp_df, n = Inf)
+write_csv(cp_df, file.path(output_path, sprintf("topic_changepoints_K%d.csv", K)))
+
+# ---- per-topic before/after word-shift plots, 4 per page ------------------
+ord <- order(topic_prevalence, decreasing = TRUE)
+vocab_plots <- lapply(ord, function(t) {
+  cp <- changepoints[[t]]
+  if (is.na(cp$year))
+    return(ggplot() + annotate("text", x = 0, y = 0, size = 6,
+                               label = paste0("T", t, ": insufficient data")) + theme_void())
+  sy <- cp$year
+  cmpw <- full_join(
+    side_words(t, sy, "early") |> rename(early = proportion),
+    side_words(t, sy, "late")  |> rename(late  = proportion), by = "word") |>
+    replace_na(list(early = 1e-4, late = 1e-4)) |>
+    mutate(lr = log2(early / late), avg = (early + late) / 2) |>
+    filter(avg > 0.001) |> arrange(desc(abs(lr)))
+  el <- paste0("More ≤", sy); ll <- paste0("More >", sy)
+  pw <- bind_rows(head(filter(cmpw, lr > 0), 15), head(filter(cmpw, lr < 0), 15)) |>
+    mutate(direction = ifelse(lr > 0, el, ll), word = reorder(word, lr))
+  ggplot(pw, aes(lr, word, fill = direction)) +
+    geom_col(alpha = 0.85) + geom_vline(xintercept = 0, linewidth = 0.8) +
+    scale_fill_manual(values = setNames(c("#6E8B3D", "#556B2F"), c(el, ll))) +
+    labs(title = paste0("T", t, ": ", str_trunc(topic_labels[t], 45)),
+         subtitle = sprintf("Changepoint %d  |  JSD %.2f  |  prevalence %.1f%%",
+                            sy, cp$max_div, topic_prevalence[t] * 100),
+         x = paste0("← after ", sy, "     before ", sy, " →"), y = NULL, fill = NULL) +
+    theme_minimal(base_size = 10) +
+    theme(legend.position = "none", plot.title = element_text(size = 12, face = "bold"))
+})
+
+per_page <- 4L; n_pages <- ceiling(length(vocab_plots) / per_page)
+for (pg in seq_len(n_pages)) {
+  s <- (pg - 1) * per_page + 1; e <- min(s + per_page - 1, length(vocab_plots))
+  comb <- wrap_plots(vocab_plots[s:e], ncol = 2) +
+    plot_annotation(title = sprintf("Within-Topic Vocabulary Changepoints — page %d of %d", pg, n_pages))
+  print(comb)
+  ggsave(file.path(output_path, sprintf("08_vocab_changepoint_K%d_page%d.png", K, pg)),
+         comb, width = 14, height = 22, dpi = 150, limitsize = FALSE)
+}
+cat("\nSaved", n_pages, "changepoint page(s).\n")
+```
+
+---
+
+## 12. Author Topic Profiles
+
+For each prolific *named* author, what do they tend to write *about*? This shows
+each author's **mean topic mix** — the average STM topic proportions across all
+their articles — as a stacked bar (each bar sums to 100%), in both a vertical
+(author-comparison) and horizontal (label-reading) layout.
+
+*(This replaced a Burrows' Delta stylometry section. Stylometric authorship
+attribution needs far more text per author than these era slices provide, whereas
+topic profiles are robust at any size and answer the more useful "who wrote about
+what" question. A cross-corpus version like Chart 5 — WE next to RSM — lives in the
+joint comparison report, §6b.)*
+
+We restrict to the most prolific named authors (>= 10 substantial articles each)
+so the profiles are stable.
+
+```{r stylo-prep}
+# Build a per-author sample from the natural-language text (modeled_raw).
+# Exclude non-author bylines: "Unknown", the periodical name, OCR/column junk
+# (anything bracketed), and initials-only signatures (no real surname), since
+# those would pollute the authorship clustering.
+author_blocklist <- c("unknown", "editor", "the editor", "selected", "anonymous")
+# Organizational / advertisement / masthead bylines that aren't personal authors.
+org_keywords <- "exponent|publisher|office|ticket|company|\\bco\\b|union|depot|emporium|store|bureau|society|association|department"
+is_real_author <- function(a) {
+  s  <- str_squish(a)
+  al <- str_replace_all(str_to_lower(s), "[’‘']", "'")  # normalize curly quotes
+  has_surname <- str_detect(s, "[A-Za-z]{3,}")        # at least one 3+ letter word
+  !is.na(a) & s != "" & !str_starts(s, "\\[") & !str_ends(s, ",") &
+    !(al %in% author_blocklist) & !str_detect(al, org_keywords) & has_surname
+}
+
+sty_tbl <- docs |>
+  mutate(text = modeled_raw,
+         n_words = str_count(text, "\\S+"),
+         author_clean = str_squish(author)) |>
+  filter(is_real_author(author_clean), n_words >= 150)
+
+top_authors <- sty_tbl |> count(author_clean, sort = TRUE) |>
+  filter(n >= 10) |> slice_head(n = 12) |> pull(author_clean)
+cat("Most prolific named authors used for stylometry:\n")
+print(top_authors)
+
+# Concatenate each author's articles into a few labeled samples for stylo.
+# stylo wants a named list of long character strings (one "text" per sample).
+make_samples_per_author <- function(df, max_words = 5000) {
+  out <- list()
+  for (a in top_authors) {
+    txt <- df |> filter(author_clean == a) |> pull(text) |> paste(collapse = " ")
+    words <- str_split(txt, "\\s+")[[1]]
+    words <- words[words != ""]
+    # split into ~max_words chunks so each author yields 2-4 comparable samples
+    n_chunk <- max(1, floor(length(words) / max_words))
+    n_chunk <- min(n_chunk, 4)
+    if (n_chunk < 1) next
+    sizes <- rep(floor(length(words) / n_chunk), n_chunk)
+    idx <- c(0, cumsum(sizes))
+    for (i in seq_len(n_chunk)) {
+      seg <- words[(idx[i] + 1):idx[i + 1]]
+      key <- sprintf("%s_%d", str_replace_all(a, "[^A-Za-z]", ""), i)
+      out[[key]] <- paste(seg, collapse = " ")
+    }
+  }
+  out
+}
+sty_samples <- make_samples_per_author(sty_tbl)
+cat("\nStylometry samples:", length(sty_samples),
+    "from", length(top_authors), "authors\n")
+```
+
+```{r stylo-delta, fig.height=10}
+if (length(top_authors) >= 1) {
+  # For each prolific named author, the MEAN topic mix across their articles, from
+  # the row-aligned theta (doc x topic). Stacked bar per author -> sums to 100%.
+  prof <- purrr::map_dfr(top_authors, function(a) {
+    rows <- sty_tbl$row_index[sty_tbl$author_clean == a]
+    tibble(author     = a,
+           n_articles = length(rows),
+           topic      = factor(topic_labels, levels = topic_labels),
+           prop       = colMeans(theta[rows, , drop = FALSE]))
+  })
+  # Most prolific first.
+  auth_order <- prof |> distinct(author, n_articles) |> arrange(desc(n_articles)) |> pull(author)
+  prof <- prof |> mutate(author = factor(author, levels = auth_order))
+
+  prof_sub <- paste0("Mean topic mix per prolific named author  (",
+                     length(top_authors), " authors, >= 10 articles each)")
+
+  # (a) VERTICAL — authors as columns, topics stacked to 100% (the "Chart 5" view).
+  p_prof_v <- ggplot(prof, aes(author, prop, fill = topic)) +
+    geom_col(width = 0.85, position = "stack") +
+    scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+    scale_fill_viridis_d(option = "turbo") +
+    labs(title = "Author topic profiles (vertical)", subtitle = prof_sub,
+         x = NULL, y = "Mean topic proportion", fill = "Topic") +
+    theme_minimal(base_size = 11) +
+    theme(plot.title = element_text(face = "bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1),
+          legend.text = element_text(size = 7), legend.key.size = unit(0.4, "cm"))
+  print(p_prof_v)
+  ggsave(file.path(output_path, "09_author_topic_profiles_vertical.png"), p_prof_v,
+         width = 13, height = 8, dpi = 150)
+
+  # (b) HORIZONTAL — authors as rows (easier label-reading with many authors/topics).
+  p_prof_h <- ggplot(prof, aes(prop, factor(author, levels = rev(auth_order)), fill = topic)) +
+    geom_col(width = 0.85, position = "stack") +
+    scale_x_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+    scale_fill_viridis_d(option = "turbo") +
+    labs(title = "Author topic profiles (horizontal)", subtitle = prof_sub,
+         x = "Mean topic proportion", y = NULL, fill = "Topic") +
+    theme_minimal(base_size = 11) +
+    theme(plot.title = element_text(face = "bold"),
+          legend.text = element_text(size = 7), legend.key.size = unit(0.4, "cm"))
+  print(p_prof_h)
+  ggsave(file.path(output_path, "09_author_topic_profiles_horizontal.png"), p_prof_h,
+         width = 13, height = 8, dpi = 150)
+
+  # Each author's single dominant topic, as a table.
+  prof |> group_by(author, n_articles) |>
+    slice_max(prop, n = 1, with_ties = FALSE) |> ungroup() |>
+    transmute(Author = author, Articles = n_articles,
+              `Top topic` = as.character(topic), Share = scales::percent(prop, 0.1)) |>
+    arrange(desc(Articles)) |> print(n = Inf)
+} else {
+  cat("No prolific named authors (>= 10 substantial articles) in this scenario --",
+      "this slice is mostly institutional/unknown bylines. The full run has more.\n")
+}
+```
+
+---
+
+## 13. Save Session
+
+```{r save-session}
+saveRDS(list(
+  K            = K,
+  D_jsd        = D_jsd,
+  hc           = hc,
+  clusters     = clusters,
+  mds_coords   = mds,
+  topic_labels = topic_labels,
+  fit_date     = Sys.time()
+), file.path(output_path, sprintf("advanced_report_objects_K%d.rds", K)))
+cat("Saved report objects for K =", K, "\n")
+```
+
+---
+
+## Notes & Tuning Hints
+
+- **K is not hardcoded.** Set `pin_K` in §2 to choose the model (35 is
+  canonical). Every artifact path is suffixed by K, so K=20 dev runs and K=35
+  production runs never collide. To switch K you (a) run the linker checkpoint
+  chunk with the new `chosen_K`, then (b) re-run the three Python scripts with
+  that K, then (c) re-knit with `pin_K` updated.
+- **Graceful skipping.** Sections 8–11 check for their Python artifact and print
+  a "run script X" note if it's missing, so the notebook always knits even
+  before the compute layer has finished.
+- **Why contextual embeddings for diachrony (§11).** Training one word2vec per
+  period and Procrustes-rotating them (the old approach) is fragile: the
+  rotation is fit on shared vocabulary and small periods give noisy spaces.
+  MacBERTh embeds each occurrence in its sentence in a single pretrained space —
+  no rotation, and we get sense-level change. Edit `DIACHRONIC_TARGETS` and
+  `DEFAULT_PERIOD_BOUNDS` in `scripts/config.py` to change words/periods.
+- **Author topic profiles (§12)** show each prolific named author's mean STM topic
+  mix as a stacked bar — robust at any corpus size, unlike Burrows' Delta
+  stylometry, which needs far more text per author than an era slice provides.
+- **Compute layer is resumable.** Each Python script checkpoints; re-running
+  after an interruption resumes. The knit itself never trains anything, so it
+  won't time out.
+```

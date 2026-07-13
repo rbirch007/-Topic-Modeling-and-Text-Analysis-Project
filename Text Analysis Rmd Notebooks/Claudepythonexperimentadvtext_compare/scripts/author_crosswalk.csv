@@ -1,0 +1,136 @@
+# author_crosswalk.csv  --  EDIT ME. Hand-curated byline canonicalisation for the
+# cross-corpus author pipeline (author_attribution.py, Tier 1).
+#
+# Each row maps a RAW byline (after normalisation: lower-cased, OCR '?'->apostrophe,
+# whitespace squished, surrounding [](){}"' and trailing ,.:;- stripped) to a
+# CANONICAL author name (or an organisation bucket).
+#
+# Columns:
+#   match_type : exact   -> normalised byline must equal `pattern` exactly
+#                regex    -> `pattern` is a regex, matched with re.search on the
+#                            normalised byline (use for families of ad strings)
+#                title    -> `pattern` (regex, whitespace-flexible) is matched against the
+#                            article TITLE; matching Unknown/blank-byline articles are
+#                            assigned `canonical`. Best for serialized columns with a
+#                            stable title, e.g. the "Prince of Ur" column.
+#                signature-> `pattern` is a PEN NAME (whitespace/hyphen-flexible) appended to
+#                            the article TITLE (e.g. "A Prince of Ur - Homespun") of an
+#                            Unknown/blank article. TITLE-ONLY: body text is not scanned,
+#                            because common-word pen names (homespun) match unrelated prose.
+#   pattern    : the normalised string (exact) or a regex (regex). LOWER CASE.
+#   canonical  : the display name to assign. For orgs use a bucket label.
+#   kind       : person | pseudonym | initials | org
+#                - person    : a real full-name byline / clear variant  (HIGH confidence)
+#                - pseudonym : a documented pen name -> real person      (MED confidence)
+#                - initials  : an initials-only byline inferred to a person by a
+#                              same-corpus full-name anchor               (MED confidence,
+#                              flagged 'byline-initials-inferred' -- an ASSUMPTION)
+#                - org       : advertisement / masthead / society filler; NOT an author
+#   note       : free text (why); ignored by the code.
+#
+# HOW TO EXTEND: add rows. `exact`/`pseudonym`/`initials` rows win over the built-in
+# ORG regex; `regex kind=org` rows add to it. Re-run scripts\author_attribution.py {K}.
+# Only seed mappings you can defend -- initials rows are explicit inferences.
+match_type,pattern,canonical,kind,note
+# ---- Woman's Exponent : Emmeline B. Wells (editor; multiple pen names) ----
+exact,emmeline b. wells,Emmeline B. Wells,person,
+exact,e. b. wells,Emmeline B. Wells,person,
+exact,e. b. w,Emmeline B. Wells,initials,editor initials
+exact,e. b w,Emmeline B. Wells,initials,OCR-split initials
+exact,e b w,Emmeline B. Wells,initials,
+exact,blanche beechwood,Emmeline B. Wells,pseudonym,documented EBW pen name
+exact,aunt em,Emmeline B. Wells,pseudonym,documented EBW pen name
+exact,b. b,Emmeline B. Wells,initials,Blanche Beechwood initials (inferred)
+# ---- Eliza R. Snow (Smith) ----
+exact,eliza r. snow,Eliza R. Snow,person,
+exact,eliza r. snow smith,Eliza R. Snow,person,
+exact,e. r. snow,Eliza R. Snow,person,
+exact,e. r. snow smith,Eliza R. Snow,person,
+exact,e. r. s,Eliza R. Snow,initials,
+exact,e. r. s. s,Eliza R. Snow,initials,E.R. Snow Smith initials
+# ---- other prolific WE contributors ----
+exact,helen mar whitney,Helen Mar Whitney,person,
+exact,hannah t. king,Hannah T. King,person,
+exact,h. t. k,Hannah T. King,initials,
+exact,emily hill woodmansee,Emily Hill Woodmansee,person,
+exact,emily h. woodmansee,Emily Hill Woodmansee,person,
+exact,e. h. w,Emily Hill Woodmansee,initials,
+exact,lydia d. alder,Lydia D. Alder,person,
+exact,l. d. a,Lydia D. Alder,initials,
+exact,augusta joyce crocheron,Augusta Joyce Crocheron,person,
+exact,a. j. c,Augusta Joyce Crocheron,initials,
+exact,ellis r. shipp,Ellis R. Shipp,person,
+exact,dr. ellis r. shipp,Ellis R. Shipp,person,
+exact,ellis r. shipp m. d.,Ellis R. Shipp,person,
+exact,e. r. shipp,Ellis R. Shipp,person,
+exact,zina d. h. young,Zina D. H. Young,person,
+exact,mary ellen kimball,Mary Ellen Kimball,person,
+exact,m. e. kimball,Mary Ellen Kimball,person,
+exact,m. e. k,Mary Ellen Kimball,initials,
+exact,ruth m. fox,Ruth May Fox,person,
+exact,r. m. f,Ruth May Fox,initials,
+exact,lu dalton,Lucinda Lee Dalton,person,signed "Lu Dalton"
+exact,l. l. d,Lucinda Lee Dalton,initials,
+exact,m. j. tanner,M. J. Tanner,person,
+exact,m. j. t,M. J. Tanner,initials,
+exact,l. m. hewlings,L. M. Hewlings,person,
+exact,l. m. h,L. M. Hewlings,initials,
+exact,annie wells cannon,Annie Wells Cannon,person,
+exact,a. w. c,Annie Wells Cannon,initials,domain ID (daughter of Emmeline B. Wells; model mis-guessed EBW on style)
+regex,^a[. ]*w[. ]*c$,Annie Wells Cannon,initials,all A.W.C. spacing/OCR variants (A.W. C, AW.C, ...)
+# ---- Ramona Wilcox Cannon (RSM writer; her "Mary Marker" column ran in the Deseret News) ----
+exact,ramona wilcox cannon,Ramona Wilcox Cannon,person,
+exact,ramona w. cannon,Ramona Wilcox Cannon,person,
+exact,ramona cannon,Ramona Wilcox Cannon,person,
+exact,ramona c. cannon,Ramona Wilcox Cannon,person,OCR variant (CAnnon)
+exact,r. w. c,Ramona Wilcox Cannon,initials,
+exact,rwc,Ramona Wilcox Cannon,initials,
+exact,mona,Ramona Wilcox Cannon,pseudonym,not seen as a byline in this corpus (future-proof)
+signature,mary marker,Ramona Wilcox Cannon,pseudonym,Deseret News column pen name; not found in RSM here
+# ---- Lula Greene Richards (first WE editor) : consolidate real byline variants ----
+exact,lula greene richards,Lula Greene Richards,person,
+exact,l. lula greene richards,Lula Greene Richards,person,
+exact,lula l. greene richards,Lula Greene Richards,person,
+exact,l. l. greene richards,Lula Greene Richards,person,
+exact,l. greene richards,Lula Greene Richards,person,
+# ---- Documented NOMS DE PLUME (scholarly record). Most are NOT in the extracted
+#      byline field (they were in-article signatures); these rules lie dormant until
+#      the data captures them OR a text/stylometric pass surfaces the article. Distinctive
+#      names are safe; common ones (Leo, Amelia, Mary Howe) only fire on an EXACT byline. ----
+exact,mary foster gibbs,Susa Young Gates,pseudonym,ACTIVE: 6 RSM bylines 1918-22
+exact,amelia,Susa Young Gates,pseudonym,dormant (not in byline field)
+exact,maggie farnham,Susa Young Gates,pseudonym,dormant
+exact,mary howe,Susa Young Gates,pseudonym,dormant
+exact,dr. snuffbottle,Susa Young Gates,pseudonym,dormant
+exact,leo,Emmeline B. Wells,pseudonym,dormant
+exact,narcissa,Eliza R. Snow,pseudonym,dormant
+exact,tullia,Eliza R. Snow,pseudonym,dormant
+exact,lula,Lula Greene Richards,pseudonym,dormant
+exact,sigma,Lula Greene Richards,pseudonym,dormant
+exact,wait-a-while,Lula Greene Richards,pseudonym,dormant
+exact,alma scott,Lula Greene Richards,pseudonym,dormant
+exact,geranium,Lula Greene Richards,pseudonym,dormant
+exact,mary grace,Lula Greene Richards,pseudonym,dormant
+exact,mignona,Lula Greene Richards,pseudonym,dormant
+# ---- Relief Society Magazine : partial-name variants ----
+exact,amy b. lyman,Amy Brown Lyman,person,
+exact,amy brown lyman,Amy Brown Lyman,person,
+exact,belle s. spafford,Belle S. Spafford,person,
+exact,s. spafford,Belle S. Spafford,person,
+exact,christie lund,Christie Lund Coles,person,
+exact,christie lund coles,Christie Lund Coles,person,
+exact,eva willes wangsgaard,Eva Willes Wangsgaard,person,
+exact,willes wangsgaard,Eva Willes Wangsgaard,person,
+# ---- Susa Young Gates (RSM/YWJ editor; wrote the "Homespun" column) ----
+exact,susa young gates,Susa Young Gates,person,
+exact,susa y. gates,Susa Young Gates,person,merge WE initials-variant
+# "Prince of Ur" = Susa Young Gates's serialized column, signed "Home Spun" (RSM 1915-16).
+# All installments are unbylined; attribute by the stable title, plus the pen-name signature.
+title,prince of ur,Susa Young Gates,pseudonym,serialized column signed Home Spun
+signature,home spun,Susa Young Gates,pseudonym,Home Spun / Homespun appended to title
+# ---- explicit organisation / filler bylines (regex kind=org augments the built-in rules) ----
+regex,woman.?s? exponent,__ORG_MASTHEAD__,org,masthead/filler byline
+regex,society (activities|magazine),__ORG_SOCIETY__,org,
+regex,(poem|story) contest,__ORG_CONTEST__,org,
+regex,general conference,__ORG_CONFERENCE__,org,
+regex,chain chapter,__ORG_SOCIETY__,org,

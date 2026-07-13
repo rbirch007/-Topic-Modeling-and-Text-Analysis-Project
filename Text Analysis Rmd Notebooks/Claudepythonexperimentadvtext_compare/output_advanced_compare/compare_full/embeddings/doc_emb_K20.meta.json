@@ -1,0 +1,9 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dim": 384,
+  "n_docs": 37279,
+  "K": 20,
+  "chunk_words": 200,
+  "chunk_stride": 200,
+  "note": "Embeddings are K-independent; copied from doc_emb_K35.parquet (advanced_docs_K20 is byte-identical to K35: same row_index/doc_id/text). Re-running embed_documents.py 20 would reproduce these exactly."
+}

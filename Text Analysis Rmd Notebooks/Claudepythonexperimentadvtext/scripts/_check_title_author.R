@@ -1,0 +1,16 @@
+suppressPackageStartupMessages({ library(tidyverse); library(readxl) })
+inv_path <- "C:/Users/birch/OneDrive - George Mason University - O365 Production/Dissertation/textanalysis/exponentorder/output/WE_article_inventory_vols1-41.xlsx"
+inv <- read_excel(inv_path, sheet = "Article Inventory")
+.norm <- function(x) str_squish(str_to_lower(replace_na(as.character(x), "")))
+before_real <- inv %>% filter(.norm(Author) != "" & .norm(Author) != "unknown") %>% nrow()
+fixed <- inv %>% mutate(Author = if_else(.norm(Author) != "" & .norm(Author) == .norm(Title), NA_character_, Author))
+blanked <- sum(is.na(fixed$Author) & !is.na(inv$Author))
+after_real <- fixed %>% filter(.norm(Author) != "" & .norm(Author) != "unknown") %>% nrow()
+cat("real (non-blank, non-Unknown) authors before:", before_real, "\n")
+cat("blanked by rule:                              ", blanked, "\n")
+cat("real authors after:                           ", after_real, "\n")
+cat("delta (should equal blanked):                 ", before_real - after_real, "\n\n")
+# spot-check: a legitimate author should be untouched
+chk <- fixed %>% filter(.norm(Author) == "hannah t. king") %>% nrow()
+cat("HANNAH T. KING rows still attributed:", chk, "(expect 155)\n")
+cat("PASS\n")

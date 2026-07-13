@@ -1,0 +1,1559 @@
+---
+title: "Advanced Text Analysis - Woman's Exponent vs. Relief Society Magazine"
+author: "Birch"
+date: "`r Sys.Date()`"
+output:
+  html_notebook:
+    toc: true
+    toc_float: true
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.width = 10, fig.height = 7)
+```
+
+# Advanced Text Analysis - Cross-Corpus Contrast
+
+This notebook is the **R reporting layer** of the *cross-corpus* comparison
+pipeline. It sits alongside the two single-corpus advanced projects
+(`Claudepythonexperimentadvtext` = Woman's Exponent, `..._RSM` = Relief Society
+Magazine) and answers a different question than either: **not "what is happening
+inside one periodical," but "how do the two periodicals differ in meaning-space?"**
+
+As in the single-corpus pipelines, the heavy machine-learning work runs *outside*
+this knit in checkpointed Python scripts; this notebook only **loads the finished
+artifacts** and turns them into figures. **If a section's artifact is missing, it
+prints a "run script X first" note and skips rather than erroring.**
+
+The contrast rests on a joint STM fit over **both** corpora
+(`regression_compare_2_corpora.Rmd`), whose handoff tags every document with its
+`corpus`. The Python layer then embeds the combined corpus and the new
+`contrast.py` measures, specifically, how the two publications relate:
+
+1. **Combined document atlas** — every article from both periodicals embedded in
+   one sentence-transformer space and laid out in 2D, coloured by publication.
+   *Do the two corpora occupy the same region, or pull apart?* *(Reads
+   `embed_documents.py`.)*
+2. **Embedding-space geometry** — three hard numbers for that picture: centroid
+   distance, an overlap **AUC** (how separable the two are), and **kNN mixing**
+   (how interleaved individual articles are). *(Reads `contrast.py` Part A.)*
+3. **Topic prevalence by publication** — which joint-STM topics each periodical
+   leans on. *(Pure R from the joint `theta`.)*
+4. **Contrastive semantic change of shared terms** — for words both periodicals
+   use ("relief", "woman", "suffrage", "welfare"…), does the *meaning* differ
+   between them? Measured three ways (PRT / APD / JSD) with MacBERTh, grouping by
+   **publication** instead of by time period. *(Reads `contrast.py` Part B.)*
+5. **Framing-drift map** — each shared term's MacBERTh prototype in each corpus,
+   projected to 2D, with a WE→RSM arrow per word. *(Reads `contrast.py` Part B.)*
+6. **BERTopic over both corpora** — a neural topic model clustered on the same
+   embeddings, cross-tabulated against publication. *(Reads `run_bertopic.py`.)*
+
+Three **comparative figures** are layered onto this spine: **keyness** (§5b — the
+words that most distinguish the two periodicals, via weighted log-odds) with a
+**rate-vs-rate scatter** (§5c); a **topic-emphasis difference with confidence
+intervals** (§6c) and a **topic co-occurrence contrast** (§6d, which topics travel
+together differently); and the **sense-mix bars** (§7b) that turn the abstract
+PRT/APD/JSD numbers into "what each shared word *means* in each periodical."
+
+> **The contrastive contextual-embedding approach (sections 4–5) is the frontier
+> piece.** Each occurrence of a shared word is embedded *in its sentence context*
+> in one pretrained historical space (MacBERTh), so the two periodicals' usages
+> are directly comparable with no alignment step. We recover genuine **sense-level**
+> difference — whether "relief" leans charitable-aid vs. organizational in one
+> periodical vs. the other — not just neighbour reshuffling.
+
+---
+
+## How to produce the inputs (read this first)
+
+This notebook reads two families of files:
+
+**A. Handoff from the joint STM model** (`output_linked/<scenario>/`, suffixed by
+K): `advanced_input_K{K}.rds`, `advanced_docs_K{K}.csv` (carries the `corpus` +
+`author` tags), `advanced_theta_K{K}.csv`, `advanced_topics_K{K}.csv`. Produced
+directly by **§27b of `regression_compare_2_corpora.Rmd`** when you knit the joint
+model for the matching `comparison_scenario`. (If you fit on the Linux server, copy
+`comparison_session_K{K}.RData` into `output_linked/<scenario>/` and run
+`scripts/generate_handoff.R {K} {scenario}` instead.)
+
+**B. Python compute artifacts** (`output_advanced_compare/<scenario>/`). From a
+terminal, using the dedicated Python 3.11 venv (NOT system Python). The scripts
+read the scenario from `$env:ADV_SCENARIO` (default `compare_full`):
+
+```text
+$env:ADV_SCENARIO = "compare_full"   # or compare_WE1892-1912_RSM1914-1934
+C:\Users\birch\dh-env\Scripts\python.exe scripts\embed_documents.py 35
+C:\Users\birch\dh-env\Scripts\python.exe scripts\contrast.py        35
+C:\Users\birch\dh-env\Scripts\python.exe scripts\run_bertopic.py    35
+```
+
+The trailing number pins K (use whatever `chosen_K` you fit in the joint model;
+`35` is only an example — set it from the Combined searchK). The `ADV_SCENARIO`
+env var MUST match the report's `comparison_scenario`. `embed_documents.py` is the
+long, checkpointed one;
+`contrast.py` reads its embeddings (Part A) and then runs MacBERTh on shared
+terms (Part B). See `compareadvancedtextanalysis_handover.md` for the full primer.
+
+---
+
+## 1. Packages
+
+```{r install, eval=FALSE}
+install.packages(c(
+  "arrow", "ggrepel", "patchwork", "scales", "uwot", "jsonlite", "DT"
+))
+```
+
+```{r load-packages}
+library(stm)
+library(tidyverse)
+library(scales)
+library(ggrepel)
+library(patchwork)
+library(arrow)
+library(uwot)
+library(jsonlite)
+library(DT)
+
+set.seed(12345)
+cat("Packages loaded.\n")
+```
+
+---
+
+## 2. Paths & K-agnostic model selection
+
+We do **not** hardcode K. The loader discovers the handoff files in
+`output_linked/` and picks the requested K (or the newest). Set `pin_K` to force
+a specific model; leave it `NULL` to auto-pick.
+
+```{r paths}
+base_path    <- "C:/Users/birch/Rachel/GMU/Dissertation/textanalysis/Claudepythonexperimentadvtext_compare"
+
+# Which comparison to report on. MUST match the joint linker's comparison_scenario
+# and the Python ADV_SCENARIO. One joint model (and one K) per scenario.
+comparison_scenario <- "compare_full"   # or "compare_WE1892-1912_RSM1914-1934"
+
+linked_path  <- file.path(base_path, "output_linked",          comparison_scenario)  # joint-STM handoff
+adv_path     <- file.path(base_path, "output_advanced_compare", comparison_scenario)  # Python artifacts
+emb_dir      <- file.path(adv_path, "embeddings")
+bertopic_dir <- file.path(adv_path, "bertopic")
+contrast_dir <- file.path(adv_path, "contrast")
+output_path  <- file.path(adv_path, "report_figures")
+if (!dir.exists(output_path)) dir.create(output_path, recursive = TRUE)
+
+pin_K <- 20   # set to an integer (e.g. 30L) to force a model; NULL auto-picks newest
+
+input_candidates <- list.files(linked_path, pattern = "^advanced_input_K\\d+\\.rds$",
+                               full.names = TRUE)
+if (length(input_candidates) == 0) {
+  stop("No advanced_input_K*.rds in ", linked_path,
+       "\nKnit regression_compare_2_corpora.Rmd through §27b (or run ",
+       "scripts/generate_handoff.R) first.")
+}
+avail_K <- as.integer(str_match(basename(input_candidates), "_K(\\d+)\\.rds$")[, 2])
+
+if (!is.null(pin_K)) {
+  if (!pin_K %in% avail_K) {
+    stop("Requested K=", pin_K, " not found. Available: ",
+         paste(sort(avail_K), collapse = ", "))
+  }
+  K <- pin_K
+} else {
+  # Prefer the newest handoff that ALSO has Python artifacts (doc embeddings), so a
+  # topic-only handoff at a new K (no Python compute yet) can't hijack the
+  # embedding/word/sense sections. Fall back to newest overall.
+  has_emb <- file.exists(file.path(emb_dir, sprintf("doc_emb_K%d.parquet", avail_K)))
+  idx <- if (any(has_emb)) which(has_emb) else seq_along(avail_K)
+  K <- avail_K[idx][which.max(file.mtime(input_candidates[idx]))]
+}
+cat("Using K =", K, "  (artifact K; available:", paste(sort(avail_K), collapse = ", "), ")\n")
+
+# Optional: render ONLY the topic charts (§6/§6b/§6c/§6d) from a DIFFERENT joint-K
+# than the embedding/word/sense artifacts (those are K-independent and only built
+# at the artifact K above). Set once that handoff exists; NULL = use the artifact K.
+topic_K <- NULL   # e.g. 20L to view a coarser topic model in §6–§6d
+
+have <- function(path) {
+  ok <- file.exists(path)
+  if (!ok) cat("  [skip] missing artifact:", basename(path), "\n")
+  ok
+}
+```
+
+---
+
+## 3. Load the joint-STM handoff
+
+The comparison notebook's §27b saved the fitted joint model, the row-aligned
+metadata (`meta`, with each document's `corpus`), the topic labels, and the
+article text. We never re-derive the corpus or guess at row order.
+
+```{r load-handoff}
+adv_in <- readRDS(file.path(linked_path, sprintf("advanced_input_K%d.rds", K)))
+model        <- adv_in$stm_model
+meta         <- adv_in$meta
+topic_labels_manual <- adv_in$topic_labels
+modeled_raw  <- adv_in$modeled_raw
+
+stopifnot(model$settings$dim$K == K,
+          nrow(meta) == nrow(model$theta),
+          length(modeled_raw) == nrow(meta))
+
+vocab <- model$vocab
+theta <- model$theta
+top_words <- labelTopics(model, n = 3)$prob |> apply(1, paste, collapse = " ")
+
+# The manual labels often already read "Topic 7: Genealogy"; strip any leading
+# "Topic <n>:" so we don't end up with "T7: Topic 7: Genealogy" (double topic).
+strip_topic_prefix <- function(x) {
+  str_squish(str_remove(x, "^\\s*Topic\\s*\\d+\\s*[:.\\-]?\\s*"))
+}
+topic_labels <- if (!is.null(topic_labels_manual) &&
+                    length(topic_labels_manual) == K) {
+  paste0("T", seq_len(K), ": ", strip_topic_prefix(topic_labels_manual))
+} else {
+  paste0("T", seq_len(K), ": ", top_words)
+}
+
+docs <- readr::read_csv(file.path(linked_path, sprintf("advanced_docs_K%d.csv", K)),
+                        show_col_types = FALSE)
+stopifnot(nrow(docs) == nrow(theta))
+
+# The publication tag is the spine of every contrast below.
+if (!"corpus" %in% names(docs)) stop("advanced_docs has no 'corpus' column.")
+docs$corpus <- as.character(docs$corpus)
+corpus_levels <- sort(unique(docs$corpus[!is.na(docs$corpus)]))
+pretty_map <- c(Womans_Exponent = "Woman's Exponent",
+                Relief_Society_Magazine = "Relief Society Magazine")
+pretty <- function(x) ifelse(x %in% names(pretty_map), pretty_map[x], x)
+docs$corpus_pretty <- pretty(docs$corpus)
+
+cat("K =", K, " | Documents =", nrow(theta), "\n")
+cat("Corpora:", paste(sprintf("%s (%d)", pretty(corpus_levels),
+                              tabulate(factor(docs$corpus, corpus_levels))),
+                      collapse = "  |  "), "\n")
+cat("Year range:", paste(range(docs$year, na.rm = TRUE), collapse = "-"), "\n")
+```
+
+---
+
+## 4. Combined document atlas (coloured by publication)
+
+Every article from both periodicals, embedded by `all-MiniLM-L6-v2` and laid out
+with UMAP. Where the two colours interleave, the periodicals share vocabulary and
+framing; where they separate, each occupies its own region of meaning-space.
+
+```{r atlas}
+emb_path <- file.path(emb_dir, sprintf("doc_emb_K%d.parquet", K))
+if (have(emb_path)) {
+  emb <- arrow::read_parquet(emb_path) |> arrange(row_index)
+  dims <- grep("^dim_", names(emb), value = TRUE)
+  E <- as.matrix(emb[, dims])
+  E <- E / pmax(sqrt(rowSums(E^2)), 1e-9)
+
+  # uwot's Annoy NN index is written to the R session temp dir; if that dir was
+  # cleaned mid-session it fails with "Unable to open ... (2)" then an fsize-NA error.
+  # Ensure the temp dir exists, and keep the index in-memory (n_threads = 1) to avoid
+  # the disk-mmap path entirely.
+  if (!dir.exists(tempdir())) dir.create(tempdir(), recursive = TRUE)
+  set.seed(12345)
+  um <- uwot::umap(E, n_neighbors = 15, min_dist = 0.1, metric = "cosine", n_threads = 1)
+  atlas <- docs |>
+    filter(row_index %in% emb$row_index) |>
+    arrange(row_index) |>
+    mutate(x = um[, 1], y = um[, 2])
+
+  p_atlas <- ggplot(atlas, aes(x, y, colour = corpus_pretty)) +
+    geom_point(alpha = 0.45, size = 0.9) +
+    scale_colour_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                   "Relief Society Magazine" = "#d95f02"),
+                        na.value = "grey70") +
+    labs(title = "Document atlas — both periodicals in one embedding space  (each dot = one article)",
+         subtitle = "Each point is one article, coloured by periodical; nearby points = semantically similar (all-MiniLM-L6-v2 + UMAP)",
+         colour = "Publication", x = "UMAP 1", y = "UMAP 2") +
+    theme_minimal() +
+    guides(colour = guide_legend(override.aes = list(alpha = 1, size = 2)))
+
+  ggsave(file.path(output_path, "01_atlas_by_publication.png"),
+         p_atlas, width = 11, height = 8, dpi = 120)
+  print(p_atlas)
+  cat("Saved 01_atlas_by_publication.png\n")
+} else {
+  cat("Run: python scripts\\embed_documents.py", K, "\n")
+}
+```
+
+---
+
+## 5. Embedding-space geometry (centroid distance, overlap AUC, kNN mixing)
+
+`contrast.py` Part A reduces the atlas to three numbers:
+
+- **Centroid distance** `1 - cos(mean_WE, mean_RSM)` — how far apart the two
+  corpora sit on average.
+- **Overlap AUC** — a logistic classifier's cross-validated ability to tell the
+  publications apart from a document's embedding. **0.5 = indistinguishable**
+  (total overlap); **1.0 = perfectly separable** (no overlap).
+- **kNN mixing** — for each article, the fraction of its nearest neighbours in the
+  *other* corpus. ~0.5 = fully interleaved; ~0 = each corpus keeps to itself.
+
+```{r geometry}
+ov_path  <- file.path(contrast_dir, sprintf("embedding_overlap_K%d.csv", K))
+knn_path <- file.path(contrast_dir, sprintf("knn_mixing_K%d.csv", K))
+if (have(ov_path)) {
+  ov <- readr::read_csv(ov_path, show_col_types = FALSE)
+  cat("Centroid distance:", round(ov$centroid_dist, 4), "\n")
+  cat("Overlap AUC:      ", round(ov$overlap_auc, 3),
+      " (0.5 = identical, 1.0 = fully separable)\n")
+  cat(sprintf("kNN mixing:        %s = %.2f | %s = %.2f  (share of neighbours in other corpus)\n",
+              pretty(ov$corpus_a), ov$knn_mixing_a,
+              pretty(ov$corpus_b), ov$knn_mixing_b))
+  knitr::kable(ov |> mutate(corpus_a = pretty(corpus_a), corpus_b = pretty(corpus_b)),
+               digits = 3)
+}
+# The per-article kNN histogram was hard to read; show the three Part-A numbers as
+# a three-row panel, each on its own scale with plain-language endpoints. The rows
+# read from different ends: high AUC, low centroid, low mixing all mean "separated".
+if (exists("ov")) {
+  knn_mean <- mean(c(ov$knn_mixing_a, ov$knn_mixing_b))
+  gauge_df <- tibble(
+    metric = factor(c("Overlap AUC  (classifier)",
+                      "Centroid distance  (average meaning)",
+                      "Neighbour mixing  (article-level)"),
+                    levels = c("Overlap AUC  (classifier)",
+                               "Centroid distance  (average meaning)",
+                               "Neighbour mixing  (article-level)")),
+    value     = c(ov$overlap_auc, ov$centroid_dist, knn_mean),
+    lo        = c(0.5, 0, 0),
+    hi        = c(1, 0.5, 0.5),
+    left_lab  = c("can't tell apart", "same average meaning", "each keeps to its own"),
+    right_lab = c("tells apart every time", "very different average", "fully mixed together"))
+
+  p_sep <- ggplot(gauge_df, aes(value, 1)) +
+    geom_segment(aes(x = lo, xend = value, yend = 1),
+                 linewidth = 7, colour = "#7570b3", lineend = "round") +
+    geom_point(size = 5, colour = "grey20") +
+    geom_text(aes(x = lo, label = left_lab),  y = 1.75, hjust = 0, size = 3, colour = "grey35") +
+    geom_text(aes(x = hi, label = right_lab), y = 1.75, hjust = 1, size = 3, colour = "grey35") +
+    geom_text(aes(x = value, label = sprintf("%.2f", value)), y = 0.35, size = 3.3, colour = "grey20") +
+    facet_wrap(~ metric, ncol = 1, scales = "free_x") +
+    scale_y_continuous(limits = c(0, 2.2)) +
+    labs(title = "How separable are the two periodicals in embedding space?",
+         subtitle = sprintf("Three views of the atlas; neighbour mixing is the mean of %s %.0f%% / %s %.0f%%.",
+                            pretty(ov$corpus_a), 100 * ov$knn_mixing_a,
+                            pretty(ov$corpus_b), 100 * ov$knn_mixing_b),
+         x = NULL, y = NULL) +
+    theme_minimal() +
+    theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+          panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(),
+          strip.text = element_text(face = "bold", hjust = 0))
+  ggsave(file.path(output_path, "02_separability_gauge.png"), p_sep,
+         width = 10, height = 5, dpi = 120)
+  print(p_sep)
+  cat("Saved 02_separability_gauge.png\n") } else {  cat("Run: python scripts\\contrast.py", K, "  (writes embedding_overlap)\n")
+}
+```
+
+---
+
+## 5b. Distinctive vocabulary — keyness ("fightin' words")
+
+Which *words* most distinguish the two periodicals. We score every modelled term
+with the **weighted log-odds-ratio with an informative Dirichlet prior** (Monroe,
+Colaresi & Quinn 2008): the z-score grows with how lopsided a word's usage is
+**and** how much evidence backs it, so rare-word noise is shrunk automatically.
+Words with `|z| > 1.96` are reliably distinctive of one publication. This reads
+far more directly than the neighbourhood-mixing histogram it replaces — it names
+the vocabulary that separates the corpora. Pure R from the article text.
+
+```{r keyness, fig.height=8}
+if (length(corpus_levels) != 2) {
+  cat("Keyness needs exactly two corpora; found:", paste(corpus_levels, collapse=", "), "\n")
+} else {  A <- corpus_levels[1]; B <- corpus_levels[2]   # alphabetical; oriented by pretty()
+
+  # Function-word stoplist (content nouns like "relief"/"suffrage" stay — they ARE
+  # the contrast). The +1 prior and a min-count floor further tame OCR noise.
+  stop_fn <- c("the","of","and","to","a","in","that","is","was","for","it","with",
+    "as","his","on","be","at","by","this","had","not","are","but","from","or",
+    "have","an","they","which","one","you","were","her","all","she","there",
+    "would","we","him","been","has","when","who","will","more","no","if","out",
+    "so","said","what","up","its","into","than","them","can","only","some",
+    "could","two","may","then","do","any","my","now","such","like","our","over",
+    "me","even","most","made","after","also","did","before","must","through",
+    "back","where","much","your","way","well","down","should","because","each",
+    "just","those","how","too","very","see","being","here","between","both",
+    "under","never","same","another","know","while","last","might","us","off",
+    "come","since","against","go","came","right","used","take","few","during",
+    "without","again","place","around","however","say","part","once","every",
+    "does","got","left","though","less","almost","far","took","yet","set","end",
+    "why","find","look","later","point","next","ever","least","given","upon",
+    "shall","unto","thee","thy","thou","let","per","their","ing","con")
+
+  # Light lemmatiser: collapse morphological variants to one display root and
+  # mark collapsed roots with "*" (woman*, sister*) so sister/sisters etc. don't
+  # both occupy a slot. Mirrors `_norm()` in scripts/contrast.py.
+  irregular <- c(women = "woman", men = "man", children = "child", wives = "wife",
+                 lives = "life", leaves = "leaf", feet = "foot", teeth = "tooth",
+                 people = "person", brethren = "brother")
+  normalize_token <- function(w) {
+    ir <- unname(irregular[w])
+    dplyr::case_when(
+      !is.na(ir)                                              ~ ir,
+      str_length(w) > 4 & str_detect(w, "ies$")              ~ str_replace(w, "ies$", "y"),
+      str_detect(w, "(ss|ch|sh|x|z|s)es$")                   ~ str_replace(w, "es$", ""),
+      str_length(w) > 3 & str_detect(w, "s$") & !str_detect(w, "ss$") ~ str_replace(w, "s$", ""),
+      TRUE                                                    ~ w)
+  }
+
+  # Tokenise once; keep the FULL list (toks_all) so §5e can score the function
+  # words we drop here. Content keyness works on the non-stop subset.
+  toks_all <- tibble(corpus = docs$corpus,
+                     text   = str_to_lower(tidyr::replace_na(modeled_raw, ""))) |>
+    mutate(w = str_extract_all(text, "[a-z]{3,}")) |>
+    select(corpus, w) |>
+    tidyr::unnest(w)
+  toks <- toks_all |> filter(!w %in% stop_fn)
+
+  # Restrict to STM vocab (drops OCR junk) BEFORE normalising, then fold variants.
+  inv <- toks$w %in% vocab
+  if (mean(inv) > 0.25) toks <- toks[inv, ]
+  toks <- toks |> mutate(key = normalize_token(w))
+
+  # Star a root when it aggregates >1 surface form (or is a plural-only form).
+  disp_map <- toks |> distinct(key, w) |>
+    group_by(key) |>
+    summarise(label = paste0(key[1],
+              ifelse(n_distinct(w) > 1 || !(key[1] %in% w), "*", "")), .groups = "drop")
+
+  wide <- toks |>
+    count(corpus, key, name = "n") |>
+    pivot_wider(names_from = corpus, values_from = n, values_fill = 0) |>
+    filter(.data[[A]] + .data[[B]] >= 10) |>
+    left_join(disp_map, by = "key")
+
+  yA <- wide[[A]]; yB <- wide[[B]]
+  nA <- sum(yA); nB <- sum(yB); V <- nrow(wide)
+  fA <- yA + 1; fB <- yB + 1
+  log_odds <- log(fA / (nA + V - fA)) - log(fB / (nB + V - fB))
+  key <- wide |>
+    mutate(log_odds = log_odds, z = log_odds / sqrt(1 / fA + 1 / fB))
+
+  top_key <- bind_rows(
+    key |> slice_max(z, n = 20) |> mutate(side = pretty(A)),
+    key |> slice_min(z, n = 20) |> mutate(side = pretty(B))
+  ) |> mutate(label = fct_reorder(label, z))
+
+  p_key <- ggplot(top_key, aes(z, label, fill = side)) +
+    geom_col() +
+    scale_fill_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                 "Relief Society Magazine" = "#d95f02")) +
+    labs(title = "Most distinctive words by publication (weighted log-odds)",
+         subtitle = "Monroe et al. (2008) z-scored log-odds with a Dirichlet prior; |z| > 1.96 = reliably distinctive",
+         x = sprintf("← %s        z-score        %s →", pretty(B), pretty(A)),
+         y = NULL, fill = "Distinctive of") +
+    theme_minimal()
+  ggsave(file.path(output_path, "07_keyness.png"), p_key,
+         width = 11, height = 8, dpi = 120)
+  print(p_key)
+  cat("Saved 07_keyness.png\n")
+}
+```
+
+---
+
+## 5c. Vocabulary scatter (rate vs. rate)
+
+The same counts as a scatter: each word's relative frequency in one periodical
+against the other (log–log). Words on the dashed diagonal are used equally; words
+far off it are characteristic of whichever periodical they lean toward. **Each
+point is a single word** (not a topic). The most distinctive terms (coloured, by
+the §5b z-score) and a few frequent balanced words (grey italic) are labelled, so
+both the contrast and the shared diagonal are anchored.
+
+```{r vocab-scatter, fig.height=8}
+if (exists("key")) {
+  total_A <- sum(key[[A]]); total_B <- sum(key[[B]])
+  scat <- key |>
+    mutate(rate_A = (.data[[A]] + 0.5) / total_A,
+           rate_B = (.data[[B]] + 0.5) / total_B,
+           total  = .data[[A]] + .data[[B]],
+           lean   = log2(rate_A / rate_B))
+  lab <- bind_rows(slice_max(key, z, n = 18), slice_min(key, z, n = 18)) |>
+    distinct(label) |>
+    left_join(scat, by = "label")
+  # a few frequent, balanced words to anchor the "used equally" diagonal
+  lab_shared <- scat |> filter(abs(lean) < 0.15) |> slice_max(total, n = 6)
+
+  p_scat <- ggplot(scat, aes(rate_A, rate_B)) +
+    geom_point(aes(colour = z), alpha = 0.4, size = 0.9) +
+    geom_abline(slope = 1, intercept = 0, linetype = "dashed", colour = "grey55") +
+    ggrepel::geom_text_repel(data = lab, aes(label = label, colour = z),
+                             size = 3, max.overlaps = 30, show.legend = FALSE) +
+    ggrepel::geom_text_repel(data = lab_shared, aes(label = label),
+                             colour = "grey25", fontface = "italic",
+                             size = 3, max.overlaps = 30) +
+    scale_x_log10(labels = scales::label_number()) +
+    scale_y_log10(labels = scales::label_number()) +
+    scale_colour_gradient2(low = "#1b9e77", mid = "grey75", high = "#d95f02",
+                           midpoint = 0,
+                           name = sprintf("z  (+ = %s,\n− = %s)", pretty(A), pretty(B))) +
+    labs(title = "Which words each periodical uses more  (each dot = one word)",
+         subtitle = "Each point is a word; on the dashed line = used at the same rate in both, off-diagonal = favoured by one periodical (grey italic = balanced anchors)",
+         x = sprintf("How often %s uses the word  (per-word rate, log scale)", pretty(A)),
+         y = sprintf("How often %s uses the word  (per-word rate, log scale)", pretty(B))) +
+    theme_minimal()
+  ggsave(file.path(output_path, "08_vocab_scatter.png"), p_scat,
+         width = 10, height = 8, dpi = 120)
+  print(p_scat)
+  cat("Saved 08_vocab_scatter.png\n") } else {  cat("Keyness table not built (see §5b) — scatter skipped.\n")
+}
+```
+
+---
+
+## 5d. Shared register & the frequency–specificity map
+
+§5b finds what *separates* the periodicals; this finds what they **share** — and,
+more importantly, gives a principled way to spot "words like woman/man" without a
+hand list. Every content word has two coordinates: **frequency** (how common) and
+**specificity** — how lopsidedly it splits between the corpora, as a `|log2
+rate-ratio|` (an **effect size**; we deliberately avoid the §5b z-score, which at
+37k documents is inflated by sample size and flags almost everything). The
+high-frequency, low-specificity corner is the **shared register** — the common
+ground both periodicals lean on (the "floater" class at corpus scale). Words are
+never *excluded* for being frequent; the only removal is the function-word
+stoplist (the, of, and…), and the table below shows the frequent **content** words
+are all retained and measured. Pure R from the §5b keyness table.
+
+```{r shared-register, fig.height=8}
+if (exists("key")) {
+  reg <- key |>
+    mutate(total  = .data[[A]] + .data[[B]],
+           rate_A = (.data[[A]] + 0.5) / sum(.data[[A]]),
+           rate_B = (.data[[B]] + 0.5) / sum(.data[[B]]),
+           lean   = log2(rate_A / rate_B),     # + leans A, − leans B
+           specificity = abs(lean))            # |log2 fold-change| — sample-size-free
+
+  # focus the map on reasonably common words (drop the long rare tail)
+  reg_map <- reg |> filter(total >= quantile(total, 0.5))
+  # label the frequent, balanced words (the shared register / floater class)
+  lab_reg <- reg_map |> slice_max(total, n = 60) |> slice_min(specificity, n = 20)
+
+  p_reg <- ggplot(reg_map, aes(total, specificity)) +
+    geom_point(aes(colour = lean), alpha = 0.4, size = 0.8) +
+    geom_hline(yintercept = log2(1.5), linetype = "dotted", colour = "grey55") +
+    ggrepel::geom_text_repel(data = lab_reg, aes(label = label), size = 3, max.overlaps = 25) +
+    scale_x_log10(labels = label_number()) +
+    scale_colour_gradient2(low = "#1b9e77", mid = "grey70", high = "#d95f02", midpoint = 0,
+                           name = sprintf("leans\n(+%s / −%s)", pretty(A), pretty(B))) +
+    labs(title = "Frequency × specificity map",
+         subtitle = "Low on y = shared register (similar rates in both); above the dotted line (>1.5×) = leans to one periodical",
+         x = "Total occurrences (log scale)", y = "Specificity  |log2 rate ratio|") +
+    theme_minimal()
+  ggsave(file.path(output_path, "12_shared_register.png"), p_reg,
+         width = 11, height = 8, dpi = 120)
+  print(p_reg)
+
+  cat("\nMost frequent words used at SIMILAR rates in both — the shared register",
+      "(the woman/man 'floater' class at corpus scale). Nothing is excluded for",
+      "being frequent; only function words are stoplisted, by design:\n")
+  knitr::kable(reg_map |> slice_max(total, n = 60) |> slice_min(specificity, n = 18) |>
+                 arrange(desc(total)) |>
+                 transmute(Word = label, Total = total,
+                           `|log2 ratio|` = round(specificity, 2),
+                           `Slightly leans` = ifelse(lean > 0, pretty(A), pretty(B))))
+  cat("Saved 12_shared_register.png\n")
+} else {
+  cat("Keyness table not built (see §5b) — shared register skipped.\n")
+}
+```
+
+---
+
+## 5e. Register & era contrast (function words)
+
+§5b drops function words to isolate *content*; this section does the opposite, on
+purpose — but only for the **register-bearing** ones: personal/possessive
+**pronouns**, **modals**, **stance & discourse connectives**, and
+**archaic/devotional forms**. Their differential use is a **style-and-era
+fingerprint**: the Exponent leans formal, collective, impersonal (`upon`, `our`,
+`their`, `those`, `unto`), the Magazine personal and conversational (`you`,
+`your`, `she`, `him`, `because`) — 19th-century periodical prose vs a later, more
+intimate magazine voice. **Pure glue** (`the`, `and`, `of`, `to`, `for`…) is
+*excluded* here: a tiny rate gap on an ultra-common word is noise, not voice. This
+is the stylistic mirror of §5b — words that separate the periodicals by *voice*
+rather than *subject*.
+
+```{r register-era, fig.height=8}
+if (exists("toks_all") && length(corpus_levels) == 2) {
+  A <- corpus_levels[1]; B <- corpus_levels[2]
+
+  # Register-bearing function words only — pronouns, modals, stance/discourse
+  # connectives, archaic/devotional forms. Pure glue (the/and/of/to/for…) excluded:
+  # a tiny rate gap on an ultra-common word is noise, not voice.
+  register_words <- c(
+    # personal & possessive pronouns (2-letter forms aren't tokenised by [a-z]{3,})
+    "you","your","yours","our","ours","her","hers","his","him","she","they",
+    "them","their","theirs","its","mine","myself","ourselves","yourself",
+    "himself","herself","themselves",
+    # demonstratives
+    "this","that","these","those","such",
+    # modals / auxiliaries
+    "shall","should","will","would","can","could","may","might","must","ought","cannot",
+    # stance & discourse connectives
+    "because","though","although","yet","however","indeed","therefore","thus",
+    "hence","whereas","while","whilst","nevertheless","moreover","perhaps",
+    "surely","truly","verily","otherwise","besides","meanwhile","else",
+    # negation / stance adverbs
+    "not","never","very","rather","quite","merely","almost",
+    # archaic / formal / devotional register
+    "thee","thou","thy","thine","unto","upon","hath","doth","shalt","wert",
+    "amongst","betwixt","hither","thither","whence","thence",
+    "henceforth","herein","hereby","thereof","therein","wherein","whereof")
+
+  fw <- toks_all |>
+    filter(w %in% register_words) |>
+    count(corpus, w, name = "n") |>
+    pivot_wider(names_from = corpus, values_from = n, values_fill = 0) |>
+    filter(.data[[A]] + .data[[B]] >= 20)
+
+  yA <- fw[[A]]; yB <- fw[[B]]
+  nA <- sum(yA); nB <- sum(yB); V <- nrow(fw)
+  fA <- yA + 1; fB <- yB + 1
+  fw <- fw |>
+    mutate(log_odds = log(fA / (nA + V - fA)) - log(fB / (nB + V - fB)),
+           z = log_odds / sqrt(1 / fA + 1 / fB))
+
+  top_fw <- bind_rows(slice_max(fw, z, n = 16), slice_min(fw, z, n = 16)) |>
+    distinct(w, .keep_all = TRUE) |>
+    mutate(side = ifelse(z > 0, pretty(A), pretty(B)),
+           w = fct_reorder(w, z))
+
+  p_fw <- ggplot(top_fw, aes(z, w, fill = side)) +
+    geom_col() +
+    scale_fill_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                 "Relief Society Magazine" = "#d95f02")) +
+    labs(title = "Register & era contrast — voice words",
+         subtitle = "Register-bearing function words (pronouns, modals, stance & archaic forms) by keyness; voice/era, not topic",
+         x = sprintf("← %s        z-score        %s →", pretty(B), pretty(A)),
+         y = NULL, fill = "Favoured by") +
+    theme_minimal()
+  ggsave(file.path(output_path, "13_register_era_contrast.png"), p_fw,
+         width = 11, height = 8, dpi = 120)
+  print(p_fw)
+  cat("Saved 13_register_era_contrast.png\n")
+} else {
+  cat("Token list not built (see §5b) — register/era contrast skipped.\n")
+}
+```
+
+---
+
+## 5f. Optional: topic charts at a different K
+
+The four topic charts below (§6–§6d) are the **only** sections that depend on the
+joint-STM K — the atlas, separability, keyness, scatter, register, sense-mix, and
+drift are all K-independent. So if you've fit the joint model at a second K (e.g.
+`chosen_K <- 20L` in the linker, which writes `advanced_input_K20.rds` **alongside**
+the K35 files), set `topic_K <- 20L` in §2 to render §6–§6d from that coarser model
+**without re-running any Python** — the embedding/word sections keep using the
+artifact-K compute. This chunk swaps the topic model in; §6e swaps it back out.
+
+```{r topic-k-override}
+topic_override_active <- FALSE
+if (!is.null(topic_K) && topic_K != K) {
+  tk_path <- file.path(linked_path, sprintf("advanced_input_K%d.rds", topic_K))
+  if (file.exists(tk_path)) {
+    .art <- list(K = K, theta = theta, topic_labels = topic_labels,
+                 docs = docs, modeled_raw = modeled_raw)   # stash artifact-K objects
+    ti  <- readRDS(tk_path)
+    mdl <- ti$stm_model
+    dt  <- readr::read_csv(file.path(linked_path, sprintf("advanced_docs_K%d.csv", topic_K)),
+                           show_col_types = FALSE)
+    dt$corpus <- as.character(dt$corpus)
+    dt$corpus_pretty <- pretty(dt$corpus)
+    stopifnot(nrow(dt) == nrow(mdl$theta), length(ti$modeled_raw) == nrow(mdl$theta))
+    tw  <- labelTopics(mdl, n = 3)$prob |> apply(1, paste, collapse = " ")
+    tlm <- ti$topic_labels
+    # Override the names the topic chunks use; §6e restores them afterwards.
+    K            <- topic_K
+    theta        <- mdl$theta
+    topic_labels <- if (!is.null(tlm) && length(tlm) == topic_K)
+                      paste0("T", seq_len(topic_K), ": ", strip_topic_prefix(tlm)) else
+                      paste0("T", seq_len(topic_K), ": ", tw)
+    docs         <- dt
+    modeled_raw  <- ti$modeled_raw
+    topic_override_active <- TRUE
+    cat(sprintf("Topic charts (§6–§6d) use joint K = %d; embedding/word/sense sections stay at artifact K = %d.\n",
+                topic_K, .art$K))
+  } else {
+    cat(sprintf("topic_K = %d requested but %s not found — topic charts use K = %d.\n",
+                topic_K, basename(tk_path), K))
+  }
+}
+```
+
+---
+
+## 6. Topic prevalence by publication
+
+Which joint-STM topics each periodical leans on. Pure R from `theta` and the
+`corpus` tag — always available once the handoff loads.
+
+```{r topic-prevalence, fig.height=9}
+theta_df <- as_tibble(theta)
+names(theta_df) <- paste0("Topic", seq_len(K))
+theta_df$corpus <- docs$corpus
+
+prev <- theta_df |>
+  pivot_longer(starts_with("Topic"), names_to = "topic", values_to = "p") |>
+  mutate(topic_num = as.integer(str_remove(topic, "Topic"))) |>
+  group_by(corpus, topic_num) |>
+  summarise(mean_p = mean(p), .groups = "drop") |>
+  mutate(corpus_pretty = pretty(corpus),
+         label = topic_labels[topic_num])
+
+# order topics by the WE-RSM difference for readability
+diff_order <- prev |>
+  select(topic_num, corpus_pretty, mean_p) |>
+  pivot_wider(names_from = corpus_pretty, values_from = mean_p)
+diff_col <- setdiff(names(diff_order), "topic_num")
+if (length(diff_col) == 2) {
+  diff_order <- diff_order |>
+    mutate(d = .data[[diff_col[1]]] - .data[[diff_col[2]]]) |>
+    arrange(d)
+  prev$label <- factor(prev$label, levels = topic_labels[diff_order$topic_num])
+}
+
+p_prev <- ggplot(prev, aes(mean_p, label, colour = corpus_pretty)) +
+  geom_line(aes(group = label), colour = "grey75") +
+  geom_point(size = 2.4) +
+  scale_x_continuous(labels = percent) +
+  scale_colour_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                 "Relief Society Magazine" = "#d95f02")) +
+  labs(title = "Topic prevalence by publication",
+       subtitle = "Mean document-topic proportion; line links the two periodicals per topic",
+       x = "Mean prevalence", y = NULL, colour = "Publication") +
+  theme_minimal()
+ggsave(file.path(output_path, "03_topic_prevalence_by_publication.png"),
+       p_prev, width = 11, height = 10, dpi = 120)
+print(p_prev)
+cat("Saved 03_topic_prevalence_by_publication.png\n")
+```
+
+---
+
+## 6b. Author topic profiles by publication (faceted "Chart 5")
+
+For each periodical's most prolific **named** authors (>= 10 substantial
+articles), the mean joint-STM topic mix of their articles. Because both corpora
+share the **same** joint topic space, the stacked bars use one common legend, so
+the two facets are directly comparable — *what each author writes about, and how
+the typical Exponent author's mix differs from the typical Magazine author's.*
+This is the cross-corpus, faceted counterpart to the per-corpus author profiles
+in each single-corpus report (RSM §12). Pure R from `theta`, `docs$author`, and
+the `corpus` tag — available as soon as the joint handoff loads.
+
+```{r author-profiles-compare, fig.height=11}
+# Author column may be lower- or upper-case depending on the handoff writer.
+.author <- if ("author" %in% names(docs)) docs$author else if ("Author" %in% names(docs)) docs$Author else NA_character_
+
+# Exclude non-author bylines (same rule as the single-corpus reports).
+author_blocklist <- c("unknown", "editor", "the editor", "selected", "anonymous")
+org_keywords <- paste0("exponent|magazine|publisher|office|ticket|company|\\bco\\b|",
+                       "union|depot|emporium|store|bureau|society|association|department|board")
+is_real_author <- function(a) {
+  s  <- str_squish(a)
+  al <- str_replace_all(str_to_lower(s), "[’‘']", "'")
+  has_surname <- str_detect(s, "[A-Za-z]{3,}")
+  !is.na(a) & s != "" & !str_starts(s, "\\[") & !str_ends(s, ",") &
+    !(al %in% author_blocklist) & !str_detect(al, org_keywords) & has_surname
+}
+
+if (all(is.na(.author))) {
+  cat("No author column in the joint handoff — re-run the joint linker so",
+      "advanced_docs carries 'author', then this chart fills in.\n")
+} else {
+  # pos = the theta row index (docs is row-aligned to theta positionally, as in §6).
+  prof_tbl <- docs |>
+    mutate(pos = row_number(),
+           text = modeled_raw,
+           n_words = str_count(text, "\\S+"),
+           author_clean = str_squish(.author)) |>
+    filter(is_real_author(author_clean), n_words >= 150)
+
+  # Most prolific named authors PER publication (top 8 each, for legible facets).
+  top_by_corpus <- prof_tbl |>
+    count(corpus_pretty, author_clean, name = "n_articles") |>
+    filter(n_articles >= 10) |>
+    group_by(corpus_pretty) |>
+    slice_max(n_articles, n = 8, with_ties = FALSE) |>
+    ungroup()
+
+  if (nrow(top_by_corpus) == 0) {
+    cat("No author with >= 10 substantial articles in either corpus after filtering.\n")
+  } else {
+    prof <- purrr::pmap_dfr(top_by_corpus, function(corpus_pretty, author_clean, n_articles) {
+      rows <- prof_tbl$pos[prof_tbl$author_clean == author_clean &
+                           prof_tbl$corpus_pretty == corpus_pretty]
+      tibble(corpus_pretty = corpus_pretty, author = author_clean,
+             n_articles = n_articles,
+             topic = factor(topic_labels, levels = topic_labels),
+             prop  = colMeans(theta[rows, , drop = FALSE]))
+    })
+
+    # Order authors within each facet by article count (free_y shows each its own).
+    lev <- prof |> distinct(corpus_pretty, author, n_articles) |>
+      arrange(corpus_pretty, n_articles) |> distinct(author, .keep_all = TRUE) |>
+      pull(author)
+    prof$author <- factor(prof$author, levels = lev)
+
+    p_authcmp <- ggplot(prof, aes(prop, author, fill = topic)) +
+      geom_col(width = 0.85) +
+      facet_wrap(~ corpus_pretty, scales = "free_y", ncol = 1) +
+      scale_x_continuous(labels = percent, expand = expansion(mult = c(0, 0.02))) +
+      scale_fill_viridis_d(option = "turbo") +
+      labs(title = "Author topic profiles by publication",
+           subtitle = paste0("Mean joint-STM topic mix per prolific named author ",
+                             "(>= 10 articles); shared topic space, one legend"),
+           x = "Mean topic proportion", y = NULL, fill = "Joint topic") +
+      theme_minimal(base_size = 11) +
+      theme(plot.title = element_text(face = "bold"),
+            strip.text = element_text(face = "bold"),
+            legend.text = element_text(size = 7),
+            legend.key.size = unit(0.4, "cm"))
+    ggsave(file.path(output_path, "03b_author_topic_profiles_by_publication.png"),
+           p_authcmp, width = 13, height = 11, dpi = 120)
+    print(p_authcmp)
+
+    # Each author's single dominant joint topic.
+    prof |> group_by(corpus_pretty, author, n_articles) |>
+      slice_max(prop, n = 1, with_ties = FALSE) |> ungroup() |>
+      transmute(Publication = corpus_pretty, Author = author, Articles = n_articles,
+                `Top joint topic` = as.character(topic),
+                Share = percent(prop, 0.1)) |>
+      arrange(Publication, desc(Articles)) |> print(n = Inf)
+    cat("Saved 03b_author_topic_profiles_by_publication.png\n")
+  }
+}
+```
+
+---
+
+## 6c. Topic emphasis — difference with confidence intervals
+
+The §6 dumbbell shows *where* each periodical sits but carries no uncertainty. Here
+we test it: for every joint topic, the difference in **mean document-topic
+proportion** between the two publications, with a 95% CI (Welch test over the
+per-article proportions) and a Benjamini-Hochberg significance flag. Now you can
+say which gaps are *real*, not just rank them. Pure R from `theta` + `corpus`.
+
+```{r topic-diff-ci, fig.height=9}
+if (length(corpus_levels) != 2) {
+  cat("Topic-difference test needs exactly two corpora.\n")
+} else {
+  A <- corpus_levels[1]; B <- corpus_levels[2]
+  iA <- which(docs$corpus == A); iB <- which(docs$corpus == B)
+
+  diffs <- purrr::map_dfr(seq_len(K), function(k) {
+    tt <- t.test(theta[iA, k], theta[iB, k])
+    tibble(topic_num = k,
+           diff = unname(tt$estimate[1] - tt$estimate[2]),  # mean_A − mean_B
+           lo = tt$conf.int[1], hi = tt$conf.int[2], p = tt$p.value)
+  }) |>
+    mutate(p_adj  = p.adjust(p, "BH"),
+           sig    = p_adj < 0.05,
+           higher = ifelse(diff > 0, pretty(A), pretty(B)),
+           label  = topic_labels[topic_num]) |>
+    arrange(diff) |>
+    mutate(label = factor(label, levels = label))
+
+  p_diff <- ggplot(diffs, aes(diff, label, colour = higher)) +
+    geom_vline(xintercept = 0, colour = "grey50") +
+    geom_errorbarh(aes(xmin = lo, xmax = hi), height = 0, linewidth = 0.6, alpha = 0.8) +
+    geom_point(aes(alpha = sig), size = 2.6) +
+    scale_alpha_manual(values = c(`TRUE` = 1, `FALSE` = 0.3), guide = "none") +
+    scale_colour_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                   "Relief Society Magazine" = "#d95f02")) +
+    scale_x_continuous(labels = percent) +
+    labs(title = "Which topics each periodical emphasises",
+         subtitle = sprintf("Difference in mean prevalence (%s − %s) with 95%% CIs; faded = not significant (BH-adjusted)",
+                            pretty(A), pretty(B)),
+         x = sprintf("Mean prevalence difference  (%s − %s)", pretty(A), pretty(B)),
+         y = NULL, colour = "Higher in") +
+    theme_minimal()
+  ggsave(file.path(output_path, "09_topic_diff_ci.png"), p_diff,
+         width = 11, height = 10, dpi = 120)
+  print(p_diff)
+  cat("Saved 09_topic_diff_ci.png\n")
+}
+```
+
+---
+
+## 6d. Topic co-occurrence contrast
+
+Prevalence asks *how much* each topic appears; this asks how topics **travel
+together** — and whether that structure differs by periodical. Within each corpus
+we correlate the topic proportions across articles, then surface the topic *pairs*
+whose co-occurrence differs most between the two. A pair that bonds in one
+periodical but not the other signals a different editorial logic (e.g. "Genealogy"
+riding with "Relief Society organisation" in one but not the other). Pure R.
+
+```{r topic-cooc, fig.height=8}
+if (length(corpus_levels) != 2) {
+  cat("Co-occurrence contrast needs exactly two corpora.\n")
+} else {
+  A <- corpus_levels[1]; B <- corpus_levels[2]
+  cA <- cor(theta[docs$corpus == A, , drop = FALSE])
+  cB <- cor(theta[docs$corpus == B, , drop = FALSE])
+  ut <- upper.tri(cA)
+  pr <- which(ut, arr.ind = TRUE)
+  cooc <- tibble(i = pr[, 1], j = pr[, 2],
+                 cor_A = cA[ut], cor_B = cB[ut]) |>
+    mutate(d = cor_A - cor_B,
+           pair = paste(topic_labels[i], "×", topic_labels[j])) |>
+    filter(!is.na(d)) |>
+    slice_max(abs(d), n = 18) |>
+    mutate(pair = fct_reorder(pair, d))
+
+  cooc_long <- cooc |>
+    select(pair, cor_A, cor_B) |>
+    pivot_longer(c(cor_A, cor_B), names_to = "which", values_to = "cor") |>
+    mutate(corpus_pretty = ifelse(which == "cor_A", pretty(A), pretty(B)))
+
+  p_cooc <- ggplot(cooc_long, aes(cor, pair)) +
+    geom_line(aes(group = pair), colour = "grey75") +
+    geom_point(aes(colour = corpus_pretty), size = 2.6) +
+    geom_vline(xintercept = 0, linetype = "dotted", colour = "grey55") +
+    scale_colour_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                   "Relief Society Magazine" = "#d95f02")) +
+    labs(title = "Topic pairs that co-occur differently across the periodicals",
+         subtitle = "Within-corpus correlation of topic proportions; the 18 pairs with the largest gap",
+         x = "Correlation between the two topics' prevalence", y = NULL,
+         colour = "Publication") +
+    theme_minimal() +
+    theme(axis.text.y = element_text(size = 8))
+  ggsave(file.path(output_path, "10_topic_cooccurrence.png"), p_cooc,
+         width = 12, height = 8, dpi = 120)
+  print(p_cooc)
+  cat("Saved 10_topic_cooccurrence.png\n")
+}
+```
+
+---
+
+## 6e. Restore the artifact-K model
+
+Swaps the artifact-K objects back in (no-op unless §5f overrode them), so the
+embedding/word/sense sections below use the K whose Python compute exists.
+
+```{r topic-k-restore}
+if (exists("topic_override_active") && isTRUE(topic_override_active)) {
+  K            <- .art$K
+  theta        <- .art$theta
+  topic_labels <- .art$topic_labels
+  docs         <- .art$docs
+  modeled_raw  <- .art$modeled_raw
+  cat(sprintf("Restored artifact K = %d for the embedding/word/sense sections.\n", K))
+}
+```
+
+---
+
+## 7. Contrastive semantic change of shared terms
+
+For each shared target word, `contrast.py` Part B embeds every occurrence in
+context with MacBERTh, separately in each periodical, and compares them:
+
+- **PRT** — distance between the two corpora's prototype (mean) vectors: coarse
+  framing drift.
+- **APD** — average cross-corpus pairwise distance: spread-sensitive.
+- **JSD** — Jensen-Shannon divergence between the two corpora's *sense mixes*
+  (induced by clustering all occurrences): does the **mix of senses** differ?
+
+Bigger = the word is used more differently across the two periodicals.
+
+```{r term-contrast}
+tc_path <- file.path(contrast_dir, sprintf("term_contrast_K%d.csv", K))
+if (have(tc_path)) {
+  tc <- readr::read_csv(tc_path, show_col_types = FALSE)
+  if (nrow(tc)) {
+    tc_long <- tc |>
+      select(word, PRT = prt, APD = apd, JSD = jsd) |>
+      pivot_longer(c(PRT, APD, JSD), names_to = "measure", values_to = "value") |>
+      group_by(measure) |>
+      mutate(word = fct_reorder(word, value)) |>
+      ungroup()
+
+    p_tc <- ggplot(tc_long, aes(value, word, fill = measure)) +
+      geom_col(show.legend = FALSE) +
+      facet_wrap(~ measure, scales = "free_x") +
+      labs(title = "Contrastive semantic change of shared terms (WE vs. RSM)",
+           subtitle = "Higher = the word is framed more differently across the two periodicals",
+           x = "Divergence", y = NULL) +
+      theme_minimal()
+    ggsave(file.path(output_path, "04_term_contrast.png"), p_tc,
+           width = 12, height = 7, dpi = 120)
+    print(p_tc)
+
+    cat("\nMost divergently-used shared terms (by JSD):\n")
+    knitr::kable(tc |> arrange(desc(jsd)) |>
+                   transmute(word, PRT = round(prt, 3), APD = round(apd, 3),
+                             JSD = round(jsd, 3), n_WE = n_a, n_RSM = n_b) |>
+                   head(15))
+    cat("Saved 04_term_contrast.png\n")
+  } else {
+    cat("term_contrast is empty — no shared term had >=5 usable occurrences in both corpora.\n")
+  }
+} else {
+  cat("Run: python scripts\\contrast.py", K, "\n")
+}
+```
+
+---
+
+## 7b. Sense mix of shared terms (the payoff figure)
+
+§7 reports *how much* a shared word's usage differs as three numbers (PRT/APD/JSD).
+This shows *what* differs. For each shared term, `contrast.py` clusters all its
+in-context MacBERTh occurrences into **senses** and records how each periodical's
+uses split across them. So instead of "JSD = 0.4", you see directly that — say —
+"relief" is mostly charitable-aid in one periodical and mostly organisational in
+the other. Each sense is glossed by the words that **most distinguish** it from
+the term's other senses (a within-word log-odds, not raw frequency), so the labels
+actually differ; the term's **overall dominant words** (the high-frequency
+"floaters" like `woman*`, `man*`) are shown alongside for context. Morphological
+variants are collapsed and marked with `*` (e.g. `sister*` = sister/sisters).
+Crucially, frequency is **not** a filter: a floater like `woman*` is admitted to a
+sense's gloss (marked `^`) wherever its **lift** — observed-vs-expected
+concentration — clears ~1.3, and a separate table reports each floater's per-sense
+lift, so you can see whether `woman*`/`man*` are genuinely sense-bearing or just
+background. We show the terms whose sense mix differs most between the corpora.
+*(Reads `contrast.py` `term_sense_mix` + `term_floater_lift` — re-run
+`contrast.py {K}` after this update.)*
+
+```{r sense-mix, fig.height=9}
+sm_path <- file.path(contrast_dir, sprintf("term_sense_mix_K%d.csv", K))
+if (have(sm_path)) {
+  sm <- readr::read_csv(sm_path, show_col_types = FALSE)
+  if (nrow(sm) && length(unique(sm$corpus)) == 2) {
+    A <- corpus_levels[1]; B <- corpus_levels[2]
+
+    # rank terms by total-variation distance between the two corpora's sense mixes
+    div <- sm |>
+      select(word, corpus, sense, proportion) |>
+      pivot_wider(names_from = corpus, values_from = proportion, values_fill = 0) |>
+      group_by(word) |>
+      summarise(tv = 0.5 * sum(abs(.data[[A]] - .data[[B]])), .groups = "drop") |>
+      arrange(desc(tv))
+    keepw <- head(div$word, 9)
+
+    # per-word "floater" words (same for every row of a word); guard if older
+    # CSV lacks the column (pre-distinctiveness re-run).
+    if (!"term_dominant" %in% names(sm)) sm$term_dominant <- ""
+    dom <- sm |> filter(word %in% keepw) |> distinct(word, term_dominant)
+    dom_lvl <- dom$term_dominant[match(keepw, dom$word)]
+
+    smk <- sm |>
+      filter(word %in% keepw) |>
+      mutate(corpus_pretty = pretty(corpus),
+             sense_f  = factor(sense),
+             word_lab = factor(paste0(word, "  ·  overall: ", term_dominant),
+                               levels = paste0(keepw, "  ·  overall: ", dom_lvl)))
+
+    # per-word sense glosses for the reader (sense ids are word-specific)
+    gloss <- sm |>
+      filter(word %in% keepw) |>
+      distinct(word, sense, sense_label) |>
+      arrange(factor(word, levels = keepw), sense)
+
+    p_sense <- ggplot(smk, aes(proportion, corpus_pretty, fill = sense_f)) +
+      geom_col(width = 0.7) +
+      facet_wrap(~ word_lab, ncol = 3) +
+      scale_x_continuous(labels = percent, expand = expansion(mult = c(0, 0.02))) +
+      scale_fill_viridis_d(option = "turbo", name = "Induced sense (per word)") +
+      labs(title = "Sense mix of shared terms by publication",
+           subtitle = "Bars split by induced sense (compare the two rows); strip shows the term's overall dominant words",
+           x = "Share of occurrences", y = NULL) +
+      theme_minimal() +
+      theme(legend.position = "bottom", strip.text = element_text(face = "bold", size = 8))
+    ggsave(file.path(output_path, "11_sense_mix.png"), p_sense,
+           width = 12, height = 9, dpi = 120)
+    print(p_sense)
+
+    cat("\nTerm-level dominant ('floater') words:\n")
+    knitr::kable(dom |> transmute(Word = word, `Dominant words` = term_dominant))
+    cat("\nDistinctive words per induced sense (peaks vs the term's other senses;",
+        "'^' marks a high-frequency floater that is concentrated in that sense):\n")
+    knitr::kable(gloss |> transmute(Word = word, Sense = sense,
+                                    `Distinctive words` = sense_label))
+
+    # Floater distinctiveness: each big word's per-sense lift (observed/expected).
+    # This is how woman*/man* are "let through but measured" — peak lift > ~1.2
+    # means the floater leans to a sense; ~1 means it is genuine background.
+    fl_path <- file.path(contrast_dir, sprintf("term_floater_lift_K%d.csv", K))
+    if (have(fl_path)) {
+      fl <- readr::read_csv(fl_path, show_col_types = FALSE) |> filter(word %in% keepw)
+      # Specificity = 1 − normalised entropy of the floater's distribution across
+      # senses. 0 = perfectly even (genuine background); →1 = concentrated. This
+      # generalises the lift bar: woman*/man* are kept AND measured, not excluded.
+      fl_summ <- fl |>
+        group_by(word, floater) |>
+        summarise(peak_sense = sense[which.max(lift)],
+                  peak_lift   = max(lift),
+                  ent = { p <- n_in_sense / sum(n_in_sense); p <- p[p > 0]; -sum(p * log(p)) },
+                  ksenses = n(), .groups = "drop") |>
+        mutate(specificity = round(1 - ent / log(pmax(ksenses, 2)), 2),
+               reading = ifelse(peak_lift >= 1.2 | specificity >= 0.15,
+                                "sense-bearing", "background (≈uniform)")) |>
+        arrange(factor(word, levels = keepw), desc(specificity))
+      cat("\nFloater distinctiveness — every dominant word kept and MEASURED",
+          "(specificity 0 = background, →1 = concentrated; peak lift = its strongest sense):\n")
+      knitr::kable(fl_summ |> transmute(Word = word, Floater = floater,
+                                        Specificity = specificity,
+                                        `Peak sense` = peak_sense,
+                                        `Peak lift` = round(peak_lift, 2),
+                                        Reading = reading))
+    }
+    cat("Saved 11_sense_mix.png\n")
+  } else {
+    cat("term_sense_mix is empty or lacks two corpora — no sense-mix figure.\n")
+  }
+} else {
+  cat("Run: python scripts\\contrast.py", K, "  (now also writes term_sense_mix)\n")
+}
+```
+
+---
+
+## 8. Framing-drift map (WE → RSM per term)
+
+Each shared term has one MacBERTh prototype vector per periodical. Projecting all
+prototypes to 2D (PCA) and drawing an arrow from each word's WE prototype to its
+RSM prototype shows *direction* and *magnitude* of framing drift at a glance.
+
+```{r drift-map}
+proto_path <- file.path(contrast_dir, sprintf("term_prototypes_K%d.parquet", K))
+if (have(proto_path)) {
+  pr <- arrow::read_parquet(proto_path)
+  pdims <- grep("^dim_", names(pr), value = TRUE)
+  if (nrow(pr) >= 4 && length(unique(pr$corpus)) == 2) {
+    M <- as.matrix(pr[, pdims])
+    pc <- prcomp(M, center = TRUE, scale. = FALSE)$x[, 1:2]
+    pr2 <- pr |> mutate(PC1 = pc[, 1], PC2 = pc[, 2], corpus_pretty = pretty(corpus))
+
+    wide <- pr2 |>
+      select(word, corpus, PC1, PC2) |>
+      pivot_wider(names_from = corpus, values_from = c(PC1, PC2))
+    cl <- corpus_levels
+    p_drift <- ggplot(pr2, aes(PC1, PC2)) +
+      geom_segment(data = wide,
+                   aes(x = .data[[paste0("PC1_", cl[1])]],
+                       y = .data[[paste0("PC2_", cl[1])]],
+                       xend = .data[[paste0("PC1_", cl[2])]],
+                       yend = .data[[paste0("PC2_", cl[2])]]),
+                   arrow = arrow(length = unit(0.18, "cm")),
+                   colour = "grey55") +
+      geom_point(aes(colour = corpus_pretty), size = 2.6) +
+      ggrepel::geom_text_repel(data = pr2 |> filter(corpus == cl[2]),
+                               aes(label = word), size = 3, max.overlaps = 20) +
+      scale_colour_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                     "Relief Society Magazine" = "#d95f02")) +
+      labs(title = "Framing-drift map for shared terms",
+           subtitle = sprintf("MacBERTh prototypes, PCA to 2D; arrow runs %s → %s",
+                              pretty(cl[1]), pretty(cl[2])),
+           colour = "Publication", x = "PC1", y = "PC2") +
+      theme_minimal()
+    ggsave(file.path(output_path, "05_framing_drift_map.png"), p_drift,
+           width = 11, height = 8, dpi = 120)
+    print(p_drift)
+    cat("Saved 05_framing_drift_map.png\n")
+  } else {
+    cat("Not enough prototypes for a drift map.\n")
+  }
+} else {
+  cat("Run: python scripts\\contrast.py", K, "\n")
+}
+```
+
+---
+
+## 9. BERTopic over both corpora (cross-tabbed by publication)
+
+A neural topic model clustered on the same embeddings, then cross-tabulated
+against publication — which neural themes are WE-dominant, RSM-dominant, or shared.
+
+```{r bertopic}
+bt_docs_path <- file.path(bertopic_dir, sprintf("bertopic_docs_K%d.csv", K))
+bt_top_path  <- file.path(bertopic_dir, sprintf("bertopic_topics_K%d.csv", K))
+if (have(bt_docs_path) && have(bt_top_path)) {
+  bt_docs <- readr::read_csv(bt_docs_path, show_col_types = FALSE)
+  bt_top  <- readr::read_csv(bt_top_path,  show_col_types = FALSE)
+  bt <- bt_docs |>
+    left_join(docs |> select(row_index, corpus), by = "row_index") |>
+    filter(bertopic_topic >= 0) |>                  # drop outlier cluster -1
+    mutate(corpus_pretty = pretty(corpus))
+
+  share <- bt |>
+    count(bertopic_topic, corpus_pretty) |>
+    group_by(bertopic_topic) |>
+    mutate(frac = n / sum(n)) |>
+    ungroup() |>
+    left_join(bt_top |> select(Topic, Name), by = c("bertopic_topic" = "Topic"))
+
+  # keep the most populous neural clusters for legibility
+  keep_topics <- bt |> count(bertopic_topic, sort = TRUE) |> head(20) |> pull(bertopic_topic)
+  share_k <- share |> filter(bertopic_topic %in% keep_topics) |>
+    mutate(Name = ifelse(is.na(Name), paste0("Topic ", bertopic_topic), Name),
+           Name = fct_reorder(Name, frac * (corpus_pretty == "Relief Society Magazine"), sum))
+
+  p_bt <- ggplot(share_k, aes(frac, Name, fill = corpus_pretty)) +
+    geom_col() +
+    scale_x_continuous(labels = percent) +
+    scale_fill_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                 "Relief Society Magazine" = "#d95f02")) +
+    labs(title = "BERTopic clusters by publication",
+         subtitle = "Composition of each neural topic (top 20 by size); fully one colour = corpus-specific theme",
+         x = "Share of cluster's documents", y = NULL, fill = "Publication") +
+    theme_minimal()
+  ggsave(file.path(output_path, "06_bertopic_by_publication.png"), p_bt,
+         width = 11, height = 9, dpi = 120)
+  print(p_bt)
+  cat("Saved 06_bertopic_by_publication.png\n")
+} else {
+  cat("Run: python scripts\\run_bertopic.py", K, "\n")
+}
+```
+
+---
+
+## 9b. Authorship — coverage & the master author directory
+
+This is the complement to §6b (which profiles only the 8 most prolific authors): the
+**full authorship picture** for both corpora, built by `scripts/author_attribution.py`
+(K-independent — a pure function of text + `corpus`, like the embeddings/contrast).
+Everything the old §9b–§9f showed is now consolidated into **one master directory**
+(below), with a companion **article index** (§9d) that links each attributed article to
+its source text. It works in tiers:
+
+- **Tier 1 — byline (named).** Raw OCR/typeset bylines are canonicalised via the
+  editable `scripts/author_crosswalk.csv`: initials and OCR variants are merged and
+  documented **pseudonyms** resolved (*Blanche Beechwood / Aunt Em / E. B. W. →
+  Emmeline B. Wells*; *Prince of Ur / Home Spun → Susa Young Gates*). Commercial ad
+  bylines go to an **Advertisement** bucket, masthead/organisational filler to a
+  **Masthead / organization** bucket. Every other distinct byline — recurring
+  **initials** (`E. T.`) and single-word **pen names** (`Clio`) — is kept as its own
+  identity (never dumped); only true blanks / `Unknown` stay anonymous.
+- **Tier 2 — probable (stylometric).** For authors with enough confident bylines, a
+  fingerprint (function-word rates + character n-grams + structural stats — *not*
+  topic words) assigns a **probable** author to anonymous articles, at two thresholds:
+  **conservative** (strong, well-separated evidence) and **balanced** (more coverage).
+  A machine guess never enters the byline counts — separate columns. **Small-pool
+  guard:** a corpus with fewer than `ATTR_MIN_CANDIDATES` (40) trainable authors is
+  closed-world-unreliable, so its anonymous articles are left **Unattributed** rather
+  than forced onto the few candidates. **Woman's Exponent** (~16 authors) is therefore
+  unattributed-by-design; **Relief Society Magazine** (~164) is attributed.
+- **Tier 3 — unknown hands.** Anonymous articles no probable author claims are
+  clustered stylometrically into distinct "unknown hands" (shown in the directory with
+  `Type = Unknown hand`) — anonymous fingerprints a scholar might later name.
+
+In the master directory, unresolved **initials** and **pen names** carry a *Resembles /
+notes* column — the full-name author their style is closest to, with a **certainty %**.
+
+> **Scholarly caution.** A "probable" author or a "resembles" match is a *statistical
+> inference*, not an attribution of record. Sentiment is descriptive of register only —
+> never used to identify anyone.
+
+```{r author-roster}
+author_dir <- file.path(adv_path, "author")
+roster_path <- file.path(author_dir, sprintf("author_roster_K%d.csv", K))
+meta_path   <- file.path(author_dir, sprintf("author_attribution_meta_K%d.json", K))
+adoc_path   <- file.path(author_dir, sprintf("author_doc_K%d.csv", K))
+
+if (have(roster_path) && have(meta_path)) {
+  roster <- readr::read_csv(roster_path, show_col_types = FALSE)
+  ameta  <- jsonlite::fromJSON(meta_path, simplifyVector = FALSE)
+
+  # ---- coverage summary from meta (per corpus, both schemes) ----
+  cat("Attribution coverage (share of ALL articles with a name, byline OR probable):\n\n")
+  cov_tbl <- purrr::imap_dfr(ameta$corpora, function(cc, corp) {
+    tibble(
+      Publication = pretty(corp),
+      `Substantial docs` = cc$n_substantial %||% NA_integer_,
+      `Named bylines`     = cc$n_named_byline %||% NA_integer_,
+      `Org / ads`         = cc$n_org %||% NA_integer_,
+      `Anon. pool`        = cc$n_unknown_pool %||% NA_integer_,
+      `Candidate authors` = cc$n_candidates %||% NA_integer_,
+      `CV accuracy`       = if (is.null(cc$cv_accuracy)) NA_real_ else round(as.numeric(cc$cv_accuracy), 2),
+      `Named+prob % (cons)` = cc$coverage_cons$pct %||% NA_real_,
+      `Named+prob % (bal)`  = cc$coverage_bal$pct  %||% NA_real_)
+  })
+  print(knitr::kable(cov_tbl))
+
+  # ---- attribution composition: how each scheme carves up the corpus ----
+  if (have(adoc_path)) {
+    adoc <- readr::read_csv(adoc_path, show_col_types = FALSE)
+    comp <- purrr::map_dfr(c("cons", "bal"), function(sch) {
+      fa <- adoc[[paste0("final_author_", sch)]]
+      cls <- dplyr::case_when(
+        adoc$byline_class == "named" ~ "Byline (named)",
+        fa == "Advertisement" ~ "Advertisement",
+        fa == "Masthead / organization" ~ "Masthead / org",
+        fa == "Unattributed" ~ "Unattributed",
+        TRUE ~ "Probable (stylometric)")
+      tibble(corpus = adoc$corpus, scheme = sch, class = cls)
+    }) |>
+      count(corpus, scheme, class) |>
+      group_by(corpus, scheme) |> mutate(frac = n / sum(n)) |> ungroup() |>
+      mutate(Publication = pretty(corpus),
+             scheme = factor(ifelse(scheme == "cons", "Conservative", "Balanced"),
+                             levels = c("Conservative", "Balanced")),
+             class = factor(class, levels = c("Byline (named)", "Probable (stylometric)",
+                                              "Advertisement", "Masthead / org",
+                                              "Unattributed")))
+
+    p_comp <- ggplot(comp, aes(scheme, frac, fill = class)) +
+      geom_col(width = 0.7) +
+      facet_wrap(~ Publication) +
+      scale_y_continuous(labels = percent, expand = expansion(mult = c(0, 0.02))) +
+      scale_fill_manual(values = c("Byline (named)" = "#1b9e77",
+                                   "Probable (stylometric)" = "#7570b3",
+                                   "Advertisement" = "#e6ab02",
+                                   "Masthead / org" = "#a6761d",
+                                   "Unattributed" = "grey70")) +
+      labs(title = "Who wrote the corpus? Attribution composition by scheme",
+           subtitle = "Conservative vs. balanced stylometric thresholds; byline counts are unchanged between them",
+           x = NULL, y = "Share of articles", fill = NULL) +
+      theme_minimal(base_size = 11) +
+      theme(plot.title = element_text(face = "bold"), legend.position = "bottom")
+    ggsave(file.path(output_path, "14_attribution_composition.png"),
+           p_comp, width = 11, height = 6, dpi = 120)
+    print(p_comp)
+    cat("Saved 14_attribution_composition.png\n")
+  }
+
+  # ================= MASTER AUTHOR DIRECTORY (one table for §9b/d/e/f) =================
+  # author-like identities from the roster: full names, unresolved initials, pen names
+  dir_auth <- roster |>
+    filter(kind %in% c("named", "initials_unresolved", "pen_name_unresolved")) |>
+    transmute(Publication = pretty(corpus), corpus, Identity = canonical_author,
+              Type = dplyr::case_when(kind == "initials_unresolved" ~ "Initials",
+                                      kind == "pen_name_unresolved" ~ "Pen name",
+                                      TRUE ~ "Full name"),
+              Byline = n_byline + n_byline_initials,
+              `Probable (cons)` = n_probable_cons, `Probable (bal)` = n_probable_bal,
+              `Mean sentiment` = round(mean_sentiment_afinn, 3),
+              Years = ifelse(is.na(year_min), "", paste0(year_min, "–", year_max)))
+
+  # resemblance + certainty for the unresolved aliases (initials / pen names)
+  alias_path <- file.path(author_dir, sprintf("alias_attribution_K%d.csv", K))
+  if (file.exists(alias_path)) {
+    ares <- readr::read_csv(alias_path, show_col_types = FALSE) |>
+      transmute(corpus, Identity = alias,
+                `Resembles / notes` = probable_author,
+                Certainty = scales::percent(mean_confidence, 1))
+    dir_auth <- dplyr::left_join(dir_auth, ares, by = c("corpus", "Identity"))
+  } else {
+    dir_auth$`Resembles / notes` <- NA_character_; dir_auth$Certainty <- NA_character_
+  }
+
+  # unknown-hand clusters as their own rows (Type = Unknown hand)
+  hands_path <- file.path(author_dir, sprintf("unknown_hands_K%d.csv", K))
+  dir_hands <- NULL
+  if (file.exists(hands_path)) {
+    dir_hands <- readr::read_csv(hands_path, show_col_types = FALSE) |>
+      transmute(Publication = pretty(corpus), corpus, Identity = hand, Type = "Unknown hand",
+                Byline = 0L, `Probable (cons)` = 0L, `Probable (bal)` = n_docs,
+                `Mean sentiment` = NA_real_,
+                Years = ifelse(is.na(year_min), "", paste0(year_min, "–", year_max)),
+                `Resembles / notes` = paste0("style: ", top_function_words),
+                Certainty = NA_character_)
+  }
+
+  master <- dplyr::bind_rows(dir_auth, dir_hands) |>
+    dplyr::mutate(Type = factor(Type, levels = c("Full name", "Initials", "Pen name", "Unknown hand"))) |>
+    dplyr::arrange(Publication, Type, dplyr::desc(Byline), dplyr::desc(`Probable (bal)`)) |>
+    dplyr::select(Publication, Identity, Type, Byline, `Probable (cons)`, `Probable (bal)`,
+                  `Resembles / notes`, Certainty, `Mean sentiment`, Years)
+  cat("\nMaster author directory:", nrow(master), "identities",
+      "(full names, initials, pen names, and unknown hands) across both periodicals.\n")
+  readr::write_csv(master, file.path(output_path, sprintf("author_directory_K%d.csv", K)))
+  DT::datatable(master, rownames = FALSE, filter = "top",
+                options = list(pageLength = 25, order = list(list(3, "desc"))),
+                caption = paste0("Master author directory (", nrow(master),
+                  " identities). Filter by Type; 'Resembles / notes' + Certainty apply to ",
+                  "initials/pen names (who they write like) and unknown hands (marker words)."))
+} else {
+  cat("Run: $env:ADV_SCENARIO=\"", comparison_scenario, "\"; python scripts\\author_attribution.py ", K,
+      "\n(then re-knit — this section fills the directory in).\n", sep = "")
+}
+```
+
+---
+
+## 9c. Attribution confidence & the probable-author gains
+
+The stylometric classifier reports a probability for every anonymous article. This
+section shows that confidence distribution against the two thresholds, and which
+candidate authors *gain* the most anonymous articles under each scheme — the places
+to spend manual-verification effort first.
+
+```{r author-confidence}
+if (exists("adoc")) {
+  pool <- adoc |> filter(!is.na(attr_bal_prob))
+  if (nrow(pool) > 0) {
+    cons_p <- ameta$cons_prob %||% 0.80
+    bal_p  <- ameta$bal_prob  %||% 0.55
+    p_conf <- ggplot(pool, aes(attr_bal_prob, fill = pretty(corpus))) +
+      geom_histogram(bins = 40, alpha = 0.7, position = "identity") +
+      geom_vline(xintercept = bal_p,  linetype = "dashed", colour = "#7570b3") +
+      geom_vline(xintercept = cons_p, linetype = "dotted", colour = "#d95f02") +
+      annotate("text", x = bal_p,  y = Inf, label = " balanced", hjust = 0, vjust = 1.5, size = 3, colour = "#7570b3") +
+      annotate("text", x = cons_p, y = Inf, label = " conservative", hjust = 0, vjust = 3, size = 3, colour = "#d95f02") +
+      scale_fill_manual(values = c("Woman's Exponent" = "#1b9e77",
+                                   "Relief Society Magazine" = "#d95f02")) +
+      labs(title = "Stylometric attribution confidence (anonymous articles)",
+           subtitle = "Top-class probability per anonymous article; a doc is named only above the threshold line",
+           x = "Top-class probability", y = "Articles", fill = "Publication") +
+      theme_minimal(base_size = 11) + theme(plot.title = element_text(face = "bold"))
+    ggsave(file.path(output_path, "15_attribution_confidence.png"), p_conf,
+           width = 10, height = 6, dpi = 120)
+    print(p_conf)
+
+    gains <- roster |>
+      filter(kind == "named", (n_probable_cons + n_probable_bal) > 0) |>
+      transmute(Publication = pretty(corpus), Author = canonical_author,
+                `Byline` = n_byline, `Probable (cons)` = n_probable_cons,
+                `Probable (bal)` = n_probable_bal) |>
+      arrange(desc(`Probable (bal)`)) |> head(30)
+    cat("\nCandidate authors gaining the most probable (anonymous) articles:\n")
+    print(knitr::kable(gains))
+    cat("Saved 15_attribution_confidence.png\n")
+  } else {
+    cat("No probable attributions were made (too few candidate authors). See §9b coverage.\n")
+  }
+}
+```
+
+---
+
+## 9d. Article index — every attributed article, linked to its source
+
+The drill-down for the directory: one row per **attributed** article (byline or
+probable), with the author it's filed under and a **Source** link to the local text
+file. Filter by `Author` to see *all articles listed under that author*. Unattributed /
+advertisement / masthead articles are excluded (no author to list them under).
+
+> **Source links & the web.** There are no source URLs in the corpus, so the link opens
+> the local `.txt` (via `file://`). The link is built by the single `make_link()` helper
+> below — to publish this to a website search engine, repoint that one function at your
+> URL pattern. The structured `article_index_K*.csv` this writes **is** the search
+> corpus a web engine would ingest (one record per article, keyed by `doc_id`).
+
+```{r article-index}
+if (exists("adoc") && exists("docs")) {
+  # map each source filename -> full path by globbing the WE (input) & RSM (input2) folders
+  src_root <- dirname(base_path)                       # .../textanalysis
+  we_dir  <- file.path(src_root, "Topicmodel", "input")
+  rsm_dir <- file.path(src_root, "Topicmodel", "input2")
+  src_files <- c(if (dir.exists(we_dir))  list.files(we_dir,  "\\.txt$", recursive = TRUE, full.names = TRUE),
+                 if (dir.exists(rsm_dir)) list.files(rsm_dir, "\\.txt$", recursive = TRUE, full.names = TRUE))
+  path_map <- if (length(src_files)) setNames(src_files, basename(src_files)) else character(0)
+
+  # link builder — SWAP the file:/// target for your website URL pattern when publishing
+  make_link <- function(fname) {
+    p <- unname(path_map[fname])
+    ifelse(is.na(p), as.character(fname),
+           sprintf('<a href="file:///%s" target="_blank">source</a>',
+                   gsub(" ", "%20", gsub("\\\\", "/", p))))
+  }
+
+  art <- adoc |>
+    dplyr::left_join(dplyr::select(docs, row_index, filename), by = "row_index") |>
+    dplyr::mutate(
+      Author = final_author_bal,
+      Attribution = dplyr::case_when(
+        byline_source %in% c("byline", "pseudonym", "signature", "title") ~ "Byline",
+        byline_source %in% c("initials", "initials_raw")                   ~ "Byline (initials)",
+        attr_bal_author != ""                                              ~ "Probable (stylometric)",
+        TRUE ~ NA_character_),
+      # which scheme: a real byline is certain; a stylometric guess is Conservative
+      # (also clears the strict bar) or Balanced-only.
+      Scheme = dplyr::case_when(
+        byline_source %in% c("byline", "pseudonym", "signature", "title",
+                             "initials", "initials_raw")                   ~ "Byline (certain)",
+        attr_cons_author != ""                                             ~ "Conservative",
+        attr_bal_author != ""                                              ~ "Balanced",
+        TRUE ~ NA_character_),
+      Confidence = attr_bal_prob) |>                       # NA for real bylines
+    dplyr::filter(!Author %in% c("Unattributed", "Advertisement", "Masthead / organization"),
+                  !is.na(Attribution)) |>
+    dplyr::transmute(Publication = pretty(corpus), Author, Attribution, Scheme, Confidence,
+                     Title = title, Year = year, filename)
+
+  # web-portable structured index (no HTML) keyed by filename/doc_id
+  art_csv <- art |>
+    dplyr::mutate(path = unname(path_map[filename]))
+  readr::write_csv(art_csv, file.path(output_path, sprintf("article_index_K%d.csv", K)))
+
+  art_disp <- art |>
+    dplyr::mutate(
+      Confidence = ifelse(Attribution == "Probable (stylometric)" & !is.na(Confidence),
+                          scales::percent(Confidence, 1), "—"),
+      Source = vapply(filename, make_link, character(1))) |>
+    dplyr::select(Publication, Author, Attribution, Scheme, Confidence, Title, Year, Source) |>
+    dplyr::arrange(Author, Year)
+  cat(sprintf("Article index: %d attributed articles (%d source files located for linking).\n",
+              nrow(art_disp), length(path_map)))
+  DT::datatable(art_disp, rownames = FALSE, filter = "top", escape = FALSE,
+                options = list(pageLength = 25, deferRender = TRUE,
+                               order = list(list(1, "asc"))),
+                caption = paste0("Every attributed article. Attribution = how it was assigned; ",
+                  "Scheme = Byline / Conservative / Balanced; Confidence = stylometric certainty ",
+                  "(— for real bylines). Filter by Author; 'source' opens the local text file."))
+}
+```
+
+---
+
+*(The former §9d unknown-hands, §9e author index, and §9f alias-resemblance tables are
+now unified in the **master author directory** in §9b — filter its `Type` column for
+Full name / Initials / Pen name / Unknown hand, and read the `Resembles / notes` +
+`Certainty` columns for the stylometric likeness of each initials/pen-name alias.)*
+
+---
+
+## 10. Save report objects
+
+```{r save-objects}
+report_objects <- list(
+  K = K,                                       # artifact K (embedding/word sections)
+  topic_K_used = if (exists("topic_override_active") && isTRUE(topic_override_active))
+                   topic_K else K,             # K behind §6–§6d
+  corpus_levels = corpus_levels,
+  topic_labels = topic_labels,
+  overlap = if (exists("ov")) ov else NULL,
+  term_contrast = if (exists("tc")) tc else NULL,
+  topic_prevalence_by_corpus = if (exists("prev")) prev else NULL,
+  author_profiles_by_corpus  = if (exists("prof")) prof else NULL,
+  keyness = if (exists("key")) key else NULL,
+  shared_register = if (exists("reg")) reg else NULL,
+  register_era = if (exists("fw")) fw else NULL,
+  floater_specificity = if (exists("fl_summ")) fl_summ else NULL,
+  topic_diff = if (exists("diffs")) diffs else NULL,
+  topic_cooccurrence = if (exists("cooc")) cooc else NULL,
+  sense_mix = if (exists("sm")) sm else NULL,
+  author_roster = if (exists("roster")) roster else NULL,          # raw per-author roster
+  author_coverage = if (exists("cov_tbl")) cov_tbl else NULL,      # §9b named+probable %
+  author_directory = if (exists("master")) master else NULL,       # §9b consolidated master table
+  article_index = if (exists("art_csv")) art_csv else NULL,        # §9d article->author->source
+  saved_at = Sys.time()
+)
+saveRDS(report_objects,
+        file.path(output_path, sprintf("compare_report_objects_K%d.rds", K)))
+cat("Saved compare_report_objects_K", K, ".rds\n", sep = "")
+```
